@@ -1,0 +1,1224 @@
+{
+ "path": "/partners",
+ "url": "https://sk-espada.ru/partners",
+ "slug": "partners",
+ "title": "Стань партнером компании по ремонту квартир Эспада",
+ "description": "Приглашаем к сотрудничеству дизайнеров, архитекторов, поставщиков материалов и подрядчиков для совместной реализации проектов ремонта квартир в Москве и МО.",
+ "keywords": null,
+ "robots": null,
+ "canonical": "http://sk-espada.ru/partners",
+ "og": {
+  "title": "Стань партнером компании по ремонту квартир Эспада",
+  "description": "Приглашаем к сотрудничеству дизайнеров, архитекторов, поставщиков материалов и подрядчиков для совместной реализации проектов ремонта квартир в Москве и МО.",
+  "image": "https://static.tildacdn.com/tild3131-3239-4436-a432-663737626530/IMG_4929.JPG",
+  "url": "http://sk-espada.ru/partners",
+  "type": "website"
+ },
+ "html_bytes": 430251,
+ "blocks": [
+  {
+   "rec_id": "rec2486691841",
+   "record_type": "396",
+   "classes": "r t-rec",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 39432,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Ремонт квартир под ключ\nв Москве и Московской области"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ДИЗАЙН ИНТЕРЬЕРА"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "РЕМОНТ КВАРТИР"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОМПЛЕКТАЦИЯ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПАРТНЕРАМ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПРИЕМКА"
+    }
+   ],
+   "images": [
+    {
+     "url": "https://thb.tildacdn.com/tild6639-3530-4230-a232-336561633365/-/resize/20x/IMG_9479.PNG",
+     "clean": "https://static.tildacdn.com/tild6639-3530-4230-a232-336561633365/IMG_9479.PNG",
+     "key": "tild6639-3530-4230-a232-336561633365/IMG_9479.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild6335-6162-4830-b432-313935376235/-/resize/20x/IMG_9481.PNG",
+     "clean": "https://static.tildacdn.com/tild6335-6162-4830-b432-313935376235/IMG_9481.PNG",
+     "key": "tild6335-6162-4830-b432-313935376235/IMG_9481.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3133-3134-4432-b563-343761303963/-/resize/20x/_1tk.png",
+     "clean": "https://static.tildacdn.com/tild3133-3134-4432-b563-343761303963/_1tk.png",
+     "key": "tild3133-3134-4432-b563-343761303963/_1tk.png",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3062-3932-4135-b763-316165343938/-/resize/20x/noroot.png",
+     "clean": "https://static.tildacdn.com/tild3062-3932-4135-b763-316165343938/noroot.png",
+     "key": "tild3062-3932-4135-b763-316165343938/noroot.png",
+     "alt": "",
+     "from": "img"
+    }
+   ],
+   "links": [
+    {
+     "href": "https://t.me/espada_remont",
+     "text": ""
+    },
+    {
+     "href": "https://vk.com/sk_espada",
+     "text": ""
+    },
+    {
+     "href": "https://sk-espada.ru/design",
+     "text": "ДИЗАЙН ИНТЕРЬЕРА"
+    },
+    {
+     "href": "https://sk-espada.ru/",
+     "text": "РЕМОНТ КВАРТИР"
+    },
+    {
+     "href": "https://sk-espada.ru/komplekt",
+     "text": "КОМПЛЕКТАЦИЯ"
+    },
+    {
+     "href": "#contact5",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "href": "https://sk-espada.ru/partners",
+     "text": "ПАРТНЕРАМ"
+    },
+    {
+     "href": "http://sk-espada.ru/priemka",
+     "text": "ПРИЕМКА"
+    },
+    {
+     "href": "https://dzen.ru/espada",
+     "text": ""
+    },
+    {
+     "href": "https://sk-espada.ru/",
+     "text": ""
+    }
+   ],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2486693471",
+   "record_type": "396",
+   "classes": "r t-rec t-screenmin-980px",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 20808,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ДИЗАЙН ИНТЕРЬЕРА"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "РЕМОНТ КВАРТИР"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОМПЛЕКТАЦИЯ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПАРТНЕРАМ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПРИЕМКА"
+    }
+   ],
+   "images": [],
+   "links": [
+    {
+     "href": "https://sk-espada.ru/design",
+     "text": "ДИЗАЙН ИНТЕРЬЕРА"
+    },
+    {
+     "href": "https://sk-espada.ru/",
+     "text": "РЕМОНТ КВАРТИР"
+    },
+    {
+     "href": "https://sk-espada.ru/komplekt",
+     "text": "КОМПЛЕКТАЦИЯ"
+    },
+    {
+     "href": "#contact5",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "href": "https://sk-espada.ru/partners",
+     "text": "ПАРТНЕРАМ"
+    },
+    {
+     "href": "http://sk-espada.ru/priemka",
+     "text": "ПРИЕМКА"
+    }
+   ],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2293032481",
+   "record_type": "450",
+   "classes": "r t-rec t-rec_pt_0 t-rec_pb_0 t-screenmax-980px",
+   "tilda_classes": [
+    "t-menu",
+    "t-menuburger",
+    "t450"
+   ],
+   "is_zero": false,
+   "html_bytes": 10069,
+   "texts": [
+    {
+     "role": "raw",
+     "tag": "div",
+     "text": "t450\nРЕМОНТ КВАРТИР\nДИЗАЙН ИНТЕРЬЕРА\nКОМПЛЕКТАЦИЯ\nПРИЕМКА КВАРТИРЫ\nКОНТАКТЫ"
+    }
+   ],
+   "images": [
+    {
+     "url": "https://static.tildacdn.com/tild6436-6633-4737-a430-383235353165/noroot.png",
+     "clean": "https://static.tildacdn.com/tild6436-6633-4737-a430-383235353165/noroot.png",
+     "key": "tild6436-6633-4737-a430-383235353165/noroot.png",
+     "alt": "",
+     "from": "img"
+    }
+   ],
+   "links": [
+    {
+     "href": "http://sk-espada.ru/",
+     "text": "РЕМОНТ КВАРТИР"
+    },
+    {
+     "href": "https://sk-espada.ru/design",
+     "text": "ДИЗАЙН ИНТЕРЬЕРА"
+    },
+    {
+     "href": "https://sk-espada.ru/komplekt",
+     "text": "КОМПЛЕКТАЦИЯ"
+    },
+    {
+     "href": "http://sk-espada.ru/priemka",
+     "text": "ПРИЕМКА КВАРТИРЫ"
+    },
+    {
+     "href": "#contact5",
+     "text": "КОНТАКТЫ"
+    }
+   ],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2301436161",
+   "record_type": "396",
+   "classes": "r t-rec",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 10583,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПАРТНЕРАМ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Работа с нами — стабильный поток клиентов, прозрачные условия и быстрые выплаты.\nРаботаем с ремонтом квартир и дизайном интерьеров в Москве и МО.\nНадёжное партнёрство для долгосрочного заработка."
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Стань партнером Эспады!"
+    }
+   ],
+   "images": [],
+   "links": [],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2293019481",
+   "record_type": "396",
+   "classes": "r t-rec",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 64940,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "о компании"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Наш профиль — ремонт квартир ПОД КЛЮЧ в Москве и МО"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Подробнее"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "МЫ СОЗДАЕМ ДИЗАЙН-ПРОЕКТЫ ЛЮБОЙ СЛОЖНОСТИ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПОДРОБНЕЕ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "И ОСУЩЕСТВЛЯЕМ ПРОФЕССИОНАЛЬНУЮ\nПРИЕМКУ КВАРТИР"
+    }
+   ],
+   "images": [
+    {
+     "url": "https://static.tildacdn.com/tild3464-3634-4537-a163-616562343636/noroot.png",
+     "clean": "https://static.tildacdn.com/tild3464-3634-4537-a163-616562343636/noroot.png",
+     "key": "tild3464-3634-4537-a163-616562343636/noroot.png",
+     "alt": "",
+     "from": "css/attr"
+    },
+    {
+     "url": "https://static.tildacdn.com/tild6333-3862-4235-b435-313238356262/noroot.png",
+     "clean": "https://static.tildacdn.com/tild6333-3862-4235-b435-313238356262/noroot.png",
+     "key": "tild6333-3862-4235-b435-313238356262/noroot.png",
+     "alt": "",
+     "from": "css/attr"
+    },
+    {
+     "url": "https://static.tildacdn.com/tild3566-3764-4632-a333-333164366562/noroot.png",
+     "clean": "https://static.tildacdn.com/tild3566-3764-4632-a333-333164366562/noroot.png",
+     "key": "tild3566-3764-4632-a333-333164366562/noroot.png",
+     "alt": "",
+     "from": "css/attr"
+    }
+   ],
+   "links": [
+    {
+     "href": "https://sk-espada.ru/",
+     "text": "Подробнее"
+    },
+    {
+     "href": "https://sk-espada.ru/design",
+     "text": "ПОДРОБНЕЕ"
+    },
+    {
+     "href": "https://sk-espada.ru/priemka",
+     "text": "ПОДРОБНЕЕ"
+    }
+   ],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2315266221",
+   "record_type": "2781",
+   "classes": "r t-rec t-rec_pt-res-480_0 t-rec_pb-res-480_0",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": false,
+   "html_bytes": 118676,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПРИСОЕДИНЯЙСЯ К НАШЕЙ ДРУЖНОЙ КОМАНДЕ В КАЧЕСТВЕ ПАРТНЕРА!"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Высокая конверсия лидов"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— грамотная обработка заявок;"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— профессиональные замеры и консультации;"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— умение работать с возражениями клиентов."
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Высокий средний чек"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— полный цикл работ по ремонту;"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— дополнительные услуги (дизайн-проекты, спецмонтаж и т.д.)."
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Предсказуемость и контроль результата"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— чёткая фиксация каждого лида;"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— понятный статус на всех этапах сделки;"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Долгосрочное сотрудничество"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— мы заинтересованы не в разовой сделке, а в партнёрстве;"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "— готовы масштабировать взаимодействие при росте объёмов."
+    }
+   ],
+   "images": [],
+   "links": [],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2486704431",
+   "record_type": "215",
+   "classes": "r t-rec",
+   "tilda_classes": [],
+   "is_zero": false,
+   "html_bytes": 125,
+   "texts": [],
+   "images": [],
+   "links": [],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2336790911",
+   "record_type": "396",
+   "classes": "r t-rec",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 22051,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ОТДЕЛ РАЗВИТИЯ:"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "АДРЕС ОФИСА:"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "г. Москва,"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ул. Дегунинская, д.1, корп.2"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "+7 (980) 691-40-64"
+    }
+   ],
+   "images": [
+    {
+     "url": "https://thb.tildacdn.com/tild3063-3335-4738-a136-316532356134/-/resize/20x/photo.JPG",
+     "clean": "https://static.tildacdn.com/tild3063-3335-4738-a136-316532356134/photo.JPG",
+     "key": "tild3063-3335-4738-a136-316532356134/photo.JPG",
+     "alt": "",
+     "from": "img"
+    }
+   ],
+   "links": [
+    {
+     "href": "TEL: +79806914064",
+     "text": "+7 (980) 691-40-64"
+    }
+   ],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2486702961",
+   "record_type": "396",
+   "classes": "r t-rec t-screenmin-980px",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 57830,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Москва, ул. Дегунинская, д. 1, корп.2"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "© 2026 Все права защищены\nИП Ланин Кирилл Андреевич,\nИНН 772142258108, ОГРИП 324774600528604"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Нажмите, чтобы наш менеджер связался с вами:"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "О КОМПАНИИ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ОТЗЫВЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПРИМЕРЫ РАБОТ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ВАКАНСИИ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "+7 (993) 891-40-64"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Сайт не является публичной офертой и носит информационный характер"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "На сайте используются cookies, сервисы аналитики, включая Яндекс Метрику. Продолжая использовать сайт, вы соглашаетесь с обработкой персональных данных и использованием cookies."
+    },
+    {
+     "role": "zero",
+     "tag": "span",
+     "text": "Заказать звонок"
+    }
+   ],
+   "images": [
+    {
+     "url": "https://thb.tildacdn.com/tild3663-3039-4461-b461-306439353938/-/resize/20x/IMG_9481.PNG",
+     "clean": "https://static.tildacdn.com/tild3663-3039-4461-b461-306439353938/IMG_9481.PNG",
+     "key": "tild3663-3039-4461-b461-306439353938/IMG_9481.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3737-3532-4130-a139-623131326338/-/resize/20x/IMG_9479.PNG",
+     "clean": "https://static.tildacdn.com/tild3737-3532-4130-a139-623131326338/IMG_9479.PNG",
+     "key": "tild3737-3532-4130-a139-623131326338/IMG_9479.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3330-6238-4131-a135-663736333932/-/resize/20x/IMG_9484.PNG",
+     "clean": "https://static.tildacdn.com/tild3330-6238-4131-a135-663736333932/IMG_9484.PNG",
+     "key": "tild3330-6238-4131-a135-663736333932/IMG_9484.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3738-3264-4364-b038-366435396137/-/resize/20x/_1tk.png",
+     "clean": "https://static.tildacdn.com/tild3738-3264-4364-b038-366435396137/_1tk.png",
+     "key": "tild3738-3264-4364-b038-366435396137/_1tk.png",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3837-3233-4866-b631-313131336165/-/resize/20x/65410045f3f1a9aed1f8.png",
+     "clean": "https://static.tildacdn.com/tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png",
+     "key": "tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild6533-3231-4662-b234-643865396232/-/resize/20x/noroot.png",
+     "clean": "https://static.tildacdn.com/tild6533-3231-4662-b234-643865396232/noroot.png",
+     "key": "tild6533-3231-4662-b234-643865396232/noroot.png",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild6665-3064-4630-b961-326435356463/-/resize/20x/noroot.png",
+     "clean": "https://static.tildacdn.com/tild6665-3064-4630-b961-326435356463/noroot.png",
+     "key": "tild6665-3064-4630-b961-326435356463/noroot.png",
+     "alt": "",
+     "from": "img"
+    }
+   ],
+   "links": [
+    {
+     "href": "https://vk.com/sk_espada",
+     "text": ""
+    },
+    {
+     "href": "https://t.me/espada_remont",
+     "text": ""
+    },
+    {
+     "href": "https://dzen.ru/espada",
+     "text": ""
+    },
+    {
+     "href": "#company",
+     "text": "О КОМПАНИИ"
+    },
+    {
+     "href": "#contacts",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "href": "#review",
+     "text": "ОТЗЫВЫ"
+    },
+    {
+     "href": "#jobs",
+     "text": "ПРИМЕРЫ РАБОТ"
+    },
+    {
+     "href": "https://hh.ru/employer/12458493?from=share_ios&tab=VACANCIES",
+     "text": "ВАКАНСИИ"
+    },
+    {
+     "href": "TEL: +79938914064",
+     "text": "+7 (993) 891-40-64"
+    },
+    {
+     "href": "http://sk-espada.ru/politicakonfident",
+     "text": "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
+    },
+    {
+     "href": "https://sk-espada.ru/soglasienaobrabotku",
+     "text": "СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ"
+    },
+    {
+     "href": "#popup:pop-zayavka",
+     "text": "Заказать звонок"
+    }
+   ],
+   "forms": []
+  },
+  {
+   "rec_id": "rec2486703801",
+   "record_type": "396",
+   "classes": "r t-rec t-screenmax-980px",
+   "tilda_classes": [
+    "t396"
+   ],
+   "is_zero": true,
+   "html_bytes": 74835,
+   "texts": [
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Москва, ул. Дегунинская, д. 1, корп.2"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "© 2026 Все права защищены\nИП Ланин Кирилл Андреевич, ИНН 772142258108, ОГРИП 324774600528604"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "НАЖМИТЕ, ЧТОБЫ НАШ МЕНЕДЖЕР СВЯЗАЛСЯ С ВАМИ:"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "О КОМПАНИИ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ОТЗЫВЫ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ПРИМЕРЫ РАБОТ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "ВАКАНСИИ"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "+7 (993) 891-40-64"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Политика конфиденциальности"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Согласие на обработку персональных данных"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "Сайт не является публичной офертой и носит информационный характер"
+    },
+    {
+     "role": "zero",
+     "tag": "div",
+     "text": "На сайте используются cookies, сервисы аналитики, включая Яндекс Метрику. Продолжая использовать сайт, вы соглашаетесь с обработкой персональных данных и использованием cookies."
+    },
+    {
+     "role": "zero",
+     "tag": "span",
+     "text": "Заказать звонок"
+    }
+   ],
+   "images": [
+    {
+     "url": "https://thb.tildacdn.com/tild3663-3039-4461-b461-306439353938/-/resize/20x/IMG_9481.PNG",
+     "clean": "https://static.tildacdn.com/tild3663-3039-4461-b461-306439353938/IMG_9481.PNG",
+     "key": "tild3663-3039-4461-b461-306439353938/IMG_9481.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3737-3532-4130-a139-623131326338/-/resize/20x/IMG_9479.PNG",
+     "clean": "https://static.tildacdn.com/tild3737-3532-4130-a139-623131326338/IMG_9479.PNG",
+     "key": "tild3737-3532-4130-a139-623131326338/IMG_9479.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3330-6238-4131-a135-663736333932/-/resize/20x/IMG_9484.PNG",
+     "clean": "https://static.tildacdn.com/tild3330-6238-4131-a135-663736333932/IMG_9484.PNG",
+     "key": "tild3330-6238-4131-a135-663736333932/IMG_9484.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3738-3264-4364-b038-366435396137/-/resize/20x/_1tk.png",
+     "clean": "https://static.tildacdn.com/tild3738-3264-4364-b038-366435396137/_1tk.png",
+     "key": "tild3738-3264-4364-b038-366435396137/_1tk.png",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3837-3233-4866-b631-313131336165/-/resize/20x/65410045f3f1a9aed1f8.png",
+     "clean": "https://static.tildacdn.com/tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png",
+     "key": "tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild3938-3262-4037-b463-646161306364/-/resize/20x/IMG_4240.PNG",
+     "clean": "https://static.tildacdn.com/tild3938-3262-4037-b463-646161306364/IMG_4240.PNG",
+     "key": "tild3938-3262-4037-b463-646161306364/IMG_4240.PNG",
+     "alt": "",
+     "from": "img"
+    },
+    {
+     "url": "https://thb.tildacdn.com/tild6665-3064-4630-b961-326435356463/-/resize/20x/noroot.png",
+     "clean": "https://static.tildacdn.com/tild6665-3064-4630-b961-326435356463/noroot.png",
+     "key": "tild6665-3064-4630-b961-326435356463/noroot.png",
+     "alt": "",
+     "from": "img"
+    }
+   ],
+   "links": [
+    {
+     "href": "https://vk.com/sk_espada",
+     "text": ""
+    },
+    {
+     "href": "https://t.me/espada_remont",
+     "text": ""
+    },
+    {
+     "href": "https://dzen.ru/espada",
+     "text": ""
+    },
+    {
+     "href": "#company",
+     "text": "О КОМПАНИИ"
+    },
+    {
+     "href": "#contacts",
+     "text": "КОНТАКТЫ"
+    },
+    {
+     "href": "#review",
+     "text": "ОТЗЫВЫ"
+    },
+    {
+     "href": "#jobs",
+     "text": "ПРИМЕРЫ РАБОТ"
+    },
+    {
+     "href": "https://hh.ru/employer/12458493?from=share_ios",
+     "text": "ВАКАНСИИ"
+    },
+    {
+     "href": "TEL: +79938914064",
+     "text": "+7 (993) 891-40-64"
+    },
+    {
+     "href": "http://sk-espada.ru/politicakonfident",
+     "text": "Политика конфиденциальности"
+    },
+    {
+     "href": "https://sk-espada.ru/soglasienaobrabotku",
+     "text": "Согласие на обработку персональных данных"
+    },
+    {
+     "href": "#popup:pop-zayavka",
+     "text": "Заказать звонок"
+    }
+   ],
+   "forms": []
+  }
+ ],
+ "images": [
+  {
+   "url": "https://thb.tildacdn.com/tild6639-3530-4230-a232-336561633365/-/resize/20x/IMG_9479.PNG",
+   "clean": "https://static.tildacdn.com/tild6639-3530-4230-a232-336561633365/IMG_9479.PNG",
+   "key": "tild6639-3530-4230-a232-336561633365/IMG_9479.PNG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486691841"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild6335-6162-4830-b432-313935376235/-/resize/20x/IMG_9481.PNG",
+   "clean": "https://static.tildacdn.com/tild6335-6162-4830-b432-313935376235/IMG_9481.PNG",
+   "key": "tild6335-6162-4830-b432-313935376235/IMG_9481.PNG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486691841"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3133-3134-4432-b563-343761303963/-/resize/20x/_1tk.png",
+   "clean": "https://static.tildacdn.com/tild3133-3134-4432-b563-343761303963/_1tk.png",
+   "key": "tild3133-3134-4432-b563-343761303963/_1tk.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486691841"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3062-3932-4135-b763-316165343938/-/resize/20x/noroot.png",
+   "clean": "https://static.tildacdn.com/tild3062-3932-4135-b763-316165343938/noroot.png",
+   "key": "tild3062-3932-4135-b763-316165343938/noroot.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486691841"
+  },
+  {
+   "url": "https://static.tildacdn.com/tild6436-6633-4737-a430-383235353165/noroot.png",
+   "clean": "https://static.tildacdn.com/tild6436-6633-4737-a430-383235353165/noroot.png",
+   "key": "tild6436-6633-4737-a430-383235353165/noroot.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2293032481"
+  },
+  {
+   "url": "https://static.tildacdn.com/tild3464-3634-4537-a163-616562343636/noroot.png",
+   "clean": "https://static.tildacdn.com/tild3464-3634-4537-a163-616562343636/noroot.png",
+   "key": "tild3464-3634-4537-a163-616562343636/noroot.png",
+   "alt": "",
+   "from": "css/attr",
+   "rec_id": "rec2293019481"
+  },
+  {
+   "url": "https://static.tildacdn.com/tild6333-3862-4235-b435-313238356262/noroot.png",
+   "clean": "https://static.tildacdn.com/tild6333-3862-4235-b435-313238356262/noroot.png",
+   "key": "tild6333-3862-4235-b435-313238356262/noroot.png",
+   "alt": "",
+   "from": "css/attr",
+   "rec_id": "rec2293019481"
+  },
+  {
+   "url": "https://static.tildacdn.com/tild3566-3764-4632-a333-333164366562/noroot.png",
+   "clean": "https://static.tildacdn.com/tild3566-3764-4632-a333-333164366562/noroot.png",
+   "key": "tild3566-3764-4632-a333-333164366562/noroot.png",
+   "alt": "",
+   "from": "css/attr",
+   "rec_id": "rec2293019481"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3063-3335-4738-a136-316532356134/-/resize/20x/photo.JPG",
+   "clean": "https://static.tildacdn.com/tild3063-3335-4738-a136-316532356134/photo.JPG",
+   "key": "tild3063-3335-4738-a136-316532356134/photo.JPG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2336790911"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3663-3039-4461-b461-306439353938/-/resize/20x/IMG_9481.PNG",
+   "clean": "https://static.tildacdn.com/tild3663-3039-4461-b461-306439353938/IMG_9481.PNG",
+   "key": "tild3663-3039-4461-b461-306439353938/IMG_9481.PNG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3737-3532-4130-a139-623131326338/-/resize/20x/IMG_9479.PNG",
+   "clean": "https://static.tildacdn.com/tild3737-3532-4130-a139-623131326338/IMG_9479.PNG",
+   "key": "tild3737-3532-4130-a139-623131326338/IMG_9479.PNG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3330-6238-4131-a135-663736333932/-/resize/20x/IMG_9484.PNG",
+   "clean": "https://static.tildacdn.com/tild3330-6238-4131-a135-663736333932/IMG_9484.PNG",
+   "key": "tild3330-6238-4131-a135-663736333932/IMG_9484.PNG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3738-3264-4364-b038-366435396137/-/resize/20x/_1tk.png",
+   "clean": "https://static.tildacdn.com/tild3738-3264-4364-b038-366435396137/_1tk.png",
+   "key": "tild3738-3264-4364-b038-366435396137/_1tk.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3837-3233-4866-b631-313131336165/-/resize/20x/65410045f3f1a9aed1f8.png",
+   "clean": "https://static.tildacdn.com/tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png",
+   "key": "tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild6533-3231-4662-b234-643865396232/-/resize/20x/noroot.png",
+   "clean": "https://static.tildacdn.com/tild6533-3231-4662-b234-643865396232/noroot.png",
+   "key": "tild6533-3231-4662-b234-643865396232/noroot.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild6665-3064-4630-b961-326435356463/-/resize/20x/noroot.png",
+   "clean": "https://static.tildacdn.com/tild6665-3064-4630-b961-326435356463/noroot.png",
+   "key": "tild6665-3064-4630-b961-326435356463/noroot.png",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486702961"
+  },
+  {
+   "url": "https://thb.tildacdn.com/tild3938-3262-4037-b463-646161306364/-/resize/20x/IMG_4240.PNG",
+   "clean": "https://static.tildacdn.com/tild3938-3262-4037-b463-646161306364/IMG_4240.PNG",
+   "key": "tild3938-3262-4037-b463-646161306364/IMG_4240.PNG",
+   "alt": "",
+   "from": "img",
+   "rec_id": "rec2486703801"
+  },
+  {
+   "url": "https://static.tildacdn.com/tild3131-3239-4436-a432-663737626530/IMG_4929.JPG",
+   "clean": "https://static.tildacdn.com/tild3131-3239-4436-a432-663737626530/IMG_4929.JPG",
+   "key": "tild3131-3239-4436-a432-663737626530/IMG_4929.JPG",
+   "alt": "",
+   "from": "page",
+   "rec_id": null
+  },
+  {
+   "url": "https://static.tildacdn.com/tild3934-3039-4830-b438-343262326361/EspadaLogo-01.svg",
+   "clean": "https://static.tildacdn.com/tild3934-3039-4830-b438-343262326361/EspadaLogo-01.svg",
+   "key": "tild3934-3039-4830-b438-343262326361/EspadaLogo-01.svg",
+   "alt": "",
+   "from": "page",
+   "rec_id": null
+  },
+  {
+   "url": "https://static.tildacdn.com/tild3834-3763-4834-a562-363832663062/EspadaLogo-01.svg",
+   "clean": "https://static.tildacdn.com/tild3834-3763-4834-a562-363832663062/EspadaLogo-01.svg",
+   "key": "tild3834-3763-4834-a562-363832663062/EspadaLogo-01.svg",
+   "alt": "",
+   "from": "page",
+   "rec_id": null
+  },
+  {
+   "url": "https://static.tildacdn.com/tild3732-3138-4339-b637-373937313735/EspadaLogo-01.svg",
+   "clean": "https://static.tildacdn.com/tild3732-3138-4339-b637-373937313735/EspadaLogo-01.svg",
+   "key": "tild3732-3138-4339-b637-373937313735/EspadaLogo-01.svg",
+   "alt": "",
+   "from": "page",
+   "rec_id": null
+  },
+  {
+   "url": "https://static.tildacdn.com/tild6362-3233-4837-a239-663836366330/EspadaLogo-01.png",
+   "clean": "https://static.tildacdn.com/tild6362-3233-4837-a239-663836366330/EspadaLogo-01.png",
+   "key": "tild6362-3233-4837-a239-663836366330/EspadaLogo-01.png",
+   "alt": "",
+   "from": "page",
+   "rec_id": null
+  }
+ ],
+ "links": [
+  {
+   "href": "https://t.me/espada_remont",
+   "text": ""
+  },
+  {
+   "href": "https://vk.com/sk_espada",
+   "text": ""
+  },
+  {
+   "href": "https://sk-espada.ru/design",
+   "text": "ДИЗАЙН ИНТЕРЬЕРА"
+  },
+  {
+   "href": "https://sk-espada.ru/",
+   "text": "РЕМОНТ КВАРТИР"
+  },
+  {
+   "href": "https://sk-espada.ru/komplekt",
+   "text": "КОМПЛЕКТАЦИЯ"
+  },
+  {
+   "href": "#contact5",
+   "text": "КОНТАКТЫ"
+  },
+  {
+   "href": "https://sk-espada.ru/partners",
+   "text": "ПАРТНЕРАМ"
+  },
+  {
+   "href": "http://sk-espada.ru/priemka",
+   "text": "ПРИЕМКА"
+  },
+  {
+   "href": "https://dzen.ru/espada",
+   "text": ""
+  },
+  {
+   "href": "http://sk-espada.ru/",
+   "text": "РЕМОНТ КВАРТИР"
+  },
+  {
+   "href": "https://sk-espada.ru/priemka",
+   "text": "ПОДРОБНЕЕ"
+  },
+  {
+   "href": "TEL: +79806914064",
+   "text": "+7 (980) 691-40-64"
+  },
+  {
+   "href": "#company",
+   "text": "О КОМПАНИИ"
+  },
+  {
+   "href": "#contacts",
+   "text": "КОНТАКТЫ"
+  },
+  {
+   "href": "#review",
+   "text": "ОТЗЫВЫ"
+  },
+  {
+   "href": "#jobs",
+   "text": "ПРИМЕРЫ РАБОТ"
+  },
+  {
+   "href": "https://hh.ru/employer/12458493?from=share_ios&tab=VACANCIES",
+   "text": "ВАКАНСИИ"
+  },
+  {
+   "href": "TEL: +79938914064",
+   "text": "+7 (993) 891-40-64"
+  },
+  {
+   "href": "http://sk-espada.ru/politicakonfident",
+   "text": "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
+  },
+  {
+   "href": "https://sk-espada.ru/soglasienaobrabotku",
+   "text": "СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ"
+  },
+  {
+   "href": "#popup:pop-zayavka",
+   "text": "Заказать звонок"
+  },
+  {
+   "href": "https://hh.ru/employer/12458493?from=share_ios",
+   "text": "ВАКАНСИИ"
+  }
+ ],
+ "forms": [],
+ "headings": [],
+ "phones": [
+  "+7 (980) 691-40-64",
+  "+7 (993) 891-40-64",
+  "+79806914064",
+  "+79938914064"
+ ],
+ "emails": [],
+ "css": [
+  "https://static.tildacdn.com/css/tilda-animation-2.0.min.css",
+  "https://static.tildacdn.com/css/tilda-grid-3.0.min.css",
+  "https://static.tildacdn.com/css/tilda-menu-widgeticons-1.0.min.css",
+  "https://static.tildacdn.com/ws/project2775933/tilda-blocks-page143082936.min.css?t=1786552702"
+ ],
+ "js": [
+  "https://cdn.postnikovmd.com/tilda@1.4/mods.min.js",
+  "https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js",
+  "https://static.tildacdn.com/js/jquery-1.10.2.min.js",
+  "https://static.tildacdn.com/js/tilda-animation-2.0.min.js",
+  "https://static.tildacdn.com/js/tilda-animation-ext-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-animation-sbs-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-events-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-lazyload-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-menu-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-menu-widgeticons-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-polyfill-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-scripts-3.0.min.js",
+  "https://static.tildacdn.com/js/tilda-skiplink-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-zero-1.1.min.js",
+  "https://static.tildacdn.com/js/tilda-zero-fixed-1.0.min.js",
+  "https://static.tildacdn.com/js/tilda-zero-scale-1.0.min.js",
+  "https://static.tildacdn.com/ws/project2775933/tilda-blocks-page143082936.min.js?t=1786552702"
+ ],
+ "fonts": [
+  "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&subset=latin,cyrillic"
+ ],
+ "http_status": 200,
+ "image_files": {
+  "tild6639-3530-4230-a232-336561633365/IMG_9479.PNG": "stranicy/partners/images/001.png",
+  "tild6335-6162-4830-b432-313935376235/IMG_9481.PNG": "stranicy/partners/images/002.png",
+  "tild3133-3134-4432-b563-343761303963/_1tk.png": "stranicy/partners/images/003.png",
+  "tild3062-3932-4135-b763-316165343938/noroot.png": "stranicy/partners/images/004.png",
+  "tild6436-6633-4737-a430-383235353165/noroot.png": "stranicy/partners/images/005.png",
+  "tild3464-3634-4537-a163-616562343636/noroot.png": "stranicy/partners/images/006.png",
+  "tild6333-3862-4235-b435-313238356262/noroot.png": "stranicy/partners/images/007.png",
+  "tild3566-3764-4632-a333-333164366562/noroot.png": "stranicy/partners/images/008.png",
+  "tild3063-3335-4738-a136-316532356134/photo.JPG": "stranicy/partners/images/009.jpg",
+  "tild3663-3039-4461-b461-306439353938/IMG_9481.PNG": "stranicy/partners/images/010.png",
+  "tild3737-3532-4130-a139-623131326338/IMG_9479.PNG": "stranicy/partners/images/011.png",
+  "tild3330-6238-4131-a135-663736333932/IMG_9484.PNG": "stranicy/partners/images/012.png",
+  "tild3738-3264-4364-b038-366435396137/_1tk.png": "stranicy/partners/images/013.png",
+  "tild3837-3233-4866-b631-313131336165/65410045f3f1a9aed1f8.png": "stranicy/partners/images/014.png",
+  "tild6533-3231-4662-b234-643865396232/noroot.png": "stranicy/partners/images/015.png",
+  "tild6665-3064-4630-b961-326435356463/noroot.png": "stranicy/partners/images/016.png",
+  "tild3938-3262-4037-b463-646161306364/IMG_4240.PNG": "stranicy/partners/images/017.png",
+  "tild3131-3239-4436-a432-663737626530/IMG_4929.JPG": "stranicy/partners/images/018.jpg",
+  "tild3934-3039-4830-b438-343262326361/EspadaLogo-01.svg": "stranicy/partners/images/019.svg",
+  "tild3834-3763-4834-a562-363832663062/EspadaLogo-01.svg": "stranicy/partners/images/020.svg",
+  "tild3732-3138-4339-b637-373937313735/EspadaLogo-01.svg": "stranicy/partners/images/021.svg",
+  "tild6362-3233-4837-a239-663836366330/EspadaLogo-01.png": "stranicy/partners/images/022.png"
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "sayt": "https://sk-espada.ru",
+ "data_vygruzki": "2026-08-26",
+ "platforma": {
+  "cms": "Tilda",
+  "project_id": "2775933",
+  "zashchita": "DDoS-Guard",
+  "page_ids": {
+   "/": "94936516",
+   "/design": "99144146",
+   "/komplekt": "99356006",
+   "/priemka": "122616976",
+   "/partners": "143082936",
+   "/politicakonfident": "99071276",
+   "/soglasienaobrabotku": "142449746",
+   "/5643": "152995006"
+  },
+  "kommentariy_page_ids": "Взято из имени файла tilda-blocks-pageNNN.min.css, подключённого на каждой странице."
+ },
+ "analitika": {
+  "yandex_metrika": "108523185",
+  "google_analytics": null,
+  "gtm": null,
+  "pikseli": [],
+  "chat_vidzhety": []
+ },
+ "formy": {
+  "mekhanizm": "Tilda formservices, data-formactiontype=2",
+  "polya": ["Name (text)", "Phone (tel)", "Checkbox (согласие)"],
+  "priyomniki": {
+   "e542a53d8e23f0ff4056e0b9052d4be1": ["/", "/komplekt"],
+   "e0e11d559396421ba180a8c8237b2c3e": ["/design"],
+   "0efa450c7e78a7364ee9cdd2fa78e20e": ["/priemka"]
+  },
+  "kuda_uhodyat_zayavki": "Из HTML не видно. Настройка внутри Тильды, нужен доступ к проекту 2775933.",
+  "stranicy_bez_formy": ["/partners", "/politicakonfident", "/soglasienaobrabotku", "/5643"]
+ },
+ "vidzhety": {
+  "yandex_karta": {
+   "tip": "iframe map-widget",
+   "organizaciya_oid": "170798264657",
+   "url": "https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=170798264657"
+  }
+ },
+ "shrifty": {
+  "osnovnoy": "TildaSans",
+  "nachertaniya": ["Light", "Regular", "Medium", "Semibold", "Bold", "ExtraBold", "Black"],
+  "vspomogatelnyy": "Roboto (Google Fonts, 300/400/500/700, latin+cyrillic)"
+ },
+ "cveta": {
+  "firmennyy": "#00ad9f",
+  "firmennyy_variacii": ["#01ad9f", "#00ac9e"],
+  "navedenie": "#026b63",
+  "tekst_osnovnoy": "#313131",
+  "tekst_vtorichnyy": "#5c5c5c",
+  "fon": "#ffffff",
+  "fon_sekcii": "#f8f8f8"
+ },
+ "naydennye_defekty": [
+  {
+   "chto": "Нет ни одного тега H1-H6",
+   "gde": "все 8 страниц",
+   "vliyanie": "поисковики не видят структуру страницы"
+  },
+  {
+   "chto": "Ссылки tel: записаны как 'TEL: +7...' с пробелом после двоеточия",
+   "gde": "20 ссылок из 32",
+   "vliyanie": "часть устройств не наберёт номер"
+  },
+  {
+   "chto": "Якоря #contacts, #company, #review, #jobs объявлены только на главной",
+   "gde": "/design, /komplekt, /priemka, /partners",
+   "vliyanie": "пункты меню не работают на внутренних страницах"
+  },
+  {
+   "chto": "Кнопка 'Заказать звонок' ведёт на попап #popup:pop-zayavka, которого на странице нет",
+   "gde": "/partners",
+   "vliyanie": "страница не собирает заявки"
+  },
+  {
+   "chto": "В политике конфиденциальности упоминается чужой сайт atlonfm.ru и почта info@atlonfm.ru",
+   "gde": "/politicakonfident",
+   "vliyanie": "документ скопирован и не вычитан"
+  },
+  {
+   "chto": "Canonical указывает на http, сайт отдаётся по https",
+   "gde": "все страницы",
+   "vliyanie": "смешанные сигналы для поисковиков"
+  },
+  {
+   "chto": "Внутренние ссылки вперемешку: 47 по http, 88 по https",
+   "gde": "все страницы",
+   "vliyanie": "лишние редиректы"
+  },
+  {
+   "chto": "В меню на /soglasienaobrabotku пункт 'О КОМПАНИИ' вместо 'ПАРТНЕРАМ'",
+   "gde": "/soglasienaobrabotku",
+   "vliyanie": "расхождение навигации"
+  },
+  {
+   "chto": "Страница /5643 удалена с сайта во время выгрузки",
+   "gde": "/5643",
+   "vliyanie": "в 13:23 отдавала 200, к 14:00 - 404; снимок сохранён"
+  },
+  {
+   "chto": "Два разных телефона без пояснения, какой основной",
+   "gde": "+7 (993) 891-40-64 везде, +7 (980) 691-40-64 на /partners",
+   "vliyanie": "нужно уточнение у клиента"
+  }
+ ],
+ "statistika": {
+  "stranic": 8,
+  "stranic_opublikovano": 7,
+  "blokov_vsego": 159,
+  "blokov_zero": 89,
+  "dolya_zero_po_chislu": "56%",
+  "dolya_zero_po_vesu": "78%",
+  "kartinok_unikalnyh": 142,
+  "kartinok_kopiy": 293,
+  "ves_kartinok_mb": 34.7,
+  "faylov_css_js": 50,
+  "faylov_shriftov": 23,
+  "obshchiy_ves_mb": 56,
+  "pokrytie_teksta": "100% слов на каждой странице"
+ }
+}

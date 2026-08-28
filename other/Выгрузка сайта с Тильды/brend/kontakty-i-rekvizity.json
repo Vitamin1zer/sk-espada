@@ -1,0 +1,28 @@
+{
+ "nazvanie": "СК «Эспада»",
+ "sayt": "https://sk-espada.ru",
+ "deyatelnost": "Ремонт квартир под ключ в Москве и Московской области",
+ "yurlico": {
+  "forma": "ИП",
+  "naimenovanie": "Ланин Кирилл Андреевич",
+  "inn": "772142258108",
+  "ogrnip": "324774600528604"
+ },
+ "adres": "г. Москва, ул. Дегунинская, д. 1, корп. 2",
+ "telefony": [
+  "+7 (980) 691-40-64",
+  "+7 (993) 891-40-64"
+ ],
+ "pochta": [
+  "sk-espada@rambler.ru"
+ ],
+ "soczseti": {
+  "Telegram": "https://t.me/espada_remont",
+  "ВКонтакте": "https://vk.com/sk_espada",
+  "Дзен": "https://dzen.ru/espada",
+  "Яндекс Карты": "https://yandex.ru/maps/-/CLgmeD3e",
+  "2ГИС": "https://go.2gis.com/JknLA",
+  "hh.ru": "https://hh.ru/employer/12458493?from=share_ios&tab=VACANCIES"
+ },
+ "istochnik": "Собрано со страниц сайта 26.08.2026"
+}
