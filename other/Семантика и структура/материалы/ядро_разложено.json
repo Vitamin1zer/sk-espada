@@ -957,6 +957,24 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "перепланировка квартиры в москве согласование": {
+  "base": 318,
+  "quoted": 123,
+  "overal": 113,
+  "exact": 113,
+  "napravlenie": "Перепланировка",
+  "src": [
+   "eremont.ru",
+   "suggest"
+  ],
+  "varianty": [
+   "согласование перепланировки квартиры москва",
+   "согласование перепланировки квартиры в москве"
+  ],
+  "url": "/pereplanirovka/",
+  "stranica": "Перепланировка квартиры",
+  "razdel": "Услуги"
+ },
  "приемка квартиры по реновации в москве": {
   "base": 204,
   "quoted": 105,
@@ -1923,6 +1941,23 @@
   "stranica": "Дизайн интерьера квартиры",
   "razdel": "Дизайн"
  },
+ "материалы натяжных потолков": {
+  "base": 871,
+  "quoted": 57,
+  "overal": 13,
+  "exact": 12,
+  "napravlenie": "Отдельные услуги",
+  "src": [
+   "titanremont.ru"
+  ],
+  "varianty": [
+   "натяжные потолки материал",
+   "материал натяжного потолка"
+  ],
+  "url": "/natyazhnye-potolki/",
+  "stranica": "Натяжные потолки",
+  "razdel": "Услуги"
+ },
  "поклейка обоев цена за м2": {
   "base": 650,
   "quoted": 56,
@@ -2214,6 +2249,20 @@
   "url": "/pereplanirovka/",
   "stranica": "Перепланировка квартиры",
   "razdel": "Услуги"
+ },
+ "ситипроф приемка квартир москва официальный сайт": {
+  "base": 51,
+  "quoted": 51,
+  "overal": 51,
+  "exact": 51,
+  "napravlenie": "Приёмка",
+  "src": [
+   "mrnadzor.ru"
+  ],
+  "varianty": [],
+  "url": "/priemka/",
+  "stranica": "Приёмка квартир в новостройке",
+  "razdel": "Приёмка"
  },
  "механизированная штукатурка стен москва": {
   "base": 245,
@@ -2762,6 +2811,23 @@
   "stranica": "Перепланировка квартиры",
   "razdel": "Услуги"
  },
+ "шумоизоляция входной двери в квартире": {
+  "base": 1892,
+  "quoted": 40,
+  "overal": 26,
+  "exact": 26,
+  "napravlenie": "Отдельные услуги",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [
+   "шумоизоляция для двери входной в квартиру",
+   "шумоизоляция для входной двери в квартиру"
+  ],
+  "url": "/shumoizolyaciya/",
+  "stranica": "Шумоизоляция квартиры",
+  "razdel": "Услуги"
+ },
  "сколько стоит поклейка обоев за квадратный метр в москве": {
   "base": 61,
   "quoted": 40,
@@ -3054,6 +3120,20 @@
   "stranica": "Ремонт кухни",
   "razdel": "Ремонт квартир"
  },
+ "выравнивание стен по маякам": {
+  "base": 104,
+  "quoted": 36,
+  "overal": 34,
+  "exact": 34,
+  "napravlenie": "Отдельные услуги",
+  "src": [
+   "domeo.ru"
+  ],
+  "varianty": [],
+  "url": "/vyravnivanie-sten/",
+  "stranica": "Выравнивание стен",
+  "razdel": "Услуги"
+ },
  "ремонт в стиле лофт": {
   "base": 209,
   "quoted": 36,
@@ -3184,6 +3264,20 @@
   "url": "/design/kvartir/",
   "stranica": "Дизайн интерьера квартиры",
   "razdel": "Дизайн"
+ },
+ "согласование перепланировки квартиры": {
+  "base": 771,
+  "quoted": 35,
+  "overal": 32,
+  "exact": 32,
+  "napravlenie": "Перепланировка",
+  "src": [
+   "domeo.ru"
+  ],
+  "varianty": [],
+  "url": "/pereplanirovka/",
+  "stranica": "Перепланировка квартиры",
+  "razdel": "Услуги"
  },
  "сколько стоит ремонт квартиры под ключ за квадратный метр": {
   "base": 92,
@@ -3904,6 +3998,20 @@
   "stranica": "Дизайн интерьера дома",
   "razdel": "Дизайн"
  },
+ "новая жизнь приемка квартир": {
+  "base": 42,
+  "quoted": 28,
+  "overal": 28,
+  "exact": 27,
+  "napravlenie": "Приёмка",
+  "src": [
+   "mrnadzor.ru"
+  ],
+  "varianty": [],
+  "url": "/priemka/",
+  "stranica": "Приёмка квартир в новостройке",
+  "razdel": "Приёмка"
+ },
  "сколько стоит ремонт ванной комнаты": {
   "base": 266,
   "quoted": 28,
@@ -4147,6 +4255,20 @@
   "stranica": "Дизайн интерьера дома",
   "razdel": "Дизайн"
  },
+ "сити проф приемка квартир": {
+  "base": 41,
+  "quoted": 26,
+  "overal": 26,
+  "exact": 26,
+  "napravlenie": "Приёмка",
+  "src": [
+   "mrnadzor.ru"
+  ],
+  "varianty": [],
+  "url": "/priemka/",
+  "stranica": "Приёмка квартир в новостройке",
+  "razdel": "Приёмка"
+ },
  "укладка плитки сколько стоит": {
   "base": 702,
   "quoted": 26,
@@ -4360,6 +4482,21 @@
   "url": "/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
+ },
+ "бюджетный ремонт квартиры": {
+  "base": 245,
+  "quoted": 24,
+  "overal": 24,
+  "exact": 23,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "domeo.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/ekonom/",
+  "stranica": "Недорогой ремонт квартир",
+  "razdel": "Ремонт квартир"
  },
  "дизайн интерьера проект": {
   "base": 850,
@@ -4877,6 +5014,24 @@
   "stranica": "Элитный ремонт квартир",
   "razdel": "Ремонт квартир"
  },
+ "компания дизайн интерьера": {
+  "base": 126,
+  "quoted": 21,
+  "overal": 7,
+  "exact": 2,
+  "napravlenie": "Дизайн",
+  "src": [
+   "domeo.ru",
+   "eremont.ru"
+  ],
+  "varianty": [
+   "дизайн интерьера компания",
+   "компании по дизайну интерьера"
+  ],
+  "url": "/design/",
+  "stranica": "Дизайн интерьера",
+  "razdel": "Дизайн"
+ },
  "ремонт кухни под ключ цена": {
   "base": 161,
   "quoted": 21,
@@ -5238,6 +5393,26 @@
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
+ "кухня ремонт дизайн": {
+  "base": 167,
+  "quoted": 19,
+  "overal": 14,
+  "exact": 14,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "domeo.ru",
+   "eremont.ru"
+  ],
+  "varianty": [
+   "дизайн кухни ремонт",
+   "ремонт кухни дизайн",
+   "кухни ремонт дизайн",
+   "дизайн ремонта кухни"
+  ],
+  "url": "/design/kuhni/",
+  "stranica": "Дизайн кухни",
+  "razdel": "Дизайн"
+ },
  "ремонт в спальне": {
   "base": 278,
   "quoted": 19,
@@ -5504,6 +5679,21 @@
   "varianty": [],
   "url": "/remont-kvartir/novostroyka/",
   "stranica": "Ремонт квартиры в новостройке",
+  "razdel": "Ремонт квартир"
+ },
+ "ремонт минимализм": {
+  "base": 160,
+  "quoted": 18,
+  "overal": 18,
+  "exact": 12,
+  "napravlenie": "Ремонт по стилю",
+  "src": [
+   "domeo.ru",
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/po-stilyu/",
+  "stranica": "Ремонт квартир по стилю",
   "razdel": "Ремонт квартир"
  },
  "дизайн интерьера под ключ": {
@@ -5945,6 +6135,27 @@
   "stranica": "Дизайнерский ремонт квартиры",
   "razdel": "Ремонт квартир"
  },
+ "смета на ремонт квартиры": {
+  "base": 366,
+  "quoted": 16,
+  "overal": 16,
+  "exact": 16,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "only-remontkvartir.ru",
+   "remo-nt.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [
+   "смета для ремонта квартиры",
+   "смета ремонта квартиры"
+  ],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
+ },
  "стоимость ремонта квартиры за 1 кв м в москве": {
   "base": 44,
   "quoted": 16,
@@ -6161,6 +6372,25 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "ремонт квартиры под сдачу": {
+  "base": 83,
+  "quoted": 15,
+  "overal": 8,
+  "exact": 5,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "only-remontkvartir.ru"
+  ],
+  "varianty": [
+   "сдача квартиры под ремонт",
+   "ремонт под сдачу квартиры"
+  ],
+  "url": "/remont-kvartir/pod-sdachu/",
+  "stranica": "Ремонт под сдачу в аренду",
+  "razdel": "Ремонт квартир"
+ },
  "дизайн квартиры недорого": {
   "base": 111,
   "quoted": 15,
@@ -6227,6 +6457,20 @@
   "url": "/design/domov/",
   "stranica": "Дизайн интерьера дома",
   "razdel": "Дизайн"
+ },
+ "приемка квартиры пик": {
+  "base": 151,
+  "quoted": 15,
+  "overal": 12,
+  "exact": 6,
+  "napravlenie": "Приёмка",
+  "src": [
+   "mrnadzor.ru"
+  ],
+  "varianty": [],
+  "url": "/priemka/",
+  "stranica": "Приёмка квартир в новостройке",
+  "razdel": "Приёмка"
  },
  "замена ванной": {
   "base": 3362,
@@ -6342,6 +6586,20 @@
   "varianty": [],
   "url": "/remont-kvartir/tseny/",
   "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
+ },
+ "бюджетный ремонт кухни": {
+  "base": 64,
+  "quoted": 14,
+  "overal": 10,
+  "exact": 10,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/kuhni/",
+  "stranica": "Ремонт кухни",
   "razdel": "Ремонт квартир"
  },
  "ремонт кухни под ключ москва": {
@@ -6475,6 +6733,26 @@
   "url": "/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
+ },
+ "дизайн интерьера сайт": {
+  "base": 284,
+  "quoted": 14,
+  "overal": 3,
+  "exact": 2,
+  "napravlenie": "Дизайн",
+  "src": [
+   "domeo.ru",
+   "eremont.ru",
+   "only-remontkvartir.ru",
+   "vproekte.com"
+  ],
+  "varianty": [
+   "сайт дизайн интерьера",
+   "сайт для дизайна интерьера"
+  ],
+  "url": "/design/",
+  "stranica": "Дизайн интерьера",
+  "razdel": "Дизайн"
  },
  "ремонт однокомнатной квартиры цена": {
   "base": 165,
@@ -7192,6 +7470,28 @@
   "stranica": "Цены на ремонт квартир",
   "razdel": "Ремонт квартир"
  },
+ "компании по ремонту квартир": {
+  "base": 556,
+  "quoted": 12,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "eremont.ru",
+   "only-remontkvartir.ru",
+   "remo-nt.ru",
+   "remony.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [
+   "компания по ремонту квартир"
+  ],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
+  "razdel": "Ремонт квартир"
+ },
  "квадратный метр ремонт квартир": {
   "base": 998,
   "quoted": 12,
@@ -7316,6 +7616,21 @@
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
+ },
+ "дизайн квартиры 38 кв м однокомнатной": {
+  "base": 34,
+  "quoted": 12,
+  "overal": 9,
+  "exact": 4,
+  "napravlenie": "Дизайн",
+  "src": [
+   "domeo.ru",
+   "only-remontkvartir.ru"
+  ],
+  "varianty": [],
+  "url": "/design/kvartir/",
+  "stranica": "Дизайн интерьера квартиры",
+  "razdel": "Дизайн"
  },
  "ремонт евродвушки": {
   "base": 192,
@@ -7529,6 +7844,22 @@
    "stroyremdizayn.ru",
    "suggest",
    "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
+  "razdel": "Ремонт квартир"
+ },
+ "студия ремонта официальный сайт": {
+  "base": 18,
+  "quoted": 11,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "domeo.ru",
+   "remo-nt.ru",
+   "remony.ru"
   ],
   "varianty": [],
   "url": "/remont-kvartir/",
@@ -7779,6 +8110,26 @@
   "stranica": "Ремонт ванной комнаты",
   "razdel": "Ремонт квартир"
  },
+ "стоимость косметического ремонта за 1 кв метр в москве": {
+  "base": 15,
+  "quoted": 11,
+  "overal": 11,
+  "exact": 10,
+  "napravlenie": "Ремонт по метражу",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "only-remontkvartir.ru",
+   "point-remont.ru",
+   "remony.ru",
+   "stroyremdizayn.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/kosmeticheskiy/",
+  "stranica": "Косметический ремонт квартиры",
+  "razdel": "Ремонт квартир"
+ },
  "ремонт после пожара": {
   "base": 434,
   "quoted": 11,
@@ -7864,6 +8215,22 @@
   ],
   "url": "/design/kvartir/",
   "stranica": "Дизайн интерьера квартиры",
+  "razdel": "Дизайн"
+ },
+ "дизайн проект дома в современном стиле готовый": {
+  "base": 14,
+  "quoted": 11,
+  "overal": 11,
+  "exact": 0,
+  "napravlenie": "Дизайн",
+  "src": [
+   "domeo.ru",
+   "eremont.ru",
+   "vproekte.com"
+  ],
+  "varianty": [],
+  "url": "/design/domov/",
+  "stranica": "Дизайн интерьера дома",
   "razdel": "Дизайн"
  },
  "расценки на ремонт квартир в москве": {
@@ -8105,6 +8472,26 @@
   "url": "/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
+ },
+ "средняя стоимость ремонта квартиры в москве за квадратный метр": {
+  "base": 37,
+  "quoted": 10,
+  "overal": 10,
+  "exact": 6,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "eremont.ru",
+   "only-remontkvartir.ru",
+   "point-remont.ru",
+   "remo-nt.ru",
+   "stroyremdizayn.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
  },
  "заказ дизайн проекта квартиры": {
   "base": 16,
@@ -9434,6 +9821,23 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "ремонт квартиры для сдачи в аренду": {
+  "base": 37,
+  "quoted": 8,
+  "overal": 6,
+  "exact": 1,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "domeo.ru",
+   "only-remontkvartir.ru"
+  ],
+  "varianty": [
+   "ремонт для сдачи квартиры в аренду"
+  ],
+  "url": "/remont-kvartir/pod-sdachu/",
+  "stranica": "Ремонт под сдачу в аренду",
+  "razdel": "Ремонт квартир"
+ },
  "ремонт в кредит": {
   "base": 198,
   "quoted": 8,
@@ -9490,6 +9894,20 @@
   "url": "/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
+ },
+ "бюджетный ремонт в туалете": {
+  "base": 44,
+  "quoted": 8,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tualeta/",
+  "stranica": "Ремонт туалета",
+  "razdel": "Ремонт квартир"
  },
  "шумоизоляция квартиры стоимость": {
   "base": 83,
@@ -9694,6 +10112,23 @@
   "stranica": "Дизайн интерьера квартиры",
   "razdel": "Дизайн"
  },
+ "сколько сейчас стоит ремонт квартиры за м2": {
+  "base": 38,
+  "quoted": 8,
+  "overal": 8,
+  "exact": 8,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "suggest",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
+  "razdel": "Ремонт квартир"
+ },
  "сколько стоит звукоизоляция комнаты": {
   "base": 32,
   "quoted": 8,
@@ -9865,6 +10300,26 @@
   "url": "/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
+ },
+ "средняя цена ремонта квартиры за квадратный метр": {
+  "base": 22,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "domeo.ru",
+   "eremont.ru",
+   "only-remontkvartir.ru",
+   "point-remont.ru",
+   "remo-nt.ru",
+   "stroyremdizayn.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
  },
  "укладка плитки цена за метр": {
   "base": 274,
@@ -10066,6 +10521,22 @@
   "varianty": [],
   "url": "/remont-kvartir/kuhni/",
   "stranica": "Ремонт кухни",
+  "razdel": "Ремонт квартир"
+ },
+ "ремонт санузла в хрущевке": {
+  "base": 103,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/sanuzla/",
+  "stranica": "Ремонт санузла",
   "razdel": "Ремонт квартир"
  },
  "стоимость ремонта ванной комнаты и туалета под ключ цена": {
@@ -10406,6 +10877,36 @@
   "stranica": "Цены на ремонт квартир",
   "razdel": "Ремонт квартир"
  },
+ "ремонт кухни 5м2": {
+  "base": 8,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/kuhni/",
+  "stranica": "Ремонт кухни",
+  "razdel": "Ремонт квартир"
+ },
+ "ремонт квартир москва отзывы": {
+  "base": 428,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 6,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "domeo.ru",
+   "only-remontkvartir.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
+  "razdel": "Ремонт квартир"
+ },
  "шумоизоляция стен в квартире под ключ": {
   "base": 8,
   "quoted": 7,
@@ -10731,6 +11232,20 @@
   "url": "/design/gostinoy/",
   "stranica": "Дизайн гостиной",
   "razdel": "Дизайн"
+ },
+ "отделка ванны плиткой": {
+  "base": 425,
+  "quoted": 7,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/vannoy/",
+  "stranica": "Ремонт ванной комнаты",
+  "razdel": "Ремонт квартир"
  },
  "утеплитель пола под стяжку": {
   "base": 104,
@@ -11554,6 +12069,20 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "отделка ванной панелями": {
+  "base": 599,
+  "quoted": 6,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/vannoy/",
+  "stranica": "Ремонт ванной комнаты",
+  "razdel": "Ремонт квартир"
+ },
  "шумоизоляция квартиры цена": {
   "base": 493,
   "quoted": 6,
@@ -11582,6 +12111,20 @@
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
+ "технический дизайн проект": {
+  "base": 159,
+  "quoted": 6,
+  "overal": 6,
+  "exact": 2,
+  "napravlenie": "Дизайн",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [],
+  "url": "/design/",
+  "stranica": "Дизайн интерьера",
+  "razdel": "Дизайн"
+ },
  "технический проект ремонта квартиры": {
   "base": 33,
   "quoted": 6,
@@ -11595,6 +12138,23 @@
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
+ },
+ "квартира студия дизайн интерьера": {
+  "base": 52,
+  "quoted": 6,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Дизайн",
+  "src": [
+   "eremont.ru",
+   "vproekte.com"
+  ],
+  "varianty": [
+   "дизайн интерьера квартиры студии"
+  ],
+  "url": "/design/kvartir/",
+  "stranica": "Дизайн интерьера квартиры",
+  "razdel": "Дизайн"
  },
  "готовый дизайн проект 3 х комнатной квартиры": {
   "base": 18,
@@ -11668,6 +12228,20 @@
   "url": "/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
+ },
+ "дизайн кухни в современном стиле в светлых": {
+  "base": 39,
+  "quoted": 6,
+  "overal": 1,
+  "exact": 1,
+  "napravlenie": "Дизайн",
+  "src": [
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/design/kuhni/",
+  "stranica": "Дизайн кухни",
+  "razdel": "Дизайн"
  },
  "грунтовка для стяжки пола": {
   "base": 99,
@@ -11869,6 +12443,21 @@
    "remo-nt.ru",
    "remony.ru",
    "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
+ },
+ "рассрочка на ремонт квартиры без процентов": {
+  "base": 7,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "domeo.ru",
+   "remo-nt.ru"
   ],
   "varianty": [],
   "url": "/remont-kvartir/tseny/",
@@ -12189,6 +12778,23 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "ремонт в доме в стиле прованс": {
+  "base": 9,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 1,
+  "napravlenie": "Ремонт по стилю",
+  "src": [
+   "domeo.ru",
+   "eremont.ru"
+  ],
+  "varianty": [
+   "ремонт в стиле прованс в доме"
+  ],
+  "url": "/remont-kvartir/po-stilyu/",
+  "stranica": "Ремонт квартир по стилю",
+  "razdel": "Ремонт квартир"
+ },
  "дизайн интерьера заказать проект": {
   "base": 42,
   "quoted": 5,
@@ -12442,6 +13048,20 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "дизайн студии 22 кв м": {
+  "base": 46,
+  "quoted": 5,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Дизайн",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [],
+  "url": "/design/studii/",
+  "stranica": "Дизайн квартиры-студии",
+  "razdel": "Дизайн"
+ },
  "заказать дизайн проект детской комнаты": {
   "base": 8,
   "quoted": 5,
@@ -12485,6 +13105,20 @@
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
+ },
+ "сити проф приемка квартир москва": {
+  "base": 7,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Приёмка",
+  "src": [
+   "mrnadzor.ru"
+  ],
+  "varianty": [],
+  "url": "/priemka/",
+  "stranica": "Приёмка квартир в новостройке",
+  "razdel": "Приёмка"
  },
  "дизайн проект однушки": {
   "base": 74,
@@ -12937,6 +13571,40 @@
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
+ "демонтаж стяжки пола расценка в смете": {
+  "base": 11,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Отдельные услуги",
+  "src": [
+   "only-remontkvartir.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/styazhka-pola/",
+  "stranica": "Стяжка пола",
+  "razdel": "Услуги"
+ },
+ "расценки на ремонт квартир в москве 2025": {
+  "base": 8,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "point-remont.ru",
+   "remo-nt.ru",
+   "stroyremdizayn.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
+ },
  "поклейка обоев цена за квадрат": {
   "base": 9,
   "quoted": 4,
@@ -13143,6 +13811,21 @@
   "napravlenie": "Ремонт помещений",
   "src": [
    "domeo.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/kuhni/",
+  "stranica": "Ремонт кухни",
+  "razdel": "Ремонт квартир"
+ },
+ "ремонт кухни в хрущевке 6 метра": {
+  "base": 6,
+  "quoted": 4,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "centr-otdelka.ru",
    "remo-nt.ru"
   ],
   "varianty": [],
@@ -13787,6 +14470,20 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "ремонт в классическом стиле": {
+  "base": 48,
+  "quoted": 4,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт по стилю",
+  "src": [
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
+  "razdel": "Ремонт квартир"
+ },
  "сколько стоит ремонт под ключ в новостройке": {
   "base": 72,
   "quoted": 4,
@@ -14170,6 +14867,26 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "стоимость кап ремонта в квартире за квадратный метр": {
+  "base": 4,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "only-remontkvartir.ru",
+   "remo-nt.ru",
+   "remony.ru",
+   "stroyremdizayn.ru",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
+ },
  "стоимость отделки квартиры": {
   "base": 308,
   "quoted": 3,
@@ -14406,6 +15123,22 @@
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
+ "бюджетный ремонт в новостройке": {
+  "base": 22,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "only-remontkvartir.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/novostroyka/",
+  "stranica": "Ремонт квартиры в новостройке",
+  "razdel": "Ремонт квартир"
+ },
  "установка смесителей расценка в смете": {
   "base": 15,
   "quoted": 3,
@@ -14487,6 +15220,22 @@
   "varianty": [],
   "url": "/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
+  "razdel": "Услуги"
+ },
+ "натяжные потолки расценка в смете": {
+  "base": 30,
+  "quoted": 3,
+  "overal": 2,
+  "exact": 1,
+  "napravlenie": "Отдельные услуги",
+  "src": [
+   "only-remontkvartir.ru",
+   "point-remont.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/natyazhnye-potolki/",
+  "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
  "смета ремонта квартиры в новостройке 2025": {
@@ -14577,6 +15326,25 @@
   "varianty": [],
   "url": "/remont-kvartir/elitnyy/",
   "stranica": "Элитный ремонт квартир",
+  "razdel": "Ремонт квартир"
+ },
+ "капремонт квартиры": {
+  "base": 1347,
+  "quoted": 3,
+  "overal": 1,
+  "exact": 1,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "avalremont.ru",
+   "domeo.ru",
+   "eremont.ru",
+   "only-remontkvartir.ru",
+   "remo-nt.ru",
+   "stroyremdizayn.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/kapitalnyy/",
+  "stranica": "Капитальный ремонт квартиры",
   "razdel": "Ремонт квартир"
  },
  "недорогой ремонт в однокомнатной квартире": {
@@ -14718,6 +15486,21 @@
   "varianty": [],
   "url": "/remont-kvartir/kuhni/",
   "stranica": "Ремонт кухни",
+  "razdel": "Ремонт квартир"
+ },
+ "ремонт в маленькой студии": {
+  "base": 17,
+  "quoted": 3,
+  "overal": 2,
+  "exact": 2,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "remo-nt.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт спальной комнаты": {
@@ -15217,6 +16000,23 @@
   "stranica": "Перепланировка квартиры",
   "razdel": "Услуги"
  },
+ "портфолио дизайн интерьера": {
+  "base": 22,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 0,
+  "napravlenie": "Дизайн",
+  "src": [
+   "domeo.ru",
+   "vproekte.com"
+  ],
+  "varianty": [
+   "дизайн интерьера портфолио"
+  ],
+  "url": "/design/",
+  "stranica": "Дизайн интерьера",
+  "razdel": "Дизайн"
+ },
  "прайс лист ремонт квартир": {
   "base": 39,
   "quoted": 3,
@@ -15394,6 +16194,20 @@
   "quoted": 3,
   "overal": 3,
   "exact": 1,
+  "napravlenie": "Отдельные услуги",
+  "src": [
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/elektromontazh/",
+  "stranica": "Электромонтажные работы",
+  "razdel": "Услуги"
+ },
+ "разводка электричества": {
+  "base": 235,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
   "napravlenie": "Отдельные услуги",
   "src": [
    "titanremont.ru"
@@ -15649,6 +16463,20 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
+ "ремонт под сдачу в аренду": {
+  "base": 40,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт по классу",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/pod-sdachu/",
+  "stranica": "Ремонт под сдачу в аренду",
+  "razdel": "Ремонт квартир"
+ },
  "ремонт в прихожей в доме": {
   "base": 26,
   "quoted": 3,
@@ -15661,6 +16489,20 @@
   "varianty": [],
   "url": "/remont-kvartir/prihozhey/",
   "stranica": "Ремонт прихожей и коридора",
+  "razdel": "Ремонт квартир"
+ },
+ "ремонт в хрущевке 1х комнатной": {
+  "base": 6,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/hrushchevka/",
+  "stranica": "Ремонт в хрущёвке",
   "razdel": "Ремонт квартир"
  },
  "ремонт ванной с душевой кабиной": {
@@ -15738,6 +16580,21 @@
   "stranica": "Дизайн интерьера",
   "razdel": "Дизайн"
  },
+ "проекты ремонта ванной комнаты": {
+  "base": 21,
+  "quoted": 3,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "eremont.ru",
+   "vproekte.com"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/vannoy/",
+  "stranica": "Ремонт ванной комнаты",
+  "razdel": "Ремонт квартир"
+ },
  "приемка про": {
   "base": 153,
   "quoted": 3,
@@ -15778,6 +16635,20 @@
   "varianty": [],
   "url": "/design/detskoy/",
   "stranica": "Дизайн детской комнаты",
+  "razdel": "Дизайн"
+ },
+ "дизайн ванной в современном стиле недорого": {
+  "base": 24,
+  "quoted": 3,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Дизайн",
+  "src": [
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/design/vannoy/",
+  "stranica": "Дизайн ванной комнаты",
   "razdel": "Дизайн"
  },
  "дизайн интерьера кафе": {
@@ -15917,6 +16788,25 @@
   "url": "/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
+ },
+ "сколько стоит ремонт квартиры с нуля за квадратный метр": {
+  "base": 3,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт квартир",
+  "src": [
+   "centr-otdelka.ru",
+   "domeo.ru",
+   "only-remontkvartir.ru",
+   "remo-nt.ru",
+   "suggest",
+   "titanremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/tseny/",
+  "stranica": "Цены на ремонт квартир",
+  "razdel": "Ремонт квартир"
  },
  "сколько стоит замена полотна натяжного потолка": {
   "base": 4,
@@ -16117,19 +17007,6 @@
   "url": "/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
- },
- "ремонт квартиры под сдачу": {
-  "base": 83,
-  "quoted": 15,
-  "overal": 8,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "прямая проверка Вордстата"
-  ],
-  "varianty": [],
-  "url": "/remont-kvartir/pod-sdachu/",
-  "stranica": "Ремонт под сдачу в аренду",
-  "razdel": "Ремонт квартир"
  },
  "ремонт квартиры по дизайн проекту": {
   "base": 61,

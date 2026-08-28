@@ -89,9 +89,10 @@ def blog_rubrika(phrase, v):
     подряд как правило по умолчанию, и привязка к нему ничего не значит.
     Что не привязалось, раскладываем по тематическим рубрикам.
     """
+    import ploskie_url as P
     url, name, sect = _load_assign()(phrase)
     if url != '/remont-kvartir/':
-        return '/blog' + url, name
+        return P.blog_flat('/blog' + url), name
     return blog_papka(phrase), blog_klaster(phrase)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -179,6 +180,37 @@ def build_semantics(out_path):
         bagg['Блог · ' + brubr[w][1]] += v.get('quoted', 0)
     srows += [[k, n] for k, n in bagg.most_common()]
     put(ws3, srows)
+
+    # ---- кластеры живой выдачи, отдельными листами ----
+    kl_path = os.path.join(MAT, 'кластеры.json')
+    if os.path.exists(kl_path):
+        KL = json.load(open(kl_path, encoding='utf-8'))
+        # для блога вместо коммерческой страницы показываем рубрику
+        page_of = {'kom': lambda w: core.get(w, {}).get('stranica', ''),
+                   'blog': lambda w: brubr.get(w, ('', ''))[1]}
+        for tag, title, src in [('kom', 'Кластеры коммерция', core),
+                                ('blog', 'Кластеры блог', blog)]:
+            data = KL.get(tag, {})
+            byc = data.get('by_cluster', {})
+            byp = data.get('by_phrase', {})
+            wsk = sheet(wb, title,
+                        ['Кластер', 'Фраз', 'Суммарная "Ч"',
+                         'Страница' if tag == 'kom' else 'Рубрика блога', 'Запросы'],
+                        [46, 8, 15, 34, 120])
+            krows = []
+            for head, words in byc.items():
+                q = sum(src.get(w, {}).get('quoted', 0) for w in words)
+                pages = collections.Counter(page_of[tag](w) for w in words
+                                            if page_of[tag](w))
+                page = pages.most_common(1)[0][0] if pages else ''
+                krows.append([head, len(words), q, page,
+                              '; '.join(sorted(words, key=lambda w: -src.get(w, {}).get('quoted', 0))[:40])])
+            singles = [w for w, k in byp.items() if not k]
+            for w in sorted(singles, key=lambda w: -src.get(w, {}).get('quoted', 0)):
+                krows.append([w, 1, src.get(w, {}).get('quoted', 0),
+                              page_of[tag](w), w])
+            krows.sort(key=lambda r: -r[2])
+            put(wsk, krows)
 
     wb.save(out_path)
     # отдаём разложенное ядро дальше, в сборку структуры

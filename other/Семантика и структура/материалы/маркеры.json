@@ -1,0 +1,307 @@
+{
+ "/remont-kvartir/": {
+  "marker": "ремонт и отделка",
+  "quoted": 56939,
+  "cluster": ""
+ },
+ "/design/": {
+  "marker": "дизайн интерьера",
+  "quoted": 3776,
+  "cluster": "дизайн интерьера"
+ },
+ "/mehanizirovannaya-shtukaturka/": {
+  "marker": "штукатурка механизированная",
+  "quoted": 2118,
+  "cluster": "штукатурка механизированная"
+ },
+ "/remont-kvartir/tseny/": {
+  "marker": "сколько стоит ремонт квартиры",
+  "quoted": 2053,
+  "cluster": "сколько стоит ремонт квартиры"
+ },
+ "/remont-kvartir/1-komnatnoy/": {
+  "marker": "ремонт однокомнатной квартиры",
+  "quoted": 1927,
+  "cluster": "ремонт однокомнатной квартиры"
+ },
+ "/design/kvartir/": {
+  "marker": "дизайн квартиры проект",
+  "quoted": 1066,
+  "cluster": "дизайн квартиры"
+ },
+ "/malyarnye-raboty/": {
+  "marker": "малярные работы",
+  "quoted": 729,
+  "cluster": ""
+ },
+ "/remont-kvartir/vannoy/": {
+  "marker": "ремонт ванной комнаты",
+  "quoted": 445,
+  "cluster": "ремонт ванной комнаты"
+ },
+ "/remont-kvartir/balkona/": {
+  "marker": "ремонт балкона",
+  "quoted": 317,
+  "cluster": "ремонт балкона"
+ },
+ "/remont-kvartir/evroremont/": {
+  "marker": "евроремонт",
+  "quoted": 296,
+  "cluster": "евроремонт"
+ },
+ "/remont-kvartir/elitnyy/": {
+  "marker": "элитная отделка квартир",
+  "quoted": 187,
+  "cluster": "ремонт элитный"
+ },
+ "/remont-kvartir/kuhni/": {
+  "marker": "ремонт кухни",
+  "quoted": 178,
+  "cluster": "ремонт кухни"
+ },
+ "/priemka/": {
+  "marker": "приемка квартир москва в новостройках",
+  "quoted": 171,
+  "cluster": "приемка квартир москва в новостройках"
+ },
+ "/remont-kvartir/sanuzla/": {
+  "marker": "ремонт санузла под ключ",
+  "quoted": 131,
+  "cluster": "ванна под ключ ремонт ванной цена"
+ },
+ "/pereplanirovka/": {
+  "marker": "перепланировка квартиры в москве согласование",
+  "quoted": 123,
+  "cluster": "согласование перепланировки квартиры"
+ },
+ "/remont-kvartir/kosmeticheskiy/": {
+  "marker": "косметический ремонт квартир в москве",
+  "quoted": 87,
+  "cluster": "косметический ремонт квартир в москве"
+ },
+ "/design/domov/": {
+  "marker": "дизайн проект дома",
+  "quoted": 86,
+  "cluster": "дизайн проект дома"
+ },
+ "/teplyy-pol/": {
+  "marker": "для теплого пола подложка",
+  "quoted": 82,
+  "cluster": "подложка под теплые полы"
+ },
+ "/shumoizolyaciya/": {
+  "marker": "шумоизоляция двери входной",
+  "quoted": 81,
+  "cluster": "шумоизоляция двери входной"
+ },
+ "/ukladka-plitki/": {
+  "marker": "укладка плитки цена за м2 в москве и московской",
+  "quoted": 80,
+  "cluster": "укладка плитки цены"
+ },
+ "/remont-kvartir/dizaynerskiy/": {
+  "marker": "элитный дизайнерский ремонт квартир в москве",
+  "quoted": 75,
+  "cluster": ""
+ },
+ "/remont-kvartir/v-zhk-shablon/": {
+  "marker": "ремонт в жк titul",
+  "quoted": 74,
+  "cluster": ""
+ },
+ "/remont-kvartir/tualeta/": {
+  "marker": "ремонт туалета",
+  "quoted": 71,
+  "cluster": ""
+ },
+ "/remont-kvartir/po-dizayn-proektu/": {
+  "marker": "ремонт по дизайн проекту",
+  "quoted": 60,
+  "cluster": "ремонт по дизайн проекту"
+ },
+ "/natyazhnye-potolki/": {
+  "marker": "материалы натяжных потолков",
+  "quoted": 57,
+  "cluster": ""
+ },
+ "/remont-kvartir/ekonom/": {
+  "marker": "сделать ремонт в квартире недорого",
+  "quoted": 54,
+  "cluster": "ремонт квартиры дешево"
+ },
+ "/remont-kvartir/novostroyka/": {
+  "marker": "сколько стоит сделать ремонт в новостройке с нуля",
+  "quoted": 53,
+  "cluster": "сколько стоит сделать ремонт в новостройке с нуля"
+ },
+ "/styazhka-pola/": {
+  "marker": "сухая стяжка пола кнауф",
+  "quoted": 48,
+  "cluster": ""
+ },
+ "/elektromontazh/": {
+  "marker": "электромонтаж в квартире",
+  "quoted": 43,
+  "cluster": ""
+ },
+ "/demontazhnye-raboty/": {
+  "marker": "демонтажные работы",
+  "quoted": 43,
+  "cluster": "демонтажные работы"
+ },
+ "/design/vannoy/": {
+  "marker": "дизайн проект ванной комнаты",
+  "quoted": 41,
+  "cluster": "дизайн проект ванной"
+ },
+ "/remont-kvartir/kapitalnyy/": {
+  "marker": "ремонт капитальный квартиры",
+  "quoted": 40,
+  "cluster": "ремонт капитальный квартиры"
+ },
+ "/remont-kvartir/vtorichka/": {
+  "marker": "сколько стоит ремонт квартиры в москве под ключ за м2 вторичка",
+  "quoted": 38,
+  "cluster": ""
+ },
+ "/remont-kvartir/stalinka/": {
+  "marker": "ремонт в сталинке",
+  "quoted": 37,
+  "cluster": ""
+ },
+ "/vyravnivanie-sten/": {
+  "marker": "выравнивание стен по маякам",
+  "quoted": 36,
+  "cluster": ""
+ },
+ "/remont-kvartir/po-stilyu/": {
+  "marker": "ремонт в стиле лофт",
+  "quoted": 36,
+  "cluster": "ремонт в стиле лофт"
+ },
+ "/design/kuhni/": {
+  "marker": "арт дизайн кухни",
+  "quoted": 31,
+  "cluster": ""
+ },
+ "/santehnicheskie-raboty/": {
+  "marker": "замена труб в ванной",
+  "quoted": 25,
+  "cluster": ""
+ },
+ "/design/spalni/": {
+  "marker": "дизайн проект спальни",
+  "quoted": 24,
+  "cluster": ""
+ },
+ "/remont-kvartir/prihozhey/": {
+  "marker": "ремонт коридора",
+  "quoted": 23,
+  "cluster": ""
+ },
+ "/design/ofisov/": {
+  "marker": "дизайн проект офиса",
+  "quoted": 23,
+  "cluster": "дизайн проект офиса"
+ },
+ "/remont-kvartir/hrushchevka/": {
+  "marker": "ремонт в хрущевке",
+  "quoted": 22,
+  "cluster": ""
+ },
+ "/remont-kvartir/spalni/": {
+  "marker": "ремонт в спальне",
+  "quoted": 19,
+  "cluster": "ремонт в спальне"
+ },
+ "/remont-kvartir/2-komnatnoy/": {
+  "marker": "ремонт 2 комнатной квартиры",
+  "quoted": 18,
+  "cluster": "ремонт двухкомнатной квартиры"
+ },
+ "/remont-kvartir/pod-sdachu/": {
+  "marker": "ремонт квартиры под сдачу",
+  "quoted": 15,
+  "cluster": "ремонт квартиры под сдачу"
+ },
+ "/remont-kvartir/3-komnatnoy/": {
+  "marker": "ремонт трехкомнатной квартиры под ключ",
+  "quoted": 15,
+  "cluster": "ремонт в 3 комнатной квартире"
+ },
+ "/remont-kvartir/v-rassrochku/": {
+  "marker": "ремонт в рассрочку",
+  "quoted": 14,
+  "cluster": "ремонт в рассрочку"
+ },
+ "/remont-kvartir/gostinoy/": {
+  "marker": "ремонт гостиной",
+  "quoted": 13,
+  "cluster": ""
+ },
+ "/remont-kvartir/studiya/": {
+  "marker": "ремонт студии под ключ",
+  "quoted": 13,
+  "cluster": ""
+ },
+ "/design/detskoy/": {
+  "marker": "дизайн проект детской комнаты",
+  "quoted": 12,
+  "cluster": "дизайн проект детской"
+ },
+ "/remont-domov/": {
+  "marker": "ремонт квартир и коттеджей",
+  "quoted": 11,
+  "cluster": ""
+ },
+ "/remont-kvartir/chernovoy/": {
+  "marker": "черновой ремонт квартир",
+  "quoted": 11,
+  "cluster": "черновой ремонт квартир"
+ },
+ "/remont-kvartir/posle-zaliva/": {
+  "marker": "ремонт после пожара",
+  "quoted": 11,
+  "cluster": ""
+ },
+ "/priemka/bez-otdelki/": {
+  "marker": "приемка квартиры в новостройке без отделки",
+  "quoted": 10,
+  "cluster": ""
+ },
+ "/remont-kvartir/chistovoy/": {
+  "marker": "чистовой ремонт квартиры",
+  "quoted": 7,
+  "cluster": "чистовой ремонт квартиры"
+ },
+ "/remont-kvartir/detskoy/": {
+  "marker": "ремонт детской комнаты",
+  "quoted": 7,
+  "cluster": "детская ремонт"
+ },
+ "/remont-kvartir/panelnyy-dom/": {
+  "marker": "ремонт в 2х комнатной квартире панельного дома",
+  "quoted": 7,
+  "cluster": "ремонт в двухкомнатной квартире панельного дома"
+ },
+ "/komplektaciya/": {
+  "marker": "комплектация дизайн проекта",
+  "quoted": 7,
+  "cluster": "комплектация интерьера"
+ },
+ "/design/gostinoy/": {
+  "marker": "дизайн проект гостиной",
+  "quoted": 7,
+  "cluster": ""
+ },
+ "/design/studii/": {
+  "marker": "дизайн студии 22 кв м",
+  "quoted": 5,
+  "cluster": ""
+ },
+ "/design/kommercheskih-pomesheniy/": {
+  "marker": "дизайн проект кафе",
+  "quoted": 5,
+  "cluster": "дизайн интерьера кафе"
+ }
+}

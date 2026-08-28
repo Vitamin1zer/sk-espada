@@ -361,23 +361,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "перепланировка квартиры в москве согласование": {
-  "base": 318,
-  "quoted": 123,
-  "overal": 113,
-  "exact": 113,
-  "napravlenie": "Перепланировка",
-  "src": [
-   "eremont.ru",
-   "suggest"
-  ],
-  "varianty": [
-   "согласование перепланировки квартиры москва",
-   "согласование перепланировки квартиры в москве"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 38
- },
  "дизайн туалета": {
   "base": 3114,
   "quoted": 122,
@@ -1065,22 +1048,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 1
  },
- "материалы натяжных потолков": {
-  "base": 871,
-  "quoted": 57,
-  "overal": 13,
-  "exact": 12,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": [
-   "натяжные потолки материал",
-   "материал натяжного потолка"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
- },
  "андерсон приемка квартир": {
   "base": 97,
   "quoted": 55,
@@ -1213,19 +1180,6 @@
   "varianty": [
    "стиль интерьера минимализм"
   ]
- },
- "ситипроф приемка квартир москва официальный сайт": {
-  "base": 51,
-  "quoted": 51,
-  "overal": 51,
-  "exact": 51,
-  "napravlenie": "Приёмка",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 31
  },
  "интерьер в стиле минимализм": {
   "base": 179,
@@ -1569,22 +1523,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 9
  },
- "шумоизоляция входной двери в квартире": {
-  "base": 1892,
-  "quoted": 40,
-  "overal": 26,
-  "exact": 26,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": [
-   "шумоизоляция для двери входной в квартиру",
-   "шумоизоляция для входной двери в квартиру"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 33
- },
  "дизайн студии 25 кв м": {
   "base": 152,
   "quoted": 40,
@@ -1762,19 +1700,6 @@
   ],
   "varianty": []
  },
- "выравнивание стен по маякам": {
-  "base": 104,
-  "quoted": 36,
-  "overal": 34,
-  "exact": 34,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
- },
  "дизайн ванной с душевой кабиной": {
   "base": 316,
   "quoted": 36,
@@ -1872,19 +1797,6 @@
    "eremont.ru"
   ],
   "varianty": []
- },
- "согласование перепланировки квартиры": {
-  "base": 771,
-  "quoted": 35,
-  "overal": 32,
-  "exact": 32,
-  "napravlenie": "Перепланировка",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 33
  },
  "спальня дизайн интерьера": {
   "base": 442,
@@ -2384,19 +2296,6 @@
    "дизайн прихожей фото в квартире"
   ]
  },
- "новая жизнь приемка квартир": {
-  "base": 42,
-  "quoted": 28,
-  "overal": 28,
-  "exact": 27,
-  "napravlenie": "Приёмка",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
- },
  "дизайн прихожей в квартире в современном стиле фото": {
   "base": 35,
   "quoted": 27,
@@ -2489,19 +2388,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 1
- },
- "сити проф приемка квартир": {
-  "base": 41,
-  "quoted": 26,
-  "overal": 26,
-  "exact": 26,
-  "napravlenie": "Приёмка",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 36
  },
  "дизайн туалета в квартире фото в современном стиле": {
   "base": 46,
@@ -2659,20 +2545,6 @@
   "varianty": [
    "какой валик нужен для поклейки обоев"
   ]
- },
- "бюджетный ремонт квартиры": {
-  "base": 245,
-  "quoted": 24,
-  "overal": 24,
-  "exact": 23,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 32
  },
  "интерьер в стиле гранж": {
   "base": 54,
@@ -3066,23 +2938,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "компания дизайн интерьера": {
-  "base": 126,
-  "quoted": 21,
-  "overal": 7,
-  "exact": 2,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [
-   "дизайн интерьера компания",
-   "компании по дизайну интерьера"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 33
- },
  "чек хаус приемка квартир отзывы": {
   "base": 28,
   "quoted": 21,
@@ -3416,25 +3271,6 @@
   ],
   "varianty": []
  },
- "кухня ремонт дизайн": {
-  "base": 167,
-  "quoted": 19,
-  "overal": 14,
-  "exact": 14,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [
-   "дизайн кухни ремонт",
-   "ремонт кухни дизайн",
-   "кухни ремонт дизайн",
-   "дизайн ремонта кухни"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 38
- },
  "ремонт в стиле": {
   "base": 1523,
   "quoted": 19,
@@ -3605,20 +3441,6 @@
   ],
   "iz_kommercii": true,
   "kommercializaciya": 0
- },
- "ремонт минимализм": {
-  "base": 160,
-  "quoted": 18,
-  "overal": 18,
-  "exact": 12,
-  "napravlenie": "Ремонт по стилю",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 32
  },
  "интерьер модерн": {
   "base": 369,
@@ -4132,26 +3954,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 27
  },
- "смета на ремонт квартиры": {
-  "base": 366,
-  "quoted": 16,
-  "overal": 16,
-  "exact": 16,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "only-remontkvartir.ru",
-   "remo-nt.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [
-   "смета для ремонта квартиры",
-   "смета ремонта квартиры"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
- },
  "ремонт во вторичке": {
   "base": 325,
   "quoted": 16,
@@ -4426,19 +4228,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 19
  },
- "приемка квартиры пик": {
-  "base": 151,
-  "quoted": 15,
-  "overal": 12,
-  "exact": 6,
-  "napravlenie": "Приёмка",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
- },
  "светлана борисова дизайнер интерьера": {
   "base": 17,
   "quoted": 15,
@@ -4603,19 +4392,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 1
  },
- "бюджетный ремонт кухни": {
-  "base": 64,
-  "quoted": 14,
-  "overal": 10,
-  "exact": 10,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 31
- },
  "дизайн кухни 6 метров": {
   "base": 306,
   "quoted": 14,
@@ -4660,25 +4436,6 @@
   ],
   "iz_kommercii": true,
   "kommercializaciya": 7
- },
- "дизайн интерьера сайт": {
-  "base": 284,
-  "quoted": 14,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "vproekte.com"
-  ],
-  "varianty": [
-   "сайт дизайн интерьера",
-   "сайт для дизайна интерьера"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 37
  },
  "дизайн студии 20 кв м": {
   "base": 130,
@@ -5240,27 +4997,6 @@
   ],
   "varianty": []
  },
- "компании по ремонту квартир": {
-  "base": 556,
-  "quoted": 12,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "remo-nt.ru",
-   "remony.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [
-   "компания по ремонту квартир"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 33
- },
  "в каком порядке делать ремонт в квартире": {
   "base": 23,
   "quoted": 12,
@@ -5332,20 +5068,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 0
- },
- "дизайн квартиры 38 кв м однокомнатной": {
-  "base": 34,
-  "quoted": 12,
-  "overal": 9,
-  "exact": 4,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "only-remontkvartir.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
  },
  "ремонт однокомнатной квартиры дизайн": {
   "base": 79,
@@ -5665,40 +5387,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 26
  },
- "студия ремонта официальный сайт": {
-  "base": 18,
-  "quoted": 11,
-  "overal": 6,
-  "exact": 6,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "remo-nt.ru",
-   "remony.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 36
- },
- "стоимость косметического ремонта за 1 кв метр в москве": {
-  "base": 15,
-  "quoted": 11,
-  "overal": 11,
-  "exact": 10,
-  "napravlenie": "Ремонт по метражу",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "only-remontkvartir.ru",
-   "point-remont.ru",
-   "remony.ru",
-   "stroyremdizayn.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 32
- },
  "приемка квартиры от застройщика": {
   "base": 339,
   "quoted": 11,
@@ -5760,21 +5448,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 14
- },
- "дизайн проект дома в современном стиле готовый": {
-  "base": 14,
-  "quoted": 11,
-  "overal": 11,
-  "exact": 0,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 32
  },
  "подготовка стен перед поклейкой обоев": {
   "base": 29,
@@ -5998,25 +5671,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 1
- },
- "средняя стоимость ремонта квартиры в москве за квадратный метр": {
-  "base": 37,
-  "quoted": 10,
-  "overal": 10,
-  "exact": 6,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "point-remont.ru",
-   "remo-nt.ru",
-   "stroyremdizayn.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
  },
  "дизайн санузла с душевой": {
   "base": 183,
@@ -7567,22 +7221,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 1
  },
- "ремонт квартиры для сдачи в аренду": {
-  "base": 37,
-  "quoted": 8,
-  "overal": 6,
-  "exact": 1,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "only-remontkvartir.ru"
-  ],
-  "varianty": [
-   "ремонт для сдачи квартиры в аренду"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 31
- },
  "ремонт новой квартиры": {
   "base": 1133,
   "quoted": 8,
@@ -7654,19 +7292,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 21
- },
- "бюджетный ремонт в туалете": {
-  "base": 44,
-  "quoted": 8,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
  },
  "дизайн кухни 11 квадратных метров": {
   "base": 21,
@@ -8031,22 +7656,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 25
- },
- "сколько сейчас стоит ремонт квартиры за м2": {
-  "base": 38,
-  "quoted": 8,
-  "overal": 8,
-  "exact": 8,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "suggest",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 36
  },
  "можно ли натягивать потолок после поклейки обоев": {
   "base": 11,
@@ -8414,40 +8023,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 15
  },
- "средняя цена ремонта квартиры за квадратный метр": {
-  "base": 22,
-  "quoted": 7,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "point-remont.ru",
-   "remo-nt.ru",
-   "stroyremdizayn.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 33
- },
- "ремонт санузла в хрущевке": {
-  "base": 103,
-  "quoted": 7,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 36
- },
  "дизайн квартиры 40 кв м однокомнатной": {
   "base": 90,
   "quoted": 7,
@@ -8502,20 +8077,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "ремонт кухни 5м2": {
-  "base": 8,
-  "quoted": 7,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 37
- },
  "отделка новой квартиры": {
   "base": 765,
   "quoted": 7,
@@ -8529,20 +8090,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 9
- },
- "ремонт квартир москва отзывы": {
-  "base": 428,
-  "quoted": 7,
-  "overal": 7,
-  "exact": 6,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "only-remontkvartir.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 39
  },
  "оклейка или поклейка обоев": {
   "base": 34,
@@ -8875,19 +8422,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 0
- },
- "отделка ванны плиткой": {
-  "base": 425,
-  "quoted": 7,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 36
  },
  "ар деко интерьер": {
   "base": 106,
@@ -9595,19 +9129,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 14
  },
- "отделка ванной панелями": {
-  "base": 599,
-  "quoted": 6,
-  "overal": 5,
-  "exact": 5,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
- },
  "ремонт ванной комнаты в стиле лофт": {
   "base": 6,
   "quoted": 6,
@@ -9621,35 +9142,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 21
- },
- "технический дизайн проект": {
-  "base": 159,
-  "quoted": 6,
-  "overal": 6,
-  "exact": 2,
-  "napravlenie": "Дизайн",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 39
- },
- "квартира студия дизайн интерьера": {
-  "base": 52,
-  "quoted": 6,
-  "overal": 4,
-  "exact": 4,
-  "napravlenie": "Дизайн",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": [
-   "дизайн интерьера квартиры студии"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
  },
  "комплектатор дизайн проектов": {
   "base": 22,
@@ -9742,19 +9234,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 0
- },
- "дизайн кухни в современном стиле в светлых": {
-  "base": 39,
-  "quoted": 6,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Дизайн",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
  },
  "пример ремонта ванной комнаты": {
   "base": 79,
@@ -10335,20 +9814,6 @@
   ],
   "varianty": []
  },
- "рассрочка на ремонт квартиры без процентов": {
-  "base": 7,
-  "quoted": 5,
-  "overal": 5,
-  "exact": 5,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 32
- },
  "очередность ремонта в квартире": {
   "base": 34,
   "quoted": 5,
@@ -10528,22 +9993,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "ремонт в доме в стиле прованс": {
-  "base": 9,
-  "quoted": 5,
-  "overal": 5,
-  "exact": 1,
-  "napravlenie": "Ремонт по стилю",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [
-   "ремонт в стиле прованс в доме"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 30
- },
  "ремонт в спальне дизайн": {
   "base": 21,
   "quoted": 5,
@@ -10689,19 +10138,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 1
  },
- "дизайн студии 22 кв м": {
-  "base": 46,
-  "quoted": 5,
-  "overal": 4,
-  "exact": 4,
-  "napravlenie": "Дизайн",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
- },
  "дизайн студии 18 кв м": {
   "base": 15,
   "quoted": 5,
@@ -10769,19 +10205,6 @@
   ],
   "iz_kommercii": true,
   "kommercializaciya": 0
- },
- "сити проф приемка квартир москва": {
-  "base": 7,
-  "quoted": 5,
-  "overal": 5,
-  "exact": 5,
-  "napravlenie": "Приёмка",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 37
  },
  "дизайн спальни в деревянном доме": {
   "base": 26,
@@ -11610,38 +11033,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 1
  },
- "демонтаж стяжки пола расценка в смете": {
-  "base": 11,
-  "quoted": 4,
-  "overal": 4,
-  "exact": 4,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "only-remontkvartir.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
- },
- "расценки на ремонт квартир в москве 2025": {
-  "base": 8,
-  "quoted": 4,
-  "overal": 4,
-  "exact": 4,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "point-remont.ru",
-   "remo-nt.ru",
-   "stroyremdizayn.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 30
- },
  "ремонт в квартире 2026": {
   "base": 1125,
   "quoted": 4,
@@ -11713,20 +11104,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 8
- },
- "ремонт кухни в хрущевке 6 метра": {
-  "base": 6,
-  "quoted": 4,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "centr-otdelka.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 31
  },
  "образец сметы на ремонт квартиры": {
   "base": 35,
@@ -12504,19 +11881,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 21
- },
- "ремонт в классическом стиле": {
-  "base": 48,
-  "quoted": 4,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт по стилю",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
  },
  "дизайн интерьера минимализм": {
   "base": 47,
@@ -13492,25 +12856,6 @@
   ],
   "varianty": []
  },
- "стоимость кап ремонта в квартире за квадратный метр": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "only-remontkvartir.ru",
-   "remo-nt.ru",
-   "remony.ru",
-   "stroyremdizayn.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 38
- },
  "обои клеить до натяжных потолков или после": {
   "base": 10,
   "quoted": 3,
@@ -13566,21 +12911,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "бюджетный ремонт в новостройке": {
-  "base": 22,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "only-remontkvartir.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 30
- },
  "ориентировочная стоимость ремонта квартиры 1м2": {
   "base": 3,
   "quoted": 3,
@@ -13596,53 +12926,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 19
- },
- "натяжные потолки расценка в смете": {
-  "base": 30,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 1,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "only-remontkvartir.ru",
-   "point-remont.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 33
- },
- "капремонт квартиры": {
-  "base": 1347,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "avalremont.ru",
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "remo-nt.ru",
-   "stroyremdizayn.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 36
- },
- "ремонт в маленькой студии": {
-  "base": 17,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 34
  },
  "ремонт стен в хрущевке": {
   "base": 35,
@@ -13889,22 +13172,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "портфолио дизайн интерьера": {
-  "base": 22,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 0,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "vproekte.com"
-  ],
-  "varianty": [
-   "дизайн интерьера портфолио"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 35
- },
  "красивый дизайн квартиры в современном стиле": {
   "base": 5,
   "quoted": 3,
@@ -13961,95 +13228,6 @@
   "varianty": [
    "дизайн квартиры 25 кв м студия"
   ],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "стильный ремонт квартиры в современном стиле": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "vproekte.com"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "ремонт квартиры в современном стиле": {
-  "base": 37,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "vproekte.com"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 1
- },
- "ремонт прихожей в частном доме": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 21
- },
- "ремонт спальни 12 кв м": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 14
- },
- "средняя стоимость ремонта за 1 кв метр во вторичке": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "only-remontkvartir.ru",
-   "stroyremdizayn.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 19
- },
- "ремонт квартир видео смотреть бесплатно": {
-  "base": 5,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 0
  }

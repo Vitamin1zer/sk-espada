@@ -15,6 +15,8 @@ PROJ = os.path.dirname(HERE)
 MAT = os.path.join(PROJ, 'материалы')
 sys.path.insert(0, HERE)
 from s10_sobrat_xlsx import build_structure  # noqa: E402
+import ploskie_url as P  # noqa: E402
+import s14_perelinkovka  # noqa: E402
 
 B = ' | СК Эспада'
 
@@ -487,16 +489,19 @@ def main():
             return 'Рабочее ядро'
         return 'Тонко'
 
+    mk = os.path.join(MAT, 'маркеры.json')
+    marker_data = json.load(open(mk, encoding='utf-8')) if os.path.exists(mk) else {}
+
     pages_rows, meta_rows, demand_rows = [], [], []
     for url in ORDER:
         name, sect, old, title, descr, h1 = META[url]
         st = status(url)
-        pages_rows.append([st, url, old, name, '', '', ''])
+        pages_rows.append([st, P.flat_url(url), old, name, '', '', ''])
         if title:
             meta_rows.append([name, title, len(title), descr, len(descr), h1, len(h1)])
         s = stat.get(url, {'n': 0, 'q': 0, 'qk': 0, 'nk': 0, 'marker': ''})
         c1, c2 = cta_for(url, sect)
-        demand_rows.append([url, name, sect, st, s['n'], s['q'], s['nk'], s['qk'],
+        demand_rows.append([P.flat_url(url), name, sect, st, s['n'], s['q'], s['nk'], s['qk'],
                             s['marker'], verdict(url), c1, c2])
 
     out = os.path.join(PROJ, 'СТРУКТУРА САЙТА _ СК ЭСПАДА _ SEO VICTORY.xlsx')
@@ -569,7 +574,68 @@ def main():
         wsh.cell(hrow, i, v).font = Font(name='Inter', size=10)
     wsh.freeze_panes = 'A2'
 
+    # ---- лист «Иерархия в админке» ----
+    # Адреса плоские, но в админке через Nested Pages сохраняется дерево:
+    # все страницы, включая блог, лежат в одном разделе «Страницы».
+    wsi = wb.create_sheet('Иерархия в админке')
+    for i, h in enumerate(['Уровень', 'Название', 'Слаг (post_name)',
+                           'Родитель (parent_page_slug)', 'Адрес на сайте',
+                           'Статус'], 1):
+        c = wsi.cell(1, i, h)
+        c.fill = PatternFill('solid', fgColor='FF000000')
+        c.font = Font(name='Inter', size=10, bold=True, color='FFFFFFFF')
+    for i, w in enumerate([10, 44, 36, 34, 38, 22], 1):
+        wsi.column_dimensions[get_column_letter(i)].width = w
+    r = 2
+    for url in ORDER:
+        name = META[url][0]
+        lvl = P.level(url)
+        vals = [lvl if lvl else 0, ('    ' * max(0, lvl - 1)) + name,
+                P.slug(url), P.parent_slug(url), P.flat_url(url), status(url)]
+        for i, v in enumerate(vals, 1):
+            wsi.cell(r, i, v).font = Font(name='Inter', size=10)
+        r += 1
+    wsi.freeze_panes = 'A2'
+    wsi.auto_filter.ref = 'A1:F%d' % (r - 1)
+
+    # ---- лист «Перелинковка» ----
+    blog_rubrics = {}
+    bp = os.path.join(MAT, 'ядро_итог_блог.json')
+    if os.path.exists(bp):
+        bl = json.load(open(bp, encoding='utf-8'))
+        agg = collections.defaultdict(lambda: ['', '', 0])
+        import s10_sobrat_xlsx as S10
+        assign = S10._load_assign()
+        for w, v in bl.items():
+            papka = v.get('papka', '/blog/')
+            klaster = v.get('klaster', 'Блог — хаб')
+            u, nm, sc = assign(w)
+            com = u if u != '/remont-kvartir/' else ''
+            cur = agg[papka]
+            cur[0] = klaster
+            if com:
+                cur[1] = com
+            cur[2] += v.get('quoted', 0)
+        blog_rubrics = {k: tuple(v) for k, v in agg.items()}
+
+    ne_sozdavat = {u for u in ORDER if status(u) == 'Не создавать'}
+    link_rows = s14_perelinkovka.build(META, stat, marker_data, blog_rubrics,
+                                       skip=ne_sozdavat)
+    wsl = wb.create_sheet('Перелинковка')
+    for i, h in enumerate(['Откуда', 'Куда', 'Анкор', 'Тип связи', 'Приоритет'], 1):
+        c = wsl.cell(1, i, h)
+        c.fill = PatternFill('solid', fgColor='FF000000')
+        c.font = Font(name='Inter', size=10, bold=True, color='FFFFFFFF')
+    for i, w in enumerate([38, 38, 52, 24, 11], 1):
+        wsl.column_dimensions[get_column_letter(i)].width = w
+    for r2, row in enumerate(sorted(link_rows, key=lambda x: (x[4], x[3], x[0])), 2):
+        for i, v in enumerate(row, 1):
+            wsl.cell(r2, i, v).font = Font(name='Inter', size=10)
+    wsl.freeze_panes = 'A2'
+    wsl.auto_filter.ref = 'A1:E%d' % (len(link_rows) + 1)
+
     wb.save(out)
+    print('перелинковка: %d связей' % len(link_rows))
 
     print('СТРУКТУРА САЙТА собрана: %d страниц, %d наборов мета-тегов' % (n1, n2))
     print('пунктов меню первого уровня: %d' % len(MENU))
