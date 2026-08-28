@@ -81,6 +81,18 @@ def _load_assign():
     return _ASSIGN
 
 
+_KLIENT = None
+
+
+def _klient_slugs():
+    """Слаги, утверждённые заказчиком: название страницы -> слаг."""
+    global _KLIENT
+    if _KLIENT is None:
+        p = os.path.join(MAT, 'slagi_klienta.json')
+        _KLIENT = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+    return _KLIENT
+
+
 def blog_rubrika(phrase, v):
     """(папка, кластер) статьи блога.
 
@@ -88,11 +100,15 @@ def blog_rubrika(phrase, v):
     видно, куда вести перелинковку. Пиллар в расчёт не берём: он ловит всё
     подряд как правило по умолчанию, и привязка к нему ничего не значит.
     Что не привязалось, раскладываем по тематическим рубрикам.
+
+    Папка рубрики строится на слаге коммерческой страницы из таблицы
+    заказчика, чтобы адреса блога и сайта не разъезжались.
     """
-    import ploskie_url as P
+    import ploskie_url as PU
     url, name, sect = _load_assign()(phrase)
     if url != '/remont-kvartir/':
-        return P.blog_flat('/blog' + url), name
+        slug = (_klient_slugs().get(name) or {}).get('slug') or PU.slug(url)
+        return '/blog/%s/' % slug.strip('/'), name
     return blog_papka(phrase), blog_klaster(phrase)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -152,10 +168,22 @@ def build_semantics(out_path):
     ws = sheet(wb, 'СЕМАНТИКА',
                ['Запрос', 'Ч', '"Ч"', '"!Ч"', 'Папка', 'КЛАСТЕР', 'Коммерциализация'],
                [77.6, 7.6, 6.5, 7.1, 30, 32, 19.9], first=True)
+    # адрес страницы берём из таблицы заказчика: его слаги — источник истины
+    import ploskie_url as PU
+
+    def adres(v):
+        nm = v.get('stranica', '')
+        if nm == 'Главная':
+            return '/'
+        sl = (_klient_slugs().get(nm) or {}).get('slug')
+        if sl:
+            return '/%s/' % sl.strip('/')
+        return PU.flat_url(v.get('url', ''))
+
     rows = []
     for w, v in sorted(core.items(), key=lambda kv: (kv[1].get('url', ''), -kv[1]['quoted'])):
         rows.append([w, v.get('base', 0), v.get('quoted', 0), v.get('overal', 0),
-                     v.get('url', ''), v.get('stranica', ''), comm.get(w, '')])
+                     adres(v), v.get('stranica', ''), comm.get(w, '')])
     put(ws, rows)
 
     ws2 = sheet(wb, 'СЕМАНТИКА Блог',

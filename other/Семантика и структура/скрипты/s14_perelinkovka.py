@@ -27,7 +27,7 @@ PILLARY = {'Ремонт квартир': '/remont-kvartir/',
            'Приёмка': '/priemka/'}
 
 
-def build(meta, stat, marker, blog_rubrics, skip=None):
+def build(meta, stat, marker, blog_rubrics, skip=None, adres=None):
     """meta: URL -> (название, раздел, старый URL, ...)
     stat: URL -> {'q': спрос, ...}
     marker: URL -> {'marker': фраза}
@@ -36,6 +36,11 @@ def build(meta, stat, marker, blog_rubrics, skip=None):
     rows = []
     seen = set()
     skip = skip or set()
+    # адреса берём из таблицы заказчика, у нас они только внутренние
+    adres = adres or {}
+
+    def A(u):
+        return adres.get(u) or P.flat_url(u)
 
     def add(src, dst, anchor, kind, prio):
         # страницы, которые решено не создавать, из перелинковки исключаем
@@ -47,7 +52,7 @@ def build(meta, stat, marker, blog_rubrics, skip=None):
         if key in seen:
             return
         seen.add(key)
-        rows.append([P.flat_url(src), P.flat_url(dst), anchor, kind, prio])
+        rows.append([A(src), A(dst), anchor, kind, prio])
 
     def anchor_of(url):
         m = (marker.get(url) or {}).get('marker')
@@ -83,9 +88,9 @@ def build(meta, stat, marker, blog_rubrics, skip=None):
                                                key=lambda kv: -kv[1][2]):
         if not com_url or com_url not in meta or com_url in skip:
             continue
-        rows.append([papka, P.flat_url(com_url), anchor_of(com_url),
+        rows.append([papka, A(com_url), anchor_of(com_url),
                      'Блог в коммерцию', 1])
-        rows.append([P.flat_url(com_url), papka,
+        rows.append([A(com_url), papka,
                      'Статьи о том, %s' % klaster.lower(), 'Коммерция в блог', 3])
 
     # 6. Отдельные услуги в пиллар ремонта

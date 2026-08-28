@@ -2,17 +2,17 @@
  "/remont-kvartir/": {
   "marker": "ремонт и отделка",
   "quoted": 56939,
-  "cluster": ""
+  "cluster": "ремонт и отделка"
  },
  "/design/": {
   "marker": "дизайн интерьера",
   "quoted": 3776,
-  "cluster": "дизайн интерьера"
+  "cluster": ""
  },
  "/mehanizirovannaya-shtukaturka/": {
   "marker": "штукатурка механизированная",
   "quoted": 2118,
-  "cluster": "штукатурка механизированная"
+  "cluster": ""
  },
  "/remont-kvartir/tseny/": {
   "marker": "сколько стоит ремонт квартиры",
@@ -37,7 +37,7 @@
  "/remont-kvartir/vannoy/": {
   "marker": "ремонт ванной комнаты",
   "quoted": 445,
-  "cluster": "ремонт ванной комнаты"
+  "cluster": ""
  },
  "/remont-kvartir/balkona/": {
   "marker": "ремонт балкона",
@@ -52,7 +52,7 @@
  "/remont-kvartir/elitnyy/": {
   "marker": "элитная отделка квартир",
   "quoted": 187,
-  "cluster": "ремонт элитный"
+  "cluster": "ремонт элитных квартир"
  },
  "/remont-kvartir/kuhni/": {
   "marker": "ремонт кухни",
@@ -67,7 +67,7 @@
  "/remont-kvartir/sanuzla/": {
   "marker": "ремонт санузла под ключ",
   "quoted": 131,
-  "cluster": "ванна под ключ ремонт ванной цена"
+  "cluster": "ремонт ванной комнаты под ключ"
  },
  "/pereplanirovka/": {
   "marker": "перепланировка квартиры в москве согласование",
@@ -102,7 +102,7 @@
  "/remont-kvartir/dizaynerskiy/": {
   "marker": "элитный дизайнерский ремонт квартир в москве",
   "quoted": 75,
-  "cluster": ""
+  "cluster": "ремонт элитный"
  },
  "/remont-kvartir/v-zhk-shablon/": {
   "marker": "ремонт в жк titul",
@@ -112,12 +112,12 @@
  "/remont-kvartir/tualeta/": {
   "marker": "ремонт туалета",
   "quoted": 71,
-  "cluster": ""
+  "cluster": "ремонт туалета"
  },
  "/remont-kvartir/po-dizayn-proektu/": {
   "marker": "ремонт по дизайн проекту",
   "quoted": 60,
-  "cluster": "ремонт по дизайн проекту"
+  "cluster": ""
  },
  "/natyazhnye-potolki/": {
   "marker": "материалы натяжных потолков",
@@ -127,12 +127,12 @@
  "/remont-kvartir/ekonom/": {
   "marker": "сделать ремонт в квартире недорого",
   "quoted": 54,
-  "cluster": "ремонт квартиры дешево"
+  "cluster": "ремонт квартир недорого"
  },
  "/remont-kvartir/novostroyka/": {
   "marker": "сколько стоит сделать ремонт в новостройке с нуля",
   "quoted": 53,
-  "cluster": "сколько стоит сделать ремонт в новостройке с нуля"
+  "cluster": "сколько стоит отделка квартиры"
  },
  "/styazhka-pola/": {
   "marker": "сухая стяжка пола кнауф",
@@ -177,7 +177,7 @@
  "/remont-kvartir/po-stilyu/": {
   "marker": "ремонт в стиле лофт",
   "quoted": 36,
-  "cluster": "ремонт в стиле лофт"
+  "cluster": "ремонт лофт"
  },
  "/design/kuhni/": {
   "marker": "арт дизайн кухни",
@@ -197,7 +197,7 @@
  "/remont-kvartir/prihozhey/": {
   "marker": "ремонт коридора",
   "quoted": 23,
-  "cluster": ""
+  "cluster": "ремонт коридора"
  },
  "/design/ofisov/": {
   "marker": "дизайн проект офиса",
@@ -212,12 +212,12 @@
  "/remont-kvartir/spalni/": {
   "marker": "ремонт в спальне",
   "quoted": 19,
-  "cluster": "ремонт в спальне"
+  "cluster": ""
  },
  "/remont-kvartir/2-komnatnoy/": {
   "marker": "ремонт 2 комнатной квартиры",
   "quoted": 18,
-  "cluster": "ремонт двухкомнатной квартиры"
+  "cluster": "ремонт 2 комнатной квартиры"
  },
  "/remont-kvartir/pod-sdachu/": {
   "marker": "ремонт квартиры под сдачу",
@@ -242,7 +242,7 @@
  "/remont-kvartir/studiya/": {
   "marker": "ремонт студии под ключ",
   "quoted": 13,
-  "cluster": ""
+  "cluster": "квартира студия ремонт"
  },
  "/design/detskoy/": {
   "marker": "дизайн проект детской комнаты",
@@ -303,5 +303,20 @@
   "marker": "дизайн проект кафе",
   "quoted": 5,
   "cluster": "дизайн интерьера кафе"
+ },
+ "/remont-kvartir/garderobnoy/": {
+  "marker": "ремонт гардеробной",
+  "quoted": 5,
+  "cluster": ""
+ },
+ "/remont-kommercheskih-pomescheniy/": {
+  "marker": "ремонт офиса",
+  "quoted": 69,
+  "cluster": "ремонт офиса"
+ },
+ "/priemka/s-otdelkoy/": {
+  "marker": "приемка квартиры пик с отделкой",
+  "quoted": 5,
+  "cluster": "приемка квартиры пик"
  }
 }

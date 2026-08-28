@@ -2282,32 +2282,6 @@
   "iz_kommercii": true,
   "kommercializaciya": 14
  },
- "прихожая дизайн фото в квартире": {
-  "base": 199,
-  "quoted": 28,
-  "overal": 19,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [
-   "фото дизайн прихожей в квартире",
-   "дизайн прихожей фото в квартире"
-  ]
- },
- "дизайн прихожей в квартире в современном стиле фото": {
-  "base": 35,
-  "quoted": 27,
-  "overal": 26,
-  "exact": 23,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": []
- },
  "интерьер прованс": {
   "base": 920,
   "quoted": 27,
@@ -2981,19 +2955,6 @@
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 23
- },
- "прихожая дизайн в современном стиле фото": {
-  "base": 117,
-  "quoted": 20,
-  "overal": 17,
-  "exact": 16,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [
-   "дизайн прихожей в современном стиле фото"
-  ]
  },
  "какого цвета бывают натяжные потолки": {
   "base": 31,
@@ -5637,17 +5598,6 @@
   ],
   "varianty": []
  },
- "обои в коридоре дизайн фото": {
-  "base": 35,
-  "quoted": 10,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
  "чем обработать стену от плесени и грибка перед поклейкой обоев": {
   "base": 27,
   "quoted": 10,
@@ -7716,17 +7666,6 @@
   ],
   "varianty": []
  },
- "дизайн коридора в хрущевке узкий и маленький фото": {
-  "base": 7,
-  "quoted": 7,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": []
- },
  "квартира в стиле лофт дизайн фото": {
   "base": 9,
   "quoted": 7,
@@ -7962,17 +7901,6 @@
  },
  "освещение в спальне фото интерьер дизайн": {
   "base": 8,
-  "quoted": 7,
-  "overal": 7,
-  "exact": 7,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "обои в коридоре дизайн фото в современном стиле": {
-  "base": 17,
   "quoted": 7,
   "overal": 7,
   "exact": 7,
@@ -9429,17 +9357,6 @@
   ],
   "varianty": []
  },
- "прихожая в хрущевке узкий коридор дизайн фото": {
-  "base": 5,
-  "quoted": 5,
-  "overal": 5,
-  "exact": 5,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": []
- },
  "ремонт в ванной комнате в хрущевке фото": {
   "base": 16,
   "quoted": 5,
@@ -10795,18 +10712,6 @@
   ],
   "varianty": []
  },
- "гардеробная дизайн фото": {
-  "base": 128,
-  "quoted": 4,
-  "overal": 4,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
  "современные гостиные дизайн в квартире реальные фото": {
   "base": 8,
   "quoted": 4,
@@ -12153,1082 +12058,550 @@
   ],
   "varianty": []
  },
- "этапы ремонта ванной комнаты во вторичке": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru"
-  ],
-  "varianty": []
- },
- "что значит предчистовая отделка квартиры": {
-  "base": 28,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru"
-  ],
-  "varianty": []
- },
- "фото ремонта в хрущевке 2 комнатной": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": []
- },
- "ремонт в однокомнатной квартире дизайн интерьеров фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": []
- },
- "что такое евроремонт квартиры": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "дизайн проект квартиры фото": {
-  "base": 110,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "suggest",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "скачать фото ремонта квартир": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "point-remont.ru",
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "фото ремонтов квартир дизайн интерьера": {
-  "base": 23,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "отделка квартир фото": {
-  "base": 409,
-  "quoted": 3,
-  "overal": 2,
+ "комната гардеробная": {
+  "base": 2255,
+  "quoted": 61,
+  "overal": 48,
   "exact": 2,
-  "napravlenie": "",
+  "napravlenie": "Досбор",
   "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "only-remontkvartir.ru"
-  ],
-  "varianty": []
- },
- "поклейка обоев фото": {
-  "base": 50,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": [
-   "фото поклейка обоев"
-  ]
- },
- "что надо для поклейки обоев": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru",
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "как вырезать розетку при поклейке обоев": {
-  "base": 10,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "перед поклейкой обоев что нужно сделать со стенами после снятия старых обоев поэтапно": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "этапы перед поклейкой обоев": {
-  "base": 16,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "что делают со стенами перед поклейкой обоев": {
-  "base": 15,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "виды натяжных потолков в квартире": {
-  "base": 14,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "чем отличается сатиновый потолок от матового натяжного потолка": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "из какого материала делают натяжные потолки": {
-  "base": 7,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "какие есть натяжные потолки": {
-  "base": 208,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "схема разводки электрики в частном доме": {
-  "base": 16,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "стяжка пола из чего делается": {
-  "base": 8,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "полусухая стяжка пола в квартире плюсы и минусы": {
-  "base": 10,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "titanremont.ru"
-  ],
-  "varianty": []
- },
- "ремонт в студии 24 кв реальные фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "only-remontkvartir.ru",
-   "suggest"
-  ],
-  "varianty": []
- },
- "реальные фото ремонта квартир": {
-  "base": 77,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "only-remontkvartir.ru"
-  ],
-  "varianty": []
- },
- "фото ремонта двухкомнатной квартиры": {
-  "base": 32,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "only-remontkvartir.ru"
-  ],
-  "varianty": []
- },
- "что такое вайт бокс отделка квартиры в новостройке": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "как улучшить шумоизоляцию входной двери": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "какой толщины должна быть стяжка пола": {
-  "base": 40,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "состав полусухой стяжки": {
-  "base": 47,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "как выбрать дизайнера интерьера для квартиры": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "дизайн студии 22м2 фото интерьера": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "спальня 10 м2 дизайн интерьер фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "centr-otdelka.ru"
-  ],
-  "varianty": []
- },
- "какой дизайн квартиры сейчас в моде 2025": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "кабинет руководителя дизайн интерьера фото": {
-  "base": 7,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "детские комнаты интерьер дизайн фото": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "ремонт в гостиной в современном стиле фото": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "комната спальня дизайн интерьера фото": {
-  "base": 5,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "идеи ремонта в спальне фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "дизайн ванной комнаты фото современные идеи": {
-  "base": 7,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "дизайн ванной фото в реальных квартирах": {
-  "base": 12,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": []
- },
- "как принять квартиру от застройщика без отделки правильно": {
-  "base": 7,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": []
- },
- "дизайн гостиной в частном доме фото": {
-  "base": 50,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "ремонт кухни картинки": {
-  "base": 8,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "кухни картинки дизайн интерьера в квартире реальные фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "кухня совмещенная с гостиной дизайн фото": {
-  "base": 21,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "дизайн кухня гостиная в частном доме фото": {
-  "base": 29,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": [
-   "дизайн кухни гостиной в частном доме фото"
-  ]
- },
- "дизайн кухни в современном стиле фото в доме частном": {
-  "base": 15,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "красивый ремонт в ванной и туалете дизайн фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "дизайн ванной комнаты с туалетом и стиральной машиной в частном доме фото": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "ремонт ванной и туалета фото": {
-  "base": 113,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "идеи дизайна интерьера": {
-  "base": 170,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "классический стиль в дизайне интерьера": {
-  "base": 18,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "белый мрамор плитка в ванной дизайн фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "квартира без ремонта фото": {
-  "base": 30,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": [
-   "фото квартиры без ремонта"
-  ]
- },
- "дизайн интерьера зала в частном доме в современном стиле фото": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "свет на кухне дизайн натяжные потолки фото": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 2,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "что такое натяжные потолки": {
-  "base": 210,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "что значит евроремонт в квартире": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "когда можно затирать швы после укладки плитки на пол": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "дизайн лофт фото": {
-  "base": 50,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 1,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "стиль в интерьере прованс современный": {
-  "base": 8,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 0,
-  "napravlenie": "",
-  "src": [
-   "eremont.ru"
-  ],
-  "varianty": []
- },
- "обои клеить до натяжных потолков или после": {
-  "base": 10,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "remo-nt.ru"
+   "досбор под утверждённую структуру"
   ],
   "varianty": [],
   "iz_kommercii": true,
-  "kommercializaciya": 0
+  "kommercializaciya": 28
  },
- "обои клеят до натяжного потолка или после": {
-  "base": 10,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Отдельные услуги",
+ "маленькая гардеробная": {
+  "base": 480,
+  "quoted": 38,
+  "overal": 25,
+  "exact": 12,
+  "napravlenie": "Досбор",
   "src": [
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "план ремонта квартиры с нуля в новостройке": {
-  "base": 8,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 1
- },
- "очередность работ при ремонте квартиры вторичка": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "ориентировочная стоимость ремонта квартиры 1м2": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "only-remontkvartir.ru",
-   "remo-nt.ru",
-   "stroyremdizayn.ru",
-   "titanremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 19
- },
- "ремонт стен в хрущевке": {
-  "base": 35,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт по типу дома",
-  "src": [
-   "centr-otdelka.ru",
-   "only-remontkvartir.ru",
-   "remony.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 27
- },
- "приемка новостройки у застройщика": {
-  "base": 47,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Приёмка",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "дизайн детской 9 кв м": {
-  "base": 28,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "дизайн ремонта квартир в светлых тонах": {
-  "base": 10,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 21
- },
- "очень маленькая кухня дизайн": {
-  "base": 8,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "классический интерьер квартиры": {
-  "base": 64,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "ремонт в стиле бохо": {
-  "base": 12,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "Ремонт по стилю",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 7
- },
- "дизайн модерн": {
-  "base": 101,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 0,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [
-   "модерн дизайн"
-  ],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "неоклассика ремонт квартир": {
-  "base": 12,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 22
- },
- "дизайн спальни с диваном": {
-  "base": 34,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "дизайн кухни 10 кв": {
-  "base": 235,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "дизайн коридора в хрущевке": {
-  "base": 62,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "дизайн квартиры 39 кв м евродвушка": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "коридор прихожая дизайн": {
-  "base": 163,
-  "quoted": 3,
-  "overal": 2,
-  "exact": 1,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 7
- },
- "дизайн проект прихожей в квартире": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 0,
-  "exact": 0,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru"
+   "досбор под утверждённую структуру"
   ],
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 26
  },
- "выравнивание стен гипсокартоном в ванной под плитку без каркаса": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 1,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "domeo.ru",
-   "eremont.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "дизайнерский ремонт ванной комнаты": {
-  "base": 16,
-  "quoted": 3,
-  "overal": 1,
-  "exact": 1,
-  "napravlenie": "Ремонт помещений",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 23
- },
- "перепланировка помещений": {
-  "base": 2055,
-  "quoted": 3,
-  "overal": 0,
+ "фото гардеробная": {
+  "base": 931,
+  "quoted": 26,
+  "overal": 15,
   "exact": 0,
-  "napravlenie": "Перепланировка",
+  "napravlenie": "Досбор",
   "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "красивый дизайн квартиры в современном стиле": {
-  "base": 5,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
-  "src": [
-   "domeo.ru",
-   "eremont.ru",
-   "vproekte.com"
-  ],
-  "varianty": [],
-  "iz_kommercii": true,
-  "kommercializaciya": 0
- },
- "ремонт в студии 20 кв метров": {
-  "base": 9,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "centr-otdelka.ru",
-   "domeo.ru",
-   "suggest"
+   "досбор под утверждённую структуру"
   ],
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 7
  },
- "дизайн студии 25": {
-  "base": 239,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Дизайн",
+ "размеры гардеробной": {
+  "base": 598,
+  "quoted": 26,
+  "overal": 16,
+  "exact": 16,
+  "napravlenie": "Досбор",
   "src": [
-   "centr-otdelka.ru",
-   "domeo.ru"
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 3
+ },
+ "минимальный размер гардеробной": {
+  "base": 51,
+  "quoted": 20,
+  "overal": 10,
+  "exact": 10,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 1
+ },
+ "спальня с гардеробной": {
+  "base": 353,
+  "quoted": 16,
+  "overal": 15,
+  "exact": 15,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
   ],
   "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 0
  },
- "дизайн квартиры студии 25 кв м": {
-  "base": 9,
+ "маленькая гардеробная фото": {
+  "base": 71,
+  "quoted": 15,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "пинтерест гардеробная": {
+  "base": 53,
+  "quoted": 14,
+  "overal": 12,
+  "exact": 2,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 7
+ },
+ "гардеробная комната фото": {
+  "base": 176,
+  "quoted": 14,
+  "overal": 11,
+  "exact": 11,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "проект гардеробной комнаты": {
+  "base": 92,
+  "quoted": 13,
+  "overal": 12,
+  "exact": 12,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 24
+ },
+ "минимальный проход в гардеробной": {
+  "base": 31,
+  "quoted": 13,
+  "overal": 12,
+  "exact": 10,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 1
+ },
+ "гардеробная комната дизайн": {
+  "base": 104,
+  "quoted": 13,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "ширина гардеробной минимальная": {
+  "base": 38,
+  "quoted": 12,
+  "overal": 11,
+  "exact": 3,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "гардеробная система фото": {
+  "base": 95,
+  "quoted": 10,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "гардеробная комната планировка": {
+  "base": 56,
+  "quoted": 9,
+  "overal": 8,
+  "exact": 7,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "гардеробная в квартире": {
+  "base": 443,
+  "quoted": 9,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "планировка гардеробной": {
+  "base": 343,
+  "quoted": 6,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "небольшая гардеробная": {
+  "base": 124,
+  "quoted": 6,
+  "overal": 4,
+  "exact": 3,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 20
+ },
+ "гардеробная в спальне планировка": {
+  "base": 62,
+  "quoted": 6,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "фото гардеробных комнат в квартире": {
+  "base": 27,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "размеры гардеробной в спальне": {
+  "base": 52,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 8
+ },
+ "гардеробная фото дизайн": {
+  "base": 126,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 2,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "гардеробная комната дизайн фото": {
+  "base": 39,
+  "quoted": 4,
+  "overal": 3,
+  "exact": 2,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "сделать гардеробную": {
+  "base": 798,
   "quoted": 3,
   "overal": 2,
   "exact": 2,
-  "napravlenie": "Дизайн",
+  "napravlenie": "Досбор",
   "src": [
-   "centr-otdelka.ru"
+   "досбор под утверждённую структуру"
   ],
-  "varianty": [
-   "дизайн квартиры 25 кв м студия"
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 10
+ },
+ "гардеробная своими руками фото в маленькой комнате": {
+  "base": 3,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 0,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
   ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 2
+ },
+ "гардеробная из кладовки": {
+  "base": 44,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
   "iz_kommercii": true,
   "kommercializaciya": 0
+ },
+ "варианты гардеробной": {
+  "base": 227,
+  "quoted": 3,
+  "overal": 1,
+  "exact": 1,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "дизайн в прихожей в квартире": {
+  "base": 481,
+  "quoted": 98,
+  "overal": 66,
+  "exact": 1,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "дизайн коридора": {
+  "base": 1789,
+  "quoted": 80,
+  "overal": 55,
+  "exact": 55,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "прихожая узкая дизайн": {
+  "base": 170,
+  "quoted": 35,
+  "overal": 23,
+  "exact": 2,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 4
+ },
+ "дизайн узкой прихожей": {
+  "base": 170,
+  "quoted": 35,
+  "overal": 12,
+  "exact": 11,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "дизайн прихожей в квартире в современном стиле фото": {
+  "base": 35,
+  "quoted": 27,
+  "overal": 26,
+  "exact": 23,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "прихожая фото дизайн в квартире": {
+  "base": 198,
+  "quoted": 26,
+  "overal": 16,
+  "exact": 14,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "прихожая дизайн в современном стиле фото": {
+  "base": 110,
+  "quoted": 18,
+  "overal": 14,
+  "exact": 14,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "обои в коридоре дизайн фото": {
+  "base": 28,
+  "quoted": 10,
+  "overal": 2,
+  "exact": 2,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "прихожая в хрущевке дизайн": {
+  "base": 34,
+  "quoted": 9,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "дизайн коридора в хрущевке узкий и маленький фото": {
+  "base": 7,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "узкий коридор в хрущевке дизайн фото": {
+  "base": 20,
+  "quoted": 6,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "прихожая в хрущевке узкий коридор дизайн фото": {
+  "base": 5,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "обои в коридоре дизайн фото в современном стиле": {
+  "base": 11,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 7
+ },
+ "коридор в хрущевке дизайн фото": {
+  "base": 33,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 0
+ },
+ "коридор в хрущевке дизайн": {
+  "base": 59,
+  "quoted": 3,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Досбор",
+  "src": [
+   "досбор под утверждённую структуру"
+  ],
+  "varianty": [],
+  "iz_kommercii": true,
+  "kommercializaciya": 7
  }
 }

@@ -1,0 +1,470 @@
+{
+ "klient": [
+  {
+   "status": "Есть на сайте",
+   "slug": "/",
+   "old": "/",
+   "name": "Главная"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kvartir-pod-klyuch",
+   "old": "",
+   "name": "Ремонт квартир под ключ"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kvartiry-v-novostrojke",
+   "old": "",
+   "name": "Ремонт квартиры в новостройке"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kvartiry-na-vtorichke",
+   "old": "",
+   "name": "Ремонт квартиры на вторичке"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "kapitalnyj-remont-kvartiry",
+   "old": "",
+   "name": "Капитальный ремонт квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "kosmeticheskij-remont-kvartiry",
+   "old": "",
+   "name": "Косметический ремонт квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajnerskij-remont-kvartiry",
+   "old": "",
+   "name": "Дизайнерский ремонт квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "chernovoj-remont-kvartiry",
+   "old": "",
+   "name": "Черновой ремонт квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "chistovaya-otdelka-kvartiry",
+   "old": "",
+   "name": "Чистовая отделка квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "evroremont-kvartiry",
+   "old": "",
+   "name": "Евроремонт квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kvartiry-studii",
+   "old": "",
+   "name": "Ремонт квартиры-студии"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-odnokomnatnoj-kvartiry",
+   "old": "",
+   "name": "Ремонт однокомнатной квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-dvuhkomnatnoj-kvartiry",
+   "old": "",
+   "name": "Ремонт двухкомнатной квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-tryohkomnatnoj-kvartiry",
+   "old": "",
+   "name": "Ремонт трёхкомнатной квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kuhni",
+   "old": "",
+   "name": "Ремонт кухни"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-vannoj-komnaty",
+   "old": "",
+   "name": "Ремонт ванной комнаты"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-sanuzla",
+   "old": "",
+   "name": "Ремонт санузла"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-spalni",
+   "old": "",
+   "name": "Ремонт спальни"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-gostinoj",
+   "old": "",
+   "name": "Ремонт гостиной"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-detskoj-komnaty",
+   "old": "",
+   "name": "Ремонт детской комнаты"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-prihozhej-i-koridora",
+   "old": "",
+   "name": "Ремонт прихожей и коридора"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-balkona-i-lodzhii",
+   "old": "",
+   "name": "Ремонт балкона и лоджии"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "tseny-na-remont-kvartir",
+   "old": "",
+   "name": "Цены на ремонт квартир"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-v-zhk-shablon",
+   "old": "",
+   "name": "Ремонт в ЖК (шаблон)"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "elitnyj-remont-kvartir",
+   "old": "",
+   "name": "Элитный ремонт квартир"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "nedorogoj-remont-kvartir",
+   "old": "",
+   "name": "Недорогой ремонт квартир"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-v-hrushchyovke",
+   "old": "",
+   "name": "Ремонт в хрущёвке"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-v-stalinke",
+   "old": "",
+   "name": "Ремонт в сталинке"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-v-panelnom-dome",
+   "old": "",
+   "name": "Ремонт в панельном доме"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kvartir-po-stilyu",
+   "old": "",
+   "name": "Ремонт квартир по стилю"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-tualeta",
+   "old": "",
+   "name": "Ремонт туалета"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-posle-zaliva-i-pozhara",
+   "old": "",
+   "name": "Ремонт после залива и пожара"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-v-rassrochku",
+   "old": "",
+   "name": "Ремонт в рассрочку"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-pod-sdachu-v-arendu",
+   "old": "",
+   "name": "Ремонт под сдачу в аренду"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-po-dizajn-proektu",
+   "old": "",
+   "name": "Ремонт по дизайн-проекту"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-garderobnoj",
+   "old": "",
+   "name": "Ремонт гардеробной"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-domov-i-kottedzhej",
+   "old": "",
+   "name": "Ремонт домов и коттеджей"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "remont-kommercheskih-pomeshchenij",
+   "old": "",
+   "name": "Ремонт коммерческих помещений"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "tyoplyj-pol",
+   "old": "",
+   "name": "Тёплый пол"
+  },
+  {
+   "status": "Редирект",
+   "slug": "dizajn-interera",
+   "old": "design",
+   "name": "Дизайн интерьера"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-interera-kvartiry",
+   "old": "",
+   "name": "Дизайн интерьера квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-kuhni",
+   "old": "",
+   "name": "Дизайн кухни"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-vannoj-komnaty",
+   "old": "",
+   "name": "Дизайн ванной комнаты"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-spalni",
+   "old": "",
+   "name": "Дизайн спальни"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-gostinoj",
+   "old": "",
+   "name": "Дизайн гостиной"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-detskoj-komnaty",
+   "old": "",
+   "name": "Дизайн детской комнаты"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-prihozhej-i-koridora",
+   "old": "",
+   "name": "Дизайн прихожей и коридора"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-kvartiry-studii",
+   "old": "",
+   "name": "Дизайн квартиры-студии"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-interera-ofisa",
+   "old": "",
+   "name": "Дизайн интерьера офиса"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-interera-doma",
+   "old": "",
+   "name": "Дизайн интерьера дома"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "dizajn-kommercheskih-pomeshchenij",
+   "old": "",
+   "name": "Дизайн коммерческих помещений"
+  },
+  {
+   "status": "Редирект",
+   "slug": "priyomka-kvartir-v-novostrojke",
+   "old": "priemka",
+   "name": "Приёмка квартир в новостройке"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "priyomka-kvartiry-bez-otdelki",
+   "old": "",
+   "name": "Приёмка квартиры без отделки"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "priyomka-kvartiry-s-otdelkoj",
+   "old": "",
+   "name": "Приёмка квартиры с отделкой"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "",
+   "old": "",
+   "name": "Приёмка в ЖК (шаблон)"
+  },
+  {
+   "status": "Редирект",
+   "slug": "komplektatsiya-kvartiry",
+   "old": "komplekt",
+   "name": "Комплектация квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "pereplanirovka-kvartiry",
+   "old": "",
+   "name": "Перепланировка квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "mehanizirovannaya-shtukaturka",
+   "old": "",
+   "name": "Механизированная штукатурка"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "styazhka-pola",
+   "old": "",
+   "name": "Стяжка пола"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "elektromontazhnye-raboty",
+   "old": "",
+   "name": "Электромонтажные работы"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "santehnicheskie-raboty",
+   "old": "",
+   "name": "Сантехнические работы"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "demontazhnye-raboty",
+   "old": "",
+   "name": "Демонтажные работы"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "shumoizolyatsiya-kvartiry",
+   "old": "",
+   "name": "Шумоизоляция квартиры"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "malyarnye-raboty-i-poklejka-oboev",
+   "old": "",
+   "name": "Малярные работы и поклейка обоев"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "ukladka-plitki",
+   "old": "",
+   "name": "Укладка плитки"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "natyazhnye-potolki",
+   "old": "",
+   "name": "Натяжные потолки"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "vyravnivanie-sten",
+   "old": "",
+   "name": "Выравнивание стен"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "portfolio",
+   "old": "",
+   "name": "Портфолио"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "otzyvy",
+   "old": "",
+   "name": "Отзывы"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "faq",
+   "old": "",
+   "name": "Вопросы и ответы"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "o-kompanii",
+   "old": "",
+   "name": "О компании"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "kontakty",
+   "old": "",
+   "name": "Контакты"
+  },
+  {
+   "status": "Есть на сайте",
+   "slug": "partners",
+   "old": "partners",
+   "name": "Партнёрам"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "blog",
+   "old": "",
+   "name": "Блог"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "politika-konfidencialnosti",
+   "old": "politicakonfident",
+   "name": "Политика конфиденциальности"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "soglasie-na-obrabotku",
+   "old": "soglasienaobrabotku",
+   "name": "Согласие на обработку персональных данных"
+  },
+  {
+   "status": "Необходимо создать",
+   "slug": "spasibo",
+   "old": "",
+   "name": "Спасибо за заявку"
+  }
+ ],
+ "gaps": [
+  "Дизайн прихожей и коридора",
+  "Приёмка в ЖК (шаблон)"
+ ]
+}
