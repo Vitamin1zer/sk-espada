@@ -36,11 +36,63 @@ BLOG_TEMY = [
 BLOG_RX = [(n, re.compile(p, re.I)) for n, p in BLOG_TEMY]
 
 
+BLOG_SLUG = {
+    'Стили интерьера': 'stili-interera',
+    'Цвет в интерьере': 'cvet-v-interere',
+    'Бюджет и смета': 'byudzhet-remonta',
+    'Этапы и сроки ремонта': 'etapy-remonta',
+    'Материалы и отделка': 'materialy',
+    'Инженерные системы': 'inzhenernye-sistemy',
+    'Планировка и зонирование': 'planirovka',
+    'Выбор подрядчика': 'vybor-podryadchika',
+    'Мебель и хранение': 'mebel-i-hranenie',
+    'Освещение': 'osveshchenie',
+    'Блог — хаб': '',
+}
+
+
 def blog_klaster(phrase):
     for name, pat in BLOG_RX:
         if pat.search(phrase):
             return name
     return 'Блог — хаб'
+
+
+def blog_papka(phrase):
+    """Папка рубрики блога. Хаб живёт в корне раздела."""
+    slug = BLOG_SLUG.get(blog_klaster(phrase), '')
+    return '/blog/%s/' % slug if slug else '/blog/'
+
+
+# Фразы, пришедшие в блог из коммерции, кладём в рубрику по их же странице.
+# Так сразу видно, с какой коммерческой страницей связывать статью
+# перелинковкой, а хаб не превращается в свалку.
+_ASSIGN = None
+
+
+def _load_assign():
+    global _ASSIGN
+    if _ASSIGN is None:
+        src = open(os.path.join(HERE, 's8b_stranicy.py'), encoding='utf-8').read()
+        src = src.replace('\nmain()\n', '\n')
+        ns = {'__file__': os.path.join(HERE, 's8b_stranicy.py')}
+        exec(compile(src, 's8b', 'exec'), ns)
+        _ASSIGN = ns['assign']
+    return _ASSIGN
+
+
+def blog_rubrika(phrase, v):
+    """(папка, кластер) статьи блога.
+
+    Сначала пробуем привязать статью к коммерческой странице — тогда сразу
+    видно, куда вести перелинковку. Пиллар в расчёт не берём: он ловит всё
+    подряд как правило по умолчанию, и привязка к нему ничего не значит.
+    Что не привязалось, раскладываем по тематическим рубрикам.
+    """
+    url, name, sect = _load_assign()(phrase)
+    if url != '/remont-kvartir/':
+        return '/blog' + url, name
+    return blog_papka(phrase), blog_klaster(phrase)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ = os.path.dirname(HERE)
@@ -109,9 +161,12 @@ def build_semantics(out_path):
                 ['Запрос', 'Ч', '"Ч"', '"!Ч"', 'Папка', 'КЛАСТЕР'],
                 [77.6, 7.6, 6.5, 7.1, 18.0, 23.4])
     brows = []
-    for w, v in sorted(blog.items(), key=lambda kv: (blog_klaster(w), -kv[1]['quoted'])):
+    brubr = {w: blog_rubrika(w, v) for w, v in blog.items()}
+    for w, v in sorted(blog.items(),
+                       key=lambda kv: (brubr[kv[0]][0], brubr[kv[0]][1],
+                                       -kv[1].get('quoted', 0))):
         brows.append([w, v.get('base', 0), v.get('quoted', 0), v.get('overal', 0),
-                      '/blog/', blog_klaster(w)])
+                      brubr[w][0], brubr[w][1]])
     put(ws2, brows)
 
     ws3 = sheet(wb, 'СВОДКА', ['КЛАСТЕР', 'Сумма "Ч"'], [32, 14])
@@ -121,7 +176,7 @@ def build_semantics(out_path):
     srows = [[k, n] for k, n in agg.most_common()]
     bagg = collections.Counter()
     for w, v in blog.items():
-        bagg[blog_klaster(w)] += v.get('quoted', 0)
+        bagg['Блог · ' + brubr[w][1]] += v.get('quoted', 0)
     srows += [[k, n] for k, n in bagg.most_common()]
     put(ws3, srows)
 
@@ -129,7 +184,7 @@ def build_semantics(out_path):
     # отдаём разложенное ядро дальше, в сборку структуры
     json.dump(core, open(os.path.join(MAT, 'ядро_итог_коммерч.json'), 'w', encoding='utf-8'),
               ensure_ascii=False)
-    json.dump({w: dict(v, klaster=blog_klaster(w)) for w, v in blog.items()},
+    json.dump({w: dict(v, papka=brubr[w][0], klaster=brubr[w][1]) for w, v in blog.items()},
               open(os.path.join(MAT, 'ядро_итог_блог.json'), 'w', encoding='utf-8'),
               ensure_ascii=False)
     return len(rows), len(brows), len(srows)
