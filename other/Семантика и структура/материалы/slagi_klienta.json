@@ -159,18 +159,13 @@
   "slug": "remont-posle-zaliva-i-pozhara",
   "old": ""
  },
- "Ремонт в рассрочку": {
-  "status": "Необходимо создать",
-  "slug": "remont-v-rassrochku",
-  "old": ""
- },
  "Ремонт под сдачу в аренду": {
   "status": "Необходимо создать",
   "slug": "remont-pod-sdachu-v-arendu",
   "old": ""
  },
  "Ремонт по дизайн-проекту": {
-  "status": "Необходимо создать",
+  "status": "Не создавать",
   "slug": "remont-po-dizajn-proektu",
   "old": ""
  },
@@ -271,7 +266,7 @@
  },
  "Приёмка в ЖК (шаблон)": {
   "status": "Необходимо создать",
-  "slug": "",
+  "slug": "priyomka-v-zhk-shablon",
   "old": ""
  },
  "Комплектация квартиры": {
@@ -382,6 +377,46 @@
  "Спасибо за заявку": {
   "status": "Необходимо создать",
   "slug": "spasibo",
+  "old": ""
+ },
+ "Инженерные системы": {
+  "status": "Необходимо создать",
+  "slug": "inzhenernye-sistemy",
+  "old": ""
+ },
+ "Установка кондиционеров": {
+  "status": "Необходимо создать",
+  "slug": "ustanovka-konditsionerov",
+  "old": ""
+ },
+ "Вентиляция": {
+  "status": "Необходимо создать",
+  "slug": "ventilyatsiya",
+  "old": ""
+ },
+ "Умный дом": {
+  "status": "Необходимо создать",
+  "slug": "umnyj-dom",
+  "old": ""
+ },
+ "Отопление и радиаторы": {
+  "status": "Необходимо создать",
+  "slug": "otoplenie-i-radiatory",
+  "old": ""
+ },
+ "Отделочные работы": {
+  "status": "Необходимо создать",
+  "slug": "otdelochnye-raboty",
+  "old": ""
+ },
+ "Декоративная штукатурка": {
+  "status": "Необходимо создать",
+  "slug": "dekorativnaya-shtukaturka",
+  "old": ""
+ },
+ "Демонтаж и черновые работы": {
+  "status": "Необходимо создать",
+  "slug": "demontazh-i-chernovye-raboty",
   "old": ""
  }
 }

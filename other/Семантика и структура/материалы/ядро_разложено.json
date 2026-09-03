@@ -115,7 +115,7 @@
   "varianty": [
    "механизированная штукатурка"
   ],
-  "url": "/mehanizirovannaya-shtukaturka/",
+  "url": "/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/",
   "stranica": "Механизированная штукатурка",
   "razdel": "Услуги"
  },
@@ -313,7 +313,7 @@
   "varianty": [
    "малярная работа"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -376,7 +376,7 @@
   "varianty": [
    "поклейки обоев"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -458,7 +458,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/mehanizirovannaya-shtukaturka/",
+  "url": "/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/",
   "stranica": "Механизированная штукатурка",
   "razdel": "Услуги"
  },
@@ -494,7 +494,7 @@
   "varianty": [
    "поклейка обоев цена за м2 москва"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -647,7 +647,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/mehanizirovannaya-shtukaturka/",
+  "url": "/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/",
   "stranica": "Механизированная штукатурка",
   "razdel": "Услуги"
  },
@@ -748,7 +748,7 @@
   "varianty": [
    "цена поклейки обоев"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -764,7 +764,7 @@
   "varianty": [
    "цены на поклейку обоев"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -1287,7 +1287,7 @@
   "varianty": [
    "подложка для теплого пола"
   ],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -1304,7 +1304,7 @@
    "шумоизоляция входной двери",
    "шумоизоляция входных дверей"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -1318,7 +1318,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -1356,8 +1356,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/dizaynerskiy/",
-  "stranica": "Дизайнерский ремонт квартиры",
+  "url": "/remont-kvartir/elitnyy/",
+  "stranica": "Элитный ремонт квартир",
   "razdel": "Ремонт квартир"
  },
  "поклейка обоев в москве цена за 1м2": {
@@ -1372,7 +1372,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -1633,7 +1633,7 @@
   "varianty": [
    "подложка под теплый пол"
   ],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -1647,7 +1647,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -1714,7 +1714,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -1824,8 +1824,8 @@
   "varianty": [
    "ремонт с дизайн проектом"
   ],
-  "url": "/remont-kvartir/po-dizayn-proektu/",
-  "stranica": "Ремонт по дизайн-проекту",
+  "url": "/remont-kvartir/dizaynerskiy/",
+  "stranica": "Дизайнерский ремонт квартиры",
   "razdel": "Ремонт квартир"
  },
  "ремонт в жк садовые кварталы": {
@@ -1858,7 +1858,7 @@
   "varianty": [
    "укладка плитки стоимость за квадратный метр"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -1954,7 +1954,7 @@
    "натяжные потолки материал",
    "материал натяжного потолка"
   ],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -1968,7 +1968,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -1996,7 +1996,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -2053,7 +2053,7 @@
   "varianty": [
    "поклейка обоев сколько стоит"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -2169,7 +2169,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -2250,20 +2250,6 @@
   "stranica": "Перепланировка квартиры",
   "razdel": "Услуги"
  },
- "ситипроф приемка квартир москва официальный сайт": {
-  "base": 51,
-  "quoted": 51,
-  "overal": 51,
-  "exact": 51,
-  "napravlenie": "Приёмка",
-  "src": [
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "url": "/priemka/",
-  "stranica": "Приёмка квартир в новостройке",
-  "razdel": "Приёмка"
- },
  "механизированная штукатурка стен москва": {
   "base": 245,
   "quoted": 50,
@@ -2275,7 +2261,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/mehanizirovannaya-shtukaturka/",
+  "url": "/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/",
   "stranica": "Механизированная штукатурка",
   "razdel": "Услуги"
  },
@@ -2331,7 +2317,7 @@
   "varianty": [
    "кнауф сухая стяжка пола"
   ],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -2400,7 +2386,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -2414,7 +2400,7 @@
    "point-remont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -2599,7 +2585,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -2631,7 +2617,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -2645,7 +2631,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/demontazhnye-raboty/",
+  "url": "/demontazh-i-chernovye-raboty/demontazhnye-raboty/",
   "stranica": "Демонтажные работы",
   "razdel": "Услуги"
  },
@@ -2662,7 +2648,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -2681,7 +2667,7 @@
    "шумоизоляция в квартире сколько стоит",
    "шумоизоляция квартиры сколько стоит"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -2824,7 +2810,7 @@
    "шумоизоляция для двери входной в квартиру",
    "шумоизоляция для входной двери в квартиру"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -2840,7 +2826,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -2854,7 +2840,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -2908,7 +2894,7 @@
   "varianty": [
    "цена укладки плитки"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -3100,7 +3086,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -3130,7 +3116,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -3175,7 +3161,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/demontazhnye-raboty/",
+  "url": "/demontazh-i-chernovye-raboty/demontazhnye-raboty/",
   "stranica": "Демонтажные работы",
   "razdel": "Услуги"
  },
@@ -3456,7 +3442,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -3595,7 +3581,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -3642,7 +3628,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -3699,7 +3685,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -3963,7 +3949,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -4201,7 +4187,7 @@
    "укладка плитки за квадратный метр цена",
    "укладка плитки цена за квадратный метр"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -4282,7 +4268,7 @@
   "varianty": [
    "сколько стоит укладка плитки"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -4334,7 +4320,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -4365,7 +4351,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -4479,7 +4465,7 @@
   "varianty": [
    "цена укладки плитки на пол"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -4615,7 +4601,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -4811,7 +4797,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -4825,7 +4811,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -4854,7 +4840,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -4911,7 +4897,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -5058,7 +5044,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -5072,7 +5058,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -5121,7 +5107,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -5140,7 +5126,7 @@
    "цена поклейки обоев за квадратный метр",
    "поклейка обоев цена за метр квадратный"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -5371,7 +5357,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -5389,7 +5375,7 @@
   "varianty": [
    "поклейка обоев стоимость за квадратный метр"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -5529,7 +5515,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -5620,7 +5606,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -5724,7 +5710,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -5738,7 +5724,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -5767,7 +5753,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -5875,7 +5861,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -5892,7 +5878,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -6186,7 +6172,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -6202,7 +6188,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -6252,7 +6238,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -6439,7 +6425,7 @@
   "varianty": [
    "шумоизоляция для двери"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -6482,7 +6468,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -6496,7 +6482,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -6664,8 +6650,8 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/v-rassrochku/",
-  "stranica": "Ремонт в рассрочку",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт квартиры в рассрочку в москве": {
@@ -6680,8 +6666,8 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/v-rassrochku/",
-  "stranica": "Ремонт в рассрочку",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт ванны под ключ стоимость": {
@@ -6781,7 +6767,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -6795,7 +6781,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -6958,7 +6944,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -7237,7 +7223,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -7265,7 +7251,7 @@
    "point-remont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -7279,7 +7265,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -7326,7 +7312,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -7343,7 +7329,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -7521,7 +7507,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -7557,8 +7543,8 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/v-rassrochku/",
-  "stranica": "Ремонт в рассрочку",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт туалет и ванная под ключ цена": {
@@ -7713,7 +7699,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -7850,22 +7836,6 @@
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
- "студия ремонта официальный сайт": {
-  "base": 18,
-  "quoted": 11,
-  "overal": 6,
-  "exact": 6,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru",
-   "remo-nt.ru",
-   "remony.ru"
-  ],
-  "varianty": [],
-  "url": "/remont-kvartir/",
-  "stranica": "Ремонт квартир под ключ",
-  "razdel": "Ремонт квартир"
- },
  "ремонт квартиры в новостройке под ключ стоимость": {
   "base": 38,
   "quoted": 11,
@@ -7912,8 +7882,8 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/v-rassrochku/",
-  "stranica": "Ремонт в рассрочку",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "рассчитать стоимость ремонта квартиры": {
@@ -7947,7 +7917,7 @@
   "varianty": [
    "укладка плитки в ванной цена за м2"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -8006,7 +7976,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -8163,8 +8133,8 @@
   "varianty": [
    "дизайн проект ремонта квартиры"
   ],
-  "url": "/remont-kvartir/po-dizayn-proektu/",
-  "stranica": "Ремонт по дизайн-проекту",
+  "url": "/remont-kvartir/dizaynerskiy/",
+  "stranica": "Дизайнерский ремонт квартиры",
   "razdel": "Ремонт квартир"
  },
  "дизайнпроект": {
@@ -8194,7 +8164,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -8350,7 +8320,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -8364,7 +8334,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -8440,7 +8410,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -8455,7 +8425,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -8469,7 +8439,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -8590,7 +8560,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -8632,7 +8602,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -8709,7 +8679,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -8723,7 +8693,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -8849,7 +8819,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -8959,35 +8929,6 @@
   "stranica": "Ремонт квартиры в новостройке",
   "razdel": "Ремонт квартир"
  },
- "яндекс услуги ремонт квартир": {
-  "base": 19,
-  "quoted": 9,
-  "overal": 9,
-  "exact": 6,
-  "napravlenie": "Ремонт квартир",
-  "src": [
-   "domeo.ru"
-  ],
-  "varianty": [],
-  "url": "/remont-kvartir/",
-  "stranica": "Ремонт квартир под ключ",
-  "razdel": "Ремонт квартир"
- },
- "приемка москва официальный сайт": {
-  "base": 76,
-  "quoted": 9,
-  "overal": 8,
-  "exact": 8,
-  "napravlenie": "Приёмка",
-  "src": [
-   "domeo.ru",
-   "mrnadzor.ru"
-  ],
-  "varianty": [],
-  "url": "/priemka/",
-  "stranica": "Приёмка квартир в новостройке",
-  "razdel": "Приёмка"
- },
  "ремонт хайтек": {
   "base": 50,
   "quoted": 9,
@@ -9064,7 +9005,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -9110,7 +9051,7 @@
   "varianty": [
    "стоимость работы по укладке плитки в ванной за квадратный метр"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -9124,7 +9065,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -9152,7 +9093,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -9166,7 +9107,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -9180,7 +9121,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -9230,7 +9171,7 @@
   "varianty": [
    "сколько стоит поклейка обоев квадратный метр"
   ],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -9323,9 +9264,9 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/",
-  "stranica": "Ремонт квартир под ключ",
-  "razdel": "Ремонт квартир"
+  "url": "/otdelochnye-raboty/",
+  "stranica": "Отделочные работы",
+  "razdel": "Услуги"
  },
  "стоимость ремонта под ключ в новостройке": {
   "base": 69,
@@ -9415,7 +9356,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -9430,7 +9371,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -9848,8 +9789,8 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/v-rassrochku/",
-  "stranica": "Ремонт в рассрочку",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "жидкая шумоизоляция для стен": {
@@ -9862,7 +9803,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -9891,7 +9832,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -9919,7 +9860,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -10139,7 +10080,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -10153,7 +10094,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -10205,7 +10146,9 @@
    "stroyremdizayn.ru",
    "titanremont.ru"
   ],
-  "varianty": [],
+  "varianty": [
+   "ремонт помещения под ключ"
+  ],
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
@@ -10297,7 +10240,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10332,7 +10275,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10348,7 +10291,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10363,7 +10306,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10378,7 +10321,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -10396,7 +10339,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -10855,7 +10798,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -10918,7 +10861,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -10932,7 +10875,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10946,7 +10889,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10978,7 +10921,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -10993,7 +10936,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -11009,7 +10952,7 @@
   "varianty": [
    "штукатурка шумоизоляционная"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -11023,7 +10966,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/demontazhnye-raboty/",
+  "url": "/demontazh-i-chernovye-raboty/demontazhnye-raboty/",
   "stranica": "Демонтажные работы",
   "razdel": "Услуги"
  },
@@ -11037,7 +10980,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -11086,7 +11029,7 @@
    "шумоизоляция дверей в квартире",
    "шумоизоляция на дверь квартиры"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -11158,7 +11101,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -11259,7 +11202,7 @@
   "varianty": [
    "утеплитель под стяжку пола"
   ],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -11273,7 +11216,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -11287,7 +11230,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -11527,7 +11470,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -11544,7 +11487,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -11879,7 +11822,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -11908,7 +11851,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -11922,7 +11865,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -11936,7 +11879,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -11950,7 +11893,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -11965,7 +11908,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -11979,7 +11922,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/demontazhnye-raboty/",
+  "url": "/demontazh-i-chernovye-raboty/demontazhnye-raboty/",
   "stranica": "Демонтажные работы",
   "razdel": "Услуги"
  },
@@ -12023,7 +11966,7 @@
    "only-remontkvartir.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -12037,7 +11980,7 @@
    "point-remont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -12093,7 +12036,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -12107,7 +12050,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -12253,7 +12196,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -12267,7 +12210,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -12303,7 +12246,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -12351,7 +12294,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -12426,8 +12369,8 @@
    "remony.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/po-dizayn-proektu/",
-  "stranica": "Ремонт по дизайн-проекту",
+  "url": "/remont-kvartir/dizaynerskiy/",
+  "stranica": "Дизайнерский ремонт квартиры",
   "razdel": "Ремонт квартир"
  },
  "стоимость ремонта квартиры под ключ": {
@@ -12496,7 +12439,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -12510,7 +12453,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -12526,7 +12469,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -12540,7 +12483,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -12556,7 +12499,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -12869,6 +12812,21 @@
   "stranica": "Дизайн интерьера квартиры",
   "razdel": "Дизайн"
  },
+ "ремонт гардеробной": {
+  "base": 85,
+  "quoted": 5,
+  "overal": 2,
+  "exact": 2,
+  "napravlenie": "Ремонт помещений",
+  "src": [
+   "domeo.ru",
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/garderobnoy/",
+  "stranica": "Ремонт гардеробной",
+  "razdel": "Ремонт квартир"
+ },
  "ремонт кухни 9м2": {
   "base": 10,
   "quoted": 5,
@@ -13001,7 +12959,7 @@
   "varianty": [
    "жидкая шумоизоляция для квартиры"
   ],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -13015,7 +12973,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -13105,6 +13063,21 @@
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
+ },
+ "приемка квартиры пик с отделкой": {
+  "base": 17,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 2,
+  "napravlenie": "Приёмка",
+  "src": [
+   "mrnadzor.ru",
+   "suggest"
+  ],
+  "varianty": [],
+  "url": "/priemka/s-otdelkoy/",
+  "stranica": "Приёмка квартиры с отделкой",
+  "razdel": "Приёмка"
  },
  "сити проф приемка квартир москва": {
   "base": 7,
@@ -13200,7 +13173,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -13272,7 +13245,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -13551,7 +13524,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -13567,7 +13540,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -13582,7 +13555,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -13616,7 +13589,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -13631,7 +13604,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -13646,7 +13619,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -13661,7 +13634,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -13677,7 +13650,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -13692,7 +13665,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -13879,7 +13852,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -14112,7 +14085,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -14161,7 +14134,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -14175,7 +14148,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -14204,7 +14177,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -14250,7 +14223,7 @@
    "point-remont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -14410,7 +14383,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -14424,7 +14397,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -14438,7 +14411,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -14555,7 +14528,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -14697,7 +14670,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -14741,7 +14714,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -14755,7 +14728,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -14769,7 +14742,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -14905,20 +14878,6 @@
   "stranica": "Цены на ремонт квартир",
   "razdel": "Ремонт квартир"
  },
- "укладка плитки яндекс услуги": {
-  "base": 4,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 0,
-  "napravlenie": "Отдельные услуги",
-  "src": [
-   "remo-nt.ru"
-  ],
-  "varianty": [],
-  "url": "/ukladka-plitki/",
-  "stranica": "Укладка плитки",
-  "razdel": "Услуги"
- },
  "ремонт квартир с материалами под ключ": {
   "base": 306,
   "quoted": 3,
@@ -15024,7 +14983,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -15039,7 +14998,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -15056,7 +15015,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -15071,7 +15030,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -15086,7 +15045,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -15119,7 +15078,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -15152,7 +15111,7 @@
   "varianty": [
    "установка смесителя расценка в смете"
   ],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -15200,7 +15159,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/demontazhnye-raboty/",
+  "url": "/demontazh-i-chernovye-raboty/demontazhnye-raboty/",
   "stranica": "Демонтажные работы",
   "razdel": "Услуги"
  },
@@ -15218,7 +15177,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -15234,7 +15193,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -15653,6 +15612,23 @@
   "url": "/remont-kvartir/po-stilyu/",
   "stranica": "Ремонт квартир по стилю",
   "razdel": "Ремонт квартир"
+ },
+ "стоимость ремонта офиса за 1 кв метр с материалами": {
+  "base": 3,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Ремонт по метражу",
+  "src": [
+   "centr-otdelka.ru",
+   "remo-nt.ru",
+   "remony.ru",
+   "stroyremdizayn.ru"
+  ],
+  "varianty": [],
+  "url": "/remont-kommercheskih-pomescheniy/",
+  "stranica": "Ремонт коммерческих помещений",
+  "razdel": "Коммерция"
  },
  "отделка дома ремонт квартиры": {
   "base": 48,
@@ -16120,7 +16096,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -16137,7 +16113,7 @@
   "varianty": [
    "укладка плитки расценки"
   ],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -16185,7 +16161,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -16199,7 +16175,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -16213,7 +16189,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -16227,7 +16203,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/elektromontazh/",
+  "url": "/inzhenernye-sistemy/elektromontazh/",
   "stranica": "Электромонтажные работы",
   "razdel": "Услуги"
  },
@@ -16241,7 +16217,7 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -16255,7 +16231,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/vyravnivanie-sten/",
+  "url": "/demontazh-i-chernovye-raboty/vyravnivanie-sten/",
   "stranica": "Выравнивание стен",
   "razdel": "Услуги"
  },
@@ -16270,7 +16246,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -16284,7 +16260,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -16298,7 +16274,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -16312,7 +16288,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -16360,7 +16336,7 @@
   "varianty": [
    "установка унитазов расценка в смете"
   ],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -16374,7 +16350,7 @@
    "only-remontkvartir.ru"
   ],
   "varianty": [],
-  "url": "/santehnicheskie-raboty/",
+  "url": "/inzhenernye-sistemy/santehnicheskie-raboty/",
   "stranica": "Сантехнические работы",
   "razdel": "Услуги"
  },
@@ -16388,7 +16364,7 @@
    "point-remont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
  },
@@ -16403,7 +16379,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -16445,7 +16421,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/malyarnye-raboty/",
+  "url": "/otdelochnye-raboty/malyarnye-raboty/",
   "stranica": "Малярные работы и поклейка обоев",
   "razdel": "Услуги"
  },
@@ -16530,7 +16506,7 @@
    "centr-otdelka.ru"
   ],
   "varianty": [],
-  "url": "/shumoizolyaciya/",
+  "url": "/inzhenernye-sistemy/shumoizolyaciya/",
   "stranica": "Шумоизоляция квартиры",
   "razdel": "Услуги"
  },
@@ -16689,7 +16665,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -16703,7 +16679,7 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/teplyy-pol/",
+  "url": "/inzhenernye-sistemy/teplyy-pol/",
   "stranica": "Тёплый пол",
   "razdel": "Услуги"
  },
@@ -16717,8 +16693,22 @@
    "eremont.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
+  "razdel": "Услуги"
+ },
+ "план кондиционеров в дизайн проекте": {
+  "base": 3,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Дизайн",
+  "src": [
+   "eremont.ru"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
   "razdel": "Услуги"
  },
  "страховка ремонта квартиры": {
@@ -16785,7 +16775,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/styazhka-pola/",
+  "url": "/demontazh-i-chernovye-raboty/styazhka-pola/",
   "stranica": "Стяжка пола",
   "razdel": "Услуги"
  },
@@ -16818,7 +16808,7 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/natyazhnye-potolki/",
+  "url": "/otdelochnye-raboty/natyazhnye-potolki/",
   "stranica": "Натяжные потолки",
   "razdel": "Услуги"
  },
@@ -17004,18 +16994,1278 @@
    "point-remont.ru"
   ],
   "varianty": [],
-  "url": "/ukladka-plitki/",
+  "url": "/otdelochnye-raboty/ukladka-plitki/",
   "stranica": "Укладка плитки",
   "razdel": "Услуги"
+ },
+ "установка кондиционера": {
+  "base": 22911,
+  "quoted": 1454,
+  "overal": 1170,
+  "exact": 1170,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "монтаж кондиционера": {
+  "base": 3429,
+  "quoted": 102,
+  "overal": 67,
+  "exact": 67,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "установка кондиционера цена": {
+  "base": 1940,
+  "quoted": 79,
+  "overal": 58,
+  "exact": 56,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "установка сплит системы": {
+  "base": 1944,
+  "quoted": 48,
+  "overal": 39,
+  "exact": 39,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "монтаж сплит системы": {
+  "base": 556,
+  "quoted": 27,
+  "overal": 25,
+  "exact": 25,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "установка кондиционера под ключ": {
+  "base": 883,
+  "quoted": 18,
+  "overal": 11,
+  "exact": 11,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "установка кондиционера в квартире": {
+  "base": 1487,
+  "quoted": 11,
+  "overal": 10,
+  "exact": 10,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "демонтаж кондиционера расценка в смете": {
+  "base": 29,
+  "quoted": 8,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "прокладка трассы кондиционера расценка в смете": {
+  "base": 4,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/konditsionery/",
+  "stranica": "Установка кондиционеров",
+  "razdel": "Услуги"
+ },
+ "вентиляция в квартире": {
+  "base": 4068,
+  "quoted": 231,
+  "overal": 217,
+  "exact": 217,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "приточная вентиляция в квартире": {
+  "base": 703,
+  "quoted": 107,
+  "overal": 66,
+  "exact": 43,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "монтаж вентиляции": {
+  "base": 2423,
+  "quoted": 70,
+  "overal": 63,
+  "exact": 63,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "вентиляции и кондиционирования": {
+  "base": 4632,
+  "quoted": 50,
+  "overal": 1,
+  "exact": 1,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "вентиляция в ванную": {
+  "base": 1366,
+  "quoted": 50,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "вентиляция и кондиционирование москва": {
+  "base": 197,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "вентиляция для ванной комнаты": {
+  "base": 92,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "независимая экспертиза вентиляции в квартире": {
+  "base": 8,
+  "quoted": 5,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "установка вентиляции в квартире": {
+  "base": 113,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "вентиляция под ключ": {
+  "base": 352,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "демонтаж решетки вентиляционной расценка в смете": {
+  "base": 5,
+  "quoted": 3,
+  "overal": 2,
+  "exact": 1,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "компании по вентиляции и кондиционированию": {
+  "base": 15,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "монтаж приточной вентиляции": {
+  "base": 147,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/ventilyaciya/",
+  "stranica": "Вентиляция",
+  "razdel": "Услуги"
+ },
+ "умный дом": {
+  "base": 38947,
+  "quoted": 1997,
+  "overal": 1987,
+  "exact": 1985,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "установка умного дома": {
+  "base": 954,
+  "quoted": 138,
+  "overal": 55,
+  "exact": 55,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "установка умный дом": {
+  "base": 954,
+  "quoted": 138,
+  "overal": 83,
+  "exact": 18,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом установить": {
+  "base": 415,
+  "quoted": 123,
+  "overal": 122,
+  "exact": 59,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "монтаж умного дома": {
+  "base": 762,
+  "quoted": 103,
+  "overal": 64,
+  "exact": 64,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом в квартире цена": {
+  "base": 188,
+  "quoted": 103,
+  "overal": 103,
+  "exact": 103,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом москва": {
+  "base": 1596,
+  "quoted": 101,
+  "overal": 101,
+  "exact": 100,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом в москве установка": {
+  "base": 164,
+  "quoted": 85,
+  "overal": 85,
+  "exact": 85,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "установка систем умный дом": {
+  "base": 311,
+  "quoted": 82,
+  "overal": 53,
+  "exact": 53,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "услуги умный дом компании": {
+  "base": 79,
+  "quoted": 79,
+  "overal": 79,
+  "exact": 79,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "монтаж системы умный дом": {
+  "base": 191,
+  "quoted": 70,
+  "overal": 43,
+  "exact": 43,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "система умный дом для загородного дома цена под ключ": {
+  "base": 66,
+  "quoted": 66,
+  "overal": 66,
+  "exact": 66,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "установка систем умный дом москва": {
+  "base": 144,
+  "quoted": 66,
+  "overal": 66,
+  "exact": 66,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "сколько стоит умный дом под ключ": {
+  "base": 127,
+  "quoted": 53,
+  "overal": 53,
+  "exact": 49,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом под ключ": {
+  "base": 1145,
+  "quoted": 52,
+  "overal": 52,
+  "exact": 52,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом под ключ москва": {
+  "base": 136,
+  "quoted": 51,
+  "overal": 51,
+  "exact": 48,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "монтаж умный дом под ключ": {
+  "base": 110,
+  "quoted": 44,
+  "overal": 44,
+  "exact": 44,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "установка умного дома под ключ": {
+  "base": 93,
+  "quoted": 33,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом под ключ цена москва": {
+  "base": 31,
+  "quoted": 31,
+  "overal": 31,
+  "exact": 31,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "сколько стоит умный дом": {
+  "base": 314,
+  "quoted": 22,
+  "overal": 22,
+  "exact": 21,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом сайт москва": {
+  "base": 79,
+  "quoted": 14,
+  "overal": 14,
+  "exact": 0,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом фирмы": {
+  "base": 81,
+  "quoted": 14,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "сколько стоит сделать умный дом": {
+  "base": 95,
+  "quoted": 12,
+  "overal": 12,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "услуга умный дом": {
+  "base": 128,
+  "quoted": 11,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "стоимость умного дома": {
+  "base": 180,
+  "quoted": 10,
+  "overal": 2,
+  "exact": 2,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом стоимость": {
+  "base": 180,
+  "quoted": 10,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "компания умный дом": {
+  "base": 420,
+  "quoted": 9,
+  "overal": 7,
+  "exact": 5,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "сайт умный дом": {
+  "base": 332,
+  "quoted": 9,
+  "overal": 5,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "система умный дом для загородного дома цена": {
+  "base": 74,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 7,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "сколько стоит система умный дом": {
+  "base": 30,
+  "quoted": 7,
+  "overal": 5,
+  "exact": 2,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом озон": {
+  "base": 20,
+  "quoted": 7,
+  "overal": 7,
+  "exact": 5,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом цена": {
+  "base": 1133,
+  "quoted": 6,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "установка системы умный дом под ключ": {
+  "base": 6,
+  "quoted": 6,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "цена умного дома": {
+  "base": 1133,
+  "quoted": 6,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "проектирование умного дома": {
+  "base": 165,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "система умный дом для квартиры готовые решения": {
+  "base": 8,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "телевизор умный дом": {
+  "base": 398,
+  "quoted": 4,
+  "overal": 4,
+  "exact": 4,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "умный дом проектирование": {
+  "base": 165,
+  "quoted": 4,
+  "overal": 0,
+  "exact": 0,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "система умный дом для частного дома": {
+  "base": 11,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/umnyy-dom/",
+  "stranica": "Умный дом",
+  "razdel": "Услуги"
+ },
+ "замена радиаторов отопления": {
+  "base": 1748,
+  "quoted": 141,
+  "overal": 119,
+  "exact": 119,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "замена батарей отопления": {
+  "base": 1772,
+  "quoted": 105,
+  "overal": 94,
+  "exact": 94,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "установка радиаторов": {
+  "base": 3687,
+  "quoted": 39,
+  "overal": 16,
+  "exact": 16,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "монтаж отопления": {
+  "base": 3094,
+  "quoted": 18,
+  "overal": 18,
+  "exact": 16,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "проект отопления": {
+  "base": 774,
+  "quoted": 8,
+  "overal": 5,
+  "exact": 5,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "демонтаж и монтаж батареи отопления цена за работу": {
+  "base": 6,
+  "quoted": 6,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "медные батареи отопления": {
+  "base": 9,
+  "quoted": 4,
+  "overal": 2,
+  "exact": 2,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "монтаж системы отопления": {
+  "base": 660,
+  "quoted": 4,
+  "overal": 1,
+  "exact": 1,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "демонтаж радиаторов расценка в смете": {
+  "base": 29,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "покраска радиаторов отопления цена за работу": {
+  "base": 3,
+  "quoted": 3,
+  "overal": 1,
+  "exact": 1,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "покраска труб отопления цена за метр": {
+  "base": 5,
+  "quoted": 3,
+  "overal": 3,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/otoplenie/",
+  "stranica": "Отопление и радиаторы",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка": {
+  "base": 34420,
+  "quoted": 3438,
+  "overal": 3381,
+  "exact": 3256,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "венецианская штукатурка": {
+  "base": 4202,
+  "quoted": 1266,
+  "overal": 1256,
+  "exact": 1244,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка в ванной": {
+  "base": 323,
+  "quoted": 60,
+  "overal": 56,
+  "exact": 51,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка под бетон": {
+  "base": 217,
+  "quoted": 57,
+  "overal": 56,
+  "exact": 47,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка стен": {
+  "base": 4537,
+  "quoted": 38,
+  "overal": 31,
+  "exact": 21,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка в ванной комнате": {
+  "base": 90,
+  "quoted": 26,
+  "overal": 26,
+  "exact": 26,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка цена работы за м2": {
+  "base": 69,
+  "quoted": 26,
+  "overal": 25,
+  "exact": 25,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "краска для декоративной штукатурки": {
+  "base": 207,
+  "quoted": 25,
+  "overal": 25,
+  "exact": 25,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "декоративная штукатурка цена за м2": {
+  "base": 123,
+  "quoted": 19,
+  "overal": 19,
+  "exact": 16,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "влагостойкая декоративная штукатурка для ванной комнаты": {
+  "base": 19,
+  "quoted": 13,
+  "overal": 13,
+  "exact": 0,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "стоимость декоративной штукатурки стен за 1м2": {
+  "base": 30,
+  "quoted": 11,
+  "overal": 11,
+  "exact": 11,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "работа декоративная штукатурка": {
+  "base": 754,
+  "quoted": 4,
+  "overal": 2,
+  "exact": 0,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "фактурная штукатурка стен": {
+  "base": 346,
+  "quoted": 3,
+  "overal": 2,
+  "exact": 2,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/otdelochnye-raboty/dekorativnaya-shtukaturka/",
+  "stranica": "Декоративная штукатурка",
+  "razdel": "Услуги"
+ },
+ "инженерные системы": {
+  "base": 9644,
+  "quoted": 167,
+  "overal": 151,
+  "exact": 151,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/",
+  "stranica": "Инженерные системы",
+  "razdel": "Услуги"
+ },
+ "проектирование инженерных систем": {
+  "base": 438,
+  "quoted": 37,
+  "overal": 18,
+  "exact": 18,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/",
+  "stranica": "Инженерные системы",
+  "razdel": "Услуги"
+ },
+ "монтаж инженерных систем": {
+  "base": 334,
+  "quoted": 24,
+  "overal": 24,
+  "exact": 24,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/",
+  "stranica": "Инженерные системы",
+  "razdel": "Услуги"
+ },
+ "проектирование инженерных сетей": {
+  "base": 205,
+  "quoted": 11,
+  "overal": 11,
+  "exact": 11,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/inzhenernye-sistemy/",
+  "stranica": "Инженерные системы",
+  "razdel": "Услуги"
+ },
+ "гардеробные маленькие": {
+  "base": 480,
+  "quoted": 38,
+  "overal": 13,
+  "exact": 3,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
+  "razdel": "Ремонт квартир"
  },
  "мини гардеробная": {
   "base": 110,
   "quoted": 21,
   "overal": 21,
   "exact": 21,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kvartir/",
@@ -17027,41 +18277,27 @@
   "quoted": 12,
   "overal": 7,
   "exact": 7,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
- "современная гардеробная": {
+ "гардеробная современная": {
   "base": 117,
   "quoted": 11,
   "overal": 9,
-  "exact": 9,
-  "napravlenie": "Досбор",
+  "exact": 0,
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kvartir/",
   "stranica": "Ремонт квартир под ключ",
-  "razdel": "Ремонт квартир"
- },
- "ремонт гардеробной": {
-  "base": 85,
-  "quoted": 5,
-  "overal": 2,
-  "exact": 2,
-  "napravlenie": "Досбор",
-  "src": [
-   "досбор под утверждённую структуру"
-  ],
-  "varianty": [],
-  "url": "/remont-kvartir/garderobnoy/",
-  "stranica": "Ремонт гардеробной",
   "razdel": "Ремонт квартир"
  },
  "ремонт офиса": {
@@ -17069,9 +18305,9 @@
   "quoted": 69,
   "overal": 49,
   "exact": 49,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17083,9 +18319,9 @@
   "quoted": 68,
   "overal": 34,
   "exact": 34,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17097,23 +18333,9 @@
   "quoted": 20,
   "overal": 6,
   "exact": 3,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
-  ],
-  "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
-  "stranica": "Ремонт коммерческих помещений",
-  "razdel": "Коммерция"
- },
- "ремонт офиса под ключ": {
-  "base": 125,
-  "quoted": 18,
-  "overal": 11,
-  "exact": 11,
-  "napravlenie": "Досбор",
-  "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17125,9 +18347,23 @@
   "quoted": 18,
   "overal": 16,
   "exact": 16,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/remont-kommercheskih-pomescheniy/",
+  "stranica": "Ремонт коммерческих помещений",
+  "razdel": "Коммерция"
+ },
+ "ремонт офиса под ключ": {
+  "base": 125,
+  "quoted": 18,
+  "overal": 11,
+  "exact": 11,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17139,9 +18375,9 @@
   "quoted": 17,
   "overal": 2,
   "exact": 2,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17153,9 +18389,9 @@
   "quoted": 15,
   "overal": 15,
   "exact": 15,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17167,23 +18403,9 @@
   "quoted": 10,
   "overal": 9,
   "exact": 9,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
-  ],
-  "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
-  "stranica": "Ремонт коммерческих помещений",
-  "razdel": "Коммерция"
- },
- "ремонт офисных помещений": {
-  "base": 160,
-  "quoted": 8,
-  "overal": 6,
-  "exact": 6,
-  "napravlenie": "Досбор",
-  "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17195,9 +18417,23 @@
   "quoted": 8,
   "overal": 6,
   "exact": 6,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
+  ],
+  "varianty": [],
+  "url": "/remont-kommercheskih-pomescheniy/",
+  "stranica": "Ремонт коммерческих помещений",
+  "razdel": "Коммерция"
+ },
+ "ремонт офисных помещений": {
+  "base": 160,
+  "quoted": 8,
+  "overal": 6,
+  "exact": 6,
+  "napravlenie": "Новые услуги",
+  "src": [
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17209,9 +18445,9 @@
   "quoted": 7,
   "overal": 4,
   "exact": 4,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17223,9 +18459,9 @@
   "quoted": 6,
   "overal": 6,
   "exact": 6,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17237,9 +18473,9 @@
   "quoted": 5,
   "overal": 3,
   "exact": 3,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
@@ -17251,41 +18487,13 @@
   "quoted": 4,
   "overal": 4,
   "exact": 4,
-  "napravlenie": "Досбор",
+  "napravlenie": "Новые услуги",
   "src": [
-   "досбор под утверждённую структуру"
+   "добор по замечаниям клиента"
   ],
   "varianty": [],
   "url": "/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
- },
- "стоимость ремонта офиса за 1 кв метр с материалами": {
-  "base": 3,
-  "quoted": 3,
-  "overal": 3,
-  "exact": 3,
-  "napravlenie": "Досбор",
-  "src": [
-   "досбор под утверждённую структуру"
-  ],
-  "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
-  "stranica": "Ремонт коммерческих помещений",
-  "razdel": "Коммерция"
- },
- "приемка квартиры пик с отделкой": {
-  "base": 17,
-  "quoted": 5,
-  "overal": 5,
-  "exact": 2,
-  "napravlenie": "Досбор",
-  "src": [
-   "досбор под утверждённую структуру"
-  ],
-  "varianty": [],
-  "url": "/priemka/s-otdelkoy/",
-  "stranica": "Приёмка квартиры с отделкой",
-  "razdel": "Приёмка"
  }
 }

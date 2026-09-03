@@ -2,17 +2,17 @@
  "/remont-kvartir/": {
   "marker": "ремонт и отделка",
   "quoted": 56939,
-  "cluster": "ремонт и отделка"
+  "cluster": ""
  },
  "/design/": {
   "marker": "дизайн интерьера",
   "quoted": 3776,
-  "cluster": ""
+  "cluster": "дизайн интерьера"
  },
- "/mehanizirovannaya-shtukaturka/": {
+ "/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/": {
   "marker": "штукатурка механизированная",
   "quoted": 2118,
-  "cluster": ""
+  "cluster": "штукатурка механизированная"
  },
  "/remont-kvartir/tseny/": {
   "marker": "сколько стоит ремонт квартиры",
@@ -27,12 +27,12 @@
  "/design/kvartir/": {
   "marker": "дизайн квартиры проект",
   "quoted": 1066,
-  "cluster": "дизайн квартиры"
+  "cluster": "дизайн квартиры проект"
  },
- "/malyarnye-raboty/": {
+ "/otdelochnye-raboty/malyarnye-raboty/": {
   "marker": "малярные работы",
   "quoted": 729,
-  "cluster": ""
+  "cluster": "малярные работы"
  },
  "/remont-kvartir/vannoy/": {
   "marker": "ремонт ванной комнаты",
@@ -52,7 +52,7 @@
  "/remont-kvartir/elitnyy/": {
   "marker": "элитная отделка квартир",
   "quoted": 187,
-  "cluster": "ремонт элитных квартир"
+  "cluster": "ремонт элитный"
  },
  "/remont-kvartir/kuhni/": {
   "marker": "ремонт кухни",
@@ -62,17 +62,17 @@
  "/priemka/": {
   "marker": "приемка квартир москва в новостройках",
   "quoted": 171,
-  "cluster": "приемка квартир москва в новостройках"
+  "cluster": "приемка квартиры в москве"
  },
  "/remont-kvartir/sanuzla/": {
   "marker": "ремонт санузла под ключ",
   "quoted": 131,
-  "cluster": "ремонт ванной комнаты под ключ"
+  "cluster": "ремонт ванной в москве"
  },
  "/pereplanirovka/": {
   "marker": "перепланировка квартиры в москве согласование",
   "quoted": 123,
-  "cluster": "согласование перепланировки квартиры"
+  "cluster": "перепланировка квартиры в москве"
  },
  "/remont-kvartir/kosmeticheskiy/": {
   "marker": "косметический ремонт квартир в москве",
@@ -84,25 +84,20 @@
   "quoted": 86,
   "cluster": "дизайн проект дома"
  },
- "/teplyy-pol/": {
+ "/inzhenernye-sistemy/teplyy-pol/": {
   "marker": "для теплого пола подложка",
   "quoted": 82,
-  "cluster": "подложка под теплые полы"
+  "cluster": "под теплый пол подложка"
  },
- "/shumoizolyaciya/": {
+ "/inzhenernye-sistemy/shumoizolyaciya/": {
   "marker": "шумоизоляция двери входной",
   "quoted": 81,
   "cluster": "шумоизоляция двери входной"
  },
- "/ukladka-plitki/": {
+ "/otdelochnye-raboty/ukladka-plitki/": {
   "marker": "укладка плитки цена за м2 в москве и московской",
   "quoted": 80,
   "cluster": "укладка плитки цены"
- },
- "/remont-kvartir/dizaynerskiy/": {
-  "marker": "элитный дизайнерский ремонт квартир в москве",
-  "quoted": 75,
-  "cluster": "ремонт элитный"
  },
  "/remont-kvartir/v-zhk-shablon/": {
   "marker": "ремонт в жк titul",
@@ -114,12 +109,12 @@
   "quoted": 71,
   "cluster": "ремонт туалета"
  },
- "/remont-kvartir/po-dizayn-proektu/": {
+ "/remont-kvartir/dizaynerskiy/": {
   "marker": "ремонт по дизайн проекту",
   "quoted": 60,
-  "cluster": ""
+  "cluster": "дизайнерский ремонт квартир в москве"
  },
- "/natyazhnye-potolki/": {
+ "/otdelochnye-raboty/natyazhnye-potolki/": {
   "marker": "материалы натяжных потолков",
   "quoted": 57,
   "cluster": ""
@@ -127,24 +122,24 @@
  "/remont-kvartir/ekonom/": {
   "marker": "сделать ремонт в квартире недорого",
   "quoted": 54,
-  "cluster": "ремонт квартир недорого"
+  "cluster": "сделаю ремонт квартиры недорого"
  },
  "/remont-kvartir/novostroyka/": {
   "marker": "сколько стоит сделать ремонт в новостройке с нуля",
   "quoted": 53,
-  "cluster": "сколько стоит отделка квартиры"
+  "cluster": "сколько стоит сделать ремонт в новостройке с нуля"
  },
- "/styazhka-pola/": {
+ "/demontazh-i-chernovye-raboty/styazhka-pola/": {
   "marker": "сухая стяжка пола кнауф",
   "quoted": 48,
   "cluster": ""
  },
- "/elektromontazh/": {
+ "/inzhenernye-sistemy/elektromontazh/": {
   "marker": "электромонтаж в квартире",
   "quoted": 43,
   "cluster": ""
  },
- "/demontazhnye-raboty/": {
+ "/demontazh-i-chernovye-raboty/demontazhnye-raboty/": {
   "marker": "демонтажные работы",
   "quoted": 43,
   "cluster": "демонтажные работы"
@@ -169,7 +164,7 @@
   "quoted": 37,
   "cluster": ""
  },
- "/vyravnivanie-sten/": {
+ "/demontazh-i-chernovye-raboty/vyravnivanie-sten/": {
   "marker": "выравнивание стен по маякам",
   "quoted": 36,
   "cluster": ""
@@ -184,7 +179,7 @@
   "quoted": 31,
   "cluster": ""
  },
- "/santehnicheskie-raboty/": {
+ "/inzhenernye-sistemy/santehnicheskie-raboty/": {
   "marker": "замена труб в ванной",
   "quoted": 25,
   "cluster": ""
@@ -207,17 +202,17 @@
  "/remont-kvartir/hrushchevka/": {
   "marker": "ремонт в хрущевке",
   "quoted": 22,
-  "cluster": ""
+  "cluster": "ремонт в хрущевке"
  },
  "/remont-kvartir/spalni/": {
   "marker": "ремонт в спальне",
   "quoted": 19,
-  "cluster": ""
+  "cluster": "ремонт в спальне"
  },
  "/remont-kvartir/2-komnatnoy/": {
   "marker": "ремонт 2 комнатной квартиры",
   "quoted": 18,
-  "cluster": "ремонт 2 комнатной квартиры"
+  "cluster": "ремонт двухкомнатной квартиры"
  },
  "/remont-kvartir/pod-sdachu/": {
   "marker": "ремонт квартиры под сдачу",
@@ -229,11 +224,6 @@
   "quoted": 15,
   "cluster": "ремонт в 3 комнатной квартире"
  },
- "/remont-kvartir/v-rassrochku/": {
-  "marker": "ремонт в рассрочку",
-  "quoted": 14,
-  "cluster": "ремонт в рассрочку"
- },
  "/remont-kvartir/gostinoy/": {
   "marker": "ремонт гостиной",
   "quoted": 13,
@@ -242,7 +232,7 @@
  "/remont-kvartir/studiya/": {
   "marker": "ремонт студии под ключ",
   "quoted": 13,
-  "cluster": "квартира студия ремонт"
+  "cluster": ""
  },
  "/design/detskoy/": {
   "marker": "дизайн проект детской комнаты",
@@ -269,6 +259,11 @@
   "quoted": 10,
   "cluster": ""
  },
+ "/otdelochnye-raboty/": {
+  "marker": "ремонтно отделочные работы",
+  "quoted": 8,
+  "cluster": "ремонт и отделка квартир"
+ },
  "/remont-kvartir/chistovoy/": {
   "marker": "чистовой ремонт квартиры",
   "quoted": 7,
@@ -294,29 +289,59 @@
   "quoted": 7,
   "cluster": ""
  },
+ "/remont-kvartir/garderobnoy/": {
+  "marker": "ремонт гардеробной",
+  "quoted": 5,
+  "cluster": ""
+ },
  "/design/studii/": {
   "marker": "дизайн студии 22 кв м",
   "quoted": 5,
   "cluster": ""
+ },
+ "/priemka/s-otdelkoy/": {
+  "marker": "приемка квартиры пик с отделкой",
+  "quoted": 5,
+  "cluster": "приемка квартиры пик"
  },
  "/design/kommercheskih-pomesheniy/": {
   "marker": "дизайн проект кафе",
   "quoted": 5,
   "cluster": "дизайн интерьера кафе"
  },
- "/remont-kvartir/garderobnoy/": {
-  "marker": "ремонт гардеробной",
-  "quoted": 5,
-  "cluster": ""
- },
  "/remont-kommercheskih-pomescheniy/": {
   "marker": "ремонт офиса",
   "quoted": 69,
   "cluster": "ремонт офиса"
  },
- "/priemka/s-otdelkoy/": {
-  "marker": "приемка квартиры пик с отделкой",
-  "quoted": 5,
-  "cluster": "приемка квартиры пик"
+ "/inzhenernye-sistemy/konditsionery/": {
+  "marker": "установка кондиционера",
+  "quoted": 1454,
+  "cluster": "установка кондиционера"
+ },
+ "/inzhenernye-sistemy/ventilyaciya/": {
+  "marker": "вентиляция в квартире",
+  "quoted": 231,
+  "cluster": ""
+ },
+ "/inzhenernye-sistemy/umnyy-dom/": {
+  "marker": "умный дом",
+  "quoted": 1997,
+  "cluster": ""
+ },
+ "/inzhenernye-sistemy/otoplenie/": {
+  "marker": "замена радиаторов отопления",
+  "quoted": 141,
+  "cluster": "установка радиаторов"
+ },
+ "/otdelochnye-raboty/dekorativnaya-shtukaturka/": {
+  "marker": "декоративная штукатурка",
+  "quoted": 3438,
+  "cluster": "декоративная штукатурка"
+ },
+ "/inzhenernye-sistemy/": {
+  "marker": "инженерные системы",
+  "quoted": 167,
+  "cluster": "инженерные системы"
  }
 }
