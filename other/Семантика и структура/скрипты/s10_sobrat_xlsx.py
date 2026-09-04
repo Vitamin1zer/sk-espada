@@ -70,11 +70,7 @@ def blog_klaster(phrase):
 RAZDEL = {
     '/remont-kvartir/':                   'Ремонт квартир',
     '/design/':                           'Дизайн интерьера',
-    '/priemka/':                          'Приёмка',
-    '/komplektaciya/':                    'Комплектация',
     '/uslugi/':                           'Услуги',
-    '/remont-domov/':                     'Ремонт домов и коттеджей',
-    '/remont-kommercheskih-pomescheniy/': 'Коммерческие помещения',
 }
 
 _NAMES = None

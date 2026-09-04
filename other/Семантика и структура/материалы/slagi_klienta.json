@@ -1,7 +1,7 @@
 {
  "Главная": {
   "status": "Есть на сайте",
-  "slug": "/",
+  "slug": "",
   "old": "/"
  },
  "Ремонт квартир под ключ": {
@@ -109,11 +109,6 @@
   "slug": "remont-balkona-i-lodzhii",
   "old": ""
  },
- "Цены на ремонт квартир": {
-  "status": "Необходимо создать",
-  "slug": "tseny-na-remont-kvartir",
-  "old": ""
- },
  "Ремонт в ЖК (шаблон)": {
   "status": "Необходимо создать",
   "slug": "remont-v-zhk-shablon",
@@ -164,11 +159,6 @@
   "slug": "remont-pod-sdachu-v-arendu",
   "old": ""
  },
- "Ремонт по дизайн-проекту": {
-  "status": "Не создавать",
-  "slug": "remont-po-dizajn-proektu",
-  "old": ""
- },
  "Ремонт гардеробной": {
   "status": "Необходимо создать",
   "slug": "remont-garderobnoj",
@@ -184,15 +174,10 @@
   "slug": "remont-kommercheskih-pomeshchenij",
   "old": ""
  },
- "Тёплый пол": {
-  "status": "Необходимо создать",
-  "slug": "tyoplyj-pol",
-  "old": ""
- },
  "Дизайн интерьера": {
   "status": "Редирект",
   "slug": "dizajn-interera",
-  "old": "design"
+  "old": "/design"
  },
  "Дизайн интерьера квартиры": {
   "status": "Необходимо создать",
@@ -249,44 +234,19 @@
   "slug": "dizajn-kommercheskih-pomeshchenij",
   "old": ""
  },
- "Приёмка квартир в новостройке": {
-  "status": "Редирект",
-  "slug": "priyomka-kvartir-v-novostrojke",
-  "old": "priemka"
- },
- "Приёмка квартиры без отделки": {
+ "Услуги": {
   "status": "Необходимо создать",
-  "slug": "priyomka-kvartiry-bez-otdelki",
+  "slug": "uslugi",
   "old": ""
  },
- "Приёмка квартиры с отделкой": {
+ "Инженерные системы": {
   "status": "Необходимо создать",
-  "slug": "priyomka-kvartiry-s-otdelkoj",
+  "slug": "inzhenernye-sistemy",
   "old": ""
  },
- "Приёмка в ЖК (шаблон)": {
+ "Тёплый пол": {
   "status": "Необходимо создать",
-  "slug": "priyomka-v-zhk-shablon",
-  "old": ""
- },
- "Комплектация квартиры": {
-  "status": "Редирект",
-  "slug": "komplektatsiya-kvartiry",
-  "old": "komplekt"
- },
- "Перепланировка квартиры": {
-  "status": "Необходимо создать",
-  "slug": "pereplanirovka-kvartiry",
-  "old": ""
- },
- "Механизированная штукатурка": {
-  "status": "Необходимо создать",
-  "slug": "mehanizirovannaya-shtukaturka",
-  "old": ""
- },
- "Стяжка пола": {
-  "status": "Необходимо создать",
-  "slug": "styazhka-pola",
+  "slug": "tyoplyj-pol",
   "old": ""
  },
  "Электромонтажные работы": {
@@ -299,14 +259,39 @@
   "slug": "santehnicheskie-raboty",
   "old": ""
  },
- "Демонтажные работы": {
-  "status": "Необходимо создать",
-  "slug": "demontazhnye-raboty",
-  "old": ""
- },
  "Шумоизоляция квартиры": {
   "status": "Необходимо создать",
   "slug": "shumoizolyatsiya-kvartiry",
+  "old": ""
+ },
+ "Установка кондиционеров": {
+  "status": "Необходимо создать",
+  "slug": "ustanovka-konditsionerov",
+  "old": ""
+ },
+ "Вентиляция": {
+  "status": "Необходимо создать",
+  "slug": "ventilyatsiya",
+  "old": ""
+ },
+ "Умный дом": {
+  "status": "Необходимо создать",
+  "slug": "umnyj-dom",
+  "old": ""
+ },
+ "Отопление и радиаторы": {
+  "status": "Необходимо создать",
+  "slug": "otoplenie-i-radiatory",
+  "old": ""
+ },
+ "Комплектация квартиры": {
+  "status": "Редирект",
+  "slug": "komplektatsiya-kvartiry",
+  "old": "/komplekt"
+ },
+ "Отделочные работы": {
+  "status": "Необходимо создать",
+  "slug": "otdelochnye-raboty",
   "old": ""
  },
  "Малярные работы и поклейка обоев": {
@@ -324,9 +309,59 @@
   "slug": "natyazhnye-potolki",
   "old": ""
  },
+ "Декоративная штукатурка": {
+  "status": "Необходимо создать",
+  "slug": "dekorativnaya-shtukaturka",
+  "old": ""
+ },
+ "Приёмка квартир в новостройке": {
+  "status": "Редирект",
+  "slug": "priyomka-kvartir-v-novostrojke",
+  "old": "/priemka"
+ },
+ "Приёмка квартиры без отделки": {
+  "status": "Необходимо создать",
+  "slug": "priyomka-kvartiry-bez-otdelki",
+  "old": ""
+ },
+ "Приёмка квартиры с отделкой": {
+  "status": "Необходимо создать",
+  "slug": "priyomka-kvartiry-s-otdelkoj",
+  "old": ""
+ },
+ "Приёмка в ЖК (шаблон)": {
+  "status": "Необходимо создать",
+  "slug": "priyomka-v-zhk-shablon",
+  "old": ""
+ },
+ "Демонтаж и черновые работы": {
+  "status": "Необходимо создать",
+  "slug": "demontazh-i-chernovye-raboty",
+  "old": ""
+ },
+ "Механизированная штукатурка": {
+  "status": "Необходимо создать",
+  "slug": "mehanizirovannaya-shtukaturka",
+  "old": ""
+ },
+ "Стяжка пола": {
+  "status": "Необходимо создать",
+  "slug": "styazhka-pola",
+  "old": ""
+ },
+ "Демонтажные работы": {
+  "status": "Необходимо создать",
+  "slug": "demontazhnye-raboty",
+  "old": ""
+ },
  "Выравнивание стен": {
   "status": "Необходимо создать",
   "slug": "vyravnivanie-sten",
+  "old": ""
+ },
+ "Перепланировка квартиры": {
+  "status": "Необходимо создать",
+  "slug": "pereplanirovka-kvartiry",
   "old": ""
  },
  "Портфолио": {
@@ -357,7 +392,7 @@
  "Партнёрам": {
   "status": "Есть на сайте",
   "slug": "partners",
-  "old": "partners"
+  "old": "/partners"
  },
  "Блог": {
   "status": "Необходимо создать",
@@ -367,61 +402,11 @@
  "Политика конфиденциальности": {
   "status": "Необходимо создать",
   "slug": "politika-konfidencialnosti",
-  "old": "politicakonfident"
+  "old": "/politicakonfident"
  },
  "Согласие на обработку персональных данных": {
   "status": "Необходимо создать",
   "slug": "soglasie-na-obrabotku",
-  "old": "soglasienaobrabotku"
- },
- "Спасибо за заявку": {
-  "status": "Необходимо создать",
-  "slug": "spasibo",
-  "old": ""
- },
- "Инженерные системы": {
-  "status": "Необходимо создать",
-  "slug": "inzhenernye-sistemy",
-  "old": ""
- },
- "Установка кондиционеров": {
-  "status": "Необходимо создать",
-  "slug": "ustanovka-konditsionerov",
-  "old": ""
- },
- "Вентиляция": {
-  "status": "Необходимо создать",
-  "slug": "ventilyatsiya",
-  "old": ""
- },
- "Умный дом": {
-  "status": "Необходимо создать",
-  "slug": "umnyj-dom",
-  "old": ""
- },
- "Отопление и радиаторы": {
-  "status": "Необходимо создать",
-  "slug": "otoplenie-i-radiatory",
-  "old": ""
- },
- "Отделочные работы": {
-  "status": "Необходимо создать",
-  "slug": "otdelochnye-raboty",
-  "old": ""
- },
- "Декоративная штукатурка": {
-  "status": "Необходимо создать",
-  "slug": "dekorativnaya-shtukaturka",
-  "old": ""
- },
- "Демонтаж и черновые работы": {
-  "status": "Необходимо создать",
-  "slug": "demontazh-i-chernovye-raboty",
-  "old": ""
- },
- "Услуги": {
-  "status": "Необходимо создать",
-  "slug": "uslugi",
-  "old": ""
+  "old": "/soglasienaobrabotku"
  }
 }

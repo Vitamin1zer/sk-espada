@@ -141,8 +141,8 @@
    "ремонт квартир сколько стоит",
    "сколько стоит ремонт квартир"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт однокомнатной квартиры": {
@@ -702,7 +702,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -717,7 +717,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -846,8 +846,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт ванной под ключ": {
@@ -985,7 +985,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -1075,7 +1075,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -1441,7 +1441,7 @@
    "приемка квартиры москва",
    "приемка квартир в москве"
   ],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -1463,8 +1463,8 @@
    "ремонт квартир цена за м2 под ключ",
    "ремонт квартир под ключ цена за м2"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт туалета": {
@@ -1535,7 +1535,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -1576,8 +1576,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт санузла под ключ цена в москве": {
@@ -1768,8 +1768,8 @@
   "varianty": [
    "цена ремонта под ключ за м2"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "элитная отделка квартир в москве": {
@@ -1802,7 +1802,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -1982,7 +1982,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -2092,8 +2092,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "индивидуальный дизайн интерьера": {
@@ -2155,8 +2155,8 @@
    "ремонт квартир под ключ цена за квадратный метр в москве",
    "ремонт квартир под ключ в москве цена за квадратный метр"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "укладка плитки в ванной цена за м2 в москве": {
@@ -2280,8 +2280,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "премиум ремонт квартир": {
@@ -2372,8 +2372,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "поклейка обоев в москве цена": {
@@ -2482,8 +2482,8 @@
   "varianty": [
    "ремонт квартир москва цены"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "демонтаж квартиры перед ремонтом цена": {
@@ -2496,8 +2496,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит дизайн проект квартиры в москве": {
@@ -2538,8 +2538,8 @@
    "ремонт квартиры в москве под ключ цена",
    "ремонт квартир под ключ москва цена"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ванна под ключ ремонт ванной цена": {
@@ -2878,8 +2878,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "укладка плитки цена": {
@@ -3214,7 +3214,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -3282,8 +3282,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость ремонта квартиры": {
@@ -3305,8 +3305,8 @@
    "ремонт квартиры стоимость",
    "стоимость ремонта квартир"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт под ключ москва новостройки": {
@@ -3517,8 +3517,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт балконов в москве": {
@@ -3565,7 +3565,7 @@
    "эксперт по приемке квартиры",
    "эксперт приемка квартиры"
   ],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -3651,8 +3651,8 @@
    "ремонт квартира под ключ цена",
    "ремонт квартиры под ключ цена"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "качественный ремонт квартир": {
@@ -3701,8 +3701,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "частичный ремонт квартиры в москве": {
@@ -3771,8 +3771,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "дизайнерский ремонт квартир в москве": {
@@ -3845,8 +3845,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт в ванной бюджетный": {
@@ -3994,7 +3994,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -4076,8 +4076,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "заказать дизайн проект квартиры": {
@@ -4151,8 +4151,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "цена за ремонт квартиры за квадратный метр": {
@@ -4169,8 +4169,8 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "цена укладки плитки за квадратный метр": {
@@ -4251,7 +4251,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -4306,7 +4306,7 @@
   "varianty": [
    "приемщики квартир"
   ],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -4429,8 +4429,8 @@
    "цены на ремонт квартиры",
    "цены на ремонт квартир"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт квартир цена": {
@@ -4448,8 +4448,8 @@
   "varianty": [
    "цена на ремонт квартиры"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "укладка плитки на пол цена": {
@@ -4882,8 +4882,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "укладка плитки на пол цена за м2 в москве": {
@@ -5212,8 +5212,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "дизайнер квартиры москва стоимость": {
@@ -5342,8 +5342,8 @@
   "varianty": [
    "ремонт квартир под ключ москва стоимость"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "демонтаж стяжки пола цена за м2 москва": {
@@ -5432,7 +5432,7 @@
    "приемщик квартиры в новостройке в москве",
    "приемщики квартир новостройки москвы"
   ],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -5448,7 +5448,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -5554,8 +5554,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сделать ремонт в квартире под ключ": {
@@ -6037,8 +6037,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "дизайн ванны в современном стиле недорого фото и цены": {
@@ -6094,8 +6094,8 @@
    "ремонт квартир под ключ цена за квадратный метр",
    "цена ремонта квартиры за квадратный метр под ключ"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "дизайнерский ремонт квартиры под ключ цена в москве": {
@@ -6138,8 +6138,8 @@
    "смета для ремонта квартиры",
    "смета ремонта квартиры"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость ремонта квартиры за 1 кв м в москве": {
@@ -6158,8 +6158,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "разводка электрики": {
@@ -6224,8 +6224,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит шумоизоляция потолка": {
@@ -6454,7 +6454,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -6570,8 +6570,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "бюджетный ремонт кухни": {
@@ -6716,7 +6716,7 @@
   "varianty": [
    "специалист по приемке квартир"
   ],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -6795,7 +6795,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -6813,8 +6813,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "отделка помещений": {
@@ -6930,8 +6930,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость укладки плитки в москве": {
@@ -7370,8 +7370,8 @@
    "ремонт квартиры цена за квадратный метр",
    "ремонт квартир цена за метр квадратный"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "отделка квартиры под ключ": {
@@ -7452,8 +7452,8 @@
   "varianty": [
    "ремонт под ключ стоимость"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "компании по ремонту квартир": {
@@ -7758,7 +7758,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -7772,7 +7772,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -7866,7 +7866,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-domov/",
+  "url": "/remont-kvartir/remont-domov/",
   "stranica": "Ремонт домов и коттеджей",
   "razdel": "Ремонт домов"
  },
@@ -7901,8 +7901,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "укладка плитка для ванной цена за м2": {
@@ -8219,8 +8219,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт лофт": {
@@ -8371,8 +8371,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "готовый ремонт квартир под ключ": {
@@ -8459,8 +8459,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "заказ дизайн проекта квартиры": {
@@ -8514,7 +8514,7 @@
   "varianty": [
    "приемка квартиры без отделки в новостройке"
   ],
-  "url": "/priemka/bez-otdelki/",
+  "url": "/uslugi/priemka/bez-otdelki/",
   "stranica": "Приёмка квартиры без отделки",
   "razdel": "Приёмка"
  },
@@ -9079,7 +9079,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -9340,8 +9340,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "малярные работы цена": {
@@ -9406,8 +9406,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт 4 х комнатной квартиры": {
@@ -9569,8 +9569,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "купить дизайн проект квартиры": {
@@ -9656,7 +9656,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -9926,8 +9926,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит ремонт квартиры с нуля": {
@@ -9948,8 +9948,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит ремонт под ключ": {
@@ -9966,8 +9966,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит отделка квартиры": {
@@ -9984,8 +9984,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "калькулятор сметы на ремонт квартиры": {
@@ -10001,8 +10001,8 @@
    "remony.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит ремонт кухни": {
@@ -10170,8 +10170,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт 2 х комнатной квартиры под ключ цена": {
@@ -10190,8 +10190,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "найти мастера по ремонту квартир": {
@@ -10225,8 +10225,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость укладки плитки на пол": {
@@ -10260,8 +10260,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "укладка плитки цена за метр": {
@@ -10598,8 +10598,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "дизайнер по ремонту квартир цена": {
@@ -10680,7 +10680,7 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -10816,8 +10816,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт кухни 5м2": {
@@ -11115,7 +11115,7 @@
    "vproekte.com"
   ],
   "varianty": [],
-  "url": "/komplektaciya/",
+  "url": "/uslugi/komplektaciya/",
   "stranica": "Комплектация квартиры",
   "razdel": "Услуги"
  },
@@ -11144,7 +11144,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -11262,8 +11262,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит косметический ремонт 1 комнатной квартиры": {
@@ -11381,8 +11381,8 @@
   "varianty": [
    "ремонт квартир цена за м2"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "отделка квартир москва": {
@@ -11438,8 +11438,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт квартиры дешево": {
@@ -12154,7 +12154,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -12168,7 +12168,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -12265,8 +12265,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит ремонт балкона": {
@@ -12331,8 +12331,8 @@
   "varianty": [
    "ремонт под ключ цена за м2 москва"
   ],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт под ключ цена за м2 с материалом": {
@@ -12351,8 +12351,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт по дизайн проекту цена": {
@@ -12388,8 +12388,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "рассрочка на ремонт квартиры без процентов": {
@@ -12403,8 +12403,8 @@
    "remo-nt.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "средняя стоимость ремонта за 1 кв метр в новостройке": {
@@ -13075,7 +13075,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/s-otdelkoy/",
+  "url": "/uslugi/priemka/s-otdelkoy/",
   "stranica": "Приёмка квартиры с отделкой",
   "razdel": "Приёмка"
  },
@@ -13089,7 +13089,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -13191,8 +13191,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит ремонт квартиры под ключ за квадратный метр в москве": {
@@ -13210,8 +13210,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит отремонтировать квартиру": {
@@ -13229,8 +13229,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит укладка плитки за квадратный метр на стену": {
@@ -13298,7 +13298,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -13346,8 +13346,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "бригада ремонтников квартир": {
@@ -13434,8 +13434,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "отделка квартиры под ключ в новостройке": {
@@ -13490,8 +13490,8 @@
    "remony.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость ремонта однокомнатной квартиры 40 кв м под ключ цена": {
@@ -13574,8 +13574,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "поклейка обоев цена за квадрат": {
@@ -13917,8 +13917,8 @@
    "remony.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт сталинки однокомнатной": {
@@ -14054,8 +14054,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт 2 х комнатной квартиры": {
@@ -14513,8 +14513,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит укладка плитки в ванной за 1 кв метр в москве": {
@@ -14856,8 +14856,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость отделки квартиры": {
@@ -14874,8 +14874,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт квартир с материалами под ключ": {
@@ -14912,8 +14912,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "косметический ремонт квартиры цена": {
@@ -14968,8 +14968,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "цена поклейки обоев за 1 кв": {
@@ -15064,8 +15064,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "цена за поклейку обоев": {
@@ -15129,8 +15129,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "средняя стоимость ремонта ванной комнаты под ключ": {
@@ -15626,7 +15626,7 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -15713,7 +15713,7 @@
   "varianty": [
    "эксперт по приемке квартиры в новостройке"
   ],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -15728,7 +15728,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -15743,7 +15743,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -15759,7 +15759,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -15775,7 +15775,7 @@
    "suggest"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -15789,8 +15789,8 @@
    "domeo.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "стоимость дизайн проекта квартиры за квадратный метр": {
@@ -15839,8 +15839,8 @@
    "stroyremdizayn.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "дизайн проект под ключ": {
@@ -15944,7 +15944,7 @@
    "vproekte.com"
   ],
   "varianty": [],
-  "url": "/komplektaciya/",
+  "url": "/uslugi/komplektaciya/",
   "stranica": "Комплектация квартиры",
   "razdel": "Услуги"
  },
@@ -16007,8 +16007,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "ремонт в евротрешке": {
@@ -16537,7 +16537,7 @@
   "varianty": [
    "комплектаторы интерьера"
   ],
-  "url": "/komplektaciya/",
+  "url": "/uslugi/komplektaciya/",
   "stranica": "Комплектация квартиры",
   "razdel": "Услуги"
  },
@@ -16581,7 +16581,7 @@
    "mrnadzor.ru"
   ],
   "varianty": [],
-  "url": "/priemka/",
+  "url": "/uslugi/priemka/",
   "stranica": "Приёмка квартир в новостройке",
   "razdel": "Приёмка"
  },
@@ -16740,8 +16740,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "рассчитать стоимость ремонта квартиры онлайн калькулятор": {
@@ -16760,8 +16760,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит сделать стяжку пола в квартире 1 кв м": {
@@ -16794,8 +16794,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит замена полотна натяжного потолка": {
@@ -16906,8 +16906,8 @@
    "titanremont.ru"
   ],
   "varianty": [],
-  "url": "/remont-kvartir/tseny/",
-  "stranica": "Цены на ремонт квартир",
+  "url": "/remont-kvartir/",
+  "stranica": "Ремонт квартир под ключ",
   "razdel": "Ремонт квартир"
  },
  "сколько стоит ремонт ванной комнаты и туалета под ключ": {
@@ -18310,7 +18310,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18324,7 +18324,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18338,7 +18338,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18352,7 +18352,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18366,7 +18366,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18380,7 +18380,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18394,7 +18394,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18408,7 +18408,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18422,7 +18422,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18436,7 +18436,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18450,7 +18450,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18464,7 +18464,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18478,7 +18478,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  },
@@ -18492,7 +18492,7 @@
    "добор по замечаниям клиента"
   ],
   "varianty": [],
-  "url": "/remont-kommercheskih-pomescheniy/",
+  "url": "/remont-kvartir/remont-kommercheskih-pomescheniy/",
   "stranica": "Ремонт коммерческих помещений",
   "razdel": "Коммерция"
  }

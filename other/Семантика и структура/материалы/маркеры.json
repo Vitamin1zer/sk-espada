@@ -14,11 +14,6 @@
   "quoted": 2118,
   "cluster": "штукатурка механизированная"
  },
- "/remont-kvartir/tseny/": {
-  "marker": "сколько стоит ремонт квартиры",
-  "quoted": 2053,
-  "cluster": "сколько стоит ремонт квартиры"
- },
  "/remont-kvartir/1-komnatnoy/": {
   "marker": "ремонт однокомнатной квартиры",
   "quoted": 1927,
@@ -59,7 +54,7 @@
   "quoted": 178,
   "cluster": "ремонт кухни"
  },
- "/priemka/": {
+ "/uslugi/priemka/": {
   "marker": "приемка квартир москва в новостройках",
   "quoted": 171,
   "cluster": "приемка квартиры в москве"
@@ -239,7 +234,7 @@
   "quoted": 12,
   "cluster": "дизайн проект детской"
  },
- "/remont-domov/": {
+ "/remont-kvartir/remont-domov/": {
   "marker": "ремонт квартир и коттеджей",
   "quoted": 11,
   "cluster": ""
@@ -254,7 +249,7 @@
   "quoted": 11,
   "cluster": ""
  },
- "/priemka/bez-otdelki/": {
+ "/uslugi/priemka/bez-otdelki/": {
   "marker": "приемка квартиры в новостройке без отделки",
   "quoted": 10,
   "cluster": ""
@@ -279,7 +274,7 @@
   "quoted": 7,
   "cluster": "ремонт в двухкомнатной квартире панельного дома"
  },
- "/komplektaciya/": {
+ "/uslugi/komplektaciya/": {
   "marker": "комплектация дизайн проекта",
   "quoted": 7,
   "cluster": "комплектация интерьера"
@@ -299,7 +294,7 @@
   "quoted": 5,
   "cluster": ""
  },
- "/priemka/s-otdelkoy/": {
+ "/uslugi/priemka/s-otdelkoy/": {
   "marker": "приемка квартиры пик с отделкой",
   "quoted": 5,
   "cluster": "приемка квартиры пик"
@@ -309,7 +304,7 @@
   "quoted": 5,
   "cluster": "дизайн интерьера кафе"
  },
- "/remont-kommercheskih-pomescheniy/": {
+ "/remont-kvartir/remont-kommercheskih-pomescheniy/": {
   "marker": "ремонт офиса",
   "quoted": 69,
   "cluster": "ремонт офиса"
