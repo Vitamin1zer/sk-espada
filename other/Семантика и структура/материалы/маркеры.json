@@ -9,7 +9,7 @@
   "quoted": 3776,
   "cluster": "дизайн интерьера"
  },
- "/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/": {
+ "/uslugi/demontazh-i-chernovye-raboty/mehanizirovannaya-shtukaturka/": {
   "marker": "штукатурка механизированная",
   "quoted": 2118,
   "cluster": "штукатурка механизированная"
@@ -29,7 +29,7 @@
   "quoted": 1066,
   "cluster": "дизайн квартиры проект"
  },
- "/otdelochnye-raboty/malyarnye-raboty/": {
+ "/uslugi/otdelochnye-raboty/malyarnye-raboty/": {
   "marker": "малярные работы",
   "quoted": 729,
   "cluster": "малярные работы"
@@ -69,7 +69,7 @@
   "quoted": 131,
   "cluster": "ремонт ванной в москве"
  },
- "/pereplanirovka/": {
+ "/uslugi/pereplanirovka/": {
   "marker": "перепланировка квартиры в москве согласование",
   "quoted": 123,
   "cluster": "перепланировка квартиры в москве"
@@ -84,17 +84,17 @@
   "quoted": 86,
   "cluster": "дизайн проект дома"
  },
- "/inzhenernye-sistemy/teplyy-pol/": {
+ "/uslugi/inzhenernye-sistemy/teplyy-pol/": {
   "marker": "для теплого пола подложка",
   "quoted": 82,
   "cluster": "под теплый пол подложка"
  },
- "/inzhenernye-sistemy/shumoizolyaciya/": {
+ "/uslugi/inzhenernye-sistemy/shumoizolyaciya/": {
   "marker": "шумоизоляция двери входной",
   "quoted": 81,
   "cluster": "шумоизоляция двери входной"
  },
- "/otdelochnye-raboty/ukladka-plitki/": {
+ "/uslugi/otdelochnye-raboty/ukladka-plitki/": {
   "marker": "укладка плитки цена за м2 в москве и московской",
   "quoted": 80,
   "cluster": "укладка плитки цены"
@@ -114,7 +114,7 @@
   "quoted": 60,
   "cluster": "дизайнерский ремонт квартир в москве"
  },
- "/otdelochnye-raboty/natyazhnye-potolki/": {
+ "/uslugi/otdelochnye-raboty/natyazhnye-potolki/": {
   "marker": "материалы натяжных потолков",
   "quoted": 57,
   "cluster": ""
@@ -129,17 +129,17 @@
   "quoted": 53,
   "cluster": "сколько стоит сделать ремонт в новостройке с нуля"
  },
- "/demontazh-i-chernovye-raboty/styazhka-pola/": {
+ "/uslugi/demontazh-i-chernovye-raboty/styazhka-pola/": {
   "marker": "сухая стяжка пола кнауф",
   "quoted": 48,
   "cluster": ""
  },
- "/inzhenernye-sistemy/elektromontazh/": {
+ "/uslugi/inzhenernye-sistemy/elektromontazh/": {
   "marker": "электромонтаж в квартире",
   "quoted": 43,
   "cluster": ""
  },
- "/demontazh-i-chernovye-raboty/demontazhnye-raboty/": {
+ "/uslugi/demontazh-i-chernovye-raboty/demontazhnye-raboty/": {
   "marker": "демонтажные работы",
   "quoted": 43,
   "cluster": "демонтажные работы"
@@ -164,7 +164,7 @@
   "quoted": 37,
   "cluster": ""
  },
- "/demontazh-i-chernovye-raboty/vyravnivanie-sten/": {
+ "/uslugi/demontazh-i-chernovye-raboty/vyravnivanie-sten/": {
   "marker": "выравнивание стен по маякам",
   "quoted": 36,
   "cluster": ""
@@ -179,7 +179,7 @@
   "quoted": 31,
   "cluster": ""
  },
- "/inzhenernye-sistemy/santehnicheskie-raboty/": {
+ "/uslugi/inzhenernye-sistemy/santehnicheskie-raboty/": {
   "marker": "замена труб в ванной",
   "quoted": 25,
   "cluster": ""
@@ -259,7 +259,7 @@
   "quoted": 10,
   "cluster": ""
  },
- "/otdelochnye-raboty/": {
+ "/uslugi/otdelochnye-raboty/": {
   "marker": "ремонтно отделочные работы",
   "quoted": 8,
   "cluster": "ремонт и отделка квартир"
@@ -314,32 +314,32 @@
   "quoted": 69,
   "cluster": "ремонт офиса"
  },
- "/inzhenernye-sistemy/konditsionery/": {
+ "/uslugi/inzhenernye-sistemy/konditsionery/": {
   "marker": "установка кондиционера",
   "quoted": 1454,
   "cluster": "установка кондиционера"
  },
- "/inzhenernye-sistemy/ventilyaciya/": {
+ "/uslugi/inzhenernye-sistemy/ventilyaciya/": {
   "marker": "вентиляция в квартире",
   "quoted": 231,
   "cluster": ""
  },
- "/inzhenernye-sistemy/umnyy-dom/": {
+ "/uslugi/inzhenernye-sistemy/umnyy-dom/": {
   "marker": "умный дом",
   "quoted": 1997,
   "cluster": ""
  },
- "/inzhenernye-sistemy/otoplenie/": {
+ "/uslugi/inzhenernye-sistemy/otoplenie/": {
   "marker": "замена радиаторов отопления",
   "quoted": 141,
   "cluster": "установка радиаторов"
  },
- "/otdelochnye-raboty/dekorativnaya-shtukaturka/": {
+ "/uslugi/otdelochnye-raboty/dekorativnaya-shtukaturka/": {
   "marker": "декоративная штукатурка",
   "quoted": 3438,
   "cluster": "декоративная штукатурка"
  },
- "/inzhenernye-sistemy/": {
+ "/uslugi/inzhenernye-sistemy/": {
   "marker": "инженерные системы",
   "quoted": 167,
   "cluster": "инженерные системы"

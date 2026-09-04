@@ -418,5 +418,10 @@
   "status": "Необходимо создать",
   "slug": "demontazh-i-chernovye-raboty",
   "old": ""
+ },
+ "Услуги": {
+  "status": "Необходимо создать",
+  "slug": "uslugi",
+  "old": ""
  }
 }

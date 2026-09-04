@@ -72,10 +72,7 @@ RAZDEL = {
     '/design/':                           'Дизайн интерьера',
     '/priemka/':                          'Приёмка',
     '/komplektaciya/':                    'Комплектация',
-    '/inzhenernye-sistemy/':              'Услуги',
-    '/otdelochnye-raboty/':               'Услуги',
-    '/demontazh-i-chernovye-raboty/':     'Услуги',
-    '/pereplanirovka/':                   'Услуги',
+    '/uslugi/':                           'Услуги',
     '/remont-domov/':                     'Ремонт домов и коттеджей',
     '/remont-kommercheskih-pomescheniy/': 'Коммерческие помещения',
 }
@@ -106,7 +103,7 @@ def papka_ru(url):
     top = '/%s/' % url.strip('/').split('/')[0]
     root = RAZDEL.get(top, 'Услуги')
     # раздел и его головная страница — один узел, второй раз не пишем
-    if parts and parts[0] == _names().get(top) and root != 'Услуги':
+    if parts and parts[0] == _names().get(top):
         parts.pop(0)
     return '/%s/' % '/'.join([root] + parts)
 
@@ -324,9 +321,11 @@ def build_structure(out_path, pages_rows, menu_cols, meta_rows):
     wb = Workbook()
     ws = sheet(wb, 'Структура сайта',
                ['Статус', 'Новый URL', 'Адрес на сайте', 'Название',
-                'Родительская категория', 'Текст',
+                'Родительская категория', '1 уровень', '2 уровень',
+                '3 уровень', '4 уровень', 'Текст',
                 'Статус SEO текста', 'Дата внедрения'],
-               [23.1, 36.6, 22, 54.1, 44, 14, 18.6, 16], first=True)
+               [23.1, 36.6, 22, 46, 34, 34, 34, 34, 30, 14, 18.6, 16],
+               first=True)
     put(ws, pages_rows)
 
     ws2 = sheet(wb, 'Структура меню', list(menu_cols.keys()),
