@@ -58,6 +58,30 @@ def blog_klaster(phrase):
     return 'Блог — хаб'
 
 
+# Головной отдел страницы — русским названием, как в эталонном файле
+# семантики заказчика. Порядок важен: сначала группы услуг, потом разделы.
+OTDELY = (
+    ('/inzhenernye-sistemy/',           'Инженерные системы'),
+    ('/otdelochnye-raboty/',            'Отделочные работы'),
+    ('/demontazh-i-chernovye-raboty/',  'Демонтаж и черновые работы'),
+    ('/remont-kvartir/',                'Ремонт квартир'),
+    ('/design/',                        'Дизайн'),
+    ('/priemka/',                       'Приёмка'),
+    ('/remont-domov/',                  'Ремонт домов и коттеджей'),
+    ('/remont-kommercheskih-pomescheniy/', 'Коммерческие помещения'),
+)
+
+
+def otdel_ru(url):
+    """Папка запроса: головной отдел, к которому относится страница."""
+    if url == '/':
+        return '/Главная/'
+    for pref, name in OTDELY:
+        if url.startswith(pref):
+            return '/%s/' % name
+    return '/Услуги/'
+
+
 def blog_papka(phrase):
     """Папка рубрики блога. Хаб живёт в корне раздела."""
     slug = BLOG_SLUG.get(blog_klaster(phrase), '')
@@ -181,21 +205,32 @@ def build_semantics(out_path):
         return PU.flat_url(v.get('url', ''))
 
     rows = []
-    for w, v in sorted(core.items(), key=lambda kv: (kv[1].get('url', ''), -kv[1]['quoted'])):
+    for w, v in sorted(core.items(),
+                       key=lambda kv: (otdel_ru(kv[1].get('url', '')),
+                                       kv[1].get('stranica', ''),
+                                       -kv[1]['quoted'])):
         rows.append([w, v.get('base', 0), v.get('quoted', 0), v.get('overal', 0),
-                     adres(v), v.get('stranica', ''), comm.get(w, '')])
+                     otdel_ru(v.get('url', '')), v.get('stranica', ''), comm.get(w, '')])
     put(ws, rows)
 
     ws2 = sheet(wb, 'СЕМАНТИКА Блог',
                 ['Запрос', 'Ч', '"Ч"', '"!Ч"', 'Папка', 'КЛАСТЕР'],
-                [77.6, 7.6, 6.5, 7.1, 18.0, 23.4])
+                [77.6, 7.6, 6.5, 7.1, 30, 32])
     brows = []
     brubr = {w: blog_rubrika(w, v) for w, v in blog.items()}
+
+    def botdel(phrase):
+        # рубрика блога наследует отдел коммерческой страницы, к которой
+        # привязана; что привязано к пиллару, живёт в собственных рубриках
+        url, _, _ = _load_assign()(phrase)
+        return otdel_ru(url) if url != '/remont-kvartir/' else '/Блог/'
+
+    bo = {w: botdel(w) for w in blog}
     for w, v in sorted(blog.items(),
-                       key=lambda kv: (brubr[kv[0]][0], brubr[kv[0]][1],
+                       key=lambda kv: (bo[kv[0]], brubr[kv[0]][1],
                                        -kv[1].get('quoted', 0))):
         brows.append([w, v.get('base', 0), v.get('quoted', 0), v.get('overal', 0),
-                      brubr[w][0], brubr[w][1]])
+                      bo[w], brubr[w][1]])
     put(ws2, brows)
 
     ws3 = sheet(wb, 'СВОДКА', ['КЛАСТЕР', 'Сумма "Ч"'], [32, 14])
@@ -253,9 +288,10 @@ def build_semantics(out_path):
 def build_structure(out_path, pages_rows, menu_cols, meta_rows):
     wb = Workbook()
     ws = sheet(wb, 'Структура сайта',
-               ['Статус', 'Новый URL', 'адрес в шаблоне', 'Название', 'Текст',
+               ['Статус', 'Новый URL', 'Адрес на сайте', 'Название',
+                'Родительская категория', 'Текст',
                 'Статус SEO текста', 'Дата внедрения'],
-               [23.1, 36.6, 30, 54.1, 14, 18.6, 16], first=True)
+               [23.1, 36.6, 22, 54.1, 44, 14, 18.6, 16], first=True)
     put(ws, pages_rows)
 
     ws2 = sheet(wb, 'Структура меню', list(menu_cols.keys()),

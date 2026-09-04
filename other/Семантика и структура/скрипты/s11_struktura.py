@@ -393,7 +393,6 @@ MENU_OSNOVNOE = collections.OrderedDict([
    ('Капитальный ремонт квартиры', 'Капитальный'),
    ('Косметический ремонт квартиры', 'Косметический'),
    ('Дизайнерский ремонт квартиры', 'Дизайнерский'),
-   ('Ремонт по дизайн-проекту', 'По дизайн-проекту'),
    ('Черновой ремонт квартиры', 'Черновой'),
    ('Чистовая отделка квартиры', 'Чистовая отделка'),
    ('Евроремонт квартиры', 'Евроремонт'),
@@ -608,6 +607,19 @@ def main():
             return 'Рабочее ядро'
         return 'Тонко'
 
+    def roditel(url):
+        """Родительская категория: название страницы уровнем выше.
+
+        Иерархия живёт только в админке — адреса плоские, поэтому родителя
+        берём из служебного вложенного пути, а показываем русским названием.
+        """
+        if url == '/':
+            return ''
+        par = P.parent_nested(url)
+        if not par:
+            return 'Главная'
+        return META[par][0] if par in META else 'Главная'
+
     mk = os.path.join(MAT, 'маркеры.json')
     marker_data = json.load(open(mk, encoding='utf-8')) if os.path.exists(mk) else {}
 
@@ -616,7 +628,9 @@ def main():
         name, sect, old, title, descr, h1 = META[url]
         st = klient_status(name, status(url))
         adres = '/' if name == 'Главная' else '/%s/' % klient_slug(name, P.slug(url))
-        pages_rows.append([st, adres, old, name, '', '', ''])
+        # «Новый URL» — слаг без косых, как в таблице заказчика
+        nov = '/' if name == 'Главная' else klient_slug(name, P.slug(url))
+        pages_rows.append([st, nov, old, name, roditel(url), '', '', ''])
         if title:
             meta_rows.append([name, title, len(title), descr, len(descr), h1, len(h1)])
         s = stat.get(url, {'n': 0, 'q': 0, 'qk': 0, 'nk': 0, 'marker': ''})
@@ -676,9 +690,11 @@ def main():
         return '/%s/' % klient_slug(nm, P.slug(u))
 
     hrow = 2
+    head_rows = []
 
     def put_head(*vals):
         nonlocal hrow
+        head_rows.append(vals)
         for i, v in enumerate(vals, 1):
             wsh.cell(hrow, i, v).font = Font(name='Inter', size=10)
         hrow += 1
@@ -713,6 +729,37 @@ def main():
     # ---- лист «Иерархия в админке» ----
     # Адреса плоские, но в админке через Nested Pages сохраняется дерево:
     # все страницы, включая блог, лежат в одном разделе «Страницы».
+    # Лист «Структура меню» строим строками с родительской категорией:
+    # в сетке «колонка на пункт первого уровня» такому столбцу места нет,
+    # а иерархия меню читается именно по родителю.
+    del wb['Структура меню']
+    wsm = wb.create_sheet('Структура меню')
+    for i, h in enumerate(['Строка шапки', 'Пункт меню', 'Родительская категория',
+                           'Страница', 'Адрес'], 1):
+        c = wsm.cell(1, i, h)
+        c.fill = PatternFill('solid', fgColor='FF000000')
+        c.font = Font(name='Inter', size=10, bold=True, color='FFFFFFFF')
+    for i, w in enumerate([22, 34, 30, 44, 38], 1):
+        wsm.column_dimensions[get_column_letter(i)].width = w
+    mr = 2
+    for stroka, razdel, gruppa, punkt, stranica, adr in head_rows:
+        if not punkt or punkt == '— раздел меню':
+            # строка самого раздела: его родитель — шапка сайта
+            punkt, roditel = razdel, 'Шапка сайта'
+        elif '(заголовок группы' in punkt:
+            # заголовок группы внутри выпадающего списка подчинён разделу
+            punkt, roditel = gruppa, razdel
+        else:
+            roditel = gruppa or razdel
+        if roditel == punkt:
+            roditel = 'Шапка сайта'
+        for i, v in enumerate([stroka, punkt, roditel, stranica, adr], 1):
+            wsm.cell(mr, i, v).font = Font(name='Inter', size=10)
+        mr += 1
+    wsm.freeze_panes = 'A2'
+    wsm.auto_filter.ref = 'A1:E%d' % (mr - 1)
+    wb.move_sheet('Структура меню', offset=-(len(wb.sheetnames) - 2))
+
     wsi = wb.create_sheet('Иерархия в админке')
     for i, h in enumerate(['Уровень', 'Название', 'Слаг (post_name)',
                            'Родитель (parent_page_slug)', 'Адрес на сайте',
