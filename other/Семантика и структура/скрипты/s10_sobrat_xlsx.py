@@ -58,28 +58,57 @@ def blog_klaster(phrase):
     return 'Блог — хаб'
 
 
-# Головной отдел страницы — русским названием, как в эталонном файле
-# семантики заказчика. Порядок важен: сначала группы услуг, потом разделы.
-OTDELY = (
-    ('/inzhenernye-sistemy/',           'Инженерные системы'),
-    ('/otdelochnye-raboty/',            'Отделочные работы'),
-    ('/demontazh-i-chernovye-raboty/',  'Демонтаж и черновые работы'),
-    ('/remont-kvartir/',                'Ремонт квартир'),
-    ('/design/',                        'Дизайн'),
-    ('/priemka/',                       'Приёмка'),
-    ('/remont-domov/',                  'Ремонт домов и коттеджей'),
-    ('/remont-kommercheskih-pomescheniy/', 'Коммерческие помещения'),
-)
+# Папка запроса — путь вложенности до страницы, русскими названиями.
+# Показываем папку, в которой лежит кластер, а не саму страницу:
+# «Инженерные системы» лежат в услугах, значит их папка /Услуги/,
+# а электромонтаж лежит уже внутри инженерных систем —
+# /Услуги/Инженерные системы/.
+#
+# Корневая папка — раздел меню. Там, где головной страницей раздела
+# служит сама страница верхнего уровня (ремонт квартир, дизайн, приёмка),
+# раздел и голову не дублируем: это один узел дерева.
+RAZDEL = {
+    '/remont-kvartir/':                   'Ремонт квартир',
+    '/design/':                           'Дизайн интерьера',
+    '/priemka/':                          'Приёмка',
+    '/komplektaciya/':                    'Комплектация',
+    '/inzhenernye-sistemy/':              'Услуги',
+    '/otdelochnye-raboty/':               'Услуги',
+    '/demontazh-i-chernovye-raboty/':     'Услуги',
+    '/pereplanirovka/':                   'Услуги',
+    '/remont-domov/':                     'Ремонт домов и коттеджей',
+    '/remont-kommercheskih-pomescheniy/': 'Коммерческие помещения',
+}
+
+_NAMES = None
 
 
-def otdel_ru(url):
-    """Папка запроса: головной отдел, к которому относится страница."""
-    if url == '/':
+def _names():
+    """Название страницы по служебному вложенному адресу."""
+    global _NAMES
+    if _NAMES is None:
+        _NAMES = {p[0]: p[1] for p in _load_s8b()['PAGES']}
+    return _NAMES
+
+
+def papka_ru(url):
+    """Папка, в которой лежит кластер: путь вложенности без самой страницы."""
+    import ploskie_url as PU
+    if not url or url == '/':
         return '/Главная/'
-    for pref, name in OTDELY:
-        if url.startswith(pref):
-            return '/%s/' % name
-    return '/Услуги/'
+    parts = []
+    cur = PU.parent_nested(url)
+    while cur:
+        nm = _names().get(cur)
+        if nm:
+            parts.insert(0, nm)
+        cur = PU.parent_nested(cur)
+    top = '/%s/' % url.strip('/').split('/')[0]
+    root = RAZDEL.get(top, 'Услуги')
+    # раздел и его головная страница — один узел, второй раз не пишем
+    if parts and parts[0] == _names().get(top) and root != 'Услуги':
+        parts.pop(0)
+    return '/%s/' % '/'.join([root] + parts)
 
 
 def blog_papka(phrase):
@@ -91,18 +120,22 @@ def blog_papka(phrase):
 # Фразы, пришедшие в блог из коммерции, кладём в рубрику по их же странице.
 # Так сразу видно, с какой коммерческой страницей связывать статью
 # перелинковкой, а хаб не превращается в свалку.
-_ASSIGN = None
+_S8B = None
 
 
-def _load_assign():
-    global _ASSIGN
-    if _ASSIGN is None:
+def _load_s8b():
+    global _S8B
+    if _S8B is None:
         src = open(os.path.join(HERE, 's8b_stranicy.py'), encoding='utf-8').read()
         src = src.replace('\nmain()\n', '\n')
         ns = {'__file__': os.path.join(HERE, 's8b_stranicy.py')}
         exec(compile(src, 's8b', 'exec'), ns)
-        _ASSIGN = ns['assign']
-    return _ASSIGN
+        _S8B = ns
+    return _S8B
+
+
+def _load_assign():
+    return _load_s8b()['assign']
 
 
 _KLIENT = None
@@ -206,11 +239,11 @@ def build_semantics(out_path):
 
     rows = []
     for w, v in sorted(core.items(),
-                       key=lambda kv: (otdel_ru(kv[1].get('url', '')),
+                       key=lambda kv: (papka_ru(kv[1].get('url', '')),
                                        kv[1].get('stranica', ''),
                                        -kv[1]['quoted'])):
         rows.append([w, v.get('base', 0), v.get('quoted', 0), v.get('overal', 0),
-                     otdel_ru(v.get('url', '')), v.get('stranica', ''), comm.get(w, '')])
+                     papka_ru(v.get('url', '')), v.get('stranica', ''), comm.get(w, '')])
     put(ws, rows)
 
     ws2 = sheet(wb, 'СЕМАНТИКА Блог',
@@ -223,7 +256,9 @@ def build_semantics(out_path):
         # рубрика блога наследует отдел коммерческой страницы, к которой
         # привязана; что привязано к пиллару, живёт в собственных рубриках
         url, _, _ = _load_assign()(phrase)
-        return otdel_ru(url) if url != '/remont-kvartir/' else '/Блог/'
+        if url == '/remont-kvartir/':
+            return '/Блог/'
+        return '/Блог%s' % papka_ru(url)
 
     bo = {w: botdel(w) for w in blog}
     for w, v in sorted(blog.items(),
