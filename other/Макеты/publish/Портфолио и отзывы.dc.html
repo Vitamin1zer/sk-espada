@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+
+
+
+
+
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+    <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+      <a href="/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+      <span style="font-size:12px;color:#bfbfbf">/</span>
+      <sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+        <a href="/portfolio/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Портфолио</a>
+        <span style="font-size:12px;color:#bfbfbf">/</span>
+      </sc-if>
+      <span style="font-size:12px;color:#5c5c5c">{{ crumb }}</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Заголовок" style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 clamp(22px,2.4cqw,34px)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
+      <h1 style="margin:0;font-size:clamp(26px,3.2cqw,46px);line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">{{ h1 }}</h1>
+      <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:680px;text-wrap:pretty">{{ lead }}</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <section data-screen-label="Фильтры" style="background:#f8f8f8;padding:clamp(22px,2.4cqw,34px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:clamp(10px,1.1cqw,14px);align-items:end">
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+            <div style="min-width:0;position:relative;display:flex;flex-direction:column;gap:7px">
+              <span style="font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ f.title }}</span>
+              <button type="button" onClick="{{ f.toggle }}" style="{{ f.btnCss }}">
+                <span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ f.value }}</span>
+                <span style="{{ f.caretCss }}"></span>
+              </button>
+              <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#fff;border:1px solid #d9d9d9;box-shadow:0 12px 28px rgba(0,0,0,.14);z-index:30;max-height:266px;overflow-y:auto;display:flex;flex-direction:column">
+                  <sc-for list="{{ f.items }}" as="i" hint-placeholder-count="5">
+                    <button type="button" onClick="{{ i.go }}" style="{{ i.css }}">{{ i.t }}</button>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+          <div style="grid-column:1/-1;display:flex;gap:14px;align-items:center;flex-wrap:wrap;border-top:1px solid #e4e4e4;padding-top:14px;margin-top:2px">
+            <span style="font-size:12.5px;color:#5c5c5c;white-space:nowrap">Найдено: <b style="color:#313131;font-variant-numeric:tabular-nums">{{ found }}</b></span>
+            <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{ resetFilters }}" style="border:0;background:transparent;padding:0;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F;white-space:nowrap" style-hover="color:#026B63">Сбросить</button>
+            </sc-if>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Плитка работ" style="background:#fff;padding:clamp(36px,4cqw,64px) 0 clamp(44px,5cqw,80px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(16px,1.8cqw,28px)">
+            <sc-for list="{{ works }}" as="w" hint-placeholder-count="8">
+              <a href="/portfolio/zhk-shagal-82m/" style="text-decoration:none;display:flex;flex-direction:column;gap:14px;min-width:0">
+                <div style="position:relative;overflow:hidden">
+                  <img src="{{ w.img }}" alt="{{ w.title }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0;transition:transform .4s cubic-bezier(.4,0,.2,1)" style-hover="transform:scale(1.04)" />
+                  <span style="position:absolute;left:0;bottom:0;background:#00AD9F;color:#fff;padding:7px 12px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">{{ w.kind }}</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <span style="font-size:clamp(13px,1.1cqw,16px);font-weight:700;letter-spacing:-.005em;color:#000;line-height:1.3">{{ w.title }}</span>
+                  <div style="display:flex;gap:8px;flex-wrap:wrap">
+                    <sc-for list="{{ w.tags }}" as="t" hint-placeholder-count="3">
+                      <span style="border:1px solid #e2e2e2;padding:5px 10px;font-size:11px;color:#5c5c5c;white-space:nowrap">{{ t }}</span>
+                    </sc-for>
+                  </div>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+          <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:clamp(30px,3.4cqw,54px) 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+              <span style="font-size:clamp(15px,1.4cqw,20px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">По этим условиям объектов нет</span>
+              <span style="font-size:13px;line-height:1.6;color:#5c5c5c;max-width:440px">Снимите часть фильтров или расскажите про свою квартиру — инженер подберёт похожий объект из тех, что сейчас в работе.</span>
+              <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+                <button type="button" onClick="{{ resetFilters }}" style="background:#00AD9F;color:#fff;border:0;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Сбросить фильтры</button>
+                <button type="button" onClick="{{ openPopup }}" style="border:1px solid #00AD9F;background:transparent;color:#00AD9F;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Спросить инженера</button>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ hasMore }}" hint-placeholder-val="{{ true }}">
+            <div style="margin-top:clamp(30px,3.4cqw,50px);display:flex;justify-content:center">
+              <button type="button" onClick="{{ loadMore }}" style="border:1px solid #00AD9F;background:transparent;color:#00AD9F;padding:17px 32px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">{{ moreLabel }}</button>
+            </div>
+          </sc-if>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <section data-screen-label="Галерея кейса" style="background:#fff;padding:0 0 clamp(30px,3.4cqw,50px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:12px">
+          <img src="{{ shot }}" alt="ЖК Shagal, 2-комнатная квартира 82 м²" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#f0f0f0" />
+          <div style="display:flex;gap:12px;overflow-x:auto">
+            <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="6">
+              <button type="button" onClick="{{ t.go }}" style="{{ t.css }}">
+                <img src="{{ t.img }}" alt="Кадр объекта" style="width:100%;height:100%;object-fit:cover;display:block" />
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Параметры объекта" style="background:#f8f8f8;padding:clamp(36px,4cqw,64px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
+          <div style="min-width:0">
+            <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Параметры объекта</h2>
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ params }}" as="p" hint-placeholder-count="6">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #e4e4e4">
+                  <span style="font-size:12.5px;color:#929292">{{ p.k }}</span>
+                  <span style="font-size:13px;font-weight:700;color:#313131;text-align:right">{{ p.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+            <h2 style="margin:0;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Задача и решение</h2>
+            <sc-for list="{{ story }}" as="t" hint-placeholder-count="3">
+              <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;text-wrap:pretty">{{ t }}</p>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="До и после" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">До и после</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,1.8cqw,26px)">
+            <sc-for list="{{ beforeAfter }}" as="b" hint-placeholder-count="2">
+              <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+                <div style="position:relative">
+                  <img src="{{ b.img }}" alt="{{ b.label }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
+                  <span style="{{ b.badgeCss }}">{{ b.label }}</span>
+                </div>
+                <span style="font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ b.note }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Состав работ" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Состав работ</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+            <sc-for list="{{ scope }}" as="g" hint-placeholder-count="3">
+              <div style="background:#fff;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:14px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)">
+                <h3 style="margin:0;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">{{ g.title }}</h3>
+                <div style="display:flex;flex-direction:column;gap:9px">
+                  <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="5">
+                    <div style="display:flex;gap:10px;align-items:flex-start">
+                      <span style="flex:0 0 auto;font-size:13px;line-height:1.4;color:#00AD9F;font-weight:700">✓</span>
+                      <span style="font-size:13px;line-height:1.4;color:#313131">{{ i }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Отзыв клиента" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <div style="background:#f8f8f8;padding:clamp(24px,2.6cqw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(20px,2.4cqw,38px);align-items:center">
+            <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+              <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:118px;height:22px;object-fit:contain;display:block" />
+              <p style="margin:0;font-size:clamp(13px,1.1cqw,16px);line-height:1.65;color:#313131;text-wrap:pretty">«Встреча с инженером состоялась в формата технической консультации. Мы обсудили что нам важно, какие ожидания по бюджету и работе. После Иван проанализировал проект, указал на ошибки и предложил более рациональные решения. Такой подход убедил меня, что ремонт будет выполнен не только красиво, но и технически правильно.»</p>
+              <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+                <span style="font-size:14px;font-weight:700;color:#313131">Игорь</span>
+                <span style="font-size:12px;color:#929292">владелец квартиры, ЖК Shagal</span>
+              </div>
+            </div>
+            <div style="min-width:0">
+              <img src="assets/engineer.png" alt="Иван, инженер-сметчик Эспады" style="width:100%;max-width:300px;height:auto;display:block;margin-left:auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Связанные услуги" style="background:#fff;padding:0 0 clamp(44px,5cqw,80px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Услуги из этого проекта</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ related }}" as="r" hint-placeholder-count="5">
+              <a href="{{ r.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ r.t }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isReviews }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <section data-screen-label="Сводная оценка" style="background:#f8f8f8;padding:clamp(30px,3.4cqw,50px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(20px,2.4cqw,36px);align-items:center">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <span style="font-size:clamp(38px,4cqw,58px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">4,9</span>
+              <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:110px;height:20px;object-fit:contain;display:block" />
+            </div>
+            <span style="font-size:12px;color:#929292">средняя оценка по трём площадкам</span>
+          </div>
+          <sc-for list="{{ platforms }}" as="p" hint-placeholder-count="3">
+            <div style="min-width:0;display:flex;flex-direction:column;gap:6px;border-left:2px solid #00AD9F;padding-left:16px">
+              <span style="font-size:clamp(18px,1.8cqw,24px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ p.v }}</span>
+              <span style="font-size:12px;color:#5c5c5c">{{ p.t }}</span>
+              <a href="{{ p.href }}" target="_blank" rel="noopener" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F">Смотреть оригинал →</a>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-screen-label="Отзывы" style="background:#fff;padding:clamp(36px,4cqw,64px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:clamp(24px,2.6cqw,40px)">
+          <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
+            <span style="flex:0 0 130px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292">По услуге</span>
+            <div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ revFilter }}" as="i" hint-placeholder-count="4">
+                <button type="button" onClick="{{ i.go }}" style="{{ i.css }}">{{ i.t }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:stretch">
+            <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+              <div style="background:#f8f8f8;padding:clamp(20px,2cqw,28px);display:flex;flex-direction:column;gap:14px;min-width:0">
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+                  <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:100px;height:19px;object-fit:contain;display:block" />
+                  <span style="font-size:11.5px;color:#929292;font-variant-numeric:tabular-nums">{{ r.date }}</span>
+                </div>
+                <span style="align-self:flex-start;background:#fff;border:1px solid #e2e2e2;padding:6px 11px;font-size:11px;color:#5c5c5c">{{ r.service }}</span>
+                <p style="margin:0;font-size:12.5px;line-height:1.6;color:#5c5c5c;flex:1">{{ r.text }}</p>
+                <sc-if value="{{ r.photo }}" hint-placeholder-val="{{ false }}">
+                  <img src="{{ r.photo }}" alt="Объект клиента" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#eaeaea" />
+                </sc-if>
+                <div style="display:flex;gap:12px;align-items:center;border-top:1px solid #e4e4e4;padding-top:14px">
+                  <img src="{{ r.avatar }}" alt="{{ r.name }}" style="width:40px;height:40px;border-radius:50%;object-fit:cover;display:block;background:#e8e8e8" />
+                  <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                    <span style="font-size:13.5px;font-weight:700;color:#313131">{{ r.name }}</span>
+                    <a href="{{ r.href }}" target="_blank" rel="noopener" style="font-size:11px;color:#00AD9F">{{ r.source }} →</a>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Оставить отзыв" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:center">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Оставить отзыв</h2>
+            <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:480px;text-wrap:pretty">Мы не подключаем виджеты с рейтингами: отзывы публикуем как есть и всегда указываем источник. Если ремонт делали вы — напишите на любой из площадок, мы перенесём отзыв сюда со ссылкой на оригинал.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+              <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
+              <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">2ГИС</a>
+            </div>
+          </div>
+          <div style="min-width:0;display:flex;justify-content:flex-end">
+            <div style="width:100%;max-width:420px">
+              <dc-import name="Форма" kind="Встроенная" state="Пустая" hint-size="100%,420px"></dc-import>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <section data-screen-label="CTA перед подвалом" style="background:#00AD9F">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+        <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff">{{ ctaTitle }}</h2>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">{{ ctaText }}</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+          <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">{{ ctaMain }}</button>
+          <button type="button" onClick="{{ openPopup }}" style="background:transparent;color:#fff;border:1px solid #fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">Бесплатный расчёт сметы</button>
+        </div>
+      </div>
+      <div style="min-width:0;display:flex;align-items:flex-end;justify-content:flex-end">
+        <img src="assets/specialist.png" alt="Специалист Эспады" style="width:100%;max-width:300px;height:auto;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+  <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
+      <div style="width:100%;max-width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+        <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="100%,520px"></dc-import>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Портфолио&quot;,&quot;Кейс&quot;,&quot;Отзывы&quot;],&quot;default&quot;:&quot;Портфолио&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const WORKS = [
+  { title: 'ЖК Shagal, 2-комнатная 82 м²', kind: 'Дизайнерский ремонт', img: 'assets/pf-02.jpg', tags: ['82 м²', '2 комнаты', 'ЖК Shagal'] },
+  { title: '2-комнатная квартира, новостройка', kind: 'Под ключ', img: 'assets/pf-01.jpg', tags: ['64 м²', '2 комнаты', 'Новостройка'] },
+  { title: 'Квартира-студия, новостройка', kind: 'Под ключ', img: 'assets/pf-03.jpg', tags: ['28 м²', 'Студия', 'Новостройка'] },
+  { title: '1-комнатная, новостройка', kind: 'Дизайнерский ремонт', img: 'assets/pf-04.jpg', tags: ['41 м²', '1 комната', 'Новостройка'] },
+  { title: '1-комнатная, вторичка', kind: 'Косметический ремонт', img: 'assets/pf-05.jpg', tags: ['38 м²', '1 комната', 'Вторичка'] },
+  { title: '1-комнатная, новостройка', kind: 'Дизайнерский ремонт', img: 'assets/pf-06.jpg', tags: ['44 м²', '1 комната', 'Новостройка'] },
+  { title: '2-комнатная, новостройка', kind: 'Чистовой ремонт', img: 'assets/pf-07.jpg', tags: ['58 м²', '2 комнаты', 'Новостройка'] },
+  { title: 'Евродвушка, вторичка', kind: 'Капитальный ремонт', img: 'assets/pf-08.jpg', tags: ['46 м²', 'Евродвушка', 'Вторичка'] },
+  { title: '3-комнатная, вторичка', kind: 'Капитальный ремонт', img: 'assets/pf-09.jpg', tags: ['76 м²', '3 комнаты', 'Вторичка'] },
+  { title: 'Квартира-студия, вторичка', kind: 'Косметический ремонт', img: 'assets/pf-10.jpg', tags: ['24 м²', 'Студия', 'Вторичка'] },
+  { title: '2-комнатная, новостройка', kind: 'Черновой ремонт', img: 'assets/pf-11.jpg', tags: ['62 м²', '2 комнаты', 'Новостройка'] },
+  { title: '1-комнатная, новостройка', kind: 'Под ключ', img: 'assets/pf-12.jpg', tags: ['36 м²', '1 комната', 'Новостройка'] },
+  { title: '2-комнатная, вторичка', kind: 'Дизайнерский ремонт', img: 'assets/pf-13.jpg', tags: ['54 м²', '2 комнаты', 'Вторичка'] },
+  { title: '3-комнатная, новостройка', kind: 'Под ключ', img: 'assets/pf-14.jpg', tags: ['88 м²', '3 комнаты', 'Новостройка'] },
+  { title: 'Квартира-студия, новостройка', kind: 'Чистовой ремонт', img: 'assets/pf-15.jpg', tags: ['26 м²', 'Студия', 'Новостройка'] },
+  { title: '1-комнатная, вторичка', kind: 'Капитальный ремонт', img: 'assets/pf-16.jpg', tags: ['42 м²', '1 комната', 'Вторичка'] },
+];
+
+const FILTERS = [
+  { key: 'obj', title: 'Тип объекта', items: ['Все', 'Новостройка', 'Вторичка', 'Студия', 'Дом'] },
+  { key: 'rooms', title: 'Число комнат', items: ['Все', 'Студия', '1', '2', '3 и больше'] },
+  { key: 'work', title: 'Тип работ', items: ['Все', 'Косметический', 'Чистовой', 'Черновой', 'Под ключ', 'Капитальный', 'Дизайнерский'] },
+  { key: 'area', title: 'Площадь', items: ['Все', 'до 40 м²', '40–70 м²', '70–100 м²', 'больше 100 м²'] },
+  { key: 'zhk', title: 'ЖК', items: ['Все', 'ЖК Shagal', '{ЖК из списка клиента}'] },
+];
+
+const PARAMS = [
+  { k: 'Площадь', v: '82 м²' },
+  { k: 'Комнаты', v: '2' },
+  { k: 'Тип ремонта', v: 'Дизайнерский' },
+  { k: 'Срок ремонта', v: '7 месяцев' },
+  { k: 'ЖК', v: 'Shagal' },
+  { k: 'Дизайн-проект', v: 'сторонняя студия' },
+  { k: 'Бюджет', v: '{Бюджет}' },
+];
+
+const STORY = [
+  'На момент обращения к нам Игорь (наш клиент) уже получил ключи. Дизайн-проект был разработан сторонней студией. Оставалось найти тех, кто сделает ремонт.',
+  'Игорь сравнил 6 компаний: у трёх смета отличалась почти в два раза, одна отказалась работать по готовому дизайн-проекту, ещё несколько предложили начать без подробной сметы.',
+  'Мы разбили работу на десятки отдельных этапов и просчитали объёмы заранее, поэтому Игорь понимал стоимость каждого вида работ ещё до начала ремонта. Изменения возникали только тогда, когда он сам принимал новые решения. Наш инженер проверил сторонний проект и нашёл в нём ошибки: без правок пришлось бы переносить часть электрики, менять размеры мебели, переделывать сантехнический шкаф и переносить кондиционер.',
+];
+
+const SHOTS = ['case-g1.jpg', 'case-g2.jpg', 'case-g3.jpg', 'case-g4.jpg', 'case-g5.jpg', 'case-g6.jpg', 'case-g7.jpg', 'case-g8.jpg'];
+
+const BEFORE_AFTER = [
+  { label: 'До', img: 'assets/case-w3.jpg', note: 'Черновая стадия: разводка инженерных систем, защита МОПов, вывоз мусора по режиму ЖК.', dark: true },
+  { label: 'После', img: 'assets/case-w4.jpg', note: 'Готовая гостиная. Решения из стороннего проекта скорректированы до начала работ и согласованы с клиентом.', dark: false },
+];
+
+const SCOPE = [
+  { title: 'Черновые работы', items: ['Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола', 'Гидроизоляция мокрых зон'] },
+  { title: 'Инженерия', items: ['Комплексная разводка труб водоснабжения', 'Комплексная разводка труб канализации', 'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники'] },
+  { title: 'Чистовая отделка', items: ['Укладка ламината', 'Укладка плитки', 'Поклейка обоев, покраска, штукатурка', 'Монтаж плинтуса', 'Исполнительная документация и гарантия'] },
+];
+
+const RELATED = [
+  { t: 'Дизайнерский ремонт квартиры', href: '/dizaynerskiy-remont-kvartiry/' },
+  { t: 'Ремонт по дизайн-проекту', href: '/remont-po-dizayn-proektu/' },
+  { t: 'Ремонт двухкомнатной квартиры', href: '/remont-dvuhkomnatnoy-kvartiry/' },
+  { t: 'Ремонт в новостройке', href: '/remont-kvartir-novostroyka/' },
+  { t: 'Комплектация', href: '/komplektaciya/' },
+];
+
+const PLATFORMS = [
+  { v: '4,9', t: 'Яндекс.Карты', href: 'https://yandex.ru/maps/-/CLgmeD3e' },
+  { v: '5,0', t: '2ГИС', href: 'https://go.2gis.com/JknLA' },
+  { v: '4,8', t: 'Отзовик', href: 'https://otzovik.com' },
+];
+
+const REVIEWS = [
+  { name: 'Татьяна', avatar: 'assets/av-tatyana.svg', source: 'Яндекс.Карты', href: 'https://yandex.ru/maps/-/CLgmeD3e',
+    date: '{Дата}', service: 'Ремонт под ключ', photo: 'assets/pf-03.jpg',
+    text: 'Хочу выразить огромную благодарность Кириллу и всей его команде. Я проживаю в Республике Коми. Дочери купили небольшую студию в г. Москве. Не пришлось ни о чём позаботиться, кроме Доверенности. Одним днём и без моего присутствия получили ключи и рассчитали стоимость ремонта. Через два месяца прилетела уже в полностью отремонтированную и обставленную мебелью квартиру. Никаких забот и хлопот. Каждый шаг по ремонту присылали по фото и видео. Цены вполне лояльные. Так держать!' },
+  { name: 'Давид Самарский', avatar: 'assets/rev-1.jpg', source: '2ГИС', href: 'https://go.2gis.com/JknLA',
+    date: '{Дата}', service: 'Дизайнерский ремонт', photo: '',
+    text: 'Ремонт прошел без лишних хлопот для меня. Общение было через группу в мессенджере, оплата — онлайн по выставляемым счетам. Мне было удобно, потому что особо из-за работы нет времени контролировать каждый шаг. Смета составлялась и согласовывалась заранее, каких-то существенных выходов за границы не было. Понравилось, что ребята не просто формально делают то, что заложено в проекте, а предлагают изменения, которые существенно улучшают результат. Отдельное спасибо хочу сказать инженеру Антону, все грамотно рассчитал, рассказал и был очень внимателен по ходу общения. Хочу еще сказать про прораба, спасибо ему за его ответственность и внимательность к каждому этапу работ. Компания небольшая, всегда на связи, готовы ответить на вопросы и предложить наилучшие решения. Ремонтом доволен!' },
+  { name: 'Василиса Ф.', avatar: 'assets/rev-2.jpg', source: 'Отзовик', href: 'https://otzovik.com',
+    date: '{Дата}', service: 'Ремонт под ключ', photo: '',
+    text: 'изначально боялись, что будет большая стоимость. Немного превысили наш планируемый бюджет. Но ни чуть не пожалели, качество ремонта подтверждает стоимость. Наше участие было минимальным, поэтому действительно «ремонт без головной боли») Все понравилось' },
+];
+
+const PAGES = {
+  'Портфолио': {
+    crumb: 'Портфолио', h1: 'Портфолио ремонтов квартир',
+    lead: 'Объекты, сданные в Москве и ближнем Подмосковье. Фильтры собраны по тем признакам, по которым люди действительно выбирают: тип объекта, число комнат, вид работ, площадь и жилой комплекс.',
+    ctaTitle: 'Хотите такой же результат в своей квартире?', ctaMain: 'Вызвать замерщика',
+    ctaText: 'Покажем объекты на разных стадиях, чтобы вы поняли процесс изнутри, и посчитаем смету по вашей квартире.',
+  },
+  'Кейс': {
+    crumb: 'ЖК Shagal, 2-комнатная 82 м²', h1: 'ЖК Shagal, 2-комнатная квартира 82 м²',
+    lead: 'Дизайнерский ремонт по стороннему проекту, семь месяцев работ, дистанционный контроль. Разбор того, чего боялся хозяин квартиры и что мы с этим сделали.',
+    ctaTitle: 'Посчитаем ремонт по вашей квартире', ctaMain: 'Хочу такой же ремонт',
+    ctaText: 'Инженер приедет на объект, снимет объёмы и соберёт смету по вашей квартире. Выезд и расчёт бесплатные.',
+  },
+  'Отзывы': {
+    crumb: 'Отзывы', h1: 'Отзывы клиентов',
+    lead: 'Все отзывы достоверны и могут быть проверены вами лично на наших площадках. Виджеты с рейтингами мы не подключаем: в каждой карточке стоит пометка источника и ссылка на оригинал.',
+    ctaTitle: 'Договоримся о встрече прямо сейчас', ctaMain: 'Вызвать замерщика',
+    ctaText: 'Специалист приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и сделает детальный расчёт сметы.',
+  },
+};
+
+class Component extends DCLogic {
+  state = { shot: 0, more: 0, popup: false, f: {}, rev: 'Все', open: '' };
+
+  renderVals() {
+    const key = this.props.page || 'Портфолио';
+    const p = PAGES[key] || PAGES['Портфолио'];
+    const mobile = !!this.props.mobile;
+    const { shot, more, popup, f, rev, open } = this.state;
+
+    const chip = (active) => 'border:1px solid ' + (active ? '#00AD9F' : '#e2e2e2') + ';background:'
+      + (active ? '#00AD9F' : '#fff') + ';color:' + (active ? '#fff' : '#5c5c5c')
+      + ';padding:9px 14px;font-size:12px;line-height:1.2;white-space:nowrap;transition:all .15s';
+
+    const AREA = { 'до 40 м²': [0, 40], '40–70 м²': [40, 70], '70–100 м²': [70, 100], 'больше 100 м²': [100, 9999] };
+    const matched = WORKS.filter(w => {
+      const tags = w.tags.join(' ');
+      if (f.obj && f.obj !== 'Все' && !tags.includes(f.obj)) return false;
+      if (f.rooms && f.rooms !== 'Все') {
+        const want = f.rooms === 'Студия' ? 'Студия'
+          : f.rooms === '3 и больше' ? '3 комнат' : f.rooms + ' комнат';
+        if (!tags.includes(want) && !(f.rooms === '3 и больше' && tags.includes('3 комнаты'))) return false;
+      }
+      if (f.work && f.work !== 'Все' && !w.kind.includes(f.work)) return false;
+      if (f.area && f.area !== 'Все') {
+        const n = parseInt(w.tags[0], 10);
+        const r = AREA[f.area];
+        if (!r || !(n >= r[0] && n < r[1])) return false;
+      }
+      if (f.zhk && f.zhk !== 'Все' && !tags.includes(f.zhk)) return false;
+      return true;
+    });
+    const shown = more > 0 ? matched : matched.slice(0, 8);
+
+    return {
+      isList: key === 'Портфолио',
+      isCase: key === 'Кейс',
+      isReviews: key === 'Отзывы',
+      crumb: p.crumb, h1: p.h1, lead: p.lead,
+      ctaTitle: p.ctaTitle, ctaText: p.ctaText, ctaMain: p.ctaMain,
+      isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      popup,
+      openPopup: () => this.setState({ popup: true }),
+
+      filters: FILTERS.map(g => {
+        const val = f[g.key] || 'Все';
+        const isOpen = open === g.key;
+        const set = val !== 'Все';
+        return {
+          title: g.title,
+          value: val === 'Все' ? 'Любой' : val,
+          open: isOpen,
+          toggle: () => this.setState({ open: isOpen ? '' : g.key }),
+          btnCss: 'width:100%;height:46px;padding:0 13px;display:flex;align-items:center;justify-content:space-between;gap:10px;'
+            + 'background:#fff;border:1px solid ' + (isOpen || set ? '#00AD9F' : '#d9d9d9')
+            + ';font-size:13px;text-align:left;color:' + (set ? '#00AD9F' : '#313131')
+            + ';font-weight:' + (set ? '700' : '400') + ';transition:border-color .15s',
+          caretCss: 'flex:0 0 auto;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;'
+            + 'border-top:5px solid ' + (isOpen || set ? '#00AD9F' : '#929292')
+            + ';display:block;transition:transform .2s;transform:rotate(' + (isOpen ? '180deg' : '0deg') + ')',
+          items: g.items.map(t => ({
+            t: t === 'Все' ? 'Любой' : t,
+            go: () => this.setState({ f: Object.assign({}, f, { [g.key]: t }), open: '' }),
+            css: 'width:100%;padding:11px 13px;text-align:left;border:0;background:' + (val === t ? '#f2fbfa' : '#fff')
+              + ';font-size:13px;line-height:1.3;color:' + (val === t ? '#00AD9F' : '#313131')
+              + ';font-weight:' + (val === t ? '700' : '400') + ';transition:background .12s',
+          })),
+        };
+      }),
+      hasFilters: Object.keys(f).some(k => f[k] && f[k] !== 'Все'),
+      resetFilters: () => this.setState({ f: {}, open: '' }),
+      found: matched.length,
+      works: shown,
+      hasMore: matched.length > shown.length,
+      loadMore: () => this.setState({ more: more + 1 }),
+      moreLabel: 'Показать ещё ' + (matched.length - shown.length),
+      isEmpty: matched.length === 0,
+
+      shot: 'assets/' + SHOTS[shot % SHOTS.length],
+      thumbs: SHOTS.map((s, i) => ({
+        img: 'assets/' + s,
+        go: () => this.setState({ shot: i }),
+        css: 'flex:0 0 auto;width:clamp(76px,7cqw,104px);height:clamp(56px,5cqw,74px);padding:0;border:2px solid '
+          + (i === shot ? '#00AD9F' : 'transparent') + ';background:#f0f0f0;overflow:hidden',
+      })),
+      params: PARAMS,
+      story: STORY,
+      beforeAfter: BEFORE_AFTER.map(b => ({
+        label: b.label, img: b.img, note: b.note,
+        badgeCss: 'position:absolute;left:0;top:0;background:' + (b.dark ? '#313131' : '#00AD9F')
+          + ';color:#fff;padding:7px 14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase',
+      })),
+      scope: SCOPE,
+      related: RELATED,
+
+      platforms: PLATFORMS,
+      revFilter: ['Все', 'Ремонт под ключ', 'Дизайнерский ремонт', 'Приёмка'].map(t => ({
+        t, go: () => this.setState({ rev: t }), css: chip(rev === t),
+      })),
+      reviews: rev === 'Все' ? REVIEWS : REVIEWS.filter(r => r.service === rev),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

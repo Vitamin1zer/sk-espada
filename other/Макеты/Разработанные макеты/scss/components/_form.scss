@@ -1,0 +1,290 @@
+// ==========================================================================
+//  Формы.
+//  Четыре типа: встроенная, попап, подвал (на тёмном), партнёрство.
+//  Четыре состояния: пустая, заполненная, ошибка, отправлена.
+//  Спецификация: 04-tokeny.md §9, макет Формы.dc.html
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.espada-form {
+  @include stack($sp-4);
+  padding: pair($pad-form);
+  background: var(--c-bg);
+
+  // ------------------------------------------------------------------------
+  //  Шапка формы
+  // ------------------------------------------------------------------------
+
+  &__kicker {
+    @include kicker;
+  }
+
+  &__title {
+    @include type('h3-brand');
+    font-weight: $fw-extrabold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--c-ink-strong);
+  }
+
+  &__text {
+    font-size: $fs-small;
+    line-height: 1.5;
+    color: var(--c-muted);
+  }
+
+  &__perks {
+    @include stack($sp-1 + 2px);
+  }
+
+  &__perk {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--c-ink);
+  }
+
+  // ------------------------------------------------------------------------
+  //  Поле
+  // ------------------------------------------------------------------------
+
+  &__field {
+    @include stack(6px);
+  }
+
+  &__label {
+    font-size: $fs-label;
+    font-weight: $fw-semibold;
+    color: var(--c-muted);
+  }
+
+  &__input {
+    height: $input-h;
+    padding: 0 13px;
+    background: #fff;
+    border: $bw-base solid var(--c-line);
+    border-radius: $radius-0;
+    font-size: $fs-input;
+    color: var(--c-ink);
+    outline: none;
+    transition: border-color $dur-fast $ease-base;
+
+    &::placeholder { color: var(--c-muted-3); }
+
+    &:focus { border-color: var(--c-brand); }
+
+    // Заполненное поле — бирюзовая рамка.
+    // :not(:placeholder-shown) работает без JS.
+    &:not(:placeholder-shown) { border-color: var(--c-brand); }
+  }
+
+  select#{&}__input {
+    padding: 0 11px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5"><path d="M0 0h8L4 5z" fill="%23929292"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+  }
+
+  &__error {
+    font-size: $fs-legal;
+    line-height: 1.4;
+    color: var(--c-danger);
+  }
+
+  // Состояние ошибки поля: ставится классом на .espada-form__field
+  &__field.has-error {
+    .espada-form__label { color: var(--c-danger); }
+    .espada-form__input { border-color: var(--c-danger); }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Общая ошибка формы: блок сверху
+  // ------------------------------------------------------------------------
+
+  &__alert {
+    padding: 12px 14px;
+    background: var(--c-danger-bg);
+    border-left: 3px solid var(--c-danger);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--c-danger-text);
+  }
+
+  // ------------------------------------------------------------------------
+  //  Согласие на обработку данных.
+  //  Обязательно во всех формах, кроме подвала: там нажатие кнопки
+  //  и есть согласие, текст стоит рядом с кнопкой.
+  // ------------------------------------------------------------------------
+
+  &__consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    // Нативный чекбокс скрыт, но доступен клавиатуре и скринридеру
+    input[type='checkbox'] {
+      @include visually-hidden;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex: 0 0 17px;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    margin-top: 2px;
+    background: transparent;
+    border: $bw-base solid var(--c-muted-3);
+    font-size: 11px;
+    font-weight: $fw-bold;
+    color: #fff;
+    transition: background $dur-fast $ease-base, border-color $dur-fast $ease-base;
+  }
+
+  input[type='checkbox']:checked + &__box {
+    background: var(--c-brand);
+    border-color: var(--c-brand);
+
+    &::after { content: '✓'; }
+  }
+
+  input[type='checkbox']:focus-visible + &__box {
+    outline: 2px solid var(--c-brand);
+    outline-offset: 2px;
+  }
+
+  &__consent-text {
+    font-size: $fs-legal;
+    line-height: 1.45;
+    color: var(--c-muted);
+
+    a {
+      color: var(--c-brand);
+      text-decoration: underline;
+    }
+  }
+
+  &__consent.has-error &__box { border-color: var(--c-danger); }
+
+  &__footnote {
+    font-size: $fs-legal;
+    line-height: 1.5;
+    color: var(--c-muted-2);
+  }
+
+  // ------------------------------------------------------------------------
+  //  Экран после отправки.
+  //  Поля заменяются подтверждением: что дальше по шагам и когда перезвонят.
+  //  Этот же экран собирается страницей /spasibo/ под цель в Метрике.
+  // ------------------------------------------------------------------------
+
+  &__sent {
+    @include stack($sp-4);
+    align-items: flex-start;
+  }
+
+  &__sent-head {
+    @include row($sp-3);
+  }
+
+  &__sent-icon {
+    display: flex;
+    flex: 0 0 38px;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--c-brand);
+    font-size: 19px;
+    font-weight: $fw-bold;
+    color: #fff;
+  }
+
+  &__sent-title {
+    @include type('h3-brand');
+    font-weight: $fw-extrabold;
+    line-height: 1.2;
+    letter-spacing: $ls-card;
+    text-transform: uppercase;
+    color: var(--c-ink-strong);
+  }
+
+  &__sent-steps {
+    @include stack(9px);
+    width: 100%;
+    padding: $sp-4;
+    background: var(--c-bg-alt);
+  }
+
+  // ------------------------------------------------------------------------
+  //  Вариант: попап
+  // ------------------------------------------------------------------------
+
+  &--modal {
+    position: relative;
+    padding: pair($pad-modal);
+
+    .espada-form__title {
+      @include type('h2-sm');
+      max-width: 88%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--c-muted-2);
+
+    @include focus-ring;
+
+    &:hover { color: var(--c-ink); }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Вариант: подвал, на тёмном фоне
+  // ------------------------------------------------------------------------
+
+  &--footer {
+    padding: 0;
+    background: transparent;
+
+    .espada-form__title {
+      font-size: 12px;
+      font-weight: $fw-regular;
+      line-height: 1.5;
+      text-transform: none;
+      color: var(--c-on-dark-2);
+    }
+
+    .espada-form__label     { color: var(--c-on-dark-2); }
+    .espada-form__footnote  { color: var(--c-on-dark-3); }
+    .espada-btn             { align-self: flex-start; }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Вариант: на бирюзовой подложке (блок дизайнеров на главной)
+  // ------------------------------------------------------------------------
+
+  &--on-brand {
+    background: var(--c-brand);
+    border-radius: var(--radius-card);
+
+    .espada-form__label,
+    .espada-form__consent-text { color: #fff; }
+
+    .espada-form__consent-text a { color: #fff; }
+
+    .espada-form__input { border-color: transparent; }
+
+    .espada-form__box { border-color: #fff; }
+  }
+}

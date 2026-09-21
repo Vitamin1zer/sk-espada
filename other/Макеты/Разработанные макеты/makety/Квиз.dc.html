@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+</style>
+</helmet>
+
+<div style="{{ rootCss }}">
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:2px">
+      <h2 style="margin:0;flex:1 1 220px;min-width:0;font-size:clamp(18px,1.9cqw,27px);line-height:1.2;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#000">{{ title }}</h2>
+      <span style="flex:0 0 auto;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#929292;font-variant-numeric:tabular-nums;white-space:nowrap">{{ counter }}</span>
+    </div>
+    <div style="height:4px;background:#e4e4e4">
+      <div style="{{ barCss }}"></div>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <sc-for list="{{ chips }}" as="c" hint-placeholder-count="3">
+        <span style="{{ c.css }}">{{ c.t }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <sc-if value="{{ cards }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;color:#313131;line-height:1.3">{{ question }}</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:12px">
+        <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+          <button type="button" onClick="{{ c.go }}" style="{{ c.css }}">
+            <span style="font-size:13.5px;font-weight:700;line-height:1.25;color:#313131">{{ c.t }}</span>
+            <sc-if value="{{ c.hint }}" hint-placeholder-val="{{ true }}">
+              <span style="font-size:11.5px;line-height:1.4;color:#929292">{{ c.hint }}</span>
+            </sc-if>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isArea }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;color:#313131;line-height:1.3">{{ question }}</h3>
+      <div style="display:flex;align-items:baseline;gap:10px">
+        <span style="font-size:clamp(30px,3cqw,44px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ area }}</span>
+        <span style="font-size:15px;color:#5c5c5c">м²</span>
+      </div>
+      <input type="range" min="6" max="250" step="1" value="{{ area }}" onInput="{{ setArea }}" style="width:100%;accent-color:#00AD9F" />
+      <div style="display:flex;justify-content:space-between;font-size:11.5px;color:#929292;font-variant-numeric:tabular-nums">
+        <span>6 м²</span>
+        <span>250 м²</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ presets }}" as="pr" hint-placeholder-count="4">
+          <button type="button" onClick="{{ pr.go }}" style="{{ pr.css }}">{{ pr.t }}</button>
+        </sc-for>
+      </div>
+      <div style="{{ estBoxCss }}">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Предварительно</span>
+        <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
+        <span style="font-size:11px;line-height:1.45;color:#929292">{{ estNote }}</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isContacts }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;color:#313131;line-height:1.3">{{ question }}</h3>
+      <div style="{{ estBoxCss }}">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Ваш расчёт</span>
+        <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
+        <span style="font-size:11px;line-height:1.45;color:#929292">{{ summary }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px">
+        <label style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Имя</span>
+          <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Телефон</span>
+          <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+        </label>
+      </div>
+      <div style="display:flex;gap:9px;align-items:flex-start">
+        <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px;background:#fff"></span>
+        <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+      <div style="background:#00AD9F;color:#fff;padding:12px 20px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase">Заявка принята</div>
+      <h3 style="margin:0;font-size:clamp(17px,1.6cqw,23px);font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#000;line-height:1.2">{{ doneTitle }}</h3>
+      <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:520px;text-wrap:pretty">{{ doneText }}</p>
+      <div style="{{ estBoxCss }}">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Предварительный ориентир</span>
+        <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
+        <span style="font-size:11px;line-height:1.45;color:#929292">{{ summary }}</span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+        <a href="/portfolio/" style="border:1px solid #00AD9F;color:#00AD9F;padding:14px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть работы</a>
+        <button type="button" onClick="{{ reset }}" style="border:1px solid #d9d9d9;background:transparent;color:#5c5c5c;padding:14px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Пройти заново</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
+    <div style="{{ navCss }}">
+      <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}">
+        <button type="button" onClick="{{ back }}" style="border:1px solid #d9d9d9;background:transparent;color:#5c5c5c;padding:15px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Назад</button>
+      </sc-if>
+      <button type="button" onClick="{{ next }}" style="background:#00AD9F;color:#fff;border:0;padding:15px 26px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">{{ nextLabel }}</button>
+      <span style="font-size:11px;line-height:1.4;color:#929292;max-width:280px">{{ navNote }}</span>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:900,&quot;height&quot;:620},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт&quot;,&quot;Дизайн-проект&quot;],&quot;default&quot;:&quot;Ремонт&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Квиз&quot;},&quot;startStep&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:8,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Квиз&quot;},&quot;tone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Квиз&quot;}}">
+const C = (t, hint) => ({ t, hint: hint || '' });
+
+const REMONT = {
+  title: 'Расчёт стоимости ремонта',
+  doneTitle: 'Спасибо — расчёт уже в работе',
+  doneText: 'Инженер перезвонит в течение рабочего дня, уточнит детали и согласует время выезда. Замер и смета бесплатные.',
+  estNote: 'Ориентир по выбранному виду ремонта, без стоимости материалов. Точная смета — после замера инженером.',
+  steps: [
+    { key: 'Объект', q: 'Какой у вас объект?', cards: [C('Новостройка'), C('Вторичка'), C('Дом или коттедж'), C('Коммерческое помещение')] },
+    { key: 'Состояние', q: 'В каком состоянии помещение?', cards: [C('Без отделки', 'бетон'), C('Предчистовая', 'white box'), C('С отделкой застройщика'), C('Жилая квартира')] },
+    { key: 'Вид ремонта', q: 'Какой ремонт нужен?', dependsOn: 0, cardsBy: {
+      'Новостройка': [C('Чистовой', 'от 8 850 ₽/м²'), C('Черновой', 'от 9 890 ₽/м²'), C('Под ключ', 'от 13 050 ₽/м²'), C('Дизайнерский', 'от 15 290 ₽/м²')],
+      'Вторичка': [C('Косметический', 'от 7 200 ₽/м²'), C('Капитальный', 'от 13 300 ₽/м²'), C('Дизайнерский', 'от 15 290 ₽/м²')],
+    }, cards: [C('Косметический', 'от 7 200 ₽/м²'), C('Чистовой', 'от 8 850 ₽/м²'), C('Черновой', 'от 9 890 ₽/м²'), C('Под ключ', 'от 13 050 ₽/м²'), C('Капитальный', 'от 13 300 ₽/м²'), C('Дизайнерский', 'от 15 290 ₽/м²')] },
+    { key: 'Комнаты', q: 'Сколько комнат?', cards: [C('Студия'), C('Одна'), C('Две'), C('Три и больше')] },
+    { key: 'Площадь', q: 'Площадь помещения', area: true },
+    { key: 'Проект', q: 'Есть дизайн-проект?', cards: [C('Есть готовый'), C('Нужен проект', 'выезд дизайнера бесплатно'), C('Обойдёмся без проекта')] },
+    { key: 'Сроки', q: 'Когда планируете начать?', cards: [C('Сейчас'), C('В течение 1–3 месяцев'), C('Позже, пока считаю бюджет')] },
+    { key: 'Контакты', q: 'Куда отправить расчёт?', contacts: true },
+  ],
+  rates: { 'Косметический': 7200, 'Чистовой': 8850, 'Черновой': 9890, 'Под ключ': 13050, 'Капитальный': 13300, 'Дизайнерский': 15290 },
+  rateStep: 2,
+  base: 13050,
+  presets: [40, 54, 78, 120],
+  startArea: 54,
+};
+
+const DESIGN = {
+  title: 'Расчёт стоимости дизайн-проекта',
+  doneTitle: 'Спасибо — заявка у дизайнера',
+  doneText: 'Дизайнер перезвонит в течение рабочего дня и согласует выезд на объект. Выезд и консультация бесплатные.',
+  estNote: 'Ориентир по выбранному пакету. Точную сумму дизайнер называет после выезда и обмеров.',
+  steps: [
+    { key: 'Объект', q: 'Что проектируем?', cards: [C('Квартира'), C('Квартира-студия'), C('Дом или коттедж'), C('Офис или коммерция')] },
+    { key: 'Объём', q: 'Проект на весь объект или на помещения?', cards: [C('Весь объект'), C('Отдельные помещения'), C('Пока не решили')] },
+    { key: 'Пакет', q: 'Какой пакет ближе?', cards: [C('Технический', 'от 1 790 ₽/м²'), C('Стандартный', 'от 2 400 ₽/м²'), C('Полный', 'от 3 500 ₽/м²'), C('Авторский', 'от 4 800 ₽/м²')] },
+    { key: 'Площадь', q: 'Площадь объекта', area: true },
+    { key: 'Стиль', q: 'Есть предпочтения по стилю?', cards: [C('Современный'), C('Классика'), C('Минимализм'), C('Ещё не определились')] },
+    { key: 'Комплектация', q: 'Нужна комплектация материалами?', cards: [C('Да, под ключ'), C('Только материалы отделки'), C('Не нужна'), C('Обсудим на встрече')] },
+    { key: 'Ремонт', q: 'Ремонт планируете у нас?', cards: [C('Да', 'скидка на проект'), C('Пока только проект'), C('Ещё выбираем')] },
+    { key: 'Контакты', q: 'Куда отправить расчёт?', contacts: true },
+  ],
+  rates: { 'Технический': 1790, 'Стандартный': 2400, 'Полный': 3500, 'Авторский': 4800 },
+  rateStep: 2,
+  base: 2400,
+  presets: [14, 40, 65, 95],
+  startArea: 54,
+};
+
+const KINDS = { 'Ремонт': REMONT, 'Дизайн-проект': DESIGN };
+
+class Component extends DCLogic {
+  state = { step: null, pick: {}, area: null };
+
+  fmt(n) {
+    return String(Math.round(n / 1000) * 1000).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+  }
+
+  renderVals() {
+    const q = KINDS[this.props.kind] || REMONT;
+    const total = q.steps.length;
+    const seed = typeof this.props.startStep === 'number' ? this.props.startStep : 0;
+    const step = this.state.step === null ? seed : this.state.step;
+    const pick = this.state.pick;
+    const area = this.state.area === null ? q.startArea : this.state.area;
+    const done = step >= total;
+    const cur = q.steps[Math.min(step, total - 1)];
+    const curCards = cur && cur.cardsBy
+      ? (cur.cardsBy[pick[cur.dependsOn]] || cur.cards)
+      : (cur ? cur.cards : null);
+
+    const rate = q.rates[pick[q.rateStep]] || q.base;
+    const lo = rate * area;
+    const estimate = this.fmt(lo) + ' — ' + this.fmt(lo * 1.25);
+
+    const picked = q.steps
+      .map((s, i) => (pick[i] ? s.key + ': ' + pick[i] : null))
+      .filter(Boolean);
+    const summary = picked.length
+      ? picked.join(' · ') + ' · Площадь: ' + area + ' м²'
+      : 'Площадь: ' + area + ' м²';
+
+    const boxBg = this.props.tone === 'dark' ? '#f8f8f8' : '#f8f8f8';
+
+    return {
+      title: q.title,
+      question: done ? '' : cur.q,
+      counter: done ? 'Готово' : 'Шаг ' + (step + 1) + ' из ' + total,
+      rootCss: 'container-type:inline-size;font-family:TildaSans,\'Helvetica Neue\',Helvetica,sans-serif;color:#313131;background:'
+        + (this.props.tone === 'dark' ? '#f8f8f8' : '#fff')
+        + ';padding:clamp(22px,2.5cqw,40px);display:flex;flex-direction:column;gap:clamp(20px,2.2cqw,30px)',
+      barCss: 'height:100%;background:#00AD9F;transition:width .3s cubic-bezier(.4,0,.2,1);width:'
+        + Math.round(((done ? total : step) / total) * 100) + '%',
+      estBoxCss: 'background:' + (this.props.tone === 'dark' ? '#fff' : boxBg)
+        + ';padding:18px;display:flex;flex-direction:column;gap:5px',
+
+      chips: q.steps.slice(0, total - 1).map((s, i) => ({
+        t: s.key,
+        css: 'font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;white-space:nowrap;color:'
+          + (i === step ? '#fff' : (pick[i] || (s.area && (i < step)) ? '#00AD9F' : '#bfbfbf'))
+          + ';background:' + (i === step ? '#00AD9F' : 'transparent')
+          + ';border:1px solid ' + (i === step ? '#00AD9F' : (pick[i] || (s.area && i < step) ? '#00AD9F' : '#e2e2e2')),
+      })),
+
+      cards: !done && curCards ? curCards.map(c => ({
+        t: c.t, hint: c.hint,
+        go: () => this.setState({ pick: Object.assign({}, pick, { [step]: c.t }), step: step + 1 }),
+        css: 'border:1px solid ' + (pick[step] === c.t ? '#00AD9F' : '#d9d9d9')
+          + ';background:' + (pick[step] === c.t ? '#f2fbfa' : '#fff')
+          + ';border-radius:0;padding:16px;display:flex;flex-direction:column;gap:6px;text-align:left;transition:all .15s',
+      })) : null,
+
+      isArea: !done && !!cur.area,
+      isContacts: !done && !!cur.contacts,
+      isDone: done,
+      showNav: !done,
+      canBack: step > 0,
+      nextLabel: !done && cur.contacts ? 'Получить расчёт' : 'Далее',
+      navNote: !done && cur.contacts ? 'Расчёт придёт в СМС, инженер перезвонит в рабочее время' : '',
+      back: () => this.setState({ step: Math.max(0, step - 1) }),
+      next: () => this.setState({ step: step + 1 }),
+      reset: () => this.setState({ step: 0, pick: {}, area: null }),
+
+      area,
+      setArea: (e) => this.setState({ area: Number(e.target.value) }),
+      presets: q.presets.map(v => ({
+        t: v + ' м²',
+        go: () => this.setState({ area: v }),
+        css: 'border:1px solid ' + (area === v ? '#00AD9F' : '#e2e2e2') + ';background:'
+          + (area === v ? '#00AD9F' : 'transparent') + ';color:' + (area === v ? '#fff' : '#5c5c5c')
+          + ';padding:9px 14px;font-size:12px;font-weight:600;transition:all .15s',
+      })),
+
+      estimate,
+      estNote: q.estNote,
+      summary,
+      doneTitle: q.doneTitle,
+      doneText: q.doneText,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

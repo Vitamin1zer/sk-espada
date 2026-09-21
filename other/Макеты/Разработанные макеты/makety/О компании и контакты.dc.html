@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+    <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+      <a href="/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+      <span style="font-size:12px;color:#bfbfbf">/</span>
+      <span style="font-size:12px;color:#5c5c5c">{{ crumb }}</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Заголовок" style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 clamp(24px,2.6cqw,38px)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
+      <h1 style="margin:0;font-size:clamp(26px,3.2cqw,46px);line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">{{ h1 }}</h1>
+      <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:680px;text-wrap:pretty">{{ lead }}</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <section data-screen-label="Цифры" style="background:#f8f8f8;padding:clamp(36px,4cqw,64px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:clamp(16px,1.8cqw,26px)">
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+            <div style="background:#fff;padding:clamp(20px,2cqw,28px);display:flex;flex-direction:column;gap:8px;min-width:0">
+              <span style="font-size:clamp(24px,2.6cqw,38px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ f.v }}</span>
+              <span style="font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ f.t }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-screen-label="Как мы работаем" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(24px,2.6cqw,40px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Как мы работаем</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(18px,2.2cqw,36px)">
+            <sc-for list="{{ principles }}" as="s" hint-placeholder-count="6">
+              <div style="min-width:0;position:relative;overflow:hidden;padding-top:18px" style-hover="--ln:-104%;--up:-7px">
+                <div style="position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(var(--ln,0));transition:transform .4s cubic-bezier(.4,0,.2,1)"></div>
+                <div style="display:flex;flex-direction:column;gap:12px;transform:translateY(var(--up,0));transition:transform .3s cubic-bezier(.4,0,.2,1)">
+                  <div style="font-size:clamp(24px,2.4cqw,34px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
+                  <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ s.title }}</h3>
+                </div>
+                <p style="margin:12px 0 0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ s.text }}</p>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Команда" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Кто ведёт ваш объект</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+            <sc-for list="{{ team }}" as="m" hint-placeholder-count="4">
+              <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+                <img src="{{ m.img }}" alt="{{ m.role }}" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#eaeaea" />
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">{{ m.role }}</span>
+                  <p style="margin:0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ m.text }}</p>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Документы и гарантия" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Документы и гарантия</h2>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <sc-for list="{{ docs }}" as="d" hint-placeholder-count="5">
+                <div style="display:flex;gap:11px;align-items:flex-start">
+                  <span style="flex:0 0 auto;font-size:13px;line-height:1.4;color:#00AD9F;font-weight:700">✓</span>
+                  <span style="font-size:13px;line-height:1.45;color:#313131">{{ d }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="min-width:0;background:#f8f8f8;padding:clamp(22px,2.4cqw,32px);display:flex;flex-direction:column;gap:14px">
+            <h3 style="margin:0;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">Реквизиты</h3>
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ requisites }}" as="r" hint-placeholder-count="5">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid #e4e4e4">
+                  <span style="font-size:12px;color:#929292">{{ r.k }}</span>
+                  <span style="font-size:12.5px;font-weight:700;color:#313131;text-align:right;font-variant-numeric:tabular-nums">{{ r.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isContacts }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <section data-screen-label="Контакты" style="background:#fff;padding:0 0 clamp(36px,4cqw,64px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(20px,2.4cqw,36px);align-items:start">
+          <sc-for list="{{ channels }}" as="c" hint-placeholder-count="4">
+            <div style="min-width:0;display:flex;flex-direction:column;gap:10px;border-top:2px solid #00AD9F;padding-top:16px">
+              <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292">{{ c.label }}</span>
+              <a href="{{ c.href }}" style="{{ c.valCss }}">{{ c.value }}</a>
+              <span style="font-size:12px;line-height:1.5;color:#5c5c5c">{{ c.note }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-screen-label="Карта и офис" style="background:#f8f8f8;padding:clamp(36px,4cqw,64px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:center">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(18px,2cqw,28px)">
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Офис и шоурум</h2>
+              <div style="font-size:clamp(14px,1.2cqw,17px);line-height:1.6;color:#313131">г. Москва, ул. Дегунинская, д. 1, корп. 2</div>
+              <div style="font-size:12.5px;line-height:1.55;color:#5c5c5c">В шоуруме можно посмотреть отделочные материалы вживую и встретиться с комплектатором. Приезжать лучше по договорённости — так специалист будет свободен.</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Как добраться:</h3>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
+                <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">2ГИС</a>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #e4e4e4;padding-top:18px">
+              <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292">Режим работы</span>
+              <span style="font-size:13px;color:#313131">Ежедневно, 9:00 – 21:00</span>
+              <span style="font-size:12px;color:#5c5c5c">Заявки с сайта принимаем круглосуточно, отвечаем в рабочее время.</span>
+            </div>
+          </div>
+          <div style="min-width:0">
+            <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="display:block">
+              <img src="assets/map.jpg" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" style="width:100%;height:clamp(280px,30cqw,440px);object-fit:cover;display:block;background:#eaeaea" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Отделы" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Куда писать по конкретному вопросу</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+            <sc-for list="{{ departments }}" as="d" hint-placeholder-count="4">
+              <div style="background:#f8f8f8;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:12px;min-width:0">
+                <h3 style="margin:0;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">{{ d.title }}</h3>
+                <p style="margin:0;font-size:12.5px;line-height:1.55;color:#5c5c5c;flex:1">{{ d.text }}</p>
+                <a href="{{ d.href }}" style="font-size:14px;font-weight:700;color:#313131;text-decoration:underline;text-underline-offset:3px" style-hover="color:#00AD9F">{{ d.value }}</a>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Форма и реквизиты" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Реквизиты</h2>
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ requisites }}" as="r" hint-placeholder-count="5">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #e4e4e4">
+                  <span style="font-size:12px;color:#929292">{{ r.k }}</span>
+                  <span style="font-size:12.5px;font-weight:700;color:#313131;text-align:right;font-variant-numeric:tabular-nums">{{ r.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;margin-top:6px">
+              <img src="assets/payments.png" alt="Способы оплаты: PayKeeper, Visa, Mastercard, МИР, СБП" style="height:24px;width:auto;display:block;opacity:.7" />
+            </div>
+          </div>
+          <div style="min-width:0;display:flex;justify-content:flex-end">
+            <div style="width:100%;max-width:420px">
+              <dc-import name="Форма" kind="Встроенная" state="Пустая" hint-size="100%,420px"></dc-import>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <section data-screen-label="CTA перед подвалом" style="background:#00AD9F">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+        <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff">Договоримся о встрече прямо сейчас..</h2>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">Специалист приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и сделает детальный расчёт сметы.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+          <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">Вызвать замерщика</button>
+          <a href="tel:+79938914064" style="border:1px solid #fff;color:#fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">+7 (993) 891-40-64</a>
+        </div>
+      </div>
+      <div style="min-width:0;display:flex;align-items:flex-end;justify-content:flex-end">
+        <img src="assets/specialist.png" alt="Специалист Эспады" style="width:100%;max-width:300px;height:auto;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+  <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
+      <div style="width:100%;max-width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+        <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="100%,520px"></dc-import>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;О компании&quot;,&quot;Контакты&quot;],&quot;default&quot;:&quot;О компании&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const FACTS = [
+  { v: '{Год}', t: 'работаем на рынке ремонта Москвы и области' },
+  { v: '{N}', t: 'сданных объектов в Москве и ближнем Подмосковье' },
+  { v: '4', t: 'направления одной командой: приёмка, дизайн, комплектация, ремонт' },
+  { v: '0 ₽', t: 'выезд инженера, замер и расчёт сметы' },
+];
+
+const PRINCIPLES = [
+  { title: 'Смета до начала работ', text: 'Работа разбита на десятки отдельных этапов, объём каждого просчитывается заранее. Вы видите стоимость каждого вида работ ещё до старта.' },
+  { title: 'Прайс фиксируется договором', text: 'При подписании договора фиксируется прайс на все ремонтные услуги. Он не меняется до конца ремонта — сумма растёт только если вы сами добавляете работы.' },
+  { title: 'Оплата по факту этапа', text: 'Этап закрыт, акт подписан, и только потом оплата. Переход к следующему этапу возможен после приёмки предыдущего.' },
+  { title: 'Двойной контроль', text: 'Прораб ведёт объект ежедневно, менеджеры отдела технического контроля приезжают независимо от него и сверяют работы со стандартами.' },
+  { title: 'Один чат на объект', text: 'В чате прораб, менеджер комплектации, инженер-сметчик и руководство компании. Фотоотчёты приходят несколько раз в неделю.' },
+  { title: 'Дистанционный ремонт', text: 'Видео, фото, онлайн-согласования, счета и акты — всё дистанционно. Часть клиентов за весь проект приезжает на объект несколько раз.' },
+];
+
+const TEAM = [
+  { role: 'Инженер-сметчик', img: 'assets/engineer.png', text: 'Выезжает на объект, снимает объёмы, проверяет дизайн-проект на ошибки и собирает смету. Именно он находит решения, которые снимают лишние траты.' },
+  { role: 'Прораб', img: 'assets/master-1.jpg', text: 'Ведёт объект ежедневно, отвечает за технологию и сроки, отправляет фотоотчёты в общий чат.' },
+  { role: 'Менеджер комплектации', img: 'assets/master-2.png', text: 'Собирает спецификацию материалов под бюджет, закупает по ценам поставщиков, контролирует доставку и приёмку товара.' },
+  { role: 'Дизайнер', img: 'assets/designers.png', text: 'Собственный отдел дизайна: планировки, инженерные схемы, концепция и визуализация. Выезд и консультация бесплатные.' },
+];
+
+const DOCS = [
+  'Договор с прописанными этапами, сроками и зафиксированным прайсом',
+  'Смета по фактическим объёмам, а не по усреднённым коэффициентам',
+  'Акты выполненных работ по каждому этапу — основание для оплаты',
+  'Исполнительная документация по инженерным системам: где проходят трубы и кабель',
+  'Гарантия на работы. Срок и условия — в договоре',
+];
+
+const REQUISITES = [
+  { k: 'Наименование', v: 'ИП Ланин Кирилл Андреевич' },
+  { k: 'ИНН', v: '772142258108' },
+  { k: 'ОГРНИП', v: '324774600528604' },
+  { k: 'Адрес', v: 'Москва, ул. Дегунинская, д. 1, корп. 2' },
+  { k: 'Почта', v: 'sk-espada@rambler.ru' },
+];
+
+const CHANNELS = [
+  { label: 'Телефон', value: '+7 (993) 891-40-64', href: 'tel:+79938914064', big: true, note: 'Основной номер: заявки, замеры, вопросы по объекту' },
+  { label: 'Почта', value: 'sk-espada@rambler.ru', href: 'mailto:sk-espada@rambler.ru', big: false, note: 'Документы, счета, обращения по обработке данных' },
+  { label: 'Telegram', value: 'Написать в Telegram', href: 'https://t.me/espada_remont', big: false, note: 'Быстрые вопросы и фото объекта' },
+  { label: 'Отдел развития', value: '+7 (980) 691-40-64', href: 'tel:+79806914064', big: true, note: 'Партнёрство, поставки, совместные объекты' },
+];
+
+const DEPARTMENTS = [
+  { title: 'Заявка на ремонт', text: 'Замер, смета, сроки и любые вопросы по будущему объекту.', value: '+7 (993) 891-40-64', href: 'tel:+79938914064' },
+  { title: 'Действующий объект', text: 'Вопросы по идущему ремонту решаются в чате объекта — там прораб, комплектатор и руководство.', value: 'Написать в Telegram', href: 'https://t.me/espada_remont' },
+  { title: 'Партнёрам', text: 'Дизайнерам, агентам по недвижимости и поставщикам материалов.', value: '+7 (980) 691-40-64', href: 'tel:+79806914064' },
+  { title: 'Документы и данные', text: 'Счета, акты, отзыв согласия на обработку персональных данных.', value: 'sk-espada@rambler.ru', href: 'mailto:sk-espada@rambler.ru' },
+];
+
+const PAGES = {
+  'О компании': {
+    crumb: 'О компании', h1: 'О компании',
+    lead: 'СК «Эспада» делает ремонт квартир под ключ в Москве и ближнем Подмосковье. Приёмка, дизайн-проект, комплектация и сам ремонт идут одной командой, поэтому за результат отвечает один подрядчик, а не пять разных.',
+  },
+  'Контакты': {
+    crumb: 'Контакты', h1: 'Контакты',
+    lead: 'Офис и шоурум в Москве, выезд инженера по городу и области в пределах ЦКАД. Заявки с сайта принимаем круглосуточно, отвечаем в рабочее время.',
+  },
+};
+
+class Component extends DCLogic {
+  state = { popup: false };
+
+  renderVals() {
+    const key = this.props.page || 'О компании';
+    const p = PAGES[key] || PAGES['О компании'];
+    const mobile = !!this.props.mobile;
+    return {
+      isAbout: key === 'О компании',
+      isContacts: key === 'Контакты',
+      crumb: p.crumb, h1: p.h1, lead: p.lead,
+      isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      popup: this.state.popup,
+      openPopup: () => this.setState({ popup: true }),
+      facts: FACTS,
+      principles: PRINCIPLES.map((s, i) => ({ n: '0' + (i + 1), title: s.title, text: s.text })),
+      team: TEAM,
+      docs: DOCS,
+      requisites: REQUISITES,
+      departments: DEPARTMENTS,
+      channels: CHANNELS.map(c => ({
+        label: c.label, value: c.value, href: c.href, note: c.note,
+        valCss: 'text-decoration:none;color:#00AD9F;font-weight:' + (c.big ? '700' : '600')
+          + ';font-size:' + (c.big ? 'clamp(18px,1.8cqw,25px)' : 'clamp(14px,1.2cqw,17px)') + ';line-height:1.25',
+      })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "espada-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Тема WordPress для СК «Эспада». Сборка SCSS + JS.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
+    "lint:css": "stylelint \"assets/scss/**/*.scss\"",
+    "lint:css:fix": "stylelint \"assets/scss/**/*.scss\" --fix"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "sass": "^1.77.0",
+    "stylelint": "^16.6.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "mdb-ui-kit": "^7.3.0"
+  }
+}

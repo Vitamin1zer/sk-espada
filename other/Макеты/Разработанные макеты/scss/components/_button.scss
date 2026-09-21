@@ -1,0 +1,177 @@
+// ==========================================================================
+//  Кнопки.
+//  Радиус 0 везде. MDB5 по умолчанию скругляет — переопределено
+//  в vendor/_mdb-variables.scss, здесь задаём геометрию и цвета.
+//
+//  Текст кнопки — только из таблицы CTA в 04-tokeny.md §8.
+//  «Отправить» и «Подтвердить» без объекта действия не использовать.
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.espada-btn {
+  // Раскладка
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-2;
+  min-height: $btn-h;
+  padding: 16px 26px;
+
+  // Оформление
+  background: var(--c-brand);
+  border: $bw-base solid transparent;
+  border-radius: $radius-0;
+
+  // Типографика
+  font-size: $fs-btn;
+  font-weight: $fw-bold;
+  line-height: 1;
+  letter-spacing: $ls-btn;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+
+  transition:
+    background   $dur-base $ease-base,
+    border-color $dur-base $ease-base,
+    box-shadow   $dur-base $ease-base,
+    color        $dur-base $ease-base;
+
+  @include focus-ring;
+
+  &:hover {
+    background: var(--c-brand-dark);
+    box-shadow: $sh-btn-hover;
+    color: #fff;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  // ------------------------------------------------------------------------
+  //  Варианты
+  // ------------------------------------------------------------------------
+
+  /// Контурная: прозрачная с бирюзовой рамкой
+  &--outline {
+    background: transparent;
+    border-color: var(--c-brand);
+    color: var(--c-brand);
+
+    &:hover {
+      background: var(--c-brand);
+      box-shadow: none;
+      color: #fff;
+    }
+  }
+
+  /// На тёмной обложке: белая рамка, при наведении заливается белым
+  &--on-dark {
+    background: transparent;
+    border-color: rgb(255 255 255 / 75%);
+    color: #fff;
+
+    &:hover {
+      background: #fff;
+      border-color: #fff;
+      box-shadow: none;
+      color: var(--c-ink);
+    }
+  }
+
+  /// На бирюзовой секции: белая кнопка
+  &--on-brand {
+    background: #fff;
+    color: var(--c-brand);
+
+    &:hover {
+      background: #fff;
+      box-shadow: none;
+      color: var(--c-brand-dark);
+    }
+  }
+
+  /// Внутри карточки тарифа: тёмно-бирюзовая, без uppercase
+  &--in-card {
+    padding: 15px 16px;
+    background: var(--c-brand-darker);
+    font-size: 12.5px;
+    letter-spacing: 0;
+    text-transform: none;
+
+    &:hover {
+      background: #014F49;
+      box-shadow: none;
+    }
+  }
+
+  /// Нейтральная: серая рамка. Кнопка «Назад» в квизе, «Пройти заново».
+  &--ghost {
+    background: transparent;
+    border-color: var(--c-line);
+    color: var(--c-muted);
+
+    &:hover {
+      background: transparent;
+      border-color: var(--c-muted);
+      box-shadow: none;
+      color: var(--c-ink);
+    }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Размеры
+  // ------------------------------------------------------------------------
+
+  &--sm {
+    padding: 13px 22px;
+    font-size: $fs-btn-sm;
+    letter-spacing: .05em;
+  }
+
+  &--lg {
+    padding: 17px 32px;
+  }
+
+  /// На всю ширину. Обязательно для кнопок в мобильном меню и формах.
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  // На мобилке основные кнопки захвата растягиваются
+  @media (max-width: 575.98px) {
+    &--block-mobile {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+//  Круглая кнопка-стрелка карусели: 42px, единственное место с радиусом 50%
+// --------------------------------------------------------------------------
+
+.espada-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--c-brand);
+  border: 0;
+  border-radius: $radius-pill;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  transition: background $dur-base $ease-base;
+
+  @include focus-ring;
+
+  &:hover { background: var(--c-brand-dark); }
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>СК «Эспада» — макеты нового сайта</title>
+<link rel="icon" href="assets/logo-espada.svg" type="image/svg+xml">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{background:#e9e9e7;overflow:hidden}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#c6c6c4}
+::-webkit-scrollbar-track{background:transparent}
+</style>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#00AD9F"/><rect x="120" y="96" width="160" height="108" fill="#fff"/><rect x="120" y="96" width="160" height="20" fill="#026B63"/><text x="200" y="176" font-family="Helvetica,sans-serif" font-size="46" font-weight="bold" fill="#00AD9F" text-anchor="middle">СК</text></svg>
+</template>
+</helmet>
+
+<div style="height:100vh;display:flex;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#e9e9e7;overflow:hidden">
+
+  <aside style="{{ asideCss }}">
+    <div style="flex:0 0 auto;padding:22px 18px 18px;border-bottom:1px solid #2b2b2b">
+      <img src="assets/logo-full-white.png" alt="Эспада" style="height:26px;width:auto;display:block" />
+    </div>
+
+    <div style="flex:1;min-height:0;overflow-y:auto;padding:12px 10px 24px">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <sc-for list="{{ pages }}" as="s" hint-placeholder-count="14">
+          <button type="button" onClick="{{ s.go }}" style="{{ s.css }}">
+            <span style="{{ s.dotCss }}"></span>
+            <span style="flex:1;min-width:0;text-align:left;line-height:1.3">{{ s.label }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </aside>
+
+  <main style="flex:1;min-width:0;display:flex;flex-direction:column;background:#e9e9e7">
+
+    <header style="flex:0 0 auto;background:#fff;border-bottom:1px solid #dcdcda;padding:0 18px;height:56px;display:flex;align-items:center;gap:16px">
+      <button type="button" onClick="{{ toggleAside }}" aria-label="Список страниц" style="flex:0 0 auto;width:34px;height:34px;border:1px solid #e0e0e0;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;padding:0">
+        <span style="display:block;width:16px;height:2px;background:#313131"></span>
+        <span style="display:block;width:16px;height:2px;background:#313131"></span>
+        <span style="display:block;width:16px;height:2px;background:#313131"></span>
+      </button>
+      <div style="flex:1;min-width:0;font-size:14px;font-weight:700;letter-spacing:-.005em;color:#000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ current.label }}</div>
+    </header>
+
+    <div style="flex:1;min-height:0;overflow:auto;padding:18px;display:flex;justify-content:center;align-items:flex-start">
+      <div style="flex:0 0 auto">
+        <div style="width:1440px;background:#fff;box-shadow:0 4px 30px rgba(0,0,0,.14);transform-origin:top left">
+          <sc-if value="{{ i0 }}" hint-placeholder-val="{{ true }}">
+            <iframe src="Сквозные элементы.dc.html" scrolling="no" title="Шапка, меню, подвал" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i1 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Главная.dc.html" scrolling="no" title="Главная" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i2 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Дизайн интерьера.dc.html" scrolling="no" title="Дизайн интерьера" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i3 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Комплектация.dc.html" scrolling="no" title="Комплектация" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i4 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Приёмка квартир.dc.html" scrolling="no" title="Приёмка квартир" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i5 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Партнёрам.dc.html" scrolling="no" title="Партнёрам" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i6 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Пиллар услуги.dc.html" scrolling="no" title="Пиллар услуги" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i7 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Категория услуги.dc.html" scrolling="no" title="Категория услуги" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i8 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Портфолио и отзывы.dc.html" scrolling="no" title="Портфолио, кейс, отзывы" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i9 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="О компании и контакты.dc.html" scrolling="no" title="О компании и контакты" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i10 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Блог.dc.html" scrolling="no" title="Блог" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i11 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Служебные страницы.dc.html" scrolling="no" title="Служебные страницы" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i12 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Формы.dc.html" scrolling="no" title="Формы и состояния" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i13 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="Квиз-калькуляторы.dc.html" scrolling="no" title="Квиз-калькуляторы" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+          <sc-if value="{{ i14 }}" hint-placeholder-val="{{ false }}">
+            <iframe src="404.dc.html" scrolling="no" title="Страница не найдена" style="width:1440px;height:1000px;border:0;display:block;background:#fff"></iframe>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+const PAGES = [
+  { label: 'Шапка, меню, подвал', file: 'Сквозные элементы.dc.html' },
+  { label: 'Главная', file: 'Главная.dc.html' },
+  { label: 'Дизайн интерьера', file: 'Дизайн интерьера.dc.html' },
+  { label: 'Комплектация', file: 'Комплектация.dc.html' },
+  { label: 'Приёмка квартир', file: 'Приёмка квартир.dc.html' },
+  { label: 'Партнёрам', file: 'Партнёрам.dc.html' },
+  { label: 'Пиллар услуги', file: 'Пиллар услуги.dc.html' },
+  { label: 'Категория услуги', file: 'Категория услуги.dc.html' },
+  { label: 'Портфолио и отзывы', file: 'Портфолио и отзывы.dc.html' },
+  { label: 'О компании и контакты', file: 'О компании и контакты.dc.html' },
+  { label: 'Блог', file: 'Блог.dc.html' },
+  { label: 'Служебные страницы', file: 'Служебные страницы.dc.html' },
+  { label: 'Формы', file: 'Формы.dc.html' },
+  { label: 'Квиз-калькуляторы', file: 'Квиз-калькуляторы.dc.html' },
+  { label: 'Страница не найдена', file: '404.dc.html' },
+];
+
+class Component extends DCLogic {
+  state = { idx: 0, aside: true };
+
+  renderVals() {
+    const { idx, aside } = this.state;
+    const current = PAGES[idx] || PAGES[0];
+
+    // Адреса макетов записаны в разметке статично — так сборщик
+    // самостоятельного файла видит их и вкладывает внутрь. При этом
+    // в DOM живёт только активный кадр: иначе все страницы
+    // поднимались бы одновременно и файл не открывался.
+
+    const navBase = 'width:100%;display:flex;align-items:center;gap:9px;padding:9px 8px;border:0;background:transparent;'
+      + 'font-size:12.5px;font-weight:500;color:#c9c9c9;transition:background .15s,color .15s;text-align:left';
+
+    return {
+      asideCss: 'flex:0 0 ' + (aside ? '248px' : '0px') + ';width:' + (aside ? '248px' : '0px')
+        + ';background:#1d1d1d;display:flex;flex-direction:column;overflow:hidden;transition:flex-basis .25s cubic-bezier(.4,0,.2,1),width .25s cubic-bezier(.4,0,.2,1)',
+      toggleAside: () => this.setState({ aside: !aside }),
+
+      pages: PAGES.map((s, i) => {
+        const active = i === idx;
+        return {
+          label: s.label,
+          go: () => this.setState({ idx: i }),
+          css: navBase + ';background:' + (active ? '#00AD9F' : 'transparent')
+            + ';color:' + (active ? '#fff' : '#c9c9c9')
+            + ';font-weight:' + (active ? '700' : '500'),
+          dotCss: 'flex:0 0 5px;width:5px;height:5px;display:block;background:'
+            + (active ? '#fff' : '#4a4a4a'),
+        };
+      }),
+
+      current,
+
+      i0: idx === 0, i1: idx === 1, i2: idx === 2, i3: idx === 3, i4: idx === 4,
+      i5: idx === 5, i6: idx === 6, i7: idx === 7, i8: idx === 8, i9: idx === 9,
+      i10: idx === 10, i11: idx === 11, i12: idx === 12, i13: idx === 13,
+      i14: idx === 14,
+    };
+  }
+}
+
+</script>
+
+<script>
+/* Стенд демонстрации: подгонка кадра и переходы по ссылкам внутри макетов.
+   Живёт отдельно от компонента, потому что работает с содержимым iframe,
+   а перерисовка компонента его не касается. */
+(function () {
+  'use strict';
+
+  var W = 1440;
+
+  // Порядок совпадает с PAGES в компоненте: по индексу находим кнопку в списке.
+  var FILES = [
+    'Сквозные элементы.dc.html', 'Главная.dc.html', 'Дизайн интерьера.dc.html',
+    'Комплектация.dc.html', 'Приёмка квартир.dc.html', 'Партнёрам.dc.html',
+    'Пиллар услуги.dc.html', 'Категория услуги.dc.html', 'Портфолио и отзывы.dc.html',
+    'О компании и контакты.dc.html', 'Блог.dc.html', 'Служебные страницы.dc.html',
+    'Формы.dc.html', 'Квиз-калькуляторы.dc.html', '404.dc.html'
+  ];
+
+  // Точные соответствия «адрес страницы сайта — отрисованный макет».
+  var MAP = {
+    '/': 'Главная.dc.html',
+    '/remont-kvartir/': 'Пиллар услуги.dc.html',
+    '/uslugi/': 'Пиллар услуги.dc.html',
+    '/design/': 'Дизайн интерьера.dc.html',
+    '/komplektaciya/': 'Комплектация.dc.html',
+    '/priemka/': 'Приёмка квартир.dc.html',
+    '/partners/': 'Партнёрам.dc.html',
+    '/portfolio/': 'Портфолио и отзывы.dc.html',
+    '/otzyvy/': 'Портфолио и отзывы.dc.html',
+    '/o-kompanii/': 'О компании и контакты.dc.html',
+    '/kontakty/': 'О компании и контакты.dc.html',
+    '/blog/': 'Блог.dc.html',
+    '/voprosy-i-otvety/': 'Служебные страницы.dc.html',
+    '/politika-konfidencialnosti/': 'Служебные страницы.dc.html',
+    '/soglasie-na-obrabotku/': 'Служебные страницы.dc.html',
+    '/remont-v-zhk/': 'Служебные страницы.dc.html',
+    '/spasibo/': 'Служебные страницы.dc.html'
+  };
+
+  // Адреса, которых в утверждённой структуре нет: рассрочку убрали,
+  // ремонт по дизайн-проекту объединили с дизайнерским, отдельной
+  // страницы цен не делаем. Ведут на 404 — это и есть «некуда».
+  var DEAD = {
+    '/remont-v-rassrochku/': 1,
+    '/remont-po-dizayn-proektu/': 1,
+    '/ceny-na-remont-kvartir/': 1
+  };
+
+  function target(href) {
+    if (!href) return null;
+    var path = href.split('#')[0].split('?')[0];
+    if (path.charAt(path.length - 1) !== '/') path += '/';
+    if (DEAD[path]) return '404.dc.html';
+    if (MAP[path]) return MAP[path];
+    if (path.indexOf('/blog/') === 0) return 'Блог.dc.html';
+    if (path.indexOf('/portfolio/') === 0) return 'Портфолио и отзывы.dc.html';
+    // Остальные внутренние адреса — это страницы услуг и категорий,
+    // их показывает шаблон категории.
+    return 'Категория услуги.dc.html';
+  }
+
+  function navBtns() {
+    var a = document.querySelector('aside');
+    return a ? a.querySelectorAll('button') : [];
+  }
+
+  function open(file) {
+    var i = FILES.indexOf(file);
+    var btns = navBtns();
+    if (i >= 0 && btns[i]) { btns[i].click(); return; }
+    var ifr = document.querySelector('iframe');
+    if (ifr) ifr.src = file;
+  }
+
+  function onClick(e) {
+    var el = e.target;
+    while (el && el.tagName !== 'A') el = el.parentElement;
+    if (!el) return;
+    var href = el.getAttribute('href');
+    if (!href) return;
+    if (/^(tel:|mailto:)/i.test(href)) return;            // звонок и почта — как есть
+    if (href.charAt(0) === '#') return;                   // якорь внутри макета
+    e.preventDefault();
+    if (/^https?:/i.test(href)) { window.open(href, '_blank', 'noopener'); return; }
+    if (/\.dc\.html$/i.test(href)) { open(href); return; } // прямая ссылка на макет
+    open(target(href));
+  }
+
+  function fit() {
+    var ifr = document.querySelector('iframe');
+    if (!ifr) return;
+    var frame = ifr.parentElement;
+    var box = frame && frame.parentElement;
+    var stage = box && box.parentElement;
+    if (!frame || !box || !stage) return;
+
+    var doc;
+    try { doc = ifr.contentDocument; } catch (err) { return; }
+    if (!doc || !doc.body) return;
+
+    // Флаг на документе, а не на элементе: после перехода внутри кадра
+    // документ новый, и слушатель нужно навесить заново.
+    if (!doc.__wired) {
+      doc.__wired = true;
+      doc.addEventListener('click', onClick, true);
+    }
+
+    var root = doc.body.firstElementChild;
+    var h = Math.max(
+      root ? root.offsetHeight : 0,
+      doc.documentElement.scrollHeight,
+      doc.body.scrollHeight,
+      200
+    );
+    if (String(h) !== ifr.__h) { ifr.__h = String(h); ifr.style.height = h + 'px'; }
+
+    // Вписываем артборд 1440 в окно, чтобы не появлялась горизонтальная прокрутка.
+    var avail = stage.clientWidth - 36;
+    var s = Math.min(1, avail / W);
+    frame.style.transform = s < 1 ? 'scale(' + s + ')' : 'none';
+    box.style.width = Math.round(W * s) + 'px';
+    box.style.height = Math.round(h * s) + 'px';
+  }
+
+  setInterval(fit, 250);
+  window.addEventListener('resize', fit);
+})();
+</script>
+</body>
+</html>

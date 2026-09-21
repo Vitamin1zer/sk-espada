@@ -1,0 +1,67 @@
+// ==========================================================================
+//  Ссылки.
+//  Задаются здесь один раз: контент-редакторы добавляют ссылки в WYSIWYG,
+//  и без этих правил они отрендерятся браузерным синим.
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+a {
+  color: var(--c-brand);
+  text-decoration: none;
+  transition: color $dur-fast $ease-base;
+
+  &:hover {
+    color: var(--c-brand-dark);
+  }
+}
+
+// Ссылка в теле текста — подчёркнутая, иначе теряется среди абзаца
+.espada-prose a,
+.espada-link-inline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+// Ссылка на тёмном фоне (подвал, обложка)
+.espada-link-on-dark {
+  color: #fff;
+
+  &:hover { color: var(--c-brand); }
+}
+
+// Ссылка-действие: 11.5px / 700 / uppercase со стрелкой
+.espada-link-action {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  font-size: $fs-btn-sm;
+  font-weight: $fw-bold;
+  letter-spacing: $ls-btn;
+  text-transform: uppercase;
+  color: var(--c-brand);
+
+  &::after { content: '→'; }
+
+  &:hover { color: var(--c-brand-dark); }
+}
+
+// Телефон.
+// ВАЖНО: href всегда без пробелов и скобок — tel:+79938914064.
+// В аудите текущего сайта 20 из 32 таких ссылок были записаны
+// с пробелами и не срабатывали на мобильных.
+.espada-phone {
+  font-weight: $fw-bold;
+  color: var(--c-ink);
+  @include tabular;
+
+  &:hover { color: var(--c-brand); }
+
+  &--lg {
+    font-size: fluid(22px, 30px);
+    font-weight: $fw-semibold;
+    color: var(--c-brand);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

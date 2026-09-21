@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+
+
+
+
+
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <sc-if value="{{ showCrumbs }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+      <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+        <a href="/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+        <span style="font-size:12px;color:#bfbfbf">/</span>
+        <sc-if value="{{ crumbMid }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ crumbMidHref }}" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">{{ crumbMid }}</a>
+          <span style="font-size:12px;color:#bfbfbf">/</span>
+        </sc-if>
+        <span style="font-size:12px;color:#5c5c5c">{{ crumb }}</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isFaq }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <section data-screen-label="Заголовок" style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 clamp(24px,2.6cqw,36px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
+          <h1 style="margin:0;font-size:clamp(26px,3.2cqw,46px);line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Вопросы и ответы</h1>
+          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:680px;text-wrap:pretty">Собрали то, что чаще всего спрашивают на замерах и по телефону. Если вашего вопроса здесь нет — задайте его инженеру, он ответит на выезде или по телефону.</p>
+        </div>
+      </section>
+
+      <section data-screen-label="Вопросы по разделам" style="background:#f8f8f8;padding:clamp(36px,4cqw,64px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(24px,2.8cqw,44px);align-items:start">
+          <nav style="min-width:0;display:flex;flex-direction:column;gap:10px;position:sticky;top:20px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292;margin-bottom:4px">Разделы</span>
+            <sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
+              <a href="{{ g.href }}" style="font-size:13.5px;line-height:1.35;color:#313131;text-decoration:none;padding:8px 0;border-bottom:1px solid #e4e4e4" style-hover="color:#00AD9F">{{ g.title }} <span style="color:#bfbfbf;font-variant-numeric:tabular-nums">{{ g.count }}</span></a>
+            </sc-for>
+          </nav>
+          <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(26px,2.8cqw,44px);grid-column:span 2">
+            <sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
+              <div id="{{ g.id }}" style="display:flex;flex-direction:column;gap:14px">
+                <h2 style="margin:0;font-size:clamp(17px,1.7cqw,24px);line-height:1.16;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ g.title }}</h2>
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ g.items }}" as="f" hint-placeholder-count="4">
+                    <div style="background:#00AD9F">
+                      <button type="button" onClick="{{ f.go }}" style="width:100%;border:0;background:transparent;padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left">
+                        <span style="font-size:clamp(13px,1.05cqw,15px);font-weight:600;color:#fff;line-height:1.35">{{ f.q }}</span>
+                        <span style="flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:#fff;color:#00AD9F;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1">{{ f.sign }}</span>
+                      </button>
+                      <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+                        <div style="padding:0 20px 20px;display:flex;flex-direction:column;gap:10px">
+                          <sc-for list="{{ f.paras }}" as="t" hint-placeholder-count="1">
+                            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#fff">{{ t }}</p>
+                          </sc-for>
+                        </div>
+                      </sc-if>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isZhk }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <section data-screen-label="Обложка ЖК" style="position:relative;background:#313131">
+        <img src="assets/case-w3.jpg" alt="Ремонт квартир в ЖК Shagal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.76) 0%,rgba(20,20,20,.5) 60%,rgba(20,20,20,.3) 100%)"></div>
+        <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(36px,4cqw,64px) clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,3cqw,44px);align-items:center;min-height:clamp(380px,30cqw,450px)">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(15px,1.5cqw,22px)">
+            <h1 style="margin:0;font-size:clamp(25px,3.2cqw,46px);line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#fff">Ремонт квартир в ЖК Shagal</h1>
+            <div style="font-size:clamp(16px,1.7cqw,24px);font-weight:600;color:#00AD9F;line-height:1.2">от 8 850 рублей за м²</div>
+            <div style="font-size:clamp(13px,1.25cqw,17px);line-height:1.55;color:#fff;max-width:520px;display:flex;flex-direction:column;gap:4px">
+              <span>— знаем типовые планировки и дефекты дома;</span>
+              <span>— согласования с УК и режим работ уже отработаны;</span>
+              <span>— принимаем квартиру и сразу считаем ремонт.</span>
+            </div>
+            <button type="button" onClick="{{ openPopup }}" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;margin-top:4px" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)">Бесплатный расчёт сметы</button>
+          </div>
+          <div style="min-width:0;display:flex;justify-content:flex-end">
+            <div style="width:100%;max-width:400px">
+              <dc-import name="Форма" kind="Встроенная" state="Пустая" hint-size="100%,420px"></dc-import>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Про дом" style="background:#fff;padding:clamp(40px,4.6cqw,72px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Что важно знать про этот дом</h2>
+            <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;text-wrap:pretty">{Описание дома: класс, застройщик, год сдачи, тип перекрытий, высота потолков, особенности планировок. Заполняется по каждому ЖК отдельно — этот текст шаблонный, но он не должен быть общим: страница ЖК работает только тогда, когда в ней есть конкретика по дому.}</p>
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ zhkParams }}" as="p" hint-placeholder-count="6">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #e4e4e4">
+                  <span style="font-size:12.5px;color:#929292">{{ p.k }}</span>
+                  <span style="font-size:13px;font-weight:700;color:#313131;text-align:right">{{ p.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Типовые дефекты дома</h2>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <sc-for list="{{ defects }}" as="d" hint-placeholder-count="4">
+                <div style="display:flex;gap:12px;align-items:flex-start;background:#f8f8f8;padding:14px 16px">
+                  <img src="assets/icon-x.svg" alt="" style="width:17px;height:17px;flex:0 0 17px;display:block;margin-top:2px" />
+                  <span style="font-size:13px;line-height:1.5;color:#313131">{{ d }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <p style="margin:0;font-size:12px;line-height:1.55;color:#929292">Список заполняется по опыту приёмок в этом доме. Если объектов в ЖК ещё не было, блок скрывается — общие формулировки здесь только вредят.</p>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Наши объекты в ЖК" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Наши объекты в этом ЖК</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(16px,1.8cqw,26px)">
+            <sc-for list="{{ zhkWorks }}" as="w" hint-placeholder-count="3">
+              <a href="/portfolio/zhk-shagal-82m/" style="text-decoration:none;display:flex;flex-direction:column;gap:12px;min-width:0">
+                <img src="{{ w.img }}" alt="{{ w.title }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#eaeaea" />
+                <span style="font-size:clamp(13px,1.1cqw,15px);font-weight:700;color:#000;line-height:1.3">{{ w.title }}</span>
+                <span style="font-size:12px;color:#5c5c5c">{{ w.note }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Соседние ЖК" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Работаем и в других ЖК</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ otherZhk }}" as="z" hint-placeholder-count="6">
+              <a href="/remont-v-zhk/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
+            </sc-for>
+          </div>
+          <a href="/remont-v-zhk/" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все жилые комплексы →</a>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isLegal }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <section data-screen-label="Юридический документ" style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 clamp(44px,5cqw,80px)">
+        <div style="max-width:820px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:clamp(20px,2.2cqw,30px)">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <h1 style="margin:0;font-size:clamp(23px,2.6cqw,36px);line-height:1.1;font-weight:800;letter-spacing:-.015em;text-transform:uppercase;color:#000">Согласие на обработку персональных данных</h1>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#929292">
+              <span>г. Москва, «27» ноября 2025</span>
+              <span>Обновлено «18» мая 2026</span>
+            </div>
+          </div>
+
+          <div style="background:#f8f8f8;padding:clamp(18px,1.8cqw,24px);display:flex;flex-direction:column;gap:9px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292">Документы на сайте</span>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <a href="/soglasie-na-obrabotku/" style="font-size:13.5px;color:#00AD9F">Согласие на обработку персональных данных</a>
+              <a href="/politika-konfidencialnosti/" style="font-size:13.5px;color:#00AD9F">Политика конфиденциальности</a>
+            </div>
+          </div>
+
+          <sc-for list="{{ legal }}" as="b" hint-placeholder-count="6">
+            <div>
+              <sc-if value="{{ b.isH2 }}" hint-placeholder-val="{{ false }}">
+                <h2 style="margin:0;font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">{{ b.t }}</h2>
+              </sc-if>
+              <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
+                <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.7;color:#5c5c5c;text-wrap:pretty">{{ b.t }}</p>
+              </sc-if>
+              <sc-if value="{{ b.isList }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column;gap:9px">
+                  <sc-for list="{{ b.items }}" as="i" hint-placeholder-count="4">
+                    <div style="display:flex;gap:11px;align-items:flex-start">
+                      <span style="flex:0 0 auto;font-size:13px;line-height:1.5;color:#00AD9F">—</span>
+                      <span style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">{{ i }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+
+          <div style="border-top:1px solid #ededed;padding-top:20px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292">Оператор</span>
+            <span style="font-size:13px;line-height:1.6;color:#313131">ИП Ланин Кирилл Андреевич · ИНН 772142258108 · ОГРНИП 324774600528604</span>
+            <span style="font-size:13px;line-height:1.6;color:#313131">Москва, ул. Дегунинская, д. 1, корп. 2 · <a href="mailto:sk-espada@rambler.ru" style="color:#00AD9F">sk-espada@rambler.ru</a></span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ is404 }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="404" style="background:#fff;padding:clamp(50px,6cqw,110px) 0">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,3cqw,52px);align-items:center">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:18px">
+          <span style="font-size:clamp(60px,7cqw,110px);font-weight:800;line-height:.9;letter-spacing:-.04em;color:#00AD9F;font-variant-numeric:tabular-nums">404</span>
+          <h1 style="margin:0;font-size:clamp(22px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.015em;text-transform:uppercase;color:#000">Такой страницы нет</h1>
+          <p style="margin:0;font-size:clamp(13px,1.1cqw,16px);line-height:1.6;color:#5c5c5c;max-width:440px;text-wrap:pretty">Возможно, адрес изменился при переезде сайта или в ссылке опечатка. Вот куда обычно идут с этой страницы:</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ links404 }}" as="l" hint-placeholder-count="5">
+              <a href="{{ l.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ l.t }}</a>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+            <a href="/" style="background:#00AD9F;color:#fff;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">На главную</a>
+            <a href="tel:+79938914064" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">+7 (993) 891-40-64</a>
+          </div>
+        </div>
+        <div style="min-width:0">
+          <img src="assets/pf-06.jpg" alt="Ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ isThanks }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Спасибо" style="background:#fff;padding:clamp(50px,6cqw,100px) 0">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,3cqw,52px);align-items:start">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="width:46px;height:46px;flex:0 0 46px;background:#00AD9F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:700">✓</span>
+            <span style="background:#00AD9F;color:#fff;padding:9px 16px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase">Заявка принята</span>
+          </div>
+          <h1 style="margin:0;font-size:clamp(23px,2.6cqw,38px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Спасибо — заявка у инженера</h1>
+          <p style="margin:0;font-size:clamp(13px,1.15cqw,17px);line-height:1.6;color:#5c5c5c;max-width:480px;text-wrap:pretty">Инженер перезвонит в течение рабочего дня, уточнит детали и согласует время выезда. Замер и смета бесплатные, обязательств никаких.</p>
+          <div style="background:#f8f8f8;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:12px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292">Что будет дальше</span>
+            <sc-for list="{{ thanksSteps }}" as="s" hint-placeholder-count="3">
+              <div style="display:flex;gap:12px;align-items:flex-start">
+                <span style="flex:0 0 auto;font-size:12.5px;font-weight:800;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</span>
+                <span style="font-size:13px;line-height:1.55;color:#313131">{{ s.t }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="/portfolio/" style="background:#00AD9F;color:#fff;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Смотреть работы</a>
+            <a href="https://t.me/espada_remont" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Написать в Telegram</a>
+          </div>
+          <p style="margin:0;font-size:11.5px;line-height:1.55;color:#929292;max-width:440px">Отдельный адрес страницы нужен, чтобы поставить цель в Яндекс.Метрике: конверсия считается по переходу на /spasibo/, а не по нажатию кнопки.</p>
+        </div>
+        <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(16px,1.8cqw,24px)">
+          <img src="assets/pf-01.jpg" alt="Готовый ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px">
+            <sc-for list="{{ thanksLinks }}" as="l" hint-placeholder-count="3">
+              <a href="{{ l.href }}" style="background:#f8f8f8;padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:background .2s" style-hover="background:#f0f0f0">
+                <span style="font-size:12.5px;font-weight:700;color:#313131;line-height:1.3">{{ l.t }}</span>
+                <span style="font-size:11px;color:#929292;line-height:1.4">{{ l.note }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="CTA перед подвалом" style="background:#00AD9F">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:center">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+          <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff">Остались вопросы — спросите инженера</h2>
+          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">Специалист приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и сделает детальный расчёт сметы.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+            <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">Бесплатный расчёт сметы</button>
+            <a href="tel:+79938914064" style="border:1px solid #fff;color:#fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">+7 (993) 891-40-64</a>
+          </div>
+        </div>
+        <div style="min-width:0;display:flex;align-items:flex-end;justify-content:flex-end">
+          <img src="assets/specialist.png" alt="Специалист Эспады" style="width:100%;max-width:300px;height:auto;display:block" />
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+  <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
+      <div style="width:100%;max-width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+        <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="100%,520px"></dc-import>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Вопросы и ответы&quot;,&quot;Страница ЖК&quot;,&quot;Юридическая&quot;,&quot;404&quot;,&quot;Спасибо&quot;],&quot;default&quot;:&quot;Вопросы и ответы&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const FAQ_GROUPS = [
+  { id: 'g1', title: 'Цены и смета', items: [
+    { q: 'Сколько стоит ремонт квартиры в Москве?', paras: ['Диапазон цен в Москве обычно варьируется от 450 000 до 900 000 руб. и включает черновые и чистовые работы. Итоговая сумма зависит от площади помещения, материалов и сложности проекта.', 'Чтобы дать точное понимание о цене вашего ремонта, наш специалист выезжает на объект, делает замеры и формирует окончательную смету.'] },
+    { q: 'Может ли измениться стоимость работ в процессе ремонта?', paras: ['При подписании договора фиксируется прайс на все ремонтные услуги, который не меняется до конца ремонта.', 'Сметная стоимость может измениться только если вы пожелаете сменить вид ремонтных работ или добавить работы, которые ранее не планировали делать.'] },
+    { q: 'Какой порядок оплаты ремонта?', paras: ['Оплата производится поэтапно. Ремонт делится на этапы: демонтаж, черновая отделка, чистовая отделка и так далее.', 'По завершении каждого этапа оформляется акт выполненных работ, который вы подписываете, и только после этого оплачиваете результат. Переход к следующему этапу возможен только после подписания акта и оплаты.'] },
+    { q: 'Входят ли материалы в стоимость работ?', paras: ['Нет, цена за квадратный метр — это только работы. Материалы считает комплектатор отдельной спецификацией, чтобы вы видели цену каждой позиции и могли её заменить. Закупка идёт по ценам поставщиков.'] },
+    { q: 'Работаете ли вы в рассрочку?', paras: ['Поэтапная оплата по факту закрытия этапа сама по себе распределяет платежи по всему сроку ремонта. Отдельные условия рассрочки обсуждаются с менеджером.'] },
+  ] },
+  { id: 'g2', title: 'Ход работ и контроль', items: [
+    { q: 'Как можно следить за ходом ремонтных работ?', paras: ['Создается индивидуальный чат со всей командой и участниками процесса. Контролировать ход работ можно как вживую, так и удаленно, плюс мы регулярно отправляем фотоотчеты.'] },
+    { q: 'Как происходит контроль качества ремонта?', paras: ['Контроль ремонтных работ осуществляет прораб, а также менеджеры отдела технического контроля, которые независимо от прораба посещают объекты и следят за работами согласно Стандартам.', 'Если у вас возникли вопросы, вы можете связаться с руководителем отдела технического контроля.'] },
+    { q: 'Можно вести ремонт дистанционно?', paras: ['Да. Видео, фото, онлайн-согласования, счета и акты — всё происходит дистанционно. Часть наших клиентов за весь ремонт приезжает на объект несколько раз.'] },
+    { q: 'Кто согласовывает работы с УК и соседями?', paras: ['Мы. Перед началом работ согласовываем порядок их проведения с требованиями ЖК, организуем защиту МОПов, контролируем доставку материалов и вывоз мусора, соблюдаем режим шумных работ.'] },
+  ] },
+  { id: 'g3', title: 'Дизайн и комплектация', items: [
+    { q: 'Выполняете ли вы дизайн-проект?', paras: ['В нашей компании собственный отдел дизайна, выезд дизайнера для консультации и подбора подходящего пакета услуг — бесплатный.'] },
+    { q: 'Можно делать ремонт по чужому проекту?', paras: ['Да, и это частая ситуация. Наш инженер сначала проверяет проект: находит решения, которые на площадке привели бы к переносу электрики, смене размеров мебели или переделке сантехнического шкафа. Правки согласовываются с вами до начала работ.'] },
+    { q: 'Что входит в комплектацию?', paras: ['Подбор материалов и спецификация под бюджет, закупка по ценам производителей, доставка на объект, контроль сроков и приёмка товара. Отдельно — мебель на заказ, свет, сантехника и двери.'] },
+  ] },
+  { id: 'g4', title: 'Приёмка и гарантия', items: [
+    { q: 'Зачем заказывать приёмку у ремонтной компании?', paras: ['Всё, что найдено до подписания акта приёма-передачи, устраняет застройщик за свой счёт. Плюс инженер в тот же выезд снимает объёмы и считает смету на ремонт — отдельного визита не потребуется.'] },
+    { q: 'Что вы проверяете при приёмке?', paras: ['Железобетонные и каменные конструкции, качество отделочных работ, оконные и дверные рамы, створки и стеклопакеты, водоснабжение, канализацию, отопление и сантехнику, вентиляцию, вытяжки, электро- и силовое оборудование.'] },
+    { q: 'Какая у вас гарантия?', paras: ['Гарантия на работы прописана в договоре вместе со сроком и условиями. По инженерным системам отдаётся исполнительная документация: понятно, где проходят трубы и кабель.'] },
+  ] },
+];
+
+const ZHK_PARAMS = [
+  { k: 'Застройщик', v: '{Застройщик}' },
+  { k: 'Год сдачи', v: '{Год}' },
+  { k: 'Тип дома', v: '{Монолит / панель / кирпич}' },
+  { k: 'Высота потолков', v: '{Высота}' },
+  { k: 'Отделка от застройщика', v: '{Без отделки / white box / с отделкой}' },
+  { k: 'Наших объектов в ЖК', v: '{N}' },
+];
+
+const DEFECTS = [
+  '{Типовой дефект 1 — например, отклонение стен от вертикали в санузлах}',
+  '{Типовой дефект 2 — например, слабая тяга в вентканале}',
+  '{Типовой дефект 3 — например, качество стяжки в жилых комнатах}',
+  '{Типовой дефект 4 — например, монтажные швы оконных блоков}',
+];
+
+const ZHK_WORKS = [
+  { title: '2-комнатная, 82 м²', note: 'Дизайнерский ремонт, 7 месяцев', img: 'assets/pf-02.jpg' },
+  { title: '1-комнатная, 44 м²', note: 'Ремонт под ключ', img: 'assets/pf-04.jpg' },
+  { title: 'Квартира-студия, 28 м²', note: 'Чистовой ремонт', img: 'assets/pf-03.jpg' },
+];
+
+const OTHER_ZHK = ['{ЖК 1}', '{ЖК 2}', '{ЖК 3}', '{ЖК 4}', '{ЖК 5}', '{ЖК 6}'];
+
+const LEGAL = [
+  { p: 'Настоящим, оставляя заявку на сайте, я свободно, своей волей и в своём интересе даю согласие ИП Ланин Кирилл Андреевич (ИНН 772142258108) на обработку моих персональных данных.' },
+  { h2: 'Перечень персональных данных' },
+  { list: ['имя;', 'номер телефона.'] },
+  { h2: 'Цели обработки' },
+  { list: ['обработка заявок;', 'предоставление консультаций;', 'запись на замер;', 'взаимодействие с сотрудниками компании;', 'обратная связь с пользователем.'] },
+  { h2: 'Срок действия и отзыв согласия' },
+  { p: 'Я подтверждаю, что ознакомлен(а) с Политикой обработки персональных данных, размещённой на сайте. Согласие действует до достижения целей обработки персональных данных либо до момента его отзыва. Я уведомлён(а), что могу отозвать согласие путём направления обращения на email: sk-espada@rambler.ru' },
+];
+
+const LINKS_404 = [
+  { t: 'Ремонт квартир', href: '/remont-kvartir/' },
+  { t: 'Дизайн интерьера', href: '/design/' },
+  { t: 'Приёмка квартир', href: '/priemka/' },
+  { t: 'Портфолио', href: '/portfolio/' },
+  { t: 'Цены', href: '/ceny-na-remont-kvartir/' },
+  { t: 'Контакты', href: '/kontakty/' },
+];
+
+const THANKS_STEPS = [
+  'Инженер посмотрит адрес и площадь, чтобы приехать подготовленным.',
+  'Позвонит по указанному номеру и согласует удобное время выезда.',
+  'На выезде снимет объёмы и отдаст смету — бесплатно, без обязательств.',
+];
+
+const THANKS_LINKS = [
+  { t: 'Тарифы ремонта', note: 'что входит в каждый', href: '/ceny-na-remont-kvartir/' },
+  { t: 'Отзывы', note: 'со ссылками на площадки', href: '/otzyvy/' },
+  { t: 'Блог', note: 'как считается смета', href: '/blog/' },
+];
+
+const PAGES = {
+  'Вопросы и ответы': { crumb: 'Вопросы и ответы', crumbs: true, cta: true, mid: '' },
+  'Страница ЖК': { crumb: 'ЖК Shagal', crumbs: true, cta: true, mid: 'Ремонт в ЖК', midHref: '/remont-v-zhk/' },
+  'Юридическая': { crumb: 'Согласие на обработку данных', crumbs: true, cta: false, mid: '' },
+  '404': { crumb: '', crumbs: false, cta: false, mid: '' },
+  'Спасибо': { crumb: '', crumbs: false, cta: false, mid: '' },
+};
+
+class Component extends DCLogic {
+  state = { open: { g1: 0 }, popup: false };
+
+  renderVals() {
+    const key = this.props.page || 'Вопросы и ответы';
+    const p = PAGES[key] || PAGES['Вопросы и ответы'];
+    const mobile = !!this.props.mobile;
+    const { open, popup } = this.state;
+
+    return {
+      isFaq: key === 'Вопросы и ответы',
+      isZhk: key === 'Страница ЖК',
+      isLegal: key === 'Юридическая',
+      is404: key === '404',
+      isThanks: key === 'Спасибо',
+      showCrumbs: p.crumbs,
+      showCta: p.cta,
+      crumb: p.crumb,
+      crumbMid: p.mid,
+      crumbMidHref: p.midHref || '',
+      isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      popup,
+      openPopup: () => this.setState({ popup: true }),
+
+      groups: FAQ_GROUPS.map(g => ({
+        id: g.id, title: g.title, href: '#' + g.id, count: g.items.length,
+        items: g.items.map((f, i) => ({
+          q: f.q, paras: f.paras,
+          open: open[g.id] === i,
+          sign: open[g.id] === i ? '×' : '+',
+          go: () => this.setState({ open: Object.assign({}, open, { [g.id]: open[g.id] === i ? -1 : i }) }),
+        })),
+      })),
+
+      zhkParams: ZHK_PARAMS,
+      defects: DEFECTS,
+      zhkWorks: ZHK_WORKS,
+      otherZhk: OTHER_ZHK,
+
+      legal: LEGAL.map(b => ({
+        isH2: !!b.h2, isP: !!b.p, isList: !!b.list,
+        t: b.h2 || b.p || '', items: b.items || [],
+      })),
+
+      links404: LINKS_404,
+      thanksSteps: THANKS_STEPS.map((t, i) => ({ n: (i + 1) + '.', t })),
+      thanksLinks: THANKS_LINKS,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

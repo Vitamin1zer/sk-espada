@@ -1,0 +1,80 @@
+// ==========================================================================
+//  Точка входа. Порядок в этом файле критичен — см. 01-scss-arhitektura.md §3.
+// ==========================================================================
+
+// 1. Слои. Объявление — раньше любого кода.
+//    Порядок объявления сильнее специфичности внутри слоя:
+//    любое правило в `components` перебьёт любое правило в `vendor`.
+@layer reset, vendor, base, layout, components, pages, utilities;
+
+// 2. Абстракции: ничего не выводят, только определения.
+@use 'abstracts' as *;
+
+// 3. MDB5 — частично, в слой vendor.
+//    Переменные переопределяются ДО импорта, иначе он скомпилируется
+//    со значениями по умолчанию (скругления, тени, Roboto).
+@layer vendor {
+  @use 'mdb-ui-kit/src/scss/free/functions';
+  @use 'vendor/mdb-variables' as *;
+  @use 'mdb-ui-kit/src/scss/free/variables';
+  @use 'mdb-ui-kit/src/scss/free/mixins';
+
+  @use 'mdb-ui-kit/src/scss/free/reboot';
+  @use 'mdb-ui-kit/src/scss/free/grid';
+  @use 'mdb-ui-kit/src/scss/free/utilities/api';
+
+  @use 'vendor/mdb-reset';
+}
+
+// Альтернатива, если MDB5 подключается собранным CSS:
+// @import url('~mdb-ui-kit/css/mdb.min.css') layer(vendor);
+// Переопределение переменных тогда недоступно — перекрывать классами.
+
+// 4. Свои слои.
+@layer reset {
+  @use 'base/reset';
+}
+
+@layer base {
+  @use 'base/fonts';
+  @use 'base/typography';
+  @use 'base/links';
+}
+
+@layer layout {
+  @use 'layout/container';
+  @use 'layout/section';
+  @use 'layout/header';
+  @use 'layout/footer';
+  @use 'layout/breadcrumbs';
+}
+
+@layer components {
+  @use 'components/button';
+  @use 'components/form';
+  // Доверстать по образцу button/form:
+  // @use 'components/card-tariff';
+  // @use 'components/card-work';
+  // @use 'components/card-cluster';
+  // @use 'components/chip';
+  // @use 'components/dropdown-filter';
+  // @use 'components/accordion';
+  // @use 'components/steps';
+  // @use 'components/quiz';
+  // @use 'components/review';
+  // @use 'components/seo-text';
+  // @use 'components/modal';
+}
+
+@layer pages {
+  // @use 'pages/home';
+  // @use 'pages/pillar';
+  // @use 'pages/category';
+  // @use 'pages/portfolio';
+  // @use 'pages/blog';
+  // @use 'pages/service';
+}
+
+@layer utilities {
+  @use 'utilities/helpers';
+}

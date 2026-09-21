@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+    <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+      <a href="/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+      <span style="font-size:12px;color:#bfbfbf">/</span>
+      <span style="font-size:12px;color:#5c5c5c">{{ p.crumb }}</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Обложка пиллара" style="position:relative;background:#313131">
+    <sc-if value="{{ p.hero }}" hint-placeholder-val="{{ false }}">
+      <img src="{{ p.hero }}" alt="{{ p.h1 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+    </sc-if>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.74) 0%,rgba(20,20,20,.52) 55%,rgba(20,20,20,.3) 100%)"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(40px,4.6cqw,74px) clamp(16px,1.4cqw,20px) clamp(44px,5cqw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,3cqw,44px);align-items:center;min-height:clamp(460px,36cqw,540px)">
+      <div style="display:flex;flex-direction:column;gap:clamp(16px,1.6cqw,24px);min-width:0">
+        <h1 style="margin:0;font-size:clamp(27px,3.9cqw,56px);line-height:1.02;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#fff">{{ p.h1 }}</h1>
+        <sc-if value="{{ p.price }}" hint-placeholder-val="{{ true }}">
+          <div style="font-size:clamp(18px,1.9cqw,28px);font-weight:600;color:#00AD9F;line-height:1.15">от {{ p.price }} рублей за м²</div>
+        </sc-if>
+        <div style="font-size:clamp(13px,1.3cqw,18px);line-height:1.55;color:#fff;max-width:540px;display:flex;flex-direction:column;gap:4px">
+          <sc-for list="{{ p.bullets }}" as="b" hint-placeholder-count="4">
+            <span>{{ b }}</span>
+          </sc-for>
+        </div>
+        <sc-if value="{{ p.price }}" hint-placeholder-val="{{ true }}">
+          <div style="font-size:11px;color:#d9d9d9;letter-spacing:.02em">Цена «от» указана за квадратный метр по полу</div>
+        </sc-if>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+          <button type="button" onClick="{{ openPopup }}" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)">{{ p.cta1 }}</button>
+          <sc-if value="{{ p.cta2 }}" hint-placeholder-val="{{ true }}">
+            <a href="#quiz" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#313131;border-color:#fff">{{ p.cta2 }}</a>
+          </sc-if>
+        </div>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:flex-end">
+        <form onSubmit="{{ noSubmit }}" style="width:100%;max-width:420px;background:#fff;padding:clamp(22px,2.1cqw,30px);display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">Форма заявки · первый экран</div>
+          <div style="font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;text-transform:uppercase;color:#000">{{ p.formTitle }}</div>
+          <div style="font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ p.formText }}</div>
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">ФИО</span>
+            <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Ваш телефон</span>
+            <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+          </label>
+          <div style="display:flex;gap:9px;align-items:flex-start">
+            <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
+            <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+          </div>
+          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:16px 20px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">{{ p.cta1 }}</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Вводный текст" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0 clamp(30px,3.4cqw,54px)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+        <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.leadTitle }}</h2>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">{{ p.lead }}</p>
+      </div>
+      <div style="min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(14px,1.6cqw,22px)">
+        <sc-for list="{{ p.facts }}" as="f" hint-placeholder-count="4">
+          <div style="background:#f8f8f8;padding:clamp(16px,1.6cqw,22px);display:flex;flex-direction:column;gap:6px;min-width:0">
+            <div style="font-size:clamp(20px,2.1cqw,30px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ f.v }}</div>
+            <div style="font-size:11.5px;line-height:1.45;color:#5c5c5c">{{ f.t }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Плитка кластеров" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.clusterTitle }}</h2>
+      <p style="margin:12px 0 0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:640px">{{ p.clusterNote }}</p>
+      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+        <sc-for list="{{ clusters }}" as="card" hint-placeholder-count="4">
+          <div style="background:#fff;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:22px;box-shadow:0 2px 10px rgba(0,0,0,.05);min-width:0">
+            <sc-for list="{{ card }}" as="g" hint-placeholder-count="1">
+              <div style="display:flex;flex-direction:column;gap:14px">
+                <h3 style="margin:0;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">{{ g.title }}</h3>
+                <div style="display:flex;flex-wrap:wrap;gap:8px">
+                  <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="6">
+                    <a href="{{ i.href }}" style="flex:1 1 auto;border:1px solid #e2e2e2;padding:10px 14px;font-size:12.5px;line-height:1.2;color:#313131;text-decoration:none;text-align:center;transition:all .15s;white-space:nowrap" style-hover="border-color:#00AD9F;color:#00AD9F">{{ i.t }}</a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ p.hasTariffs }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="Тарифы" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+        <div style="display:flex;gap:clamp(14px,1.6cqw,26px);align-items:center;flex-wrap:wrap">
+          <h2 style="margin:0;font-size:clamp(20px,2.2cqw,31px);line-height:1.1;font-weight:800;font-style:italic;letter-spacing:-.01em;text-transform:uppercase;color:#313131">{{ p.tariffTitle }}</h2>
+          <sc-if value="{{ hasTabs }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="2">
+                <button type="button" onClick="{{ t.go }}" style="{{ t.css }}">{{ t.label }}</button>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+        <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(14px,1.5cqw,22px);align-items:stretch">
+          <sc-for list="{{ tariffs }}" as="t" hint-placeholder-count="4">
+            <div style="background:#00AD9F;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0">
+              <div style="padding:15px 16px;text-align:center;font-size:clamp(13px,1.1cqw,16px);font-weight:700;color:#fff;line-height:1.25">{{ t.title }}</div>
+              <sc-if value="{{ t.img }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ t.img }}" alt="{{ t.title }}" style="width:100%;height:clamp(140px,12cqw,170px);object-fit:cover;display:block;background:#e8e8e8" />
+              </sc-if>
+              <div style="padding:13px 16px;text-align:center;background:#026B63;color:#fff">
+                <div style="font-size:clamp(15px,1.35cqw,19px);font-weight:700;font-style:italic">от {{ t.price }} р/м2</div>
+                <div style="font-size:11.5px;opacity:.85">по полу</div>
+              </div>
+              <div style="padding:16px;display:flex;flex-direction:column;gap:7px;flex:1;align-content:flex-start">
+                <sc-for list="{{ t.items }}" as="i" hint-placeholder-count="9">
+                  <div style="font-size:11.5px;line-height:1.35;color:#fff">{{ i }}</div>
+                </sc-for>
+              </div>
+              <button type="button" onClick="{{ openPopup }}" style="margin:0 16px 16px;background:#026B63;color:#fff;border:0;border-radius:0;padding:15px 16px;font-size:12.5px;font-weight:700;transition:background .2s" style-hover="background:#014f49">Отправить заявку на расчёт</button>
+            </div>
+          </sc-for>
+        </div>
+        <div style="margin-top:18px;font-size:11.5px;color:#929292">Все цены — с приставкой «от», за квадратный метр по полу. Точная сумма считается по объёмам после замера.</div>
+      </div>
+    </section>
+  </sc-if>
+
+  <section data-screen-label="Этапы работы" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.stepsTitle }}</h2>
+      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(18px,2.2cqw,36px)">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+          <div style="min-width:0;position:relative;overflow:hidden;padding-top:18px" style-hover="--ln:-104%;--up:-7px">
+            <div style="position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(var(--ln,0));transition:transform .4s cubic-bezier(.4,0,.2,1)"></div>
+            <div style="display:flex;flex-direction:column;gap:12px;transform:translateY(var(--up,0));transition:transform .3s cubic-bezier(.4,0,.2,1)">
+              <div style="font-size:clamp(24px,2.4cqw,34px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
+              <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ s.title }}</h3>
+            </div>
+            <p style="margin:12px 0 0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ s.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Примеры работ" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Примеры работ</h2>
+      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(16px,1.7cqw,26px)">
+        <sc-for list="{{ portfolio }}" as="w" hint-placeholder-count="4">
+          <a href="/portfolio/" style="text-decoration:none;display:flex;flex-direction:column;gap:12px;min-width:0">
+            <img src="{{ w.img }}" alt="{{ w.title }}" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block;background:#f0f0f0;transition:opacity .2s" style-hover="opacity:.9" />
+            <span style="font-size:clamp(11.5px,.95cqw,13px);font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:#5c5c5c;line-height:1.35">{{ w.title }}</span>
+          </a>
+        </sc-for>
+      </div>
+      <div style="margin-top:clamp(24px,2.6cqw,38px);display:flex;justify-content:center">
+        <a href="/portfolio/" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 30px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть все работы</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" data-screen-label="Квиз-калькулятор" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1000px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <div style="background:#fff;padding:clamp(24px,2.6cqw,42px);display:flex;flex-direction:column;gap:clamp(20px,2.2cqw,30px);box-shadow:0 4px 24px rgba(0,0,0,.07)">
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+            <h2 style="margin:0;font-size:clamp(19px,1.95cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#000">{{ p.quizTitle }}</h2>
+            <span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#929292;font-variant-numeric:tabular-nums">{{ quizLabel }}</span>
+          </div>
+          <div style="height:4px;background:#ededed">
+            <div style="{{ quizBar }}"></div>
+          </div>
+        </div>
+
+        <sc-if value="{{ quizCards }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;letter-spacing:.01em;color:#313131">{{ quizQuestion }}</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px">
+              <sc-for list="{{ quizCards }}" as="c" hint-placeholder-count="4">
+                <button type="button" onClick="{{ c.go }}" style="{{ c.css }}">
+                  <span style="font-size:13.5px;font-weight:700;line-height:1.25">{{ c.t }}</span>
+                  <sc-if value="{{ c.hint }}" hint-placeholder-val="{{ true }}">
+                    <span style="font-size:11.5px;line-height:1.4;color:#929292">{{ c.hint }}</span>
+                  </sc-if>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ quizArea }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;letter-spacing:.01em;color:#313131">{{ quizQuestion }}</h3>
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <span style="font-size:clamp(30px,3cqw,44px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ area }}</span>
+              <span style="font-size:15px;color:#5c5c5c">м²</span>
+            </div>
+            <input type="range" min="18" max="200" step="1" value="{{ area }}" onInput="{{ setArea }}" style="width:100%;accent-color:#00AD9F" />
+            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:#929292;font-variant-numeric:tabular-nums">
+              <span>18 м²</span>
+              <span>200 м²</span>
+            </div>
+            <div style="background:#f8f8f8;padding:18px;display:flex;flex-direction:column;gap:4px">
+              <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Предварительно</span>
+              <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
+              <span style="font-size:11px;line-height:1.45;color:#929292">Ориентир по выбранному тарифу. Точная смета — после замера инженером.</span>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ quizContacts }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;letter-spacing:.01em;color:#313131">{{ quizQuestion }}</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+              <label style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Имя</span>
+                <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+              </label>
+              <label style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Телефон</span>
+                <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+              </label>
+            </div>
+            <div style="display:flex;gap:9px;align-items:flex-start">
+              <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
+              <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ quizDone }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+            <div style="background:#00AD9F;color:#fff;padding:12px 20px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase">Заявка принята</div>
+            <h3 style="margin:0;font-size:clamp(17px,1.6cqw,23px);font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#000">Спасибо — расчёт уже в работе</h3>
+            <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:520px">Инженер перезвонит в течение рабочего дня, уточнит детали и согласует время выезда. Предварительный ориентир: <b style="color:#313131">{{ estimate }}</b></p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+              <a href="/portfolio/" style="border:1px solid #00AD9F;color:#00AD9F;padding:14px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть работы</a>
+              <button type="button" onClick="{{ quizReset }}" style="border:1px solid #d9d9d9;background:#fff;color:#5c5c5c;padding:14px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Пройти заново</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ quizNav }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-top:1px solid #ededed;padding-top:20px">
+            <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{ quizBack }}" style="border:1px solid #d9d9d9;background:#fff;color:#5c5c5c;padding:15px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Назад</button>
+            </sc-if>
+            <button type="button" onClick="{{ quizNext }}" style="background:#00AD9F;color:#fff;border:0;padding:15px 26px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">{{ nextLabel }}</button>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="SEO-текст" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
+      <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.seoTitle }}</h2>
+      <div style="{{ seoBoxCss }}">
+        <sc-for list="{{ seoParas }}" as="t" hint-placeholder-count="3">
+          <p style="margin:0 0 14px;font-size:clamp(13px,1.05cqw,15px);line-height:1.7;color:#5c5c5c;text-wrap:pretty">{{ t }}</p>
+        </sc-for>
+        <sc-if value="{{ seoFade }}" hint-placeholder-val="{{ true }}">
+          <div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff)"></div>
+        </sc-if>
+      </div>
+      <button type="button" onClick="{{ toggleSeo }}" style="align-self:flex-start;background:transparent;border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">{{ seoLabel }}</button>
+    </div>
+  </section>
+
+  <section data-screen-label="Вопрос-ответ" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Вопрос-ответ</h2>
+      <div style="margin-top:clamp(24px,2.6cqw,40px);max-width:780px;display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ faq }}" as="f" hint-placeholder-count="5">
+          <div style="background:#00AD9F">
+            <button type="button" onClick="{{ f.go }}" style="width:100%;border:0;background:transparent;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left">
+              <span style="font-size:clamp(13px,1.05cqw,15px);font-weight:600;color:#fff;line-height:1.35">{{ f.q }}</span>
+              <span style="flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#fff;color:#00AD9F;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1">{{ f.sign }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 20px 22px;display:flex;flex-direction:column;gap:10px">
+                <sc-for list="{{ f.paras }}" as="t" hint-placeholder-count="2">
+                  <p style="margin:0;font-size:12.5px;line-height:1.6;color:#fff">{{ t }}</p>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Отзывы" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:clamp(20px,2.2cqw,32px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Отзывы клиентов</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,26px);align-items:start">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <div style="background:#f8f8f8;border-radius:10px;padding:clamp(18px,1.8cqw,26px);display:flex;flex-direction:column;gap:14px;min-width:0">
+            <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:118px;height:22px;object-fit:contain;display:block" />
+            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#5c5c5c;flex:1">{{ r.text }}</p>
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="{{ r.avatar }}" alt="{{ r.name }}" style="width:42px;height:42px;border-radius:50%;object-fit:cover;display:block;background:#e8e8e8" />
+              <span style="font-size:14px;color:#313131">{{ r.name }}</span>
+            </div>
+            <div style="font-size:10.5px;color:#bfbfbf;letter-spacing:.03em">{{ r.source }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <a href="/otzyvy/" style="align-self:flex-start;border:1px solid #00AD9F;color:#00AD9F;padding:15px 26px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Все отзывы</a>
+    </div>
+  </section>
+
+  <section data-screen-label="CTA перед подвалом" style="background:#00AD9F">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:start">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(40px,4.4cqw,72px)">
+        <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff">Договоримся о встрече прямо сейчас..</h2>
+        <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff">И наш специалист:</h3>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:440px;text-wrap:pretty">приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и ответит на вопросы, сделает детальный расчет сметы</p>
+        <p style="margin:0;font-size:11.5px;line-height:1.55;color:#fff;font-style:italic;opacity:.9;max-width:400px">Заполните эту форму и нажмите кнопку «Свяжитесь со мной», и мы свяжемся с Вами в ближайшее время.</p>
+      </div>
+      <form onSubmit="{{ noSubmit }}" style="min-width:0;background:#fff;padding:clamp(22px,2.1cqw,30px);display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(40px,4.4cqw,72px)">
+        <label style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">ФИО</span>
+          <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Телефон</span>
+          <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+        </label>
+        <div style="display:flex;gap:9px;align-items:flex-start">
+          <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
+          <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+        </div>
+        <button type="submit" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;padding:16px 24px;font-size:12px;font-weight:700;letter-spacing:.04em;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">Свяжитесь со мной</button>
+      </form>
+      <div style="min-width:0;display:flex;align-items:flex-end;justify-content:center;align-self:stretch">
+        <img src="assets/specialist.png" alt="Специалист Эспады" style="width:100%;max-width:330px;height:auto;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Контакты" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(22px,2.4cqw,36px)">
+        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#00AD9F">Контакты</h2>
+        <div style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="color:#00AD9F">ул. Дегунинская, д.1, корп.2</a></div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Как добраться:</h3>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
+            <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">2.ГИС</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Для связи:</h3>
+          <a href="tel:+79938914064" style="font-size:clamp(22px,2.1cqw,30px);font-weight:600;color:#00AD9F;text-decoration:underline;text-underline-offset:4px">+7 (993) 891-40-64</a>
+        </div>
+      </div>
+      <div style="min-width:0">
+        <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="display:block">
+          <img src="assets/map.jpg" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" style="width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;background:#f0f0f0" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+  <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
+      <div style="width:100%;max-width:560px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+        <dc-import name="Форма" kind="Попап" state="Пустая" title="{{ p.popupTitle }}" cta="{{ p.cta1 }}" perks="{{ p.popupPerks }}" hint-size="100%,520px"></dc-import>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт квартир&quot;,&quot;Дизайн интерьера&quot;,&quot;Приёмка квартир&quot;],&quot;default&quot;:&quot;Ремонт квартир&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const L = (t, href) => ({ t, href });
+
+const REMONT_CLUSTERS = [
+  { title: 'По виду ремонта', items: [
+    L('Новостройка', '/remont-kvartir-novostroyka/'), L('Вторичка', '/remont-kvartir-vtorichka/'),
+    L('Капитальный', '/kapitalnyy-remont-kvartiry/'), L('Косметический', '/kosmeticheskiy-remont-kvartiry/'),
+    L('Дизайнерский', '/dizaynerskiy-remont-kvartiry/'), L('По дизайн-проекту', '/remont-po-dizayn-proektu/'),
+    L('Черновой', '/chernovoy-remont-kvartiry/'), L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
+    L('Евроремонт', '/evroremont-kvartiry/'), L('Элитный', '/elitnyy-remont-kvartir/'),
+    L('Недорогой', '/nedorogoy-remont-kvartir/'), L('Под сдачу', '/remont-kvartiry-pod-sdachu/'),
+    L('После залива и пожара', '/remont-posle-zaliva/'), L('В рассрочку', '/remont-v-rassrochku/'),
+    L('По стилю', '/remont-kvartir-po-stilyu/') ] },
+  { title: 'По числу комнат', items: [
+    L('Студия', '/remont-kvartiry-studii/'), L('Однокомнатная', '/remont-odnokomnatnoy-kvartiry/'),
+    L('Двухкомнатная', '/remont-dvuhkomnatnoy-kvartiry/'), L('Трёхкомнатная', '/remont-trehkomnatnoy-kvartiry/') ] },
+  { title: 'По типу дома', items: [
+    L('Хрущёвка', '/remont-v-hruschevke/'), L('Сталинка', '/remont-v-stalinke/'),
+    L('Панельный дом', '/remont-v-panelnom-dome/') ] },
+  { title: 'По помещениям', items: [
+    L('Кухня', '/remont-kuhni/'), L('Ванная комната', '/remont-vannoy-komnaty/'), L('Санузел', '/remont-sanuzla/'),
+    L('Туалет', '/remont-tualeta/'), L('Спальня', '/remont-spalni/'), L('Гостиная', '/remont-gostinoy/'),
+    L('Детская комната', '/remont-detskoy-komnaty/'), L('Прихожая и коридор', '/remont-prihozhey/'),
+    L('Балкон и лоджия', '/remont-balkona/'), L('Гардеробная', '/remont-garderobnoy/') ] },
+  { title: 'Прочее', items: [
+    L('Цены', '/ceny-na-remont-kvartir/'), L('По ЖК', '/remont-v-zhk/'),
+    L('Дома и коттеджи', '/remont-domov-i-kottedzhey/'), L('Коммерческие помещения', '/remont-kommercheskih-pomescheniy/') ] },
+];
+
+const DESIGN_CLUSTERS = [
+  { title: 'По объекту', items: [
+    L('Квартира', '/design-kvartir/'), L('Квартира-студия', '/design-studii/'), L('Дом', '/design-domov/'),
+    L('Офис', '/design-ofisov/'), L('Коммерческие помещения', '/design-kommercheskih-pomescheniy/') ] },
+  { title: 'По помещениям', items: [
+    L('Кухня', '/design-kuhni/'), L('Ванная комната', '/design-vannoy/'), L('Спальня', '/design-spalni/'),
+    L('Гостиная', '/design-gostinoy/'), L('Детская комната', '/design-detskoy/'),
+    L('Прихожая и коридор', '/design-prihozhey/') ] },
+];
+
+const PRIEMKA_CLUSTERS = [
+  { title: 'Виды приёмки', items: [
+    L('Без отделки', '/priemka-bez-otdelki/'), L('С отделкой', '/priemka-s-otdelkoy/'), L('По ЖК', '/priemka-v-zhk/') ] },
+];
+
+const T_NOVOSTROYKA = [
+  { title: 'Чистовой ремонт', price: '8 850', img: 'assets/tariff-n1.jpg', items: ['Шпатлевка', 'Монтаж наливного пола', 'Поклейка обоев/покраска', 'Штукатурка', 'Укладка ламината', 'Монтаж плинтуса', 'Укладка керамической плитки', 'Установка чистовой сантехники', 'Монтаж механизмов электроточек', 'Замена окон/дверей', 'Замена проводки'] },
+  { title: 'Черновой ремонт', price: '9 890', img: 'assets/tariff-n2.png', items: ['Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола', 'Гидроизоляция мокрых зон', 'Комплексная разводка труд водоснабжения', 'Комплексная разводка труб канализации', 'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники'] },
+  { title: 'Ремонт под ключ', price: '13 050', img: 'assets/tariff-n3.png', items: ['Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола', 'Гидроизоляция мокрых зон', 'Комплексная разводка труб канализации', 'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники', 'Укладка ламината', 'Укладка плитки', 'Поклейка обоев'] },
+  { title: 'Дизайнерский ремонт', price: '15 290', img: 'assets/tariff-n4.png', items: ['Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола', 'Гидроизоляция мокрых зон', 'Комплексная разводка труд водоснабжения', 'Комплексная разводка труб канализации', 'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники', 'Укладка ламината', 'Укладка плитки', 'Поклейка обоев/покраска/штукатурка'] },
+];
+
+const T_VTORICHKA = [
+  { title: 'Косметический ремонт', price: '7 200', img: 'assets/tariff-v1.png', items: ['Демонтаж покрытий', 'Грунтовка пола, стен и потолка', 'Гидроизоляция мокрых зон', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Монтаж механизмов электроточек', 'Укладка ламината', 'Укладка плитки', 'Поклейка обоев'] },
+  { title: 'Капитальный ремонт', price: '13 300', img: 'assets/tariff-v2.png', items: ['Демонтаж покрытий', 'Грунтовка пола, стен и потолка', 'Устройство стяжки пола', 'Гидроизоляция мокрых зон', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Комплексная разводка труб канализации', 'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники', 'Укладка ламината', 'Укладка плитки', 'Поклейка обоев'] },
+  { title: 'Дизайнерский ремонт', price: '15 290', img: 'assets/tariff-v3.png', items: ['Демонтаж покрытий', 'Грунтовка пола, стен и потолка', 'Устройство стяжки пола', 'Гидроизоляция мокрых зон', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Комплексная разводка труб канализации', 'Комплексная разводка труб водоснабжения', 'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники', 'Укладка ламината', 'Укладка плитки', 'Поклейка обоев/покраска/штукатурка'] },
+];
+
+const DZ_BASE = ['Выезд на объект для обмеров', 'Техническое задание', 'Разработка вариантов планировочных решений', 'Обмерный план', 'Пояснительная записка', 'План демонтажа', 'План монтажа стен', 'План мебели и оборудования', 'Схема подключения сантехники', 'План полов и потолков', 'Схема взаимодействия выключателей', 'План розеток и электровыводов', 'Схема с типами отделки стен', 'Схема движения дверей'];
+
+const T_DESIGN = [
+  { title: 'Технический дизайн-проект', price: '1 790', img: '', items: DZ_BASE.concat(['Развертка санузлов', 'Сопровождение проекта', 'Консультация по технической составляющей']) },
+  { title: 'Стандартный дизайн-проект', price: '2 400', img: '', items: DZ_BASE.concat(['Развертка санузлов', 'Концепция интерьера (коллажи; мудборд)', 'Сопровождение проекта', 'Консультация по технической составляющей']) },
+  { title: 'Полный дизайн-проект', price: '3 500', img: '', items: DZ_BASE.concat(['Развертка всех помещений', '3D-визуализация +360 панорама всех комнат', 'Комплектация чистовыми материалами', 'Сопровождение проекта', 'Консультация по технической составляющей']) },
+  { title: 'Авторский дизайн-проект', price: '4 800', img: '', items: DZ_BASE.concat(['Развертка всех помещений', '3D-визуализация +360 панорама всех комнат', 'Комплектация чистовыми материалами', 'Комплектация санузлов', 'Комплектация освещения', 'Комплектация мебели', 'Авторский надзор (3-5 выездов)', 'Сопровождение проекта']) },
+];
+
+const FAQ_REMONT = [
+  { q: 'Сколько стоит ремонт квартиры в Москве?', paras: ['Диапазон цен в Москве обычно варьируется от 450 000 до 900 000 руб. и включает черновые и чистовые работы.', 'Итоговая сумма зависит от площади помещения, материалов и сложности проекта. Для того, чтобы дать вам более точное понимание о цене Вашего ремонта, наш специалист выезжает на объект, делает замеры и формирует окончательную смету.'] },
+  { q: 'Может ли измениться стоимость работ в процессе ремонта?', paras: ['При подписании договора фиксируется прайс на все ремонтные услуги, который не меняется до конца ремонта.', 'Сметная стоимость может измениться только, если Вы пожелаете сменить вид ремонтных работ или добавить работы, которые Вы ранее не планировали делать.'] },
+  { q: 'Какой порядок оплаты ремонта?', paras: ['Оплата производится поэтапно. Ремонт делится на этапы: демонтаж, черновая отделка, чистовая отделка и так далее.', 'По завершении каждого этапа оформляется акт выполненных работ, который вы подписываете, и только после этого оплачиваете результат. Переход к следующему этапу возможен только после подписания акта и оплаты.'] },
+  { q: 'Как можно следить за ходом ремонтных работ?', paras: ['Создается индивидуальный чат, со всей командой и участниками процесса. Контролировать ход работ можно как вживую, так и удаленно + мы регулярно отправляем фотоотчеты.'] },
+  { q: 'Как происходит контроль качества ремонта?', paras: ['Контроль ремонтных работ осуществляет прораб, а также менеджеры отдела технического контроля, которые независимо от прораба, посещают объекты и следят за работами согласно Стандартам.', 'Если у Вас возникли вопросы, Вы можете связаться с руководителем отдела технического контроля, он с радостью ответит и проконсультирует Вас.'] },
+];
+
+const FAQ_DESIGN = [
+  { q: 'Выезд дизайнера платный?', paras: ['В нашей компании собственный отдел дизайна, выезд дизайнера для консультации и подбора подходящего пакета услуг — бесплатный.'] },
+  { q: 'Чем отличаются пакеты дизайн-проекта?', paras: ['Технический пакет — это полный комплект чертежей для строителей. Стандартный добавляет концепцию интерьера: коллажи и мудборд. Полный — развёртки всех помещений и 3D-визуализацию с панорамами. Авторский — комплектацию мебели, света, санузлов и авторский надзор на объекте.'] },
+  { q: 'Можно заказать только дизайн, без ремонта?', paras: ['Да, проект отдаётся отдельным продуктом. При заказе дизайнерского ремонта в Эспаде действует скидка на проект.'] },
+  { q: 'Проверяет ли кто-то проект перед стройкой?', paras: ['Каждый проект наших дизайнеров проверяется. Наши проекты не просто «красивые», но и содержат всю необходимую для ремонта техническую информацию: они отвечают критериям функциональности и эргономики, корректности оформления.'] },
+];
+
+const FAQ_PRIEMKA = [
+  { q: 'Что вы проверяете при приёмке?', paras: ['Железобетонные и каменные конструкции, качество отделочных работ, оконные и дверные рамы, створки и стеклопакеты, водоснабжение, канализацию, отопление и сантехнику, вентиляцию, вытяжки, электро- и силовое оборудование.'] },
+  { q: 'Когда я получу акт с замечаниями?', paras: ['Инженер приезжает с инструментом и отдаёт акт с перечнем дефектов в день осмотра — его можно сразу передавать застройщику.'] },
+  { q: 'Можно сразу посчитать ремонт?', paras: ['Да, это основная причина заказывать приёмку у ремонтной компании. В тот же выезд инженер снимает объёмы и готовит смету на ремонт по фактической геометрии квартиры.'] },
+];
+
+const PORTFOLIO = [
+  { title: '2-комнатная квартира новостройка под ключ', img: 'assets/pf-01.png' },
+  { title: '1-комнатная вторичка дизайнерский ремонт', img: 'assets/pf-02.png' },
+  { title: 'Квартира-студия новостройка под ключ', img: 'assets/pf-03.png' },
+  { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/pf-04.png' },
+];
+
+const REVIEWS = [
+  { name: 'Татьяна', avatar: 'assets/av-tatyana.svg', source: 'Источник: Яндекс.Карты', text: 'Хочу выразить огромную благодарность Кириллу и всей его команде. Я проживаю в Республике Коми. Дочери купили небольшую студию в г. Москве. Не пришлось ни о чём позаботиться, кроме Доверенности. Одним днём и без моего присутствия получили ключи и рассчитали стоимость ремонта. Через два месяца прилетела уже в полностью отремонтированную и обставленную мебелью квартиру. Цены вполне лояльные. Так держать!' },
+  { name: 'Давид Самарский', avatar: 'assets/rev-1.jpg', source: 'Источник: 2ГИС', text: 'Ремонт прошел без лишних хлопот для меня. Общение было через группу в мессенджере, оплата — онлайн по выставляемым счетам. Смета составлялась и согласовывалась заранее, каких-то существенных выходов за границы не было. Понравилось, что ребята не просто формально делают то, что заложено в проекте, а предлагают изменения, которые существенно улучшают результат. Ремонтом доволен!' },
+  { name: 'Василиса Ф.', avatar: 'assets/rev-2.jpg', source: 'Источник: Отзовик', text: 'изначально боялись, что будет большая стоимость. Немного превысили наш планируемый бюджет. Но ни чуть не пожалели, качество ремонта подтверждает стоимость. Наше участие было минимальным, поэтому действительно «ремонт без головной боли») Все понравилось' },
+];
+
+const PAGES = {
+  remont: {
+    crumb: 'Ремонт квартир', h1: 'Ремонт квартир под ключ', price: '7 200', hero: 'assets/hero-remont.jpg',
+    bullets: ['— подготовим индивидуальный расчет;', '— поможем спланировать бюджет;', '— подберем решения под ваши задачи и образ жизни.'],
+    cta1: 'Бесплатный расчёт сметы', cta2: 'Квиз-калькулятор',
+    formTitle: 'Рассчитаем стоимость вашего ремонта бесплатно',
+    formText: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд и расчёт ничего не стоят.',
+    leadTitle: 'Ремонт в новостройке и на вторичке — одной командой',
+    lead: 'Работаем в Москве и ближнем Подмосковье в пределах ЦКАД. Смета фиксируется договором и не меняется до конца ремонта, оплата идёт по факту — после подписания акта за этап. Прораб и отдел технического контроля ведут объект независимо друг от друга, фотоотчёты приходят в общий чат несколько раз в неделю.',
+    facts: [{ v: '7 200 ₽', t: 'минимальная цена за м² по полу' }, { v: '6', t: 'тарифов на выбор — от косметического до дизайнерского' }, { v: '25', t: 'страниц с отдельными видами ремонта' }, { v: '0 ₽', t: 'выезд инженера и расчёт сметы' }],
+    clusterTitle: 'Выберите свой ремонт', clusterNote: 'Двадцать пять страниц раздела разложены группами: по виду работ, числу комнат, типу дома и помещению. Так проще дойти до нужной услуги, чем по сплошному списку.',
+    clusters: REMONT_CLUSTERS, hasTariffs: true, tariffTitle: 'Тарифы ремонта:',
+    stepsTitle: 'Как проходит ремонт',
+    steps: [
+      { title: 'Замер и смета', text: 'Инженер выезжает на объект, снимает объёмы и считает смету по фактическим площадям.' },
+      { title: 'Договор', text: 'Фиксируем прайс и этапы. Цена работ не меняется до конца ремонта.' },
+      { title: 'Демонтаж и черновые', text: 'Стяжка, штукатурка по маякам, гидроизоляция мокрых зон.' },
+      { title: 'Инженерия', text: 'Разводка воды, канализации и электрики. Сдаём этап с исполнительной документацией.' },
+      { title: 'Чистовая отделка', text: 'Плитка, ламинат, обои и покраска, установка сантехники и электроточек.' },
+      { title: 'Сдача', text: 'Приёмка с вами, акты, гарантия и прозрачная история ремонта.' },
+    ],
+    quizTitle: 'Калькулятор стоимости ремонта',
+    seoTitle: 'Ремонт квартир под ключ в Москве',
+    seo: [
+      'Ремонт под ключ — это полный цикл работ от демонтажа до чистовой отделки, когда одна компания отвечает за результат целиком. В новостройке к этому добавляется черновая подготовка: стяжка пола, штукатурка стен по маякам, разводка инженерных систем. На вторичном жилье цикл начинается с демонтажа старых покрытий и оценки состояния коммуникаций.',
+      'Цена ремонта считается за квадратный метр по полу и зависит от трёх вещей: выбранного тарифа, состояния квартиры и сложности решений в проекте. Косметический ремонт вторички стартует от 7 200 ₽ за м², чистовая отделка новостройки — от 8 850 ₽, полный цикл под ключ — от 13 050 ₽, дизайнерский ремонт — от 15 290 ₽. Материалы в эти цифры не входят: их считает комплектатор отдельной спецификацией, чтобы вы видели, за что платите.',
+      'Мы работаем по договору, в котором прописаны этапы и сроки. Оплата идёт по факту: этап закрыт, акт подписан, и только потом оплата. Такой порядок защищает обе стороны — вы не платите вперёд, а мы не начинаем следующий этап, пока предыдущий не принят.',
+      'Отдельная часть работы — контроль. Прораб ведёт объект ежедневно, менеджеры отдела технического контроля приезжают независимо от него и сверяют работы со стандартами. Все согласования, счета и акты идут в одном чате с клиентом, поэтому ремонт можно вести дистанционно: часть наших клиентов за весь проект приезжает на объект несколько раз.',
+    ],
+    faq: FAQ_REMONT, popupTitle: 'Получите индивидуальный расчет сметы',
+    popupPerks: ['— предварительный расчет бюджета', '— консультацию инженера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'],
+    base: 13050,
+  },
+  design: {
+    crumb: 'Дизайн интерьера', h1: 'Дизайн интерьера', price: '1 790', hero: 'assets/hero-design.jpg',
+    bullets: ['— бесплатно подготовим индивидуальный расчет;', '— поможем спланировать бюджет;', '— подберем решения под ваши задачи и образ жизни.'],
+    cta1: 'Бесплатный выезд дизайнера', cta2: 'Квиз по дизайн-проекту',
+    formTitle: 'Пригласите дизайнера бесплатно',
+    formText: 'Дизайнер приедет на объект, обсудит задачи семьи и подберёт пакет услуг под ваш бюджет.',
+    leadTitle: 'Проект, по которому объект собирают без переделок',
+    lead: 'В проекты наших дизайнеров заложены потребности каждого члена семьи, особенности пространства, последние тренды дизайна и проверенные временем решения. Каждый проект проверяется: он не просто «красивый», а содержит всю техническую информацию, нужную строителям на площадке.',
+    facts: [{ v: '1 790 ₽', t: 'технический проект за м² по полу' }, { v: '4', t: 'пакета: технический, стандартный, полный, авторский' }, { v: '0 ₽', t: 'выезд и консультация дизайнера' }, { v: '11', t: 'страниц по объектам и помещениям' }],
+    clusterTitle: 'Дизайн по объектам и помещениям', clusterNote: 'Одиннадцать страниц раздела: пять по типу объекта и шесть по помещениям. Страницы по помещениям галерейные — там больше примеров и меньше продающего текста, потому что спрос там информационный.',
+    clusters: DESIGN_CLUSTERS, hasTariffs: true, tariffTitle: 'Тарифы услуг по дизайну интерьера:',
+    stepsTitle: 'Как идёт работа над проектом',
+    steps: [
+      { title: 'Обмеры', text: 'Выезд на объект, обмерный план и техническое задание с вашими требованиями.' },
+      { title: 'Планировки', text: 'Несколько вариантов планировочных решений, выбираем один и дорабатываем.' },
+      { title: 'Концепция', text: 'Коллажи и мудборд: как будет выглядеть интерьер до чертежей.' },
+      { title: 'Рабочие чертежи', text: 'Демонтаж, монтаж стен, полы и потолки, электрика, сантехника, развёртки.' },
+      { title: 'Визуализация', text: '3D-визуализация и панорамы 360° по всем комнатам — в полном и авторском пакетах.' },
+      { title: 'Комплектация и надзор', text: 'Спецификации материалов, мебели и света, авторский надзор на объекте.' },
+    ],
+    quizTitle: 'Калькулятор стоимости дизайн-проекта',
+    seoTitle: 'Дизайн интерьера в Москве',
+    seo: [
+      'Дизайн-проект — это не картинка, а комплект документов, по которому строители собирают квартиру. Минимальный рабочий набор включает обмерный план, планировочное решение, план демонтажа и монтажа стен, схемы электрики и сантехники, план полов и потолков, схему отделки стен. Без этих чертежей любое решение на площадке принимается на глаз, и переделки становятся вопросом времени.',
+      'Стоимость считается за квадратный метр по полу. Технический проект стоит от 1 790 ₽ за м², стандартный с концепцией интерьера — от 2 400 ₽, полный с визуализацией и панорамами — от 3 500 ₽, авторский с комплектацией и надзором — от 4 800 ₽. Выезд дизайнера и консультация не оплачиваются: на встрече становится понятно, какой пакет нужен под задачу.',
+      'Наш отдел дизайна работает внутри компании, а не подрядом. Это значит, что проект проверяет инженер-сметчик до старта работ — так мы находим ошибки, из-за которых пришлось бы переносить электрику, менять размеры мебели или переделывать сантехнический шкаф. На одном из объектов такая проверка сняла с бюджета клиента несколько десятков тысяч рублей ещё до демонтажа.',
+    ],
+    faq: FAQ_DESIGN, popupTitle: 'Получите бесплатный выезд дизайнера',
+    popupPerks: ['— предварительный расчет бюджета', '— консультацию дизайнера интерьера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'],
+    base: 2400,
+  },
+  priemka: {
+    crumb: 'Приёмка квартир', h1: 'Приемка квартир в новостройке', price: '', hero: 'assets/hero-priemka.jpg',
+    bullets: ['— обнаружим скрытые дефекты до передачи квартиры;', '— подготовим подробный отчет с замечаниями для застройщика;', '— поможем избежать затрат на последующий ремонт;', '— защитим ваши интересы при приемке у застройщика.'],
+    cta1: 'Записаться на приёмку', cta2: '',
+    formTitle: 'Пригласите профессионального приемщика',
+    formText: 'Инженер приедет с инструментом, найдёт дефекты и отдаст акт с замечаниями в день осмотра.',
+    leadTitle: 'Низкий чек, который экономит бюджет ремонта',
+    lead: 'Приёмка — самая дешёвая услуга в списке и при этом самая выгодная: дефекты, найденные до подписания акта приёма-передачи, устраняет застройщик за свой счёт. Мы приезжаем с инструментом, проверяем геометрию, инженерию и отделку, а в тот же выезд снимаем объёмы под смету на ремонт.',
+    facts: [{ v: '5', t: 'групп проверок: от конструкций до вентиляции' }, { v: '1 день', t: 'акт с замечаниями на руках' }, { v: '3', t: 'вида приёмки: без отделки, с отделкой, по ЖК' }, { v: '2 в 1', t: 'приёмка и расчёт ремонта одним выездом' }],
+    clusterTitle: 'Виды приёмки', clusterNote: 'Приёмка без отделки и с отделкой проверяются по разным чек-листам. Страницы по ЖК заводятся шаблоном: там мы знаем типовые дефекты дома и порядок работы с конкретным застройщиком.',
+    clusters: PRIEMKA_CLUSTERS, hasTariffs: false, tariffTitle: '',
+    stepsTitle: 'Как проходит приёмка',
+    steps: [
+      { title: 'Заявка', text: 'Оставляете заявку, согласовываем дату осмотра с датой передачи квартиры.' },
+      { title: 'Осмотр', text: 'Инженер приезжает с инструментом: лазерный уровень, тепловизор, анемометр.' },
+      { title: 'Акт', text: 'Перечень дефектов с фотофиксацией — в день осмотра, готовый к передаче застройщику.' },
+      { title: 'Смета на ремонт', text: 'По тем же обмерам считаем ремонт, если он вам нужен. Отдельного выезда не потребуется.' },
+    ],
+    quizTitle: 'Калькулятор стоимости ремонта после приёмки',
+    seoTitle: 'Приёмка квартиры от застройщика',
+    seo: [
+      'Приёмка квартиры — единственный момент, когда дефекты дома исправляются не за ваш счёт. После подписания акта приёма-передачи всё, что найдено позже, становится вашей проблемой и вашим бюджетом. Поэтому осмотр стоит планировать до подписания, а не после получения ключей.',
+      'В ходе приёмки мы проверяем железобетонные и каменные конструкции, качество отделочных работ, оконные и дверные рамы, створки и стеклопакеты, водоснабжение, канализацию, отопление и сантехнику, вентиляцию, вытяжки, электро- и силовое оборудование. Отдельно смотрим геометрию: отклонения стен и стяжки от плоскости напрямую влияют на стоимость будущего ремонта.',
+      'Отчёт оформляется актом с перечнем замечаний и фотофиксацией — его можно передавать застройщику в день осмотра. Если ремонт вы планируете у нас, инженер в тот же выезд снимает объёмы и готовит смету: два повода приезжать превращаются в один.',
+    ],
+    faq: FAQ_PRIEMKA, popupTitle: 'Пригласите профессионального приемщика',
+    popupPerks: ['— обнаружение скрытых дефектов до передачи квартиры;', '— подробный отчет с замечаниями для застройщика;', '— возможность не тратиться на последующий ремонт;', '— защиту ваших интересов при приемке у застройщика.'],
+    base: 13050,
+  },
+};
+
+const QUIZ = {
+  remont: [
+    { q: 'Какая у вас квартира?', cards: [{ t: 'Новостройка', hint: 'без отделки или с отделкой' }, { t: 'Вторичка', hint: 'жилая или под ремонт' }, { t: 'Дом или коттедж', hint: '' }] },
+    { q: 'Какой ремонт нужен?', dependsOn: 0, cardsBy: {
+      'Новостройка': [{ t: 'Чистовой', hint: 'от 8 850 ₽/м²' }, { t: 'Черновой', hint: 'от 9 890 ₽/м²' }, { t: 'Под ключ', hint: 'от 13 050 ₽/м²' }, { t: 'Дизайнерский', hint: 'от 15 290 ₽/м²' }],
+      'Вторичка': [{ t: 'Косметический', hint: 'от 7 200 ₽/м²' }, { t: 'Капитальный', hint: 'от 13 300 ₽/м²' }, { t: 'Дизайнерский', hint: 'от 15 290 ₽/м²' }],
+    }, cards: [{ t: 'Косметический', hint: 'от 7 200 ₽/м²' }, { t: 'Чистовой', hint: 'от 8 850 ₽/м²' }, { t: 'Черновой', hint: 'от 9 890 ₽/м²' }, { t: 'Под ключ', hint: 'от 13 050 ₽/м²' }, { t: 'Капитальный', hint: 'от 13 300 ₽/м²' }, { t: 'Дизайнерский', hint: 'от 15 290 ₽/м²' }] },
+    { q: 'Площадь квартиры', area: true },
+    { q: 'Куда отправить расчёт?', contacts: true },
+  ],
+  design: [
+    { q: 'Что проектируем?', cards: [{ t: 'Квартира', hint: '' }, { t: 'Студия', hint: '' }, { t: 'Дом', hint: '' }, { t: 'Офис или коммерция', hint: '' }] },
+    { q: 'Какой пакет ближе?', cards: [{ t: 'Технический', hint: 'от 1 790 ₽/м²' }, { t: 'Стандартный', hint: 'от 2 400 ₽/м²' }, { t: 'Полный', hint: 'от 3 500 ₽/м²' }, { t: 'Авторский', hint: 'от 4 800 ₽/м²' }] },
+    { q: 'Площадь объекта', area: true },
+    { q: 'Куда отправить расчёт?', contacts: true },
+  ],
+  priemka: [
+    { q: 'В каком состоянии квартира?', cards: [{ t: 'Без отделки', hint: '' }, { t: 'С отделкой', hint: '' }, { t: 'С чистовой от застройщика', hint: '' }] },
+    { q: 'Планируете ремонт у нас?', cards: [{ t: 'Да, посчитайте', hint: 'смета в тот же выезд' }, { t: 'Пока только приёмка', hint: '' }] },
+    { q: 'Площадь квартиры', area: true },
+    { q: 'Куда отправить расчёт?', contacts: true },
+  ],
+};
+
+const PRICES = { 'Косметический': 7200, 'Чистовой': 8850, 'Черновой': 9890, 'Под ключ': 13050,
+  'Капитальный': 13300, 'Дизайнерский': 15290,
+  'Технический': 1790, 'Стандартный': 2400, 'Полный': 3500, 'Авторский': 4800 };
+
+function packCards(groups) {
+  const cards = [];
+  let cur = null;
+  groups.forEach(g => {
+    if (g.items.length >= 8) { cards.push([g]); cur = null; return; }
+    const size = cur ? cur.reduce((s, x) => s + x.items.length, 0) : 0;
+    if (cur && size + g.items.length <= 8) { cur.push(g); return; }
+    cur = [g];
+    cards.push(cur);
+  });
+  return cards;
+}
+
+class Component extends DCLogic {
+  state = { tab: 'novostroyka', faq: 0, popup: false, step: 0, pick: {}, area: 54, seoOpen: false };
+
+  fmt(n) {
+    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+  }
+
+  renderVals() {
+    const key = { 'Ремонт квартир': 'remont', 'Дизайн интерьера': 'design', 'Приёмка квартир': 'priemka' }[this.props.page] || 'remont';
+    const p = PAGES[key];
+    const mobile = !!this.props.mobile;
+    const { tab, faq, popup, step, pick, area, seoOpen } = this.state;
+
+    const steps = QUIZ[key];
+    const cur = steps[Math.min(step, steps.length - 1)];
+    const curCards = cur && cur.cardsBy ? (cur.cardsBy[pick[cur.dependsOn]] || cur.cards) : (cur ? cur.cards : null);
+    const done = step >= steps.length;
+    const rate = PRICES[pick[1]] || p.base;
+    const est = key === 'priemka' && pick[1] === 'Пока только приёмка'
+      ? '{Цена} за выезд — прайс приёмки уточняется у клиента'
+      : this.fmt(rate * area) + ' — ' + this.fmt(rate * area * 1.25);
+
+    const tabBtn = (a) => 'border:1px solid #00AD9F;border-radius:0;padding:14px 24px;font-size:clamp(11px,.95cqw,13px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;background:'
+      + (a ? '#00AD9F' : '#fff') + ';color:' + (a ? '#fff' : '#00AD9F');
+
+    const tariffs = key === 'design' ? T_DESIGN : (tab === 'novostroyka' ? T_NOVOSTROYKA : T_VTORICHKA);
+
+    return {
+      p, isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      steps: p.steps.map((s, i) => ({ n: '0' + (i + 1), title: s.title, text: s.text })),
+      clusters: packCards(p.clusters),
+      popup,
+      openPopup: () => this.setState({ popup: true }),
+      closePopup: () => this.setState({ popup: false }),
+      noSubmit: (e) => { e.preventDefault(); this.setState({ popup: false }); },
+
+      hasTabs: key !== 'design',
+      tabs: [{ k: 'novostroyka', l: 'Новостройка' }, { k: 'vtorichka', l: 'Вторичка' }]
+        .map(t => ({ label: t.l, go: () => this.setState({ tab: t.k }), css: tabBtn(tab === t.k) })),
+      tariffs,
+      portfolio: PORTFOLIO,
+      reviews: REVIEWS,
+
+      quizLabel: done ? 'Готово' : 'Шаг ' + (step + 1) + ' из ' + steps.length,
+      quizBar: 'height:100%;background:#00AD9F;transition:width .25s;width:' + Math.round(((done ? steps.length : step) / steps.length) * 100) + '%',
+      quizQuestion: done ? '' : cur.q,
+      quizCards: !done && curCards ? curCards.map(c => ({
+        t: c.t, hint: c.hint,
+        go: () => this.setState({ pick: Object.assign({}, pick, { [step]: c.t }), step: step + 1 }),
+        css: 'border:1px solid ' + (pick[step] === c.t ? '#00AD9F' : '#d9d9d9') + ';background:'
+          + (pick[step] === c.t ? '#f2fbfa' : '#fff')
+          + ';border-radius:0;padding:16px;display:flex;flex-direction:column;gap:6px;text-align:left;transition:all .15s;color:#313131',
+      })) : null,
+      quizArea: !done && !!cur.area,
+      quizContacts: !done && !!cur.contacts,
+      quizDone: done,
+      quizNav: !done,
+      canBack: step > 0,
+      nextLabel: !done && cur.contacts ? 'Получить расчёт' : 'Далее',
+      quizBack: () => this.setState({ step: Math.max(0, step - 1) }),
+      quizNext: () => this.setState({ step: step + 1 }),
+      quizReset: () => this.setState({ step: 0, pick: {} }),
+      area,
+      setArea: (e) => this.setState({ area: Number(e.target.value) }),
+      estimate: est,
+
+      seoParas: seoOpen ? p.seo : p.seo.slice(0, 2),
+      seoFade: !seoOpen,
+      seoLabel: seoOpen ? 'Свернуть' : 'Читать полностью',
+      seoBoxCss: 'position:relative;overflow:hidden;max-height:' + (seoOpen ? 'none' : 'clamp(180px,17cqw,240px)'),
+      toggleSeo: () => this.setState({ seoOpen: !seoOpen }),
+
+      faq: p.faq.map((f, i) => ({
+        q: f.q, paras: f.paras, open: faq === i, sign: faq === i ? '×' : '+',
+        go: () => this.setState({ faq: faq === i ? -1 : i }),
+      })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

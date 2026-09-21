@@ -1,0 +1,27 @@
+// ==========================================================================
+//  Утилиты. Слой utilities объявлен последним — эти классы перебивают
+//  компоненты. Использовать редко и только по назначению.
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.visually-hidden { @include visually-hidden; }
+
+.no-scroll { overflow: hidden; }
+
+.text-brand  { color: var(--c-brand); }
+.text-muted-2 { color: var(--c-muted-2); }
+
+.tabular { @include tabular; }
+
+.truncate { @include truncate; }
+
+// Скрыть на мобилке / на десктопе.
+// Нужно для декоративных фигур (специалист, инженер) — на 375 они мешают.
+.hide-mobile {
+  @media (max-width: 767.98px) { display: none; }
+}
+
+.hide-desktop {
+  @include mq('md') { display: none; }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#e9e9e7}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+
+<div style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#e9e9e7;min-height:100vh;padding:clamp(28px,4vw,64px)">
+  <div style="max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)">
+
+    <header style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <img src="assets/logo-full.png" alt="Эспада — ремонт и дизайн" style="height:38px;width:auto;display:block" />
+        <span style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#929292">Макеты переезда Tilda → WordPress</span>
+      </div>
+      <h1 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.06;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Макеты СК «Эспада»</h1>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#5c5c5c;max-width:760px;text-wrap:pretty">Внешний вид снят с текущего сайта: бирюзовый <b style="color:#00AD9F">#00AD9F</b>, TildaSans, прописные заголовки, кнопки без скруглений. Тексты — из выгрузки, без переписывания. Структура расширена по брифу: шапка из двух строк с мега-меню, хлебные крошки, форма на первом экране и CTA перед подвалом на каждой посадочной.</p>
+      <div style="font-size:12.5px;line-height:1.6;color:#929292">Каждый макет тянется: откройте его и уменьшите окно — раскладка перестроится в мобильную. Для отдельного мобильного артборда включите тумблер <b style="color:#5c5c5c">Мобильный артборд</b> в панели твиков.</div>
+    </header>
+
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+      <section style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:baseline;gap:12px;border-bottom:1px solid #d5d5d3;padding-bottom:10px">
+          <span style="background:#00AD9F;color:#fff;font-size:10px;font-weight:800;letter-spacing:.14em;padding:5px 9px;white-space:nowrap">{{ g.tag }}</span>
+          <h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#313131">{{ g.title }}</h2>
+          <span style="font-size:12px;color:#929292">{{ g.note }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">
+          <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="3">
+            <a href="{{ it.href }}" style="background:#fff;padding:22px;display:flex;flex-direction:column;gap:10px;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,.07);transition:box-shadow .2s,transform .2s;min-width:0" style-hover="box-shadow:0 12px 30px rgba(0,0,0,.13);transform:translateY(-2px)">
+              <span style="font-size:16px;font-weight:800;letter-spacing:-.005em;color:#000;line-height:1.25">{{ it.title }}</span>
+              <span style="font-size:11.5px;color:#929292;font-variant-numeric:tabular-nums">{{ it.url }}</span>
+              <span style="font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ it.note }}</span>
+              <span style="margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#00AD9F">Открыть макет →</span>
+            </a>
+          </sc-for>
+        </div>
+      </section>
+    </sc-for>
+
+    <section style="background:#fff;padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;gap:16px">
+      <h2 style="margin:0;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#00AD9F">Что осталось решить</h2>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ questions }}" as="q" hint-placeholder-count="4">
+          <div style="display:flex;gap:14px;align-items:flex-start;border-top:1px solid #ededed;padding-top:12px">
+            <span style="flex:0 0 24px;font-size:12px;font-weight:800;color:#bfbfbf;font-variant-numeric:tabular-nums">{{ q.n }}</span>
+            <span style="font-size:13.5px;line-height:1.55;color:#313131">{{ q.t }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+const GROUPS = [
+  { tag: 'Этап 1', title: 'Сквозные элементы', note: 'шапка, мега-меню, липкое и мобильное состояния, подвал, крошки, палитра', items: [
+    { title: 'Сквозные элементы', url: 'все состояния на одном листе', href: 'Сквозные элементы.dc.html',
+      note: 'Шапка в четырёх состояниях, мега-меню по двум разделам, подвал, хлебные крошки, паспорт стиля и эталон текущей шапки Tilda для сверки.' },
+  ] },
+  { tag: 'Этап 2', title: 'Страницы текущего сайта, перенесённые 1-в-1', note: 'весь контент из выгрузки от 26 августа', items: [
+    { title: 'Главная', url: 'sk-espada.ru/', href: 'Главная.dc.html',
+      note: '19 секций: обложка с формой, четыре направления, кейс ЖК Shagal целиком, тарифы в табах, портфолио, партнёры, вопрос-ответ, отзывы, контакты.' },
+    { title: 'Дизайн интерьера', url: '/design/', href: 'Дизайн интерьера.dc.html',
+      note: 'Четыре пакета дизайн-проекта с полными составами, индивидуальный подход, слайдер стилей, регламенты, форма дизайнера.' },
+    { title: 'Комплектация', url: '/komplektaciya/', href: 'Комплектация.dc.html',
+      note: 'Пять услуг комплектации, шесть этапов работы, блок «дополнительно» со связкой на приёмку и дизайн.' },
+    { title: 'Приёмка квартир', url: '/priemka/', href: 'Приёмка квартир.dc.html',
+      note: 'Пять групп проверок, связка с ремонтом по требованию брифа: принять квартиру и сразу посчитать смету.' },
+    { title: 'Партнёрам', url: '/partners/', href: 'Партнёрам.dc.html',
+      note: 'Выгоды партнёрства, как устроено по шагам, отдел развития. Добавлена форма заявки — на текущем сайте её нет вовсе.' },
+  ] },
+  { tag: 'Этап 3', title: 'Шаблон пиллара', note: 'один шаблон на три раздела — переключается твиком «Страница»', items: [
+    { title: 'Пиллар услуги', url: '/remont-kvartir/ · /design/ · /priemka/', href: 'Пиллар услуги.dc.html',
+      note: 'Обложка с ценой и формой, вводный текст с цифрами, плитка кластеров группами (25 / 11 / 3 ссылки), тарифы в табах, этапы, примеры работ, рабочий квиз-калькулятор на 4 шага, SEO-текст с раскрытием, FAQ, отзывы, CTA, контакты.' },
+  ] },
+  { tag: 'Этап 4', title: 'Шаблон категории', note: 'второй уровень — облегчённый пиллар, три примера переключаются твиком', items: [
+    { title: 'Категория услуги', url: '/remont-kvartir-novostroyka/ · /design-kuhni/ · /priemka-bez-otdelki/', href: 'Категория услуги.dc.html',
+      note: 'Крошки в три уровня, обложка с формой, вводный текст с цифрами, что входит в услугу тремя блоками, таблица цены и сроков, 4 примера работ, квиз со своим наполнением, SEO-текст, FAQ, чипы соседних кластеров, CTA.' },
+  ] },
+  { tag: 'Этап 5', title: 'Квиз-калькуляторы', note: 'два наполнения на одной механике, восемь шагов', items: [
+    { title: 'Квиз-калькуляторы', url: 'все экраны на одном листе', href: 'Квиз-калькуляторы.dc.html',
+      note: 'Шаг с карточками, шаг с ценами тарифов, ползунок площади с пресетами, сбор контактов со сводкой ответов, экран благодарности. Десктоп и мобильный, светлая и тёмная подложка, разбор логики расчёта вилки.' },
+    { title: 'Квиз', url: 'Квиз.dc.html', href: 'Квиз.dc.html',
+      note: 'Сам компонент: свойство «Квиз» переключает ремонт и дизайн-проект, «Шаг» открывает нужный экран. Вставляется на любую посадочную.' },
+  ] },
+  { tag: 'Этап 6', title: 'Формы и состояния', note: 'четыре формы, по четыре состояния каждой', items: [
+    { title: 'Формы и состояния', url: 'все состояния на одном листе', href: 'Формы.dc.html',
+      note: 'Встроенная, попап, форма в подвале и заявка на партнёрство. По каждой: пустая, заполненная, ошибка с сообщениями, отправлена с экраном «что дальше». Плюс попап в контексте страницы и правила поведения форм.' },
+    { title: 'Форма', url: 'Форма.dc.html', href: 'Форма.dc.html',
+      note: 'Сам компонент: свойства «Форма» и «Состояние». Подставляется во все посадочные.' },
+  ] },
+  { tag: 'Этап 7', title: 'Остальные шаблоны сайта', note: 'по одному файлу на группу, страница переключается твиком', items: [
+    { title: 'Портфолио и отзывы', url: '/portfolio/ · /portfolio/zhk-shagal-82m/ · /otzyvy/', href: 'Портфолио и отзывы.dc.html',
+      note: 'Портфолио с пятью фильтрами и 16 объектами, карточка кейса по ЖК Shagal (галерея, параметры, до/после, состав работ, отзыв), отзывы со сводной оценкой по площадкам и фильтром по услуге.' },
+    { title: 'О компании и контакты', url: '/o-kompanii/ · /kontakty/', href: 'О компании и контакты.dc.html',
+      note: 'Цифры, шесть принципов работы, кто ведёт объект, документы и гарантия, реквизиты. Контакты: каналы связи, офис и шоурум, отделы по вопросам, форма.' },
+    { title: 'Блог', url: '/blog/ · /blog/kak-schitaetsya-smeta/', href: 'Блог.dc.html',
+      note: 'Список с рубриками и главной статьёй. Статья: содержание, H2, цитата, список, таблица тарифов, врезка с CTA, автор, «читайте также».' },
+    { title: 'Служебные страницы', url: '/voprosy-i-otvety/ · /remont-v-zhk/… · /soglasie-na-obrabotku/ · 404 · /spasibo/', href: 'Служебные страницы.dc.html',
+      note: 'Вопросы и ответы по четырём разделам с боковой навигацией, шаблон страницы ЖК, юридический документ, 404 с полезными ссылками, страница «Спасибо» под цель в Метрике.' },
+  ] },
+  { tag: 'Компоненты', title: 'Отдельные файлы сквозных блоков', note: 'подключаются во все страницы, правятся в одном месте', items: [
+    { title: 'Шапка', url: 'Шапка.dc.html', href: 'Шапка.dc.html',
+      note: 'Состояния переключаются твиком: обычная, липкая, мобильная, мобильная раскрытая. Дерево мега-меню — из файла структуры проекта.' },
+    { title: 'Подвал', url: 'Подвал.dc.html', href: 'Подвал.dc.html',
+      note: 'Контакты, соцсети, три колонки разделов, заказ звонка, способы оплаты, реквизиты ИП, документы.' },
+    { title: 'Форма', url: 'Форма.dc.html', href: 'Форма.dc.html',
+      note: 'Четыре типа и четыре состояния. Заголовок, текст кнопки и список выгод можно переопределить со страницы — попапы пиллара и категории уже собраны из этого файла.' },
+    { title: 'Квиз', url: 'Квиз.dc.html', href: 'Квиз.dc.html',
+      note: 'Восемь шагов, два наполнения: ремонт и дизайн-проект. Вставляется на любую посадочную.' },
+  ] },
+];
+
+const QUESTIONS = [
+  'Цена на обложке главной: сейчас стоит «от 7 850 ₽ за м²», а минимум в таблице тарифов — 7 200 ₽ (косметический, вторичка). Какую цифру оставляем.',
+  'Какой телефон основной: +7 (993) 891-40-64 в шапке и подвале или +7 (980) 691-40-64 у отдела развития на странице партнёрам.',
+  'В карточке «Перепланировка» на главной стоит описание от дизайн-проекта — это ошибка текущего сайта. Перенесена как есть, нужен новый текст.',
+  'В политике конфиденциальности остались упоминания сайта atlonfm.ru и адрес info@atlonfm.ru. Документ нужно вычитать до переноса.',
+  'Почта sk-espada@rambler.ru добавлена в шапку и подвал по брифу — на текущем сайте её нет. Подтвердите, что показываем.',
+  'В пилларе ремонта цена «от 7 200 ₽» взята из таблицы тарифов, а не с обложки старого сайта — решите вместе с вопросом 1.',
+  'Сроки по тарифам ремонта и дизайна и прайс на приёмку нигде не заданы — на макете категории они стоят заполнителями {Срок} и {Цена}. Нужны цифры от клиента, иначе таблицу «Цена и сроки» придётся убирать.',
+  'Юридические страницы и карточка кейса по ЖК Shagal — следующим шагом, как только подтвердите этапы 2 и 3.',
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      groups: GROUPS,
+      questions: QUESTIONS.map((t, i) => ({ n: (i + 1) + '.', t })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+// ==========================================================================
+//  Миксины
+// ==========================================================================
+
+@use 'sass:map';
+@use 'sass:list';
+@use 'tokens' as t;
+@use 'functions' as f;
+@use 'breakpoints' as bp;
+
+// --------------------------------------------------------------------------
+//  Раскладка
+// --------------------------------------------------------------------------
+
+/// Контейнер контента. $width: 'content' | 'wide' | 'narrow'
+@mixin container($width: 'content') {
+  $max: t.$container-content;
+  @if $width == 'wide'   { $max: t.$container-wide; }
+  @if $width == 'narrow' { $max: t.$container-narrow; }
+
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/// Вертикальный ритм секции. $size: 'base' | 'tight'
+@mixin section-pad($size: 'base') {
+  $p: if($size == 'tight', t.$section-pad-tight, t.$section-pad);
+  padding-block: f.pair($p);
+}
+
+/// Авто-сетка карточек. Внутренний min() не даёт колонке вылезти
+/// за контейнер на узких экранах — сохранять обязательно.
+@mixin auto-grid($min: 280px, $gap: t.$gap-card, $align: stretch) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, $min), 1fr));
+  gap: f.pair($gap);
+  align-items: $align;
+}
+
+/// Ряд элементов через gap. Никогда не расставлять соседей margin'ами —
+/// gap выживает при drag-reorder и удалении элементов в редакторе.
+@mixin row($gap: t.$sp-3, $wrap: wrap, $align: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin stack($gap: t.$sp-3) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+// --------------------------------------------------------------------------
+//  Типографика
+// --------------------------------------------------------------------------
+
+/// Размер шрифта из шкалы: @include type('h2');
+@mixin type($name) {
+  @if not map.has-key(t.$type-scale, $name) {
+    @error 'type(): нет размера «#{$name}». Доступны: #{map.keys(t.$type-scale)}.';
+  }
+  $p: map.get(t.$type-scale, $name);
+  font-size: f.fluid(list.nth($p, 1), list.nth($p, 2));
+}
+
+/// Заголовок секции H2
+@mixin heading-2 {
+  @include type('h2');
+  margin: 0;
+  font-weight: t.$fw-extrabold;
+  line-height: t.$lh-heading;
+  letter-spacing: t.$ls-h2;
+  text-transform: uppercase;
+  color: var(--c-ink-strong);
+}
+
+/// Заголовок карточки H3
+@mixin heading-3 {
+  @include type('h3');
+  margin: 0;
+  font-weight: t.$fw-extrabold;
+  line-height: t.$lh-card;
+  letter-spacing: t.$ls-card;
+  text-transform: uppercase;
+  color: var(--c-ink);
+}
+
+/// Надзаголовок группы: 10px / 800 / 0.15em
+@mixin kicker($color: var(--c-brand)) {
+  font-size: t.$fs-kicker;
+  font-weight: t.$fw-extrabold;
+  line-height: 1.2;
+  letter-spacing: t.$ls-kicker;
+  text-transform: uppercase;
+  color: $color;
+}
+
+/// Основной текст абзаца
+@mixin body-text($color: var(--c-muted)) {
+  @include type('body');
+  margin: 0;
+  line-height: t.$lh-text;
+  color: $color;
+  text-wrap: pretty;
+}
+
+/// Числа в таблицах, ценах, счётчиках
+@mixin tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/// Обрезка строки многоточием
+@mixin truncate {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// --------------------------------------------------------------------------
+//  Состояния и движение
+// --------------------------------------------------------------------------
+
+/// Кольцо фокуса для клавиатуры. Обязательно на всех интерактивных элементах.
+@mixin focus-ring($color: var(--c-brand), $offset: 2px) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+}
+
+/// Подъём карточки при наведении. Внутри motion-safe — уважаем reduced-motion.
+@mixin lift($shadow-rest: t.$sh-card, $shadow-hover: t.$sh-card-hover, $y: -2px) {
+  box-shadow: $shadow-rest;
+  transition: box-shadow t.$dur-base t.$ease-base, transform t.$dur-slow t.$ease-base;
+
+  @include bp.motion-safe {
+    &:hover {
+      box-shadow: $shadow-hover;
+      transform: translateY($y);
+    }
+  }
+  @include bp.motion-reduce {
+    &:hover { box-shadow: $shadow-hover; }
+  }
+}
+
+/// Масштаб изображения в карточке при наведении родителя
+@mixin zoom-media($scale: 1.04) {
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    transition: transform t.$dur-slower t.$ease-base;
+  }
+
+  @include bp.motion-safe {
+    &:hover img { transform: scale($scale); }
+  }
+}
+
+// --------------------------------------------------------------------------
+//  Медиа
+// --------------------------------------------------------------------------
+
+/// Изображение с фиксированной пропорцией
+@mixin media($ratio: 4 / 3, $radius: var(--radius-img)) {
+  display: block;
+  width: 100%;
+  aspect-ratio: $ratio;
+  object-fit: cover;
+  border-radius: $radius;
+  background: var(--c-bg-alt);
+}
+
+// --------------------------------------------------------------------------
+//  Доступность
+// --------------------------------------------------------------------------
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

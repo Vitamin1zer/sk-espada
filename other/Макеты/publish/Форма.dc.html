@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+a{color:#00AD9F;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+</style>
+</helmet>
+
+<div style="{{ rootCss }}">
+
+  <sc-if value="{{ closable }}" hint-placeholder-val="{{ false }}">
+    <button type="button" aria-label="Закрыть" style="position:absolute;right:14px;top:14px;width:32px;height:32px;border:0;background:transparent;padding:0;font-size:22px;line-height:1;color:#929292">×</button>
+  </sc-if>
+
+  <sc-if value="{{ showHead }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <sc-if value="{{ kicker }}" hint-placeholder-val="{{ true }}">
+        <div style="{{ kickerCss }}">{{ kicker }}</div>
+      </sc-if>
+      <div style="{{ titleCss }}">{{ title }}</div>
+      <sc-if value="{{ subtitle }}" hint-placeholder-val="{{ true }}">
+        <div style="{{ subCss }}">{{ subtitle }}</div>
+      </sc-if>
+      <sc-if value="{{ perks }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:5px;margin-top:2px">
+          <sc-for list="{{ perks }}" as="t" hint-placeholder-count="4">
+            <span style="font-size:13px;line-height:1.5;color:#313131">{{ t }}</span>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isSent }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="width:38px;height:38px;flex:0 0 38px;background:#00AD9F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700">✓</span>
+        <span style="{{ sentTitleCss }}">{{ sentTitle }}</span>
+      </div>
+      <p style="{{ sentTextCss }}">{{ sentText }}</p>
+      <div style="{{ sentBoxCss }}">
+        <sc-for list="{{ sentSteps }}" as="s" hint-placeholder-count="3">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="flex:0 0 auto;font-size:12px;font-weight:800;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</span>
+            <span style="{{ sentStepCss }}">{{ s.t }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <a href="/portfolio/" style="{{ sentLinkCss }}">Пока посмотреть работы →</a>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isForm }}" hint-placeholder-val="{{ true }}">
+    <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:14px">
+
+      <sc-if value="{{ topError }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#fdecea;border-left:3px solid #c0392b;padding:12px 14px;font-size:12px;line-height:1.5;color:#a5301f">{{ topError }}</div>
+      </sc-if>
+
+      <sc-for list="{{ fields }}" as="f" hint-placeholder-count="2">
+        <label style="display:flex;flex-direction:column;gap:6px">
+          <span style="{{ f.labelCss }}">{{ f.label }}</span>
+          <sc-if value="{{ f.isSelect }}" hint-placeholder-val="{{ false }}">
+            <select style="{{ f.inputCss }}">
+              <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="4">
+                <option>{{ o }}</option>
+              </sc-for>
+            </select>
+          </sc-if>
+          <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
+            <input type="{{ f.type }}" value="{{ f.value }}" placeholder="{{ f.placeholder }}" onChange="{{ noop }}" style="{{ f.inputCss }}" style-focus="border-color:#00AD9F" />
+          </sc-if>
+          <sc-if value="{{ f.error }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:11px;line-height:1.4;color:#c0392b">{{ f.error }}</span>
+          </sc-if>
+        </label>
+      </sc-for>
+
+      <sc-if value="{{ hasConsent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;gap:9px;align-items:flex-start">
+            <span style="{{ boxCss }}">{{ tick }}</span>
+            <span style="{{ consentCss }}">Я даю <a href="/soglasie-na-obrabotku/" style="{{ linkCss }}">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="{{ linkCss }}">Политикой конфиденциальности</a></span>
+          </div>
+          <sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:11px;line-height:1.4;color:#c0392b;padding-left:26px">{{ consentError }}</span>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <button type="submit" style="{{ btnCss }}">{{ cta }}</button>
+
+      <sc-if value="{{ consentNote }}" hint-placeholder-val="{{ false }}">
+        <span style="{{ consentCss }}">Нажимая кнопку, вы даёте <a href="/soglasie-na-obrabotku/" style="{{ linkCss }}">согласие на обработку персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="{{ linkCss }}">Политикой конфиденциальности</a></span>
+      </sc-if>
+      <sc-if value="{{ footnote }}" hint-placeholder-val="{{ false }}">
+        <span style="{{ footnoteCss }}">{{ footnote }}</span>
+      </sc-if>
+    </form>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:460,&quot;height&quot;:520},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Встроенная&quot;,&quot;Попап&quot;,&quot;Подвал&quot;,&quot;Партнёрство&quot;],&quot;default&quot;:&quot;Встроенная&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Форма&quot;},&quot;state&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Пустая&quot;,&quot;Заполненная&quot;,&quot;Ошибка&quot;,&quot;Отправлена&quot;],&quot;default&quot;:&quot;Пустая&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Форма&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Переопределение копии&quot;},&quot;cta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Переопределение копии&quot;},&quot;perks&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;string[]&quot;,&quot;section&quot;:&quot;Переопределение копии&quot;}}">
+const KINDS = {
+  'Встроенная': {
+    dark: false, closable: false, width: 420,
+    kicker: 'Форма заявки · первый экран',
+    title: 'Рассчитаем стоимость вашего ремонта бесплатно',
+    subtitle: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд и расчёт ничего не стоят.',
+    fields: [
+      { key: 'name', label: 'ФИО', type: 'text', placeholder: 'Петров Петр Петрович', filled: 'Игорь Ланин' },
+      { key: 'phone', label: 'Ваш телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (916) 402-18-77', broken: '+7 (916) 40' },
+    ],
+    cta: 'Бесплатный расчёт сметы',
+    sentTitle: 'Заявка принята',
+    sentText: 'Инженер получил вашу заявку и перезвонит в течение рабочего дня.',
+  },
+  'Попап': {
+    dark: false, closable: true, width: 520,
+    kicker: '',
+    title: 'Получите индивидуальный расчет сметы',
+    subtitle: 'Оставьте свои контакты и вы получите:',
+    perks: ['— предварительный расчет бюджета', '— консультацию инженера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'],
+    fields: [
+      { key: 'name', label: 'ФИО', type: 'text', placeholder: 'Петров Петр Петрович', filled: 'Игорь Ланин' },
+      { key: 'phone', label: 'Ваш телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (916) 402-18-77', broken: '+7 (916) 40' },
+    ],
+    cta: 'Бесплатный расчёт сметы',
+    sentTitle: 'Заявка принята',
+    sentText: 'Расчёт уже в работе. Инженер перезвонит и согласует время выезда на объект.',
+  },
+  'Подвал': {
+    dark: true, closable: false, width: 320,
+    kicker: '',
+    title: 'Нажмите, чтобы наш менеджер связался с вами:',
+    subtitle: '',
+    fields: [
+      { key: 'phone', label: 'Телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (916) 402-18-77', broken: '+7 (916) 40' },
+    ],
+    cta: 'Заказать звонок',
+    footnote: 'Перезвоним в рабочее время: ежедневно с 9:00 до 21:00',
+    sentTitle: 'Звонок заказан',
+    sentText: 'Менеджер перезвонит в рабочее время.',
+  },
+  'Партнёрство': {
+    dark: false, closable: false, width: 440,
+    kicker: 'Заявка на партнёрство',
+    title: 'Оставьте заявку — свяжемся в тот же день',
+    subtitle: '',
+    fields: [
+      { key: 'name', label: 'Имя', type: 'text', placeholder: 'Петров Петр Петрович', filled: 'Марина Северова' },
+      { key: 'phone', label: 'Телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (903) 771-05-42', broken: '+7 (903) 77' },
+      { key: 'who', label: 'Кто вы', select: true, options: ['Дизайнер или студия дизайна', 'Агент по недвижимости', 'Поставщик материалов', 'Другое'] },
+    ],
+    cta: 'Стать партнёром',
+    sentTitle: 'Заявка принята',
+    sentText: 'Отдел развития свяжется с вами в тот же рабочий день и пришлёт условия.',
+  },
+};
+
+const SENT_STEPS = [
+  'Инженер посмотрит адрес и площадь, чтобы приехать подготовленным.',
+  'Позвонит по указанному номеру и согласует удобное время выезда.',
+  'На выезде снимет объёмы и отдаст смету — бесплатно, без обязательств.',
+];
+
+const SENT_STEPS_PARTNER = [
+  'Отдел развития посмотрит ваш профиль и объём заявок.',
+  'Позвонит и обсудит формат: передача лида, совместный объект или поставка.',
+  'Пришлёт условия и размер вознаграждения в письменном виде.',
+];
+
+class Component extends DCLogic {
+  state = { sent: null };
+
+  renderVals() {
+    const k = KINDS[this.props.kind] || KINDS['Встроенная'];
+    const st = this.props.state || 'Пустая';
+    const sent = this.state.sent === null ? st === 'Отправлена' : this.state.sent;
+    const error = st === 'Ошибка' && !sent;
+    const filled = st === 'Заполненная' || error;
+    const dark = k.dark;
+
+    const txt = dark ? '#fff' : '#313131';
+    const muted = dark ? '#bfbfbf' : '#5c5c5c';
+
+    return {
+      rootCss: 'container-type:inline-size;position:relative;font-family:TildaSans,\'Helvetica Neue\',Helvetica,sans-serif;'
+        + 'background:' + (dark ? '#313131' : '#fff') + ';padding:' + (dark ? '24px' : 'clamp(22px,2.2cqw,30px)')
+        + ';display:flex;flex-direction:column;gap:16px;color:' + txt,
+      closable: k.closable,
+      showHead: true,
+      kicker: k.kicker,
+      kickerCss: 'font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F',
+      title: this.props.title || k.title,
+      titleCss: dark
+        ? 'font-size:12.5px;line-height:1.5;color:#bfbfbf'
+        : 'font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;text-transform:uppercase;color:#000',
+      subtitle: k.subtitle,
+      subCss: 'font-size:12.5px;line-height:1.5;color:' + muted,
+      perks: this.props.perks || k.perks || null,
+
+      isForm: !sent,
+      isSent: sent,
+
+      topError: error ? 'Проверьте отмеченные поля — заявка не отправлена.' : '',
+      hasConsent: !dark,
+      consentNote: dark,
+      tick: filled && !error ? '✓' : '',
+      boxCss: 'width:17px;height:17px;flex:0 0 17px;display:flex;align-items:center;justify-content:center;margin-top:2px;'
+        + 'font-size:11px;font-weight:700;color:#fff;background:' + (filled && !error ? '#00AD9F' : 'transparent')
+        + ';border:1px solid ' + (error ? '#c0392b' : (filled ? '#00AD9F' : '#bfbfbf')),
+      consentCss: 'font-size:11px;line-height:1.45;color:' + muted,
+      linkCss: 'color:' + (dark ? '#fff' : '#00AD9F') + ';text-decoration:underline',
+      consentError: error ? 'Без согласия на обработку данных заявку отправить нельзя' : '',
+
+      fields: k.fields.map(f => {
+        const isBroken = error && f.key === 'phone';
+        const val = isBroken ? (f.broken || '') : (filled ? (f.filled || '') : '');
+        return {
+          label: f.label,
+          labelCss: 'font-size:11.5px;font-weight:600;color:' + (isBroken ? '#c0392b' : muted),
+          isSelect: !!f.select,
+          isText: !f.select,
+          type: f.type || 'text',
+          value: val,
+          placeholder: f.placeholder || '',
+          options: f.options || [],
+          error: isBroken ? 'Введите номер полностью — 10 цифр после +7' : '',
+          inputCss: 'height:46px;border:1px solid ' + (isBroken ? '#c0392b' : (val ? '#00AD9F' : '#d9d9d9'))
+            + ';border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none',
+        };
+      }),
+
+      cta: this.props.cta || k.cta,
+      btnCss: 'background:' + (dark ? '#00AD9F' : '#00AD9F') + ';color:#fff;border:0;border-radius:0;padding:16px 20px;'
+        + 'font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;'
+        + 'align-self:' + (dark ? 'flex-start' : 'stretch'),
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      noop: () => {},
+
+      footnote: k.footnote || '',
+      footnoteCss: 'font-size:11px;line-height:1.5;color:' + (dark ? '#8f8f8f' : '#929292'),
+
+      sentTitle: k.sentTitle,
+      sentTitleCss: 'font-size:clamp(15px,1.4cqw,20px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:'
+        + (dark ? '#fff' : '#000') + ';line-height:1.2',
+      sentText: k.sentText,
+      sentTextCss: 'margin:0;font-size:13px;line-height:1.6;color:' + muted + ';max-width:400px',
+      sentBoxCss: 'background:' + (dark ? 'rgba(255,255,255,.07)' : '#f8f8f8') + ';padding:16px;display:flex;flex-direction:column;gap:9px;width:100%',
+      sentStepCss: 'font-size:12px;line-height:1.5;color:' + muted,
+      sentSteps: (this.props.kind === 'Партнёрство' ? SENT_STEPS_PARTNER : SENT_STEPS).map((t, i) => ({ n: (i + 1) + '.', t })),
+      sentLinkCss: 'font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F',
+    };
+  }
+}
+
+</script>
+</body>
+</html>

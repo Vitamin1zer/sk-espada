@@ -1,0 +1,29 @@
+// ==========================================================================
+//  TildaSans — гарнитура проекта.
+//  Файлы: assets/fonts/TildaSans-*.woff2, 7 начертаний.
+//  Путь подставить свой: в теме WP это get_template_directory_uri().
+// ==========================================================================
+
+$font-path: '../fonts' !default;
+
+@each $name, $weight in (
+  'Light':      300,
+  'Regular':    400,
+  'Medium':     500,
+  'Semibold':   600,
+  'Bold':       700,
+  'ExtraBold':  800,
+  'Black':      900
+) {
+  @font-face {
+    font-family: 'TildaSans';
+    src: url('#{$font-path}/TildaSans-#{$name}.woff2') format('woff2');
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+// Предзагрузка в <head> темы — только два начертания первого экрана:
+// <link rel="preload" href=".../TildaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+// <link rel="preload" href=".../TildaSans-Regular.woff2"   as="font" type="font/woff2" crossorigin>

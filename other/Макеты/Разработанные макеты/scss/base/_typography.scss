@@ -1,0 +1,121 @@
+// ==========================================================================
+//  Типографика документа.
+//
+//  Внимание: эти правила применяются к «голым» тегам и нужны прежде всего
+//  для контента из WYSIWYG-полей ACF (SEO-текст, тело статьи блога,
+//  юридические документы). В компонентах заголовки стилизуются классами.
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+h1 {
+  @include type('h1');
+  font-weight: $fw-extrabold;
+  line-height: 1.04;
+  letter-spacing: $ls-h1;
+  text-transform: uppercase;
+  color: var(--c-ink-strong);
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include type('h3-brand');
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  letter-spacing: $ls-card;
+  text-transform: uppercase;
+  color: var(--c-ink);
+}
+
+h4 {
+  font-size: $fs-small;
+  font-weight: $fw-bold;
+  line-height: $lh-card;
+  color: var(--c-ink);
+}
+
+p {
+  @include body-text;
+}
+
+strong, b { font-weight: $fw-bold; }
+em, i     { font-style: italic; }
+
+small {
+  font-size: $fs-caption;
+  color: var(--c-muted-2);
+}
+
+// --------------------------------------------------------------------------
+//  .espada-prose — обёртка для контента из WYSIWYG.
+//  Ставится на контейнер, куда выводится the_content() или ACF wysiwyg.
+//  Вертикальный ритм внутри задаётся здесь, потому что разметку из
+//  редактора мы не контролируем.
+// --------------------------------------------------------------------------
+
+.espada-prose {
+  @include stack($sp-5);
+
+  > * { margin: 0; }
+
+  h2 { margin-top: $sp-3; }
+  h3 { margin-top: $sp-2; }
+
+  ul, ol {
+    @include stack($sp-3);
+    margin: 0;
+    padding-left: $sp-5;
+  }
+
+  li {
+    @include type('body');
+    line-height: $lh-base;
+    color: var(--c-ink);
+
+    &::marker { color: var(--c-brand); }
+  }
+
+  // Цитата в статье блога: левая полоса, курсив
+  blockquote {
+    margin: 0;
+    padding: $sp-1 0 $sp-1 $sp-5;
+    border-left: $bw-accent solid var(--c-brand);
+    font-size: fluid(14px, 17px);
+    font-style: italic;
+    line-height: $lh-base;
+    color: var(--c-muted);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      padding-bottom: 11px;
+      border-bottom: $bw-accent solid var(--c-ink);
+      @include kicker(var(--c-muted-2));
+      text-align: left;
+    }
+
+    td {
+      padding: 13px 0;
+      border-bottom: $bw-base solid var(--c-line-4);
+      font-size: 13.5px;
+      color: var(--c-ink);
+
+      &:last-child {
+        font-weight: $fw-bold;
+        color: var(--c-brand);
+        @include tabular;
+      }
+    }
+  }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+
+
+
+
+
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+    <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+      <a href="/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+      <span style="font-size:12px;color:#bfbfbf">/</span>
+      <sc-if value="{{ isPost }}" hint-placeholder-val="{{ false }}">
+        <a href="/blog/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Блог</a>
+        <span style="font-size:12px;color:#bfbfbf">/</span>
+      </sc-if>
+      <span style="font-size:12px;color:#5c5c5c">{{ crumb }}</span>
+    </div>
+  </div>
+
+  <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <section data-screen-label="Заголовок блога" style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 clamp(24px,2.6cqw,36px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
+          <h1 style="margin:0;font-size:clamp(26px,3.2cqw,46px);line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Блог о ремонте</h1>
+          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:680px;text-wrap:pretty">Разбираем то, что спрашивают на замерах: как считается смета, что проверять при приёмке, где ремонт съедает бюджет незаметно. Пишут инженеры и дизайнеры, которые ведут объекты, а не редакция.</p>
+        </div>
+      </section>
+
+      <section data-screen-label="Рубрики" style="background:#f8f8f8;padding:clamp(20px,2.2cqw,30px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
+          <span style="flex:0 0 110px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292">Рубрика</span>
+          <div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+              <button type="button" onClick="{{ c.go }}" style="{{ c.css }}">{{ c.t }}</button>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Главная статья" style="background:#fff;padding:clamp(36px,4cqw,64px) 0 clamp(24px,2.6cqw,38px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <a href="/blog/kak-schitaetsya-smeta/" style="text-decoration:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,2.4cqw,40px);align-items:center">
+            <div style="min-width:0;overflow:hidden">
+              <img src="{{ hero.img }}" alt="{{ hero.title }}" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#f0f0f0;transition:transform .4s cubic-bezier(.4,0,.2,1)" style-hover="transform:scale(1.03)" />
+            </div>
+            <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                <span style="background:#00AD9F;color:#fff;padding:6px 11px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">{{ hero.cat }}</span>
+                <span style="font-size:11.5px;color:#929292">{{ hero.date }} · {{ hero.read }}</span>
+              </div>
+              <h2 style="margin:0;font-size:clamp(20px,2.2cqw,31px);line-height:1.14;font-weight:800;letter-spacing:-.015em;color:#000">{{ hero.title }}</h2>
+              <p style="margin:0;font-size:clamp(13px,1.1cqw,16px);line-height:1.6;color:#5c5c5c;text-wrap:pretty">{{ hero.excerpt }}</p>
+              <span style="font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F">Читать статью →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section data-screen-label="Список статей" style="background:#fff;padding:0 0 clamp(44px,5cqw,80px)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2cqw,30px)">
+            <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+              <a href="/blog/kak-schitaetsya-smeta/" style="text-decoration:none;display:flex;flex-direction:column;gap:14px;min-width:0">
+                <div style="overflow:hidden">
+                  <img src="{{ p.img }}" alt="{{ p.title }}" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#f0f0f0;transition:transform .4s cubic-bezier(.4,0,.2,1)" style-hover="transform:scale(1.04)" />
+                </div>
+                <div style="display:flex;flex-direction:column;gap:9px">
+                  <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+                    <span style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#00AD9F">{{ p.cat }}</span>
+                    <span style="font-size:11px;color:#bfbfbf">{{ p.read }}</span>
+                  </div>
+                  <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);line-height:1.3;font-weight:700;letter-spacing:-.005em;color:#000">{{ p.title }}</h3>
+                  <p style="margin:0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ p.excerpt }}</p>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+          <div style="margin-top:clamp(30px,3.4cqw,50px);display:flex;justify-content:center">
+            <button type="button" style="border:1px solid #00AD9F;background:transparent;color:#00AD9F;padding:17px 32px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Показать ещё</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isPost }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <article style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 0">
+        <div data-screen-label="Шапка статьи" style="max-width:820px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <span style="background:#00AD9F;color:#fff;padding:6px 11px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Смета и цены</span>
+            <span style="font-size:11.5px;color:#929292">{{ post.date }} · {{ post.read }}</span>
+          </div>
+          <h1 style="margin:0;font-size:clamp(25px,2.9cqw,42px);line-height:1.08;font-weight:800;letter-spacing:-.02em;color:#000">Как считается смета на ремонт и почему она растёт</h1>
+          <p style="margin:0;font-size:clamp(14px,1.2cqw,18px);line-height:1.6;color:#5c5c5c;text-wrap:pretty">Разбираем, из чего складывается цена за квадратный метр, что в неё не входит и в каких случаях сумма меняется уже в процессе работ.</p>
+          <div style="display:flex;gap:12px;align-items:center;border-top:1px solid #ededed;border-bottom:1px solid #ededed;padding:14px 0">
+            <img src="assets/engineer.png" alt="Иван, инженер-сметчик" style="width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;display:block;background:#f0f0f0" />
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:13.5px;font-weight:700;color:#313131">Иван</span>
+              <span style="font-size:11.5px;color:#929292">инженер-сметчик СК «Эспада»</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="max-width:820px;margin:0 auto;padding:clamp(26px,2.8cqw,42px) clamp(16px,1.4cqw,20px) 0">
+          <img src="assets/case-w1.jpg" alt="Смета на ремонт квартиры" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#f0f0f0" />
+        </div>
+
+        <div data-screen-label="Содержание" style="max-width:820px;margin:0 auto;padding:clamp(26px,2.8cqw,42px) clamp(16px,1.4cqw,20px) 0">
+          <nav style="background:#f8f8f8;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:12px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#929292">Содержание</span>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <sc-for list="{{ toc }}" as="t" hint-placeholder-count="4">
+                <a href="{{ t.href }}" style="font-size:13.5px;line-height:1.4;color:#313131;text-decoration:none" style-hover="color:#00AD9F">{{ t.n }}. {{ t.t }}</a>
+              </sc-for>
+            </div>
+          </nav>
+        </div>
+
+        <div data-screen-label="Тело статьи" style="max-width:820px;margin:0 auto;padding:clamp(26px,2.8cqw,42px) clamp(16px,1.4cqw,20px) clamp(36px,4cqw,60px);display:flex;flex-direction:column;gap:clamp(20px,2.2cqw,30px)">
+          <sc-for list="{{ body }}" as="b" hint-placeholder-count="8">
+            <div>
+              <sc-if value="{{ b.isH2 }}" hint-placeholder-val="{{ false }}">
+                <h2 id="{{ b.id }}" style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.18;font-weight:800;letter-spacing:-.01em;color:#000">{{ b.t }}</h2>
+              </sc-if>
+              <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
+                <p style="margin:0;font-size:clamp(14px,1.15cqw,16.5px);line-height:1.75;color:#313131;text-wrap:pretty">{{ b.t }}</p>
+              </sc-if>
+              <sc-if value="{{ b.isQuote }}" hint-placeholder-val="{{ false }}">
+                <div style="border-left:3px solid #00AD9F;padding:4px 0 4px 20px;font-size:clamp(14px,1.2cqw,17px);line-height:1.65;color:#5c5c5c;font-style:italic">{{ b.t }}</div>
+              </sc-if>
+              <sc-if value="{{ b.isList }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column;gap:11px">
+                  <sc-for list="{{ b.items }}" as="i" hint-placeholder-count="4">
+                    <div style="display:flex;gap:12px;align-items:flex-start">
+                      <span style="flex:0 0 auto;font-size:14px;line-height:1.5;color:#00AD9F;font-weight:700">—</span>
+                      <span style="font-size:clamp(13.5px,1.1cqw,16px);line-height:1.6;color:#313131">{{ i }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+              <sc-if value="{{ b.isTable }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column">
+                  <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;padding-bottom:11px;border-bottom:2px solid #313131">
+                    <span style="font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292">Тариф</span>
+                    <span style="font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292">Цена за м²</span>
+                  </div>
+                  <sc-for list="{{ b.rows }}" as="r" hint-placeholder-count="5">
+                    <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:13px 0;border-bottom:1px solid #ededed">
+                      <span style="font-size:13.5px;color:#313131">{{ r.k }}</span>
+                      <span style="font-size:13.5px;font-weight:700;color:#00AD9F;font-variant-numeric:tabular-nums">{{ r.v }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+
+          <div style="background:#00AD9F;padding:clamp(22px,2.4cqw,32px);display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+            <h3 style="margin:0;font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff">Посчитать смету по вашей квартире</h3>
+            <p style="margin:0;font-size:13px;line-height:1.6;color:#fff;max-width:460px">Инженер приедет на объект, снимет объёмы и соберёт смету по фактическим площадям. Выезд и расчёт бесплатные.</p>
+            <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">Бесплатный расчёт сметы</button>
+          </div>
+        </div>
+      </article>
+
+      <section data-screen-label="Читайте также" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Читайте также</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2cqw,30px)">
+            <sc-for list="{{ related }}" as="p" hint-placeholder-count="3">
+              <a href="/blog/kak-schitaetsya-smeta/" style="text-decoration:none;display:flex;flex-direction:column;gap:14px;min-width:0">
+                <div style="overflow:hidden">
+                  <img src="{{ p.img }}" alt="{{ p.title }}" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#eaeaea;transition:transform .4s cubic-bezier(.4,0,.2,1)" style-hover="transform:scale(1.04)" />
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <span style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#00AD9F">{{ p.cat }}</span>
+                  <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);line-height:1.3;font-weight:700;color:#000">{{ p.title }}</h3>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+  <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
+      <div style="width:100%;max-width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+        <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="100%,520px"></dc-import>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Список&quot;,&quot;Статья&quot;],&quot;default&quot;:&quot;Список&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const CATS = ['Все', 'Смета и цены', 'Приёмка', 'Дизайн-проект', 'Материалы', 'Технологии'];
+
+const HERO = {
+  cat: 'Смета и цены', date: '{Дата}', read: '7 минут',
+  title: 'Как считается смета на ремонт и почему она растёт',
+  img: 'assets/case-w1.jpg',
+  excerpt: 'Цена за квадратный метр — не итоговая сумма, а ставка. Разбираем, из чего она складывается, что в неё не входит и в каких случаях смета меняется уже в процессе работ.',
+};
+
+const POSTS = [
+  { cat: 'Приёмка', read: '6 минут', img: 'assets/dir-4.jpg',
+    title: 'Что проверять при приёмке квартиры без отделки',
+    excerpt: 'Геометрия стен и стяжки, вводы коммуникаций, вентиляция. То, что закроется отделкой и станет недоступным.' },
+  { cat: 'Дизайн-проект', read: '5 минут', img: 'assets/dz-team.jpg',
+    title: 'Зачем нужен технический проект, если есть картинки',
+    excerpt: 'Комплект чертежей стоит дешевле переделок. Считаем на примере переноса электрики и сантехшкафа.' },
+  { cat: 'Материалы', read: '8 минут', img: 'assets/moment-1.jpg',
+    title: 'Где ремонт съедает бюджет незаметно',
+    excerpt: 'Штукатурка по кривым стенам, подрезка плитки, доборы. Позиции, которые редко попадают в первую смету.' },
+  { cat: 'Технологии', read: '6 минут', img: 'assets/master-4.jpg',
+    title: 'Стяжка, наливной пол и сухая засыпка: что выбрать',
+    excerpt: 'Сроки высыхания, нагрузка на перекрытие, совместимость с тёплым полом и ламинатом.' },
+  { cat: 'Смета и цены', read: '5 минут', img: 'assets/moment-2.jpg',
+    title: 'Поэтапная оплата: как это работает на практике',
+    excerpt: 'Этап закрыт, акт подписан, оплата. Почему такой порядок защищает и заказчика, и подрядчика.' },
+  { cat: 'Приёмка', read: '4 минуты', img: 'assets/case-w5.jpg',
+    title: 'Ремонт в ЖК: согласования, режим работ, вывоз мусора',
+    excerpt: 'Защита МОПов, часы шумных работ, пропуска на доставку. Что согласовать до начала демонтажа.' },
+];
+
+const TOC = [
+  { t: 'Из чего складывается цена за квадратный метр', href: '#p1' },
+  { t: 'Что не входит в ставку', href: '#p2' },
+  { t: 'Когда смета меняется', href: '#p3' },
+  { t: 'Как проверить смету перед подписанием', href: '#p4' },
+];
+
+const BODY = [
+  { p: 'Когда компания пишет «ремонт от 8 850 ₽ за м²», это не стоимость вашего ремонта. Это ставка, которую нужно умножить на площадь по полу и дополнить тем, что в ставку не входит. Разница между ставкой и итоговой суммой — главный источник разочарования на старте работ, поэтому разберём её по частям.' },
+  { h2: 'Из чего складывается цена за квадратный метр', id: 'p1' },
+  { p: 'Ставка собирается из объёмов работ по каждому этапу, приведённых к одному квадратному метру пола. В чистовую отделку входит один набор операций, в ремонт под ключ — другой, и разница между ними не в качестве, а в количестве этапов.' },
+  { table: true, rows: [
+    { k: 'Косметический ремонт (вторичка)', v: 'от 7 200 ₽' },
+    { k: 'Чистовой ремонт (новостройка)', v: 'от 8 850 ₽' },
+    { k: 'Черновой ремонт', v: 'от 9 890 ₽' },
+    { k: 'Ремонт под ключ', v: 'от 13 050 ₽' },
+    { k: 'Дизайнерский ремонт', v: 'от 15 290 ₽' },
+  ] },
+  { p: 'Ставка считается по полу, а не по площади стен и потолков. Это важно: в квартире с высокими потолками объём штукатурки будет больше при той же площади пола, и грамотная смета это учитывает отдельными позициями, а не средним коэффициентом.' },
+  { h2: 'Что не входит в ставку', id: 'p2' },
+  { list: true, items: [
+    'Материалы — черновые и чистовые. Их считает комплектатор отдельной спецификацией, чтобы вы видели цену каждой позиции и могли её заменить.',
+    'Мебель, техника, сантехническое оборудование и свет. В авторском пакете дизайна это оформляется комплектацией.',
+    'Демонтаж на вторичке, если объём заранее неизвестен: под старым покрытием может оказаться что угодно.',
+    'Согласование перепланировки — отдельная услуга со своими сроками и госпошлинами.',
+  ] },
+  { h2: 'Когда смета меняется', id: 'p3' },
+  { p: 'При подписании договора фиксируется прайс на все ремонтные услуги, и до конца ремонта он не меняется. Сметная стоимость может измениться только в одном случае: если вы сами решаете сменить вид работ или добавить то, чего в смете не было.' },
+  { quote: 'Игорь понимал стоимость каждого вида работ ещё до начала ремонта. Поэтому изменения возникали только тогда, когда он сам принимал новые решения.' },
+  { p: 'Второй источник изменений — ошибки в чужом дизайн-проекте. Наш инженер проверяет проект до старта: на одном объекте такая проверка сняла перенос части электрики, смену размеров мебели, переделку сантехнического шкафа и перенос кондиционера. Всё это было бы оплачено заказчиком по факту, если бы обнаружилось на площадке.' },
+  { h2: 'Как проверить смету перед подписанием', id: 'p4' },
+  { list: true, items: [
+    'Смотрите, разбита ли работа на этапы с объёмами, а не на три строки «черновая, чистовая, инженерия».',
+    'Проверьте, указана ли единица измерения по каждой позиции: метр квадратный, метр погонный, точка, штука.',
+    'Уточните, что происходит при отклонении геометрии от нормы — это самая частая скрытая позиция.',
+    'Убедитесь, что порядок оплаты привязан к акту выполненных работ, а не к календарю.',
+  ] },
+  { p: 'Смета, собранная по фактическим объёмам, длиннее и на первый взгляд дороже короткой. Но именно она не растёт в процессе — в отличие от короткой, где всё неучтённое всплывает счетами по ходу работ.' },
+];
+
+const RELATED = [
+  { cat: 'Приёмка', title: 'Что проверять при приёмке квартиры без отделки', img: 'assets/dir-4.jpg' },
+  { cat: 'Материалы', title: 'Где ремонт съедает бюджет незаметно', img: 'assets/moment-1.jpg' },
+  { cat: 'Смета и цены', title: 'Поэтапная оплата: как это работает на практике', img: 'assets/moment-2.jpg' },
+];
+
+class Component extends DCLogic {
+  state = { cat: 'Все', popup: false };
+
+  renderVals() {
+    const key = this.props.page || 'Список';
+    const mobile = !!this.props.mobile;
+    const { cat, popup } = this.state;
+
+    return {
+      isList: key === 'Список',
+      isPost: key === 'Статья',
+      crumb: key === 'Статья' ? 'Как считается смета на ремонт' : 'Блог',
+      isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      popup,
+      openPopup: () => this.setState({ popup: true }),
+
+      cats: CATS.map(t => ({
+        t,
+        go: () => this.setState({ cat: t }),
+        css: 'border:1px solid ' + (cat === t ? '#00AD9F' : '#e2e2e2') + ';background:'
+          + (cat === t ? '#00AD9F' : '#fff') + ';color:' + (cat === t ? '#fff' : '#5c5c5c')
+          + ';padding:9px 14px;font-size:12px;line-height:1.2;white-space:nowrap;transition:all .15s',
+      })),
+      hero: HERO,
+      posts: cat === 'Все' ? POSTS : POSTS.filter(p => p.cat === cat),
+      post: { date: '{Дата}', read: '7 минут' },
+      toc: TOC.map((t, i) => ({ n: i + 1, t: t.t, href: t.href })),
+      body: BODY.map(b => ({
+        isH2: !!b.h2, isP: !!b.p, isQuote: !!b.quote, isList: !!b.list, isTable: !!b.table,
+        t: b.h2 || b.p || b.quote || '',
+        id: b.id || '',
+        items: b.items || [],
+        rows: b.rows || [],
+      })),
+      related: RELATED,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

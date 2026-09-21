@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <section data-screen-label="404" style="background:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,5.4cqw,96px) clamp(16px,1.4cqw,20px) clamp(40px,4.4cqw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,3.4cqw,56px);align-items:center">
+
+      <div style="display:flex;flex-direction:column;gap:clamp(16px,1.6cqw,24px);min-width:0">
+        <div style="font-size:clamp(88px,13cqw,190px);line-height:.86;font-weight:900;letter-spacing:-.04em;color:#00AD9F">404</div>
+        <h1 style="margin:0;font-size:clamp(26px,3.2cqw,44px);line-height:1.06;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Такой страницы нет</h1>
+        <p style="margin:0;font-size:clamp(14px,1.05cqw,16px);line-height:1.6;color:#5c5c5c;max-width:520px;text-wrap:pretty">Адрес введён с ошибкой или страница переехала. Ниже — разделы, с которых удобно продолжить.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+          <a href="/" style="background:#00AD9F;color:#fff;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:16px 28px;white-space:nowrap" style-hover="background:#026B63">На главную</a>
+          <a href="/kontakty/" style="border:1px solid #313131;color:#313131;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:15px 27px;white-space:nowrap" style-hover="border-color:#00AD9F;color:#00AD9F">Связаться с нами</a>
+        </div>
+      </div>
+
+      <div style="min-width:0;display:flex;flex-direction:column;gap:2px;border-top:1px solid #ededed">
+        <sc-for list="{{ links }}" as="l" hint-placeholder-count="7">
+          <a href="{{ l.href }}" style="display:flex;align-items:baseline;gap:14px;padding:16px 4px;border-bottom:1px solid #ededed;color:#313131;text-decoration:none" style-hover="color:#00AD9F">
+            <span style="flex:0 0 auto;font-size:11px;font-weight:800;color:#bfbfbf;font-variant-numeric:tabular-nums">{{ l.n }}</span>
+            <span style="flex:1;min-width:0;font-size:15px;font-weight:700;letter-spacing:-.005em">{{ l.t }}</span>
+            <span style="flex:0 0 auto;font-size:12px;color:#929292">{{ l.note }}</span>
+          </a>
+        </sc-for>
+      </div>
+
+    </div>
+  </section>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const LINKS = [
+  { t: 'Ремонт квартир', href: '/remont-kvartir/', note: 'под ключ, все виды' },
+  { t: 'Дизайн интерьера', href: '/design/', note: 'проект и авторский надзор' },
+  { t: 'Комплектация', href: '/komplektaciya/', note: 'материалы и мебель' },
+  { t: 'Приёмка квартир', href: '/priemka/', note: 'новостройка и вторичка' },
+  { t: 'Услуги', href: '/uslugi/', note: 'отдельные работы' },
+  { t: 'Портфолио', href: '/portfolio/', note: 'сданные объекты' },
+  { t: 'Блог', href: '/blog/', note: 'разборы и советы' },
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const mobile = !!this.props.mobile;
+    return {
+      headerVariant: mobile ? 'mobile' : 'default',
+      isMobile: mobile,
+      links: LINKS.map((l, i) => ({ t: l.t, href: l.href, note: l.note, n: '0' + (i + 1) })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+// ==========================================================================
+//  Хлебные крошки.
+//  ВАЖНО: цепочка строится по дереву страниц в админке (post_parent),
+//  а не по сегментам URL. Адреса плоские: /design-kvartir/, но крошка
+//  показывает Главная / Дизайн интерьера / Дизайн интерьера квартиры.
+//  Реализация: 03-wordpress-tema.md §6
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.espada-breadcrumbs {
+  background: var(--c-bg);
+  border-bottom: $bw-base solid var(--c-line-4);
+
+  &__inner {
+    @include container('wide');
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    padding-block: $sp-4;
+  }
+
+  &__item,
+  &__sep,
+  &__current {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  &__item {
+    color: var(--c-muted-2);
+
+    &:hover { color: var(--c-brand); }
+  }
+
+  &__sep {
+    color: var(--c-muted-3);
+  }
+
+  // Последний элемент — не ссылка
+  &__current {
+    color: var(--c-muted);
+  }
+}

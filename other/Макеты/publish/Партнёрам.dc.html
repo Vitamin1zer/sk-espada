@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+
+
+
+
+
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+::selection{background:#00AD9F;color:#fff}
+</style>
+</helmet>
+
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+    <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+      <a href="/" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+      <span style="font-size:12px;color:#bfbfbf">/</span>
+      <span style="font-size:12px;color:#5c5c5c">Партнёрам</span>
+    </div>
+  </div>
+
+  <section data-screen-label="Обложка" style="background:#f8f8f8;padding:clamp(40px,4.4cqw,72px) 0 clamp(44px,5cqw,80px)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,3cqw,48px);align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(16px,1.6cqw,24px)">
+        <h1 style="margin:0;font-size:clamp(30px,4.4cqw,64px);line-height:1.02;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Партнерам</h1>
+        <div style="display:flex;flex-direction:column;gap:10px;max-width:540px">
+          <p style="margin:0;font-size:clamp(14px,1.25cqw,18px);line-height:1.55;color:#313131">Работа с нами — стабильный поток клиентов, прозрачные условия и быстрые выплаты.</p>
+          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">Работаем с ремонтом квартир и дизайном интерьеров в Москве и МО.</p>
+          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">Надёжное партнёрство для долгосрочного заработка.</p>
+        </div>
+        <div style="align-self:flex-start;background:#00AD9F;color:#fff;padding:14px 24px;font-size:clamp(14px,1.25cqw,18px);font-weight:700;letter-spacing:.02em">Стань партнером Эспады!</div>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:flex-end">
+        <form onSubmit="{{ noSubmit }}" style="width:100%;max-width:440px;background:#fff;padding:clamp(22px,2.1cqw,32px);display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 22px rgba(0,0,0,.07)">
+          <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">Заявка на партнёрство</div>
+          <div style="font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;text-transform:uppercase;color:#000">Оставьте заявку — <span style="color:#00AD9F">свяжемся в тот же день</span></div>
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Имя</span>
+            <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Телефон</span>
+            <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Кто вы</span>
+            <select style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 11px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F">
+              <option>Дизайнер или студия дизайна</option>
+              <option>Агент по недвижимости</option>
+              <option>Поставщик материалов</option>
+              <option>Другое</option>
+            </select>
+          </label>
+          <div style="display:flex;gap:9px;align-items:flex-start">
+            <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
+            <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+          </div>
+          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:16px 20px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">Стать партнёром</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="О компании" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2cqw,28px);align-items:start">
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="3">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+          <img src="{{ c.img }}" alt="{{ c.title }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;background:#f0f0f0" />
+          <sc-if value="{{ c.kicker }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">{{ c.kicker }}</div>
+          </sc-if>
+          <h2 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ c.title }}</h2>
+          <a href="{{ c.href }}" style="align-self:flex-start;background:transparent;color:#00AD9F;border:1px solid #00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Подробнее</a>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Выгоды партнёрства" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000;max-width:820px">Присоединяйся к нашей дружной команде в качестве партнера!</h2>
+      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+          <div style="background:#fff;border-radius:10px;padding:clamp(20px,2cqw,28px);display:flex;flex-direction:column;gap:14px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)">
+            <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#00AD9F;line-height:1.25">{{ b.title }}</h3>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ b.items }}" as="i" hint-placeholder-count="3">
+                <span style="font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ i }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Как всё устроено" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Как всё устроено</h2>
+      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2.2cqw,36px)">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+          <div style="min-width:0;position:relative;overflow:hidden;padding-top:18px" style-hover="--ln:-104%;--up:-7px">
+            <div style="position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(var(--ln,0));transition:transform .4s cubic-bezier(.4,0,.2,1)"></div>
+            <div style="display:flex;flex-direction:column;gap:12px;transform:translateY(var(--up,0));transition:transform .3s cubic-bezier(.4,0,.2,1)">
+              <div style="font-size:clamp(24px,2.4cqw,34px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
+              <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ s.title }}</h3>
+            </div>
+            <p style="margin:12px 0 0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ s.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Контакты отдела развития" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(22px,2.4cqw,36px)">
+        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#00AD9F">Контакты</h2>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Отдел развития:</h3>
+          <a href="tel:+79806914064" style="font-size:clamp(22px,2.1cqw,30px);font-weight:600;color:#00AD9F;text-decoration:underline;text-underline-offset:4px">+7 (980) 691-40-64</a>
+          <a href="mailto:sk-espada@rambler.ru" style="font-size:clamp(13px,1.05cqw,15px);color:#5c5c5c;text-decoration:none" style-hover="color:#00AD9F">sk-espada@rambler.ru</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Адрес офиса:</h3>
+          <div style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="color:#00AD9F">ул. Дегунинская, д.1, корп.2</a></div>
+        </div>
+      </div>
+      <div style="min-width:0">
+        <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="display:block">
+          <img src="assets/map.jpg" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" style="width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;background:#f0f0f0" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const CARDS = [
+  { kicker: 'О компании', title: 'Наш профиль — ремонт квартир под ключ в Москве и МО', img: 'assets/partners-1.jpg', href: '/remont-kvartir/' },
+  { kicker: '', title: 'Мы создаем дизайн-проекты любой сложности', img: 'assets/partners-2.jpg', href: '/design/' },
+  { kicker: '', title: 'И осуществляем профессиональную приемку квартир', img: 'assets/partners-3.jpg', href: '/priemka/' },
+];
+
+const BENEFITS = [
+  { title: 'Высокая конверсия лидов', items: [
+    '— грамотная обработка заявок;',
+    '— профессиональные замеры и консультации;',
+    '— умение работать с возражениями клиентов.' ] },
+  { title: 'Высокий средний чек', items: [
+    '— полный цикл работ по ремонту;',
+    '— дополнительные услуги (дизайн-проекты, спецмонтаж и т.д.).' ] },
+  { title: 'Предсказуемость и контроль результата', items: [
+    '— чёткая фиксация каждого лида;',
+    '— понятный статус на всех этапах сделки.' ] },
+  { title: 'Долгосрочное сотрудничество', items: [
+    '— мы заинтересованы не в разовой сделке, а в партнёрстве;',
+    '— готовы масштабировать взаимодействие при росте объёмов.' ] },
+];
+
+const STEPS = [
+  { title: 'Заявка', text: 'Оставляете заявку на этой странице — отдел развития связывается в тот же рабочий день.' },
+  { title: 'Условия', text: 'Обсуждаем формат: передача лида, совместный объект или поставка. Фиксируем вознаграждение письменно.' },
+  { title: 'Передача клиента', text: 'Лид фиксируется за вами. Статус сделки виден на каждом этапе — от замера до подписания акта.' },
+  { title: 'Выплата', text: 'Вознаграждение выплачивается по факту закрытия этапа, без задержек и пересчётов.' },
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const mobile = !!this.props.mobile;
+    return {
+      headerVariant: mobile ? 'mobile' : 'default',
+      isMobile: mobile,
+      cards: CARDS,
+      benefits: BENEFITS,
+      steps: STEPS.map((s, i) => ({ n: '0' + (i + 1), title: s.title, text: s.text })),
+      noSubmit: (e) => { e.preventDefault(); },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

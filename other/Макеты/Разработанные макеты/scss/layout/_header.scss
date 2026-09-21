@@ -1,0 +1,351 @@
+// ==========================================================================
+//  Шапка.
+//  Две строки: утилитарная 38px + основная 84px. Липкая — 62px без
+//  утилитарной. Мобильная — одна строка 58px с бургером.
+//  Макет: Сквозные элементы.dc.html, блоки 1a–1d, 1g
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.espada-header {
+  position: relative;
+  z-index: z('sticky');
+  background: var(--c-bg);
+
+  // ------------------------------------------------------------------------
+  //  Утилитарная строка: город, телефон, почта + страницы доверия
+  // ------------------------------------------------------------------------
+
+  &__util {
+    background: var(--c-bg-alt);
+    border-bottom: $bw-base solid var(--c-line-4);
+
+    // На мобилке уезжает целиком: телефон переносится в основную строку
+    display: none;
+    @include mq('lg') { display: block; }
+  }
+
+  &__util-inner {
+    @include container('wide');
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: fluid(12px, 24px);
+    height: $header-util-h;
+    overflow: hidden;
+  }
+
+  &__geo {
+    font-size: $fs-caption;
+    letter-spacing: .02em;
+    color: var(--c-muted-2);
+    white-space: nowrap;
+  }
+
+  &__util-links {
+    @include row(fluid(10px, 18px), nowrap);
+  }
+
+  &__util-link {
+    font-size: $fs-legal;
+    font-weight: $fw-semibold;
+    letter-spacing: $ls-util;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    white-space: nowrap;
+
+    &:hover { color: var(--c-brand); }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Основная строка: логотип, меню, кнопка захвата
+  // ------------------------------------------------------------------------
+
+  &__main {
+    height: $header-mobile-h;
+    background: var(--c-bg);
+    border-bottom: $bw-base solid var(--c-line-4);
+    transition: height $dur-base $ease-base, box-shadow $dur-base $ease-base;
+
+    @include mq('lg') { height: $header-main-h; }
+  }
+
+  &__main-inner {
+    @include container('wide');
+    display: flex;
+    align-items: center;
+    gap: fluid(12px, 28px);
+    height: 100%;
+  }
+
+  &__logo img {
+    height: $logo-h-mobile;
+    width: auto;
+    transition: height $dur-base $ease-base;
+
+    @include mq('lg') { height: $logo-h; }
+  }
+
+  &__nav {
+    display: none;
+
+    @include mq('lg') {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-end;
+      gap: fluid(9px, 22px);
+      min-width: 0;
+      height: 100%;
+    }
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(10px, .9vw, 13px);
+    font-weight: $fw-bold;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--c-ink);
+
+    &:hover,
+    &.is-active { color: var(--c-brand); }
+  }
+
+  // Треугольник у пунктов с вложенными страницами
+  &__caret {
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 3.5px solid transparent;
+    border-left: 3.5px solid transparent;
+    border-top: 4px solid currentcolor;
+    opacity: .5;
+  }
+
+  &__cta {
+    flex: 0 0 auto;
+    display: none;
+    @include mq('lg') { display: inline-flex; }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Липкое состояние. Класс ставится из JS по IntersectionObserver.
+  // ------------------------------------------------------------------------
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+
+    .espada-header__util { display: none; }
+
+    .espada-header__main {
+      height: $header-sticky-h;
+      border-bottom-color: transparent;
+      box-shadow: $sh-header;
+    }
+
+    .espada-header__logo img { height: $logo-h-sticky; }
+
+    .espada-header__cta {
+      padding: 13px fluid(12px, 20px);
+      font-size: clamp(9.5px, .8vw, 11px);
+    }
+  }
+
+  // ------------------------------------------------------------------------
+  //  Бургер
+  // ------------------------------------------------------------------------
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    padding: 0;
+
+    @include mq('lg') { display: none; }
+    @include focus-ring;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--c-ink);
+    }
+  }
+}
+
+// ==========================================================================
+//  Мега-меню.
+//  Панель под шапкой. Группы ссылок упакованы в карточки до 8 ссылок —
+//  так колонки получаются одной высоты без пустот внутри.
+//  Логика упаковки — на стороне PHP, см. 03-wordpress-tema.md §5.
+// ==========================================================================
+
+.espada-megamenu {
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  z-index: z('megamenu');
+  display: none;
+  background: var(--c-bg);
+  border-top: $bw-base solid var(--c-line-4);
+  box-shadow: $sh-megamenu;
+
+  .espada-header__nav-item:hover &,
+  &.is-open { display: block; }
+
+  &__inner {
+    @include container('wide');
+    display: flex;
+    align-items: flex-start;
+    gap: 34px;
+    padding-block: $sp-7 36px;
+  }
+
+  &__cols {
+    flex: 1;
+    min-width: 0;
+    @include auto-grid(280px, (16px, 26px), start);
+  }
+
+  &__card {
+    @include stack(22px);
+    min-width: 0;
+    padding: pair($pad-card);
+    background: var(--c-bg);
+    box-shadow: $sh-card;
+  }
+
+  &__group {
+    @include stack($sp-3 + 2px);
+  }
+
+  &__group-title {
+    @include kicker;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $sp-2;
+  }
+
+  // Чип-ссылка тянется по ширине строки — так правый край карточки ровный
+  &__link {
+    flex: 1 1 auto;
+    padding: 10px 14px;
+    border: $bw-base solid var(--c-line-2);
+    font-size: $fs-small;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--c-ink);
+    transition: border-color $dur-fast $ease-base, color $dur-fast $ease-base;
+
+    &:hover {
+      border-color: var(--c-brand);
+      color: var(--c-brand);
+    }
+  }
+
+  // Промо-карточка справа
+  &__promo {
+    flex: 0 0 $megamenu-promo-w;
+    width: $megamenu-promo-w;
+    padding: $sp-6 22px;
+    background: var(--c-bg-alt);
+  }
+}
+
+// ==========================================================================
+//  Мобильное меню: на весь экран, разделы в аккордеоне
+// ==========================================================================
+
+.espada-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: z('modal');
+  display: none;
+  flex-direction: column;
+  background: var(--c-bg);
+
+  &.is-open { display: flex; }
+  @include mq('lg') { display: none !important; }
+
+  &__body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  &__section {
+    border-bottom: $bw-base solid var(--c-line-4);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $sp-3;
+    padding-inline: $sp-4;
+  }
+
+  &__link {
+    flex: 1;
+    padding-block: $sp-4;
+    font-size: 13px;
+    font-weight: $fw-bold;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--c-ink);
+  }
+
+  // Тач-цель 38×38, минимум по гайдлайну — 44 с учётом padding строки
+  &__toggle {
+    position: relative;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    background: var(--c-bg);
+    border: $bw-base solid var(--c-line-2);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 18px;
+      width: 14px;
+      height: 2px;
+      background: var(--c-brand);
+      transition: transform $dur-base $ease-base;
+    }
+
+    &::after { transform: rotate(90deg); }
+
+    &.is-open::after { transform: rotate(90deg) scaleX(0); }
+  }
+
+  &__panel {
+    display: none;
+    padding: 2px $sp-4 18px;
+    background: var(--c-bg-alt);
+
+    &.is-open {
+      @include stack(18px);
+      display: flex;
+    }
+  }
+}

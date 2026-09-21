@@ -1,0 +1,35 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "declaration-no-important": true,
+    "max-nesting-depth": [3, { "ignoreAtRules": ["media", "supports", "layer", "include"] }],
+    "selector-max-compound-selectors": 3,
+    "selector-class-pattern": [
+      "^(espada-[a-z0-9]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?|is-[a-z-]+|has-[a-z-]+|visually-hidden|no-scroll|text-[a-z0-9-]+|tabular|truncate|hide-(mobile|desktop)|modal[a-z-]*|collapse[a-z-]*|dropdown[a-z-]*|form-[a-z-]+|btn|card|row|col(-[a-z0-9]+)*|ripple-surface|shadow-[0-9a-z-]+)$",
+      { "message": "Класс должен иметь префикс espada- (BEM), либо быть состоянием is-/has-, утилитой или классом MDB5, за который цепляется его JS" }
+    ],
+    "color-no-hex": [true, { "message": "Только токены: var(--c-*) или $c-*. HEX живёт в abstracts/_tokens.scss" }],
+    "scss/at-rule-no-unknown": [true, { "ignoreAtRules": ["layer", "use", "forward", "container"] }],
+    "scss/dollar-variable-pattern": "^[a-z][a-z0-9-]*$",
+    "scss/percent-placeholder-pattern": "^[a-z][a-z0-9-]*$",
+    "custom-property-pattern": "^[a-z][a-z0-9-]*$",
+    "no-descending-specificity": null,
+    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
+    "declaration-property-value-no-unknown": null
+  },
+  "overrides": [
+    {
+      "files": [
+        "assets/scss/abstracts/_tokens.scss",
+        "assets/scss/vendor/*.scss",
+        "assets/scss/base/_reset.scss"
+      ],
+      "rules": {
+        "color-no-hex": null,
+        "declaration-no-important": null,
+        "selector-class-pattern": null
+      }
+    }
+  ],
+  "ignoreFiles": ["assets/dist/**/*", "node_modules/**/*"]
+}

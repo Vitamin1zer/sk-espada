@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+
+
+
+
+
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Light.woff2") format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+
+<div style="position:relative;container-type:inline-size;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;background:#fff;color:#313131;z-index:5" onMouseLeave="{{ closeAll }}">
+
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div>
+
+      <sc-if value="{{ showUtility }}" hint-placeholder-val="{{ true }}">
+        <div style="background:#f8f8f8;border-bottom:1px solid #ededed">
+          <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);height:38px;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,1.7cqw,24px);overflow:hidden">
+            <div style="display:flex;align-items:center;gap:clamp(10px,1.4cqw,20px)">
+              <span style="font-size:11.5px;letter-spacing:.02em;color:#929292;white-space:nowrap">Москва и область</span>
+              <a href="tel:+79938914064" style="font-size:12.5px;font-weight:700;color:#313131;letter-spacing:.01em;text-decoration:none" style-hover="color:#00AD9F">+7 (993) 891-40-64</a>
+              <a href="mailto:sk-espada@rambler.ru" style="font-size:11.5px;color:#5c5c5c;text-decoration:none" style-hover="color:#00AD9F">sk-espada@rambler.ru</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:clamp(10px,1.25cqw,18px)">
+              <sc-for list="{{ util }}" as="u" hint-placeholder-count="6">
+                <a href="{{ u.href }}" style="{{ utilCss }}" style-hover="color:#00AD9F">{{ u.label }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <div style="{{ mainRowCss }}">
+        <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);height:100%;display:flex;align-items:center;gap:clamp(12px,1.9cqw,28px)">
+          <a href="/" title="На главную" style="flex:0 0 auto;display:block">
+            <img src="assets/logo-full.png" alt="Эспада — ремонт и дизайн" style="{{ logoCss }}" />
+          </a>
+          <nav style="flex:1;min-width:0;display:flex;align-items:center;justify-content:flex-end;gap:clamp(9px,1.5cqw,22px);height:100%">
+            <sc-for list="{{ menu }}" as="m" hint-placeholder-count="6">
+              <div style="height:100%;display:flex;align-items:center" onMouseEnter="{{ m.enter }}">
+                <a href="{{ m.href }}" style="{{ m.css }}">
+                  <span>{{ m.label }}</span>
+                  <sc-if value="{{ m.hasKids }}" hint-placeholder-val="{{ true }}">
+                    <span style="width:0;height:0;border-left:3.5px solid transparent;border-right:3.5px solid transparent;border-top:4px solid currentColor;opacity:.5;display:block"></span>
+                  </sc-if>
+                </a>
+              </div>
+            </sc-for>
+          </nav>
+          <button type="button" style="{{ ctaCss }}" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">Вызвать замерщика</button>
+        </div>
+      </div>
+
+      <sc-if value="{{ panel }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid #ededed;box-shadow:0 20px 44px rgba(0,0,0,.13);z-index:40">
+          <div style="max-width:1240px;margin:0 auto;padding:32px 20px 36px;display:flex;gap:34px;align-items:flex-start">
+            <div style="flex:1;min-width:0;display:flex;gap:26px;align-items:flex-start">
+              <sc-for list="{{ panel.cols }}" as="col" hint-placeholder-count="4">
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:24px">
+                  <sc-for list="{{ col }}" as="g" hint-placeholder-count="1">
+                    <div style="display:flex;flex-direction:column">
+                      <sc-if value="{{ g.title }}" hint-placeholder-val="{{ true }}">
+                        <div style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin-bottom:12px;line-height:1.2">{{ g.title }}</div>
+                      </sc-if>
+                      <sc-if value="{{ g.spacer }}" hint-placeholder-val="{{ false }}">
+                        <div style="height:24px"></div>
+                      </sc-if>
+                      <div style="display:flex;flex-direction:column;gap:9px">
+                        <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="4">
+                          <a href="{{ i.href }}" style="font-size:13.5px;line-height:1.3;color:#313131;text-decoration:none;letter-spacing:-.005em" style-hover="color:#00AD9F">{{ i.t }}</a>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ panel.promo }}" hint-placeholder-val="{{ false }}">
+              <div style="flex:0 0 260px;width:260px;background:#f8f8f8;padding:24px 22px">
+                <div style="font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.22;color:#000">{{ panel.promo.title }}</div>
+                <div style="margin-top:12px;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ panel.promo.text }}</div>
+                <button type="button" style="margin-top:18px;width:100%;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:13px 14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">{{ panel.promo.cta }}</button>
+                <a href="{{ panel.promo.href }}" style="margin-top:14px;display:block;font-size:12px;font-weight:700;letter-spacing:.02em;color:#00AD9F;text-decoration:none" style-hover="color:#026B63">{{ panel.promo.link }} →</a>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-if>
+
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isMobileBar }}" hint-placeholder-val="{{ false }}">
+    <div style="height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #e6e6e6;background:#fff">
+      <a href="/" title="На главную" style="display:block">
+        <img src="assets/logo-full.png" alt="Эспада — ремонт и дизайн" style="height:28px;width:auto;display:block" />
+      </a>
+      <div style="display:flex;align-items:center;gap:14px">
+        <a href="tel:+79938914064" style="font-size:12.5px;font-weight:700;color:#313131;text-decoration:none">+7 (993) 891-40-64</a>
+        <button type="button" onClick="{{ toggleMob }}" aria-label="Открыть меню" style="width:26px;height:20px;border:0;background:transparent;padding:0;display:flex;flex-direction:column;justify-content:space-between">
+          <span style="display:block;height:2px;width:100%;background:#313131"></span>
+          <span style="display:block;height:2px;width:100%;background:#313131"></span>
+          <span style="display:block;height:2px;width:100%;background:#313131"></span>
+        </button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isMobileOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#fff;display:flex;flex-direction:column">
+      <div style="height:58px;flex:0 0 58px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #e6e6e6">
+        <a href="/" style="display:block"><img src="assets/logo-full.png" alt="Эспада" style="height:28px;width:auto;display:block" /></a>
+        <button type="button" onClick="{{ toggleMob }}" aria-label="Закрыть меню" style="width:30px;height:30px;border:0;background:transparent;padding:0;position:relative">
+          <span style="position:absolute;left:3px;top:14px;width:24px;height:2px;background:#313131;transform:rotate(45deg);display:block"></span>
+          <span style="position:absolute;left:3px;top:14px;width:24px;height:2px;background:#313131;transform:rotate(-45deg);display:block"></span>
+        </button>
+      </div>
+
+      <div style="flex:1;min-height:0">
+        <sc-for list="{{ menu }}" as="m" hint-placeholder-count="6">
+          <div style="border-bottom:1px solid #efefef">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px">
+              <a href="{{ m.href }}" style="flex:1;padding:16px 0;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#313131;text-decoration:none">{{ m.label }}</a>
+              <sc-if value="{{ m.hasKids }}" hint-placeholder-val="{{ true }}">
+                <button type="button" onClick="{{ m.toggleAcc }}" aria-label="Раскрыть раздел" style="width:38px;height:38px;border:1px solid #e6e6e6;background:#fff;padding:0;position:relative;flex:0 0 38px">
+                  <span style="position:absolute;left:11px;top:18px;width:14px;height:2px;background:#00AD9F;display:block"></span>
+                  <span style="{{ m.accVert }}"></span>
+                </button>
+              </sc-if>
+            </div>
+            <sc-if value="{{ m.accOpen }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:2px 16px 18px;background:#f8f8f8;display:flex;flex-direction:column;gap:18px">
+                <sc-for list="{{ m.flatGroups }}" as="g" hint-placeholder-count="2">
+                  <div style="display:flex;flex-direction:column">
+                    <sc-if value="{{ g.title }}" hint-placeholder-val="{{ true }}">
+                      <div style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin:14px 0 10px">{{ g.title }}</div>
+                    </sc-if>
+                    <div style="display:flex;flex-direction:column;gap:11px">
+                      <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="4">
+                        <a href="{{ i.href }}" style="font-size:14px;line-height:1.3;color:#313131;text-decoration:none">{{ i.t }}</a>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+
+        <div style="padding:20px 16px 8px">
+          <button type="button" style="width:100%;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:17px 16px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Вызвать замерщика</button>
+        </div>
+
+        <div style="padding:18px 16px 8px;display:flex;flex-direction:column;gap:13px">
+          <sc-for list="{{ util }}" as="u" hint-placeholder-count="6">
+            <a href="{{ u.href }}" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#5c5c5c;text-decoration:none">{{ u.label }}</a>
+          </sc-for>
+        </div>
+
+        <div style="padding:20px 16px 28px;border-top:1px solid #efefef;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <a href="tel:+79938914064" style="font-size:19px;font-weight:800;color:#00AD9F;text-decoration:none">+7 (993) 891-40-64</a>
+          <div style="font-size:12.5px;color:#5c5c5c;line-height:1.45">Москва, ул. Дегунинская, д. 1, корп. 2</div>
+          <a href="mailto:sk-espada@rambler.ru" style="font-size:12.5px;color:#5c5c5c;text-decoration:none">sk-espada@rambler.ru</a>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
+              <a href="{{ s.href }}" title="{{ s.name }}" style="width:34px;height:34px;background:#00AD9F;display:flex;align-items:center;justify-content:center">
+                <img src="{{ s.icon }}" alt="{{ s.name }}" style="width:17px;height:17px;object-fit:contain;display:block" />
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:420},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;default&quot;,&quot;sticky&quot;,&quot;mobile&quot;,&quot;mobile-open&quot;],&quot;default&quot;:&quot;default&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Состояние&quot;},&quot;openIndex&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:-1,&quot;min&quot;:-1,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Состояние&quot;},&quot;accIndex&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:-1,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Состояние&quot;}}">
+const L = (t, href) => ({ t, href });
+
+const REMONT = [
+  [{ title: 'По виду ремонта', items: [
+    L('Новостройка', '/remont-kvartir-novostroyka/'),
+    L('Вторичка', '/remont-kvartir-vtorichka/'),
+    L('Капитальный', '/kapitalnyy-remont-kvartiry/'),
+    L('Косметический', '/kosmeticheskiy-remont-kvartiry/'),
+    L('Дизайнерский', '/dizaynerskiy-remont-kvartiry/'),
+    L('По дизайн-проекту', '/remont-po-dizayn-proektu/'),
+    L('Черновой', '/chernovoy-remont-kvartiry/'),
+    L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
+  ] }],
+  [{ title: '', spacer: true, items: [
+    L('Евроремонт', '/evroremont-kvartiry/'),
+    L('Элитный', '/elitnyy-remont-kvartir/'),
+    L('Недорогой', '/nedorogoy-remont-kvartir/'),
+    L('Под сдачу', '/remont-kvartiry-pod-sdachu/'),
+    L('После залива и пожара', '/remont-posle-zaliva/'),
+    L('В рассрочку', '/remont-v-rassrochku/'),
+    L('По стилю', '/remont-kvartir-po-stilyu/'),
+  ] }],
+  [
+    { title: 'По числу комнат', items: [
+      L('Студия', '/remont-kvartiry-studii/'),
+      L('Однокомнатная', '/remont-odnokomnatnoy-kvartiry/'),
+      L('Двухкомнатная', '/remont-dvuhkomnatnoy-kvartiry/'),
+      L('Трёхкомнатная', '/remont-trehkomnatnoy-kvartiry/'),
+    ] },
+    { title: 'По типу дома', items: [
+      L('Хрущёвка', '/remont-v-hruschevke/'),
+      L('Сталинка', '/remont-v-stalinke/'),
+      L('Панельный дом', '/remont-v-panelnom-dome/'),
+    ] },
+  ],
+  [{ title: 'По помещениям', items: [
+    L('Кухня', '/remont-kuhni/'),
+    L('Ванная комната', '/remont-vannoy-komnaty/'),
+    L('Санузел', '/remont-sanuzla/'),
+    L('Туалет', '/remont-tualeta/'),
+    L('Спальня', '/remont-spalni/'),
+    L('Гостиная', '/remont-gostinoy/'),
+    L('Детская комната', '/remont-detskoy-komnaty/'),
+    L('Прихожая и коридор', '/remont-prihozhey/'),
+    L('Балкон и лоджия', '/remont-balkona/'),
+    L('Гардеробная', '/remont-garderobnoy/'),
+  ] }],
+  [{ title: 'Прочее', items: [
+    L('Цены', '/ceny-na-remont-kvartir/'),
+    L('По ЖК', '/remont-v-zhk/'),
+    L('Дома и коттеджи', '/remont-domov-i-kottedzhey/'),
+    L('Коммерческие помещения', '/remont-kommercheskih-pomescheniy/'),
+  ] }],
+];
+
+const DESIGN = [
+  [{ title: 'По объекту', items: [
+    L('Квартира', '/design-kvartir/'),
+    L('Квартира-студия', '/design-studii/'),
+    L('Дом', '/design-domov/'),
+    L('Офис', '/design-ofisov/'),
+    L('Коммерческие помещения', '/design-kommercheskih-pomescheniy/'),
+  ] }],
+  [{ title: 'По помещениям', items: [
+    L('Кухня', '/design-kuhni/'),
+    L('Ванная комната', '/design-vannoy/'),
+    L('Спальня', '/design-spalni/'),
+  ] }],
+  [{ title: '', spacer: true, items: [
+    L('Гостиная', '/design-gostinoy/'),
+    L('Детская комната', '/design-detskoy/'),
+    L('Прихожая и коридор', '/design-prihozhey/'),
+  ] }],
+];
+
+const PRIEMKA = [
+  [{ title: '', items: [
+    L('Без отделки', '/priemka-bez-otdelki/'),
+    L('С отделкой', '/priemka-s-otdelkoy/'),
+    L('По ЖК', '/priemka-v-zhk/'),
+  ] }],
+];
+
+const USLUGI = [
+  [{ title: '', items: [
+    L('Перепланировка', '/pereplanirovka-kvartiry/'),
+    L('Механизированная штукатурка', '/mehanizirovannaya-shtukaturka/'),
+    L('Стяжка пола', '/styazhka-pola/'),
+    L('Выравнивание стен', '/vyravnivanie-sten/'),
+  ] }],
+  [{ title: '', items: [
+    L('Малярные работы и обои', '/malyarnye-raboty/'),
+    L('Укладка плитки', '/ukladka-plitki/'),
+    L('Электромонтаж', '/elektromontazh/'),
+    L('Сантехнические работы', '/santehnicheskie-raboty/'),
+  ] }],
+  [{ title: '', items: [
+    L('Тёплый пол', '/teplyy-pol/'),
+    L('Демонтаж', '/demontazhnye-raboty/'),
+    L('Шумоизоляция', '/shumoizolyaciya/'),
+    L('Натяжные потолки', '/natyazhnye-potolki/'),
+  ] }],
+];
+
+const MENU = [
+  { label: 'Ремонт квартир', href: '/remont-kvartir/', cols: REMONT, promo: {
+    title: 'Не знаете, какой ремонт нужен', text: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд бесплатный.',
+    cta: 'Бесплатный расчёт сметы', link: 'Все виды ремонта', href: '/remont-kvartir/' } },
+  { label: 'Дизайн интерьера', href: '/design/', cols: DESIGN, promo: {
+    title: 'Дизайн-проект от 1 790 ₽/м²', text: 'Технический проект — от 1 790 ₽/м², стандартный — от 2 400 ₽/м². Цены за квадратный метр по полу.',
+    cta: 'Бесплатный выезд дизайнера', link: 'О дизайн-проектах', href: '/design/' } },
+  { label: 'Комплектация', href: '/komplektaciya/' },
+  { label: 'Приёмка', href: '/priemka/', cols: PRIEMKA, promo: {
+    title: 'Приняли квартиру — считаем ремонт', text: 'Приёмка и ремонт идут одной командой: акт с замечаниями на руках, смета на ремонт — в тот же выезд.',
+    cta: 'Записаться на приёмку', link: 'Как проходит приёмка', href: '/priemka/' } },
+  { label: 'Услуги', href: '/uslugi/', cols: USLUGI },
+  { label: 'Портфолио', href: '/portfolio/' },
+];
+
+const UTIL = [
+  { label: 'Блог', href: '/blog/' },
+  { label: 'Отзывы', href: '/otzyvy/' },
+  { label: 'Вопросы и ответы', href: '/voprosy-i-otvety/' },
+  { label: 'Партнёрам', href: '/partners/' },
+  { label: 'О компании', href: '/o-kompanii/' },
+  { label: 'Контакты', href: '/kontakty/' },
+];
+
+const SOCIALS = [
+  { name: 'Telegram', href: 'https://t.me/espada_remont', icon: 'assets/soc-tg.png' },
+  { name: 'ВКонтакте', href: 'https://vk.com/sk_espada', icon: 'assets/soc-vk.png' },
+  { name: 'Дзен', href: 'https://dzen.ru/espada', icon: 'assets/soc-dzen.png' },
+];
+
+class Component extends DCLogic {
+  state = { open: null, mob: null, acc: null };
+
+  renderVals() {
+    const variant = this.props.variant || 'default';
+    const isMobile = variant === 'mobile' || variant === 'mobile-open';
+    const sticky = variant === 'sticky';
+
+    const seeded = this.props.openIndex;
+    const open = this.state.open === null ? (typeof seeded === 'number' ? seeded : -1) : this.state.open;
+    const mob = this.state.mob === null ? variant === 'mobile-open' : this.state.mob;
+    const accSeed = typeof this.props.accIndex === 'number' ? this.props.accIndex : 0;
+    const acc = this.state.acc === null ? accSeed : this.state.acc;
+
+    const item = MENU[open];
+    const panel = item && item.cols ? { cols: item.cols, promo: item.promo || null } : null;
+
+    const navCss = 'display:flex;align-items:center;gap:5px;font-size:clamp(10px,.9cqw,' + (sticky ? '12.5px' : '13px')
+      + ');font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:color .15s;';
+
+    return {
+      isDesktop: !isMobile,
+      isMobileBar: isMobile && !mob,
+      isMobileOpen: isMobile && mob,
+      showUtility: !sticky,
+      mainRowCss: 'background:#fff;height:' + (sticky ? '62px' : '84px')
+        + ';border-bottom:1px solid ' + (sticky ? 'transparent' : '#ededed')
+        + (sticky ? ';box-shadow:0 3px 14px rgba(0,0,0,.10)' : ''),
+      logoCss: 'height:' + (sticky ? 'clamp(26px,2.2cqw,32px)' : 'clamp(30px,3.1cqw,44px)') + ';width:auto;display:block',
+      ctaCss: 'flex:0 0 auto;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:'
+        + (sticky ? '13px clamp(12px,1.4cqw,20px)' : '16px clamp(14px,1.7cqw,24px)')
+        + ';font-size:clamp(9.5px,.8cqw,' + (sticky ? '11px' : '11.5px')
+        + ');font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:background .2s,box-shadow .2s',
+      utilCss: 'font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#5c5c5c;text-decoration:none;white-space:nowrap;transition:color .15s',
+      util: UTIL,
+      socials: SOCIALS,
+      panel,
+      closeAll: () => { if (this.state.open !== -1) this.setState({ open: -1 }); },
+      toggleMob: () => this.setState({ mob: !mob }),
+      menu: MENU.map((m, idx) => {
+        const flat = [];
+        (m.cols || []).forEach(col => col.forEach(g => flat.push(g)));
+        return {
+          label: m.label,
+          href: m.href,
+          hasKids: !!m.cols,
+          enter: () => this.setState({ open: m.cols ? idx : -1 }),
+          css: navCss + 'color:' + (open === idx && m.cols ? '#00AD9F' : '#313131'),
+          accOpen: acc === idx && !!m.cols,
+          accVert: 'position:absolute;left:18px;top:11px;width:2px;height:16px;background:#00AD9F;display:'
+            + (acc === idx ? 'none' : 'block'),
+          toggleAcc: () => this.setState({ acc: acc === idx ? -1 : idx }),
+          flatGroups: flat,
+        };
+      }),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

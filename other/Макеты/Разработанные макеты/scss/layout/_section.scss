@@ -1,0 +1,51 @@
+// ==========================================================================
+//  Секция.
+//  Фоновых цветов на странице максимум два: белый и #F8F8F8, чередованием.
+//  Третий фон — только бирюзовый в блоке CTA перед подвалом.
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.espada-section {
+  @include section-pad;
+  background: var(--c-bg);
+
+  // Чередующаяся серая секция
+  &--alt {
+    background: var(--c-bg-alt);
+  }
+
+  // Блок CTA перед подвалом
+  &--brand {
+    background: var(--c-brand);
+    color: #fff;
+  }
+
+  // Уплотнённый ритм: две смысловые части одной секции подряд
+  &--tight {
+    @include section-pad('tight');
+  }
+
+  // Секция, вплотную примыкающая к следующей (снимаем нижний отступ)
+  &--flush-bottom { padding-bottom: 0; }
+  &--flush-top    { padding-top: 0; }
+
+  &__head {
+    @include stack($sp-4);
+    margin-bottom: pair($gap-block);
+  }
+
+  &__title {
+    @include heading-2;
+  }
+
+  // Заголовок с бирюзовым акцентом внутри: <span class="…__accent">
+  &__accent {
+    color: var(--c-brand);
+  }
+
+  &__lead {
+    @include body-text;
+    max-width: 680px;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+
+<footer style="background:#313131;color:#fff;container-type:inline-size;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif">
+  <div style="{{ innerCss }}">
+
+    <div style="{{ gridCss }}">
+
+      <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+        <a href="/" title="На главную" style="display:block">
+          <img src="assets/logo-full-white.png" alt="Эспада — ремонт и дизайн" style="height:44px;width:auto;display:block" />
+        </a>
+        <div style="display:flex;gap:14px;align-items:center">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
+            <a href="{{ s.href }}" title="{{ s.name }}" target="_blank" rel="noopener" style="display:block;opacity:.85;transition:opacity .15s" style-hover="opacity:1">
+              <img src="{{ s.icon }}" alt="{{ s.name }}" style="width:20px;height:20px;object-fit:contain;display:block" />
+            </a>
+          </sc-for>
+        </div>
+        <div style="font-size:13px;line-height:1.5;color:#bfbfbf">Москва, ул. Дегунинская, д. 1, корп. 2</div>
+        <a href="tel:+79938914064" style="font-size:19px;font-weight:800;color:#fff;text-decoration:underline;text-underline-offset:3px;letter-spacing:.01em" style-hover="color:#00AD9F">+7 (993) 891-40-64</a>
+        <a href="mailto:sk-espada@rambler.ru" style="font-size:13px;color:#bfbfbf;text-decoration:none" style-hover="color:#00AD9F">sk-espada@rambler.ru</a>
+        <div style="font-size:11.5px;line-height:1.5;color:#8f8f8f;max-width:300px">Режим работы: ежедневно, 9:00 – 21:00</div>
+      </div>
+
+      <sc-for list="{{ columns }}" as="c" hint-placeholder-count="3">
+        <div style="display:flex;flex-direction:column;min-width:0">
+          <div style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin-bottom:16px">{{ c.title }}</div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <sc-for list="{{ c.items }}" as="i" hint-placeholder-count="5">
+              <a href="{{ i.href }}" style="font-size:12px;font-weight:600;letter-spacing:.055em;text-transform:uppercase;color:#fff;text-decoration:none;line-height:1.35;transition:color .15s" style-hover="color:#00AD9F">{{ i.t }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <div style="font-size:12px;line-height:1.5;color:#bfbfbf">Нажмите, чтобы наш менеджер связался с вами:</div>
+        <form onSubmit="{{ noSubmit }}" style="display:flex;flex-direction:column;gap:10px">
+          <input type="tel" placeholder="+7 (000) 000-00-00" style="height:44px;border:1px solid rgba(255,255,255,.25);border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;transition:background .2s,box-shadow .2s;align-self:flex-start" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.3)">Заказать звонок</button>
+          <span style="font-size:11px;line-height:1.45;color:#8f8f8f">Нажимая кнопку, вы даёте <a href="/soglasie-na-obrabotku/" style="color:#fff;text-decoration:underline">согласие на обработку персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#fff;text-decoration:underline">Политикой конфиденциальности</a></span>
+        </form>
+        <img src="assets/payments.png" alt="Способы оплаты: PayKeeper, Visa, Mastercard, МИР, СБП" style="height:24px;width:auto;display:block;margin-top:8px;opacity:.75" />
+        <div style="font-size:11px;line-height:1.55;color:#8f8f8f;margin-top:4px">На сайте используются cookies, сервисы аналитики, включая Яндекс Метрику. Продолжая использовать сайт, вы соглашаетесь с обработкой персональных данных и использованием cookies.</div>
+      </div>
+
+    </div>
+
+    <div style="{{ bottomCss }}">
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+        <div style="font-size:11.5px;line-height:1.55;color:#8f8f8f">Сайт не является публичной офертой и носит информационный характер</div>
+        <div style="font-size:11.5px;line-height:1.55;color:#8f8f8f">© 2026 Все права защищены. ИП Ланин Кирилл Андреевич, ИНН 772142258108, ОГРНИП 324774600528604</div>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+        <a href="/politika-konfidencialnosti/" style="font-size:11.5px;color:#bfbfbf;text-decoration:underline;text-underline-offset:2px" style-hover="color:#00AD9F">Политика конфиденциальности</a>
+        <a href="/soglasie-na-obrabotku/" style="font-size:11.5px;color:#bfbfbf;text-decoration:underline;text-underline-offset:2px" style-hover="color:#00AD9F">Согласие на обработку персональных данных</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:520},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Состояние&quot;}}">
+const T = (t, href) => ({ t, href });
+
+const COLUMNS = [
+  { title: 'Услуги', items: [
+    T('Ремонт квартир', '/remont-kvartir/'),
+    T('Дизайн интерьера', '/design/'),
+    T('Комплектация', '/komplektaciya/'),
+    T('Приёмка квартир', '/priemka/'),
+    T('Отдельные работы', '/uslugi/'),
+    T('Цены', '/ceny-na-remont-kvartir/'),
+  ] },
+  { title: 'Компания', items: [
+    T('О компании', '/o-kompanii/'),
+    T('Примеры работ', '/portfolio/'),
+    T('Отзывы', '/otzyvy/'),
+    T('Вопросы и ответы', '/voprosy-i-otvety/'),
+    T('Блог', '/blog/'),
+    T('Контакты', '/kontakty/'),
+  ] },
+  { title: 'Сотрудничество', items: [
+    T('Партнёрам', '/partners/'),
+    T('Вакансии', 'https://hh.ru/employer/12458493'),
+  ] },
+];
+
+const SOCIALS = [
+  { name: 'Telegram', href: 'https://t.me/espada_remont', icon: 'assets/soc-tg.png' },
+  { name: 'ВКонтакте', href: 'https://vk.com/sk_espada', icon: 'assets/soc-vk.png' },
+  { name: 'Дзен', href: 'https://dzen.ru/espada', icon: 'assets/soc-dzen.png' },
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const m = !!this.props.mobile;
+    return {
+      socials: SOCIALS,
+      columns: COLUMNS,
+      noSubmit: (e) => { e.preventDefault(); },
+      innerCss: 'max-width:1240px;margin:0 auto;padding:' + (m ? '36px 16px 28px' : '56px 20px 26px'),
+      gridCss: m
+        ? 'display:flex;flex-direction:column;gap:34px'
+        : 'display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(20px,2.6cqw,38px);align-items:start',
+      bottomCss: 'margin-top:' + (m ? '32px' : '48px') + ';padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:'
+        + (m ? 'flex;flex-direction:column;gap:18px' : 'flex;justify-content:space-between;gap:40px;align-items:flex-start'),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
