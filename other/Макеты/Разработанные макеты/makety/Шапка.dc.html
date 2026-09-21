@@ -8,6 +8,12 @@
 <body>
 <x-dc>
 <helmet>
+
+
+
+
+
+
 <style>
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Light.woff2") format("woff2");font-weight:300;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
@@ -75,8 +81,11 @@ button{font-family:inherit;cursor:pointer}
                 <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:24px">
                   <sc-for list="{{ col }}" as="g" hint-placeholder-count="1">
                     <div style="display:flex;flex-direction:column">
-                      <sc-if value="{{ g.title }}" hint-placeholder-val="{{ true }}">
+                      <sc-if value="{{ g.plain }}" hint-placeholder-val="{{ true }}">
                         <div style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin-bottom:12px;line-height:1.2">{{ g.title }}</div>
+                      </sc-if>
+                      <sc-if value="{{ g.linked }}" hint-placeholder-val="{{ false }}">
+                        <a href="{{ g.href }}" style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin-bottom:12px;line-height:1.2;text-decoration:none" style-hover="color:#026B63">{{ g.title }}</a>
                       </sc-if>
                       <sc-if value="{{ g.spacer }}" hint-placeholder-val="{{ false }}">
                         <div style="height:24px"></div>
@@ -148,8 +157,11 @@ button{font-family:inherit;cursor:pointer}
               <div style="padding:2px 16px 18px;background:#f8f8f8;display:flex;flex-direction:column;gap:18px">
                 <sc-for list="{{ m.flatGroups }}" as="g" hint-placeholder-count="2">
                   <div style="display:flex;flex-direction:column">
-                    <sc-if value="{{ g.title }}" hint-placeholder-val="{{ true }}">
+                    <sc-if value="{{ g.plain }}" hint-placeholder-val="{{ true }}">
                       <div style="font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin:14px 0 10px">{{ g.title }}</div>
+                    </sc-if>
+                    <sc-if value="{{ g.linked }}" hint-placeholder-val="{{ false }}">
+                      <a href="{{ g.href }}" style="display:block;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F;margin:14px 0 10px;text-decoration:none">{{ g.title }}</a>
                     </sc-if>
                     <div style="display:flex;flex-direction:column;gap:11px">
                       <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="4">
@@ -202,7 +214,6 @@ const REMONT = [
     L('Капитальный', '/kapitalnyy-remont-kvartiry/'),
     L('Косметический', '/kosmeticheskiy-remont-kvartiry/'),
     L('Дизайнерский', '/dizaynerskiy-remont-kvartiry/'),
-    L('По дизайн-проекту', '/remont-po-dizayn-proektu/'),
     L('Черновой', '/chernovoy-remont-kvartiry/'),
     L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
   ] }],
@@ -212,7 +223,6 @@ const REMONT = [
     L('Недорогой', '/nedorogoy-remont-kvartir/'),
     L('Под сдачу', '/remont-kvartiry-pod-sdachu/'),
     L('После залива и пожара', '/remont-posle-zaliva/'),
-    L('В рассрочку', '/remont-v-rassrochku/'),
     L('По стилю', '/remont-kvartir-po-stilyu/'),
   ] }],
   [
@@ -241,7 +251,6 @@ const REMONT = [
     L('Гардеробная', '/remont-garderobnoy/'),
   ] }],
   [{ title: 'Прочее', items: [
-    L('Цены', '/ceny-na-remont-kvartir/'),
     L('По ЖК', '/remont-v-zhk/'),
     L('Дома и коттеджи', '/remont-domov-i-kottedzhey/'),
     L('Коммерческие помещения', '/remont-kommercheskih-pomescheniy/'),
@@ -277,23 +286,30 @@ const PRIEMKA = [
 ];
 
 const USLUGI = [
-  [{ title: '', items: [
-    L('Перепланировка', '/pereplanirovka-kvartiry/'),
-    L('Механизированная штукатурка', '/mehanizirovannaya-shtukaturka/'),
-    L('Стяжка пола', '/styazhka-pola/'),
-    L('Выравнивание стен', '/vyravnivanie-sten/'),
+  [{ title: 'Инженерные системы', href: '/inzhenernye-sistemy/', items: [
+    L('Электромонтаж', '/elektromontazhnye-raboty/'),
+    L('Сантехника', '/santehnicheskie-raboty/'),
+    L('Вентиляция', '/ventilyatsiya/'),
+    L('Кондиционирование', '/ustanovka-konditsionerov/'),
+    L('Тёплый пол', '/tyoplyj-pol/'),
+    L('Умный дом', '/umnyj-dom/'),
+    L('Отопление', '/otoplenie-i-radiatory/'),
+    L('Шумоизоляция', '/shumoizolyatsiya-kvartiry/'),
   ] }],
-  [{ title: '', items: [
-    L('Малярные работы и обои', '/malyarnye-raboty/'),
+  [{ title: 'Отделочные работы', href: '/otdelochnye-raboty/', items: [
+    L('Малярные работы и обои', '/malyarnye-raboty-i-poklejka-oboev/'),
     L('Укладка плитки', '/ukladka-plitki/'),
-    L('Электромонтаж', '/elektromontazh/'),
-    L('Сантехнические работы', '/santehnicheskie-raboty/'),
-  ] }],
-  [{ title: '', items: [
-    L('Тёплый пол', '/teplyy-pol/'),
-    L('Демонтаж', '/demontazhnye-raboty/'),
-    L('Шумоизоляция', '/shumoizolyaciya/'),
     L('Натяжные потолки', '/natyazhnye-potolki/'),
+    L('Декоративная штукатурка', '/dekorativnaya-shtukaturka/'),
+  ] }],
+  [{ title: 'Демонтаж и черновые работы', href: '/demontazh-i-chernovye-raboty/', items: [
+    L('Демонтаж', '/demontazhnye-raboty/'),
+    L('Стяжка пола', '/styazhka-pola/'),
+    L('Механизированная штукатурка', '/mehanizirovannaya-shtukaturka/'),
+    L('Выравнивание стен', '/vyravnivanie-sten/'),
+  ] },
+   { title: '', items: [
+    L('Перепланировка', '/pereplanirovka-kvartiry/'),
   ] }],
 ];
 
@@ -342,7 +358,13 @@ class Component extends DCLogic {
     const acc = this.state.acc === null ? accSeed : this.state.acc;
 
     const item = MENU[open];
-    const panel = item && item.cols ? { cols: item.cols, promo: item.promo || null } : null;
+    // Заголовок группы бывает двух видов: подпись («По виду ремонта»)
+    // и название страницы-хаба («Инженерные системы»). Второй — ссылка.
+    const markCols = (cols) => cols.map(col => col.map(g => ({
+      ...g, plain: !!g.title && !g.href, linked: !!g.title && !!g.href,
+    })));
+    const panel = item && item.cols
+      ? { cols: markCols(item.cols), promo: item.promo || null } : null;
 
     const navCss = 'display:flex;align-items:center;gap:5px;font-size:clamp(10px,.9cqw,' + (sticky ? '12.5px' : '13px')
       + ');font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:color .15s;';
@@ -368,7 +390,9 @@ class Component extends DCLogic {
       toggleMob: () => this.setState({ mob: !mob }),
       menu: MENU.map((m, idx) => {
         const flat = [];
-        (m.cols || []).forEach(col => col.forEach(g => flat.push(g)));
+        (m.cols || []).forEach(col => col.forEach(g => flat.push({
+          ...g, plain: !!g.title && !g.href, linked: !!g.title && !!g.href,
+        })));
         return {
           label: m.label,
           href: m.href,

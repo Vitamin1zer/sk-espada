@@ -54,7 +54,7 @@
   "quoted": 178,
   "cluster": "ремонт кухни"
  },
- "/uslugi/priemka/": {
+ "/priemka/": {
   "marker": "приемка квартир москва в новостройках",
   "quoted": 171,
   "cluster": "приемка квартиры в москве"
@@ -249,7 +249,7 @@
   "quoted": 11,
   "cluster": ""
  },
- "/uslugi/priemka/bez-otdelki/": {
+ "/priemka/bez-otdelki/": {
   "marker": "приемка квартиры в новостройке без отделки",
   "quoted": 10,
   "cluster": ""
@@ -294,7 +294,7 @@
   "quoted": 5,
   "cluster": ""
  },
- "/uslugi/priemka/s-otdelkoy/": {
+ "/priemka/s-otdelkoy/": {
   "marker": "приемка квартиры пик с отделкой",
   "quoted": 5,
   "cluster": "приемка квартиры пик"
