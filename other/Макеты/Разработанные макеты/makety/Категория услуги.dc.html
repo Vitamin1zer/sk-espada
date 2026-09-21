@@ -8,6 +8,12 @@
 <body>
 <x-dc>
 <helmet>
+
+
+
+
+
+
 <style>
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
@@ -345,29 +351,29 @@ input,textarea,select{font-family:inherit}
 const L = (t, href) => ({ t, href });
 
 const REMONT_SIBLINGS = [
-  L('Вторичка', '/remont-kvartir-vtorichka/'), L('Под ключ', '/remont-kvartir/'),
-  L('Черновой', '/chernovoy-remont-kvartiry/'), L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
-  L('Дизайнерский', '/dizaynerskiy-remont-kvartiry/'), L('По дизайн-проекту', '/remont-po-dizayn-proektu/'),
-  L('Студия', '/remont-kvartiry-studii/'), L('Однокомнатная', '/remont-odnokomnatnoy-kvartiry/'),
-  L('Двухкомнатная', '/remont-dvuhkomnatnoy-kvartiry/'), L('По ЖК', '/remont-v-zhk/'),
-  L('Цены', '/ceny-na-remont-kvartir/'),
+  L('Вторичка', '/remont-kvartiry-na-vtorichke/'), L('Под ключ', '/remont-kvartir-pod-klyuch/'),
+  L('Черновой', '/chernovoj-remont-kvartiry/'), L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
+  L('Дизайнерский', '/dizajnerskij-remont-kvartiry/'), L('По дизайн-проекту', '/dizajnerskij-remont-kvartiry/'),
+  L('Студия', '/remont-kvartiry-studii/'), L('Однокомнатная', '/remont-odnokomnatnoj-kvartiry/'),
+  L('Двухкомнатная', '/remont-dvuhkomnatnoj-kvartiry/'), L('По ЖК', '/remont-v-zhk-shablon/'),
+  L('Цены', '/remont-kvartir-pod-klyuch/'),
 ];
 
 const DESIGN_SIBLINGS = [
-  L('Дизайн квартиры', '/design-kvartir/'), L('Ванная комната', '/design-vannoy/'),
-  L('Спальня', '/design-spalni/'), L('Гостиная', '/design-gostinoy/'),
-  L('Детская комната', '/design-detskoy/'), L('Прихожая и коридор', '/design-prihozhey/'),
-  L('Квартира-студия', '/design-studii/'), L('Дом', '/design-domov/'),
+  L('Дизайн квартиры', '/dizajn-interera-kvartiry/'), L('Ванная комната', '/dizajn-vannoj-komnaty/'),
+  L('Спальня', '/dizajn-spalni/'), L('Гостиная', '/dizajn-gostinoj/'),
+  L('Детская комната', '/dizajn-detskoj-komnaty/'), L('Прихожая и коридор', '/dizajn-prihozhej-i-koridora/'),
+  L('Квартира-студия', '/dizajn-kvartiry-studii/'), L('Дом', '/dizajn-interera-doma/'),
 ];
 
 const PRIEMKA_SIBLINGS = [
-  L('С отделкой', '/priemka-s-otdelkoy/'), L('По ЖК', '/priemka-v-zhk/'),
-  L('Ремонт в новостройке', '/remont-kvartir-novostroyka/'), L('Комплектация', '/komplektaciya/'),
+  L('С отделкой', '/priyomka-kvartiry-s-otdelkoj/'), L('По ЖК', '/priyomka-v-zhk-shablon/'),
+  L('Ремонт в новостройке', '/remont-kvartiry-v-novostrojke/'), L('Комплектация', '/komplektatsiya-kvartiry/'),
 ];
 
 const PAGES = {
   novostroyka: {
-    crumb: 'Ремонт квартиры в новостройке', parent: 'Ремонт квартир', parentHref: '/remont-kvartir/',
+    crumb: 'Ремонт квартиры в новостройке', parent: 'Ремонт квартир', parentHref: '/remont-kvartir-pod-klyuch/',
     h1: 'Ремонт квартиры в новостройке', price: '8 850', hero: 'assets/hero-remont.jpg',
     bullets: ['— подготовим индивидуальный расчет;', '— поможем спланировать бюджет;', '— подберем решения под ваши задачи и образ жизни.'],
     cta: 'Бесплатный расчёт сметы', formTitle: 'Рассчитаем ремонт новостройки бесплатно',
@@ -390,9 +396,9 @@ const PAGES = {
     rateNote: 'Цены — за квадратный метр по полу, из таблицы тарифов текущего сайта, без стоимости материалов: их считает комплектатор отдельной спецификацией. В фигурных скобках — данные, которых нет ни на сайте, ни в брифе: сроки по тарифам нужны от клиента. Единственный подтверждённый срок — 7 месяцев по кейсу ЖК Shagal, дизайнерский ремонт 82 м².',
     worksTitle: 'Наши работы в новостройках',
     works: [
-      { title: '2-комнатная новостройка под ключ', img: 'assets/pf-01.png' },
-      { title: 'Квартира-студия новостройка под ключ', img: 'assets/pf-03.png' },
-      { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/pf-04.png' },
+      { title: '2-комнатная новостройка под ключ', img: 'assets/pf-01.jpg' },
+      { title: 'Квартира-студия новостройка под ключ', img: 'assets/pf-03.jpg' },
+      { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/pf-04.jpg' },
       { title: '2-комнатная новостройка чистовой ремонт', img: 'assets/pf-07.jpg' },
     ],
     quizTitle: 'Калькулятор ремонта новостройки',
@@ -420,7 +426,7 @@ const PAGES = {
     base: 8850, startArea: 54,
   },
   kuhnya: {
-    crumb: 'Дизайн кухни', parent: 'Дизайн интерьера', parentHref: '/design/',
+    crumb: 'Дизайн кухни', parent: 'Дизайн интерьера', parentHref: '/dizajn-interera/',
     h1: 'Дизайн кухни', price: '1 790', hero: 'assets/dz-style1.jpg',
     bullets: ['— бесплатно подготовим индивидуальный расчет;', '— соберём эргономику под ваши привычки;', '— подберем решения под ваши задачи и образ жизни.'],
     cta: 'Бесплатный выезд дизайнера', formTitle: 'Пригласите дизайнера на кухню бесплатно',
@@ -446,7 +452,7 @@ const PAGES = {
       { title: 'Кухня-гостиная, новостройка', img: 'assets/dz-style1.jpg' },
       { title: 'Кухня в двухкомнатной квартире', img: 'assets/dz-style2.jpg' },
       { title: 'Кухня-студия, 28 м²', img: 'assets/dz-style3.jpg' },
-      { title: 'Кухня в дизайнерском ремонте', img: 'assets/pf-03.png' },
+      { title: 'Кухня в дизайнерском ремонте', img: 'assets/pf-03.jpg' },
     ],
     quizTitle: 'Калькулятор стоимости проекта кухни',
     seoTitle: 'Дизайн кухни в Москве',
@@ -473,7 +479,7 @@ const PAGES = {
     base: 1790, startArea: 14,
   },
   priemka: {
-    crumb: 'Приёмка квартиры без отделки', parent: 'Приёмка квартир', parentHref: '/priemka/',
+    crumb: 'Приёмка квартиры без отделки', parent: 'Приёмка квартир', parentHref: '/priyomka-kvartir-v-novostrojke/',
     h1: 'Приемка квартиры без отделки', price: '', hero: 'assets/hero-priemka.jpg',
     bullets: ['— обнаружим скрытые дефекты до передачи квартиры;', '— подготовим подробный отчет с замечаниями для застройщика;', '— поможем избежать затрат на последующий ремонт;', '— защитим ваши интересы при приемке у застройщика.'],
     cta: 'Записаться на приёмку', formTitle: 'Пригласите профессионального приемщика',
@@ -495,8 +501,8 @@ const PAGES = {
     rateNote: 'Цены приёмки на текущем сайте нет: вход в услугу идёт через заявку. Все значения в фигурных скобках нужно получить от клиента до запуска — прайс на выезд, повторный осмотр и сроки. Смета на ремонт по тем же обмерам считается бесплатно, это подтверждено брифом.',
     worksTitle: 'Объекты, которые мы принимали',
     works: [
-      { title: 'Новостройка без отделки, 62 м²', img: 'assets/dir-4.png' },
-      { title: 'Квартира-студия, приёмка и ремонт', img: 'assets/pf-03.png' },
+      { title: 'Новостройка без отделки, 62 м²', img: 'assets/dir-4.jpg' },
+      { title: 'Квартира-студия, приёмка и ремонт', img: 'assets/pf-03.jpg' },
       { title: 'Двухкомнатная, ЖК Shagal', img: 'assets/case-w3.jpg' },
       { title: 'Инженерные системы после приёмки', img: 'assets/master-4.jpg' },
     ],

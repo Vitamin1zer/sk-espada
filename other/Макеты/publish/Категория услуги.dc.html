@@ -351,29 +351,29 @@ input,textarea,select{font-family:inherit}
 const L = (t, href) => ({ t, href });
 
 const REMONT_SIBLINGS = [
-  L('Вторичка', '/remont-kvartir-vtorichka/'), L('Под ключ', '/remont-kvartir/'),
-  L('Черновой', '/chernovoy-remont-kvartiry/'), L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
-  L('Дизайнерский', '/dizaynerskiy-remont-kvartiry/'), L('По дизайн-проекту', '/remont-po-dizayn-proektu/'),
-  L('Студия', '/remont-kvartiry-studii/'), L('Однокомнатная', '/remont-odnokomnatnoy-kvartiry/'),
-  L('Двухкомнатная', '/remont-dvuhkomnatnoy-kvartiry/'), L('По ЖК', '/remont-v-zhk/'),
-  L('Цены', '/ceny-na-remont-kvartir/'),
+  L('Вторичка', '/remont-kvartiry-na-vtorichke/'), L('Под ключ', '/remont-kvartir-pod-klyuch/'),
+  L('Черновой', '/chernovoj-remont-kvartiry/'), L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
+  L('Дизайнерский', '/dizajnerskij-remont-kvartiry/'), L('По дизайн-проекту', '/dizajnerskij-remont-kvartiry/'),
+  L('Студия', '/remont-kvartiry-studii/'), L('Однокомнатная', '/remont-odnokomnatnoj-kvartiry/'),
+  L('Двухкомнатная', '/remont-dvuhkomnatnoj-kvartiry/'), L('По ЖК', '/remont-v-zhk-shablon/'),
+  L('Цены', '/remont-kvartir-pod-klyuch/'),
 ];
 
 const DESIGN_SIBLINGS = [
-  L('Дизайн квартиры', '/design-kvartir/'), L('Ванная комната', '/design-vannoy/'),
-  L('Спальня', '/design-spalni/'), L('Гостиная', '/design-gostinoy/'),
-  L('Детская комната', '/design-detskoy/'), L('Прихожая и коридор', '/design-prihozhey/'),
-  L('Квартира-студия', '/design-studii/'), L('Дом', '/design-domov/'),
+  L('Дизайн квартиры', '/dizajn-interera-kvartiry/'), L('Ванная комната', '/dizajn-vannoj-komnaty/'),
+  L('Спальня', '/dizajn-spalni/'), L('Гостиная', '/dizajn-gostinoj/'),
+  L('Детская комната', '/dizajn-detskoj-komnaty/'), L('Прихожая и коридор', '/dizajn-prihozhej-i-koridora/'),
+  L('Квартира-студия', '/dizajn-kvartiry-studii/'), L('Дом', '/dizajn-interera-doma/'),
 ];
 
 const PRIEMKA_SIBLINGS = [
-  L('С отделкой', '/priemka-s-otdelkoy/'), L('По ЖК', '/priemka-v-zhk/'),
-  L('Ремонт в новостройке', '/remont-kvartir-novostroyka/'), L('Комплектация', '/komplektaciya/'),
+  L('С отделкой', '/priyomka-kvartiry-s-otdelkoj/'), L('По ЖК', '/priyomka-v-zhk-shablon/'),
+  L('Ремонт в новостройке', '/remont-kvartiry-v-novostrojke/'), L('Комплектация', '/komplektatsiya-kvartiry/'),
 ];
 
 const PAGES = {
   novostroyka: {
-    crumb: 'Ремонт квартиры в новостройке', parent: 'Ремонт квартир', parentHref: '/remont-kvartir/',
+    crumb: 'Ремонт квартиры в новостройке', parent: 'Ремонт квартир', parentHref: '/remont-kvartir-pod-klyuch/',
     h1: 'Ремонт квартиры в новостройке', price: '8 850', hero: 'assets/hero-remont.jpg',
     bullets: ['— подготовим индивидуальный расчет;', '— поможем спланировать бюджет;', '— подберем решения под ваши задачи и образ жизни.'],
     cta: 'Бесплатный расчёт сметы', formTitle: 'Рассчитаем ремонт новостройки бесплатно',
@@ -426,7 +426,7 @@ const PAGES = {
     base: 8850, startArea: 54,
   },
   kuhnya: {
-    crumb: 'Дизайн кухни', parent: 'Дизайн интерьера', parentHref: '/design/',
+    crumb: 'Дизайн кухни', parent: 'Дизайн интерьера', parentHref: '/dizajn-interera/',
     h1: 'Дизайн кухни', price: '1 790', hero: 'assets/dz-style1.jpg',
     bullets: ['— бесплатно подготовим индивидуальный расчет;', '— соберём эргономику под ваши привычки;', '— подберем решения под ваши задачи и образ жизни.'],
     cta: 'Бесплатный выезд дизайнера', formTitle: 'Пригласите дизайнера на кухню бесплатно',
@@ -479,7 +479,7 @@ const PAGES = {
     base: 1790, startArea: 14,
   },
   priemka: {
-    crumb: 'Приёмка квартиры без отделки', parent: 'Приёмка квартир', parentHref: '/priemka/',
+    crumb: 'Приёмка квартиры без отделки', parent: 'Приёмка квартир', parentHref: '/priyomka-kvartir-v-novostrojke/',
     h1: 'Приемка квартиры без отделки', price: '', hero: 'assets/hero-priemka.jpg',
     bullets: ['— обнаружим скрытые дефекты до передачи квартиры;', '— подготовим подробный отчет с замечаниями для застройщика;', '— поможем избежать затрат на последующий ремонт;', '— защитим ваши интересы при приемке у застройщика.'],
     cta: 'Записаться на приёмку', formTitle: 'Пригласите профессионального приемщика',

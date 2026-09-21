@@ -202,48 +202,70 @@ class Component extends DCLogic {
   // Точные соответствия «адрес страницы сайта — отрисованный макет».
   var MAP = {
     '/': 'Главная.dc.html',
-    '/remont-kvartir/': 'Пиллар услуги.dc.html',
+    '/remont-kvartir-pod-klyuch/': 'Пиллар услуги.dc.html',
     '/uslugi/': 'Пиллар услуги.dc.html',
     // хабы групп услуг — это тоже пиллары, а не карточки работ
     '/inzhenernye-sistemy/': 'Пиллар услуги.dc.html',
     '/otdelochnye-raboty/': 'Пиллар услуги.dc.html',
     '/demontazh-i-chernovye-raboty/': 'Пиллар услуги.dc.html',
-    '/design/': 'Дизайн интерьера.dc.html',
-    '/komplektaciya/': 'Комплектация.dc.html',
-    '/priemka/': 'Приёмка квартир.dc.html',
+    '/dizajn-interera/': 'Дизайн интерьера.dc.html',
+    '/komplektatsiya-kvartiry/': 'Комплектация.dc.html',
+    '/priyomka-kvartir-v-novostrojke/': 'Приёмка квартир.dc.html',
     '/partners/': 'Партнёрам.dc.html',
     '/portfolio/': 'Портфолио и отзывы.dc.html',
     '/otzyvy/': 'Портфолио и отзывы.dc.html',
     '/o-kompanii/': 'О компании и контакты.dc.html',
     '/kontakty/': 'О компании и контакты.dc.html',
     '/blog/': 'Блог.dc.html',
-    '/voprosy-i-otvety/': 'Служебные страницы.dc.html',
+    '/faq/': 'Служебные страницы.dc.html',
     '/politika-konfidencialnosti/': 'Служебные страницы.dc.html',
     '/soglasie-na-obrabotku/': 'Служебные страницы.dc.html',
-    '/remont-v-zhk/': 'Служебные страницы.dc.html',
-    '/spasibo/': 'Служебные страницы.dc.html'
+    '/remont-v-zhk-shablon/': 'Служебные страницы.dc.html'
   };
 
-  // Адреса, которых в утверждённой структуре нет: рассрочку убрали,
-  // ремонт по дизайн-проекту объединили с дизайнерским, отдельной
-  // страницы цен не делаем. Ведут на 404 — это и есть «некуда».
-  var DEAD = {
-    '/remont-v-rassrochku/': 1,
-    '/remont-po-dizayn-proektu/': 1,
-    '/ceny-na-remont-kvartir/': 1
-  };
+  // Все адреса утверждённой структуры. Ссылка на страницу из этого списка
+  // открывает шаблон категории, всё остальное — 404. Так демо честно
+  // показывает, что за пределами структуры страниц нет.
+  var KNOWN = [
+    '/blog/', '/chernovoj-remont-kvartiry/', '/chistovaya-otdelka-kvartiry/',
+    '/dekorativnaya-shtukaturka/', '/demontazh-i-chernovye-raboty/', '/demontazhnye-raboty/',
+    '/dizajn-detskoj-komnaty/', '/dizajn-gostinoj/', '/dizajn-interera-doma/',
+    '/dizajn-interera-kvartiry/', '/dizajn-interera-ofisa/', '/dizajn-interera/',
+    '/dizajn-kommercheskih-pomeshchenij/', '/dizajn-kuhni/', '/dizajn-kvartiry-studii/',
+    '/dizajn-prihozhej-i-koridora/', '/dizajn-spalni/', '/dizajn-vannoj-komnaty/',
+    '/dizajnerskij-remont-kvartiry/', '/elektromontazhnye-raboty/', '/elitnyj-remont-kvartir/',
+    '/evroremont-kvartiry/', '/faq/', '/inzhenernye-sistemy/', '/kapitalnyj-remont-kvartiry/',
+    '/komplektatsiya-kvartiry/', '/kontakty/', '/kosmeticheskij-remont-kvartiry/',
+    '/malyarnye-raboty-i-poklejka-oboev/', '/mehanizirovannaya-shtukaturka/',
+    '/natyazhnye-potolki/', '/nedorogoj-remont-kvartir/', '/o-kompanii/',
+    '/otdelochnye-raboty/', '/otoplenie-i-radiatory/', '/otzyvy/', '/partners/',
+    '/pereplanirovka-kvartiry/', '/politika-konfidencialnosti/', '/portfolio/',
+    '/priyomka-kvartir-v-novostrojke/', '/priyomka-kvartiry-bez-otdelki/',
+    '/priyomka-kvartiry-s-otdelkoj/', '/priyomka-v-zhk-shablon/', '/remont-balkona-i-lodzhii/',
+    '/remont-detskoj-komnaty/', '/remont-domov-i-kottedzhej/',
+    '/remont-dvuhkomnatnoj-kvartiry/', '/remont-garderobnoj/', '/remont-gostinoj/',
+    '/remont-kommercheskih-pomeshchenij/', '/remont-kuhni/', '/remont-kvartir-po-stilyu/',
+    '/remont-kvartir-pod-klyuch/', '/remont-kvartiry-na-vtorichke/',
+    '/remont-kvartiry-studii/', '/remont-kvartiry-v-novostrojke/',
+    '/remont-odnokomnatnoj-kvartiry/', '/remont-pod-sdachu-v-arendu/',
+    '/remont-posle-zaliva-i-pozhara/', '/remont-prihozhej-i-koridora/', '/remont-sanuzla/',
+    '/remont-spalni/', '/remont-tryohkomnatnoj-kvartiry/', '/remont-tualeta/',
+    '/remont-v-hrushchyovke/', '/remont-v-panelnom-dome/', '/remont-v-stalinke/',
+    '/remont-v-zhk-shablon/', '/remont-vannoj-komnaty/', '/santehnicheskie-raboty/',
+    '/shumoizolyatsiya-kvartiry/', '/soglasie-na-obrabotku/', '/styazhka-pola/',
+    '/tyoplyj-pol/', '/ukladka-plitki/', '/umnyj-dom/', '/uslugi/',
+    '/ustanovka-konditsionerov/', '/ventilyatsiya/', '/vyravnivanie-sten/'
+  ];
 
   function target(href) {
-    if (!href) return null;
+    if (!href) return '404.dc.html';
     var path = href.split('#')[0].split('?')[0];
     if (path.charAt(path.length - 1) !== '/') path += '/';
-    if (DEAD[path]) return '404.dc.html';
     if (MAP[path]) return MAP[path];
     if (path.indexOf('/blog/') === 0) return 'Блог.dc.html';
     if (path.indexOf('/portfolio/') === 0) return 'Портфолио и отзывы.dc.html';
-    // Остальные внутренние адреса — это страницы услуг и категорий,
-    // их показывает шаблон категории.
-    return 'Категория услуги.dc.html';
+    if (KNOWN.indexOf(path) >= 0) return 'Категория услуги.dc.html';
+    return '404.dc.html';
   }
 
   function navBtns() {

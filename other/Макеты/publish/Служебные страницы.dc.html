@@ -168,10 +168,10 @@ input,textarea,select{font-family:inherit}
           <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Работаем и в других ЖК</h2>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
             <sc-for list="{{ otherZhk }}" as="z" hint-placeholder-count="6">
-              <a href="/remont-v-zhk/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
+              <a href="/remont-v-zhk-shablon/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
             </sc-for>
           </div>
-          <a href="/remont-v-zhk/" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все жилые комплексы →</a>
+          <a href="/remont-v-zhk-shablon/" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все жилые комплексы →</a>
         </div>
       </section>
     </div>
@@ -385,11 +385,11 @@ const LEGAL = [
 ];
 
 const LINKS_404 = [
-  { t: 'Ремонт квартир', href: '/remont-kvartir/' },
-  { t: 'Дизайн интерьера', href: '/design/' },
-  { t: 'Приёмка квартир', href: '/priemka/' },
+  { t: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/' },
+  { t: 'Дизайн интерьера', href: '/dizajn-interera/' },
+  { t: 'Приёмка квартир', href: '/priyomka-kvartir-v-novostrojke/' },
   { t: 'Портфолио', href: '/portfolio/' },
-  { t: 'Цены', href: '/ceny-na-remont-kvartir/' },
+  { t: 'Цены', href: '/remont-kvartir-pod-klyuch/' },
   { t: 'Контакты', href: '/kontakty/' },
 ];
 
@@ -400,14 +400,14 @@ const THANKS_STEPS = [
 ];
 
 const THANKS_LINKS = [
-  { t: 'Тарифы ремонта', note: 'что входит в каждый', href: '/ceny-na-remont-kvartir/' },
+  { t: 'Тарифы ремонта', note: 'что входит в каждый', href: '/remont-kvartir-pod-klyuch/' },
   { t: 'Отзывы', note: 'со ссылками на площадки', href: '/otzyvy/' },
   { t: 'Блог', note: 'как считается смета', href: '/blog/' },
 ];
 
 const PAGES = {
   'Вопросы и ответы': { crumb: 'Вопросы и ответы', crumbs: true, cta: true, mid: '' },
-  'Страница ЖК': { crumb: 'ЖК Shagal', crumbs: true, cta: true, mid: 'Ремонт в ЖК', midHref: '/remont-v-zhk/' },
+  'Страница ЖК': { crumb: 'ЖК Shagal', crumbs: true, cta: true, mid: 'Ремонт в ЖК', midHref: '/remont-v-zhk-shablon/' },
   'Юридическая': { crumb: 'Согласие на обработку данных', crumbs: true, cta: false, mid: '' },
   '404': { crumb: '', crumbs: false, cta: false, mid: '' },
   'Спасибо': { crumb: '', crumbs: false, cta: false, mid: '' },

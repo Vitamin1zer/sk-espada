@@ -8,6 +8,12 @@
 <body>
 <x-dc>
 <helmet>
+
+
+
+
+
+
 <style>
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
@@ -162,10 +168,10 @@ input,textarea,select{font-family:inherit}
           <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Работаем и в других ЖК</h2>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
             <sc-for list="{{ otherZhk }}" as="z" hint-placeholder-count="6">
-              <a href="/remont-v-zhk/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
+              <a href="/remont-v-zhk-shablon/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
             </sc-for>
           </div>
-          <a href="/remont-v-zhk/" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все жилые комплексы →</a>
+          <a href="/remont-v-zhk-shablon/" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все жилые комплексы →</a>
         </div>
       </section>
     </div>
@@ -240,7 +246,7 @@ input,textarea,select{font-family:inherit}
           </div>
         </div>
         <div style="min-width:0">
-          <img src="assets/pf-06.png" alt="Ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
+          <img src="assets/pf-06.jpg" alt="Ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
         </div>
       </div>
     </section>
@@ -272,7 +278,7 @@ input,textarea,select{font-family:inherit}
           <p style="margin:0;font-size:11.5px;line-height:1.55;color:#929292;max-width:440px">Отдельный адрес страницы нужен, чтобы поставить цель в Яндекс.Метрике: конверсия считается по переходу на /spasibo/, а не по нажатию кнопки.</p>
         </div>
         <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(16px,1.8cqw,24px)">
-          <img src="assets/pf-01.png" alt="Готовый ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
+          <img src="assets/pf-01.jpg" alt="Готовый ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px">
             <sc-for list="{{ thanksLinks }}" as="l" hint-placeholder-count="3">
               <a href="{{ l.href }}" style="background:#f8f8f8;padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:background .2s" style-hover="background:#f0f0f0">
@@ -361,9 +367,9 @@ const DEFECTS = [
 ];
 
 const ZHK_WORKS = [
-  { title: '2-комнатная, 82 м²', note: 'Дизайнерский ремонт, 7 месяцев', img: 'assets/pf-02.png' },
-  { title: '1-комнатная, 44 м²', note: 'Ремонт под ключ', img: 'assets/pf-04.png' },
-  { title: 'Квартира-студия, 28 м²', note: 'Чистовой ремонт', img: 'assets/pf-03.png' },
+  { title: '2-комнатная, 82 м²', note: 'Дизайнерский ремонт, 7 месяцев', img: 'assets/pf-02.jpg' },
+  { title: '1-комнатная, 44 м²', note: 'Ремонт под ключ', img: 'assets/pf-04.jpg' },
+  { title: 'Квартира-студия, 28 м²', note: 'Чистовой ремонт', img: 'assets/pf-03.jpg' },
 ];
 
 const OTHER_ZHK = ['{ЖК 1}', '{ЖК 2}', '{ЖК 3}', '{ЖК 4}', '{ЖК 5}', '{ЖК 6}'];
@@ -379,11 +385,11 @@ const LEGAL = [
 ];
 
 const LINKS_404 = [
-  { t: 'Ремонт квартир', href: '/remont-kvartir/' },
-  { t: 'Дизайн интерьера', href: '/design/' },
-  { t: 'Приёмка квартир', href: '/priemka/' },
+  { t: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/' },
+  { t: 'Дизайн интерьера', href: '/dizajn-interera/' },
+  { t: 'Приёмка квартир', href: '/priyomka-kvartir-v-novostrojke/' },
   { t: 'Портфолио', href: '/portfolio/' },
-  { t: 'Цены', href: '/ceny-na-remont-kvartir/' },
+  { t: 'Цены', href: '/remont-kvartir-pod-klyuch/' },
   { t: 'Контакты', href: '/kontakty/' },
 ];
 
@@ -394,14 +400,14 @@ const THANKS_STEPS = [
 ];
 
 const THANKS_LINKS = [
-  { t: 'Тарифы ремонта', note: 'что входит в каждый', href: '/ceny-na-remont-kvartir/' },
+  { t: 'Тарифы ремонта', note: 'что входит в каждый', href: '/remont-kvartir-pod-klyuch/' },
   { t: 'Отзывы', note: 'со ссылками на площадки', href: '/otzyvy/' },
   { t: 'Блог', note: 'как считается смета', href: '/blog/' },
 ];
 
 const PAGES = {
   'Вопросы и ответы': { crumb: 'Вопросы и ответы', crumbs: true, cta: true, mid: '' },
-  'Страница ЖК': { crumb: 'ЖК Shagal', crumbs: true, cta: true, mid: 'Ремонт в ЖК', midHref: '/remont-v-zhk/' },
+  'Страница ЖК': { crumb: 'ЖК Shagal', crumbs: true, cta: true, mid: 'Ремонт в ЖК', midHref: '/remont-v-zhk-shablon/' },
   'Юридическая': { crumb: 'Согласие на обработку данных', crumbs: true, cta: false, mid: '' },
   '404': { crumb: '', crumbs: false, cta: false, mid: '' },
   'Спасибо': { crumb: '', crumbs: false, cta: false, mid: '' },
