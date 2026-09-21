@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+
+
+
+
+
+
+<meta name="design_doc_mode" content="canvas">
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Light.woff2") format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#e9e9e7}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+</style>
+</helmet>
+
+<section style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;padding:56px 56px 120px;display:flex;flex-direction:column;gap:64px;background:#e9e9e7">
+
+  <header style="display:flex;flex-direction:column;gap:14px;max-width:900px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="background:#00AD9F;color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;padding:6px 10px;white-space:nowrap">ЭТАП 1</span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#929292">Сквозные элементы · СК «Эспада» · Tilda → WordPress</span>
+    </div>
+    <h1 style="margin:0;font-size:44px;line-height:1.05;font-weight:800;letter-spacing:-.02em;color:#000;text-transform:uppercase">Шапка, мега-меню,<br />подвал и хлебные крошки</h1>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#5c5c5c;text-wrap:pretty">Визуальный язык снят с текущего сайта на Tilda: бирюзовый <b style="color:#00AD9F">#00AD9F</b>, TildaSans, прописные заголовки, кнопки без скруглений. Структура расширена по брифу: верхняя утилитарная строка держит страницы доверия, основная — коммерческие разделы с мега-меню. Дерево разделов взято из файла структуры проекта, не выдумано.</p>
+  </header>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1a</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Шапка — обычное состояние</span>
+      <span style="font-size:12px;color:#929292">артборд 1440 · контейнер 1200 · утилитарная строка 38 px + основная 84 px</span>
+    </div>
+    <div style="width:1440px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
+      <dc-import name="Шапка" variant="default" openIndex="{{ minus }}" hint-size="1440px,122px"></dc-import>
+      <sc-if value="{{ setka }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;pointer-events:none;display:flex;justify-content:center">
+          <div style="width:1200px;display:grid;grid-template-columns:repeat(12,1fr);gap:24px">
+            <sc-for list="{{ cols12 }}" as="c" hint-placeholder-count="12">
+              <div style="background:rgba(0,173,159,.10);border-left:1px solid rgba(0,173,159,.28);border-right:1px solid rgba(0,173,159,.28)"></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <div style="height:44px"></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1b</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Мега-меню «Ремонт квартир»</span>
+      <span style="font-size:12px;color:#929292">25 дочерних страниц, разложены группами в пять колонок + промо-карточка</span>
+    </div>
+    <div style="width:1440px;height:600px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
+      <dc-import name="Шапка" variant="default" openIndex="{{ zero }}" hint-size="1440px,600px"></dc-import>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1c</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Мега-меню «Дизайн интерьера»</span>
+      <span style="font-size:12px;color:#929292">11 страниц в три колонки, промо с ценой дизайн-проекта</span>
+    </div>
+    <div style="width:1440px;height:440px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
+      <dc-import name="Шапка" variant="default" openIndex="{{ one }}" hint-size="1440px,440px"></dc-import>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1d</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Шапка липкая при прокрутке</span>
+      <span style="font-size:12px;color:#929292">утилитарная строка уезжает, высота 62 px, логотип 32 px, тень появляется за 0,2 с</span>
+    </div>
+    <div style="width:1440px;background:#f8f8f8;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
+      <dc-import name="Шапка" variant="sticky" openIndex="{{ minus }}" hint-size="1440px,62px"></dc-import>
+      <div style="padding:44px 120px 54px;display:flex;flex-direction:column;gap:14px;opacity:.5">
+        <div style="height:22px;width:52%;background:#dcdcdc"></div>
+        <div style="height:12px;width:78%;background:#e4e4e4"></div>
+        <div style="height:12px;width:70%;background:#e4e4e4"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1e</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Хлебные крошки</span>
+      <span style="font-size:12px;color:#929292">цепочка строится по дереву админки, а не по сегментам адреса</span>
+    </div>
+    <div style="width:1440px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);padding:0 0 34px">
+      <div style="max-width:1240px;margin:0 auto;padding:20px 20px 0">
+        <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+          <sc-for list="{{ crumbs }}" as="c" hint-placeholder-count="3">
+            <sc-if value="{{ c.sep }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size:12px;color:#bfbfbf">{{ sep }}</span>
+            </sc-if>
+            <sc-if value="{{ c.last }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size:12px;color:#5c5c5c;letter-spacing:.01em">{{ c.t }}</span>
+            </sc-if>
+            <sc-if value="{{ c.link }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ c.href }}" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">{{ c.t }}</a>
+            </sc-if>
+          </sc-for>
+        </div>
+        <h1 style="margin:22px 0 0;font-size:40px;line-height:1.06;font-weight:800;letter-spacing:-.015em;text-transform:uppercase;color:#000">Дизайн интерьера <span style="color:#00AD9F">квартиры</span></h1>
+        <div style="margin-top:12px;font-size:13px;color:#929292">H1 — единственный на странице. Адрес плоский: <b style="color:#5c5c5c">/design-kvartir/</b>, вложенность живёт только в админке.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1f</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Подвал</span>
+      <span style="font-size:12px;color:#929292">контакты, соцсети, три колонки разделов, заказ звонка, реквизиты ИП, документы</span>
+    </div>
+    <div style="width:1440px;box-shadow:0 2px 24px rgba(0,0,0,.10)">
+      <dc-import name="Подвал" mobile="{{ false }}" hint-size="1440px,470px"></dc-import>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1g</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Мобильные состояния</span>
+      <span style="font-size:12px;color:#929292">артборд 375 · боковые поля 16 · бургер на весь экран, разделы в аккордеоне</span>
+    </div>
+    <div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:8px">
+        <figcaption style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#929292">Свёрнутая</figcaption>
+        <div style="width:375px;height:300px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);overflow:hidden">
+          <dc-import name="Шапка" variant="mobile" hint-size="375px,58px"></dc-import>
+          <div style="padding:22px 16px;display:flex;flex-direction:column;gap:12px;opacity:.45">
+            <div style="height:20px;width:70%;background:#dcdcdc"></div>
+            <div style="height:11px;width:92%;background:#e4e4e4"></div>
+            <div style="height:11px;width:84%;background:#e4e4e4"></div>
+            <div style="height:44px;width:100%;background:#cfe9e6;margin-top:8px"></div>
+          </div>
+        </div>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:8px">
+        <figcaption style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#929292">Меню раскрыто · разделы свёрнуты</figcaption>
+        <div style="width:375px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10)">
+          <dc-import name="Шапка" variant="mobile-open" accIndex="{{ minus }}" hint-size="375px,760px"></dc-import>
+        </div>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:8px">
+        <figcaption style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#929292">Раздел «Приёмка» раскрыт</figcaption>
+        <div style="width:375px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10)">
+          <dc-import name="Шапка" variant="mobile-open" accIndex="{{ three }}" hint-size="375px,1100px"></dc-import>
+        </div>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:8px">
+        <figcaption style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#929292">Подвал мобильный</figcaption>
+        <div style="width:375px;box-shadow:0 2px 24px rgba(0,0,0,.10)">
+          <dc-import name="Подвал" mobile="{{ true }}" hint-size="375px,900px"></dc-import>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <sc-if value="{{ etalon }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <span style="background:#5c5c5c;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1h</span>
+        <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Эталон — как шапка выглядит сейчас на Tilda</span>
+        <span style="font-size:12px;color:#929292">для сверки 1-в-1: те же элементы, тот же ритм, шесть пунктов вместо шести разделов с мега-меню</span>
+      </div>
+      <div style="width:1440px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);border:2px dashed #d9d9d9">
+        <div style="max-width:1240px;margin:0 auto;padding:18px 20px 0;display:flex;align-items:center;gap:34px">
+          <img src="assets/logo-full.png" alt="Эспада" style="height:46px;width:auto;display:block" />
+          <div style="font-size:12px;font-weight:700;line-height:1.45;color:#313131;max-width:190px">Ремонт квартир под ключ<br /><span style="font-weight:400">в Москве и Московской области</span></div>
+          <div style="flex:1"></div>
+          <button type="button" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:11px 20px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.35">Вызвать<br />замерщика</button>
+          <div style="text-align:right">
+            <a href="tel:+79938914064" style="display:block;font-size:16px;font-weight:800;color:#313131;text-decoration:none">+7 (993) 891-40-64</a>
+            <span style="font-size:11px;color:#5c5c5c">Дегунинская, д. 1, корп. 2</span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
+              <span style="width:26px;height:26px;background:#00AD9F;border-radius:50%;display:flex;align-items:center;justify-content:center">
+                <img src="{{ s.icon }}" alt="{{ s.name }}" style="width:13px;height:13px;object-fit:contain;display:block" />
+              </span>
+            </sc-for>
+          </div>
+        </div>
+        <div style="max-width:1240px;margin:0 auto;padding:18px 20px 20px;display:flex;justify-content:space-between;gap:20px">
+          <sc-for list="{{ tildaMenu }}" as="t" hint-placeholder-count="6">
+            <span style="font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#313131">{{ t }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">1i</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Палитра, типографика, кнопки</span>
+      <span style="font-size:12px;color:#929292">единственный акцент — бирюзовый; скруглений нет нигде</span>
+    </div>
+    <div style="width:1440px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);padding:40px 120px 46px;display:flex;flex-direction:column;gap:38px">
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <sc-for list="{{ palette }}" as="p" hint-placeholder-count="8">
+          <div style="width:140px">
+            <div style="{{ p.chip }}"></div>
+            <div style="margin-top:8px;font-size:11px;font-weight:800;letter-spacing:.04em;color:#313131;font-variant-numeric:tabular-nums">{{ p.code }}</div>
+            <div style="font-size:11px;line-height:1.4;color:#929292">{{ p.role }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">Типографика</div>
+          <div>
+            <div style="font-size:44px;line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Заголовок H1</div>
+            <div style="font-size:11px;color:#929292;margin-top:6px">TildaSans ExtraBold 44/46 · прописные · трекинг −2 %</div>
+          </div>
+          <div>
+            <div style="font-size:32px;line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Заголовок секции <span style="color:#00AD9F">с акцентом</span></div>
+            <div style="font-size:11px;color:#929292;margin-top:6px">H2 · TildaSans ExtraBold 32/35</div>
+          </div>
+          <div>
+            <div style="font-size:19px;line-height:1.2;font-weight:700;text-transform:uppercase;letter-spacing:.01em;color:#00AD9F">Подзаголовок карточки</div>
+            <div style="font-size:11px;color:#929292;margin-top:6px">H3 · TildaSans Bold 19/23 · бирюзовый</div>
+          </div>
+          <div>
+            <div style="font-size:15px;line-height:1.6;color:#313131;max-width:420px">Основной текст — Regular, обычным регистром, без выключки по ширине. Цвет #313131, подписи и юридические тексты — #5C5C5C.</div>
+            <div style="font-size:11px;color:#929292;margin-top:6px">Body · TildaSans Regular 15/24</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:26px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">Кнопки и поля</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <button type="button" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">Бесплатный расчёт сметы</button>
+            <button type="button" style="background:#026B63;color:#fff;border:0;border-radius:0;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 8px 22px rgba(0,0,0,.2)">Наведение</button>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <button type="button" style="background:transparent;color:#00AD9F;border:1px solid #00AD9F;border-radius:0;padding:15px 24px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Вторичная — вызвать замерщика</button>
+            <span style="font-size:11px;color:#929292">контурная</span>
+          </div>
+          <div style="max-width:420px;display:flex;flex-direction:column;gap:14px">
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:12px;font-weight:600;color:#5c5c5c">ФИО</span>
+              <input type="text" placeholder="Петров Петр Петрович" style="height:48px;border:1px solid #d9d9d9;border-radius:0;padding:0 14px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:12px;font-weight:600;color:#5c5c5c">Телефон</span>
+              <input type="tel" placeholder="+7 (000) 000-00-00" style="height:48px;border:1px solid #d9d9d9;border-radius:0;padding:0 14px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:12px;font-weight:600;color:#c0392b">Телефон — ошибка</span>
+              <input type="tel" value="+7 (99" style="height:48px;border:1px solid #c0392b;border-radius:0;padding:0 14px;font-size:14px;color:#313131;background:#fff;outline:none" />
+              <span style="font-size:11px;color:#c0392b">Введите номер полностью</span>
+            </label>
+            <div style="display:flex;gap:10px;align-items:flex-start;margin-top:2px">
+              <span style="width:18px;height:18px;border:1px solid #bfbfbf;flex:0 0 18px;display:block;margin-top:2px"></span>
+              <span style="font-size:11.5px;line-height:1.5;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;setka&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Проверка макета&quot;},&quot;etalon&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Проверка макета&quot;},&quot;razdelitel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Слэш  /&quot;,&quot;Тире  –&quot;,&quot;Шеврон  ›&quot;],&quot;default&quot;:&quot;Слэш  /&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Хлебные крошки&quot;}}">
+const PALETTE = [
+  ['#00AD9F', 'Фирменный бирюзовый'],
+  ['#026B63', 'Наведение на кнопку'],
+  ['#313131', 'Основной текст'],
+  ['#5C5C5C', 'Подписи, юр. текст'],
+  ['#929292', 'Второстепенные подписи'],
+  ['#000000', 'Крупные заголовки'],
+  ['#F8F8F8', 'Фон секции'],
+  ['#D9D9D9', 'Рамки и линии'],
+];
+
+const CRUMBS = [
+  { t: 'Главная', href: '/' },
+  { t: 'Дизайн интерьера', href: '/design/' },
+  { t: 'Дизайн интерьера квартиры', href: '' },
+];
+
+const TILDA_MENU = ['Ремонт квартир', 'Дизайн интерьера', 'Комплектация', 'Приемка', 'Контакты', 'Партнерам'];
+
+const SOCIALS = [
+  { name: 'Telegram', icon: 'assets/soc-tg.png' },
+  { name: 'ВКонтакте', icon: 'assets/soc-vk.png' },
+  { name: 'Дзен', icon: 'assets/soc-dzen.png' },
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const seps = { 'Слэш  /': '/', 'Тире  –': '–', 'Шеврон  ›': '›' };
+    return {
+      minus: -1,
+      zero: 0,
+      one: 1,
+      three: 3,
+      setka: !!this.props.setka,
+      etalon: this.props.etalon === undefined ? true : !!this.props.etalon,
+      sep: seps[this.props.razdelitel] || '/',
+      cols12: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      socials: SOCIALS,
+      tildaMenu: TILDA_MENU,
+      palette: PALETTE.map(p => ({
+        code: p[0],
+        role: p[1],
+        chip: 'height:64px;background:' + p[0] + (p[0] === '#FFFFFF' || p[0] === '#F8F8F8' || p[0] === '#D9D9D9' ? ';border:1px solid #e0e0e0' : ''),
+      })),
+      crumbs: CRUMBS.map((c, i) => ({
+        t: c.t,
+        href: c.href,
+        sep: i > 0,
+        last: i === CRUMBS.length - 1,
+        link: i < CRUMBS.length - 1,
+      })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

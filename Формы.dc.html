@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#e9e9e7}
+a{color:#00AD9F;text-decoration:none}
+a:hover{color:#026B63}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+</style>
+</helmet>
+
+<section style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#e9e9e7;padding:56px 56px 120px;display:flex;flex-direction:column;gap:56px">
+
+  <header style="display:flex;flex-direction:column;gap:14px;max-width:900px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="background:#00AD9F;color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;padding:6px 10px;white-space:nowrap">ЭТАП 6</span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#929292">Формы и состояния · СК «Эспада»</span>
+    </div>
+    <h1 style="margin:0;font-size:44px;line-height:1.05;font-weight:800;letter-spacing:-.02em;color:#000;text-transform:uppercase">Четыре формы,<br />четыре состояния каждой</h1>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#5c5c5c;text-wrap:pretty">Один компонент <b style="color:#313131">Форма.dc.html</b>: тип и состояние переключаются свойствами. Поля одинаковые везде — имя и телефон с маской, чекбокс согласия со ссылками на два документа, кнопка с текстом действия. Кнопки без скруглений, рамка поля бирюзовая при заполнении и красная при ошибке.</p>
+  </header>
+
+  <sc-for list="{{ kinds }}" as="k" hint-placeholder-count="4">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid #d5d5d3;padding-bottom:10px">
+        <span style="background:#000;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">{{ k.id }}</span>
+        <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">{{ k.title }}</span>
+        <span style="font-size:12px;color:#929292">{{ k.note }}</span>
+      </div>
+      <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+        <sc-for list="{{ k.states }}" as="s" hint-placeholder-count="4">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:8px">
+            <figcaption style="display:flex;align-items:baseline;gap:8px">
+              <span style="{{ s.dotCss }}"></span>
+              <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5c5c5c">{{ s.label }}</span>
+            </figcaption>
+            <div style="{{ k.frameCss }}">
+              <dc-import name="Форма" kind="{{ k.kind }}" state="{{ s.label }}" hint-size="100%,420px"></dc-import>
+            </div>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid #d5d5d3;padding-bottom:10px">
+      <span style="background:#00AD9F;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;padding:5px 9px">6e</span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Попап в контексте</span>
+      <span style="font-size:12px;color:#929292">затемнение 60 %, крестик в правом верхнем углу, тень 30/70 — так он выглядит поверх страницы</span>
+    </div>
+    <div style="width:900px;height:620px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
+      <div style="padding:40px 60px;display:flex;flex-direction:column;gap:14px;opacity:.5">
+        <div style="height:26px;width:46%;background:#dcdcdc"></div>
+        <div style="height:12px;width:74%;background:#e6e6e6"></div>
+        <div style="height:12px;width:66%;background:#e6e6e6"></div>
+        <div style="height:180px;width:100%;background:#ececec;margin-top:10px"></div>
+      </div>
+      <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);display:flex;align-items:flex-start;justify-content:center;padding:44px 16px">
+        <div style="width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+          <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="520px,520px"></dc-import>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fff;padding:32px;display:flex;flex-direction:column;gap:16px;max-width:900px">
+    <h2 style="margin:0;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#00AD9F">Правила поведения форм</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ rules }}" as="r" hint-placeholder-count="5">
+        <div style="display:flex;gap:14px;align-items:flex-start;border-top:1px solid #ededed;padding-top:12px">
+          <span style="flex:0 0 24px;font-size:12px;font-weight:800;color:#bfbfbf;font-variant-numeric:tabular-nums">{{ r.i }}</span>
+          <span style="font-size:13.5px;line-height:1.55;color:#313131">{{ r.t }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900}}">
+const STATES = ['Пустая', 'Заполненная', 'Ошибка', 'Отправлена'];
+
+const DOT = {
+  'Пустая': '#bfbfbf',
+  'Заполненная': '#00AD9F',
+  'Ошибка': '#c0392b',
+  'Отправлена': '#026B63',
+};
+
+const KINDS = [
+  { id: '6a', kind: 'Встроенная', title: 'Встроенная форма в секции', width: 420,
+    note: 'первый экран посадочной и блок «договоримся о встрече» · заголовок с выгодой и подзаголовок-пояснение' },
+  { id: '6b', kind: 'Попап', title: 'Попап заявки', width: 460,
+    note: 'открывается с любой кнопки расчёта · список того, что человек получит' },
+  { id: '6c', kind: 'Подвал', title: 'Форма в подвале', width: 320,
+    note: 'на тёмной подложке, телефон и кнопка · на текущем сайте поля нет, кнопка открывает попап — поле добавлено осознанно и уже стоит в Подвал.dc.html' },
+  { id: '6d', kind: 'Партнёрство', title: 'Заявка на партнёрство', width: 420,
+    note: 'третье поле — кто вы · на текущем сайте формы нет вовсе, кнопка ведёт в никуда' },
+];
+
+const RULES = [
+  'Телефон пишется маской +7 (000) 000-00-00, ссылка всегда без пробелов: tel:+79938914064. На текущем сайте 20 из 32 ссылок записаны с пробелом и не срабатывают.',
+  'Чекбокс согласия обязателен во всех формах, кроме подвала: там согласие даётся нажатием кнопки, а строка со ссылками стоит прямо под ней. Ссылки везде ведут на два разных документа — согласие на обработку и политику конфиденциальности.',
+  'Ошибка показывается только после попытки отправки: сверху общее сообщение, под полем — конкретное, рамка и подпись поля краснеют. Заполненные поля получают бирюзовую рамку.',
+  'После отправки поля заменяются экраном подтверждения: что будет дальше по шагам и когда перезвонят. Этот же экран собирается отдельной страницей /spasibo/ под цели в Метрике.',
+  'Текст кнопок захвата берётся из таблицы CTA брифа: «Бесплатный расчёт сметы», «Бесплатный выезд дизайнера», «Записаться на приёмку», «Заказать звонок», «Стать партнёром». Исключение — кнопка на тарифных карточках: там по требованию заказчика стоит «Отправить заявку на расчёт». Абстрактные «Отправить» и «Подтвердить» без объекта действия не используем нигде.',
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      kinds: KINDS.map(k => ({
+        id: k.id, kind: k.kind, title: k.title, note: k.note,
+        frameCss: 'width:' + k.width + 'px;box-shadow:0 2px 20px rgba(0,0,0,.10)',
+        states: STATES.map(s => ({
+          label: s,
+          dotCss: 'width:7px;height:7px;flex:0 0 7px;display:block;background:' + DOT[s],
+        })),
+      })),
+      rules: RULES.map((t, i) => ({ i: (i + 1) + '.', t })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
