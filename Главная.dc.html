@@ -130,11 +130,11 @@ input,textarea,select{font-family:inherit}
           <h3 style="margin:0;font-size:clamp(16px,1.5cqw,21px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">На конкретном примере:</h3>
           <div style="align-self:flex-start;background:#00AD9F;color:#fff;padding:13px 20px;font-size:clamp(12px,1cqw,14px);font-weight:600">ЖК Shagal 2-комнатная квартира 82 м²</div>
           <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">И дальше рассказ совсем не про интерьер:</p>
-          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:460px;text-wrap:pretty">На момент обращения к нам Игорь (наш клиент) уже получил ключи. Дизайн-проект был разработан сторонней студией. Оставалось найти тех, кто сделает ремонт.</p>
+          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:460px;text-wrap:pretty">На момент обращения к нам клиент уже получил ключи. Дизайн-проект был разработан сторонней студией. Оставалось найти тех, кто сделает ремонт.</p>
         </div>
         <div style="min-width:0;display:flex;flex-direction:column;gap:20px">
           <div style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131">Дизайнерский ремонт<br />Сроки ремонта — 7 месяцев</div>
-          <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000">Игорь сравнил 6 компаний:</h3>
+          <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000">Клиент сравнил 6 компаний:</h3>
           <div style="display:flex;flex-direction:column;gap:13px">
             <sc-for list="{{ compared }}" as="c" hint-placeholder-count="3">
               <div style="display:flex;gap:14px;align-items:flex-start">
@@ -145,103 +145,6 @@ input,textarea,select{font-family:inherit}
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section data-screen-label="О чём переживал хозяин" style="background:#fff;padding:clamp(28px,3cqw,48px) 0 clamp(44px,5cqw,80px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">О чём <span style="color:#00AD9F">больше всего переживал</span><br />хозяин квартиры:</h2>
-      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start">
-        <sc-for list="{{ worries }}" as="w" hint-placeholder-count="5">
-          <div style="min-width:0;display:flex;flex-direction:column;gap:13px">
-            <img src="{{ w.img }}" alt="{{ w.title }}" style="width:100%;height:clamp(150px,13cqw,190px);object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
-            <h3 style="margin:0;font-size:clamp(12.5px,1cqw,14px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ w.title }}</h3>
-            <div style="display:flex;flex-direction:column;gap:9px">
-              <sc-for list="{{ w.paras }}" as="p" hint-placeholder-count="2">
-                <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ p }}</p>
-              </sc-for>
-            </div>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <section data-screen-label="Ключевые моменты" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Ключевые моменты в выборе компании</h2>
-      <div style="margin-top:20px;align-self:flex-start;display:inline-block;background:#00AD9F;color:#fff;padding:13px 20px;font-size:clamp(12px,1cqw,14px);font-weight:600">Мы узнали что позволило Игорю принять решение:</div>
-      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start">
-        <sc-for list="{{ moments }}" as="m" hint-placeholder-count="3">
-          <div style="background:#fff;border-radius:10px;padding:clamp(16px,1.5cqw,22px);display:flex;flex-direction:column;gap:16px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)">
-            <img src="{{ m.img }}" alt="{{ m.title }}" style="width:100%;height:clamp(160px,14cqw,210px);object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
-            <h3 style="margin:0;font-size:clamp(14px,1.15cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ m.title }}</h3>
-            <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ m.text }}</p>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <section data-screen-label="Общение с инженером" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:end">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(20px,3cqw,54px)">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Общение с нашим инженером</h2>
-        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Впечатления Игоря о встрече</h3>
-          <div style="background:#00AD9F;color:#fff;padding:9px 16px">
-            <div style="font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.15">Иван</div>
-            <div style="font-size:11.5px;line-height:1.3">Инженер-сметчик Эспады</div>
-          </div>
-        </div>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">«Встреча с инженером состоялась в формата технической консультации. Мы обсудили что нам важно, какие ожидания по бюджету и работе.</p>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">После Иван проанализировал проект, указал на ошибки и предложил более рациональные решения. Такой подход убедил меня, что ремонт будет выполнен не только красиво, но и технически правильно.»</p>
-      </div>
-      <div style="min-width:0;display:flex;justify-content:flex-end;align-items:flex-end">
-        <img src="assets/engineer.png" alt="Иван, инженер-сметчик Эспады" style="width:100%;max-width:400px;height:auto;display:block" />
-      </div>
-    </div>
-  </section>
-
-  <section data-screen-label="Где избежали лишних трат" style="background:#fff;padding:clamp(36px,4cqw,64px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.4cqw,40px);align-items:center">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Где удалось избежать<br /><span style="color:#00AD9F">лишних трат?</span></h2>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;text-wrap:pretty">Мы провели анализ дизайн-проекта, и наш инженер обнаружил в нем ошибки, которые привели бы к тому, что пришлось бы:</p>
-      </div>
-      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,2cqw,30px)">
-        <sc-for list="{{ avoided }}" as="a" hint-placeholder-count="4">
-          <div style="display:flex;gap:16px;align-items:center">
-            <img src="assets/icon-x.svg" alt="" style="width:22px;height:22px;flex:0 0 22px;display:block" />
-            <span style="font-size:clamp(12.5px,1.05cqw,15px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#313131;line-height:1.25">{{ a }}</span>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <section data-screen-label="Что получил клиент" style="background:#fff;padding:clamp(36px,4cqw,64px) 0 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:start">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Что получил клиент?</h2>
-        <div style="align-self:flex-start;background:#00AD9F;color:#fff;padding:14px 26px;font-size:clamp(14px,1.25cqw,18px);font-weight:700;letter-spacing:.04em;text-transform:uppercase">Результат.</div>
-      </div>
-      <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
-        <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000">Конец ремонта:</h3>
-        <div style="display:flex;flex-direction:column;gap:11px">
-          <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
-            <div style="display:flex;gap:11px;align-items:flex-start">
-              <span style="font-size:15px;color:#00AD9F;line-height:1.35;font-weight:700">✓</span>
-              <span style="font-size:clamp(13px,1.05cqw,15px);line-height:1.4;color:#313131">{{ r }}</span>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:clamp(30px,3.4cqw,54px);padding:0 clamp(16px,1.4cqw,20px);display:flex;gap:clamp(10px,1.1cqw,16px);overflow-x:auto;max-width:1240px;margin-left:auto;margin-right:auto">
-      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
-        <img src="{{ g.img }}" alt="Готовый ремонт, фото {{ g.n }}" style="{{ g.css }}" />
-      </sc-for>
     </div>
   </section>
 
@@ -291,6 +194,103 @@ input,textarea,select{font-family:inherit}
       <div style="margin-top:clamp(26px,2.8cqw,40px);display:flex;justify-content:center">
         <a href="/portfolio/" style="background:transparent;color:#00AD9F;border:1px solid #00AD9F;padding:16px 30px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть все работы</a>
       </div>
+    </div>
+  </section>
+
+  <section data-screen-label="О чём переживал хозяин" style="background:#fff;padding:clamp(28px,3cqw,48px) 0 clamp(44px,5cqw,80px)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">О чём <span style="color:#00AD9F">больше всего переживал</span><br />хозяин квартиры:</h2>
+      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start">
+        <sc-for list="{{ worries }}" as="w" hint-placeholder-count="5">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:13px">
+            <img src="{{ w.img }}" alt="{{ w.title }}" style="width:100%;height:clamp(150px,13cqw,190px);object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
+            <h3 style="margin:0;font-size:clamp(12.5px,1cqw,14px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ w.title }}</h3>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <sc-for list="{{ w.paras }}" as="p" hint-placeholder-count="2">
+                <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ p }}</p>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Ключевые моменты" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Ключевые моменты в выборе компании</h2>
+      <div style="margin-top:20px;align-self:flex-start;display:inline-block;background:#00AD9F;color:#fff;padding:13px 20px;font-size:clamp(12px,1cqw,14px);font-weight:600">Что позволило принять решение в нашу пользу:</div>
+      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start">
+        <sc-for list="{{ moments }}" as="m" hint-placeholder-count="3">
+          <div style="background:#fff;border-radius:10px;padding:clamp(16px,1.5cqw,22px);display:flex;flex-direction:column;gap:16px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)">
+            <img src="{{ m.img }}" alt="{{ m.title }}" style="width:100%;height:clamp(160px,14cqw,210px);object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
+            <h3 style="margin:0;font-size:clamp(14px,1.15cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ m.title }}</h3>
+            <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ m.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Общение с инженером" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:end">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(20px,3cqw,54px)">
+        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Общение с нашим инженером</h2>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Впечатления клиента о встрече</h3>
+          <div style="background:#00AD9F;color:#fff;padding:9px 16px">
+            <div style="font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.15">Иван</div>
+            <div style="font-size:11.5px;line-height:1.3">Инженер-сметчик Эспады</div>
+          </div>
+        </div>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">«Встреча с инженером состоялась в формата технической консультации. Мы обсудили что нам важно, какие ожидания по бюджету и работе.</p>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">После Иван проанализировал проект, указал на ошибки и предложил более рациональные решения. Такой подход убедил меня, что ремонт будет выполнен не только красиво, но и технически правильно.»</p>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:flex-end;align-items:flex-end">
+        <img src="assets/engineer.png" alt="Иван, инженер-сметчик Эспады" style="width:100%;max-width:400px;height:auto;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Где избежали лишних трат" style="background:#fff;padding:clamp(36px,4cqw,64px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.4cqw,40px);align-items:center">
+        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Где удалось избежать<br /><span style="color:#00AD9F">лишних трат?</span></h2>
+        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;text-wrap:pretty">Мы провели анализ дизайн-проекта, и наш инженер обнаружил в нем ошибки, которые привели бы к тому, что пришлось бы:</p>
+      </div>
+      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,2cqw,30px)">
+        <sc-for list="{{ avoided }}" as="a" hint-placeholder-count="4">
+          <div style="display:flex;gap:16px;align-items:center">
+            <img src="assets/icon-x.svg" alt="" style="width:22px;height:22px;flex:0 0 22px;display:block" />
+            <span style="font-size:clamp(12.5px,1.05cqw,15px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#313131;line-height:1.25">{{ a }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Что получил клиент" style="background:#fff;padding:clamp(36px,4cqw,64px) 0 clamp(44px,5cqw,80px)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:start">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
+        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Что получил клиент?</h2>
+        <div style="align-self:flex-start;background:#00AD9F;color:#fff;padding:14px 26px;font-size:clamp(14px,1.25cqw,18px);font-weight:700;letter-spacing:.04em;text-transform:uppercase">Результат.</div>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+        <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000">Конец ремонта:</h3>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
+            <div style="display:flex;gap:11px;align-items:flex-start">
+              <span style="font-size:15px;color:#00AD9F;line-height:1.35;font-weight:700">✓</span>
+              <span style="font-size:clamp(13px,1.05cqw,15px);line-height:1.4;color:#313131">{{ r }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:clamp(30px,3.4cqw,54px);padding:0 clamp(16px,1.4cqw,20px);display:flex;gap:clamp(10px,1.1cqw,16px);overflow-x:auto;max-width:1240px;margin-left:auto;margin-right:auto">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
+        <img src="{{ g.img }}" alt="Готовый ремонт, фото {{ g.n }}" style="{{ g.css }}" />
+      </sc-for>
     </div>
   </section>
 
@@ -532,7 +532,7 @@ const COMPARED = [
 const WORRIES = [
   { title: '«Смета потом вырастет?»', img: 'assets/case-w1.jpg', paras: [
     'Наша работа разбита на десятки отдельных этапов, объем которых просчитывается заранее.',
-    'Игорь понимал стоимость каждого вида работ еще до начала ремонта. Поэтому изменения возникали только тогда, когда он сам принимал новые решения.' ] },
+    'Клиент понимал стоимость каждого вида работ ещё до начала ремонта. Поэтому изменения возникали только тогда, когда он сам принимал новые решения.' ] },
   { title: '«Прораб не будет отвечать»', img: 'assets/case-w2.jpg', paras: [
     'Создали чат с клиентом, где закрепили: прораба, менеджера комплектации, а также добавили их инженера-сметчика и РУКОВОДСТВО КОМПАНИИ.',
     'Все общение велось в одном чате. Фотоотчеты несколько раз в неделю.' ] },
@@ -553,7 +553,7 @@ const MOMENTS = [
   { title: 'Закрепление стоимости работ', img: 'assets/moment-1.jpg',
     text: 'Была важна фиксация стоимости работ после подписания договора, чтобы избежать неожиданных изменений цен и планировать расходы на ремонт.' },
   { title: 'Качество исполнения инженерных работ', img: 'assets/moment-3.jpg',
-    text: 'Игорь хотел доверить инженерные работы тем, кто соблюдает технологии и контролирует каждый этап.' },
+    text: 'Клиент хотел доверить инженерные работы тем, кто соблюдает технологии и контролирует каждый этап.' },
 ];
 
 const AVOIDED = ['Переносить часть электрики', 'Менять размеры мебели', 'Переделывать сантехнический шкаф', 'Переносить кондиционер'];
