@@ -48,3 +48,10 @@ desktop.ini
 .vscode/
 __pycache__/
 *.pyc
+
+# Паспорт, доступы, выгрузки — не в git
+_docs/
+*ПАСПОРТ*.xlsx
+*Паспорт*.xlsx
+*паспорт*.xlsx
+downloads/
