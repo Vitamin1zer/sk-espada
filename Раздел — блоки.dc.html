@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="espada-revision" content="20261127-sections">
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js?v=20261127-sections"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
+<script src="assets/demo.js?v=20261127-sections" defer></script>
+</head>
+<body>
+<template data-dc-source><x-dc>
+<div data-service-section="{{ sectionKey }}" style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131">
+  <sc-if value="{{ showLinks }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="Услуги раздела" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+        <sc-if value="{{ showLinksTitle }}" hint-placeholder-val="{{ true }}">
+          <h2 style="margin:0 0 clamp(26px,2.8cqw,42px);font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#313131">{{ content.linksTitle }}</h2>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+          <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+            <div style="background:#fff;border-radius:5px;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:18px;min-width:0">
+              <sc-if value="{{ g.title }}" hint-placeholder-val="{{ true }}">
+                <sc-if value="{{ isHub }}" hint-placeholder-val="{{ false }}">
+                  <h2 style="margin:0;font-size:18px;font-weight:600;line-height:1.4;letter-spacing:.04em;text-transform:uppercase;color:#00AD9F">
+                    <sc-if value="{{ g.href }}" hint-placeholder-val="{{ false }}"><a href="{{ g.href }}" style="color:inherit;text-decoration:none" style-hover="color:#026B63">{{ g.title }}</a></sc-if>
+                    <sc-if value="{{ !g.href }}" hint-placeholder-val="{{ true }}">{{ g.title }}</sc-if>
+                  </h2>
+                </sc-if>
+                <sc-if value="{{ !isHub }}" hint-placeholder-val="{{ true }}">
+                  <h3 style="margin:0;font-size:14px;font-weight:600;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:#00AD9F">
+                    <sc-if value="{{ g.href }}" hint-placeholder-val="{{ false }}"><a href="{{ g.href }}" style="color:inherit;text-decoration:none" style-hover="color:#026B63">{{ g.title }}</a></sc-if>
+                    <sc-if value="{{ !g.href }}" hint-placeholder-val="{{ true }}">{{ g.title }}</sc-if>
+                  </h3>
+                </sc-if>
+              </sc-if>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="6">
+                  <a data-button-link="true" href="{{ i.href }}" style="flex:1 1 auto;display:flex;align-items:center;justify-content:center;min-width:0;min-height:48px;border:1px solid #e2e2e2;border-radius:5px;padding:10px 14px;font-size:16px;line-height:1.3;color:#313131;text-decoration:none;text-align:center;transition:border-color .15s,color .15s" style-hover="border-color:#00AD9F;color:#026B63">{{ i.t }}</a>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+  <sc-if value="{{ showSteps }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Этапы работы" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+        <h2 style="margin:0;font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#313131">{{ content.stepsTitle }}</h2>
+        <div style="{{ stepsGridCss }}">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+            <div style="min-width:0;padding-top:18px;border-top:2px solid #00AD9F;display:flex;flex-direction:column;gap:12px">
+              <div style="font-size:clamp(24px,2.4cqw,34px);font-weight:600;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
+              <h3 style="margin:0;font-size:clamp(18px,1.5cqw,22px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ s.title }}</h3>
+              <p style="margin:0;font-size:17px;line-height:1.5;color:#5c5c5c">{{ s.text }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+  <sc-if value="{{ showFaq }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Вопрос-ответ" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+        <h2 style="margin:0;font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#313131">Вопрос-ответ</h2>
+        <div style="margin-top:clamp(24px,2.6cqw,40px);max-width:780px;display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ faq }}" as="f" hint-placeholder-count="4">
+            <div style="background:#00AD9F;border-radius:5px;overflow:hidden">
+              <button type="button" onClick="{{ f.go }}" aria-expanded="{{ f.open }}" style="width:100%;min-height:48px;border:0;border-radius:5px;background:transparent;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left">
+                <span style="font-size:clamp(16px,1.4cqw,20px);font-weight:600;color:#fff;line-height:1.35">{{ f.q }}</span>
+                <span style="flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#fff;color:#00AD9F;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1">{{ f.sign }}</span>
+              </button>
+              <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:0 20px 22px;display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ f.paras }}" as="t" hint-placeholder-count="2"><p style="margin:0;font-size:17px;line-height:1.5;color:#fff">{{ t }}</p></sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+</div>
+</x-dc></template>
+<script type="text/x-dc" data-dc-script data-props="{&quot;section&quot;:{&quot;default&quot;:&quot;renovation&quot;},&quot;variant&quot;:{&quot;default&quot;:&quot;links&quot;},&quot;servicePath&quot;:{&quot;default&quot;:&quot;&quot;}}">
+const CONTENT = {
+  renovation: {
+    linksTitle: 'Выберите свой ремонт',
+    stepsTitle: 'Как проходит ремонт',
+    steps: [
+      { title: 'Замер и смета', text: 'Инженер выезжает на объект, снимает объёмы и считает смету по фактическим площадям.' },
+      { title: 'Договор', text: 'Фиксируем прайс и этапы. Цена работ не меняется до конца ремонта.' },
+      { title: 'Демонтаж и черновые', text: 'Стяжка, штукатурка по маякам, гидроизоляция мокрых зон.' },
+      { title: 'Инженерия', text: 'Разводка воды, канализации и электрики. Сдаём этап с исполнительной документацией.' },
+      { title: 'Чистовая отделка', text: 'Плитка, ламинат, обои и покраска, установка сантехники и электроточек.' },
+      { title: 'Сдача', text: 'Приёмка с вами, акты, гарантия и прозрачная история ремонта.' },
+    ],
+    faq: [
+  { q: 'Сколько стоит ремонт квартиры в Москве?', paras: ['Диапазон цен в Москве обычно варьируется от 450 000 до 900 000 руб. и включает черновые и чистовые работы.', 'Итоговая сумма зависит от площади помещения, материалов и сложности проекта. Для того, чтобы дать вам более точное понимание о цене Вашего ремонта, наш специалист выезжает на объект, делает замеры и формирует окончательную смету.'] },
+  { q: 'Может ли измениться стоимость работ в процессе ремонта?', paras: ['При подписании договора фиксируется прайс на все ремонтные услуги, который не меняется до конца ремонта.', 'Сметная стоимость может измениться только, если Вы пожелаете сменить вид ремонтных работ или добавить работы, которые Вы ранее не планировали делать.'] },
+  { q: 'Какой порядок оплаты ремонта?', paras: ['Оплата производится поэтапно. Ремонт делится на этапы: демонтаж, черновая отделка, чистовая отделка и так далее.', 'По завершении каждого этапа оформляется акт выполненных работ, который вы подписываете, и только после этого оплачиваете результат. Переход к следующему этапу возможен только после подписания акта и оплаты.'] },
+  { q: 'Как можно следить за ходом ремонтных работ?', paras: ['Создается индивидуальный чат, со всей командой и участниками процесса. Контролировать ход работ можно как вживую, так и удаленно + мы регулярно отправляем фотоотчеты.'] },
+  { q: 'Как происходит контроль качества ремонта?', paras: ['Контроль ремонтных работ осуществляет прораб, а также менеджеры отдела технического контроля, которые независимо от прораба, посещают объекты и следят за работами согласно Стандартам.', 'Если у Вас возникли вопросы, Вы можете связаться с руководителем отдела технического контроля, он с радостью ответит и проконсультирует Вас.'] },
+],
+  },
+  design: {
+    linksTitle: 'Дизайн по объектам, помещениям и стилям',
+    stepsTitle: 'Как идёт работа над проектом',
+    steps: [
+      { title: 'Обмеры', text: 'Выезд на объект, обмерный план и техническое задание с вашими требованиями.' },
+      { title: 'Планировки', text: 'Несколько вариантов планировочных решений, выбираем один и дорабатываем.' },
+      { title: 'Концепция', text: 'Коллажи и мудборд: как будет выглядеть интерьер до чертежей.' },
+      { title: 'Рабочие чертежи', text: 'Демонтаж, монтаж стен, полы и потолки, электрика, сантехника, развёртки.' },
+      { title: 'Визуализация', text: '3D-визуализация и панорамы 360° по всем комнатам — в полном и авторском пакетах.' },
+      { title: 'Комплектация и надзор', text: 'Спецификации материалов, мебели и света, авторский надзор на объекте.' },
+    ],
+    faq: [
+      { q: 'Выезд дизайнера платный?', paras: ['В нашей компании собственный отдел дизайна, выезд дизайнера для консультации и подбора подходящего пакета услуг — бесплатный.'] },
+      { q: 'Чем отличаются пакеты дизайн-проекта?', paras: ['Технический пакет — это полный комплект чертежей для строителей. Стандартный добавляет концепцию интерьера: коллажи и мудборд. Полный — развёртки всех помещений и 3D-визуализацию с панорамами. Авторский — комплектацию мебели, света, санузлов и авторский надзор на объекте.'] },
+      { q: 'Можно заказать только дизайн, без ремонта?', paras: ['Да, проект отдаётся отдельным продуктом. При заказе дизайнерского ремонта в Эспаде действует скидка на проект.'] },
+      { q: 'Проверяет ли кто-то проект перед стройкой?', paras: ['Каждый проект наших дизайнеров проверяется. Наши проекты не просто «красивые», но и содержат всю необходимую для ремонта техническую информацию: они отвечают критериям функциональности и эргономики, корректности оформления.'] },
+    ],
+  },
+  acceptance: {
+    linksTitle: 'Виды приёмки',
+    stepsTitle: 'Как проходит приёмка',
+    steps: [
+      { title: 'Заявка', text: 'Оставляете заявку, согласовываем дату осмотра с датой передачи квартиры.' },
+      { title: 'Осмотр', text: 'Инженер приезжает с инструментом: лазерный уровень, тепловизор, анемометр.' },
+      { title: 'Акт', text: 'Перечень дефектов с фотофиксацией — по итогам осмотра, готовый к передаче застройщику.' },
+      { title: 'Смета на ремонт', text: 'По тем же обмерам считаем ремонт, если он вам нужен. Отдельного выезда не потребуется.' },
+    ],
+    faq: [
+      { q: 'Что вы проверяете при приёмке?', paras: ['Железобетонные и каменные конструкции, качество отделочных работ, оконные и дверные рамы, створки и стеклопакеты, водоснабжение, канализацию, отопление и сантехнику, вентиляцию, вытяжки, электро- и силовое оборудование.'] },
+      { q: 'Когда я получу акт с замечаниями?', paras: ['По итогам осмотра инженер готовит акт с перечнем дефектов для передачи застройщику. Срок подготовки согласовывается при записи.'] },
+      { q: 'Можно сразу посчитать ремонт?', paras: ['Да, это основная причина заказывать приёмку у ремонтной компании. В тот же выезд инженер снимает объёмы и готовит смету на ремонт по фактической геометрии квартиры.'] },
+    ],
+  },
+  services: { linksTitle: 'Услуги для ремонта', steps: [], faq: [] },
+};
+
+class Component extends DCLogic {
+  state = { faq: 0 };
+
+  renderVals() {
+    const section = this.props.section || 'renovation';
+    const variant = this.props.variant || 'links';
+    const content = CONTENT[section] || CONTENT.renovation;
+    const menu = (window.ESPADA_SERVICE_MENU || []).find(item => item.key === section);
+    const path = this.props.servicePath || '';
+    const allGroups = menu ? menu.groups : [];
+    const groups = variant === 'hub' && path && path !== menu?.href
+      ? allGroups.filter(group => group.href === path) : allGroups;
+    const activeFaq = this.state.faq;
+    return {
+      content, groups, sectionKey: section,
+      isHub: variant === 'hub',
+      showLinks: variant === 'links' || variant === 'hub',
+      showLinksTitle: variant !== 'hub',
+      showSteps: variant === 'steps',
+      showFaq: variant === 'faq',
+      stepsGridCss: 'margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,'
+        + (content.steps.length === 4 ? '220px' : '280px') + '),1fr));gap:clamp(18px,2.2cqw,36px)',
+      steps: content.steps.map((step, i) => ({ ...step, n: '0' + (i + 1) })),
+      faq: content.faq.map((item, i) => ({ ...item, open: activeFaq === i, sign: activeFaq === i ? '×' : '+', go: () => this.setState({ faq: activeFaq === i ? -1 : i }) })),
+    };
+  }
+}
+</script>
+</body>
+</html>

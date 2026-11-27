@@ -1909,7 +1909,9 @@
     else document.addEventListener("DOMContentLoaded", () => api.__dcBoot());
   }
   hideRawTemplate();
-  loadReactUmd().then(init).catch((err) => {
+  const menuRevision = document.querySelector('meta[name="espada-revision"]')?.content;
+  const menuUrl = 'assets/service-menu.js' + (menuRevision ? '?v=' + encodeURIComponent(menuRevision) : '');
+  Promise.all([loadReactUmd(), loadScript(menuUrl)]).then(init).catch((err) => {
     console.error("[dc] failed to load React or boot:", err);
     throw err;
   });

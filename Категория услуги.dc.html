@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-live-layout">
+<meta name="espada-revision" content="20261127-sections">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-live-layout"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
-<script src="assets/demo.js?v=20261127-live-layout" defer></script>
+<script src="./support.js?v=20261127-sections"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
+<script src="assets/demo.js?v=20261127-sections" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -42,7 +42,7 @@ html,body{margin:0;padding:0}
 </style>
 </helmet>
 
-<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip">
+<div data-service-section="{{ sectionKey }}" style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip">
 
   <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
 
@@ -52,6 +52,10 @@ html,body{margin:0;padding:0}
       <span style="font-size:12px;color:#bfbfbf">/</span>
       <a href="{{ p.parentHref }}" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">{{ p.parent }}</a>
       <span style="font-size:12px;color:#bfbfbf">/</span>
+      <sc-if value="{{ p.groupHref }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ p.groupHref }}" style="font-size:12px;color:#929292;text-decoration:none" style-hover="color:#00AD9F">{{ p.groupTitle }}</a>
+        <span style="font-size:12px;color:#bfbfbf">/</span>
+      </sc-if>
       <span style="font-size:12px;color:#5c5c5c">{{ p.crumb }}</span>
     </div>
   </div>
@@ -82,6 +86,9 @@ html,body{margin:0;padding:0}
           <sc-if value="{{ isAcceptance }}" hint-placeholder-val="{{ false }}">
             <dc-import name="Форма" kind="Приёмка" state="Пустая" hint-size="100%,620px"></dc-import>
           </sc-if>
+          <sc-if value="{{ isSimpleService }}" hint-placeholder-val="{{ false }}">
+            <dc-import name="Форма" kind="Встроенная" state="Пустая" title="{{ p.formTitle }}" cta="{{ p.cta }}" perks="{{ p.popupPerks }}" hint-size="100%,620px"></dc-import>
+          </sc-if>
           <sc-if value="{{ hasQuiz }}" hint-placeholder-val="{{ true }}">
             <dc-import name="Квиз" key="{{ quizKind }}" kind="{{ quizKind }}" hint-size="100%,620px"></dc-import>
           </sc-if>
@@ -91,19 +98,21 @@ html,body{margin:0;padding:0}
   </section>
 
   <section data-screen-label="Вводный текст" style="background:#fff;padding:clamp(40px,4.8cqw,78px) 0 clamp(26px,3cqw,46px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
+    <div style="{{ leadGridCss }}">
       <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
         <h2 style="margin:0;font-size:clamp(20px,2.2cqw,30px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.leadTitle }}</h2>
         <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">{{ p.lead }}</p>
       </div>
-      <div style="min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:clamp(14px,1.6cqw,22px)">
+      <sc-if value="{{ hasFacts }}" hint-placeholder-val="{{ true }}">
+       <div style="min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:clamp(14px,1.6cqw,22px)">
         <sc-for list="{{ p.facts }}" as="f" hint-placeholder-count="4">
           <div style="background:#f8f8f8;padding:clamp(16px,1.6cqw,22px);display:flex;flex-direction:column;gap:6px;min-width:0">
             <div style="font-size:clamp(19px,2cqw,28px);font-weight:600;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ f.v }}</div>
             <div style="font-size:11.5px;line-height:1.45;color:#5c5c5c">{{ f.t }}</div>
           </div>
         </sc-for>
-      </div>
+       </div>
+      </sc-if>
     </div>
   </section>
 
@@ -151,7 +160,8 @@ html,body{margin:0;padding:0}
     </div>
   </section>
 
-  <section data-screen-label="Примеры работ" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+  <sc-if value="{{ hasWorks }}" hint-placeholder-val="{{ true }}">
+   <section data-screen-label="Примеры работ" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
       <h2 style="margin:0;font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.worksTitle }}</h2>
       <div style="margin-top:clamp(24px,2.6cqw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(16px,1.7cqw,26px)">
@@ -163,11 +173,11 @@ html,body{margin:0;padding:0}
         </sc-for>
       </div>
     </div>
-  </section>
+   </section>
+  </sc-if>
 
-
-
-  <section data-screen-label="SEO-текст" style="background:#fff;padding:0 0 clamp(44px,5.6cqw,92px)">
+  <sc-if value="{{ hasSeo }}" hint-placeholder-val="{{ true }}">
+   <section data-screen-label="SEO-текст" style="background:#fff;padding:0 0 clamp(44px,5.6cqw,92px)">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
       <h2 style="margin:0;font-size:clamp(20px,2.2cqw,30px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.seoTitle }}</h2>
       <div style="{{ seoBoxCss }}">
@@ -180,7 +190,8 @@ html,body{margin:0;padding:0}
       </div>
       <button type="button" onClick="{{ toggleSeo }}" style="align-self:flex-start;background:transparent;border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;min-height:48px;line-height:1.3" style-hover="background:#00AD9F;color:#fff">{{ seoLabel }}</button>
     </div>
-  </section>
+   </section>
+  </sc-if>
 
   <section data-screen-label="Вопрос-ответ" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
@@ -226,30 +237,7 @@ html,body{margin:0;padding:0}
 </div>
 
 </x-dc></template>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт в новостройке&quot;,&quot;Дизайн кухни&quot;,&quot;Приёмка без отделки&quot;],&quot;default&quot;:&quot;Ремонт в новостройке&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;},&quot;serviceTitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;},&quot;servicePath&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;}}">
-const L = (t, href) => ({ t, href });
-
-const REMONT_SIBLINGS = [
-  L('Вторичка', '/remont-kvartiry-na-vtorichke/'), L('Под ключ', '/remont-kvartir-pod-klyuch/'),
-  L('Черновой', '/chernovoj-remont-kvartiry/'), L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
-  L('Дизайнерский', '/dizajnerskij-remont-kvartiry/'), L('По дизайн-проекту', '/dizajnerskij-remont-kvartiry/'),
-  L('Студия', '/remont-kvartiry-studii/'), L('Однокомнатная', '/remont-odnokomnatnoj-kvartiry/'),
-  L('Двухкомнатная', '/remont-dvuhkomnatnoj-kvartiry/'), L('По ЖК', '/remont-v-zhk-shablon/'),
-  L('Цены', '/remont-kvartir-pod-klyuch/'),
-];
-
-const DESIGN_SIBLINGS = [
-  L('Дизайн квартиры', '/dizajn-interera-kvartiry/'), L('Ванная комната', '/dizajn-vannoj-komnaty/'),
-  L('Спальня', '/dizajn-spalni/'), L('Гостиная', '/dizajn-gostinoj/'),
-  L('Детская комната', '/dizajn-detskoj-komnaty/'), L('Прихожая и коридор', '/dizajn-prihozhej-i-koridora/'),
-  L('Квартира-студия', '/dizajn-kvartiry-studii/'), L('Дом', '/dizajn-interera-doma/'),
-];
-
-const PRIEMKA_SIBLINGS = [
-  L('С отделкой', '/priyomka-kvartiry-s-otdelkoj/'), L('По ЖК', '/priyomka-v-zhk-shablon/'),
-  L('Ремонт в новостройке', '/remont-kvartiry-v-novostrojke/'), L('Комплектация', '/komplektatsiya-kvartiry/'),
-];
-
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт в новостройке&quot;,&quot;Дизайн кухни&quot;,&quot;Приёмка без отделки&quot;],&quot;default&quot;:&quot;Ремонт в новостройке&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;},&quot;serviceTitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;},&quot;servicePath&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;},&quot;serviceSection&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;renovation&quot;,&quot;design&quot;,&quot;acceptance&quot;,&quot;services&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;},&quot;serviceParentTitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;},&quot;serviceParentPath&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;}}">
 const PAGES = {
   novostroyka: {
     crumb: 'Ремонт квартиры в новостройке', parent: 'Ремонт квартир', parentHref: '/remont-kvartir-pod-klyuch/',
@@ -294,7 +282,7 @@ const PAGES = {
     ],
     popupTitle: 'Получите индивидуальный расчет сметы',
     popupPerks: ['— предварительный расчет бюджета', '— консультацию инженера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'],
-    siblingsTitle: 'Смотрите также в разделе ремонта', siblings: REMONT_SIBLINGS,
+    siblingsTitle: 'Смотрите также в разделе ремонта',
   },
   kuhnya: {
     crumb: 'Дизайн кухни', parent: 'Дизайн интерьера', parentHref: '/dizajn-interera/',
@@ -339,11 +327,11 @@ const PAGES = {
     ],
     popupTitle: 'Получите бесплатный выезд дизайнера',
     popupPerks: ['— предварительный расчет бюджета', '— консультацию дизайнера интерьера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'],
-    siblingsTitle: 'Другие помещения и объекты', siblings: DESIGN_SIBLINGS,
+    siblingsTitle: 'Другие услуги дизайна',
   },
   priemka: {
     crumb: 'Приёмка квартиры без отделки', parent: 'Приёмка квартир', parentHref: '/priyomka-kvartir-v-novostrojke/',
-    h1: 'Приемка квартиры без отделки', price: '', hero: 'assets/hero-priemka.jpg',
+    h1: 'Приёмка квартиры без отделки', price: '', hero: 'assets/hero-priemka.jpg',
     bullets: ['— обнаружим скрытые дефекты до передачи квартиры;', '— подготовим подробный отчет с замечаниями для застройщика;', '— поможем избежать затрат на последующий ремонт;', '— защитим ваши интересы при приемке у застройщика.'],
     cta: 'Записаться на приёмку', formTitle: 'Пригласите профессионального приемщика',
     leadTitle: 'Бетон проверяется строже, чем отделка',
@@ -383,50 +371,145 @@ const PAGES = {
     ],
     popupTitle: 'Пригласите профессионального приемщика',
     popupPerks: ['— обнаружение скрытых дефектов до передачи квартиры;', '— подробный отчет с замечаниями для застройщика;', '— возможность не тратиться на последующий ремонт;', '— защиту ваших интересов при приемке у застройщика.'],
-    siblingsTitle: 'Смотрите также', siblings: PRIEMKA_SIBLINGS,
+    siblingsTitle: 'Другие виды приёмки',
   },
 };
 
-function serviceContext(source, key, props) {
-  const title = typeof props.serviceTitle === 'string' ? props.serviceTitle.trim() : '';
-  const path = typeof props.servicePath === 'string' ? props.servicePath : '';
-  if (!title) return source;
-  const design = key === 'design' || key === 'kuhnya';
-  const acceptance = key === 'priemka';
-  const description = design
-    ? 'В проекты наших дизайнеров заложены потребности каждого члена семьи, особенности пространства, последние тренды дизайна и проверенные временем решения.'
-    : acceptance
-      ? 'Проверяем состояние квартиры, фиксируем обнаруженные дефекты и готовим перечень замечаний для застройщика.'
-      : 'Состав работ, сроки и стоимость уточняются по вашему объекту. Оставьте заявку, чтобы обсудить задачу со специалистом.';
-  const contextual = { ...source, h1: title, crumb: title, servicePath: path,
-    leadTitle: title, lead: description, seoTitle: title, seo: [description], price: '',
-    facts: source.facts.map(f => /₽/.test(f.v) ? { v: 'Расчёт', t: 'по вашему объекту' } : f),
+const FAMILIES = {
+  renovation: { title: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/', example: 'novostroyka', path: '/remont-kvartiry-v-novostrojke/' },
+  design: { title: 'Дизайн интерьера', href: '/dizajn-interera/', example: 'kuhnya', path: '/dizajn-kuhni/' },
+  acceptance: { title: 'Приёмка', href: '/priyomka-kvartir-v-novostrojke/', example: 'priemka', path: '/priyomka-kvartiry-bez-otdelki/' },
+  services: { title: 'Услуги', href: '/uslugi/', example: null, path: '' },
+};
+
+const PAGE_FAMILIES = { 'Ремонт в новостройке': 'renovation', 'Дизайн кухни': 'design', 'Приёмка без отделки': 'acceptance' };
+
+// Общая структура не наследует состав, цены и портфолио отдельной услуги.
+const COMMON_CONTENT = {
+  renovation: {
+    hero: 'assets/hero-remont.jpg', cta: 'Бесплатный расчёт сметы',
+    lead: 'Обсудим состояние объекта и задачи ремонта. Состав работ, стоимость и сроки определяются по объёмам и выбранным решениям.',
+    bullets: ['– обсудим ваши задачи;', '– определим необходимые работы;', '– подготовим расчёт по объекту.'],
+    includes: [
+      { title: 'Объект', items: ['Состояние помещений', 'Площадь и объём работ'] },
+      { title: 'Задача', items: ['Пожелания к результату', 'Перечень необходимых работ'] },
+      { title: 'Расчёт', items: ['Состав сметы', 'Материалы и последовательность работ'] },
+    ],
+    popupTitle: 'Получите индивидуальный расчёт сметы',
+    popupPerks: ['– консультацию по вашему объекту', '– обсуждение состава работ', '– расчёт стоимости по объёмам'],
+  },
+  design: {
+    hero: 'assets/hero-design.jpg', cta: 'Бесплатный выезд дизайнера',
+    lead: 'Дизайн-проект начинается с задачи и особенностей пространства. Обсудим пожелания к планировке и оформлению, затем согласуем состав проекта.',
+    bullets: ['– обсудим пространство и ваши пожелания;', '– определим состав дизайн-проекта;', '– рассчитаем стоимость разработки.'],
+    includes: [
+      { title: 'Задача', items: ['Особенности объекта', 'Пожелания к планировке и оформлению'] },
+      { title: 'Решения', items: ['Планировочные решения', 'Концепция интерьера'] },
+      { title: 'Проект', items: ['Состав чертежей и визуализаций', 'Подбор материалов в выбранном пакете'] },
+    ],
+    popupTitle: 'Получите бесплатный выезд дизайнера',
+    popupPerks: ['– консультацию дизайнера', '– обсуждение состава проекта', '– расчёт стоимости разработки'],
+  },
+  acceptance: {
+    hero: 'assets/hero-priemka.jpg', cta: 'Записаться на приёмку',
+    lead: 'Состав осмотра зависит от состояния квартиры и выполненных работ. Согласуем объём проверки и зафиксируем обнаруженные замечания в отчёте.',
+    bullets: ['– уточним состояние квартиры;', '– согласуем объём осмотра;', '– подготовим перечень обнаруженных замечаний.'],
+    includes: [
+      { title: 'Перед осмотром', items: ['Сведения об объекте', 'Документы и состав выполненных работ'] },
+      { title: 'На объекте', items: ['Проверка согласованного объёма', 'Фиксация обнаруженных дефектов'] },
+      { title: 'Результат', items: ['Перечень замечаний', 'Обсуждение результатов осмотра'] },
+    ],
+    popupTitle: 'Пригласите профессионального приёмщика',
+    popupPerks: ['– согласование объёма проверки', '– осмотр квартиры', '– перечень обнаруженных замечаний'],
+  },
+  services: {
+    hero: 'assets/hero-remont.jpg', cta: 'Бесплатный расчёт сметы',
+    lead: 'Уточним задачу и объём работ по этой услуге. Стоимость, материалы и порядок выполнения согласуем по вашему объекту.',
+    bullets: ['– обсудим задачу по выбранной услуге;', '– уточним объём и условия работ;', '– подготовим индивидуальный расчёт.'],
+    includes: [
+      { title: 'Задача', items: ['Требуемый результат', 'Особенности объекта'] },
+      { title: 'Объём', items: ['Перечень необходимых работ', 'Материалы и оборудование'] },
+      { title: 'Согласование', items: ['Расчёт стоимости', 'Порядок и сроки выполнения'] },
+    ],
+    popupTitle: 'Получите индивидуальный расчёт по услуге',
+    popupPerks: ['– консультацию по выбранной услуге', '– обсуждение объёма работ', '– индивидуальный расчёт'],
+  },
+};
+
+function genericService(family, title) {
+  const content = COMMON_CONTENT[family];
+  return {
+    ...content, h1: title, crumb: title, leadTitle: title, formTitle: content.popupTitle,
+    price: '', facts: [], works: [], seo: [],
+    includesTitle: family === 'acceptance' ? 'Как проходит приёмка' : 'Что согласуем перед началом',
+    rateLabel: 'Услуга', rates: [{ title, price: 'По запросу', term: 'Индивидуально' }],
+    rateNote: 'Стоимость и сроки уточняются после согласования задачи и объёма работ.',
+    faq: [
+      { q: 'Как узнать стоимость?', paras: ['Оставьте заявку и расскажите об объекте. Состав услуги, стоимость и сроки согласуем после уточнения задачи.'] },
+      { q: 'Что нужно для первого обсуждения?', paras: ['Сообщите адрес, площадь и состояние объекта, а также желаемый результат. Если есть план или проект, подготовьте его для обсуждения.'] },
+    ],
+    siblingsTitle: 'Другие услуги раздела',
   };
-  return { ...contextual,
-    includesTitle: 'Состав работ', worksTitle: 'Примеры наших работ',
-    includes: source.includes.map(g => ({ ...g, items: g.items.map(t => t.replace(/стен кухни/g, 'стен')) })),
-    works: source.works.map(w => ({ ...w, title: design ? 'Дизайн интерьера' : acceptance ? 'Приёмка квартиры' : 'Ремонт квартиры' })),
-    faq: design ? source.faq.filter(f => !/кухн/i.test(f.q)) : source.faq,
-  };
+}
+
+function relatedServices(section, path) {
+  const groups = section.groups || [];
+  const current = groups.find(g => (g.items || []).some(i => i.href === path));
+  const ordered = current ? [current, ...groups.filter(g => g !== current)] : groups;
+  const seen = new Set([path, section.href]);
+  const siblings = [];
+  ordered.forEach(g => {
+    (g.items || []).forEach(i => {
+      if (seen.has(i.href)) return;
+      seen.add(i.href);
+      siblings.push({ t: i.t, href: i.href });
+    });
+  });
+  return { siblings: siblings.slice(0, 12), group: current };
+}
+
+function serviceContext(props) {
+  const family = Object.hasOwn(FAMILIES, props.serviceSection)
+    ? props.serviceSection : (PAGE_FAMILIES[props.page] || 'renovation');
+  const fallback = FAMILIES[family];
+  const section = (window.ESPADA_SERVICE_MENU || []).find(s => s.key === family) || fallback;
+  const path = typeof props.servicePath === 'string' && props.servicePath.trim()
+    ? props.servicePath.trim() : fallback.path;
+  const title = typeof props.serviceTitle === 'string' && props.serviceTitle.trim()
+    ? props.serviceTitle.trim() : section.title;
+  const detailed = fallback.example && path === fallback.path;
+  const source = detailed ? PAGES[fallback.example] : genericService(family, title);
+  const { siblings, group } = relatedServices(section, path);
+  return { family, p: {
+    ...source, servicePath: path,
+    parent: props.serviceParentTitle || section.title,
+    parentHref: props.serviceParentPath || section.href,
+    groupTitle: group && group.title,
+    groupHref: group && group.href !== path ? group.href : '',
+    siblings,
+  } };
 }
 
 class Component extends DCLogic {
   state = { faq: 0, seoOpen: false };
 
   renderVals() {
-    const key = { 'Ремонт в новостройке': 'novostroyka', 'Дизайн кухни': 'kuhnya', 'Приёмка без отделки': 'priemka' }[this.props.page] || 'novostroyka';
-    const p = serviceContext(PAGES[key], key, this.props);
+    const { p, family } = serviceContext(this.props);
     const mobile = !!this.props.mobile;
     const { faq, seoOpen } = this.state;
     return {
-      p, isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      p, sectionKey: family, isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
+      hasFacts: p.facts.length > 0, hasWorks: p.works.length > 0, hasSeo: p.seo.length > 0,
+      leadGridCss: 'max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:'
+        + (p.facts.length ? 'repeat(auto-fit,minmax(min(100%,320px),1fr))' : 'minmax(0,1fr)')
+        + ';gap:clamp(24px,2.8cqw,48px);align-items:start',
       heroImageCss: 'position:absolute;inset:0;width:100%;height:100%;background-size:cover;background-position:center;background-image:url("' + p.hero + '")',
       works: p.works.map(w => ({ ...w, imageCss: 'width:100%;aspect-ratio:1/1;border-radius:5px;display:block;background-size:cover;background-position:center;background-image:url("' + w.img + '");transition:opacity .2s' })),
-      isAcceptance: key === 'priemka',
-      hasQuiz: key !== 'priemka',
-      quizKind: key === 'design' || key === 'kuhnya' ? 'Дизайн-проект' : 'Ремонт',
-      meetingKind: key === 'priemka' ? 'acceptance' : (key === 'design' || key === 'kuhnya' ? 'design' : 'repair'),
-      openPopup: () => window.__espadaOpenPopup({ kind: key === 'priemka' ? 'Приёмка' : (key === 'design' || key === 'kuhnya' ? 'Дизайн' : 'Попап'), title: p.popupTitle, cta: p.cta, perks: p.popupPerks }),
+      isAcceptance: family === 'acceptance', isSimpleService: family === 'services',
+      hasQuiz: family === 'renovation' || family === 'design',
+      quizKind: family === 'design' ? 'Дизайн-проект' : 'Ремонт',
+      meetingKind: family === 'acceptance' ? 'acceptance' : (family === 'design' ? 'design' : 'repair'),
+      openPopup: () => window.__espadaOpenPopup({ kind: family === 'acceptance' ? 'Приёмка' : (family === 'design' ? 'Дизайн' : 'Попап'), title: p.popupTitle, cta: p.cta, perks: p.popupPerks }),
 
       seoParas: seoOpen ? p.seo : p.seo.slice(0, 1),
       seoFade: !seoOpen,

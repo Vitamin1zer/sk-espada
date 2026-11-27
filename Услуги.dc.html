@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="espada-revision" content="20261127-sections">
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js?v=20261127-sections"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
+<script src="assets/demo.js?v=20261127-sections" defer></script>
+</head>
+<body>
+<template data-dc-source><x-dc>
+<helmet><style>
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+</style></helmet>
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip">
+  <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0">
+    <div style="max-width:1240px;margin:0 auto;padding:16px clamp(16px,1.4cqw,20px);display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:12px">
+      <a href="/" style="color:#929292;text-decoration:none" style-hover="color:#00AD9F">Главная</a>
+      <span style="color:#bfbfbf">/</span>
+      <sc-if value="{{ isGroup }}" hint-placeholder-val="{{ false }}">
+        <a href="/uslugi/" style="color:#929292;text-decoration:none" style-hover="color:#00AD9F">Услуги</a>
+        <span style="color:#bfbfbf">/</span>
+      </sc-if>
+      <span style="color:#5c5c5c">{{ title }}</span>
+    </div>
+  </div>
+  <section data-screen-label="Услуги — заголовок" style="background:#fff;padding:clamp(40px,5cqw,72px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+      <h1 style="margin:0;font-size:clamp(28px,3.9cqw,56px);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#313131">{{ title }}</h1>
+    </div>
+  </section>
+  <dc-import name="Раздел — блоки" section="services" variant="hub" servicePath="{{ servicePath }}"></dc-import>
+  <dc-import name="Встреча" kind="repair"></dc-import>
+  <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
+</div>
+</x-dc></template>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;},&quot;serviceTitle&quot;:{&quot;default&quot;:&quot;&quot;},&quot;servicePath&quot;:{&quot;default&quot;:&quot;&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const mobile = !!this.props.mobile;
+    const servicePath = this.props.servicePath || '/uslugi/';
+    const serviceTitle = typeof this.props.serviceTitle === 'string' ? this.props.serviceTitle.trim() : '';
+    return {
+      headerVariant: mobile ? 'mobile' : 'default', isMobile: mobile,
+      title: serviceTitle || 'Услуги', servicePath, isGroup: servicePath !== '/uslugi/',
+    };
+  }
+}
+</script>
+</body>
+</html>

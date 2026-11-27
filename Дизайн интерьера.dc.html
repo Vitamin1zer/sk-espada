@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-live-layout">
+<meta name="espada-revision" content="20261127-sections">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-live-layout"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
-<script src="assets/demo.js?v=20261127-live-layout" defer></script>
+<script src="./support.js?v=20261127-sections"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
+<script src="assets/demo.js?v=20261127-sections" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -127,7 +127,7 @@
         </div>
       </div>
       <div style="min-width:0;display:flex;justify-content:flex-end">
-        <div class="design-hero-quiz"><dc-import name="Квиз" kind="repair" hint-size="100%,430px"></dc-import></div>
+        <div class="design-hero-quiz"><dc-import name="Квиз" kind="design" hint-size="100%,430px"></dc-import></div>
       </div>
     </div>
   </section>
@@ -144,6 +144,8 @@
       </div>
     </div>
   </section>
+
+  <dc-import name="Раздел — блоки" section="design" variant="links"></dc-import>
 
   <section data-screen-label="Реализация проекта" class="design-section">
     <div class="design-container design-split">
@@ -183,6 +185,8 @@
       <p style="margin:24px 0 0;font-size:13px;line-height:1.5;color:#929292">Все цены — с приставкой «от», за квадратный метр по полу.</p>
     </div>
   </section>
+
+  <dc-import name="Раздел — блоки" section="design" variant="steps"></dc-import>
 
   <section data-screen-label="Стилевые направления" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;align-items:center;gap:10px">
@@ -275,6 +279,8 @@
       </div>
     </div>
   </section>
+
+  <dc-import name="Раздел — блоки" section="design" variant="faq"></dc-import>
 
   <section data-screen-label="Контакты" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">

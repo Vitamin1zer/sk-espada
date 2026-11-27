@@ -70,7 +70,7 @@
     if(window.parent!==window && (window.parent.__espadaNavigate || window.frameElement?.closest('dialog.espada-dialog')))return true;
     if (!window.__dcSetProps || !window.__dcRootName || !document.getElementById('dc-root')) return false;
     const params=new URLSearchParams(location.search),page=params.get('page');
-    const context={};['serviceTitle','servicePath'].forEach(key=>{if(params.get(key))context[key]=params.get(key);});
+    const context={};['serviceTitle','servicePath','serviceSection','serviceParentTitle','serviceParentPath'].forEach(key=>{if(params.get(key))context[key]=params.get(key);});
     window.__dcSetProps(window.__dcRootName(), Object.assign({ mobile: mobileViewport.matches }, page ? { page } : {},context));
     return true;
   }
@@ -83,7 +83,7 @@
       const href = link.getAttribute('href') || '';
       if (href.startsWith('/') && window.parent !== window && window.parent.__espadaNavigate) {
         e.preventDefault();
-        window.parent.__espadaNavigate(href,(link.querySelector('h2,h3')?.textContent || link.innerText).trim());
+        window.parent.__espadaNavigate(href,(link.querySelector('h2,h3')?.textContent || link.innerText).trim(),link.closest('[data-service-section]')?.dataset.serviceSection);
         return;
       }
     }
@@ -99,7 +99,7 @@
   // Imported headers have a runtime host; the host must own sticky positioning.
   // Galleries in the UI kit deliberately show several independent header states.
   const headerObserver = new MutationObserver(() => {
-    const sitePages=['Главная','Дизайн интерьера','Комплектация','Приёмка квартир','Партнёрам','Пиллар услуги','Категория услуги','Портфолио и отзывы','О компании и контакты','Блог','Служебные страницы','404'];
+    const sitePages=['Главная','Дизайн интерьера','Комплектация','Приёмка квартир','Партнёрам','Пиллар услуги','Категория услуги','Услуги','Портфолио и отзывы','О компании и контакты','Блог','Служебные страницы','404'];
     if(!sitePages.includes(window.__dcRootName?.()))return;
     const headers=document.querySelectorAll('.espada-demo-header');
     if(headers.length!==1)return;

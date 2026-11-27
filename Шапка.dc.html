@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-live-layout">
+<meta name="espada-revision" content="20261127-sections">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-live-layout"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
-<script src="assets/demo.js?v=20261127-live-layout" defer></script>
+<script src="./support.js?v=20261127-sections"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
+<script src="assets/demo.js?v=20261127-sections" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -78,7 +78,7 @@ button{font-family:inherit;cursor:pointer}
       </div>
 
       <sc-if value="{{ panel }}" hint-placeholder-val="{{ false }}">
-        <div style="position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid #ededed;box-shadow:0 20px 44px rgba(0,0,0,.13);z-index:40">
+        <div data-service-section="{{ panel.sectionKey }}" style="position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid #ededed;box-shadow:0 20px 44px rgba(0,0,0,.13);z-index:40">
           <div style="max-width:1240px;margin:0 auto;padding:32px 20px 36px;display:flex;gap:34px;align-items:flex-start">
             <div style="flex:1;min-width:0;display:flex;gap:26px;align-items:flex-start">
               <sc-for list="{{ panel.cols }}" as="col" hint-placeholder-count="4">
@@ -147,7 +147,7 @@ button{font-family:inherit;cursor:pointer}
 
       <div class="espada-mobile-menu__scroll" style="flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain">
         <sc-for list="{{ menu }}" as="m" hint-placeholder-count="6">
-          <div style="border-bottom:1px solid #efefef">
+          <div data-service-section="{{ m.sectionKey }}" style="border-bottom:1px solid #efefef">
             <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px">
               <a href="{{ m.href }}" style="flex:1;padding:16px 0;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#313131;text-decoration:none">{{ m.label }}</a>
               <sc-if value="{{ m.hasKids }}" hint-placeholder-val="{{ true }}">
@@ -317,6 +317,7 @@ const USLUGI = [
   ] }],
 ];
 
+const SECTION_KEYS = ['renovation', 'design', 'acceptance', 'materials', 'services', 'portfolio'];
 const MENU = [
   { label: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/', cols: REMONT, promo: {
     title: 'Не знаете, какой ремонт нужен?', text: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд бесплатный.',
@@ -368,7 +369,7 @@ class Component extends DCLogic {
       ...g, plain: !!g.title && !g.href, linked: !!g.title && !!g.href,
     })));
     const panel = item && item.cols
-      ? { cols: markCols(item.cols), promo: item.promo || null } : null;
+      ? { cols: markCols(item.cols), promo: item.promo || null, sectionKey: SECTION_KEYS[open] } : null;
 
     const navCss = 'display:flex;align-items:center;gap:5px;font-size:clamp(10px,.9cqw,13px);font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:color .15s;';
 
@@ -396,6 +397,7 @@ class Component extends DCLogic {
         return {
           label: m.label,
           href: m.href,
+          sectionKey: SECTION_KEYS[idx],
           hasKids: !!m.cols,
           enter: () => this.setState({ open: m.cols ? idx : -1 }),
           css: navCss + 'color:' + (open === idx && m.cols ? '#00AD9F' : '#313131'),
