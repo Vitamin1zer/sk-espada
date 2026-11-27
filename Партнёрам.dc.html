@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-sections">
+<meta name="espada-revision" content="20261127-grid">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-sections"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
-<script src="assets/demo.js?v=20261127-sections" defer></script>
+<script src="./support.js?v=20261127-grid"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-grid">
+<script src="assets/demo.js?v=20261127-grid" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -28,6 +28,16 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 ::selection{background:#00AD9F;color:#fff}
+
+.espada-section-step{min-width:0;position:relative;overflow:hidden;padding-top:18px}
+.espada-section-step__line{position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(0);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.espada-section-step__body{display:flex;flex-direction:column;gap:12px;transform:translateY(0);transition:transform .25s cubic-bezier(.4,0,.2,1)}
+.espada-section-step__number{transform:translateX(0);transition:transform .25s,color .25s}
+.espada-section-step__copy{transform:translateY(0);transition:transform .25s cubic-bezier(.4,0,.2,1)}
+.espada-section-step:hover .espada-section-step__line,.espada-section-step:focus-within .espada-section-step__line{transform:translateX(-104%)}
+.espada-section-step:hover .espada-section-step__body,.espada-section-step:focus-within .espada-section-step__body,.espada-section-step:hover .espada-section-step__copy,.espada-section-step:focus-within .espada-section-step__copy{transform:translateY(-4px)}
+.espada-section-step:hover .espada-section-step__number,.espada-section-step:focus-within .espada-section-step__number{transform:translateX(3px)}
+@media(prefers-reduced-motion:reduce){.espada-section-step__line,.espada-section-step__body,.espada-section-step__number,.espada-section-step__copy{transition:none}.espada-section-step:hover .espada-section-step__line,.espada-section-step:focus-within .espada-section-step__line,.espada-section-step:hover .espada-section-step__body,.espada-section-step:focus-within .espada-section-step__body,.espada-section-step:hover .espada-section-step__number,.espada-section-step:focus-within .espada-section-step__number,.espada-section-step:hover .espada-section-step__copy,.espada-section-step:focus-within .espada-section-step__copy{transform:none}}
 </style>
 </helmet>
 
@@ -98,13 +108,13 @@ html,body{margin:0;padding:0}
       <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Как всё устроено</h2>
       <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2.2cqw,36px)">
         <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-          <div style="min-width:0;position:relative;overflow:hidden;padding-top:18px" style-hover="--ln:-104%;--up:-7px">
-            <div style="position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(var(--ln,0));transition:transform .4s cubic-bezier(.4,0,.2,1)"></div>
-            <div style="display:flex;flex-direction:column;gap:12px;transform:translateY(var(--up,0));transition:transform .3s cubic-bezier(.4,0,.2,1)">
-              <div style="font-size:clamp(24px,2.4cqw,34px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
+          <div class="espada-section-step">
+            <div class="espada-section-step__line"></div>
+            <div class="espada-section-step__body">
+              <div class="espada-section-step__number" style="font-size:clamp(24px,2.4cqw,34px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
               <h3 style="margin:0;font-size:clamp(14px,1.2cqw,17px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ s.title }}</h3>
             </div>
-            <p style="margin:12px 0 0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ s.text }}</p>
+            <p class="espada-section-step__copy" style="margin:12px 0 0;font-size:12.5px;line-height:1.55;color:#5c5c5c">{{ s.text }}</p>
           </div>
         </sc-for>
       </div>

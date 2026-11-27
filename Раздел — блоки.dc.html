@@ -1,48 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-sections">
+<meta name="espada-revision" content="20261127-grid">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-sections"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
-<script src="assets/demo.js?v=20261127-sections" defer></script>
+<script src="./support.js?v=20261127-grid"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-grid">
+<script src="assets/demo.js?v=20261127-grid" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
-<div data-service-section="{{ sectionKey }}" style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131">
+<helmet><style>
+.espada-section-links__groups{display:flex;flex-direction:column;gap:0;border-top:1px solid #e2e2e2}
+.espada-section-links__row{display:grid;grid-template-columns:176px minmax(0,1fr);gap:24px;align-items:start;padding:24px 0;border-bottom:1px solid #e2e2e2}
+.espada-section-links__title{margin:0;padding:17px 0 0;font-size:14px;line-height:1.4;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F}
+.espada-section-links__title a{color:inherit;text-decoration:none}
+.espada-section-links__items{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.espada-section-link{display:flex;align-items:center;justify-content:center;min-width:0;height:58px;border:1px solid #e2e2e2;border-radius:5px;padding:8px 12px;background:#fff;color:#313131;font-size:16px;line-height:1.3;text-align:center;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.espada-section-link:hover{border-color:#00AD9F;color:#026B63;background:#f2fbfa}
+.espada-service-groups{display:flex;flex-direction:column;gap:34px}
+.espada-service-group__heading{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.espada-service-group__icon{display:block;flex:0 0 30px;width:30px;height:30px;color:#00AD9F}
+.espada-service-group__title{margin:0;font-size:clamp(20px,1.7cqw,25px);line-height:1.3;font-weight:600;text-transform:uppercase;color:#313131}
+.espada-service-group__title a{color:inherit;text-decoration:none;transition:color .2s}
+.espada-service-group__title a:not([data-button-link]):hover{color:#026B63}
+.espada-service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.espada-service-card{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;height:76px;padding:15px 18px;border:1px solid #e2e2e2;border-radius:5px;background:#fff;color:#313131;text-decoration:none;transition:transform .2s,border-color .2s,background .2s,color .2s}
+.espada-service-card__title{min-width:0;font-size:17px;line-height:1.3;font-weight:400;overflow-wrap:anywhere}
+.espada-service-card__arrow{display:block;flex:0 0 20px;width:20px;height:20px;color:#00AD9F;transition:transform .2s}
+.espada-service-card:hover{transform:translateY(-3px);border-color:#00AD9F;background:#f2fbfa;color:#026B63}
+.espada-service-card:hover .espada-service-card__arrow{transform:translateX(3px)}
+.espada-section-step{min-width:0;position:relative;overflow:hidden;padding-top:18px}
+.espada-section-step__line{position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(0);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.espada-section-step__body{display:flex;flex-direction:column;gap:12px;transform:translateY(0);transition:transform .25s cubic-bezier(.4,0,.2,1)}
+.espada-section-step__number{transform:translateX(0);transition:transform .25s,color .25s}
+.espada-section-step:hover .espada-section-step__line,.espada-section-step:focus-within .espada-section-step__line{transform:translateX(-104%)}
+.espada-section-step:hover .espada-section-step__body,.espada-section-step:focus-within .espada-section-step__body{transform:translateY(-4px)}
+.espada-section-step:hover .espada-section-step__number,.espada-section-step:focus-within .espada-section-step__number{transform:translateX(3px)}
+.espada-section-blocks a:focus-visible,.espada-section-blocks button:focus-visible{outline:2px solid #026B63;outline-offset:3px}
+@media(max-width:1000px){.espada-section-links__row{grid-template-columns:150px minmax(0,1fr);gap:20px}.espada-section-links__items,.espada-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.espada-section-links__row{grid-template-columns:minmax(0,1fr);gap:14px;padding:20px 0}.espada-section-links__title{padding:0}.espada-section-links__items,.espada-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.espada-section-link{font-size:15px}.espada-service-card{height:82px;padding:12px}.espada-service-card__title{font-size:16px;overflow-wrap:normal}.espada-service-card__arrow{display:none}.espada-service-group__heading{align-items:flex-start}.espada-service-group__title{padding-top:3px}.espada-service-groups{gap:28px}}
+@media(prefers-reduced-motion:reduce){.espada-section-link,.espada-service-card,.espada-service-card__arrow,.espada-section-step__line,.espada-section-step__body,.espada-section-step__number{transition:none}.espada-service-card:hover,.espada-service-card:hover .espada-service-card__arrow,.espada-section-step:hover .espada-section-step__line,.espada-section-step:focus-within .espada-section-step__line,.espada-section-step:hover .espada-section-step__body,.espada-section-step:focus-within .espada-section-step__body,.espada-section-step:hover .espada-section-step__number,.espada-section-step:focus-within .espada-section-step__number{transform:none}}
+</style></helmet>
+<div class="espada-section-blocks" data-service-section="{{ sectionKey }}" style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131">
   <sc-if value="{{ showLinks }}" hint-placeholder-val="{{ true }}">
     <section data-screen-label="Услуги раздела" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
       <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-        <sc-if value="{{ showLinksTitle }}" hint-placeholder-val="{{ true }}">
-          <h2 style="margin:0 0 clamp(26px,2.8cqw,42px);font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#313131">{{ content.linksTitle }}</h2>
-        </sc-if>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
+        <h2 style="margin:0 0 clamp(26px,2.8cqw,42px);font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#313131">{{ content.linksTitle }}</h2>
+        <div class="espada-section-links__groups">
           <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
-            <div style="background:#fff;border-radius:5px;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:18px;min-width:0">
-              <sc-if value="{{ g.title }}" hint-placeholder-val="{{ true }}">
-                <sc-if value="{{ isHub }}" hint-placeholder-val="{{ false }}">
-                  <h2 style="margin:0;font-size:18px;font-weight:600;line-height:1.4;letter-spacing:.04em;text-transform:uppercase;color:#00AD9F">
-                    <sc-if value="{{ g.href }}" hint-placeholder-val="{{ false }}"><a href="{{ g.href }}" style="color:inherit;text-decoration:none" style-hover="color:#026B63">{{ g.title }}</a></sc-if>
-                    <sc-if value="{{ !g.href }}" hint-placeholder-val="{{ true }}">{{ g.title }}</sc-if>
-                  </h2>
-                </sc-if>
-                <sc-if value="{{ !isHub }}" hint-placeholder-val="{{ true }}">
-                  <h3 style="margin:0;font-size:14px;font-weight:600;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:#00AD9F">
-                    <sc-if value="{{ g.href }}" hint-placeholder-val="{{ false }}"><a href="{{ g.href }}" style="color:inherit;text-decoration:none" style-hover="color:#026B63">{{ g.title }}</a></sc-if>
-                    <sc-if value="{{ !g.href }}" hint-placeholder-val="{{ true }}">{{ g.title }}</sc-if>
-                  </h3>
-                </sc-if>
-              </sc-if>
-              <div style="display:flex;flex-wrap:wrap;gap:8px">
-                <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="6">
-                  <a data-button-link="true" href="{{ i.href }}" style="flex:1 1 auto;display:flex;align-items:center;justify-content:center;min-width:0;min-height:48px;border:1px solid #e2e2e2;border-radius:5px;padding:10px 14px;font-size:16px;line-height:1.3;color:#313131;text-decoration:none;text-align:center;transition:border-color .15s,color .15s" style-hover="border-color:#00AD9F;color:#026B63">{{ i.t }}</a>
-                </sc-for>
+            <div class="espada-section-links__row">
+              <h3 class="espada-section-links__title">
+                <sc-if value="{{ g.href }}" hint-placeholder-val="{{ false }}"><a href="{{ g.href }}">{{ g.title }}</a></sc-if>
+                <sc-if value="{{ !g.href }}" hint-placeholder-val="{{ true }}">{{ g.title }}</sc-if>
+              </h3>
+              <div class="espada-section-links__items">
+                <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="6"><a class="espada-section-link" data-button-link="true" href="{{ i.href }}">{{ i.t }}</a></sc-for>
               </div>
             </div>
           </sc-for>
         </div>
+      </div>
+    </section>
+  </sc-if>
+  <sc-if value="{{ showHub }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Услуги раздела" style="background:#f8f8f8;padding:clamp(32px,3.8cqw,56px) 0">
+      <div class="espada-service-groups" style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
+        <sc-for list="{{ hubGroups }}" as="g" hint-placeholder-count="4">
+          <div class="espada-service-group">
+            <div class="espada-service-group__heading">
+              <svg class="espada-service-group__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ g.iconPath }}"></path></svg>
+              <h2 class="espada-service-group__title">
+                <sc-if value="{{ g.href }}" hint-placeholder-val="{{ true }}"><a href="{{ g.href }}">{{ g.title }}</a></sc-if>
+                <sc-if value="{{ !g.href }}" hint-placeholder-val="{{ false }}">{{ g.title }}</sc-if>
+              </h2>
+            </div>
+            <div class="espada-service-grid">
+              <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="4">
+                <a class="espada-service-card" data-button-link="true" href="{{ i.href }}">
+                  <span class="espada-service-card__title">{{ i.t }}</span>
+                  <svg class="espada-service-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg>
+                </a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
       </div>
     </section>
   </sc-if>
@@ -52,10 +95,13 @@
         <h2 style="margin:0;font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#313131">{{ content.stepsTitle }}</h2>
         <div style="{{ stepsGridCss }}">
           <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-            <div style="min-width:0;padding-top:18px;border-top:2px solid #00AD9F;display:flex;flex-direction:column;gap:12px">
-              <div style="font-size:clamp(24px,2.4cqw,34px);font-weight:600;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
+            <div class="espada-section-step">
+              <div class="espada-section-step__line"></div>
+              <div class="espada-section-step__body">
+              <div class="espada-section-step__number" style="font-size:clamp(24px,2.4cqw,34px);font-weight:600;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ s.n }}</div>
               <h3 style="margin:0;font-size:clamp(18px,1.5cqw,22px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ s.title }}</h3>
               <p style="margin:0;font-size:17px;line-height:1.5;color:#5c5c5c">{{ s.text }}</p>
+              </div>
             </div>
           </sc-for>
         </div>
@@ -143,6 +189,22 @@ const CONTENT = {
   services: { linksTitle: 'Услуги для ремонта', steps: [], faq: [] },
 };
 
+const HUB_ICONS = {
+  '/inzhenernye-sistemy/': 'M8 8h8v8H8z M12 3v5 M12 16v5 M3 12h5 M16 12h5 M3 5h3v3 M21 5h-3v3 M3 19h3v-3 M21 19h-3v-3',
+  '/otdelochnye-raboty/': 'M5 4h13v6H5z M18 7h3v7h-9v7 M3 6v2',
+  '/demontazh-i-chernovye-raboty/': 'M3 5h18v14H3z M3 12h18 M9 5v7 M15 12v7',
+  other: 'M4 3h16v18H4z M4 9h7v12 M11 14h9 M15 3v6 M11 9h4',
+};
+
+function mergeContinuedGroups(groups) {
+  const merged = [];
+  groups.forEach(group => {
+    if (!group.title && merged.length) merged[merged.length - 1].items.push(...group.items);
+    else merged.push({ ...group, items: [...group.items] });
+  });
+  return merged;
+}
+
 class Component extends DCLogic {
   state = { faq: 0 };
 
@@ -153,14 +215,14 @@ class Component extends DCLogic {
     const menu = (window.ESPADA_SERVICE_MENU || []).find(item => item.key === section);
     const path = this.props.servicePath || '';
     const allGroups = menu ? menu.groups : [];
-    const groups = variant === 'hub' && path && path !== menu?.href
-      ? allGroups.filter(group => group.href === path) : allGroups;
+    const groups = mergeContinuedGroups(allGroups);
+    const hubGroups = (path && path !== menu?.href ? allGroups.filter(group => group.href === path) : allGroups)
+      .map(group => ({ ...group, iconPath: HUB_ICONS[group.href] || HUB_ICONS.other }));
     const activeFaq = this.state.faq;
     return {
-      content, groups, sectionKey: section,
-      isHub: variant === 'hub',
-      showLinks: variant === 'links' || variant === 'hub',
-      showLinksTitle: variant !== 'hub',
+      content, groups, hubGroups, sectionKey: section,
+      showLinks: variant === 'links',
+      showHub: variant === 'hub',
       showSteps: variant === 'steps',
       showFaq: variant === 'faq',
       stepsGridCss: 'margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,'

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-sections">
+<meta name="espada-revision" content="20261127-grid">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-sections"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-sections">
-<script src="assets/demo.js?v=20261127-sections" defer></script>
+<script src="./support.js?v=20261127-grid"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-grid">
+<script src="assets/demo.js?v=20261127-grid" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -94,8 +94,6 @@ html,body{margin:0;padding:0}
     </div>
   </section>
 
-  <dc-import name="Раздел — блоки" section="renovation" variant="links"></dc-import>
-
   <sc-if value="{{ p.hasTariffs }}" hint-placeholder-val="{{ true }}">
     <section data-screen-label="Тарифы" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
       <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
@@ -112,7 +110,7 @@ html,body{margin:0;padding:0}
         <div class="espada-tariffs">
           <sc-for list="{{ tariffs }}" as="t" hint-placeholder-count="4">
             <article class="espada-tariff">
-              <div class="espada-tariff__box"><h3>{{ t.title }}</h3><div class="espada-tariff__price"><em>от {{ t.price }} ₽/м²</em><span>по полу</span></div><div class="espada-tariff__items"><sc-for list="{{ t.items }}" as="i"><div>{{ i }}</div></sc-for></div></div>
+              <div class="espada-tariff__box"><h3>{{ t.title }}</h3><div class="espada-tariff__price"><em class="espada-tariff__price-amount">от {{ t.price }} ₽/м²</em><small class="espada-tariff__price-note">по полу</small></div><div class="espada-tariff__items"><sc-for list="{{ t.items }}" as="i"><div>{{ i }}</div></sc-for></div></div>
               <button type="button" onClick="{{ openPopup }}" class="espada-tariff__cta">Заявка на расчёт</button>
             </article>
           </sc-for>
@@ -163,6 +161,8 @@ html,body{margin:0;padding:0}
   <dc-import name="Отзывы" hint-size="100%,900px"></dc-import>
 
   <dc-import name="Встреча" kind="repair"></dc-import>
+
+  <dc-import name="Раздел — блоки" section="renovation" variant="links"></dc-import>
 
   <section data-screen-label="Контакты" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">
