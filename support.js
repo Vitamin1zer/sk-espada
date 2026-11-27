@@ -1,4 +1,5 @@
 // GENERATED from dc-runtime/src/*.ts — do not edit. Rebuild with `cd dc-runtime && bun run build`.
+// Project adapters: local React with SRI, revisioned imports, and inert source templates.
 "use strict";
 (() => {
   var __defProp = Object.defineProperty;
@@ -22,7 +23,7 @@
 
   // src/parse.ts
   function parseDcDocument(doc) {
-    const dc = doc.querySelector("x-dc");
+    const dc = doc.querySelector("x-dc") || doc.querySelector("template[data-dc-source]")?.content.querySelector("x-dc");
     if (!dc) return null;
     const scriptEl = doc.querySelector("script[data-dc-script]");
     const { props, preview } = parseDataProps(
@@ -162,7 +163,7 @@
       }).catch(() => {
       });
     }
-    const dc = doc.querySelector("x-dc");
+    const dc = doc.querySelector("x-dc") || doc.querySelector("template[data-dc-source]");
     const hostEl = doc.createElement("div");
     hostEl.id = "dc-root";
     dc.replaceWith(hostEl);
@@ -1648,7 +1649,11 @@
       const pre = res ? res[url] : void 0;
       const target = typeof pre === "string" && pre ? pre : url;
       const blob = bundledBlob(target);
-      (blob ? blob.text() : fetch(target).then((res2) => {
+      // Версия из HTML относится и к импортируемым компонентам: не смешиваем редакции из кеша.
+      const revision = document.querySelector('meta[name="espada-revision"]')?.content;
+      const fetchUrl = new URL(target, document.baseURI);
+      if (revision && fetchUrl.origin === location.origin) fetchUrl.searchParams.set("v", revision);
+      (blob ? blob.text() : fetch(fetchUrl.href).then((res2) => {
         if (!res2.ok) {
           console.error(
             '[dc-runtime] sibling fetch for "' + name + '" failed:',

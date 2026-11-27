@@ -1,5 +1,11 @@
 (() => {
   'use strict';
+  const revision = document.querySelector('meta[name="espada-revision"]')?.content || '';
+  function versioned(href) {
+    const url = new URL(href, location.href);
+    if (revision) url.searchParams.set('v', revision);
+    return url.href;
+  }
   const pages = [
     ['home','Главная','Главная'],['kit','UI-кит и сквозные элементы','UI-кит'],
     ['design','Дизайн интерьера','Дизайн интерьера'],['materials','Комплектация','Комплектация'],
@@ -21,8 +27,9 @@
   pages.forEach(p=>{const b=document.createElement('button');b.type='button';b.className='page-button';b.dataset.key=p.key;b.textContent=p.title;b.addEventListener('click',()=>navigate(p));menu.append(b);});
   function navigate(p, variant='') {
     current=p;selectedVariant=variant || (variants[p.key]||[])[0] || '';applied='';
-    frame.src=p.file;frame.title=p.title;document.getElementById('page-title').textContent=p.title;
-    document.getElementById('open-page').href=p.file;
+    if (frame.src !== versioned(p.file)) frame.src=versioned(p.file);
+    frame.title=p.title;document.getElementById('page-title').textContent=p.title;
+    document.getElementById('open-page').href=versioned(p.file);
     document.title='Эспада — '+p.title;
     menu.querySelectorAll('button').forEach(b=>{if(b.dataset.key===p.key)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
     const bar=document.getElementById('variant-bar');bar.replaceChildren();bar.hidden=!variants[p.key];
@@ -53,7 +60,7 @@
   }
   function fit() {
     const doc=frame.contentDocument, win=frame.contentWindow;if(!doc||!doc.body)return;
-    document.getElementById('open-page').href=current.file+(selectedVariant?'?page='+encodeURIComponent(selectedVariant):'');
+    document.getElementById('open-page').href=versioned(current.file+(selectedVariant?'?page='+encodeURIComponent(selectedVariant):''));
     const mobile=device==='mobile',width=mobile?390:1440;
     artboard.style.width=(width+(mobile?12:0))+'px';artboard.classList.toggle('is-mobile',mobile);stage.classList.toggle('is-mobile',mobile);
     if(win.__dcSetProps && win.__dcRootName){const signature=current.key+'|'+selectedVariant+'|'+device;if(applied!==signature){win.__dcSetProps(win.__dcRootName(),{mobile,page:selectedVariant});applied=signature;}}

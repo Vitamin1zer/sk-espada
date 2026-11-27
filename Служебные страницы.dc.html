@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 
 
@@ -22,12 +23,12 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{background:#fff}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
@@ -112,7 +113,7 @@ input,textarea,select{font-family:inherit}
               <span>— согласования с УК и режим работ уже отработаны;</span>
               <span>— принимаем квартиру и сразу считаем ремонт.</span>
             </div>
-            <button type="button" onClick="{{ openPopup }}" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;margin-top:4px" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)">Бесплатный расчёт сметы</button>
+            <button type="button" onClick="{{ openPopup }}" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;margin-top:4px" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff">Бесплатный расчёт сметы</button>
           </div>
           <div style="min-width:0;display:flex;justify-content:flex-end">
             <div style="width:100%;max-width:400px">
@@ -171,7 +172,7 @@ input,textarea,select{font-family:inherit}
           <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Работаем и в других ЖК</h2>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
             <sc-for list="{{ otherZhk }}" as="z" hint-placeholder-count="6">
-              <a href="/remont-v-zhk-shablon/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
+              <a data-button-link="true" href="/remont-v-zhk-shablon/" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ z }}</a>
             </sc-for>
           </div>
           <a href="/remont-v-zhk-shablon/" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все жилые комплексы →</a>
@@ -240,12 +241,12 @@ input,textarea,select{font-family:inherit}
           <p style="margin:0;font-size:clamp(13px,1.1cqw,16px);line-height:1.6;color:#5c5c5c;max-width:440px;text-wrap:pretty">Возможно, адрес изменился при переезде сайта или в ссылке опечатка. Вот куда обычно идут с этой страницы:</p>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
             <sc-for list="{{ links404 }}" as="l" hint-placeholder-count="5">
-              <a href="{{ l.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ l.t }}</a>
+              <a data-button-link="true" href="{{ l.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ l.t }}</a>
             </sc-for>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-            <a href="/" style="background:#00AD9F;color:#fff;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">На главную</a>
-            <a href="tel:+79938914064" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">+7 (993) 891-40-64</a>
+            <a data-button-link="true" href="/" style="background:#00AD9F;color:#fff;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">На главную</a>
+            <a data-button-link="true" href="tel:+79938914064" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">+7 (993) 891-40-64</a>
           </div>
         </div>
         <div style="min-width:0">
@@ -275,8 +276,8 @@ input,textarea,select{font-family:inherit}
             </sc-for>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/portfolio/" style="background:#00AD9F;color:#fff;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Смотреть работы</a>
-            <a href="https://t.me/espada_remont" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Написать в Telegram</a>
+            <a data-button-link="true" href="/portfolio/" style="background:#00AD9F;color:#fff;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">Смотреть работы</a>
+            <a data-button-link="true" href="https://t.me/espada_remont" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:16px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Написать в Telegram</a>
           </div>
           <p style="margin:0;font-size:11.5px;line-height:1.55;color:#929292;max-width:440px">Отдельный адрес страницы нужен, чтобы поставить цель в Яндекс.Метрике: конверсия считается по переходу на /spasibo/, а не по нажатию кнопки.</p>
         </div>
@@ -284,7 +285,7 @@ input,textarea,select{font-family:inherit}
           <img src="assets/pf-01.jpg" alt="Готовый ремонт квартиры" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f0f0f0" />
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px">
             <sc-for list="{{ thanksLinks }}" as="l" hint-placeholder-count="3">
-              <a href="{{ l.href }}" style="background:#f8f8f8;padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:background .2s" style-hover="background:#f0f0f0">
+              <a data-button-link="true" href="{{ l.href }}" style="background:#f8f8f8;padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:background .2s" style-hover="background:#f0f0f0;color:#313131">
                 <span style="font-size:12.5px;font-weight:700;color:#313131;line-height:1.3">{{ l.t }}</span>
                 <span style="font-size:11px;color:#929292;line-height:1.4">{{ l.note }}</span>
               </a>
@@ -303,7 +304,7 @@ input,textarea,select{font-family:inherit}
           <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">Специалист приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и сделает детальный расчёт сметы.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
             <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">Бесплатный расчёт сметы</button>
-            <a href="tel:+79938914064" style="border:1px solid #fff;color:#fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">+7 (993) 891-40-64</a>
+            <a data-button-link="true" href="tel:+79938914064" style="border:1px solid #fff;color:#fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">+7 (993) 891-40-64</a>
           </div>
         </div>
         <div style="min-width:0;display:flex;align-items:flex-end;justify-content:flex-end">
@@ -325,7 +326,7 @@ input,textarea,select{font-family:inherit}
 
 </div>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Вопросы и ответы&quot;,&quot;Страница ЖК&quot;,&quot;Юридическая&quot;,&quot;404&quot;,&quot;Спасибо&quot;],&quot;default&quot;:&quot;Вопросы и ответы&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
 const FAQ_GROUPS = [
   { id: 'g1', title: 'Цены и смета', items: [

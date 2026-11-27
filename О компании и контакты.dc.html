@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 
 
@@ -22,12 +23,12 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{background:#fff}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
@@ -155,8 +156,8 @@ input,textarea,select{font-family:inherit}
             <div style="display:flex;flex-direction:column;gap:10px">
               <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131">Как добраться:</h3>
               <div style="display:flex;gap:12px;flex-wrap:wrap">
-                <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
-                <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">2ГИС</a>
+                <a data-button-link="true" href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">Яндекс.Карты</a>
+                <a data-button-link="true" href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">2ГИС</a>
               </div>
             </div>
             <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #e4e4e4;padding-top:18px">
@@ -221,7 +222,7 @@ input,textarea,select{font-family:inherit}
         <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">Специалист приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и сделает детальный расчёт сметы.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
           <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">Вызвать замерщика</button>
-          <a href="tel:+79938914064" style="border:1px solid #fff;color:#fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">+7 (993) 891-40-64</a>
+          <a data-button-link="true" href="tel:+79938914064" style="border:1px solid #fff;color:#fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">+7 (993) 891-40-64</a>
         </div>
       </div>
       <div style="min-width:0;display:flex;align-items:flex-end;justify-content:flex-end">
@@ -242,7 +243,7 @@ input,textarea,select{font-family:inherit}
 
 </div>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;О компании&quot;,&quot;Контакты&quot;],&quot;default&quot;:&quot;О компании&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
 const FACTS = [
   { v: '{Год}', t: 'работаем на рынке ремонта Москвы и области' },

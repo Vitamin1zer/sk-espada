@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 <style>
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{background:#fff}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 ::selection{background:#00AD9F;color:#fff}
 </style>
@@ -40,8 +41,8 @@ button{font-family:inherit;cursor:pointer}
         <h1 style="margin:0;font-size:clamp(26px,3.2cqw,44px);line-height:1.06;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Такой страницы нет</h1>
         <p style="margin:0;font-size:clamp(14px,1.05cqw,16px);line-height:1.6;color:#5c5c5c;max-width:520px;text-wrap:pretty">Адрес введён с ошибкой или страница переехала. Ниже — разделы, с которых удобно продолжить.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
-          <a href="/" style="background:#00AD9F;color:#fff;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:16px 28px;white-space:nowrap" style-hover="background:#026B63">На главную</a>
-          <a href="/kontakty/" style="border:1px solid #313131;color:#313131;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:15px 27px;white-space:nowrap" style-hover="border-color:#00AD9F;color:#00AD9F">Связаться с нами</a>
+          <a data-button-link="true" href="/" style="background:#00AD9F;color:#fff;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:16px 28px;white-space:nowrap" style-hover="background:#026B63;color:#fff">На главную</a>
+          <a data-button-link="true" href="/kontakty/" style="border:1px solid #313131;color:#313131;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:15px 27px;white-space:nowrap" style-hover="border-color:#00AD9F;color:#00AD9F">Связаться с нами</a>
         </div>
       </div>
 
@@ -62,7 +63,7 @@ button{font-family:inherit;cursor:pointer}
 
 </div>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
 const LINKS = [
   { t: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/', note: 'под ключ, все виды' },

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 
 
@@ -28,12 +29,12 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 </style>
 </helmet>
 
-<div style="position:relative;container-type:inline-size;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;background:#fff;color:#313131;z-index:5" onMouseLeave="{{ closeAll }}">
+<div class="espada-demo-header" style="position:relative;container-type:inline-size;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;background:#fff;color:#313131;z-index:5" onMouseLeave="{{ closeAll }}">
 
   <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
     <div>
@@ -72,7 +73,7 @@ button{font-family:inherit;cursor:pointer}
               </div>
             </sc-for>
           </nav>
-          <button type="button" data-open-form="repair" style="{{ ctaCss }}" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">Вызвать замерщика</button>
+          <button type="button" data-open-form="repair" style="{{ ctaCss }}" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18);color:#fff">Вызвать замерщика</button>
         </div>
       </div>
 
@@ -104,10 +105,10 @@ button{font-family:inherit;cursor:pointer}
               </sc-for>
             </div>
             <sc-if value="{{ panel.promo }}" hint-placeholder-val="{{ false }}">
-              <div style="flex:0 0 260px;width:260px;background:#f8f8f8;padding:24px 22px">
-                <div style="font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.22;color:#000">{{ panel.promo.title }}</div>
+              <div style="flex:0 0 260px;width:260px;background:#f8f8f8;border-radius:5px;padding:24px 22px">
+                <div style="font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.22;color:#000;white-space:pre-line">{{ panel.promo.title }}</div>
                 <div style="margin-top:12px;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ panel.promo.text }}</div>
-                <button type="button" data-open-form="{{ panel.promo.form }}" style="margin-top:18px;width:100%;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:13px 14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">{{ panel.promo.cta }}</button>
+                <button type="button" data-open-form="{{ panel.promo.form }}" style="margin-top:18px;width:100%;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:13px 14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18);color:#fff">{{ panel.promo.cta }}</button>
                 <a href="{{ panel.promo.href }}" style="margin-top:14px;display:block;font-size:12px;font-weight:700;letter-spacing:.02em;color:#00AD9F;text-decoration:none" style-hover="color:#026B63">{{ panel.promo.link }} →</a>
               </div>
             </sc-if>
@@ -125,7 +126,7 @@ button{font-family:inherit;cursor:pointer}
       </a>
       <div style="display:flex;align-items:center;gap:14px">
         <a href="tel:+79938914064" style="font-size:12.5px;font-weight:700;color:#313131;text-decoration:none">+7 (993) 891-40-64</a>
-        <button type="button" onClick="{{ toggleMob }}" aria-label="Открыть меню" style="width:26px;height:20px;border:0;background:transparent;padding:0;display:flex;flex-direction:column;justify-content:space-between">
+        <button type="button" onClick="{{ toggleMob }}" aria-label="Открыть меню" style="width:44px;height:44px;border:0;border-radius:5px;background:transparent;padding:12px 9px;display:flex;flex-direction:column;justify-content:space-between">
           <span style="display:block;height:2px;width:100%;background:#313131"></span>
           <span style="display:block;height:2px;width:100%;background:#313131"></span>
           <span style="display:block;height:2px;width:100%;background:#313131"></span>
@@ -138,9 +139,9 @@ button{font-family:inherit;cursor:pointer}
     <div style="background:#fff;display:flex;flex-direction:column">
       <div style="height:58px;flex:0 0 58px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #e6e6e6">
         <a href="/" style="display:block"><img src="assets/logo-full.png" alt="Эспада" style="height:28px;width:auto;display:block" /></a>
-        <button type="button" onClick="{{ toggleMob }}" aria-label="Закрыть меню" style="width:30px;height:30px;border:0;background:transparent;padding:0;position:relative">
-          <span style="position:absolute;left:3px;top:14px;width:24px;height:2px;background:#313131;transform:rotate(45deg);display:block"></span>
-          <span style="position:absolute;left:3px;top:14px;width:24px;height:2px;background:#313131;transform:rotate(-45deg);display:block"></span>
+        <button type="button" onClick="{{ toggleMob }}" aria-label="Закрыть меню" style="width:44px;height:44px;border:0;border-radius:5px;background:transparent;padding:0;position:relative">
+          <span style="position:absolute;left:10px;top:21px;width:24px;height:2px;background:#313131;transform:rotate(45deg);display:block"></span>
+          <span style="position:absolute;left:10px;top:21px;width:24px;height:2px;background:#313131;transform:rotate(-45deg);display:block"></span>
         </button>
       </div>
 
@@ -150,8 +151,8 @@ button{font-family:inherit;cursor:pointer}
             <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px">
               <a href="{{ m.href }}" style="flex:1;padding:16px 0;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#313131;text-decoration:none">{{ m.label }}</a>
               <sc-if value="{{ m.hasKids }}" hint-placeholder-val="{{ true }}">
-                <button type="button" onClick="{{ m.toggleAcc }}" aria-label="Раскрыть раздел" style="width:38px;height:38px;border:1px solid #e6e6e6;background:#fff;padding:0;position:relative;flex:0 0 38px">
-                  <span style="position:absolute;left:11px;top:18px;width:14px;height:2px;background:#00AD9F;display:block"></span>
+                <button type="button" onClick="{{ m.toggleAcc }}" aria-label="Раскрыть раздел" style="width:44px;height:44px;border:1px solid #e6e6e6;border-radius:5px;background:#fff;padding:0;position:relative;flex:0 0 44px">
+                  <span style="position:absolute;left:14px;top:21px;width:14px;height:2px;background:#00AD9F;display:block"></span>
                   <span style="{{ m.accVert }}"></span>
                 </button>
               </sc-if>
@@ -194,7 +195,7 @@ button{font-family:inherit;cursor:pointer}
           <a href="mailto:sk-espada@rambler.ru" style="font-size:12.5px;color:#5c5c5c;text-decoration:none">sk-espada@rambler.ru</a>
           <div style="display:flex;gap:8px;margin-top:10px">
             <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
-              <a href="{{ s.href }}" title="{{ s.name }}" style="width:34px;height:34px;background:#00AD9F;display:flex;align-items:center;justify-content:center">
+              <a href="{{ s.href }}" title="{{ s.name }}" style="width:44px;height:44px;border-radius:5px;background:#00AD9F;display:flex;align-items:center;justify-content:center">
                 <img src="{{ s.icon }}" alt="{{ s.name }}" style="width:17px;height:17px;object-fit:contain;display:block" />
               </a>
             </sc-for>
@@ -206,7 +207,7 @@ button{font-family:inherit;cursor:pointer}
 
 </div>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:420},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;default&quot;,&quot;sticky&quot;,&quot;mobile&quot;,&quot;mobile-open&quot;],&quot;default&quot;:&quot;default&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Состояние&quot;},&quot;openIndex&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:-1,&quot;min&quot;:-1,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Состояние&quot;},&quot;accIndex&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:-1,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Состояние&quot;}}">
 const L = (t, href) => ({ t, href });
 
@@ -217,19 +218,19 @@ const REMONT = [
     L('Капитальный', '/kapitalnyj-remont-kvartiry/'),
     L('Косметический', '/kosmeticheskij-remont-kvartiry/'),
     L('Дизайнерский', '/dizajnerskij-remont-kvartiry/'),
-    L('Черновой', '/chernovoj-remont-kvartiry/'),
+    L('С перепланировкой', '/pereplanirovka-kvartiry/'),
     L('Чистовая отделка', '/chistovaya-otdelka-kvartiry/'),
+    L('Черновой', '/chernovoj-remont-kvartiry/'),
   ] }],
   [{ title: '', spacer: true, items: [
     L('Евроремонт', '/evroremont-kvartiry/'),
-    L('Элитный', '/elitnyj-remont-kvartir/'),
     L('Недорогой', '/nedorogoj-remont-kvartir/'),
     L('Под сдачу', '/remont-pod-sdachu-v-arendu/'),
-    L('С перепланировкой', '/pereplanirovka-kvartiry/'),
     L('Под ключ', '/remont-kvartir-pod-klyuch/'),
+    L('Элитный', '/elitnyj-remont-kvartir/'),
+    L('По стилю', '/remont-kvartir-po-stilyu/'),
     L('После залива', '/remont-posle-zaliva/'),
     L('После пожара', '/remont-posle-pozhara/'),
-    L('По стилю', '/remont-kvartir-po-stilyu/'),
   ] }],
   [
     { title: 'По числу комнат', items: [
@@ -246,15 +247,15 @@ const REMONT = [
   ],
   [{ title: 'По помещениям', items: [
     L('Кухня', '/remont-kuhni/'),
-    L('Ванная комната', '/remont-vannoj-komnaty/'),
     L('Санузел', '/remont-sanuzla/'),
     L('Туалет', '/remont-tualeta/'),
     L('Спальня', '/remont-spalni/'),
     L('Гостиная', '/remont-gostinoj/'),
+    L('Ванная комната', '/remont-vannoj-komnaty/'),
     L('Детская комната', '/remont-detskoj-komnaty/'),
-    L('Прихожая и коридор', '/remont-prihozhej-i-koridora/'),
-    L('Балкон и лоджия', '/remont-balkona-i-lodzhii/'),
     L('Гардеробная', '/remont-garderobnoj/'),
+    L('Балкон и лоджия', '/remont-balkona-i-lodzhii/'),
+    L('Прихожая и коридор', '/remont-prihozhej-i-koridora/'),
   ] }],
   [{ title: 'Ремонт не в квартире', items: [
     L('Дома и коттеджи', '/remont-domov-i-kottedzhej/'),
@@ -318,16 +319,16 @@ const USLUGI = [
 
 const MENU = [
   { label: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/', cols: REMONT, promo: {
-    title: 'Не знаете, какой ремонт нужен', text: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд бесплатный.',
+    title: 'Не знаете, какой ремонт нужен?', text: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд бесплатный.',
     form: 'repair', cta: 'Бесплатный расчёт сметы', link: 'Все виды ремонта', href: '/remont-kvartir-pod-klyuch/' } },
   { label: 'Дизайн интерьера', href: '/dizajn-interera/', cols: DESIGN, promo: {
-    title: 'Дизайн-проект от 1 790 ₽/м²', text: 'Технический проект — от 1 790 ₽/м², стандартный — от 2 400 ₽/м². Цены за квадратный метр по полу.',
+    title: 'Дизайн-проект\nот 1 790 ₽/м²', text: 'Технический проект — от 1 790 ₽/м², стандартный — от 2 400 ₽/м². Цены за квадратный метр по полу.',
     form: 'design', cta: 'Бесплатный выезд дизайнера', link: 'О дизайн-проектах', href: '/dizajn-interera/' } },
   { label: 'Приёмка', href: '/priyomka-kvartir-v-novostrojke/', cols: PRIEMKA, promo: {
     title: 'Приняли квартиру — считаем ремонт', text: 'Приёмка и ремонт идут одной командой: акт с замечаниями на руках, смета на ремонт — в тот же выезд.',
     form: 'acceptance', cta: 'Записаться на приёмку', link: 'Как проходит приёмка', href: '/priyomka-kvartir-v-novostrojke/' } },
   { label: 'Комплектация', href: '/komplektatsiya-kvartiry/' },
-  { label: 'Услуги', href: '/uslugi/', cols: USLUGI, promo: { title: 'Всё для ремонта в одном месте', text: 'От отдельных работ до ремонта под ключ. Рассчитаем смету по вашим объёмам.', form: 'repair', cta: 'Бесплатный расчёт сметы', link: 'Все услуги', href: '/uslugi/' } },
+  { label: 'Услуги', href: '/uslugi/', cols: USLUGI, promo: { title: 'Все для ремонта\nв одном месте', text: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд бесплатный.', form: 'repair', cta: 'Бесплатный расчёт сметы', link: 'Все виды ремонта', href: '/remont-kvartir-pod-klyuch/' } },
   { label: 'Портфолио', href: '/portfolio/' },
 ];
 
@@ -369,22 +370,18 @@ class Component extends DCLogic {
     const panel = item && item.cols
       ? { cols: markCols(item.cols), promo: item.promo || null } : null;
 
-    const navCss = 'display:flex;align-items:center;gap:5px;font-size:clamp(10px,.9cqw,' + (sticky ? '12.5px' : '13px')
-      + ');font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:color .15s;';
+    const navCss = 'display:flex;align-items:center;gap:5px;font-size:clamp(10px,.9cqw,13px);font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:color .15s;';
 
     return {
       isDesktop: !isMobile,
       isMobileBar: isMobile && !mob,
       isMobileOpen: isMobile && mob,
       showUtility: true,
-      mainRowCss: 'background:#fff;height:' + (sticky ? '62px' : '84px')
+      mainRowCss: 'background:#fff;height:84px'
         + ';border-bottom:1px solid ' + (sticky ? 'transparent' : '#ededed')
         + (sticky ? ';box-shadow:0 3px 14px rgba(0,0,0,.10)' : ''),
-      logoCss: 'height:' + (sticky ? 'clamp(26px,2.2cqw,32px)' : 'clamp(30px,3.1cqw,44px)') + ';width:auto;display:block',
-      ctaCss: 'flex:0 0 auto;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:'
-        + (sticky ? '13px clamp(12px,1.4cqw,20px)' : '16px clamp(14px,1.7cqw,24px)')
-        + ';font-size:clamp(9.5px,.8cqw,' + (sticky ? '11px' : '11.5px')
-        + ');font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:background .2s,box-shadow .2s',
+      logoCss: 'height:clamp(30px,3.1cqw,44px);width:auto;display:block',
+      ctaCss: 'flex:0 0 auto;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:16px clamp(14px,1.7cqw,24px);font-size:clamp(9.5px,.8cqw,11.5px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:background .2s,box-shadow .2s',
       utilCss: 'font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#5c5c5c;text-decoration:none;white-space:nowrap;transition:color .15s',
       util: UTIL,
       socials: SOCIALS,
@@ -403,7 +400,7 @@ class Component extends DCLogic {
           enter: () => this.setState({ open: m.cols ? idx : -1 }),
           css: navCss + 'color:' + (open === idx && m.cols ? '#00AD9F' : '#313131'),
           accOpen: acc === idx && !!m.cols,
-          accVert: 'position:absolute;left:18px;top:11px;width:2px;height:16px;background:#00AD9F;display:'
+          accVert: 'position:absolute;left:20px;top:14px;width:2px;height:16px;background:#00AD9F;display:'
             + (acc === idx ? 'none' : 'block'),
           toggleAcc: () => this.setState({ acc: acc === idx ? -1 : idx }),
           flatGroups: flat,

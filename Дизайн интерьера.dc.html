@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 
 
@@ -29,7 +30,7 @@
 html,body{margin:0;padding:0}
 body{background:#fff}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
@@ -37,7 +38,8 @@ input,textarea,select{font-family:inherit}
 .design-container{width:min(1200px,100%);margin-inline:auto;padding-inline:20px}
 .design-section{padding:clamp(44px,5.5vw,88px) 0}
 .design-heading{margin:0;font-size:clamp(27px,3vw,35px);font-weight:600;line-height:1.15;text-transform:uppercase;color:#313131}
-.design-showroom .design-heading{font-size:clamp(27px,3vw,36px)}
+.design-showroom .design-heading{font-size:clamp(25px,2.6vw,32px);grid-column:1/-1}
+.design-showroom .design-split{align-items:start;row-gap:36px}
 [data-screen-label="Реализация проекта"] .design-heading{font-size:clamp(26px,2.5vw,30px)}
 .design-heading span{color:#00AD9F}
 .design-copy{margin:0;font-size:clamp(16px,1.4vw,20px);line-height:1.55;color:#5c5c5c}
@@ -50,6 +52,8 @@ input,textarea,select{font-family:inherit}
 .design-actions{display:flex;align-items:center;gap:clamp(28px,5vw,74px);flex-wrap:wrap;margin-top:32px}
 .design-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:0;border-radius:5px;padding:15px 23px;background:#00AD9F;color:#fff;font-size:14px;font-weight:600;line-height:1.25;text-decoration:none;cursor:pointer;transition:background .2s}
 .design-button:hover{background:#026B63;color:#fff}
+.design-button--white{background:#fff;color:#00AD9F}
+.design-button--white:hover{background:#026B63;color:#fff}
 .design-text-link{border:0;background:none;color:#5c5c5c;text-decoration:underline;text-underline-offset:4px;padding:12px 0;font-size:15px;cursor:pointer}
 .design-showroom figure{margin:0}
 .design-showroom figcaption{font-size:13px;line-height:1.45;color:#929292;margin-top:12px}
@@ -58,18 +62,18 @@ input,textarea,select{font-family:inherit}
 .design-tariff__card{width:100%;background:#00AD9F;color:#fff;border-radius:5px;overflow:hidden}
 .design-tariff__title{padding:21px 18px;text-align:center;font-size:21px;font-weight:600;line-height:1.25}
 .design-tariff__price{padding:17px 18px;background:#026B63;text-align:center}
-.design-tariff__price em{font-size:24px;font-weight:400;line-height:1.2}
+.design-tariff__price em{font-size:28px;font-weight:400;line-height:1.2}
 .design-tariff__price small{display:block;margin-top:6px;font-size:13px}
-.design-tariff__items{display:flex;flex-direction:column;gap:10px;padding:24px;font-size:14px;line-height:1.5}
-.design-tariff>.design-button{background:#026B63;font-size:13px;min-height:48px;padding:14px 18px;max-width:100%}
+.design-tariff__items{display:flex;flex-direction:column;gap:12px;padding:28px 24px;font-size:17px;line-height:1.5}
+.design-tariff>.design-button{background:#026B63;font-size:15px;min-height:48px;padding:14px 18px;max-width:100%}
 .design-tariff>.design-button:hover{background:#014f49}
 .design-space{display:grid;grid-template-columns:1fr 1fr 1.8fr;gap:24px;align-items:center;margin-top:36px}
 .design-space img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px}
 .design-space h3{margin:0 0 20px;font-weight:600;font-size:20px;line-height:1.3;text-transform:uppercase;color:#313131}
 .design-partners-title{text-align:center;margin:0;font-size:clamp(22px,2.2vw,30px);line-height:1.2;font-weight:600;text-transform:uppercase}
-.design-partners-row{display:flex;gap:20px;align-items:center;margin:38px auto 0;max-width:960px}
-.design-partners-logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;align-items:center;flex:1;min-width:0}
-.design-partners-logos img{width:100%;height:60px;object-fit:contain;filter:grayscale(1);opacity:.85}
+.design-partners-row{display:flex;gap:24px;align-items:center;margin:38px auto 0;max-width:900px}
+.design-partners-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;align-items:center;flex:1;min-width:0}
+.design-partners-logos img{width:100%;max-width:140px;height:55px;object-fit:contain;filter:grayscale(1);justify-self:center}
 .design-carousel-button{width:36px;height:36px;flex:0 0 36px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:24px;line-height:1}
 .design-carousel-button:hover{background:#026B63}
 .complete-benefits{display:grid;gap:16px;max-width:900px;margin:38px auto 0}
@@ -79,7 +83,7 @@ input,textarea,select{font-family:inherit}
 .design-hero-quiz{width:100%;max-width:480px;min-width:0;background:#fff;border-radius:5px;padding:clamp(18px,2vw,28px);box-shadow:0 10px 40px #0002}
 .design-hero-quiz>dc-import{display:block;width:100%}
 @media(max-width:1000px){.design-tariffs{grid-template-columns:repeat(2,minmax(0,1fr))}.design-space{grid-template-columns:1fr 1fr}.design-space>div{grid-column:1/-1}}
-@media(max-width:640px){.design-container{padding-inline:16px}.design-split{grid-template-columns:minmax(0,1fr)}.design-points{grid-template-columns:minmax(0,1fr)}.design-tariffs{grid-template-columns:minmax(0,1fr);gap:32px}.design-tariff__items{font-size:16px}.design-partners-row{gap:10px}.design-partners-logos{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.design-partners-logos img:nth-child(n+4){display:none}.design-partners-logos img{height:44px}.design-actions{gap:24px}.design-button{font-size:13px}.design-space{gap:14px}.design-space>div{margin-top:14px}}
+@media(max-width:640px){.design-container{padding-inline:16px}.design-split{grid-template-columns:minmax(0,1fr)}.design-points{grid-template-columns:minmax(0,1fr)}.design-tariffs{grid-template-columns:minmax(0,1fr);gap:32px}.design-tariff__items{font-size:16px}.design-partners-row{gap:10px}.design-partners-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.design-partners-logos img{height:44px}.design-actions{gap:24px}.design-button{font-size:13px}.design-space{gap:14px}.design-space>div{margin-top:14px}}
 
 </style>
 </helmet>
@@ -110,7 +114,7 @@ input,textarea,select{font-family:inherit}
         </div>
         <div style="font-size:11px;color:#d9d9d9;letter-spacing:.02em">Цена «от» указана за квадратный метр по полу</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
-          <button type="button" data-open-form="design" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)">Бесплатный выезд дизайнера</button>
+          <button type="button" data-open-form="design" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff">Бесплатный выезд дизайнера</button>
           <button type="button" data-open-quiz="style" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#313131;border-color:#fff">Узнать какой стиль вам подойдет</button>
         </div>
       </div>
@@ -177,9 +181,9 @@ input,textarea,select{font-family:inherit}
       <h2 style="margin:0;font-size:clamp(20px,2.2cqw,31px);line-height:1.15;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#00AD9F;text-align:center">Сочетаем разные стилевые направления,</h2>
       <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;text-align:center">чтобы создать интерьер, который понравится каждому.</p>
       <div style="margin-top:clamp(20px,2.4cqw,36px);width:100%;display:flex;align-items:center;gap:clamp(10px,1.4cqw,22px);justify-content:center">
-        <button type="button" onClick="{{ slidePrev }}" aria-label="Предыдущий" style="flex:0 0 auto;width:40px;height:40px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s" style-hover="background:#026B63">‹</button>
+        <button type="button" onClick="{{ slidePrev }}" aria-label="Предыдущий" style="flex:0 0 auto;width:40px;height:40px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s" style-hover="background:#026B63;color:#fff">‹</button>
         <img src="{{ slide }}" alt="Пример интерьера в проекте дизайнеров Эспады" style="flex:1;min-width:0;max-width:640px;aspect-ratio:4/3;object-fit:cover;border-radius:5px;display:block;background:#f0f0f0" />
-        <button type="button" onClick="{{ slideNext }}" aria-label="Следующий" style="flex:0 0 auto;width:40px;height:40px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s" style-hover="background:#026B63">›</button>
+        <button type="button" onClick="{{ slideNext }}" aria-label="Следующий" style="flex:0 0 auto;width:40px;height:40px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s" style-hover="background:#026B63;color:#fff">›</button>
       </div>
       <div style="display:flex;gap:8px;margin-top:14px">
         <sc-for list="{{ dots }}" as="d" hint-placeholder-count="6">
@@ -193,8 +197,8 @@ input,textarea,select{font-family:inherit}
     <div class="design-container">
       <h2 class="design-heading">Создаем удобное и функциональное<br><span>пространство для каждого члена семьи</span></h2>
       <div class="design-space">
-        <img src="assets/dz-space1.jpg" alt="Спальня по дизайн-проекту" loading="lazy">
-        <img src="assets/dz-space2.jpg" alt="Гардеробная по дизайн-проекту" loading="lazy">
+        <img src="assets/dz-space2.jpg" alt="Спальня по дизайн-проекту" loading="lazy">
+        <img src="assets/dz-space1.jpg" alt="Гардеробная по дизайн-проекту" loading="lazy">
         <div><h3>Для работы, отдыха и увлечений...</h3><p class="design-copy">Наш подход направлен на достижение идеального баланса между функциональностью и комфортом, чтобы ваша повседневная жизнь протекала без каких-либо ограничений.</p><p class="design-copy" style="margin-top:20px">Мы уделяем внимание местам хранения, зонам для гостей, детским уголкам и другим аспектам.</p></div>
       </div>
     </div>
@@ -204,15 +208,15 @@ input,textarea,select{font-family:inherit}
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;align-items:center;gap:16px">
       <h2 style="margin:0;font-size:clamp(20px,2.2cqw,31px);line-height:1.15;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#00AD9F;text-align:center;max-width:820px">Проверка на соответствие строгим регламентам</h2>
       <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;text-align:center;max-width:700px;text-wrap:pretty">Каждый проект наших дизайнеров проверяется. Наши проекты не просто "красивые", но и содержат всю необходимую для ремонта техническую информацию. Они отвечают критериям функциональности и эргономики, корректности оформления.</p>
-      <button type="button" data-open-form="design" style="margin-top:8px;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 28px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">Рассчитать стоимость проекта</button>
+      <button type="button" data-open-form="design" style="margin-top:8px;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 28px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2);color:#fff">Рассчитать стоимость проекта</button>
     </div>
   </section>
 
   <section data-screen-label="Шоурум" class="design-section design-showroom">
     <div class="design-container design-split">
+      <h2 class="design-heading">Полная комплектация<br>вашего ремонта по проекту</h2>
       <div>
-        <h2 class="design-heading">Полная комплектация<br>вашего ремонта по проекту</h2>
-        <p class="design-copy" style="margin-top:24px">Вам не придётся тратить время на поиск материалов и мебели. Комплектаторы укомплектуют дизайн-проект всеми позициями по ценам от производителей.</p>
+        <p class="design-copy">Вам не придётся тратить время на поиск материалов и мебели. Комплектаторы укомплектуют дизайн-проект всеми позициями по ценам от производителей.</p>
         <div class="design-points">
           <div class="design-point">Сделаем за вас<p>Специалисты пришлют спецификации с ценами и информацией о каждой позиции.</p></div>
           <div class="design-point">Можно потрогать и выбрать<p>Вы можете посетить шоурум в нашем офисе для выбора материалов или выехать со специалистом в строительный магазин-партнёр.</p></div>
@@ -230,16 +234,16 @@ input,textarea,select{font-family:inherit}
       <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(14px,1.5cqw,22px)">
         <div style="background:#00AD9F;border-radius:5px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:16px">
           <h2 style="margin:0;font-size:clamp(16px,1.5cqw,22px);line-height:1.2;font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#fff">Наши дизайнеры найдут уникальные решения для вашего интерьера</h2>
-          <p style="margin:0;font-size:12.5px;line-height:1.55;color:#fff;opacity:.95">Мы предлагаем спектр услуг по созданию индивидуального дизайна интерьера, который подойдет под ваш запрос и сделает ваше пространство уникальным.</p>
+          <p style="margin:0;font-size:17px;font-weight:400;line-height:1.5;color:#fff">Мы предлагаем спектр услуг по созданию индивидуального дизайна интерьера, который подойдет под ваш запрос и сделает ваше пространство уникальным.</p>
           <div style="display:flex;flex-direction:column;gap:11px">
             <sc-for list="{{ perks }}" as="p" hint-placeholder-count="4">
               <div style="display:flex;gap:12px;align-items:flex-start">
                 <span style="color:#fff;font-size:14px;line-height:1.35">→</span>
-                <span style="font-size:13px;line-height:1.4;color:#fff">{{ p }}</span>
+                <span style="font-size:17px;font-weight:400;line-height:1.5;color:#fff">{{ p }}</span>
               </div>
             </sc-for>
           </div>
-          <button type="button" data-open-form="design" class="design-button" style="align-self:flex-start;background:#fff;color:#00AD9F">Узнать больше про дизайн интерьера</button>
+          <button type="button" data-open-form="design" class="design-button design-button--white" style="align-self:center">Узнать больше о дизайне</button>
         </div>
         <form onSubmit="{{ noSubmit }}" style="background:#00AD9F;border-radius:5px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:14px">
           <label style="display:flex;flex-direction:column;gap:6px">
@@ -270,8 +274,8 @@ input,textarea,select{font-family:inherit}
       <div class="design-partners-row">
         <button type="button" class="design-carousel-button" onClick="{{ partnersPrev }}" aria-label="Предыдущие партнёры">‹</button>
         <div class="design-partners-logos">
-          <sc-for list="{{ partners }}" as="p" hint-placeholder-count="5">
-            <img src="{{ p }}" alt="Логотип поставщика" loading="lazy">
+          <sc-for list="{{ partners }}" as="p" hint-placeholder-count="4">
+            <img src="{{ p.src }}" alt="{{ p.name }}" loading="lazy">
           </sc-for>
         </div>
         <button type="button" class="design-carousel-button" onClick="{{ partnersNext }}" aria-label="Следующие партнёры">›</button>
@@ -287,8 +291,8 @@ input,textarea,select{font-family:inherit}
         <div style="display:flex;flex-direction:column;gap:14px">
           <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131">Как добраться:</h3>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
-            <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">2.ГИС</a>
+            <a data-button-link="true" href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">Яндекс.Карты</a>
+            <a data-button-link="true" href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">2.ГИС</a>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px">
@@ -308,7 +312,7 @@ input,textarea,select{font-family:inherit}
 
 </div>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
 const BASE = [
   'Выезд на объект для обмеров', 'Техническое задание', 'Разработка вариантов планировочных решений',
@@ -344,7 +348,8 @@ const PERKS = [
   'Экономия бюджета и времени',
 ];
 
-const PARTNERS = ['logo-01.jpg', 'logo-02.jpg', 'logo-03.jpg', 'logo-04.jpg', 'logo-05.jpg', 'logo-06.jpg', 'logo-07.jpg', 'logo-08.jpg', 'logo-09.png', 'logo-10.png', 'logo-11.jpg', 'logo-12.webp', 'logo-13.jpg', 'logo-14.png', 'logo-15.jpg'];
+const PARTNERS = ['logo-09.png', 'logo-10.png', 'logo-11.jpg', 'logo-12.webp', 'logo-01.jpg', 'logo-02.jpg', 'logo-03.jpg', 'logo-04.jpg', 'logo-05.jpg', 'logo-06.jpg', 'logo-07.jpg', 'logo-08.jpg', 'logo-13.jpg', 'logo-14.png', 'logo-15.jpg'];
+const PARTNER_NAMES = { 'logo-09.png': 'AM·PM', 'logo-10.png': 'Мосплитка', 'logo-11.jpg': 'Барклайн', 'logo-12.webp': 'Kerama Marazzi' };
 
 
 class Component extends DCLogic {
@@ -354,8 +359,9 @@ class Component extends DCLogic {
     const mobile = !!this.props.mobile;
     const { slide, pshift } = this.state;
     const idx = ((slide % SLIDES.length) + SLIDES.length) % SLIDES.length;
-    const per = 5;
-    const start = ((pshift % 3) + 3) % 3;
+    const per = mobile ? 2 : 4;
+    const groups = Math.ceil(PARTNERS.length / per);
+    const start = ((pshift % groups) + groups) % groups;
     return {
       headerVariant: mobile ? 'mobile' : 'default',
       isMobile: mobile,
@@ -372,7 +378,7 @@ class Component extends DCLogic {
       })),
       partnersPrev: () => this.setState({ pshift: pshift - 1 }),
       partnersNext: () => this.setState({ pshift: pshift + 1 }),
-      partners: PARTNERS.slice(start * per, start * per + per).map(f => 'assets/' + f),
+      partners: Array.from({ length: per }, (_, i) => { const f = PARTNERS[(start * per + i) % PARTNERS.length]; return { src: 'assets/' + f, name: PARTNER_NAMES[f] || 'Логотип поставщика' }; }),
     };
   }
 }

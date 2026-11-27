@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 
 
@@ -18,6 +19,8 @@
 
 
 <style>
+.espada-footer-socials{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:38px;margin-top:30px}.espada-footer-socials>div{grid-column:2}@media(max-width:1000px){.espada-footer-socials{display:flex;justify-content:flex-start}}
+
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
@@ -59,14 +62,14 @@ button{font-family:inherit;cursor:pointer}
         <div style="font-size:12px;line-height:1.5;color:#bfbfbf">Нажмите, чтобы наш менеджер связался с вами:</div>
         <form onSubmit="{{ callback }}" style="display:flex;flex-direction:column;gap:10px">
           <input type="tel" name="phone" required="required" pattern="[+0-9 ()-]{10,20}" placeholder="+7 (000) 000-00-00" style="height:44px;border:1px solid rgba(255,255,255,.25);border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
-          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;transition:background .2s,box-shadow .2s;align-self:flex-start" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.3)">{{ callbackLabel }}</button>
+          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;transition:background .2s,box-shadow .2s;align-self:flex-start" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.3);color:#fff">{{ callbackLabel }}</button>
           <span style="font-size:11px;line-height:1.45;color:#8f8f8f">Нажимая кнопку, вы даёте <a href="/soglasie-na-obrabotku/" style="color:#fff;text-decoration:underline">согласие на обработку персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#fff;text-decoration:underline">Политикой конфиденциальности</a></span>
         </form>
       </div>
 
     </div>
 
-    <div style="display:flex;gap:18px;justify-content:center;margin-top:30px">
+    <div class="espada-footer-socials">
         <div style="display:flex;gap:14px;align-items:center">
           <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
             <a href="{{ s.href }}" title="{{ s.name }}" target="_blank" rel="noopener" style="display:block;opacity:.85;transition:opacity .15s" style-hover="opacity:1">
@@ -90,7 +93,7 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </footer>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:520},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Состояние&quot;}}">
 const T = (t, href) => ({ t, href });
 

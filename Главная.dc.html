@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 
 
@@ -29,7 +30,7 @@
 html,body{margin:0;padding:0}
 body{background:#fff}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
@@ -215,7 +216,7 @@ input,textarea,select{font-family:inherit}
 /* Main page: dimensions follow the Tilda reference and the client's marked-up PDF. */
 .main-home {font-size:18px;line-height:1.45;font-weight:400}
 .main-home h1 {font-weight:800}
-.main-home section h2 {font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:0;text-transform:uppercase}
+.main-home section h2 {font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:0;text-transform:uppercase;margin:0;text-align:left}
 .main-home section h3 {font-size:clamp(19px,1.6cqw,23px);line-height:1.2;font-weight:600;letter-spacing:0}
 .main-home section p {font-size:18px;line-height:1.45;font-weight:400}
 .main-home em {font-style:normal;color:#00ad9f}
@@ -299,21 +300,33 @@ input,textarea,select{font-family:inherit}
 .main-home .main-inspection h2 {font-size:34px;margin:0}
 .main-inspection p {margin:20px 0 0;max-width:760px}
 .main-inspection .main-btn {flex-shrink:0}
+.main-inspection-preview {position:relative;flex:0 0 270px;display:flex;flex-direction:column;align-items:center}
+.main-inspection-fan {height:150px;width:240px;position:relative}
+.main-inspection-fan img {position:absolute;bottom:-12px;left:70px;width:110px;height:150px;object-fit:cover;border-radius:5px;box-shadow:0 4px 16px #0003}
+.main-inspection-fan img:first-child {left:23px;transform:rotate(-18deg);z-index:1}
+.main-inspection-fan img:nth-child(2) {transform:rotate(-2deg);z-index:3}
+.main-inspection-fan img:last-child {left:117px;transform:rotate(17deg);z-index:2}
+.main-inspection-preview .main-btn {position:relative;z-index:4}
+.main-master-picture {display:flex;width:100%;aspect-ratio:1;overflow:hidden;border-radius:5px}
+.main-master-picture img {display:block;width:100%;height:100%;object-fit:cover}
+.main-master-picture.is-split img {width:50%}
 .main-home [data-screen-label="Мастера и решения"] {padding-top:70px}
 .main-home [data-screen-label="Мастера и решения"] h3 {font-size:24px}
 .main-home [data-screen-label="Мастера и решения"] p {font-size:18px}
-.main-home [data-screen-label="Дизайнеры"] h2 {font-size:28px}
+.main-home [data-screen-label="Дизайнеры"] h2 {font-size:28px;text-align:left}
+.main-home [data-screen-label="Дизайнеры"] h2 + p {font-weight:400}
+.main-home [data-screen-label="Дизайнеры"] h2 + p + div + a {align-self:center}
 .main-home [data-screen-label="Дизайнеры"] input,.main-home [data-screen-label="Договоримся о встрече"] input {font-size:18px;height:48px;border-radius:5px}
 .main-home [data-screen-label="Дизайнеры"] form > button {font-size:18px}
 .main-home [data-screen-label="Дизайнеры"] h2 + p {font-size:18px}
 .main-home [data-screen-label="Дизайнеры"] h2 + p + div span:last-child {font-size:18px}
 .main-home [data-screen-label="Дизайнеры"] h2 + p + div + a {font-size:17px}
-.main-home [data-screen-label="Партнёры и поставщики"] > div {position:relative;display:flex;flex-direction:column;gap:25px}
+.main-home [data-screen-label="Партнёры и поставщики"] > div {position:relative;display:flex;flex-direction:column;gap:25px;max-width:880px}
 .main-home [data-screen-label="Партнёры и поставщики"] > div > div:first-child {justify-content:center}
 .main-home [data-screen-label="Партнёры и поставщики"] h2 {font-size:27px;text-align:center}
 .main-partner-controls {position:absolute;left:0;right:0;bottom:6px;display:flex;justify-content:space-between;pointer-events:none}
 .main-partner-controls button {pointer-events:auto;width:34px;height:34px}
-.main-partner-logos {margin-left:60px;margin-right:60px;gap:35px;grid-template-columns:repeat(5,minmax(0,1fr));display:grid;width:calc(100% - 120px)}
+.main-partner-logos {margin-left:60px;margin-right:60px;gap:35px;grid-template-columns:repeat(4,minmax(0,1fr));display:grid;width:calc(100% - 120px)}
 .main-home .main-residential h2 {text-align:center;font-size:32px;margin:0}
 .main-residential > div > p {margin:20px 0 40px}
 .main-residential-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:50px;max-width:1050px;margin:0 auto}
@@ -353,11 +366,14 @@ input,textarea,select{font-family:inherit}
 .main-story-title p {margin:16px 0 0}
 .main-home .main-story-modal section {padding:40px}
 .main-home .main-story-modal section > div {padding-left:0;padding-right:0}
-.main-home .main-story-modal section h2 {font-size:34px}
+.main-home .main-story-modal section h2 {font-size:34px;text-align:left}
 .main-home .main-story-modal section h3 {font-size:21px}
 .main-home .main-story-modal section p {font-size:18px}
 .main-story-carousel {display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:30px;padding-bottom:18px}
-.main-worry-card {flex:0 0 300px;background:#f8f8f8;padding:20px;border-radius:5px;scroll-snap-align:start}
+.main-worry-card {flex:0 0 300px;background:#f8f8f8;padding:0;border-radius:5px;overflow:hidden;scroll-snap-align:start}
+.main-worry-card > h3 {padding:0 20px}
+.main-worry-card > div {padding:0 20px 20px}
+.main-worry-card > img {height:200px}
 .main-home .main-worry-card h3 {font-size:19px}
 .main-home .main-worry-card p {font-size:17px}
 .main-story-arrows {display:flex;gap:8px;margin-top:22px}
@@ -368,7 +384,24 @@ input,textarea,select{font-family:inherit}
 .main-home .main-story-modal [data-screen-label="Ключевые моменты"] > div > div:last-child > div {display:flex;flex-direction:column;background:#f8f8f8;padding:24px}
 .main-home .main-story-modal [data-screen-label="Ключевые моменты"] img {order:3;margin-top:12px}
 .main-home .main-story-modal [data-screen-label="Общение с инженером"] img {max-width:420px;min-width:340px}
-.main-home .main-story-modal [data-screen-label="Общение с инженером"] > div {grid-template-columns:1.2fr 1fr}
+.main-home .main-story-modal [data-screen-label="Общение с инженером"] > div {grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:end}
+.main-home .main-story-modal [data-screen-label="Общение с инженером"] h3 {font-size:18px}
+.main-home .main-story-modal .main-inline-146 {flex-wrap:nowrap;gap:12px}
+.main-home .main-story-modal .main-inline-148 {flex-shrink:0;border-radius:5px;padding:8px 12px}
+.main-home .main-story-modal .main-inline-149 {font-size:16px;font-weight:600}
+.main-home .main-story-modal .main-inline-150 {font-size:12px}
+.main-home .main-story-modal .main-inline-161 {grid-template-columns:repeat(2,minmax(0,1fr))}
+.main-home .main-story-modal .main-inline-164 {font-weight:400}
+.main-home .main-story-modal .main-inline-169 {padding:0;background:transparent;color:#00ad9f;font-size:28px;font-weight:600}
+.main-result-gallery {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:45px;align-items:center;margin:48px auto 0;max-width:1000px}
+.main-result-pair {position:relative;height:300px;perspective:900px}
+.main-result-pair img,.main-result-single img {display:block;position:absolute;top:50%;border-radius:5px;object-fit:cover;box-shadow:0 8px 25px #0002}
+.main-result-pair .main-result-back {left:0;width:48%;height:77%;transform:translateY(-50%) rotateY(15deg);z-index:1}
+.main-result-pair .main-result-front {right:0;width:72%;height:96%;transform:translateY(-50%) rotateY(-9deg);z-index:2}
+.main-result-pair--right .main-result-back {left:auto;right:0;transform:translateY(-50%) rotateY(-15deg)}
+.main-result-pair--right .main-result-front {left:0;right:auto;transform:translateY(-50%) rotateY(9deg)}
+.main-result-single {position:relative;height:320px}
+.main-result-single img {left:10%;width:80%;height:100%;transform:translateY(-50%)}
 @media(max-width:1000px){
  .main-home [data-screen-label="Обложка"] > div:last-child{grid-template-columns:1fr;gap:35px}.main-hero-quiz{max-width:540px}.main-home [data-screen-label="Обложка"] h1{font-size:clamp(36px,7.1vw,70px)}
  .main-tariffs{grid-template-columns:repeat(2,minmax(0,1fr))}.main-portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -385,7 +418,8 @@ input,textarea,select{font-family:inherit}
  .main-rules{padding-top:45px;padding-bottom:45px}.main-rules-grid{grid-template-columns:1fr;gap:30px;padding:26px}.main-actions{gap:20px}.main-case-preview{grid-template-columns:1fr;gap:35px}.main-case-sub{font-size:19px}.main-tariffs{grid-template-columns:1fr;gap:32px}.main-tariff-box{padding:30px}.main-tariff h3{min-height:0}.main-tabs{width:100%;gap:10px}.main-tabs button{font-size:16px;padding:12px 17px}.main-tariff-heading h2{font-size:28px}
  .main-portfolio{gap:28px 18px}.main-home .main-project h3{font-size:14px}.main-project-pictures span{font-size:12px;bottom:8px;left:8px;padding:5px 7px}
  .main-inspection{padding:40px 0}.main-inspection>div{flex-direction:column;align-items:flex-start;gap:28px}.main-home .main-inspection h2{font-size:28px}
- .main-partner-logos{margin:0 45px;width:calc(100% - 90px);grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.main-partner-logos img:nth-last-child(-n+2){display:none}.main-partner-controls{bottom:12px}
+ .main-partner-logos{margin:0 45px;width:calc(100% - 90px);grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.main-partner-controls{bottom:12px}
+ .main-result-gallery{grid-template-columns:1fr;gap:28px;max-width:290px}.main-result-pair{height:300px}.main-result-single{height:320px}.main-home .main-story-modal .main-inline-146{flex-wrap:wrap}.main-home .main-story-modal .main-inline-161{grid-template-columns:1fr}.main-inspection-preview{flex-basis:auto}
  .main-residential-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}.main-home .main-residential h2{font-size:27px}.main-home .main-residential h3{font-size:17px}
  .main-home .main-reviews h2{font-size:28px}.main-review-card{padding:22px}.main-review-person{gap:10px;flex-wrap:wrap}.main-review-stars{margin:8px 0 0 56px}.main-review-person > div > span:not(.sc-interp){font-size:12px}.main-home .main-review-person h3{font-size:19px}
  .main-home [data-screen-label="Договоримся о встрече"]>div{grid-template-columns:1fr;gap:25px}.main-home [data-screen-label="Договоримся о встрече"]>div>div:first-child{padding-bottom:0}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child{grid-column:auto;margin-top:0}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child img{max-width:290px}
@@ -414,7 +448,7 @@ input,textarea,select{font-family:inherit}
         </div>
         <div class="main-inline-10">Цена «от» указана за квадратный метр по полу</div>
         <div class="main-inline-11">
-          <button type="button" onClick="{{ openQuiz }}" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)" class="main-inline-12">Рассчитать стоимость ремонта</button>
+          <button type="button" onClick="{{ openQuiz }}" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff" class="main-inline-12">Рассчитать стоимость ремонта</button>
           <button type="button" onClick="{{ openPopup }}" style-hover="background:#fff;color:#313131;border-color:#fff" class="main-inline-13">Вызвать замерщика</button>
         </div>
       </div>
@@ -432,7 +466,7 @@ input,textarea,select{font-family:inherit}
       </h2>
       <div class="main-inline-19">
         <sc-for list="{{ directions }}" as="d" hint-placeholder-count="6">
-          <a href="{{ d.href }}" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.11);transform:translateY(-2px)" class="main-inline-20">
+          <a data-button-link="true" href="{{ d.href }}" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.11);transform:translateY(-2px)" class="main-inline-20">
             <div class="main-inline-21">
               <h3 class="main-inline-22">{{ d.title }}</h3>
               <p class="main-inline-23">{{ d.text }}</p>
@@ -480,11 +514,11 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="Примеры проектов" class="main-section">
     <div class="main-container"><h2>Примеры реализованных проектов</h2>
       <div class="main-portfolio"><sc-for list="{{ portfolio }}" as="p" hint-placeholder-count="8">
-        <a class="main-project" href="/portfolio/"><div class="main-project-pictures"><img class="main-project-after" src="{{ p.img }}" alt="{{ p.title }} — после ремонта" /><img class="main-project-before" src="{{ p.before }}" alt="{{ p.title }} — фото до ремонта" /><span>До ремонта</span></div><h3>{{ p.title }}</h3></a>
+        <a class="main-project" href="/portfolio/"><div class="main-project-pictures"><img class="main-project-after" src="{{ p.img }}" alt="{{ p.title }} — после ремонта" /><img class="main-project-before" src="{{ p.alternate }}" alt="{{ p.title }} — другой ракурс" /></div><h3>{{ p.title }}</h3></a>
       </sc-for></div>
     </div>
   </section>
-  <section data-screen-label="Объекты на любой стадии" class="main-inspection"><div class="main-container"><div><h2>Мы готовы показать объекты<br /><em>на любой стадии ремонта</em></h2><p>Инженер покажет вам объект на интересующей стадии ремонта в удобное время и локации.</p></div><button type="button" class="main-btn" onClick="{{ openPopup }}">Записаться на просмотр</button></div></section>
+  <section data-screen-label="Объекты на любой стадии" class="main-inspection"><div class="main-container"><div><h2>Мы готовы показать объекты<br /><em>на любой стадии ремонта</em></h2><p>Инженер покажет вам объект на интересующей стадии ремонта в удобное время и локации.</p></div><div class="main-inspection-preview"><div class="main-inspection-fan"><img src="assets/main-stage-left.jpg" alt="Инженерные системы на объекте" /><img src="assets/main-stage-center.png" alt="Квартира в процессе ремонта" /><img src="assets/main-stage-right.jpg" alt="Ремонт на промежуточной стадии" /></div><button type="button" class="main-btn" onClick="{{ openPopup }}">Записаться на просмотр</button></div></div></section>
 
 
 
@@ -500,7 +534,7 @@ input,textarea,select{font-family:inherit}
     <div class="main-inline-26">
       <sc-for list="{{ masters }}" as="m" hint-placeholder-count="3">
         <div class="main-inline-27">
-          <img src="{{ m.img }}" alt="{{ m.title }}" class="main-inline-28">
+          <div class="{{ m.pictureClass }}"><sc-if value="{{ m.before }}" hint-placeholder-val="{{ false }}"><img src="{{ m.before }}" alt="Интерьер до ремонта" /></sc-if><img src="{{ m.img }}" alt="{{ m.title }}" /></div>
           <h3 class="main-inline-29">{{ m.title }}</h3>
           <p class="main-inline-30">{{ m.text }}</p>
         </div>
@@ -522,7 +556,7 @@ input,textarea,select{font-family:inherit}
               </div>
             </sc-for>
           </div>
-          <a href="/dizajn-interera/" style-hover="color:#026B63" class="main-inline-41">Узнать больше про дизайн интерьера</a>
+          <a data-button-link="true" href="/dizajn-interera/" style-hover="color:#026B63" class="main-inline-41">Узнать больше о дизайне</a>
         </div>
         <form onSubmit="{{ noSubmit }}" class="main-inline-42">
           <label class="main-inline-43">
@@ -551,11 +585,11 @@ input,textarea,select{font-family:inherit}
       <div class="main-inline-59">
         <h2 class="main-inline-60">Наши партнеры и поставщики</h2>
         <div class="main-partner-controls">
-          <button type="button" onClick="{{ partnersPrev }}" aria-label="Предыдущие" style-hover="background:#026B63" class="main-inline-61">‹</button>
-          <button type="button" onClick="{{ partnersNext }}" aria-label="Следующие" style-hover="background:#026B63" class="main-inline-62">›</button></div>
+          <button type="button" onClick="{{ partnersPrev }}" aria-label="Предыдущие" style-hover="background:#026B63;color:#fff" class="main-inline-61">‹</button>
+          <button type="button" onClick="{{ partnersNext }}" aria-label="Следующие" style-hover="background:#026B63;color:#fff" class="main-inline-62">›</button></div>
       </div>
       <div class="main-partner-logos main-inline-63">
-        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="5">
+        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="4">
           <img src="{{ p }}" alt="Логотип поставщика" style-hover="opacity:1" class="main-inline-64">
         </sc-for>
       </div>
@@ -570,45 +604,18 @@ input,textarea,select{font-family:inherit}
 
   <dc-import name="Отзывы"></dc-import>
 
-  <section data-screen-label="Договоримся о встрече" class="main-inline-65">
-    <div class="main-inline-66">
-      <div class="main-inline-67">
-        <h2 class="main-inline-68">Договоримся о встрече прямо сейчас..</h2>
-        <h3 class="main-inline-69">И наш специалист:</h3>
-        <p class="main-inline-70">приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и ответит на вопросы, сделает детальный расчет сметы</p>
-        <p class="main-inline-71">Заполните эту форму и нажмите кнопку «Свяжитесь со мной», и мы свяжемся с Вами в ближайшее время.</p>
-      </div>
-      <form onSubmit="{{ noSubmit }}" class="main-inline-72">
-        <label class="main-inline-73">
-          <span class="main-inline-74">Имя</span>
-          <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" style-focus="border-color:#00AD9F" class="main-inline-75">
-        </label>
-        <label class="main-inline-76">
-          <span class="main-inline-77">Телефон</span>
-          <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() -]{10,}" placeholder="+7 (000) 000-00-00" style-focus="border-color:#00AD9F" class="main-inline-78">
-        </label>
-        <div class="main-inline-79">
-          <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-80">
-          <span class="main-inline-81">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-82">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-83">Политикой конфиденциальности</a></span>
-        </div>
-        <button type="submit" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)" class="main-inline-84">Свяжитесь со мной</button>
-      </form>
-      <div class="main-inline-85">
-        <img src="assets/specialist.png" alt="Специалист Эспады" class="main-inline-86">
-      </div>
-    </div>
-  </section>
+  <dc-import name="Встреча" kind="repair"></dc-import>
 
   <section data-screen-label="Контакты" class="main-inline-87">
     <div class="main-inline-88">
       <div class="main-inline-89">
-        <h2 class="main-inline-90">Будем рады вам<br />в нашем офисе!</h2>
-        <div class="main-inline-91">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" class="main-inline-92">ул. Дегунинская, д.1, корп.2</a></div>
+        <h2 class="main-inline-90">Будем рады вам<br /><span style="color:#313131">в нашем офисе!</span></h2>
+        <div><h3 class="main-inline-94">По адресу:</h3><div class="main-inline-91">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" class="main-inline-92">ул. Дегунинская, д.1, корп.2</a></div></div>
         <div class="main-inline-93">
           <h3 class="main-inline-94">Как добраться:</h3>
           <div class="main-inline-95">
-            <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style-hover="background:#026B63" class="main-inline-96">Яндекс.Карты</a>
-            <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style-hover="background:#026B63" class="main-inline-97">2.ГИС</a>
+            <a data-button-link="true" href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style-hover="background:#026B63;color:#fff" class="main-inline-96">Яндекс.Карты</a>
+            <a data-button-link="true" href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style-hover="background:#026B63;color:#fff" class="main-inline-97">2.ГИС</a>
           </div>
         </div>
         <div class="main-inline-98">
@@ -650,7 +657,7 @@ input,textarea,select{font-family:inherit}
             <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-119">
             <span class="main-inline-120">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-121">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-122">Политикой конфиденциальности</a></span>
           </div>
-          <button type="submit" style-hover="background:#026B63" class="main-inline-123">Бесплатный расчёт сметы</button>
+          <button type="submit" style-hover="background:#026B63;color:#fff" class="main-inline-123">Бесплатный расчёт сметы</button>
         </form>
       </div>
     </div>
@@ -679,7 +686,7 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="Ключевые моменты" class="main-inline-133">
     <div class="main-inline-134">
       <h2 class="main-inline-135">Ключевые моменты в выборе компании</h2>
-      <div class="main-inline-136">Что позволило принять решение в нашу пользу:</div>
+      <div class="main-inline-136">Мы узнали что позволило Игорю принять решение:</div>
       <div class="main-inline-137">
         <sc-for list="{{ moments }}" as="m" hint-placeholder-count="3">
           <div class="main-inline-138">
@@ -694,9 +701,9 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="Общение с инженером" class="main-inline-142">
     <div class="main-inline-143">
       <div class="main-inline-144">
-        <h2 class="main-inline-145">Общение с нашим инженером</h2>
+        <h2 class="main-inline-145">Общение с нашим<br />инженером</h2>
         <div class="main-inline-146">
-          <h3 class="main-inline-147">Впечатления клиента о встрече</h3>
+          <h3 class="main-inline-147">Впечатления Игоря о встрече</h3>
           <div class="main-inline-148">
             <div class="main-inline-149">Иван</div>
             <div class="main-inline-150">Инженер-сметчик Эспады</div>
@@ -719,7 +726,7 @@ input,textarea,select{font-family:inherit}
       <div class="main-inline-161">
         <sc-for list="{{ avoided }}" as="a" hint-placeholder-count="4">
           <div class="main-inline-162">
-            <img src="assets/icon-x.svg" alt="" class="main-inline-163">
+            <img src="assets/main-cross.svg" alt="" class="main-inline-163">
             <span class="main-inline-164">{{ a }}</span>
           </div>
         </sc-for>
@@ -729,7 +736,7 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="Что получил клиент" class="main-inline-165">
     <div class="main-inline-166">
       <div class="main-inline-167">
-        <h2 class="main-inline-168">Что получил клиент?</h2>
+        <h2 class="main-inline-168">Что получил<br />клиент?</h2>
         <div class="main-inline-169">Результат.</div>
       </div>
       <div class="main-inline-170">
@@ -744,18 +751,17 @@ input,textarea,select{font-family:inherit}
         </div>
       </div>
     </div>
-    <div class="main-inline-176">
-      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
-        <img src="{{ g.img }}" alt="Готовый ремонт, фото {{ g.n }}" style="{{ g.css }}" />
-      </sc-for>
+    <div class="main-result-gallery" aria-label="Результат ремонта в ЖК Shagal">
+      <div class="main-result-pair"><img class="main-result-back" src="assets/main-result-left-back.jpg" alt="Готовая гостиная в ЖК Shagal" /><img class="main-result-front" src="assets/main-result-left-front.jpg" alt="Готовая кухня со столовой в ЖК Shagal" /></div>
+      <div class="main-result-single"><img src="assets/main-result-center.jpg" alt="Интерьер кухни и гостиной после ремонта" /></div>
+      <div class="main-result-pair main-result-pair--right"><img class="main-result-back" src="assets/main-result-right-back.jpg" alt="Гостиная с диваном после ремонта" /><img class="main-result-front" src="assets/main-result-right-front.jpg" alt="Зона отдыха у окна после ремонта" /></div>
     </div>
   </section></div></sc-if>
 
 </div>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
-const MAIN_BEFORE = ["assets/main-before-01.png", "assets/main-before-02.png", "assets/main-before-03.png", "assets/main-before-04.jpg", "assets/main-before-05.jpg", "assets/main-before-06.png", "assets/main-before-07.jpg", "assets/main-before-08.jpg"];
 const MAIN_VIDEOS = [{"title": "Ремонт двухкомнатной квартиры в Москве", "place": "ЖК Level Селигерская", "area": "45", "img": "assets/main-video-1.png", "url": "https://vkvideo.ru/video-236556490_456239128"}, {"title": "Дизайнерский ремонт двухкомнатной квартиры в Москве", "place": "ЖК River Park", "area": "65", "img": "assets/main-video-2.png", "url": "https://vkvideo.ru/video-236556490_456239134"}, {"title": "Ремонт двухкомнатной квартиры в МО", "place": "ЖК Равновесие", "area": "42", "img": "assets/main-video-3.png", "url": "https://vkvideo.ru/video-236556490_456239124"}];
 const MAIN_RESIDENTIAL = [{"title": "ЖК Level Селигерская", "img": "assets/main-zhk-1.png"}, {"title": "ЖК MYPRIORITY Дубровка", "img": "assets/main-zhk-2.png"}, {"title": "ЖК Шагал", "img": "assets/main-zhk-3.png"}, {"title": "ЖК Проспект 39", "img": "assets/main-zhk-4.png"}];
 const MAIN_RULES = [{"title": "Фиксированная смета", "text": "Подробная смета с разбивкой по помещениям, закрепляющая стоимость работ."}, {"title": "Поэтапная оплата", "text": "Вы платите, когда услуги оказаны. Контроль расходов на каждом этапе сотрудничества."}, {"title": "Доступные цены", "text": "Индивидуальная смета, а не усреднённая стоимость с переплатой по рыночным ценам."}, {"title": "Контроль качества и сроков", "text": "Совместная работа прораба, инженера, дизайнера, менеджера и директора. Мы всегда с вами и всегда рядом."}];
@@ -766,7 +772,7 @@ const DIRECTIONS = [
   { title: 'Дизайн-проект', img: 'assets/dir-1.jpg', href: '/dizajn-interera/',
     text: 'Упростим процесс создания уютной атмосферы в вашей квартире с помощью дизайнерских решений.' },
   { title: 'Перепланировка', img: 'assets/dir-6.jpg', href: '/pereplanirovka-kvartiry/',
-    text: 'Упростим процесс создания уютной атмосферы в вашей квартире с помощью дизайнерских решений.' },
+    text: 'Адаптируем пространство под потребности семьи, поможем разобраться с возможностью изменений и согласованием.' },
   { title: 'Черновая комплектация', img: 'assets/dir-5.jpg', href: '/komplektatsiya-kvartiry/',
     text: 'Наша команда снимает с вас заботы по подбору отделочных материалов.' },
   { title: 'Чистовая комплектация', img: 'assets/dir-2.jpg', href: '/komplektatsiya-kvartiry/',
@@ -784,25 +790,45 @@ const WORKS = [
 const COMPARED = [
   'У 3 компаний смета отличалась почти в два раза.',
   'Одна компания отказалась работать по готовому дизайн-проекту.',
-  'Еще несколько предложили начать без подробной сметы.',
+  'Еще несколько предложили начать без подробной сметы и не смогли показать действующие объекты.',
 ];
 
 const WORRIES = [
-  { title: '«Смета потом вырастет?»', img: 'assets/case-w1.jpg', paras: [
-    'Наша работа разбита на десятки отдельных этапов, объем которых просчитывается заранее.',
-    'Клиент понимал стоимость каждого вида работ ещё до начала ремонта. Поэтому изменения возникали только тогда, когда он сам принимал новые решения.' ] },
-  { title: '«Прораб не будет отвечать»', img: 'assets/case-w2.jpg', paras: [
-    'Создали чат с клиентом, где закрепили: прораба, менеджера комплектации, а также добавили их инженера-сметчика и РУКОВОДСТВО КОМПАНИИ.',
-    'Все общение велось в одном чате. Фотоотчеты несколько раз в неделю.' ] },
-  { title: '«Не могу ездить на объект»', img: 'assets/case-w3.jpg', paras: [
-    'Заказчики жили в другом районе Москвы. Поэтому весь ремонт контролировали удаленно.',
-    'Видео, фото, онлайн-согласования, счета, акты — всё происходило дистанционно. За весь ремонт клиенты приезжали всего несколько раз.' ] },
-  { title: '«Строители не будут следовать проекту»', img: 'assets/case-w4.jpg', paras: [
-    'Мы работали по стороннему дизайн-проекту. Некоторые решения вправду оказались ошибочными для этого помещения, и мы предложили изменения.',
-    'После согласования с клиентом они были внесены еще до начала ремонта.' ] },
-  { title: '«Будут проблемы с соседями и УК»', img: 'assets/case-w5.jpg', paras: [
-    'Перед началом ремонта мы согласовали порядок проведения работ с требованиями ЖК.',
-    'Организовали защиту МОПов, контролировали доставку материалов и вывоз строительного мусора, соблюдали установленный режим шумных работ.' ] },
+  {
+    "title": "СМЕТА ПОТОМ ВЫРАСТЕТ?",
+    "img": "assets/main-story-worry-1.png",
+    "paras": [
+      "Работы были разбиты на десятки отдельных этапов, объем которых был просчитан заранее. Игорь понимал стоимость каждого вида работ еще до начала ремонта. Поэтому изменения возникали только тогда, когда он сам принимал новые решения."
+    ]
+  },
+  {
+    "title": "ПРОРАБ НЕ БУДЕТ ОТВЕЧАТЬ",
+    "img": "assets/main-story-worry-2.png",
+    "paras": [
+      "Стандартно создали чат с клиентом, где закрепили: прораба,менеджера комплектации, а также добавили их инженера-сметчика и руководство компании. Все общение велось в одном чате. Фотоотчеты несколько раз в неделю."
+    ]
+  },
+  {
+    "title": "НЕ МОГУ ЕЗДИТЬ НА ОБЪЕКТ",
+    "img": "assets/main-story-worry-3.jpg",
+    "paras": [
+      "Заказчики жили в другом районе Москвы. Поэтому весь ремонт контролировали удаленно. Видео, фото, онлайн-согласования, счета, акты — всё происходило дистанционно. За весь ремонт клиенты приезжали всего несколько раз."
+    ]
+  },
+  {
+    "title": "СТРОИТЕЛИ НЕ БУДУТ СЛЕДОВАТЬ ПРОЕКТУ",
+    "img": "assets/main-story-worry-4.jpg",
+    "paras": [
+      "Мы работали по стороннему дизайн-проекту. Некоторые решения вправду оказались ошибочными для этого помещения, и мы предложили изменения. После согласования с клиентом они были внесены еще до начала ремонта."
+    ]
+  },
+  {
+    "title": "БУДУТ ПРОБЛЕМЫ С СОСЕДЯМИ И УК",
+    "img": "assets/main-story-worry-5.jpg",
+    "paras": [
+      "Перед началом ремонта мы согласовали порядок проведения работ с требованиями ЖК. Организовали защиту МОПов, контролировали доставку материалов и вывоз строительного мусора, соблюдали установленный режим шумных работ."
+    ]
+  }
 ];
 
 const MOMENTS = [
@@ -811,7 +837,7 @@ const MOMENTS = [
   { title: 'Закрепление стоимости работ', img: 'assets/moment-1.jpg',
     text: 'Была важна фиксация стоимости работ после подписания договора, чтобы избежать неожиданных изменений цен и планировать расходы на ремонт.' },
   { title: 'Качество исполнения инженерных работ', img: 'assets/moment-3.jpg',
-    text: 'Клиент хотел доверить инженерные работы тем, кто соблюдает технологии и контролирует каждый этап.' },
+    text: 'Игорь хотел доверить инженерные работы тем, кто соблюдает технологии и контролирует каждый этап.' },
 ];
 
 const AVOIDED = ['Переносить часть электрики', 'Менять размеры мебели', 'Переделывать сантехнический шкаф', 'Переносить кондиционер'];
@@ -825,7 +851,6 @@ const RESULTS = [
   'не пришлось искать отдельных специалистов.',
 ];
 
-const GALLERY = ['case-g1.jpg', 'case-g2.jpg', 'case-g3.jpg', 'case-g4.jpg', 'case-g5.jpg', 'case-g6.jpg', 'case-g7.jpg', 'case-g8.jpg'];
 
 const TARIFFS = {
   novostroyka: [
@@ -865,20 +890,20 @@ const TARIFFS = {
 };
 
 const PORTFOLIO = [
-  { title: '2-комнатная квартира новостройка под ключ', img: 'assets/pf-01.jpg' },
-  { title: '1-комнатная вторичка дизайнерский ремонт', img: 'assets/pf-02.jpg' },
-  { title: 'Квартира-студия новостройка под ключ', img: 'assets/pf-03.jpg' },
-  { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/pf-04.jpg' },
-  { title: '1-комнатная вторичка косметический ремонт', img: 'assets/pf-05.jpg' },
-  { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/pf-06.jpg' },
-  { title: '2-комнатная новостройка чистовой ремонт', img: 'assets/pf-07.jpg' },
-  { title: 'Евродвушка вторичка капитальный ремонт', img: 'assets/pf-08.jpg' },
+  { title: '2-комнатная квартира новостройка под ключ', img: 'assets/main-project-01-main.png', alternate: 'assets/main-project-01-hover.png' },
+  { title: '1-комнатная вторичка дизайнерский ремонт', img: 'assets/main-project-02-main.png', alternate: 'assets/main-project-02-hover.png' },
+  { title: 'Квартира-студия новостройка под ключ', img: 'assets/main-project-03-main.png', alternate: 'assets/main-project-03-hover.png' },
+  { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/main-project-04-main.jpg', alternate: 'assets/main-project-04-hover.jpg' },
+  { title: '1-комнатная вторичка косметический ремонт', img: 'assets/main-project-05-main.jpg', alternate: 'assets/main-project-05-hover.jpg' },
+  { title: '1-комнатная новостройка дизайнерский ремонт', img: 'assets/main-project-06-main.png', alternate: 'assets/main-project-06-hover.png' },
+  { title: '2-комнатная новостройка чистовой ремонт', img: 'assets/main-project-07-main.jpg', alternate: 'assets/main-project-07-hover.jpg' },
+  { title: 'Евродвушка вторичка капитальный ремонт', img: 'assets/main-project-08-main.jpg', alternate: 'assets/main-project-08-hover.jpg' },
 ];
 
 const MASTERS = [
   { title: 'Опытные мастера', img: 'assets/master-1.jpg',
     text: 'Мы строго подходим к подбору мастеров, к работе на объектах допускаются мастера при наличии необходимых для их работы профессиональных навыков и компетенций.' },
-  { title: 'Индивидуальные дизайнерские решения', img: 'assets/master-2.jpg',
+  { title: 'Индивидуальные дизайнерские решения', img: 'assets/master-2.jpg', before: 'assets/main-master-before.png',
     text: 'Наши дизайнеры создают проекты с упором на ваши цели и ожидания, вкус и бюджет.' },
   { title: 'Внимание к деталям', img: 'assets/master-4.jpg',
     text: 'Для нас важно, чтобы ваш ремонт был не только "красивым", но и функциональным.' },
@@ -891,7 +916,7 @@ const DESIGN_PERKS = [
   'Экономия бюджета и времени',
 ];
 
-const PARTNERS = ['logo-01.jpg', 'logo-02.jpg', 'logo-03.jpg', 'logo-04.jpg', 'logo-05.jpg', 'logo-06.jpg', 'logo-07.jpg', 'logo-08.jpg', 'logo-09.png', 'logo-10.png', 'logo-11.jpg', 'logo-12.webp', 'logo-13.jpg', 'logo-14.png', 'logo-15.jpg'];
+const PARTNERS = ['logo-09.png', 'logo-10.png', 'logo-11.jpg', 'logo-12.webp', 'logo-01.jpg', 'logo-02.jpg', 'logo-03.jpg', 'logo-04.jpg', 'logo-05.jpg', 'logo-06.jpg', 'logo-07.jpg', 'logo-08.jpg', 'logo-13.jpg', 'logo-14.png', 'logo-15.jpg'];
 
 const FAQ = [
   { q: 'Сколько стоит ремонт квартиры в Москве?', paras: [
@@ -944,8 +969,9 @@ class Component extends DCLogic {
   renderVals() {
     const mobile = !!this.props.mobile;
     const { tab, faq, pshift, popup, quizPopup, storyPopup, requestSent, reviewTab, expandedReviews, worryShift } = this.state;
-    const per = 5;
-    const start = ((pshift % 3) + 3) % 3;
+    const per = mobile ? 2 : 4;
+    const partnerPages = Math.ceil(PARTNERS.length / per);
+    const start = ((pshift % partnerPages) + partnerPages) % partnerPages;
 
     const tabBtn = (active) => 'border:1px solid #00AD9F;border-radius:5px;padding:14px 22px;font-size:17px;font-weight:600;letter-spacing:0;text-transform:uppercase;transition:all .2s;background:'
       + (active ? '#00AD9F' : '#fff') + ';color:' + (active ? '#fff' : '#00AD9F');
@@ -959,9 +985,9 @@ class Component extends DCLogic {
       moments: MOMENTS,
       avoided: AVOIDED,
       results: RESULTS,
-      portfolio: PORTFOLIO.map((p, i) => Object.assign({}, p, { before: MAIN_BEFORE[i] })),
+      portfolio: PORTFOLIO,
       videos: MAIN_VIDEOS, residential: MAIN_RESIDENTIAL, rules: MAIN_RULES,
-      masters: MASTERS,
+      masters: MASTERS.map(m => ({ ...m, pictureClass: m.before ? 'main-master-picture is-split' : 'main-master-picture' })),
       designPerks: DESIGN_PERKS,
       popupPerks: POPUP_PERKS,
       popup, quizPopup, storyPopup, requestSent, quizStart: 0,
@@ -985,12 +1011,6 @@ class Component extends DCLogic {
         css: 'background:#c9c9c9;padding:clamp(18px,1.8cqw,26px) clamp(16px,1.7cqw,26px);padding-right:clamp(54px,5cqw,76px);display:flex;justify-content:flex-end;'
           + 'clip-path:polygon(0 0, calc(100% - 34px) 0, 100% 50%, calc(100% - 34px) 100%, 0 100%);'
           + 'margin-left:' + (mobile ? 0 : w.indent) + 'px;min-height:clamp(92px,8cqw,116px);align-items:center',
-      })),
-      gallery: GALLERY.map((f, i) => ({
-        n: i + 1,
-        img: 'assets/' + f,
-        css: 'flex:0 0 auto;width:clamp(120px,11cqw,152px);height:clamp(180px,17cqw,232px);object-fit:cover;border-radius:5px;display:block;background:#f0f0f0;margin-top:'
-          + (i % 2 === 0 ? '0' : 'clamp(10px,1.4cqw,22px)'),
       })),
       tabs: [
         { key: 'novostroyka', label: 'Новостройка' },

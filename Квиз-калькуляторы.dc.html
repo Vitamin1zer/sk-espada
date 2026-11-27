@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="espada-revision" content="20261127-review2">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
+<script src="./support.js?v=20261127-review2"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
 </head>
 <body>
-<x-dc>
+<template data-dc-source><x-dc>
 <helmet>
 <meta name="design_doc_mode" content="canvas">
 <style>
@@ -22,7 +23,7 @@
 html,body{margin:0;padding:0}
 body{background:#e9e9e7}
 a{color:#00AD9F;text-decoration:none}
-a:hover{color:#026B63}
+a:not([data-button-link]):hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
 .demo-canvas{max-width:100%}.demo-canvas div,.demo-canvas figure{max-width:100%;min-width:0}.demo-canvas figure{width:100%;flex:0 1 auto}@media(min-width:700px){.demo-canvas figure{width:auto}}
@@ -42,7 +43,7 @@ input,textarea,select{font-family:inherit}
 
   <div style="display:flex;flex-direction:column;gap:16px">
     <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
-      <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Ремонт — вид ремонта с ценами</span>
+      <span style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#313131">Ремонт — вид ремонта</span>
     </div>
     <div style="width:900px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10)">
       <dc-import name="Квиз" kind="Ремонт" startStep="{{ s2 }}" tone="light" hint-size="900px,540px"></dc-import>
@@ -128,7 +129,7 @@ input,textarea,select{font-family:inherit}
   </div>
 
   <div style="background:#fff;padding:32px;display:flex;flex-direction:column;gap:16px;max-width:900px">
-    <h2 style="margin:0;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#00AD9F">Как считается вилка</h2>
+    <h2 style="margin:0;font-size:20px;font-weight:600;color:#313131">Сценарии квизов</h2>
     <div style="display:flex;flex-direction:column;gap:12px">
       <sc-for list="{{ notes }}" as="n" hint-placeholder-count="4">
         <div style="display:flex;gap:14px;align-items:flex-start;border-top:1px solid #ededed;padding-top:12px">
@@ -141,14 +142,14 @@ input,textarea,select{font-family:inherit}
 
 </section>
 
-</x-dc>
+</x-dc></template>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900}}">
 const NOTES = [
-  'Ставка берётся из шага с видом ремонта или пакетом проекта — цифры из таблиц тарифов сайта. Тарифы там разнесены по двум вкладкам, и квиз повторяет это разделение: выбрали «Новостройка» — предлагаются чистовой 8 850, черновой 9 890, под ключ 13 050 и дизайнерский 15 290 ₽/м²; выбрали «Вторичка» — косметический 7 200, капитальный 13 300 и дизайнерский 15 290. По дизайну пакеты 1 790 / 2 400 / 3 500 / 4 800 ₽/м².',
-  'В квизах ремонта и дизайн-проекта вилка считается как ставка × площадь и ставка × площадь × 1,25 — верхняя граница закрывает надбавку за сложность. Значения округляются до тысяч, чтобы не выглядели как готовая смета.',
-  'Если вид ремонта или пакет ещё не выбран, берётся тариф по умолчанию: «под ключ» для ремонта и «стандартный» для дизайна.',
-  'Под расчётом всегда стоит оговорка, что это ориентир, а точная смета — после замера. Материалы в расчёт не входят: их считает комплектатор отдельной спецификацией.',
-  'Сводка ответов собирается строкой над полями контактов и повторяется на экране благодарности — менеджер видит, что человек выбирал, до звонка.',
+  'Подбор стиля перенесён с действующей Тильды: пять вопросов в исходном порядке, девять исходных фотографий и контактный шаг. Обновлены оформление и расположение элементов по правкам клиента.',
+  'Квизы «Ремонт» и «Дизайн-проект» — новые сценарии для согласования. В предоставленном экспорте Тильды таких квизов нет. Их вопросы и ответы показаны в демо как предложение.',
+  'Числовой расчёт стоимости не показывается: в исходном квизе Тильды нет формулы. Сводка содержит только ответы и выбранную площадь.',
+  'Контактные поля приведены к общим правилам: Имя / Иван, российский телефон и явное согласие на обработку персональных данных. В исходном стилевом квизе был только телефон.',
+  'Финальный экран показывает локально заполненный запрос. Демонстрация не отправляет заявки и не обещает звонок после её прохождения.',
 ];
 
 class Component extends DCLogic {

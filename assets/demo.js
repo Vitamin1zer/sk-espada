@@ -26,7 +26,11 @@
     close.addEventListener('click', () => dialog.close());
     const frame = document.createElement('iframe');
     frame.title = config.title;
-    frame.src = quiz ? 'Квиз.dc.html?kind=' + encodeURIComponent(config.kind) : 'Форма.dc.html?kind=' + encodeURIComponent(config.kind);
+    const popupUrl = new URL(quiz ? 'Квиз.dc.html' : 'Форма.dc.html', location.href);
+    popupUrl.searchParams.set('kind', config.kind);
+    const revision = document.querySelector('meta[name="espada-revision"]')?.content;
+    if (revision) popupUrl.searchParams.set('v', revision);
+    frame.src = popupUrl.href;
     dialog.append(close, frame);
     document.body.append(dialog);
     let timer;

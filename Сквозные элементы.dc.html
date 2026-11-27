@@ -1,6 +1,7 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>UI-кит Эспады</title><script src="./support.js"></script><link rel="stylesheet" href="assets/demo.css">
-<script src="assets/demo.js" defer></script>
-</head><body><x-dc><helmet><style>
+<!DOCTYPE html><html lang="ru"><head>
+<meta name="espada-revision" content="20261127-review2"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>UI-кит Эспады</title><script src="./support.js?v=20261127-review2"></script><link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
+<script src="assets/demo.js?v=20261127-review2" defer></script>
+</head><body><template data-dc-source><x-dc><helmet><style>
 @font-face{font-family:TildaSans;src:url('assets/fonts/TildaSans-Regular.woff2');font-weight:400;font-display:swap}
 @font-face{font-family:TildaSans;src:url('assets/fonts/TildaSans-Semibold.woff2');font-weight:600;font-display:swap}
 @font-face{font-family:TildaSans;src:url('assets/fonts/TildaSans-ExtraBold.woff2');font-weight:800;font-display:swap}
@@ -18,11 +19,11 @@
 <label class="kit__field">Имя<input type="text" placeholder="Иван" autocomplete="given-name" /></label><label class="kit__field">Телефон<input type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" /></label><label class="kit__field kit__field--error">Телефон с ошибкой<input type="tel" value="+7 (99" aria-invalid="true" /><small>Введите номер полностью</small></label><div class="kit__radius"></div><div class="kit__label"><strong>Скругление 5 px</strong><br />Кнопки, поля, формы, попапы, плашки и карточки.</div><p>Кнопка тарифа стоит под карточкой и занимает ширину текста. Высота тарифа зависит от состава работ.</p>
 </div></div></section>
 <section><h2>Шапка</h2><div class="kit__frame"><dc-import name="Шапка" variant="{{ variant }}" openIndex="{{ minus }}"></dc-import></div></section>
-<section><h2>Мега-меню</h2><div class="kit__tabs"><sc-for list="{{ menus }}" as="m"><button class="kit__btn kit__btn--outline" onClick="{{ m.choose }}" style="{{ m.css }}">{{ m.title }}</button></sc-for></div><div class="kit__frame kit__menu"><dc-import name="Шапка" variant="{{ variant }}" openIndex="{{ menuIndex }}"></dc-import></div></section>
+<section><h2>Мега-меню</h2><div class="kit__tabs"><sc-for list="{{ menus }}" as="m"><button class="kit__btn kit__btn--outline" onClick="{{ m.choose }}" style="{{ m.css }}">{{ m.title }}</button></sc-for></div><div class="kit__frame kit__menu"><dc-import name="Шапка" variant="{{ menuVariant }}" openIndex="{{ menuIndex }}" accIndex="{{ menuIndex }}" key="{{ menuIndex }}"></dc-import></div></section>
 <section><h2>Липкая шапка</h2><div class="kit__frame"><dc-import name="Шапка" variant="{{ sticky }}" openIndex="{{ minus }}"></dc-import></div></section>
 <section><h2>Хлебные крошки</h2><div class="kit__sheet"><nav aria-label="Хлебные крошки" style="display:flex;flex-wrap:wrap;gap:10px;font-size:15px;margin-bottom:24px"><a href="/">Главная</a><span>/</span><a href="/dizajn-interera/">Дизайн интерьера</a><span>/</span><span>Дизайн квартиры</span></nav><div class="kit__h2">Дизайн интерьера <span class="kit__accent">квартиры</span></div></div></section>
 <section><h2>Единый подвал</h2><div class="kit__frame"><dc-import name="Подвал" mobile="{{ mobile }}"></dc-import></div></section>
-</div></x-dc><script type="text/x-dc" data-dc-script data-props="{&quot;mobile&quot;:{&quot;default&quot;:false}}">
+</div></x-dc></template><script type="text/x-dc" data-dc-script data-props="{&quot;mobile&quot;:{&quot;default&quot;:false}}">
 const PALETTE=[['#00AD9F','Фирменный бирюзовый'],['#026B63','Наведение'],['#313131','Основной текст'],['#5C5C5C','Подписи'],['#929292','Второстепенный текст'],['#000000','Заголовки'],['#F8F8F8','Светлый фон'],['#D9D9D9','Рамки и линии']];
-class Component extends DCLogic{state={menu:0};renderVals(){const mobile=!!this.props.mobile;return{palette:PALETTE.map(p=>({hex:p[0],title:p[1],css:'background:'+p[0]})),menus:['Ремонт квартир','Дизайн интерьера','Приёмка','Услуги'].map((title,i)=>({title,choose:()=>this.setState({menu:i}),css:this.state.menu===i?'background:#00ad9f;color:#fff':''})),menuIndex:[0,1,2,4][this.state.menu],minus:-1,variant:mobile?'mobile':'default',sticky:mobile?'mobile':'sticky',mobile};}}
+class Component extends DCLogic{state={menu:0};renderVals(){const mobile=!!this.props.mobile;return{palette:PALETTE.map(p=>({hex:p[0],title:p[1],css:'background:'+p[0]})),menus:['Ремонт квартир','Дизайн интерьера','Приёмка','Услуги'].map((title,i)=>({title,choose:()=>this.setState({menu:i}),css:this.state.menu===i?'background:#00ad9f;color:#fff':''})),menuVariant:mobile?'mobile-open':'default',menuIndex:[0,1,2,4][this.state.menu],minus:-1,variant:mobile?'mobile':'default',sticky:mobile?'mobile':'sticky',mobile};}}
 </script></body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta name="espada-revision" content="20261127-review2"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Встреча со специалистом — Эспада</title><script src="support.js?v=20261127-review2"></script><link rel="stylesheet" href="assets/demo.css?v=20261127-review2"><script src="assets/demo.js?v=20261127-review2" defer></script></head>
+<body><template data-dc-source><x-dc><helmet><style>
+@font-face{font-family:TildaSans;src:url('assets/fonts/TildaSans-Regular.woff2');font-weight:400;font-display:swap}
+@font-face{font-family:TildaSans;src:url('assets/fonts/TildaSans-Semibold.woff2');font-weight:600;font-display:swap}
+*{box-sizing:border-box}body{margin:0}
+.espada-meeting{container-type:inline-size;background:#00ad9f;color:#fff;font-family:TildaSans,sans-serif;overflow:hidden}
+.espada-meeting__inner{max-width:1200px;min-height:520px;margin:auto;padding:100px 20px 90px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:center}
+.espada-meeting__copy{max-width:400px}.espada-meeting__copy h2{margin:0 0 26px;font-size:30px;font-weight:600;line-height:1.3;text-transform:uppercase;color:#fff;text-align:left}
+.espada-meeting__copy h3{margin:0 0 16px;font-size:20px;font-weight:600;line-height:1.3;text-transform:uppercase;color:#fff;text-align:left}
+.espada-meeting__copy p{margin:0;font-size:18px;font-weight:400;line-height:1.35;color:#fff}.espada-meeting__copy small{display:block;margin-top:46px;font-size:13px;line-height:1.4;font-style:italic;color:#fff}
+.espada-meeting__panel{position:relative;min-height:350px;background:#fff;border-radius:5px}
+.espada-meeting__form{width:60%;max-width:365px;position:relative;z-index:1}
+.espada-meeting__person{position:absolute;right:-110px;bottom:-90px;width:400px;max-width:none;height:auto;display:block;pointer-events:none;z-index:2}
+@media(max-width:1100px){.espada-meeting__inner{gap:32px;padding:70px 30px}.espada-meeting__person{width:280px;right:-40px;bottom:-70px}.espada-meeting__form{width:64%}.espada-meeting__copy h2{font-size:27px}}
+@media(max-width:900px){.espada-meeting__inner{grid-template-columns:minmax(0,1fr);padding:52px 20px;gap:32px;min-height:0}.espada-meeting__copy{max-width:620px}.espada-meeting__person{display:none}.espada-meeting__form{width:100%;max-width:none}.espada-meeting__panel{min-height:0}.espada-meeting__copy small{margin-top:24px}.espada-meeting__copy h2{font-size:28px}.espada-meeting__copy p{font-size:17px}}
+</style></helmet>
+<section class="espada-meeting" data-screen-label="Договоримся о встрече">
+ <div class="espada-meeting__inner">
+  <div class="espada-meeting__copy"><h2>{{ heading }}</h2><h3>И наш специалист:</h3><p>{{ description }}</p><small>{{ note }}</small></div>
+  <div class="espada-meeting__panel"><div class="espada-meeting__form"><dc-import name="Форма" kind="{{ formKind }}" theme="meeting" compact="{{ yes }}" cta="Свяжитесь со мной"></dc-import></div><img class="espada-meeting__person" src="assets/specialist.png" alt="Специалист Эспады" /></div>
+ </div>
+</section>
+</x-dc></template><script type="text/x-dc" data-dc-script data-props="{&quot;kind&quot;:{&quot;default&quot;:&quot;repair&quot;}}">
+class Component extends DCLogic {
+ renderVals() {
+  const acceptance = this.props.kind === 'acceptance';
+  return {
+   yes:true,formKind:acceptance?'Приёмка':'Встроенная',
+   heading:'Договоримся о встрече прямо сейчас..',
+   description:acceptance?'приедет в удобное для вас время, проверит квартиру с профессиональным оборудованием и подготовит подробный акт с замечаниями для застройщика':'приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и ответит на вопросы, сделает детальный расчёт сметы',
+   note:acceptance?'Заполните форму, чтобы согласовать дату и время приёмки квартиры.':'Заполните эту форму и нажмите кнопку «Свяжитесь со мной», и мы свяжемся с вами в ближайшее время.',
+  };
+ }
+}
+</script></body></html>
