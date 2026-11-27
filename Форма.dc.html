@@ -36,7 +36,7 @@ input,textarea,select{font-family:inherit}
       <sc-if value="{{ kicker }}" hint-placeholder-val="{{ true }}">
         <div style="{{ kickerCss }}">{{ kicker }}</div>
       </sc-if>
-      <div style="{{ titleCss }}">{{ title }}</div>
+      <div style="{{ titleCss }}"><span>{{ titleLead }}</span><sc-if value="{{ titleAccent }}"><span style="color:#00AD9F">{{ titleAccent }}</span></sc-if></div>
       <sc-if value="{{ subtitle }}" hint-placeholder-val="{{ true }}">
         <div style="{{ subCss }}">{{ subtitle }}</div>
       </sc-if>
@@ -219,6 +219,9 @@ class Component extends DCLogic {
 
     const txt = dark ? '#fff' : '#313131';
     const muted = dark ? '#bfbfbf' : '#5c5c5c';
+    const formTitle = this.props.title || k.title;
+    const accentPhrase = kind === 'Партнёрство' ? 'свяжемся в тот же день' : kind === 'Приёмка' ? 'профессионального приёмщика' : '';
+    const accentAt = accentPhrase ? formTitle.indexOf(accentPhrase) : -1;
 
     return {
       rootCss: 'container-type:inline-size;position:relative;font-family:TildaSans,\'Helvetica Neue\',Helvetica,sans-serif;'
@@ -232,7 +235,9 @@ class Component extends DCLogic {
       showHead: true,
       kicker: k.kicker,
       kickerCss: 'font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F',
-      title: this.props.title || k.title,
+      title: formTitle,
+      titleLead: accentAt < 0 ? formTitle : formTitle.slice(0, accentAt),
+      titleAccent: accentAt < 0 ? "" : formTitle.slice(accentAt),
       titleCss: dark
         ? 'font-size:12.5px;line-height:1.5;color:#bfbfbf'
         : 'font-size:24px;line-height:1.2;font-weight:600;text-transform:uppercase;color:#000',
