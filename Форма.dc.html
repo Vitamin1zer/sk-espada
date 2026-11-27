@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -40,7 +43,7 @@ input,textarea,select{font-family:inherit}
       <sc-if value="{{ perks }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:5px;margin-top:2px">
           <sc-for list="{{ perks }}" as="t" hint-placeholder-count="4">
-            <span style="font-size:13px;line-height:1.5;color:#313131">{{ t }}</span>
+            <span style="font-size:16px;line-height:1.5;color:#313131">{{ t }}</span>
           </sc-for>
         </div>
       </sc-if>
@@ -67,7 +70,7 @@ input,textarea,select{font-family:inherit}
   </sc-if>
 
   <sc-if value="{{ isForm }}" hint-placeholder-val="{{ true }}">
-    <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:14px">
+    <form data-lead-type="{{ leadType }}" noValidate="{{ yes }}" onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:14px">
 
       <sc-if value="{{ topError }}" hint-placeholder-val="{{ false }}">
         <div style="background:#fdecea;border-left:3px solid #c0392b;padding:12px 14px;font-size:12px;line-height:1.5;color:#a5301f">{{ topError }}</div>
@@ -77,14 +80,14 @@ input,textarea,select{font-family:inherit}
         <label style="display:flex;flex-direction:column;gap:6px">
           <span style="{{ f.labelCss }}">{{ f.label }}</span>
           <sc-if value="{{ f.isSelect }}" hint-placeholder-val="{{ false }}">
-            <select style="{{ f.inputCss }}">
+            <select name="{{ f.key }}" value="{{ f.value }}" onChange="{{ f.change }}" style="{{ f.inputCss }}">
               <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="4">
                 <option>{{ o }}</option>
               </sc-for>
             </select>
           </sc-if>
           <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
-            <input type="{{ f.type }}" value="{{ f.value }}" placeholder="{{ f.placeholder }}" onChange="{{ noop }}" style="{{ f.inputCss }}" style-focus="border-color:#00AD9F" />
+            <input type="{{ f.type }}" name="{{ f.key }}" value="{{ f.value }}" placeholder="{{ f.placeholder }}" onChange="{{ f.change }}" style="{{ f.inputCss }}" style-focus="border-color:#00AD9F" />
           </sc-if>
           <sc-if value="{{ f.error }}" hint-placeholder-val="{{ false }}">
             <span style="font-size:11px;line-height:1.4;color:#c0392b">{{ f.error }}</span>
@@ -94,10 +97,10 @@ input,textarea,select{font-family:inherit}
 
       <sc-if value="{{ hasConsent }}" hint-placeholder-val="{{ true }}">
         <div style="display:flex;flex-direction:column;gap:5px">
-          <div style="display:flex;gap:9px;align-items:flex-start">
-            <span style="{{ boxCss }}">{{ tick }}</span>
+          <label style="display:flex;gap:9px;align-items:flex-start;min-height:44px;cursor:pointer">
+            <input type="checkbox" aria-label="Согласие на обработку персональных данных" name="consent" checked="{{ consentChecked }}" onChange="{{ toggleConsent }}" style="width:17px;height:17px;flex:0 0 17px;margin:2px 0 0;accent-color:#00AD9F;cursor:pointer" />
             <span style="{{ consentCss }}">Я даю <a href="/soglasie-na-obrabotku/" style="{{ linkCss }}">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="{{ linkCss }}">Политикой конфиденциальности</a></span>
-          </div>
+          </label>
           <sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}">
             <span style="font-size:11px;line-height:1.4;color:#c0392b;padding-left:26px">{{ consentError }}</span>
           </sc-if>
@@ -126,7 +129,7 @@ const KINDS = {
     title: 'Рассчитаем стоимость вашего ремонта бесплатно',
     subtitle: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд и расчёт ничего не стоят.',
     fields: [
-      { key: 'name', label: 'ФИО', type: 'text', placeholder: 'Петров Петр Петрович', filled: 'Смирнов Алексей Петрович' },
+      { key: 'name', label: 'Имя', type: 'text', placeholder: 'Иван', filled: 'Смирнов Алексей Петрович' },
       { key: 'phone', label: 'Ваш телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (916) 402-18-77', broken: '+7 (916) 40' },
     ],
     cta: 'Бесплатный расчёт сметы',
@@ -140,7 +143,7 @@ const KINDS = {
     subtitle: 'Оставьте свои контакты и вы получите:',
     perks: ['— предварительный расчет бюджета', '— консультацию инженера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'],
     fields: [
-      { key: 'name', label: 'ФИО', type: 'text', placeholder: 'Петров Петр Петрович', filled: 'Смирнов Алексей Петрович' },
+      { key: 'name', label: 'Имя', type: 'text', placeholder: 'Иван', filled: 'Смирнов Алексей Петрович' },
       { key: 'phone', label: 'Ваш телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (916) 402-18-77', broken: '+7 (916) 40' },
     ],
     cta: 'Бесплатный расчёт сметы',
@@ -156,7 +159,7 @@ const KINDS = {
       { key: 'phone', label: 'Телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (916) 402-18-77', broken: '+7 (916) 40' },
     ],
     cta: 'Заказать звонок',
-    footnote: 'Перезвоним в рабочее время: ежедневно с 9:00 до 21:00',
+    footnote: 'Перезвоним в рабочее время: ежедневно с 9:00 до 18:00',
     sentTitle: 'Звонок заказан',
     sentText: 'Менеджер перезвонит в рабочее время.',
   },
@@ -166,7 +169,7 @@ const KINDS = {
     title: 'Оставьте заявку — свяжемся в тот же день',
     subtitle: '',
     fields: [
-      { key: 'name', label: 'Имя', type: 'text', placeholder: 'Петров Петр Петрович', filled: 'Марина Северова' },
+      { key: 'name', label: 'Имя', type: 'text', placeholder: 'Иван', filled: 'Марина Северова' },
       { key: 'phone', label: 'Телефон', type: 'tel', placeholder: '+7 (000) 000-00-00', filled: '+7 (903) 771-05-42', broken: '+7 (903) 77' },
       { key: 'who', label: 'Кто вы', select: true, options: ['Дизайнер или студия дизайна', 'Агент по недвижимости', 'Поставщик материалов', 'Другое'] },
     ],
@@ -175,6 +178,11 @@ const KINDS = {
     sentText: 'Отдел развития свяжется с вами в тот же рабочий день и пришлёт условия.',
   },
 };
+
+KINDS['Дизайн'] = { ...KINDS['Встроенная'], kicker: '', title: 'Обсудить дизайн-проект', subtitle: 'Оставьте контакты, чтобы дизайнер согласовал удобное время консультации.', cta: 'Обсудить дизайн-проект', sentText: 'Дизайнер свяжется с вами в течение рабочего дня.' };
+KINDS['Приёмка'] = { ...KINDS['Встроенная'], kicker: '', title: 'Пригласите профессионального приёмщика', subtitle: 'Инженер приедет с инструментом, найдёт дефекты и отдаст акт с замечаниями в день осмотра.', cta: 'Пригласить приёмщика', sentText: 'Специалист по приёмке свяжется с вами и согласует время осмотра.' };
+KINDS['Шоурум'] = { ...KINDS['Встроенная'], kicker: '', title: 'Записаться в шоурум', subtitle: 'Оставьте контакты, чтобы согласовать удобное время встречи в шоуруме.', cta: 'Записаться в шоурум', sentText: 'Менеджер свяжется с вами и согласует время встречи в шоуруме.' };
+const KIND_ALIASES = { repair: 'Встроенная', design: 'Дизайн', acceptance: 'Приёмка', showroom: 'Шоурум', partner: 'Партнёрство' };
 
 const SENT_STEPS = [
   'Инженер посмотрит адрес и площадь, чтобы приехать подготовленным.',
@@ -189,86 +197,107 @@ const SENT_STEPS_PARTNER = [
 ];
 
 class Component extends DCLogic {
-  state = { sent: null };
+  state = { sent: null, values: {}, consent: null, attempted: false };
 
   renderVals() {
-    const k = KINDS[this.props.kind] || KINDS['Встроенная'];
+    const requested = new URLSearchParams(window.location.search).get('kind') || this.props.kind;
+    const kind = KIND_ALIASES[requested] || requested || 'Встроенная';
+    const k = KINDS[kind] || KINDS['Встроенная'];
     const st = this.props.state || 'Пустая';
     const sent = this.state.sent === null ? st === 'Отправлена' : this.state.sent;
     const error = st === 'Ошибка' && !sent;
     const filled = st === 'Заполненная' || error;
     const dark = k.dark;
+    const values = Object.fromEntries(k.fields.map(f => [f.key, this.state.values[f.key] === undefined ? (filled ? (f.filled || '') : (f.select ? f.options[0] : '')) : this.state.values[f.key]]));
+    const consent = this.state.consent === null ? filled && !error : this.state.consent;
+    const attempted = this.state.attempted || error;
+    const phoneDigits = (values.phone || '').replace(/\D/g, '');
+    const phoneError = attempted && !(phoneDigits.length === 11 && /^[78]/.test(phoneDigits));
+    const nameError = attempted && 'name' in values && !values.name.trim();
+    const consentError = attempted && !dark && !consent;
+
 
     const txt = dark ? '#fff' : '#313131';
     const muted = dark ? '#bfbfbf' : '#5c5c5c';
 
     return {
       rootCss: 'container-type:inline-size;position:relative;font-family:TildaSans,\'Helvetica Neue\',Helvetica,sans-serif;'
-        + 'background:' + (dark ? '#313131' : '#fff') + ';padding:' + (dark ? '24px' : 'clamp(22px,2.2cqw,30px)')
-        + ';display:flex;flex-direction:column;gap:16px;color:' + txt,
-      closable: k.closable,
+        + 'background:' + (dark ? '#313131' : '#fff') + ';padding:' + (dark ? '24px' : '30px')
+        + ';border-radius:5px;display:flex;flex-direction:column;gap:16px;color:' + txt,
+      closable: false,
+      yes: true,
+      leadType: kind === 'Партнёрство' ? 'partner' : (kind === 'Приёмка' ? 'acceptance' : (kind === 'Дизайн' ? 'design' : (kind === 'Шоурум' ? 'showroom' : 'repair'))),
+      consentChecked: consent,
+      toggleConsent: (e) => this.setState({ consent: e.target.checked }),
       showHead: true,
       kicker: k.kicker,
       kickerCss: 'font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F',
       title: this.props.title || k.title,
       titleCss: dark
         ? 'font-size:12.5px;line-height:1.5;color:#bfbfbf'
-        : 'font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;text-transform:uppercase;color:#000',
-      subtitle: k.subtitle,
-      subCss: 'font-size:12.5px;line-height:1.5;color:' + muted,
+        : 'font-size:24px;line-height:1.2;font-weight:600;text-transform:uppercase;color:#000',
+      subtitle: this.props.subtitle || k.subtitle,
+      subCss: 'font-size:16px;line-height:1.5;color:' + muted,
       perks: this.props.perks || k.perks || null,
 
       isForm: !sent,
       isSent: sent,
 
-      topError: error ? 'Проверьте отмеченные поля — заявка не отправлена.' : '',
+      topError: (phoneError || nameError || consentError) ? 'Проверьте отмеченные поля — заявка не отправлена.' : '',
       hasConsent: !dark,
       consentNote: dark,
       tick: filled && !error ? '✓' : '',
       boxCss: 'width:17px;height:17px;flex:0 0 17px;display:flex;align-items:center;justify-content:center;margin-top:2px;'
         + 'font-size:11px;font-weight:700;color:#fff;background:' + (filled && !error ? '#00AD9F' : 'transparent')
         + ';border:1px solid ' + (error ? '#c0392b' : (filled ? '#00AD9F' : '#bfbfbf')),
-      consentCss: 'font-size:11px;line-height:1.45;color:' + muted,
+      consentCss: 'font-size:12.5px;line-height:1.45;color:' + muted,
       linkCss: 'color:' + (dark ? '#fff' : '#00AD9F') + ';text-decoration:underline',
-      consentError: error ? 'Без согласия на обработку данных заявку отправить нельзя' : '',
+      consentError: consentError ? 'Без согласия на обработку данных заявку отправить нельзя' : '',
 
       fields: k.fields.map(f => {
-        const isBroken = error && f.key === 'phone';
-        const val = isBroken ? (f.broken || '') : (filled ? (f.filled || '') : '');
+        const isBroken = (phoneError && f.key === 'phone') || (nameError && f.key === 'name');
+        const val = error && f.key === 'phone' && this.state.values.phone === undefined ? (f.broken || '') : values[f.key];
         return {
+          key: f.key,
+          change: (e) => this.setState({ values: { ...this.state.values, [f.key]: e.target.value } }),
           label: f.label,
-          labelCss: 'font-size:11.5px;font-weight:600;color:' + (isBroken ? '#c0392b' : muted),
+          labelCss: 'font-size:16px;font-weight:400;color:' + (isBroken ? '#c0392b' : muted),
           isSelect: !!f.select,
           isText: !f.select,
           type: f.type || 'text',
           value: val,
           placeholder: f.placeholder || '',
           options: f.options || [],
-          error: isBroken ? 'Введите номер полностью — 10 цифр после +7' : '',
-          inputCss: 'height:46px;border:1px solid ' + (isBroken ? '#c0392b' : (val ? '#00AD9F' : '#d9d9d9'))
-            + ';border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none',
+          error: isBroken ? (f.key === 'name' ? 'Введите ваше имя' : 'Введите номер полностью — 10 цифр после +7') : '',
+          inputCss: 'height:50px;border:1px solid ' + (isBroken ? '#c0392b' : (val ? '#00AD9F' : '#d9d9d9'))
+            + ';border-radius:5px;padding:0 13px;font-size:18px;color:#313131;background:#fff;outline:none',
         };
       }),
 
       cta: this.props.cta || k.cta,
-      btnCss: 'background:' + (dark ? '#00AD9F' : '#00AD9F') + ';color:#fff;border:0;border-radius:0;padding:16px 20px;'
-        + 'font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;'
+      btnCss: 'background:' + (dark ? '#00AD9F' : '#00AD9F') + ';color:#fff;border:0;border-radius:5px;padding:16px 20px;'
+        + 'font-size:16px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;transition:background .2s,box-shadow .2s;'
         + 'align-self:' + (dark ? 'flex-start' : 'stretch'),
-      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      submit: (e) => {
+        e.preventDefault();
+        const validPhone = phoneDigits.length === 11 && /^[78]/.test(phoneDigits);
+        const validName = !('name' in values) || !!values.name.trim();
+        this.setState({ attempted: true, sent: validPhone && validName && (dark || consent) });
+      },
       noop: () => {},
 
       footnote: k.footnote || '',
       footnoteCss: 'font-size:11px;line-height:1.5;color:' + (dark ? '#8f8f8f' : '#929292'),
 
       sentTitle: k.sentTitle,
-      sentTitleCss: 'font-size:clamp(15px,1.4cqw,20px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:'
+      sentTitleCss: 'font-size:22px;font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:'
         + (dark ? '#fff' : '#000') + ';line-height:1.2',
       sentText: k.sentText,
-      sentTextCss: 'margin:0;font-size:13px;line-height:1.6;color:' + muted + ';max-width:400px',
+      sentTextCss: 'margin:0;font-size:16px;line-height:1.6;color:' + muted + ';max-width:400px',
       sentBoxCss: 'background:' + (dark ? 'rgba(255,255,255,.07)' : '#f8f8f8') + ';padding:16px;display:flex;flex-direction:column;gap:9px;width:100%',
-      sentStepCss: 'font-size:12px;line-height:1.5;color:' + muted,
-      sentSteps: (this.props.kind === 'Партнёрство' ? SENT_STEPS_PARTNER : SENT_STEPS).map((t, i) => ({ n: (i + 1) + '.', t })),
-      sentLinkCss: 'font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F',
+      sentStepCss: 'font-size:15px;line-height:1.5;color:' + muted,
+      sentSteps: (kind === 'Партнёрство' ? SENT_STEPS_PARTNER : SENT_STEPS).map((t, i) => ({ n: (i + 1) + '.', t })),
+      sentLinkCss: 'font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F',
     };
   }
 }

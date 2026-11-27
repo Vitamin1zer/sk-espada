@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -27,8 +30,8 @@ input,textarea,select{font-family:inherit}
 
   <div style="display:flex;flex-direction:column;gap:12px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:2px">
-      <h2 style="margin:0;flex:1 1 220px;min-width:0;font-size:clamp(18px,1.9cqw,27px);line-height:1.2;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#000">{{ title }}</h2>
-      <span style="flex:0 0 auto;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#929292;font-variant-numeric:tabular-nums;white-space:nowrap">{{ counter }}</span>
+      <h2 style="margin:0;flex:1 1 220px;min-width:0;font-size:24px;line-height:1.2;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#000">{{ title }}</h2>
+      <span style="flex:0 0 auto;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#929292;font-variant-numeric:tabular-nums;white-space:nowrap">{{ counter }}</span>
     </div>
     <div style="height:4px;background:#e4e4e4">
       <div style="{{ barCss }}"></div>
@@ -42,13 +45,14 @@ input,textarea,select{font-family:inherit}
 
   <sc-if value="{{ cards }}" hint-placeholder-val="{{ true }}">
     <div style="display:flex;flex-direction:column;gap:18px">
-      <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;color:#313131;line-height:1.3">{{ question }}</h3>
+      <h3 style="margin:0;font-size:20px;font-weight:600;color:#313131;line-height:1.3">{{ question }}</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:12px">
         <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
           <button type="button" onClick="{{ c.go }}" style="{{ c.css }}">
-            <span style="font-size:13.5px;font-weight:700;line-height:1.25;color:#313131">{{ c.t }}</span>
+            <sc-if value="{{ c.img }}" hint-placeholder-val="{{ false }}"><img src="{{ c.img }}" alt="{{ c.t }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:5px;display:block" /></sc-if>
+            <span style="font-size:16px;font-weight:600;line-height:1.25;color:#313131">{{ c.t }}</span>
             <sc-if value="{{ c.hint }}" hint-placeholder-val="{{ true }}">
-              <span style="font-size:11.5px;line-height:1.4;color:#929292">{{ c.hint }}</span>
+              <span style="font-size:14px;line-height:1.4;color:#929292">{{ c.hint }}</span>
             </sc-if>
           </button>
         </sc-for>
@@ -58,7 +62,7 @@ input,textarea,select{font-family:inherit}
 
   <sc-if value="{{ isArea }}" hint-placeholder-val="{{ false }}">
     <div style="display:flex;flex-direction:column;gap:20px">
-      <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;color:#313131;line-height:1.3">{{ question }}</h3>
+      <h3 style="margin:0;font-size:20px;font-weight:600;color:#313131;line-height:1.3">{{ question }}</h3>
       <div style="display:flex;align-items:baseline;gap:10px">
         <span style="font-size:clamp(30px,3cqw,44px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">{{ area }}</span>
         <span style="font-size:15px;color:#5c5c5c">м²</span>
@@ -76,67 +80,71 @@ input,textarea,select{font-family:inherit}
       <div style="{{ estBoxCss }}">
         <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Предварительно</span>
         <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
-        <span style="font-size:11px;line-height:1.45;color:#929292">{{ estNote }}</span>
+        <span style="font-size:13px;line-height:1.45;color:#929292">{{ estNote }}</span>
       </div>
     </div>
   </sc-if>
 
   <sc-if value="{{ isContacts }}" hint-placeholder-val="{{ false }}">
     <div style="display:flex;flex-direction:column;gap:16px">
-      <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:700;color:#313131;line-height:1.3">{{ question }}</h3>
+      <h3 style="margin:0;font-size:20px;font-weight:600;color:#313131;line-height:1.3">{{ question }}</h3>
       <div style="{{ estBoxCss }}">
-        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Ваш расчёт</span>
+        <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">{{ estimateLabel }}</span>
         <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
-        <span style="font-size:11px;line-height:1.45;color:#929292">{{ summary }}</span>
+        <span style="font-size:13px;line-height:1.45;color:#929292">{{ summary }}</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px">
+        <sc-if value="{{ needsName }}" hint-placeholder-val="{{ true }}">
         <label style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Имя</span>
-          <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+          <span style="font-size:16px;font-weight:400;color:#5c5c5c">Имя</span>
+          <input type="text" name="name" value="{{ name }}" onChange="{{ setName }}" placeholder="Иван" style="height:50px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:18px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
         </label>
+        </sc-if>
         <label style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Телефон</span>
-          <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+          <span style="font-size:16px;font-weight:400;color:#5c5c5c">Телефон</span>
+          <input type="tel" name="phone" value="{{ phone }}" onChange="{{ setPhone }}" placeholder="+7 (000) 000-00-00" style="height:50px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:18px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
         </label>
       </div>
-      <div style="display:flex;gap:9px;align-items:flex-start">
-        <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px;background:#fff"></span>
-        <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
-      </div>
+      <label style="display:flex;gap:9px;align-items:flex-start;min-height:44px;cursor:pointer">
+        <input type="checkbox" name="consent" aria-label="Согласие на обработку персональных данных" checked="{{ consent }}" onChange="{{ setConsent }}" style="width:17px;height:17px;flex:0 0 17px;margin:2px 0 0;accent-color:#00AD9F" />
+        <span style="font-size:13px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+      </label>
     </div>
   </sc-if>
 
   <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
     <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
       <div style="background:#00AD9F;color:#fff;padding:12px 20px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase">Заявка принята</div>
-      <h3 style="margin:0;font-size:clamp(17px,1.6cqw,23px);font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#000;line-height:1.2">{{ doneTitle }}</h3>
+      <h3 style="margin:0;font-size:clamp(17px,1.6cqw,23px);font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#000;line-height:1.2">{{ doneTitle }}</h3>
       <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:520px;text-wrap:pretty">{{ doneText }}</p>
       <div style="{{ estBoxCss }}">
         <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#929292">Предварительный ориентир</span>
         <span style="font-size:clamp(18px,1.8cqw,26px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ estimate }}</span>
-        <span style="font-size:11px;line-height:1.45;color:#929292">{{ summary }}</span>
+        <span style="font-size:13px;line-height:1.45;color:#929292">{{ summary }}</span>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
-        <a href="/portfolio/" style="border:1px solid #00AD9F;color:#00AD9F;padding:14px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть работы</a>
-        <button type="button" onClick="{{ reset }}" style="border:1px solid #d9d9d9;background:transparent;color:#5c5c5c;padding:14px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Пройти заново</button>
+        <a href="/portfolio/" style="border:1px solid #00AD9F;color:#00AD9F;padding:14px 22px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть работы</a>
+        <button type="button" onClick="{{ reset }}" style="border-radius:5px;border:1px solid #d9d9d9;background:transparent;color:#5c5c5c;padding:14px 22px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Пройти заново</button>
       </div>
     </div>
   </sc-if>
 
+  <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}"><div role="alert" style="padding:14px;border:1px solid #c0392b;border-radius:5px;color:#a5301f;background:#fdecea;font-size:14px;line-height:1.4">{{ error }}</div></sc-if>
+
   <sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
     <div style="{{ navCss }}">
       <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}">
-        <button type="button" onClick="{{ back }}" style="border:1px solid #d9d9d9;background:transparent;color:#5c5c5c;padding:15px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Назад</button>
+        <button type="button" onClick="{{ back }}" style="border-radius:5px;border:1px solid #d9d9d9;background:transparent;color:#5c5c5c;padding:15px 22px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="border-color:#5c5c5c;color:#313131">Назад</button>
       </sc-if>
-      <button type="button" onClick="{{ next }}" style="background:#00AD9F;color:#fff;border:0;padding:15px 26px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">{{ nextLabel }}</button>
-      <span style="font-size:11px;line-height:1.4;color:#929292;max-width:280px">{{ navNote }}</span>
+      <button type="button" onClick="{{ next }}" style="border-radius:5px;background:#00AD9F;color:#fff;border:0;padding:15px 26px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">{{ nextLabel }}</button>
+      <span style="font-size:13px;line-height:1.4;color:#929292;max-width:280px">{{ navNote }}</span>
     </div>
   </sc-if>
 
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:900,&quot;height&quot;:620},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт&quot;,&quot;Дизайн-проект&quot;],&quot;default&quot;:&quot;Ремонт&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Квиз&quot;},&quot;startStep&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:8,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Квиз&quot;},&quot;tone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Квиз&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:900,&quot;height&quot;:620},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт&quot;,&quot;Дизайн-проект&quot;,&quot;Ремонт по стилю&quot;],&quot;default&quot;:&quot;Ремонт&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Квиз&quot;},&quot;startStep&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:8,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Квиз&quot;},&quot;tone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Квиз&quot;}}">
 const C = (t, hint) => ({ t, hint: hint || '' });
 
 const REMONT = {
@@ -151,7 +159,6 @@ const REMONT = {
       'Новостройка': [C('Чистовой', 'от 8 850 ₽/м²'), C('Черновой', 'от 9 890 ₽/м²'), C('Под ключ', 'от 13 050 ₽/м²'), C('Дизайнерский', 'от 15 290 ₽/м²')],
       'Вторичка': [C('Косметический', 'от 7 200 ₽/м²'), C('Капитальный', 'от 13 300 ₽/м²'), C('Дизайнерский', 'от 15 290 ₽/м²')],
     }, cards: [C('Косметический', 'от 7 200 ₽/м²'), C('Чистовой', 'от 8 850 ₽/м²'), C('Черновой', 'от 9 890 ₽/м²'), C('Под ключ', 'от 13 050 ₽/м²'), C('Капитальный', 'от 13 300 ₽/м²'), C('Дизайнерский', 'от 15 290 ₽/м²')] },
-    { key: 'Комнаты', q: 'Сколько комнат?', cards: [C('Студия'), C('Одна'), C('Две'), C('Три и больше')] },
     { key: 'Площадь', q: 'Площадь помещения', area: true },
     { key: 'Проект', q: 'Есть дизайн-проект?', cards: [C('Есть готовый'), C('Нужен проект', 'выезд дизайнера бесплатно'), C('Обойдёмся без проекта')] },
     { key: 'Сроки', q: 'Когда планируете начать?', cards: [C('Сейчас'), C('В течение 1–3 месяцев'), C('Позже, пока считаю бюджет')] },
@@ -176,7 +183,6 @@ const DESIGN = {
     { key: 'Площадь', q: 'Площадь объекта', area: true },
     { key: 'Стиль', q: 'Есть предпочтения по стилю?', cards: [C('Современный'), C('Классика'), C('Минимализм'), C('Ещё не определились')] },
     { key: 'Комплектация', q: 'Нужна комплектация материалами?', cards: [C('Да, под ключ'), C('Только материалы отделки'), C('Не нужна'), C('Обсудим на встрече')] },
-    { key: 'Ремонт', q: 'Ремонт планируете у нас?', cards: [C('Да', 'скидка на проект'), C('Пока только проект'), C('Ещё выбираем')] },
     { key: 'Контакты', q: 'Куда отправить расчёт?', contacts: true },
   ],
   rates: { 'Технический': 1790, 'Стандартный': 2400, 'Полный': 3500, 'Авторский': 4800 },
@@ -186,20 +192,42 @@ const DESIGN = {
   startArea: 54,
 };
 
-const KINDS = { 'Ремонт': REMONT, 'Дизайн-проект': DESIGN };
+const STYLE = {
+  title: 'Рассчитайте стоимость дизайна',
+  doneTitle: 'Спасибо — заявка у дизайнера',
+  doneText: 'Дизайнер свяжется с вами, обсудит выбранные решения и подготовит расчёт стоимости дизайн-проекта.',
+  estNote: 'Точную стоимость дизайн-проекта обсудим с вами после уточнения деталей.',
+  steps: [
+    { key: 'Тона', q: 'Какие тона в интерьере вы предпочитаете?', cards: [
+      { ...C('Светлые'), img: 'assets/quiz-style-01.jpg' }, { ...C('Что-то среднее'), img: 'assets/quiz-style-02.jpg' }, { ...C('Темные'), img: 'assets/quiz-style-03.jpg' },
+    ] },
+    { key: 'Интерьер', q: 'Каким вы представляете свой интерьер?', cards: [
+      { ...C('Классический интерьер'), img: 'assets/quiz-style-04.jpg' }, { ...C('Что-то среднее'), img: 'assets/quiz-style-05.jpg' }, { ...C('Современный интерьер'), img: 'assets/quiz-style-06.jpg' },
+    ] },
+    { key: 'Площадь', q: 'Какая площадь вашего жилья?', cards: [C('До 20 м²'), C('До 40 м²'), C('До 60 м²'), C('До 80 м²'), C('До 100 м²'), C('Больше 100 м²')] },
+    { key: 'Подбор', q: 'Нужен ли вам будет подбор отделочных материалов или мебели?', cards: [C('Да, нужен'), C('Не знаю'), C('Нет, не нужно')] },
+    { key: 'Декор', q: 'Сколько декора в интерьере предпочитаете?', cards: [
+      { ...C('Лучше побольше'), img: 'assets/quiz-style-07.jpg' }, { ...C('Что-то среднее'), img: 'assets/quiz-style-08.jpg' }, { ...C('Лучше поменьше'), img: 'assets/quiz-style-09.jpg' },
+    ] },
+    { key: 'Контакты', q: 'Ваш расчёт готов! На какой номер отправить стоимость вашего дизайна?', contacts: true },
+  ],
+  rates: {}, rateStep: 5, base: 0, presets: [], startArea: 54, style: true, phoneOnly: true,
+};
+const KINDS = { 'Ремонт': REMONT, 'Дизайн-проект': DESIGN, 'Ремонт по стилю': STYLE, repair: REMONT, design: DESIGN, style: STYLE };
 
 class Component extends DCLogic {
-  state = { step: null, pick: {}, area: null };
+  state = { step: null, pick: {}, area: null, name: '', phone: '', consent: false, error: '' };
 
   fmt(n) {
     return String(Math.round(n / 1000) * 1000).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
   }
 
   renderVals() {
-    const q = KINDS[this.props.kind] || REMONT;
+    const requested = new URLSearchParams(window.location.search).get('kind') || this.props.kind;
+    const q = KINDS[requested] || REMONT;
     const total = q.steps.length;
     const seed = typeof this.props.startStep === 'number' ? this.props.startStep : 0;
-    const step = this.state.step === null ? seed : this.state.step;
+    const step = Math.max(0, Math.min(total, this.state.step === null ? seed : this.state.step));
     const pick = this.state.pick;
     const area = this.state.area === null ? q.startArea : this.state.area;
     const done = step >= total;
@@ -210,19 +238,25 @@ class Component extends DCLogic {
 
     const rate = q.rates[pick[q.rateStep]] || q.base;
     const lo = rate * area;
-    const estimate = this.fmt(lo) + ' — ' + this.fmt(lo * 1.25);
+    const estimate = q.style ? 'Ваш расчёт готов' : this.fmt(lo) + ' — ' + this.fmt(lo * 1.25);
 
     const picked = q.steps
       .map((s, i) => (pick[i] ? s.key + ': ' + pick[i] : null))
       .filter(Boolean);
     const summary = picked.length
-      ? picked.join(' · ') + ' · Площадь: ' + area + ' м²'
-      : 'Площадь: ' + area + ' м²';
+      ? picked.join(' · ') + (q.style ? '' : ' · Площадь: ' + area + ' м²')
+      : (q.style ? 'Ответьте на вопросы, чтобы подобрать интерьер' : 'Площадь: ' + area + ' м²');
 
     const boxBg = this.props.tone === 'dark' ? '#f8f8f8' : '#f8f8f8';
 
     return {
       title: q.title,
+      estimateLabel: q.style ? 'Ваш выбор' : 'Ваш расчёт',
+      needsName: !q.phoneOnly,
+      name: this.state.name, phone: this.state.phone, consent: this.state.consent, error: this.state.error,
+      setName: (e) => this.setState({ name: e.target.value }),
+      setPhone: (e) => this.setState({ phone: e.target.value }),
+      setConsent: (e) => this.setState({ consent: e.target.checked }),
       question: done ? '' : cur.q,
       counter: done ? 'Готово' : 'Шаг ' + (step + 1) + ' из ' + total,
       rootCss: 'container-type:inline-size;font-family:TildaSans,\'Helvetica Neue\',Helvetica,sans-serif;color:#313131;background:'
@@ -235,18 +269,18 @@ class Component extends DCLogic {
 
       chips: q.steps.slice(0, total - 1).map((s, i) => ({
         t: s.key,
-        css: 'font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;white-space:nowrap;color:'
+        css: 'font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;white-space:nowrap;color:'
           + (i === step ? '#fff' : (pick[i] || (s.area && (i < step)) ? '#00AD9F' : '#bfbfbf'))
           + ';background:' + (i === step ? '#00AD9F' : 'transparent')
           + ';border:1px solid ' + (i === step ? '#00AD9F' : (pick[i] || (s.area && i < step) ? '#00AD9F' : '#e2e2e2')),
       })),
 
       cards: !done && curCards ? curCards.map(c => ({
-        t: c.t, hint: c.hint,
-        go: () => this.setState({ pick: Object.assign({}, pick, { [step]: c.t }), step: step + 1 }),
+        t: c.t, hint: c.hint, img: c.img || null,
+        go: () => this.setState({ pick: { ...Object.fromEntries(Object.entries(pick).filter(([i]) => Number(i) < step)), [step]: c.t }, step: step + 1, error: '' }),
         css: 'border:1px solid ' + (pick[step] === c.t ? '#00AD9F' : '#d9d9d9')
           + ';background:' + (pick[step] === c.t ? '#f2fbfa' : '#fff')
-          + ';border-radius:0;padding:16px;display:flex;flex-direction:column;gap:6px;text-align:left;transition:all .15s',
+          + ';border-radius:5px;padding:16px;display:flex;flex-direction:column;gap:6px;text-align:left;transition:all .15s',
       })) : null,
 
       isArea: !done && !!cur.area,
@@ -254,20 +288,32 @@ class Component extends DCLogic {
       isDone: done,
       showNav: !done,
       canBack: step > 0,
-      nextLabel: !done && cur.contacts ? 'Получить расчёт' : 'Далее',
-      navNote: !done && cur.contacts ? 'Расчёт придёт в СМС, инженер перезвонит в рабочее время' : '',
-      back: () => this.setState({ step: Math.max(0, step - 1) }),
-      next: () => this.setState({ step: step + 1 }),
-      reset: () => this.setState({ step: 0, pick: {}, area: null }),
+      nextLabel: !done && cur.contacts ? (q.style ? 'Узнать результат' : 'Получить расчёт') : 'Далее',
+      navNote: !done && cur.contacts ? 'Специалист свяжется с вами в рабочее время' : '',
+      back: () => this.setState({ step: Math.max(0, step - 1), error: '' }),
+      next: () => {
+        if (cur.contacts) {
+          const phone = this.state.phone.replace(/\D/g, '');
+          if ((!q.phoneOnly && !this.state.name.trim()) || phone.length !== 11 || !/^[78]/.test(phone) || !this.state.consent) {
+            this.setState({ error: q.phoneOnly ? 'Укажите полный номер телефона и согласие на обработку персональных данных.' : 'Укажите имя, полный номер телефона и согласие на обработку персональных данных.' });
+            return;
+          }
+        } else if (curCards && !pick[step]) {
+          this.setState({ error: 'Выберите один из вариантов ответа.' });
+          return;
+        }
+        this.setState({ step: step + 1, error: '' });
+      },
+      reset: () => this.setState({ step: 0, pick: {}, area: null, name: '', phone: '', consent: false, error: '' }),
 
       area,
-      setArea: (e) => this.setState({ area: Number(e.target.value) }),
+      setArea: (e) => this.setState({ area: Math.max(6, Math.min(250, Number(e.target.value) || 6)) }),
       presets: q.presets.map(v => ({
         t: v + ' м²',
         go: () => this.setState({ area: v }),
         css: 'border:1px solid ' + (area === v ? '#00AD9F' : '#e2e2e2') + ';background:'
           + (area === v ? '#00AD9F' : 'transparent') + ';color:' + (area === v ? '#fff' : '#5c5c5c')
-          + ';padding:9px 14px;font-size:12px;font-weight:600;transition:all .15s',
+          + ';border-radius:5px;padding:9px 14px;font-size:16px;font-weight:600;transition:all .15s',
       })),
 
       estimate,

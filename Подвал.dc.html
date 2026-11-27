@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -35,17 +38,10 @@ button{font-family:inherit;cursor:pointer}
         <a href="/" title="На главную" style="display:block">
           <img src="assets/logo-full-white.png" alt="Эспада — ремонт и дизайн" style="height:44px;width:auto;display:block" />
         </a>
-        <div style="display:flex;gap:14px;align-items:center">
-          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
-            <a href="{{ s.href }}" title="{{ s.name }}" target="_blank" rel="noopener" style="display:block;opacity:.85;transition:opacity .15s" style-hover="opacity:1">
-              <img src="{{ s.icon }}" alt="{{ s.name }}" style="width:20px;height:20px;object-fit:contain;display:block" />
-            </a>
-          </sc-for>
-        </div>
-        <div style="font-size:13px;line-height:1.5;color:#bfbfbf">Москва, ул. Дегунинская, д. 1, корп. 2</div>
         <a href="tel:+79938914064" style="font-size:19px;font-weight:800;color:#fff;text-decoration:underline;text-underline-offset:3px;letter-spacing:.01em" style-hover="color:#00AD9F">+7 (993) 891-40-64</a>
         <a href="mailto:sk-espada@rambler.ru" style="font-size:13px;color:#bfbfbf;text-decoration:none" style-hover="color:#00AD9F">sk-espada@rambler.ru</a>
-        <div style="font-size:11.5px;line-height:1.5;color:#8f8f8f;max-width:300px">Режим работы: ежедневно, 9:00 – 21:00</div>
+        <div style="font-size:13px;line-height:1.5;color:#bfbfbf">Москва, ул. Дегунинская, д. 1, корп. 2</div>
+        <div style="font-size:11.5px;line-height:1.5;color:#8f8f8f;max-width:300px">Режим работы: ежедневно, 9:00 – 18:00</div>
       </div>
 
       <sc-for list="{{ columns }}" as="c" hint-placeholder-count="3">
@@ -61,15 +57,23 @@ button{font-family:inherit;cursor:pointer}
 
       <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
         <div style="font-size:12px;line-height:1.5;color:#bfbfbf">Нажмите, чтобы наш менеджер связался с вами:</div>
-        <form onSubmit="{{ noSubmit }}" style="display:flex;flex-direction:column;gap:10px">
-          <input type="tel" placeholder="+7 (000) 000-00-00" style="height:44px;border:1px solid rgba(255,255,255,.25);border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
-          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;transition:background .2s,box-shadow .2s;align-self:flex-start" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.3)">Заказать звонок</button>
+        <form onSubmit="{{ callback }}" style="display:flex;flex-direction:column;gap:10px">
+          <input type="tel" name="phone" required="required" pattern="[+0-9 ()-]{10,20}" placeholder="+7 (000) 000-00-00" style="height:44px;border:1px solid rgba(255,255,255,.25);border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;transition:background .2s,box-shadow .2s;align-self:flex-start" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.3)">{{ callbackLabel }}</button>
           <span style="font-size:11px;line-height:1.45;color:#8f8f8f">Нажимая кнопку, вы даёте <a href="/soglasie-na-obrabotku/" style="color:#fff;text-decoration:underline">согласие на обработку персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#fff;text-decoration:underline">Политикой конфиденциальности</a></span>
         </form>
-        <img src="assets/payments.png" alt="Способы оплаты: PayKeeper, Visa, Mastercard, МИР, СБП" style="height:24px;width:auto;display:block;margin-top:8px;opacity:.75" />
-        <div style="font-size:11px;line-height:1.55;color:#8f8f8f;margin-top:4px">На сайте используются cookies, сервисы аналитики, включая Яндекс Метрику. Продолжая использовать сайт, вы соглашаетесь с обработкой персональных данных и использованием cookies.</div>
       </div>
 
+    </div>
+
+    <div style="display:flex;gap:18px;justify-content:center;margin-top:30px">
+        <div style="display:flex;gap:14px;align-items:center">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
+            <a href="{{ s.href }}" title="{{ s.name }}" target="_blank" rel="noopener" style="display:block;opacity:.85;transition:opacity .15s" style-hover="opacity:1">
+              <img src="{{ s.icon }}" alt="{{ s.name }}" style="width:20px;height:20px;object-fit:contain;display:block" />
+            </a>
+          </sc-for>
+        </div>
     </div>
 
     <div style="{{ bottomCss }}">
@@ -104,8 +108,8 @@ const COLUMNS = [
     T('Примеры работ', '/portfolio/'),
     T('Отзывы', '/otzyvy/'),
     T('Вопросы и ответы', '/faq/'),
-    T('Блог', '/blog/'),
     T('Контакты', '/kontakty/'),
+    T('Блог', '/blog/'),
   ] },
   { title: 'Сотрудничество', items: [
     T('Партнёрам', '/partners/'),
@@ -114,18 +118,20 @@ const COLUMNS = [
 ];
 
 const SOCIALS = [
+  { name: 'Дзен', href: 'https://dzen.ru/espada', icon: 'assets/soc-dzen.png' },
   { name: 'Telegram', href: 'https://t.me/espada_remont', icon: 'assets/soc-tg.png' },
   { name: 'ВКонтакте', href: 'https://vk.com/sk_espada', icon: 'assets/soc-vk.png' },
-  { name: 'Дзен', href: 'https://dzen.ru/espada', icon: 'assets/soc-dzen.png' },
 ];
 
 class Component extends DCLogic {
+  state = { sent: false };
   renderVals() {
     const m = !!this.props.mobile;
     return {
       socials: SOCIALS,
       columns: COLUMNS,
-      noSubmit: (e) => { e.preventDefault(); },
+      callbackLabel: this.state.sent ? 'Звонок заказан' : 'Заказать звонок',
+      callback: (e) => { e.preventDefault(); this.setState({ sent: true }); },
       innerCss: 'max-width:1240px;margin:0 auto;padding:' + (m ? '36px 16px 28px' : '56px 20px 26px'),
       gridCss: m
         ? 'display:flex;flex-direction:column;gap:34px'

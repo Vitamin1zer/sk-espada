@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -69,7 +72,7 @@ button{font-family:inherit;cursor:pointer}
               </div>
             </sc-for>
           </nav>
-          <button type="button" style="{{ ctaCss }}" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">Вызвать замерщика</button>
+          <button type="button" data-open-form="repair" style="{{ ctaCss }}" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">Вызвать замерщика</button>
         </div>
       </div>
 
@@ -104,7 +107,7 @@ button{font-family:inherit;cursor:pointer}
               <div style="flex:0 0 260px;width:260px;background:#f8f8f8;padding:24px 22px">
                 <div style="font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.22;color:#000">{{ panel.promo.title }}</div>
                 <div style="margin-top:12px;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ panel.promo.text }}</div>
-                <button type="button" style="margin-top:18px;width:100%;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:13px 14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">{{ panel.promo.cta }}</button>
+                <button type="button" data-open-form="{{ panel.promo.form }}" style="margin-top:18px;width:100%;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:13px 14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.18)">{{ panel.promo.cta }}</button>
                 <a href="{{ panel.promo.href }}" style="margin-top:14px;display:block;font-size:12px;font-weight:700;letter-spacing:.02em;color:#00AD9F;text-decoration:none" style-hover="color:#026B63">{{ panel.promo.link }} →</a>
               </div>
             </sc-if>
@@ -176,7 +179,7 @@ button{font-family:inherit;cursor:pointer}
         </sc-for>
 
         <div style="padding:20px 16px 8px">
-          <button type="button" style="width:100%;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:17px 16px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Вызвать замерщика</button>
+          <button type="button" data-open-form="repair" style="width:100%;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 16px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Вызвать замерщика</button>
         </div>
 
         <div style="padding:18px 16px 8px;display:flex;flex-direction:column;gap:13px">
@@ -222,7 +225,10 @@ const REMONT = [
     L('Элитный', '/elitnyj-remont-kvartir/'),
     L('Недорогой', '/nedorogoj-remont-kvartir/'),
     L('Под сдачу', '/remont-pod-sdachu-v-arendu/'),
-    L('После залива и пожара', '/remont-posle-zaliva-i-pozhara/'),
+    L('С перепланировкой', '/pereplanirovka-kvartiry/'),
+    L('Под ключ', '/remont-kvartir-pod-klyuch/'),
+    L('После залива', '/remont-posle-zaliva/'),
+    L('После пожара', '/remont-posle-pozhara/'),
     L('По стилю', '/remont-kvartir-po-stilyu/'),
   ] }],
   [
@@ -250,39 +256,36 @@ const REMONT = [
     L('Балкон и лоджия', '/remont-balkona-i-lodzhii/'),
     L('Гардеробная', '/remont-garderobnoj/'),
   ] }],
-  [{ title: 'Прочее', items: [
-    L('По ЖК', '/remont-v-zhk-shablon/'),
+  [{ title: 'Ремонт не в квартире', items: [
     L('Дома и коттеджи', '/remont-domov-i-kottedzhej/'),
     L('Коммерческие помещения', '/remont-kommercheskih-pomeshchenij/'),
+  ] }, { title: 'Ремонт в вашем ЖК', items: [
+    L('ЖК в Москве', '/remont-v-zhk-moskva/'),
+    L('ЖК в Московской области', '/remont-v-zhk-moskovskaya-oblast/'),
   ] }],
 ];
 
 const DESIGN = [
   [{ title: 'По объекту', items: [
-    L('Квартира', '/dizajn-interera-kvartiry/'),
-    L('Квартира-студия', '/dizajn-kvartiry-studii/'),
-    L('Дом', '/dizajn-interera-doma/'),
-    L('Офис', '/dizajn-interera-ofisa/'),
+    L('Квартира', '/dizajn-interera-kvartiry/'), L('Квартира-студия', '/dizajn-kvartiry-studii/'),
+    L('Дом', '/dizajn-interera-doma/'), L('Офис', '/dizajn-interera-ofisa/'),
     L('Коммерческие помещения', '/dizajn-kommercheskih-pomeshchenij/'),
   ] }],
   [{ title: 'По помещениям', items: [
-    L('Кухня', '/dizajn-kuhni/'),
-    L('Ванная комната', '/dizajn-vannoj-komnaty/'),
-    L('Спальня', '/dizajn-spalni/'),
+    L('Кухня', '/dizajn-kuhni/'), L('Ванная комната', '/dizajn-vannoj-komnaty/'),
+    L('Спальня', '/dizajn-spalni/'), L('Гостиная', '/dizajn-gostinoj/'),
+    L('Детская комната', '/dizajn-detskoj-komnaty/'), L('Прихожая и коридор', '/dizajn-prihozhej-i-koridora/'),
   ] }],
-  [{ title: '', spacer: true, items: [
-    L('Гостиная', '/dizajn-gostinoj/'),
-    L('Детская комната', '/dizajn-detskoj-komnaty/'),
-    L('Прихожая и коридор', '/dizajn-prihozhej-i-koridora/'),
+  [{ title: 'По стилю', items: [
+    L('Современный стиль', '/dizajn-sovremennyj-stil/'), L('Минимализм', '/dizajn-minimalizm/'),
+    L('Неоклассика', '/dizajn-neoklassika/'), L('Скандинавский стиль', '/dizajn-skandinavskij-stil/'), L('Лофт', '/dizajn-loft/'),
   ] }],
 ];
 
 const PRIEMKA = [
-  [{ title: '', items: [
-    L('Без отделки', '/priyomka-kvartiry-bez-otdelki/'),
-    L('С отделкой', '/priyomka-kvartiry-s-otdelkoj/'),
-    L('По ЖК', '/priyomka-v-zhk-shablon/'),
-  ] }],
+  [{ title: 'В новостройке', items: [L('Квартира без отделки', '/priyomka-kvartiry-bez-otdelki/'), L('Квартира с отделкой', '/priyomka-kvartiry-s-otdelkoj/')] }],
+  [{ title: 'Другое', items: [L('Приёмка после ремонта', '/priyomka-posle-remonta/'), L('Приёмка квартиры по реновации', '/priyomka-kvartiry-po-renovatsii/')] }],
+  [{ title: 'Приёмка в вашем ЖК', items: [L('ЖК в Москве', '/priyomka-v-zhk-moskva/'), L('ЖК в Московской области', '/priyomka-v-zhk-moskovskaya-oblast/')] }],
 ];
 
 const USLUGI = [
@@ -308,7 +311,7 @@ const USLUGI = [
     L('Механизированная штукатурка', '/mehanizirovannaya-shtukaturka/'),
     L('Выравнивание стен', '/vyravnivanie-sten/'),
   ] },
-   { title: '', items: [
+   { title: 'Другое', items: [
     L('Перепланировка', '/pereplanirovka-kvartiry/'),
   ] }],
 ];
@@ -316,15 +319,15 @@ const USLUGI = [
 const MENU = [
   { label: 'Ремонт квартир', href: '/remont-kvartir-pod-klyuch/', cols: REMONT, promo: {
     title: 'Не знаете, какой ремонт нужен', text: 'Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд бесплатный.',
-    cta: 'Бесплатный расчёт сметы', link: 'Все виды ремонта', href: '/remont-kvartir-pod-klyuch/' } },
+    form: 'repair', cta: 'Бесплатный расчёт сметы', link: 'Все виды ремонта', href: '/remont-kvartir-pod-klyuch/' } },
   { label: 'Дизайн интерьера', href: '/dizajn-interera/', cols: DESIGN, promo: {
     title: 'Дизайн-проект от 1 790 ₽/м²', text: 'Технический проект — от 1 790 ₽/м², стандартный — от 2 400 ₽/м². Цены за квадратный метр по полу.',
-    cta: 'Бесплатный выезд дизайнера', link: 'О дизайн-проектах', href: '/dizajn-interera/' } },
-  { label: 'Комплектация', href: '/komplektatsiya-kvartiry/' },
+    form: 'design', cta: 'Бесплатный выезд дизайнера', link: 'О дизайн-проектах', href: '/dizajn-interera/' } },
   { label: 'Приёмка', href: '/priyomka-kvartir-v-novostrojke/', cols: PRIEMKA, promo: {
     title: 'Приняли квартиру — считаем ремонт', text: 'Приёмка и ремонт идут одной командой: акт с замечаниями на руках, смета на ремонт — в тот же выезд.',
-    cta: 'Записаться на приёмку', link: 'Как проходит приёмка', href: '/priyomka-kvartir-v-novostrojke/' } },
-  { label: 'Услуги', href: '/uslugi/', cols: USLUGI },
+    form: 'acceptance', cta: 'Записаться на приёмку', link: 'Как проходит приёмка', href: '/priyomka-kvartir-v-novostrojke/' } },
+  { label: 'Комплектация', href: '/komplektatsiya-kvartiry/' },
+  { label: 'Услуги', href: '/uslugi/', cols: USLUGI, promo: { title: 'Всё для ремонта в одном месте', text: 'От отдельных работ до ремонта под ключ. Рассчитаем смету по вашим объёмам.', form: 'repair', cta: 'Бесплатный расчёт сметы', link: 'Все услуги', href: '/uslugi/' } },
   { label: 'Портфолио', href: '/portfolio/' },
 ];
 
@@ -373,12 +376,12 @@ class Component extends DCLogic {
       isDesktop: !isMobile,
       isMobileBar: isMobile && !mob,
       isMobileOpen: isMobile && mob,
-      showUtility: !sticky,
+      showUtility: true,
       mainRowCss: 'background:#fff;height:' + (sticky ? '62px' : '84px')
         + ';border-bottom:1px solid ' + (sticky ? 'transparent' : '#ededed')
         + (sticky ? ';box-shadow:0 3px 14px rgba(0,0,0,.10)' : ''),
       logoCss: 'height:' + (sticky ? 'clamp(26px,2.2cqw,32px)' : 'clamp(30px,3.1cqw,44px)') + ';width:auto;display:block',
-      ctaCss: 'flex:0 0 auto;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:'
+      ctaCss: 'flex:0 0 auto;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:'
         + (sticky ? '13px clamp(12px,1.4cqw,20px)' : '16px clamp(14px,1.7cqw,24px)')
         + ';font-size:clamp(9.5px,.8cqw,' + (sticky ? '11px' : '11.5px')
         + ');font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;transition:background .2s,box-shadow .2s',

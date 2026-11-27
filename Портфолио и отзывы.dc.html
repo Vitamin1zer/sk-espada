@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -19,7 +22,7 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:600;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{background:#fff}
@@ -50,17 +53,17 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="Заголовок" style="background:#fff;padding:clamp(30px,3.4cqw,54px) 0 clamp(22px,2.4cqw,34px)">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:16px">
       <h1 style="margin:0;font-size:clamp(26px,3.2cqw,46px);line-height:1.04;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">{{ h1 }}</h1>
-      <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:680px;text-wrap:pretty">{{ lead }}</p>
+      <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.65;color:#5c5c5c;max-width:680px;text-wrap:pretty">{{ lead }}</p>
     </div>
   </section>
 
   <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
     <div>
       <section data-screen-label="Фильтры" style="background:#f8f8f8;padding:clamp(22px,2.4cqw,34px) 0">
-        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:clamp(10px,1.1cqw,14px);align-items:end">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,168px),1fr));gap:clamp(10px,1.1cqw,14px);align-items:end">
           <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
             <div style="min-width:0;position:relative;display:flex;flex-direction:column;gap:7px">
-              <span style="font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ f.title }}</span>
+              <span style="font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#929292;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ f.title }}</span>
               <button type="button" onClick="{{ f.toggle }}" style="{{ f.btnCss }}">
                 <span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ f.value }}</span>
                 <span style="{{ f.caretCss }}"></span>
@@ -105,7 +108,7 @@ input,textarea,select{font-family:inherit}
           </div>
           <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
             <div style="padding:clamp(30px,3.4cqw,54px) 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
-              <span style="font-size:clamp(15px,1.4cqw,20px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">По этим условиям объектов нет</span>
+              <span style="font-size:clamp(15px,1.4cqw,20px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131">По этим условиям объектов нет</span>
               <span style="font-size:13px;line-height:1.6;color:#5c5c5c;max-width:440px">Снимите часть фильтров или расскажите про свою квартиру — инженер подберёт похожий объект из тех, что сейчас в работе.</span>
               <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
                 <button type="button" onClick="{{ resetFilters }}" style="background:#00AD9F;color:#fff;border:0;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Сбросить фильтры</button>
@@ -141,7 +144,7 @@ input,textarea,select{font-family:inherit}
       <section data-screen-label="Параметры объекта" style="background:#f8f8f8;padding:clamp(36px,4cqw,64px) 0">
         <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:start">
           <div style="min-width:0">
-            <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Параметры объекта</h2>
+            <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Параметры объекта</h2>
             <div style="display:flex;flex-direction:column">
               <sc-for list="{{ params }}" as="p" hint-placeholder-count="6">
                 <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #e4e4e4">
@@ -152,9 +155,9 @@ input,textarea,select{font-family:inherit}
             </div>
           </div>
           <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
-            <h2 style="margin:0;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Задача и решение</h2>
+            <h2 style="margin:0;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Задача и решение</h2>
             <sc-for list="{{ story }}" as="t" hint-placeholder-count="3">
-              <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;text-wrap:pretty">{{ t }}</p>
+              <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.65;color:#5c5c5c;text-wrap:pretty">{{ t }}</p>
             </sc-for>
           </div>
         </div>
@@ -162,7 +165,7 @@ input,textarea,select{font-family:inherit}
 
       <section data-screen-label="До и после" style="background:#fff;padding:clamp(44px,5cqw,80px) 0">
         <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">До и после</h2>
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">До и после</h2>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,1.8cqw,26px)">
             <sc-for list="{{ beforeAfter }}" as="b" hint-placeholder-count="2">
               <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
@@ -179,11 +182,11 @@ input,textarea,select{font-family:inherit}
 
       <section data-screen-label="Состав работ" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
         <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Состав работ</h2>
+          <h2 style="margin:0 0 clamp(22px,2.4cqw,36px);font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Состав работ</h2>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:start">
             <sc-for list="{{ scope }}" as="g" hint-placeholder-count="3">
               <div style="background:#fff;padding:clamp(20px,2cqw,26px);display:flex;flex-direction:column;gap:14px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)">
-                <h3 style="margin:0;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">{{ g.title }}</h3>
+                <h3 style="margin:0;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#00AD9F">{{ g.title }}</h3>
                 <div style="display:flex;flex-direction:column;gap:9px">
                   <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="5">
                     <div style="display:flex;gap:10px;align-items:flex-start">
@@ -218,7 +221,7 @@ input,textarea,select{font-family:inherit}
 
       <section data-screen-label="Связанные услуги" style="background:#fff;padding:0 0 clamp(44px,5cqw,80px)">
         <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-          <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Услуги из этого проекта</h2>
+          <h2 style="margin:0 0 20px;font-size:clamp(18px,1.9cqw,26px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Услуги из этого проекта</h2>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
             <sc-for list="{{ related }}" as="r" hint-placeholder-count="5">
               <a href="{{ r.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ r.t }}</a>
@@ -231,65 +234,13 @@ input,textarea,select{font-family:inherit}
 
   <sc-if value="{{ isReviews }}" hint-placeholder-val="{{ false }}">
     <div>
-      <section data-screen-label="Сводная оценка" style="background:#f8f8f8;padding:clamp(30px,3.4cqw,50px) 0">
-        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(20px,2.4cqw,36px);align-items:center">
-          <div style="min-width:0;display:flex;flex-direction:column;gap:8px">
-            <div style="display:flex;align-items:baseline;gap:10px">
-              <span style="font-size:clamp(38px,4cqw,58px);font-weight:800;line-height:1;color:#00AD9F;font-variant-numeric:tabular-nums">4,9</span>
-              <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:110px;height:20px;object-fit:contain;display:block" />
-            </div>
-            <span style="font-size:12px;color:#929292">средняя оценка по трём площадкам</span>
-          </div>
-          <sc-for list="{{ platforms }}" as="p" hint-placeholder-count="3">
-            <div style="min-width:0;display:flex;flex-direction:column;gap:6px;border-left:2px solid #00AD9F;padding-left:16px">
-              <span style="font-size:clamp(18px,1.8cqw,24px);font-weight:800;color:#313131;font-variant-numeric:tabular-nums">{{ p.v }}</span>
-              <span style="font-size:12px;color:#5c5c5c">{{ p.t }}</span>
-              <a href="{{ p.href }}" target="_blank" rel="noopener" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F">Смотреть оригинал →</a>
-            </div>
-          </sc-for>
-        </div>
-      </section>
-
-      <section data-screen-label="Отзывы" style="background:#fff;padding:clamp(36px,4cqw,64px) 0">
-        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;gap:clamp(24px,2.6cqw,40px)">
-          <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
-            <span style="flex:0 0 130px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#929292">По услуге</span>
-            <div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:8px">
-              <sc-for list="{{ revFilter }}" as="i" hint-placeholder-count="4">
-                <button type="button" onClick="{{ i.go }}" style="{{ i.css }}">{{ i.t }}</button>
-              </sc-for>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,1.8cqw,26px);align-items:stretch">
-            <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
-              <div style="background:#f8f8f8;padding:clamp(20px,2cqw,28px);display:flex;flex-direction:column;gap:14px;min-width:0">
-                <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-                  <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:100px;height:19px;object-fit:contain;display:block" />
-                  <span style="font-size:11.5px;color:#929292;font-variant-numeric:tabular-nums">{{ r.date }}</span>
-                </div>
-                <span style="align-self:flex-start;background:#fff;border:1px solid #e2e2e2;padding:6px 11px;font-size:11px;color:#5c5c5c">{{ r.service }}</span>
-                <p style="margin:0;font-size:12.5px;line-height:1.6;color:#5c5c5c;flex:1">{{ r.text }}</p>
-                <sc-if value="{{ r.photo }}" hint-placeholder-val="{{ false }}">
-                  <img src="{{ r.photo }}" alt="Объект клиента" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#eaeaea" />
-                </sc-if>
-                <div style="display:flex;gap:12px;align-items:center;border-top:1px solid #e4e4e4;padding-top:14px">
-                  <img src="{{ r.avatar }}" alt="{{ r.name }}" style="width:40px;height:40px;border-radius:50%;object-fit:cover;display:block;background:#e8e8e8" />
-                  <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
-                    <span style="font-size:13.5px;font-weight:700;color:#313131">{{ r.name }}</span>
-                    <a href="{{ r.href }}" target="_blank" rel="noopener" style="font-size:11px;color:#00AD9F">{{ r.source }} →</a>
-                  </div>
-                </div>
-              </div>
-            </sc-for>
-          </div>
-        </div>
-      </section>
+      <dc-import name="Отзывы"></dc-import>
 
       <section data-screen-label="Оставить отзыв" style="background:#f8f8f8;padding:clamp(44px,5cqw,80px) 0">
         <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.8cqw,48px);align-items:center">
           <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
-            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Оставить отзыв</h2>
-            <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:480px;text-wrap:pretty">Мы не подключаем виджеты с рейтингами: отзывы публикуем как есть и всегда указываем источник. Если ремонт делали вы — напишите на любой из площадок, мы перенесём отзыв сюда со ссылкой на оригинал.</p>
+            <h2 style="margin:0;font-size:clamp(19px,2cqw,28px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Оставить отзыв</h2>
+            <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.65;color:#5c5c5c;max-width:480px;text-wrap:pretty">Расскажите, как прошёл ваш ремонт. Оставьте отзыв на одной из площадок, чтобы другие клиенты могли прочитать ваш опыт.</p>
             <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
               <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
               <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="border:1px solid #00AD9F;color:#00AD9F;padding:15px 24px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">2ГИС</a>
@@ -308,8 +259,8 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="CTA перед подвалом" style="background:#00AD9F">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:center">
       <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
-        <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff">{{ ctaTitle }}</h2>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">{{ ctaText }}</p>
+        <h2 style="margin:0;font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#fff">{{ ctaTitle }}</h2>
+        <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.6;color:#fff;max-width:460px;text-wrap:pretty">{{ ctaText }}</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
           <button type="button" onClick="{{ openPopup }}" style="background:#fff;color:#00AD9F;border:0;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:color .2s" style-hover="color:#026B63">{{ ctaMain }}</button>
           <button type="button" onClick="{{ openPopup }}" style="background:transparent;color:#fff;border:1px solid #fff;padding:17px 26px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#00AD9F">Бесплатный расчёт сметы</button>
@@ -324,7 +275,7 @@ input,textarea,select{font-family:inherit}
   <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
 
   <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
+    <div style="position:absolute;top:var(--demo-visible-top,0px);height:var(--demo-visible-height,100dvh);left:0;right:0;background:rgba(20,20,20,.6);z-index:80;overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
       <div style="width:100%;max-width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
         <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="100%,520px"></dc-import>
       </div>

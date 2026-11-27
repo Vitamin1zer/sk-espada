@@ -1,0 +1,67 @@
+:root {
+  --c-brand: #00ad9f;
+  --c-brand-dark: #026b63;
+  --c-review-active: #01ad9f;
+  --c-ink: #313131;
+  --c-muted: #5c5c5c;
+  --c-bg: #fff;
+  --c-bg-alt: #f8f8f8;
+  --c-line: #d9d9d9;
+  --radius-control: 5px;
+}
+
+/* Общие состояния. Геометрия самих компонентов хранится в HTML-макетах. */
+html { scroll-behavior: smooth; }
+body { font-family: TildaSans, 'Helvetica Neue', Helvetica, sans-serif; }
+button, input, textarea, select { font: inherit; }
+button, input, textarea, select, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible,
+select:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--c-brand);
+  outline-offset: 4px;
+}
+button:disabled { cursor: default; opacity: .45; }
+img { max-width: 100%; }
+.espada-tariffs { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;align-items:start;margin-top:40px; }
+.espada-tariff { display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0; }
+.espada-tariff__box { background:var(--c-brand);color:var(--c-bg);border-radius:5px;overflow:hidden;width:100%; }
+.espada-tariff__box h3 { margin:0;padding:22px 20px;text-align:center;font-size:21px;font-weight:600;line-height:1.25; }
+.espada-tariff__price { background:var(--c-brand-dark);padding:20px;text-align:center; }
+.espada-tariff__price em { display:block;font-size:28px;font-weight:400;line-height:1.2; }
+.espada-tariff__price span { display:block;margin-top:8px;font-size:14px; }
+.espada-tariff__items { padding:28px 24px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.5; }
+.espada-tariff__cta { min-height:48px;padding:15px 20px;border:0;border-radius:5px;background:var(--c-brand-dark);color:var(--c-bg);font-size:16px;font-weight:600;line-height:1.25;text-align:left; }
+.espada-tariff__cta:hover { background:var(--c-brand); }
+@media(max-width:1000px){.espada-tariffs{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.espada-tariffs{grid-template-columns:minmax(0,1fr);gap:32px;}}
+dialog.espada-dialog {
+  width: min(600px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--c-bg);
+  box-shadow: 0 24px 90px rgb(0 0 0 / 25%);
+  overflow: auto;
+}
+.espada-dialog::backdrop { background: rgb(0 0 0 / 65%); }
+.espada-dialog__close {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font-size: 28px;
+  cursor: pointer;
+}
+.espada-dialog iframe { display: block; width: 100%; border: 0; min-height: 460px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms; transition-duration: .01ms; }
+}

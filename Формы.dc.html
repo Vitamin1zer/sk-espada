@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -14,7 +17,7 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:600;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{background:#e9e9e7}
@@ -22,10 +25,11 @@ a{color:#00AD9F;text-decoration:none}
 a:hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
+.demo-canvas{max-width:100%}.demo-canvas div,.demo-canvas figure{max-width:100%;min-width:0}.demo-canvas figure{width:100%;flex:0 1 auto}@media(min-width:700px){.demo-canvas figure{width:auto}}
 </style>
 </helmet>
 
-<section style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#e9e9e7;padding:56px 56px 120px;display:flex;flex-direction:column;gap:56px">
+<section class="demo-canvas" style="font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#e9e9e7;padding:clamp(28px,3.9vw,56px) clamp(16px,3.9vw,56px) 80px;display:flex;flex-direction:column;gap:56px">
 
   <sc-for list="{{ kinds }}" as="k" hint-placeholder-count="4">
     <div style="display:flex;flex-direction:column;gap:18px">
@@ -68,11 +72,11 @@ input,textarea,select{font-family:inherit}
   </div>
 
   <div style="background:#fff;padding:32px;display:flex;flex-direction:column;gap:16px;max-width:900px">
-    <h2 style="margin:0;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#00AD9F">Правила поведения форм</h2>
+    <h2 style="margin:0;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#00AD9F">Правила поведения форм</h2>
     <div style="display:flex;flex-direction:column;gap:12px">
       <sc-for list="{{ rules }}" as="r" hint-placeholder-count="5">
         <div style="display:flex;gap:14px;align-items:flex-start;border-top:1px solid #ededed;padding-top:12px">
-          <span style="flex:0 0 24px;font-size:12px;font-weight:800;color:#bfbfbf;font-variant-numeric:tabular-nums">{{ r.i }}</span>
+          <span style="flex:0 0 24px;font-size:12px;font-weight:600;color:#bfbfbf;font-variant-numeric:tabular-nums">{{ r.i }}</span>
           <span style="font-size:13.5px;line-height:1.55;color:#313131">{{ r.t }}</span>
         </div>
       </sc-for>

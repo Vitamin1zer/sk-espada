@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -30,437 +33,592 @@ a:hover{color:#026B63}
 button{font-family:inherit;cursor:pointer}
 input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
+
+
+/* Static element styles precede the page cascade. */
+:where(.main-home).main-inline-1,:where(.main-home) .main-inline-1{container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden}
+:where(.main-home).main-inline-2,:where(.main-home) .main-inline-2{position:relative;background:#313131}
+:where(.main-home).main-inline-3,:where(.main-home) .main-inline-3{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+:where(.main-home).main-inline-4,:where(.main-home) .main-inline-4{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.72) 0%,rgba(20,20,20,.5) 55%,rgba(20,20,20,.3) 100%)}
+:where(.main-home).main-inline-5,:where(.main-home) .main-inline-5{position:relative;max-width:1200px;margin:0 auto;padding:clamp(40px,4.6cqw,74px) clamp(16px,1.4cqw,20px) clamp(44px,5cqw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,3cqw,44px);align-items:center;min-height:clamp(480px,38cqw,560px)}
+:where(.main-home).main-inline-6,:where(.main-home) .main-inline-6{display:flex;flex-direction:column;gap:clamp(18px,1.7cqw,26px);min-width:0}
+:where(.main-home).main-inline-7,:where(.main-home) .main-inline-7{margin:0;font-size:clamp(30px,4.9cqw,70px);line-height:1.02;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#fff}
+:where(.main-home).main-inline-8,:where(.main-home) .main-inline-8{font-size:clamp(19px,2cqw,29px);font-weight:600;color:#00AD9F;line-height:1.15}
+:where(.main-home).main-inline-9,:where(.main-home) .main-inline-9{font-size:clamp(13px,1.35cqw,19px);line-height:1.55;color:#fff;max-width:520px;display:flex;flex-direction:column;gap:4px}
+:where(.main-home).main-inline-10,:where(.main-home) .main-inline-10{font-size:11px;color:#d9d9d9;letter-spacing:.02em}
+:where(.main-home).main-inline-11,:where(.main-home) .main-inline-11{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+:where(.main-home).main-inline-12,:where(.main-home) .main-inline-12{background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s}
+:where(.main-home).main-inline-13,:where(.main-home) .main-inline-13{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s}
+:where(.main-home).main-inline-14,:where(.main-home) .main-inline-14{background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0}
+:where(.main-home).main-inline-15,:where(.main-home) .main-inline-15{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)}
+:where(.main-home).main-inline-16,:where(.main-home) .main-inline-16{margin:0;line-height:1.04}
+:where(.main-home).main-inline-17,:where(.main-home) .main-inline-17{display:block;font-size:clamp(28px,3.9cqw,56px);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#00AD9F}
+:where(.main-home).main-inline-18,:where(.main-home) .main-inline-18{display:block;font-size:clamp(20px,2.75cqw,40px);font-weight:800;letter-spacing:-.015em;text-transform:uppercase;color:#000;margin-top:2px}
+:where(.main-home).main-inline-19,:where(.main-home) .main-inline-19{margin-top:clamp(28px,3cqw,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,1.7cqw,24px)}
+:where(.main-home).main-inline-20,:where(.main-home) .main-inline-20{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:5px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.05);text-decoration:none;transition:box-shadow .2s,transform .2s}
+:where(.main-home).main-inline-21,:where(.main-home) .main-inline-21{flex:1;min-width:0;display:flex;flex-direction:column;gap:9px}
+:where(.main-home).main-inline-22,:where(.main-home) .main-inline-22{margin:0;font-size:clamp(14px,1.1cqw,16px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#00AD9F;line-height:1.2}
+:where(.main-home).main-inline-23,:where(.main-home) .main-inline-23{margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c}
+:where(.main-home).main-inline-24,:where(.main-home) .main-inline-24{flex:0 0 96px;width:96px;height:96px;object-fit:cover;border-radius:5px;display:block}
+:where(.main-home).main-inline-25,:where(.main-home) .main-inline-25{background:#fff;padding:0 0 clamp(44px,5cqw,80px)}
+:where(.main-home).main-inline-26,:where(.main-home) .main-inline-26{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(20px,2.4cqw,36px);align-items:start}
+:where(.main-home).main-inline-27,:where(.main-home) .main-inline-27{min-width:0;display:flex;flex-direction:column;gap:14px}
+:where(.main-home).main-inline-28,:where(.main-home) .main-inline-28{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px;display:block;background:#f0f0f0}
+:where(.main-home).main-inline-29,:where(.main-home) .main-inline-29{margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#00AD9F;line-height:1.2}
+:where(.main-home).main-inline-30,:where(.main-home) .main-inline-30{margin:0;font-size:clamp(12.5px,1cqw,14px);line-height:1.55;color:#5c5c5c}
+:where(.main-home).main-inline-31,:where(.main-home) .main-inline-31{background:#fff;padding:0 0 clamp(44px,5.6cqw,92px)}
+:where(.main-home).main-inline-32,:where(.main-home) .main-inline-32{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,2.2cqw,32px);align-items:stretch}
+:where(.main-home).main-inline-33,:where(.main-home) .main-inline-33{min-width:0;display:flex;flex-direction:column;gap:clamp(14px,1.5cqw,22px)}
+:where(.main-home).main-inline-34,:where(.main-home) .main-inline-34{background:#00AD9F;border-radius:5px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:16px}
+:where(.main-home).main-inline-35,:where(.main-home) .main-inline-35{margin:0;font-size:clamp(16px,1.5cqw,22px);line-height:1.2;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff}
+:where(.main-home).main-inline-36,:where(.main-home) .main-inline-36{margin:0;font-size:12.5px;line-height:1.55;color:#fff;opacity:.95}
+:where(.main-home).main-inline-37,:where(.main-home) .main-inline-37{display:flex;flex-direction:column;gap:11px}
+:where(.main-home).main-inline-38,:where(.main-home) .main-inline-38{display:flex;gap:12px;align-items:flex-start}
+:where(.main-home).main-inline-39,:where(.main-home) .main-inline-39{color:#fff;font-size:14px;line-height:1.35}
+:where(.main-home).main-inline-40,:where(.main-home) .main-inline-40{font-size:13px;line-height:1.4;color:#fff}
+:where(.main-home).main-inline-41,:where(.main-home) .main-inline-41{align-self:flex-start;background:#fff;color:#00AD9F;padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:.03em;transition:color .2s}
+:where(.main-home).main-inline-42,:where(.main-home) .main-inline-42{background:#00AD9F;border-radius:5px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:14px}
+:where(.main-home).main-inline-43,:where(.main-home) .main-inline-43{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-44,:where(.main-home) .main-inline-44{font-size:12px;font-weight:600;color:#fff}
+:where(.main-home).main-inline-45,:where(.main-home) .main-inline-45{height:46px;border:0;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none}
+:where(.main-home).main-inline-46,:where(.main-home) .main-inline-46{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-47,:where(.main-home) .main-inline-47{font-size:12px;font-weight:600;color:#fff}
+:where(.main-home).main-inline-48,:where(.main-home) .main-inline-48{height:46px;border:0;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none}
+:where(.main-home).main-inline-49,:where(.main-home) .main-inline-49{display:flex;gap:9px;align-items:flex-start}
+:where(.main-home).main-inline-50,:where(.main-home) .main-inline-50{width:17px;height:17px;flex:0 0 17px;margin-top:2px;accent-color:#00ad9f}
+:where(.main-home).main-inline-51,:where(.main-home) .main-inline-51{font-size:11px;line-height:1.45;color:#fff}
+:where(.main-home).main-inline-52,:where(.main-home) .main-inline-52{color:#fff;text-decoration:underline}
+:where(.main-home).main-inline-53,:where(.main-home) .main-inline-53{color:#fff;text-decoration:underline}
+:where(.main-home).main-inline-54,:where(.main-home) .main-inline-54{align-self:center;background:#fff;color:#00AD9F;border:0;border-radius:5px;padding:15px 26px;font-size:12.5px;font-weight:700;letter-spacing:.02em;transition:color .2s}
+:where(.main-home).main-inline-55,:where(.main-home) .main-inline-55{min-width:0}
+:where(.main-home).main-inline-56,:where(.main-home) .main-inline-56{width:100%;height:100%;min-height:clamp(300px,32cqw,460px);object-fit:cover;border-radius:5px;display:block;background:#f0f0f0}
+:where(.main-home).main-inline-57,:where(.main-home) .main-inline-57{background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0}
+:where(.main-home).main-inline-58,:where(.main-home) .main-inline-58{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)}
+:where(.main-home).main-inline-59,:where(.main-home) .main-inline-59{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+:where(.main-home).main-inline-60,:where(.main-home) .main-inline-60{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-61,:where(.main-home) .main-inline-61{width:42px;height:42px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s}
+:where(.main-home).main-inline-62,:where(.main-home) .main-inline-62{width:42px;height:42px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s}
+:where(.main-home).main-inline-63,:where(.main-home) .main-inline-63{margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px,2cqw,32px);align-items:center}
+:where(.main-home).main-inline-64,:where(.main-home) .main-inline-64{width:100%;height:clamp(48px,4.4cqw,62px);object-fit:contain;display:block;filter:grayscale(1);opacity:.72;transition:opacity .2s}
+:where(.main-home).main-inline-65,:where(.main-home) .main-inline-65{background:#00AD9F;position:relative}
+:where(.main-home).main-inline-66,:where(.main-home) .main-inline-66{max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:start}
+:where(.main-home).main-inline-67,:where(.main-home) .main-inline-67{min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(40px,4.4cqw,72px)}
+:where(.main-home).main-inline-68,:where(.main-home) .main-inline-68{margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff}
+:where(.main-home).main-inline-69,:where(.main-home) .main-inline-69{margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff}
+:where(.main-home).main-inline-70,:where(.main-home) .main-inline-70{margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:440px;text-wrap:pretty}
+:where(.main-home).main-inline-71,:where(.main-home) .main-inline-71{margin:0;font-size:11.5px;line-height:1.55;color:#fff;font-style:italic;opacity:.9;max-width:400px}
+:where(.main-home).main-inline-72,:where(.main-home) .main-inline-72{min-width:0;background:#fff;padding:clamp(22px,2.1cqw,30px);display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(40px,4.4cqw,72px)}
+:where(.main-home).main-inline-73,:where(.main-home) .main-inline-73{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-74,:where(.main-home) .main-inline-74{font-size:11.5px;font-weight:600;color:#5c5c5c}
+:where(.main-home).main-inline-75,:where(.main-home) .main-inline-75{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
+:where(.main-home).main-inline-76,:where(.main-home) .main-inline-76{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-77,:where(.main-home) .main-inline-77{font-size:11.5px;font-weight:600;color:#5c5c5c}
+:where(.main-home).main-inline-78,:where(.main-home) .main-inline-78{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
+:where(.main-home).main-inline-79,:where(.main-home) .main-inline-79{display:flex;gap:9px;align-items:flex-start}
+:where(.main-home).main-inline-80,:where(.main-home) .main-inline-80{width:17px;height:17px;flex:0 0 17px;margin-top:2px;accent-color:#00ad9f}
+:where(.main-home).main-inline-81,:where(.main-home) .main-inline-81{font-size:11px;line-height:1.45;color:#5c5c5c}
+:where(.main-home).main-inline-82,:where(.main-home) .main-inline-82{color:#00AD9F;text-decoration:underline}
+:where(.main-home).main-inline-83,:where(.main-home) .main-inline-83{color:#00AD9F;text-decoration:underline}
+:where(.main-home).main-inline-84,:where(.main-home) .main-inline-84{align-self:flex-start;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:16px 24px;font-size:12px;font-weight:700;letter-spacing:.04em;transition:background .2s,box-shadow .2s}
+:where(.main-home).main-inline-85,:where(.main-home) .main-inline-85{min-width:0;display:flex;align-items:flex-end;justify-content:center;align-self:stretch}
+:where(.main-home).main-inline-86,:where(.main-home) .main-inline-86{width:100%;max-width:330px;height:auto;display:block}
+:where(.main-home).main-inline-87,:where(.main-home) .main-inline-87{background:#fff;padding:clamp(44px,5.6cqw,92px) 0}
+:where(.main-home).main-inline-88,:where(.main-home) .main-inline-88{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,44px);align-items:center}
+:where(.main-home).main-inline-89,:where(.main-home) .main-inline-89{min-width:0;display:flex;flex-direction:column;gap:clamp(22px,2.4cqw,36px)}
+:where(.main-home).main-inline-90,:where(.main-home) .main-inline-90{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#00AD9F}
+:where(.main-home).main-inline-91,:where(.main-home) .main-inline-91{font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131}
+:where(.main-home).main-inline-92,:where(.main-home) .main-inline-92{color:#00AD9F}
+:where(.main-home).main-inline-93,:where(.main-home) .main-inline-93{display:flex;flex-direction:column;gap:14px}
+:where(.main-home).main-inline-94,:where(.main-home) .main-inline-94{margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131}
+:where(.main-home).main-inline-95,:where(.main-home) .main-inline-95{display:flex;gap:12px;flex-wrap:wrap}
+:where(.main-home).main-inline-96,:where(.main-home) .main-inline-96{background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s}
+:where(.main-home).main-inline-97,:where(.main-home) .main-inline-97{background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s}
+:where(.main-home).main-inline-98,:where(.main-home) .main-inline-98{display:flex;flex-direction:column;gap:10px}
+:where(.main-home).main-inline-99,:where(.main-home) .main-inline-99{margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131}
+:where(.main-home).main-inline-100,:where(.main-home) .main-inline-100{font-size:clamp(22px,2.1cqw,30px);font-weight:600;color:#00AD9F;text-decoration:underline;text-underline-offset:4px}
+:where(.main-home).main-inline-101,:where(.main-home) .main-inline-101{font-size:clamp(13px,1.05cqw,15px);color:#5c5c5c;text-decoration:none}
+:where(.main-home).main-inline-102,:where(.main-home) .main-inline-102{min-width:0}
+:where(.main-home).main-inline-103,:where(.main-home) .main-inline-103{display:block}
+:where(.main-home).main-inline-104,:where(.main-home) .main-inline-104{width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;background:#f0f0f0}
+:where(.main-home).main-inline-105,:where(.main-home) .main-inline-105{width:100%;max-width:560px;background:#fff;padding:clamp(24px,2.4cqw,36px);position:relative;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+:where(.main-home).main-inline-106,:where(.main-home) .main-inline-106{position:absolute;right:14px;top:14px;width:32px;height:32px;border:0;background:transparent;padding:0;font-size:22px;line-height:1;color:#929292}
+:where(.main-home).main-inline-107,:where(.main-home) .main-inline-107{margin:0;font-size:clamp(18px,1.7cqw,24px);line-height:1.18;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000;max-width:88%}
+:where(.main-home).main-inline-108,:where(.main-home) .main-inline-108{font-size:13px;line-height:1.55;color:#5c5c5c}
+:where(.main-home).main-inline-109,:where(.main-home) .main-inline-109{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-110,:where(.main-home) .main-inline-110{font-size:13px;line-height:1.5;color:#313131}
+:where(.main-home).main-inline-111,:where(.main-home) .main-inline-111{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+:where(.main-home).main-inline-112,:where(.main-home) .main-inline-112{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-113,:where(.main-home) .main-inline-113{font-size:11.5px;font-weight:600;color:#5c5c5c}
+:where(.main-home).main-inline-114,:where(.main-home) .main-inline-114{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
+:where(.main-home).main-inline-115,:where(.main-home) .main-inline-115{display:flex;flex-direction:column;gap:6px}
+:where(.main-home).main-inline-116,:where(.main-home) .main-inline-116{font-size:11.5px;font-weight:600;color:#5c5c5c}
+:where(.main-home).main-inline-117,:where(.main-home) .main-inline-117{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
+:where(.main-home).main-inline-118,:where(.main-home) .main-inline-118{display:flex;gap:9px;align-items:flex-start}
+:where(.main-home).main-inline-119,:where(.main-home) .main-inline-119{width:17px;height:17px;flex:0 0 17px;margin-top:2px;accent-color:#00ad9f}
+:where(.main-home).main-inline-120,:where(.main-home) .main-inline-120{font-size:11px;line-height:1.45;color:#5c5c5c}
+:where(.main-home).main-inline-121,:where(.main-home) .main-inline-121{color:#00AD9F;text-decoration:underline}
+:where(.main-home).main-inline-122,:where(.main-home) .main-inline-122{color:#00AD9F;text-decoration:underline}
+:where(.main-home).main-inline-123,:where(.main-home) .main-inline-123{background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:16px 22px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s}
+:where(.main-home).main-inline-124,:where(.main-home) .main-inline-124{background:#fff;padding:clamp(28px,3cqw,48px) 0 clamp(44px,5cqw,80px)}
+:where(.main-home).main-inline-125,:where(.main-home) .main-inline-125{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)}
+:where(.main-home).main-inline-126,:where(.main-home) .main-inline-126{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-127,:where(.main-home) .main-inline-127{color:#00AD9F}
+:where(.main-home).main-inline-128,:where(.main-home) .main-inline-128{min-width:0;display:flex;flex-direction:column;gap:13px}
+:where(.main-home).main-inline-129,:where(.main-home) .main-inline-129{width:100%;height:clamp(150px,13cqw,190px);object-fit:cover;border-radius:5px;display:block;background:#f0f0f0}
+:where(.main-home).main-inline-130,:where(.main-home) .main-inline-130{margin:0;font-size:clamp(12.5px,1cqw,14px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25}
+:where(.main-home).main-inline-131,:where(.main-home) .main-inline-131{display:flex;flex-direction:column;gap:9px}
+:where(.main-home).main-inline-132,:where(.main-home) .main-inline-132{margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c}
+:where(.main-home).main-inline-133,:where(.main-home) .main-inline-133{background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0}
+:where(.main-home).main-inline-134,:where(.main-home) .main-inline-134{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)}
+:where(.main-home).main-inline-135,:where(.main-home) .main-inline-135{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-136,:where(.main-home) .main-inline-136{margin-top:20px;align-self:flex-start;display:inline-block;background:#00AD9F;color:#fff;padding:13px 20px;font-size:clamp(12px,1cqw,14px);font-weight:600}
+:where(.main-home).main-inline-137,:where(.main-home) .main-inline-137{margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start}
+:where(.main-home).main-inline-138,:where(.main-home) .main-inline-138{background:#fff;border-radius:5px;padding:clamp(16px,1.5cqw,22px);display:flex;flex-direction:column;gap:16px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+:where(.main-home).main-inline-139,:where(.main-home) .main-inline-139{width:100%;height:clamp(160px,14cqw,210px);object-fit:cover;border-radius:5px;display:block;background:#f0f0f0}
+:where(.main-home).main-inline-140,:where(.main-home) .main-inline-140{margin:0;font-size:clamp(14px,1.15cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25}
+:where(.main-home).main-inline-141,:where(.main-home) .main-inline-141{margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c}
+:where(.main-home).main-inline-142,:where(.main-home) .main-inline-142{background:#fff;padding:clamp(44px,5.6cqw,92px) 0 0}
+:where(.main-home).main-inline-143,:where(.main-home) .main-inline-143{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:end}
+:where(.main-home).main-inline-144,:where(.main-home) .main-inline-144{min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(20px,3cqw,54px)}
+:where(.main-home).main-inline-145,:where(.main-home) .main-inline-145{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-146,:where(.main-home) .main-inline-146{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+:where(.main-home).main-inline-147,:where(.main-home) .main-inline-147{margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131}
+:where(.main-home).main-inline-148,:where(.main-home) .main-inline-148{background:#00AD9F;color:#fff;padding:9px 16px}
+:where(.main-home).main-inline-149,:where(.main-home) .main-inline-149{font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.15}
+:where(.main-home).main-inline-150,:where(.main-home) .main-inline-150{font-size:11.5px;line-height:1.3}
+:where(.main-home).main-inline-151,:where(.main-home) .main-inline-151{margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty}
+:where(.main-home).main-inline-152,:where(.main-home) .main-inline-152{margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty}
+:where(.main-home).main-inline-153,:where(.main-home) .main-inline-153{min-width:0;display:flex;justify-content:flex-end;align-items:flex-end}
+:where(.main-home).main-inline-154,:where(.main-home) .main-inline-154{width:100%;max-width:400px;height:auto;display:block}
+:where(.main-home).main-inline-155,:where(.main-home) .main-inline-155{background:#fff;padding:clamp(36px,4cqw,64px) 0}
+:where(.main-home).main-inline-156,:where(.main-home) .main-inline-156{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)}
+:where(.main-home).main-inline-157,:where(.main-home) .main-inline-157{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.4cqw,40px);align-items:center}
+:where(.main-home).main-inline-158,:where(.main-home) .main-inline-158{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-159,:where(.main-home) .main-inline-159{color:#00AD9F}
+:where(.main-home).main-inline-160,:where(.main-home) .main-inline-160{margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;text-wrap:pretty}
+:where(.main-home).main-inline-161,:where(.main-home) .main-inline-161{margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,2cqw,30px)}
+:where(.main-home).main-inline-162,:where(.main-home) .main-inline-162{display:flex;gap:16px;align-items:center}
+:where(.main-home).main-inline-163,:where(.main-home) .main-inline-163{width:22px;height:22px;flex:0 0 22px;display:block}
+:where(.main-home).main-inline-164,:where(.main-home) .main-inline-164{font-size:clamp(12.5px,1.05cqw,15px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#313131;line-height:1.25}
+:where(.main-home).main-inline-165,:where(.main-home) .main-inline-165{background:#fff;padding:clamp(36px,4cqw,64px) 0 clamp(44px,5cqw,80px)}
+:where(.main-home).main-inline-166,:where(.main-home) .main-inline-166{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:start}
+:where(.main-home).main-inline-167,:where(.main-home) .main-inline-167{min-width:0;display:flex;flex-direction:column;gap:22px}
+:where(.main-home).main-inline-168,:where(.main-home) .main-inline-168{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-169,:where(.main-home) .main-inline-169{align-self:flex-start;background:#00AD9F;color:#fff;padding:14px 26px;font-size:clamp(14px,1.25cqw,18px);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+:where(.main-home).main-inline-170,:where(.main-home) .main-inline-170{min-width:0;display:flex;flex-direction:column;gap:16px}
+:where(.main-home).main-inline-171,:where(.main-home) .main-inline-171{margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000}
+:where(.main-home).main-inline-172,:where(.main-home) .main-inline-172{display:flex;flex-direction:column;gap:11px}
+:where(.main-home).main-inline-173,:where(.main-home) .main-inline-173{display:flex;gap:11px;align-items:flex-start}
+:where(.main-home).main-inline-174,:where(.main-home) .main-inline-174{font-size:15px;color:#00AD9F;line-height:1.35;font-weight:700}
+:where(.main-home).main-inline-175,:where(.main-home) .main-inline-175{font-size:clamp(13px,1.05cqw,15px);line-height:1.4;color:#313131}
+:where(.main-home).main-inline-176,:where(.main-home) .main-inline-176{margin-top:clamp(30px,3.4cqw,54px);padding:0 clamp(16px,1.4cqw,20px);display:flex;gap:clamp(10px,1.1cqw,16px);overflow-x:auto;max-width:1240px;margin-left:auto;margin-right:auto}
+/* Main page: dimensions follow the Tilda reference and the client's marked-up PDF. */
+.main-home {font-size:18px;line-height:1.45;font-weight:400}
+.main-home h1 {font-weight:800}
+.main-home section h2 {font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:0;text-transform:uppercase}
+.main-home section h3 {font-size:clamp(19px,1.6cqw,23px);line-height:1.2;font-weight:600;letter-spacing:0}
+.main-home section p {font-size:18px;line-height:1.45;font-weight:400}
+.main-home em {font-style:normal;color:#00ad9f}
+.main-container {max-width:1200px;margin:0 auto;padding:0 20px}
+.main-section {padding:76px 0}
+.main-home .main-btn {display:inline-flex;align-items:center;justify-content:center;gap:16px;background:#00ad9f;color:#fff;border:0;border-radius:5px;padding:15px 24px;font-size:18px;font-weight:600;line-height:1.3;text-decoration:none;transition:background .2s}
+.main-home .main-btn:hover {background:#026b63;color:#fff}
+.main-actions {display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;margin-top:36px}
+.main-center {text-align:center}
+.main-home .main-note {font-size:14px;color:#929292;margin:24px 0 0}
+.main-home [data-screen-label="Обложка"] > div:last-child {grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:70px;min-height:640px;padding-top:70px;padding-bottom:70px}
+.main-home [data-screen-label="Обложка"] h1 {font-size:clamp(42px,5.7cqw,82px);white-space:nowrap;line-height:1.05}
+.main-home [data-screen-label="Обложка"] h1 + div {font-size:40px;font-weight:400}
+.main-home [data-screen-label="Обложка"] h1 + div + div {font-size:22px;line-height:1.45;max-width:680px}
+.main-home [data-screen-label="Обложка"] button {font-size:18px;border-radius:5px;letter-spacing:0;padding:15px 22px}
+.main-hero-quiz {background:rgba(255,255,255,.96);padding:0;border-radius:5px;overflow:hidden;display:flex;flex-direction:column;gap:22px;color:#313131}
+.main-home .main-hero-quiz h2 {font-size:24px;margin:0;line-height:1.15}
+.main-hero-quiz p {margin:0}
+.main-eyebrow {font-size:15px;color:#00ad9f;text-transform:uppercase;font-weight:600}
+.main-home [data-screen-label="Четыре направления"] {background:#f8f8f8}
+.main-home [data-screen-label="Четыре направления"] h2 span {font-weight:600}
+.main-home [data-screen-label="Четыре направления"] h2 span:first-child {font-size:55px;line-height:1.2}
+.main-home [data-screen-label="Четыре направления"] h2 span:last-child {font-size:35px;line-height:1.25;margin-top:8px;color:#313131}
+.main-home [data-screen-label="Четыре направления"] h2 + div {grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.main-home [data-screen-label="Четыре направления"] a {min-height:188px;padding:26px;align-items:center;box-shadow:none;gap:12px}
+.main-home [data-screen-label="Четыре направления"] h3 {font-size:20px}
+.main-home [data-screen-label="Четыре направления"] p {font-size:15px;line-height:1.2;color:#929292}
+.main-home [data-screen-label="Четыре направления"] img {width:106px;height:106px;flex-basis:106px}
+.main-video-wrap {background:#00ad9f;padding:56px 20px}
+.main-video-panel {max-width:1020px;margin:auto;padding:44px;background:#fff}
+.main-home .main-video-panel h2 {font-size:28px;text-align:center;margin:0}
+.main-home .main-video-panel > p {font-size:16px;margin:18px 0 30px}
+.main-video-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.main-video-card {background:#00ad9f;color:#fff;border-radius:5px;overflow:hidden;display:flex;flex-direction:column}
+.main-video-card > div:first-child {padding:22px;min-height:185px}
+.main-home .main-video-card h3 {font-size:18px;color:#fff;margin:0}
+.main-home .main-video-card p {font-size:16px;margin:20px 0 0}
+.main-video-image {position:relative;overflow:hidden}
+.main-video-image img {display:block;width:100%;aspect-ratio:.9;object-fit:cover;transition:transform .3s}
+.main-video-image span {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#00ad9f;color:#fff;font-size:22px;box-shadow:0 0 0 7px #ffffff50}
+.main-video-card:hover img {transform:scale(1.04)}
+.main-rules {padding-top:62px;padding-bottom:76px;max-width:1000px}
+.main-home .main-rules h2 {font-size:35px;text-align:center;margin:0 0 30px}
+.main-rules-grid {background:#f8f8f8;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 60px;padding:40px;border-radius:5px}
+.main-home .main-rules-grid h3 {color:#00ad9f;margin:0 0 12px;font-size:22px;text-transform:uppercase}
+.main-rules-grid p {margin:0}
+.main-case-sub {margin:30px 0 34px;text-transform:uppercase;font-weight:400}
+.main-case-sub em {display:inline-block;margin-top:8px}
+.main-case-preview {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:80px}
+.main-case-preview p {margin:14px 0}
+.main-case-preview h3 {margin-top:0;text-transform:uppercase}
+.main-case-preview button {margin-top:20px}
+.main-stroke {display:block;width:65px;height:7px;background:#00ad9f;margin-bottom:24px}
+.main-dash {position:relative;padding-left:28px}
+.main-dash:before {content:'';position:absolute;left:0;top:12px;width:16px;height:5px;background:#00ad9f}
+.main-tariff-section {background:#f8f8f8}
+.main-tariff-heading {display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.main-tariff-heading h2 {margin:0}
+.main-tabs {display:flex;gap:14px}
+.main-tabs button {font-size:17px;letter-spacing:0;border-radius:5px;padding:14px 22px;font-weight:600}
+.main-tariffs {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:40px;align-items:start}
+.main-tariff {min-width:0;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.main-tariff-box {background:#00ad9f;color:#fff;border-radius:5px;padding:28px 24px;width:100%}
+.main-home .main-tariff h3 {font-size:22px;text-transform:none;margin:0;line-height:1.2;min-height:52px}
+.main-tariff-price {font-size:26px;font-weight:400;font-style:italic;line-height:1.15;margin:24px 0}
+.main-tariff-price > span:not(.sc-interp) {display:block;font-size:16px;font-style:normal;margin-top:6px}
+.main-tariff ul {list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:13px;font-size:18px;line-height:1.4;font-weight:400}
+.main-home .main-tariff-cta {font-size:17px;padding:13px 20px;max-width:100%;background:#026b63}
+.main-home .main-tariff-cta:hover {background:#014f49}
+.main-portfolio {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 28px;margin-top:36px}
+.main-project {color:#313131}
+.main-project-pictures {aspect-ratio:.9;position:relative;overflow:hidden;border-radius:5px;background:#f6f6f6}
+.main-project-pictures img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.main-project-before {opacity:0}
+.main-project:hover .main-project-before,.main-project:focus-visible .main-project-before {opacity:1}
+.main-project-pictures span {position:absolute;bottom:14px;left:14px;padding:6px 10px;background:#fff;color:#313131;font-size:15px;border-radius:5px;opacity:0;transition:opacity .2s}
+.main-project:hover .main-project-pictures span,.main-project:focus-visible .main-project-pictures span {opacity:1}
+.main-home .main-project h3 {font-size:17px;font-weight:600;text-transform:uppercase;line-height:1.2;margin:18px 0 0}
+.main-inspection {background:#313131;color:#fff;padding:54px 0}
+.main-inspection > div {display:flex;justify-content:space-between;align-items:center;gap:60px}
+.main-home .main-inspection h2 {font-size:34px;margin:0}
+.main-inspection p {margin:20px 0 0;max-width:760px}
+.main-inspection .main-btn {flex-shrink:0}
+.main-home [data-screen-label="Мастера и решения"] {padding-top:70px}
+.main-home [data-screen-label="Мастера и решения"] h3 {font-size:24px}
+.main-home [data-screen-label="Мастера и решения"] p {font-size:18px}
+.main-home [data-screen-label="Дизайнеры"] h2 {font-size:28px}
+.main-home [data-screen-label="Дизайнеры"] input,.main-home [data-screen-label="Договоримся о встрече"] input {font-size:18px;height:48px;border-radius:5px}
+.main-home [data-screen-label="Дизайнеры"] form > button {font-size:18px}
+.main-home [data-screen-label="Дизайнеры"] h2 + p {font-size:18px}
+.main-home [data-screen-label="Дизайнеры"] h2 + p + div span:last-child {font-size:18px}
+.main-home [data-screen-label="Дизайнеры"] h2 + p + div + a {font-size:17px}
+.main-home [data-screen-label="Партнёры и поставщики"] > div {position:relative;display:flex;flex-direction:column;gap:25px}
+.main-home [data-screen-label="Партнёры и поставщики"] > div > div:first-child {justify-content:center}
+.main-home [data-screen-label="Партнёры и поставщики"] h2 {font-size:27px;text-align:center}
+.main-partner-controls {position:absolute;left:0;right:0;bottom:6px;display:flex;justify-content:space-between;pointer-events:none}
+.main-partner-controls button {pointer-events:auto;width:34px;height:34px}
+.main-partner-logos {margin-left:60px;margin-right:60px;gap:35px;grid-template-columns:repeat(5,minmax(0,1fr));display:grid;width:calc(100% - 120px)}
+.main-home .main-residential h2 {text-align:center;font-size:32px;margin:0}
+.main-residential > div > p {margin:20px 0 40px}
+.main-residential-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:50px;max-width:1050px;margin:0 auto}
+.main-residential-grid a {color:#313131;text-align:center}
+.main-residential-grid img {display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:5px}
+.main-home .main-residential h3 {font-size:19px;font-weight:600;line-height:1.25;margin:20px 0 0}
+.main-home .main-reviews h2 {text-align:center;font-size:34px;margin:0}
+.main-home .main-review-intro {font-size:15px;color:#929292;margin:24px 0}
+.main-review-tabs {display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
+.main-review-tabs button {background:#f6f6f6;color:#313131;border:0;padding:12px 20px;border-radius:5px;font-size:18px;font-weight:400;transition:background .2s,color .2s}
+.main-review-tabs button.is-active,.main-review-tabs button:hover {background:#01ad9f;color:#fff}
+.main-review-cards {display:flex;flex-direction:column;gap:18px;max-width:1000px;margin:auto}
+.main-review-card {border-radius:5px;background:#f6f6f6;padding:24px 28px}
+.main-review-person {display:flex;align-items:center;gap:14px}
+.main-review-person > img:first-child {width:46px;height:46px;object-fit:cover;border-radius:50%}
+.main-home .main-review-person h3 {font-size:20px;text-transform:none;margin:0}
+.main-review-person > div > span:not(.sc-interp) {font-size:13px;color:#929292}
+.main-review-stars {width:111px;height:20px;object-fit:contain;margin-left:auto}
+.main-review-card p {margin:18px 0 8px}
+.main-review-card button {background:none;border:0;padding:5px 0;font-size:16px;color:#00ad9f;text-decoration:underline;text-underline-offset:3px}
+.main-review-avatar{width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:grid;place-items:center;background:#e0efec;color:#026b63;font-size:17px}.main-zoon-icon{display:grid;place-items:center;width:52px;height:52px;margin:0 auto 20px;border-radius:13px;background:#7354cd;color:white;font-size:35px;font-weight:600}.main-review-pending{text-align:center;max-width:1000px;margin:auto;background:#f6f6f6;border-radius:5px;padding:32px}.main-review-pending h3{margin:0}.main-review-pending-line{display:block;background:#e6e6e6;height:11px;margin:14px 0;border-radius:5px;max-width:90%}.main-review-pending-line:last-child{max-width:65%}
+.main-review-source {display:table;margin:20px auto 0;font-size:18px}
+.main-home [data-screen-label="Договоримся о встрече"] > div {grid-template-columns:1.1fr 1.1fr .9fr;gap:34px;align-items:center}
+.main-home [data-screen-label="Договоримся о встрече"] h2 {font-size:30px;max-width:330px}
+.main-home [data-screen-label="Договоримся о встрече"] h3 {font-size:22px}
+.main-home [data-screen-label="Договоримся о встрече"] form {border-radius:5px;margin-bottom:40px}
+.main-home [data-screen-label="Договоримся о встрече"] form button {font-size:18px;letter-spacing:0}
+.main-home [data-screen-label="Договоримся о встрече"] > div > div:last-child {align-self:end}
+.main-home [data-screen-label="Договоримся о встрече"] > div > div:last-child img {width:380px;max-width:125%}
+.main-modal-backdrop {position:absolute;inset:0;z-index:90;background:#151515a8}
+.main-modal {position:absolute;top:calc(var(--demo-visible-top,var(--main-local-top,0px)) + 24px);max-height:calc(var(--demo-visible-height,var(--main-local-height,100dvh)) - 48px);left:50%;transform:translateX(-50%);width:calc(100% - 48px);max-width:1060px;border-radius:5px;background:#fff;z-index:91;overflow:auto;box-shadow:0 24px 80px #0006;overscroll-behavior:contain}
+.main-modal-close {position:sticky;top:12px;left:calc(100% - 56px);margin:12px 12px -52px auto;width:40px;height:40px;z-index:5;border:0;border-radius:50%;background:#313131;color:#fff;font-size:30px;line-height:1;display:grid;place-items:center}
+.main-request-modal {max-width:560px}
+.main-quiz-modal {max-width:900px;padding-top:18px}
+.main-story-title {padding:55px 40px 25px}
+.main-home .main-story-title h2 {margin:0;font-size:36px;font-weight:600;text-transform:uppercase}
+.main-story-title p {margin:16px 0 0}
+.main-home .main-story-modal section {padding:40px}
+.main-home .main-story-modal section > div {padding-left:0;padding-right:0}
+.main-home .main-story-modal section h2 {font-size:34px}
+.main-home .main-story-modal section h3 {font-size:21px}
+.main-home .main-story-modal section p {font-size:18px}
+.main-story-carousel {display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:30px;padding-bottom:18px}
+.main-worry-card {flex:0 0 300px;background:#f8f8f8;padding:20px;border-radius:5px;scroll-snap-align:start}
+.main-home .main-worry-card h3 {font-size:19px}
+.main-home .main-worry-card p {font-size:17px}
+.main-story-arrows {display:flex;gap:8px;margin-top:22px}
+.main-story-arrows button {width:34px;height:34px;border:0;border-radius:5px;background:#00ad9f;color:white;font-size:22px}
+.main-home [data-screen-label="Где избежали лишних трат"] {background:#313131;color:#fff}
+.main-home [data-screen-label="Где избежали лишних трат"] h2,.main-home [data-screen-label="Где избежали лишних трат"] p,.main-home [data-screen-label="Где избежали лишних трат"] span {color:#fff}
+.main-home [data-screen-label="Где избежали лишних трат"] h2 span {color:#00ad9f}
+.main-home .main-story-modal [data-screen-label="Ключевые моменты"] > div > div:last-child > div {display:flex;flex-direction:column;background:#f8f8f8;padding:24px}
+.main-home .main-story-modal [data-screen-label="Ключевые моменты"] img {order:3;margin-top:12px}
+.main-home .main-story-modal [data-screen-label="Общение с инженером"] img {max-width:420px;min-width:340px}
+.main-home .main-story-modal [data-screen-label="Общение с инженером"] > div {grid-template-columns:1.2fr 1fr}
+@media(max-width:1000px){
+ .main-home [data-screen-label="Обложка"] > div:last-child{grid-template-columns:1fr;gap:35px}.main-hero-quiz{max-width:540px}.main-home [data-screen-label="Обложка"] h1{font-size:clamp(36px,7.1vw,70px)}
+ .main-tariffs{grid-template-columns:repeat(2,minmax(0,1fr))}.main-portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .main-home [data-screen-label="Четыре направления"] h2+div{grid-template-columns:repeat(2,minmax(0,1fr))}.main-video-card>div:first-child{padding:18px;min-height:205px}
+ .main-home [data-screen-label="Договоримся о встрече"]>div{grid-template-columns:repeat(2,minmax(0,1fr))}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child{grid-column:2;margin-top:-30px}
+ .main-home [data-screen-label="Договоримся о встрече"] form{margin-bottom:0}.main-residential-grid{gap:25px}.main-case-preview{gap:35px}
+ .main-home .main-story-modal [data-screen-label="Общение с инженером"]>div{grid-template-columns:1fr}.main-home .main-story-modal [data-screen-label="Общение с инженером"] img{min-width:0}
+}
+@media(max-width:640px){
+ .main-section{padding:48px 0}.main-container{padding:0 20px}.main-home section h2{font-size:28px}.main-home section p{font-size:18px}
+ .main-home [data-screen-label="Обложка"]>div:last-child{padding-top:50px;padding-bottom:50px}.main-home [data-screen-label="Обложка"] h1{font-size:clamp(31px,7.1vw,46px)}.main-home [data-screen-label="Обложка"] h1+div{font-size:28px}.main-home [data-screen-label="Обложка"] h1+div+div{font-size:19px}.main-hero-quiz{padding:0}.main-home .main-hero-quiz h2{font-size:24px}
+ .main-home [data-screen-label="Четыре направления"] h2 span:first-child{font-size:35px}.main-home [data-screen-label="Четыре направления"] h2 span:last-child{font-size:25px}.main-home [data-screen-label="Четыре направления"] h2+div{grid-template-columns:1fr;gap:16px}.main-home [data-screen-label="Четыре направления"] a{min-height:170px;padding:22px}
+ .main-video-wrap{padding:30px 16px}.main-video-panel{padding:28px 20px}.main-home .main-video-panel h2{font-size:24px}.main-video-grid{grid-template-columns:1fr}.main-video-card{display:grid;grid-template-columns:1fr 1fr}.main-video-card>div:first-child{min-height:0;padding:18px}.main-video-image img{height:100%;aspect-ratio:.8}.main-home .main-video-card h3{font-size:17px}.main-home .main-video-card p{font-size:15px}
+ .main-rules{padding-top:45px;padding-bottom:45px}.main-rules-grid{grid-template-columns:1fr;gap:30px;padding:26px}.main-actions{gap:20px}.main-case-preview{grid-template-columns:1fr;gap:35px}.main-case-sub{font-size:19px}.main-tariffs{grid-template-columns:1fr;gap:32px}.main-tariff-box{padding:30px}.main-tariff h3{min-height:0}.main-tabs{width:100%;gap:10px}.main-tabs button{font-size:16px;padding:12px 17px}.main-tariff-heading h2{font-size:28px}
+ .main-portfolio{gap:28px 18px}.main-home .main-project h3{font-size:14px}.main-project-pictures span{font-size:12px;bottom:8px;left:8px;padding:5px 7px}
+ .main-inspection{padding:40px 0}.main-inspection>div{flex-direction:column;align-items:flex-start;gap:28px}.main-home .main-inspection h2{font-size:28px}
+ .main-partner-logos{margin:0 45px;width:calc(100% - 90px);grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.main-partner-logos img:nth-last-child(-n+2){display:none}.main-partner-controls{bottom:12px}
+ .main-residential-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}.main-home .main-residential h2{font-size:27px}.main-home .main-residential h3{font-size:17px}
+ .main-home .main-reviews h2{font-size:28px}.main-review-card{padding:22px}.main-review-person{gap:10px;flex-wrap:wrap}.main-review-stars{margin:8px 0 0 56px}.main-review-person > div > span:not(.sc-interp){font-size:12px}.main-home .main-review-person h3{font-size:19px}
+ .main-home [data-screen-label="Договоримся о встрече"]>div{grid-template-columns:1fr;gap:25px}.main-home [data-screen-label="Договоримся о встрече"]>div>div:first-child{padding-bottom:0}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child{grid-column:auto;margin-top:0}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child img{max-width:290px}
+ .main-modal{width:calc(100% - 24px)}.main-home .main-story-modal section{padding:28px 22px}.main-story-title{padding:55px 22px 10px}.main-home .main-story-title h2{font-size:28px}.main-home .main-story-modal section h2{font-size:28px}.main-worry-card{flex-basis:270px}
+}
+
 </style>
 </helmet>
 
-<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+<div class="main-home main-inline-1">
 
   <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
 
-  <section data-screen-label="Обложка" style="position:relative;background:#313131">
-    <img src="assets/hero-remont.jpg" alt="Интерьер отремонтированной квартиры" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.72) 0%,rgba(20,20,20,.5) 55%,rgba(20,20,20,.3) 100%)"></div>
-    <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(40px,4.6cqw,74px) clamp(16px,1.4cqw,20px) clamp(44px,5cqw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,3cqw,44px);align-items:center;min-height:clamp(480px,38cqw,560px)">
+  <section data-screen-label="Обложка" class="main-inline-2">
+    <img src="assets/hero-remont.jpg" alt="Интерьер отремонтированной квартиры" class="main-inline-3">
+    <div class="main-inline-4"></div>
+    <div class="main-inline-5">
 
-      <div style="display:flex;flex-direction:column;gap:clamp(18px,1.7cqw,26px);min-width:0">
-        <h1 style="margin:0;font-size:clamp(30px,4.9cqw,70px);line-height:1.02;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#fff">Ремонт квартир</h1>
-        <div style="font-size:clamp(19px,2cqw,29px);font-weight:600;color:#00AD9F;line-height:1.15">от 7 850 рублей за м²</div>
-        <div style="font-size:clamp(13px,1.35cqw,19px);line-height:1.55;color:#fff;max-width:520px;display:flex;flex-direction:column;gap:4px">
+      <div class="main-inline-6">
+        <h1 class="main-inline-7">Ремонт квартир</h1>
+        <div class="main-inline-8">от 7 850 рублей за м²</div>
+        <div class="main-inline-9">
           <span>— подготовим индивидуальный расчет;</span>
           <span>— поможем спланировать бюджет;</span>
           <span>— подберем решения под ваши задачи и образ жизни.</span>
         </div>
-        <div style="font-size:11px;color:#d9d9d9;letter-spacing:.02em">Цена «от» указана за квадратный метр по полу</div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
-          <button type="button" onClick="{{ openPopup }}" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)">Бесплатный расчёт сметы</button>
-          <button type="button" onClick="{{ openPopup }}" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);border-radius:0;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#313131;border-color:#fff">Вызвать замерщика</button>
+        <div class="main-inline-10">Цена «от» указана за квадратный метр по полу</div>
+        <div class="main-inline-11">
+          <button type="button" onClick="{{ openQuiz }}" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35)" class="main-inline-12">Рассчитать стоимость ремонта</button>
+          <button type="button" onClick="{{ openPopup }}" style-hover="background:#fff;color:#313131;border-color:#fff" class="main-inline-13">Вызвать замерщика</button>
         </div>
       </div>
 
-      <div style="min-width:0;display:flex;justify-content:flex-end">
-        <form onSubmit="{{ noSubmit }}" style="width:100%;max-width:420px;background:#fff;padding:clamp(22px,2.1cqw,30px);display:flex;flex-direction:column;gap:14px">
-          <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">Форма заявки · первый экран</div>
-          <div style="font-size:clamp(16px,1.5cqw,21px);line-height:1.2;font-weight:800;text-transform:uppercase;color:#000">Рассчитаем стоимость вашего ремонта <span style="color:#00AD9F">бесплатно</span></div>
-          <div style="font-size:12.5px;line-height:1.5;color:#5c5c5c">Инженер приедет на объект, сделает замер и соберёт смету по вашим объёмам. Выезд и расчёт ничего не стоят.</div>
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">ФИО</span>
-            <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
-          </label>
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Ваш телефон</span>
-            <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
-          </label>
-          <div style="display:flex;gap:9px;align-items:flex-start">
-            <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
-            <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
-          </div>
-          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:16px 20px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">Бесплатный расчёт сметы</button>
-        </form>
-      </div>
+      <div class="main-hero-quiz"><dc-import name="Квиз" kind="Ремонт" startStep="{{ quizStart }}" tone="light" hint-size="460px,560px"></dc-import></div>
 
     </div>
   </section>
 
-  <section data-screen-label="Четыре направления" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;line-height:1.04">
-        <span style="display:block;font-size:clamp(28px,3.9cqw,56px);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#00AD9F">Одна команда</span>
-        <span style="display:block;font-size:clamp(20px,2.75cqw,40px);font-weight:800;letter-spacing:-.015em;text-transform:uppercase;color:#000;margin-top:2px">для всего, что нужно вашей квартире:</span>
+  <section data-screen-label="Четыре направления" class="main-inline-14">
+    <div class="main-inline-15">
+      <h2 class="main-inline-16">
+        <span class="main-inline-17">Одна команда</span>
+        <span class="main-inline-18">для всего, что нужно вашей квартире:</span>
       </h2>
-      <div style="margin-top:clamp(28px,3cqw,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,24px)">
+      <div class="main-inline-19">
         <sc-for list="{{ directions }}" as="d" hint-placeholder-count="6">
-          <a href="{{ d.href }}" style="display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:10px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.05);text-decoration:none;transition:box-shadow .2s,transform .2s" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.11);transform:translateY(-2px)">
-            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:9px">
-              <h3 style="margin:0;font-size:clamp(14px,1.1cqw,16px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#00AD9F;line-height:1.2">{{ d.title }}</h3>
-              <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ d.text }}</p>
+          <a href="{{ d.href }}" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.11);transform:translateY(-2px)" class="main-inline-20">
+            <div class="main-inline-21">
+              <h3 class="main-inline-22">{{ d.title }}</h3>
+              <p class="main-inline-23">{{ d.text }}</p>
             </div>
-            <img src="{{ d.img }}" alt="{{ d.title }}" style="flex:0 0 96px;width:96px;height:96px;object-fit:cover;border-radius:8px;display:block" />
+            <img src="{{ d.img }}" alt="{{ d.title }}" class="main-inline-24">
           </a>
         </sc-for>
       </div>
     </div>
   </section>
 
-  <section data-screen-label="Работа с нами" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:center">
-      <h2 style="margin:0;line-height:1.02">
-        <span style="display:block;font-size:clamp(28px,3.9cqw,56px);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Работа с нами</span>
-        <span style="display:block;font-size:clamp(28px,3.9cqw,56px);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#00AD9F;text-align:right">— это:</span>
-      </h2>
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <sc-for list="{{ works }}" as="w" hint-placeholder-count="3">
-          <div style="{{ w.css }}">
-            <div style="max-width:78%;display:flex;flex-direction:column;gap:6px;align-items:flex-end;text-align:right">
-              <div style="font-size:clamp(14px,1.35cqw,19px);font-weight:800;font-style:italic;letter-spacing:.02em;text-transform:uppercase;color:#fff;line-height:1.15">{{ w.title }}</div>
-              <sc-if value="{{ w.text }}" hint-placeholder-val="{{ true }}">
-                <div style="font-size:12.5px;line-height:1.45;color:#fff;font-style:italic">{{ w.text }}</div>
-              </sc-if>
-            </div>
-          </div>
-        </sc-for>
-      </div>
+  <section data-screen-label="Видеообзоры и правила" class="main-video-rules">
+    <div class="main-video-wrap"><div class="main-video-panel">
+      <h2>Не просто обещаем <em>качественный ремонт</em> —<br />показываем результат</h2>
+      <p class="main-center">Видеообзоры ремонта квартир в Москве и Московской области</p>
+      <div class="main-video-grid"><sc-for list="{{ videos }}" as="v" hint-placeholder-count="3">
+        <a class="main-video-card" href="{{ v.url }}" target="_blank" rel="noopener">
+          <div><h3>{{ v.title }}</h3><p>{{ v.place }}<br />Площадь: {{ v.area }} м²</p></div>
+          <div class="main-video-image"><img src="{{ v.img }}" alt="{{ v.place }} — видеообзор ремонта" /><span aria-label="Смотреть видео">▶</span></div>
+        </a>
+      </sc-for></div>
+    </div></div>
+    <div class="main-container main-rules"><h2>Ремонт<br /><em>по понятным правилам</em></h2>
+      <div class="main-rules-grid"><sc-for list="{{ rules }}" as="r" hint-placeholder-count="4"><div><h3>{{ r.title }}</h3><p>{{ r.text }}</p></div></sc-for></div>
+      <div class="main-actions"><button type="button" class="main-btn" onClick="{{ openQuiz }}">Рассчитать стоимость</button><a href="/dizajn-interera/">Стоимость дизайн-проекта</a></div>
     </div>
   </section>
 
-  <section data-screen-label="Как проходит ремонт" style="background:#fff;padding:0 0 clamp(36px,4cqw,64px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Как проходит ремонт с Эспадой</h2>
-      <div style="margin-top:clamp(24px,2.4cqw,38px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:start">
-        <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
-          <h3 style="margin:0;font-size:clamp(16px,1.5cqw,21px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">На конкретном примере:</h3>
-          <div style="align-self:flex-start;background:#00AD9F;color:#fff;padding:13px 20px;font-size:clamp(12px,1cqw,14px);font-weight:600">ЖК Shagal 2-комнатная квартира 82 м²</div>
-          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">И дальше рассказ совсем не про интерьер:</p>
-          <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;max-width:460px;text-wrap:pretty">На момент обращения к нам клиент уже получил ключи. Дизайн-проект был разработан сторонней студией. Оставалось найти тех, кто сделает ремонт.</p>
-        </div>
-        <div style="min-width:0;display:flex;flex-direction:column;gap:20px">
-          <div style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131">Дизайнерский ремонт<br />Сроки ремонта — 7 месяцев</div>
-          <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000">Клиент сравнил 6 компаний:</h3>
-          <div style="display:flex;flex-direction:column;gap:13px">
-            <sc-for list="{{ compared }}" as="c" hint-placeholder-count="3">
-              <div style="display:flex;gap:14px;align-items:flex-start">
-                <span style="flex:0 0 22px;height:4px;background:#00AD9F;display:block;margin-top:9px;border-radius:2px"></span>
-                <span style="font-size:clamp(13px,1.05cqw,15px);line-height:1.5;color:#313131">{{ c }}</span>
-              </div>
-            </sc-for>
-          </div>
-        </div>
-      </div>
+  <section data-screen-label="Как проходит ремонт" class="main-section">
+    <div class="main-container"><h2>Как проходит ремонт с Эспадой</h2><h3 class="main-case-sub">На конкретном примере:<br /><em>ЖК Shagal 2-комнатная квартира 82 м²</em></h3>
+      <div class="main-case-preview"><div><span class="main-stroke"></span><p>Дизайнерский ремонт<br />Сроки ремонта — 7 месяцев</p><p>Клиент — Игорь К.</p><button type="button" class="main-btn" onClick="{{ openStory }}">Узнать как проходил этот ремонт</button></div>
+      <div><h3>Игорь сравнил 6 компаний:</h3><sc-for list="{{ compared }}" as="c" hint-placeholder-count="3"><p class="main-dash">{{ c }}</p></sc-for></div></div>
     </div>
   </section>
 
-  <section data-screen-label="Тарифы ремонта" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <div style="display:flex;gap:clamp(14px,1.6cqw,26px);align-items:center;flex-wrap:wrap">
-        <h2 style="margin:0;font-size:clamp(22px,2.3cqw,32px);line-height:1.1;font-weight:800;font-style:italic;letter-spacing:-.01em;text-transform:uppercase;color:#313131">Тарифы ремонта:</h2>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="2">
-            <button type="button" onClick="{{ t.go }}" style="{{ t.css }}">{{ t.label }}</button>
-          </sc-for>
-        </div>
-      </div>
-      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(14px,1.5cqw,22px);align-items:stretch">
-        <sc-for list="{{ tariffs }}" as="t" hint-placeholder-count="4">
-          <div style="background:#00AD9F;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0">
-            <div style="padding:14px 16px;text-align:center;font-size:clamp(13px,1.1cqw,16px);font-weight:700;color:#fff;letter-spacing:.01em">{{ t.title }}</div>
-            <img src="{{ t.img }}" alt="{{ t.title }}" style="width:100%;height:clamp(140px,12cqw,170px);object-fit:cover;display:block;background:#e8e8e8" />
-            <div style="padding:14px 16px;text-align:center;background:#026B63;color:#fff">
-              <div style="font-size:clamp(15px,1.35cqw,19px);font-weight:700;font-style:italic;letter-spacing:.01em">от {{ t.price }} р/м2</div>
-              <div style="font-size:11.5px;opacity:.85">по полу</div>
-            </div>
-            <div style="padding:16px;display:flex;flex-direction:column;gap:7px;flex:1;align-content:flex-start">
-              <sc-for list="{{ t.items }}" as="i" hint-placeholder-count="8">
-                <div style="font-size:12px;line-height:1.35;color:#fff">{{ i }}</div>
-              </sc-for>
-            </div>
-            <button type="button" onClick="{{ openPopup }}" style="margin:0 16px 16px;background:#026B63;color:#fff;border:0;border-radius:0;padding:15px 16px;font-size:12.5px;font-weight:700;letter-spacing:.02em;transition:background .2s" style-hover="background:#014f49">Отправить заявку на расчёт</button>
-          </div>
-        </sc-for>
-      </div>
-      <div style="margin-top:18px;font-size:11.5px;color:#929292">Все цены — с приставкой «от», за квадратный метр по полу. Точная сумма считается по объёмам после замера.</div>
+  <section data-screen-label="Тарифы ремонта" class="main-section main-tariff-section">
+    <div class="main-container"><div class="main-tariff-heading"><h2>Тарифы ремонта:</h2><div class="main-tabs"><sc-for list="{{ tabs }}" as="t" hint-placeholder-count="2"><button type="button" onClick="{{ t.go }}" style="{{ t.css }}">{{ t.label }}</button></sc-for></div></div>
+      <div class="main-tariffs"><sc-for list="{{ tariffs }}" as="t" hint-placeholder-count="4">
+        <article class="main-tariff"><div class="main-tariff-box"><h3>{{ t.title }}</h3><div class="main-tariff-price">от {{ t.price }} ₽/м²<span>по полу</span></div><ul><sc-for list="{{ t.items }}" as="i" hint-placeholder-count="8"><li>{{ i }}</li></sc-for></ul></div>
+        <button type="button" class="main-btn main-tariff-cta" onClick="{{ openPopup }}">Заявка на расчёт</button></article>
+      </sc-for></div><p class="main-note">Цены указаны за квадратный метр по полу. Точная стоимость определяется после замера.</p>
     </div>
   </section>
 
-  <section data-screen-label="Примеры проектов" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Примеры реализованных проектов</h2>
-      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(16px,1.7cqw,26px)">
-        <sc-for list="{{ portfolio }}" as="p" hint-placeholder-count="8">
-          <a href="/portfolio/" style="text-decoration:none;display:flex;flex-direction:column;gap:12px;min-width:0">
-            <img src="{{ p.img }}" alt="{{ p.title }}" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block;background:#f0f0f0;transition:opacity .2s" style-hover="opacity:.9" />
-            <span style="font-size:clamp(11.5px,.95cqw,13px);font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:#5c5c5c;line-height:1.35">{{ p.title }}</span>
-          </a>
-        </sc-for>
-      </div>
-      <div style="margin-top:clamp(26px,2.8cqw,40px);display:flex;justify-content:center">
-        <a href="/portfolio/" style="background:transparent;color:#00AD9F;border:1px solid #00AD9F;padding:16px 30px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Смотреть все работы</a>
-      </div>
+  <section data-screen-label="Примеры проектов" class="main-section">
+    <div class="main-container"><h2>Примеры реализованных проектов</h2>
+      <div class="main-portfolio"><sc-for list="{{ portfolio }}" as="p" hint-placeholder-count="8">
+        <a class="main-project" href="/portfolio/"><div class="main-project-pictures"><img class="main-project-after" src="{{ p.img }}" alt="{{ p.title }} — после ремонта" /><img class="main-project-before" src="{{ p.before }}" alt="{{ p.title }} — фото до ремонта" /><span>До ремонта</span></div><h3>{{ p.title }}</h3></a>
+      </sc-for></div>
     </div>
   </section>
+  <section data-screen-label="Объекты на любой стадии" class="main-inspection"><div class="main-container"><div><h2>Мы готовы показать объекты<br /><em>на любой стадии ремонта</em></h2><p>Инженер покажет вам объект на интересующей стадии ремонта в удобное время и локации.</p></div><button type="button" class="main-btn" onClick="{{ openPopup }}">Записаться на просмотр</button></div></section>
 
-  <section data-screen-label="О чём переживал хозяин" style="background:#fff;padding:clamp(28px,3cqw,48px) 0 clamp(44px,5cqw,80px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">О чём <span style="color:#00AD9F">больше всего переживал</span><br />хозяин квартиры:</h2>
-      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start">
-        <sc-for list="{{ worries }}" as="w" hint-placeholder-count="5">
-          <div style="min-width:0;display:flex;flex-direction:column;gap:13px">
-            <img src="{{ w.img }}" alt="{{ w.title }}" style="width:100%;height:clamp(150px,13cqw,190px);object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
-            <h3 style="margin:0;font-size:clamp(12.5px,1cqw,14px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ w.title }}</h3>
-            <div style="display:flex;flex-direction:column;gap:9px">
-              <sc-for list="{{ w.paras }}" as="p" hint-placeholder-count="2">
-                <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ p }}</p>
-              </sc-for>
-            </div>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
 
-  <section data-screen-label="Ключевые моменты" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Ключевые моменты в выборе компании</h2>
-      <div style="margin-top:20px;align-self:flex-start;display:inline-block;background:#00AD9F;color:#fff;padding:13px 20px;font-size:clamp(12px,1cqw,14px);font-weight:600">Что позволило принять решение в нашу пользу:</div>
-      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,24px);align-items:start">
-        <sc-for list="{{ moments }}" as="m" hint-placeholder-count="3">
-          <div style="background:#fff;border-radius:10px;padding:clamp(16px,1.5cqw,22px);display:flex;flex-direction:column;gap:16px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.05)">
-            <img src="{{ m.img }}" alt="{{ m.title }}" style="width:100%;height:clamp(160px,14cqw,210px);object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
-            <h3 style="margin:0;font-size:clamp(14px,1.15cqw,17px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ m.title }}</h3>
-            <p style="margin:0;font-size:12.5px;line-height:1.5;color:#5c5c5c">{{ m.text }}</p>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
 
-  <section data-screen-label="Общение с инженером" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:end">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(20px,3cqw,54px)">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Общение с нашим инженером</h2>
-        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Впечатления клиента о встрече</h3>
-          <div style="background:#00AD9F;color:#fff;padding:9px 16px">
-            <div style="font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.15">Иван</div>
-            <div style="font-size:11.5px;line-height:1.3">Инженер-сметчик Эспады</div>
-          </div>
-        </div>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">«Встреча с инженером состоялась в формата технической консультации. Мы обсудили что нам важно, какие ожидания по бюджету и работе.</p>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.65;color:#5c5c5c;max-width:560px;text-wrap:pretty">После Иван проанализировал проект, указал на ошибки и предложил более рациональные решения. Такой подход убедил меня, что ремонт будет выполнен не только красиво, но и технически правильно.»</p>
-      </div>
-      <div style="min-width:0;display:flex;justify-content:flex-end;align-items:flex-end">
-        <img src="assets/engineer.png" alt="Иван, инженер-сметчик Эспады" style="width:100%;max-width:400px;height:auto;display:block" />
-      </div>
-    </div>
-  </section>
 
-  <section data-screen-label="Где избежали лишних трат" style="background:#fff;padding:clamp(36px,4cqw,64px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.4cqw,40px);align-items:center">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Где удалось избежать<br /><span style="color:#00AD9F">лишних трат?</span></h2>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c;text-wrap:pretty">Мы провели анализ дизайн-проекта, и наш инженер обнаружил в нем ошибки, которые привели бы к тому, что пришлось бы:</p>
-      </div>
-      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,2cqw,30px)">
-        <sc-for list="{{ avoided }}" as="a" hint-placeholder-count="4">
-          <div style="display:flex;gap:16px;align-items:center">
-            <img src="assets/icon-x.svg" alt="" style="width:22px;height:22px;flex:0 0 22px;display:block" />
-            <span style="font-size:clamp(12.5px,1.05cqw,15px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#313131;line-height:1.25">{{ a }}</span>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
 
-  <section data-screen-label="Что получил клиент" style="background:#fff;padding:clamp(36px,4cqw,64px) 0 clamp(44px,5cqw,80px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:start">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Что получил клиент?</h2>
-        <div style="align-self:flex-start;background:#00AD9F;color:#fff;padding:14px 26px;font-size:clamp(14px,1.25cqw,18px);font-weight:700;letter-spacing:.04em;text-transform:uppercase">Результат.</div>
-      </div>
-      <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
-        <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000">Конец ремонта:</h3>
-        <div style="display:flex;flex-direction:column;gap:11px">
-          <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
-            <div style="display:flex;gap:11px;align-items:flex-start">
-              <span style="font-size:15px;color:#00AD9F;line-height:1.35;font-weight:700">✓</span>
-              <span style="font-size:clamp(13px,1.05cqw,15px);line-height:1.4;color:#313131">{{ r }}</span>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:clamp(30px,3.4cqw,54px);padding:0 clamp(16px,1.4cqw,20px);display:flex;gap:clamp(10px,1.1cqw,16px);overflow-x:auto;max-width:1240px;margin-left:auto;margin-right:auto">
-      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
-        <img src="{{ g.img }}" alt="Готовый ремонт, фото {{ g.n }}" style="{{ g.css }}" />
-      </sc-for>
-    </div>
-  </section>
 
-  <section data-screen-label="Мастера и решения" style="background:#fff;padding:0 0 clamp(44px,5cqw,80px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(20px,2.4cqw,36px);align-items:start">
+
+
+
+
+
+  <section data-screen-label="Мастера и решения" class="main-inline-25">
+    <div class="main-inline-26">
       <sc-for list="{{ masters }}" as="m" hint-placeholder-count="3">
-        <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
-          <img src="{{ m.img }}" alt="{{ m.title }}" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block;background:#f0f0f0" />
-          <h3 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#00AD9F;line-height:1.2">{{ m.title }}</h3>
-          <p style="margin:0;font-size:clamp(12.5px,1cqw,14px);line-height:1.55;color:#5c5c5c">{{ m.text }}</p>
+        <div class="main-inline-27">
+          <img src="{{ m.img }}" alt="{{ m.title }}" class="main-inline-28">
+          <h3 class="main-inline-29">{{ m.title }}</h3>
+          <p class="main-inline-30">{{ m.text }}</p>
         </div>
       </sc-for>
     </div>
   </section>
 
-  <section data-screen-label="Дизайнеры" style="background:#fff;padding:0 0 clamp(44px,5.6cqw,92px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.2cqw,32px);align-items:stretch">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(14px,1.5cqw,22px)">
-        <div style="background:#00AD9F;border-radius:10px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:16px">
-          <h2 style="margin:0;font-size:clamp(16px,1.5cqw,22px);line-height:1.2;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff">Наши дизайнеры найдут уникальные решения для вашего интерьера</h2>
-          <p style="margin:0;font-size:12.5px;line-height:1.55;color:#fff;opacity:.95">Мы предлагаем спектр услуг по созданию индивидуального дизайна интерьера, который подойдет под ваш запрос и сделает ваше пространство уникальным.</p>
-          <div style="display:flex;flex-direction:column;gap:11px">
+  <section data-screen-label="Дизайнеры" class="main-inline-31">
+    <div class="main-inline-32">
+      <div class="main-inline-33">
+        <div class="main-inline-34">
+          <h2 class="main-inline-35">Наши дизайнеры найдут уникальные решения для вашего интерьера</h2>
+          <p class="main-inline-36">Мы предлагаем спектр услуг по созданию индивидуального дизайна интерьера, который подойдет под ваш запрос и сделает ваше пространство уникальным.</p>
+          <div class="main-inline-37">
             <sc-for list="{{ designPerks }}" as="p" hint-placeholder-count="4">
-              <div style="display:flex;gap:12px;align-items:flex-start">
-                <span style="color:#fff;font-size:14px;line-height:1.35">→</span>
-                <span style="font-size:13px;line-height:1.4;color:#fff">{{ p }}</span>
+              <div class="main-inline-38">
+                <span class="main-inline-39">→</span>
+                <span class="main-inline-40">{{ p }}</span>
               </div>
             </sc-for>
           </div>
-          <a href="/dizajn-interera/" style="align-self:flex-start;background:#fff;color:#00AD9F;padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:.03em;transition:color .2s" style-hover="color:#026B63">Узнать больше про дизайн интерьера</a>
+          <a href="/dizajn-interera/" style-hover="color:#026B63" class="main-inline-41">Узнать больше про дизайн интерьера</a>
         </div>
-        <form onSubmit="{{ noSubmit }}" style="background:#00AD9F;border-radius:10px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:14px">
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:12px;font-weight:600;color:#fff">ФИО</span>
-            <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:0;border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" />
+        <form onSubmit="{{ noSubmit }}" class="main-inline-42">
+          <label class="main-inline-43">
+            <span class="main-inline-44">Имя</span>
+            <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" class="main-inline-45">
           </label>
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:12px;font-weight:600;color:#fff">Телефон</span>
-            <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:0;border-radius:0;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" />
+          <label class="main-inline-46">
+            <span class="main-inline-47">Телефон</span>
+            <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() -]{10,}" placeholder="+7 (000) 000-00-00" class="main-inline-48">
           </label>
-          <div style="display:flex;gap:9px;align-items:flex-start">
-            <span style="width:17px;height:17px;border:1px solid #fff;flex:0 0 17px;display:block;margin-top:2px"></span>
-            <span style="font-size:11px;line-height:1.45;color:#fff">Я даю <a href="/soglasie-na-obrabotku/" style="color:#fff;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#fff;text-decoration:underline">Политикой конфиденциальности</a></span>
+          <div class="main-inline-49">
+            <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-50">
+            <span class="main-inline-51">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-52">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-53">Политикой конфиденциальности</a></span>
           </div>
-          <button type="submit" style="align-self:center;background:#fff;color:#00AD9F;border:0;border-radius:0;padding:15px 26px;font-size:12.5px;font-weight:700;letter-spacing:.02em;transition:color .2s" style-hover="color:#026B63">Заказать дизайн-проект</button>
+          <button type="submit" style-hover="color:#026B63" class="main-inline-54">Заказать дизайн-проект</button>
         </form>
       </div>
-      <div style="min-width:0">
-        <img src="assets/designers.jpg" alt="Дизайнер Эспады" style="width:100%;height:100%;min-height:clamp(300px,32cqw,460px);object-fit:cover;border-radius:10px;display:block;background:#f0f0f0" />
+      <div class="main-inline-55">
+        <img src="assets/designers.jpg" alt="Дизайнер Эспады" class="main-inline-56">
       </div>
     </div>
   </section>
 
-  <section data-screen-label="Партнёры и поставщики" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Наши партнеры и поставщики</h2>
-        <div style="display:flex;gap:10px">
-          <button type="button" onClick="{{ partnersPrev }}" aria-label="Предыдущие" style="width:42px;height:42px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s" style-hover="background:#026B63">‹</button>
-          <button type="button" onClick="{{ partnersNext }}" aria-label="Следующие" style="width:42px;height:42px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s" style-hover="background:#026B63">›</button>
-        </div>
+  <section data-screen-label="Партнёры и поставщики" class="main-inline-57">
+    <div class="main-inline-58">
+      <div class="main-inline-59">
+        <h2 class="main-inline-60">Наши партнеры и поставщики</h2>
+        <div class="main-partner-controls">
+          <button type="button" onClick="{{ partnersPrev }}" aria-label="Предыдущие" style-hover="background:#026B63" class="main-inline-61">‹</button>
+          <button type="button" onClick="{{ partnersNext }}" aria-label="Следующие" style-hover="background:#026B63" class="main-inline-62">›</button></div>
       </div>
-      <div style="margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px,2cqw,32px);align-items:center">
+      <div class="main-partner-logos main-inline-63">
         <sc-for list="{{ partners }}" as="p" hint-placeholder-count="5">
-          <img src="{{ p }}" alt="Логотип поставщика" style="width:100%;height:clamp(48px,4.4cqw,62px);object-fit:contain;display:block;filter:grayscale(1);opacity:.72;transition:opacity .2s" style-hover="opacity:1" />
+          <img src="{{ p }}" alt="Логотип поставщика" style-hover="opacity:1" class="main-inline-64">
         </sc-for>
       </div>
     </div>
   </section>
 
-  <section data-screen-label="Вопрос-ответ" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
-      <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000">Вопрос-ответ</h2>
-      <div style="margin-top:clamp(24px,2.6cqw,40px);max-width:780px;display:flex;flex-direction:column;gap:8px">
-        <sc-for list="{{ faq }}" as="f" hint-placeholder-count="6">
-          <div style="background:#00AD9F">
-            <button type="button" onClick="{{ f.go }}" style="width:100%;border:0;background:transparent;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left">
-              <span style="font-size:clamp(13px,1.05cqw,15px);font-weight:600;color:#fff;line-height:1.35">{{ f.q }}</span>
-              <span style="flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#fff;color:#00AD9F;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1;font-weight:400">{{ f.sign }}</span>
-            </button>
-            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
-              <div style="padding:0 20px 22px;display:flex;flex-direction:column;gap:10px">
-                <sc-for list="{{ f.paras }}" as="p" hint-placeholder-count="2">
-                  <p style="margin:0;font-size:12.5px;line-height:1.6;color:#fff">{{ p }}</p>
-                </sc-for>
-                <sc-if value="{{ f.hasList }}" hint-placeholder-val="{{ false }}">
-                  <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px">
-                    <sc-for list="{{ f.list }}" as="li" hint-placeholder-count="3">
-                      <li style="font-size:12.5px;line-height:1.5;color:#fff">{{ li }}</li>
-                    </sc-for>
-                  </ul>
-                </sc-if>
-              </div>
-            </sc-if>
-          </div>
-        </sc-for>
-      </div>
+  <section data-screen-label="ЖК в работе" class="main-section main-residential">
+    <div class="main-container"><h2>ЖК, в которых мы делаем ремонт <em>прямо сейчас</em></h2><p class="main-center">Жилые комплексы Москвы, в которых мы сейчас выполняем ремонт квартир</p>
+      <div class="main-residential-grid"><sc-for list="{{ residential }}" as="r" hint-placeholder-count="4"><a href="/remont-v-zhk-shablon/"><img src="{{ r.img }}" alt="{{ r.title }}" /><h3>{{ r.title }}</h3></a></sc-for></div>
     </div>
   </section>
 
-  <section data-screen-label="Отзывы" style="background:#fff;padding:0 0 clamp(44px,5.6cqw,92px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:flex;flex-direction:column;align-items:center;gap:clamp(20px,2.2cqw,32px)">
-      <p style="margin:0;font-size:12px;line-height:1.5;color:#929292;text-align:center;max-width:640px">все представленные отзывы достоверны и могут быть проверены вами лично на наших площадках (Яндекс.Карты, 2ГИС, Отзовик и проч.)</p>
-      <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.18;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#000;text-align:center;max-width:760px">Не верьте словам — смотрите что говорят живые клиенты.</h2>
-      <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.7cqw,26px);align-items:start">
-        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
-          <div style="{{ r.css }}">
-            <img src="assets/stars.svg" alt="Оценка 5 из 5" style="width:118px;height:22px;object-fit:contain;display:block" />
-            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#5c5c5c;flex:1">{{ r.text }}</p>
-            <div style="display:flex;gap:12px;align-items:center;margin-top:4px">
-              <img src="{{ r.avatar }}" alt="{{ r.name }}" style="width:42px;height:42px;border-radius:50%;object-fit:cover;display:block;background:#e8e8e8" />
-              <span style="font-size:14px;color:#313131">{{ r.name }}</span>
-            </div>
-            <div style="font-size:10.5px;color:#bfbfbf;letter-spacing:.03em">{{ r.source }}</div>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
+  <dc-import name="Отзывы"></dc-import>
 
-  <section data-screen-label="Договоримся о встрече" style="background:#00AD9F;position:relative">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6cqw,40px);align-items:start">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(40px,4.4cqw,72px)">
-        <h2 style="margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff">Договоримся о встрече прямо сейчас..</h2>
-        <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff">И наш специалист:</h3>
-        <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:440px;text-wrap:pretty">приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и ответит на вопросы, сделает детальный расчет сметы</p>
-        <p style="margin:0;font-size:11.5px;line-height:1.55;color:#fff;font-style:italic;opacity:.9;max-width:400px">Заполните эту форму и нажмите кнопку «Свяжитесь со мной», и мы свяжемся с Вами в ближайшее время.</p>
+  <section data-screen-label="Договоримся о встрече" class="main-inline-65">
+    <div class="main-inline-66">
+      <div class="main-inline-67">
+        <h2 class="main-inline-68">Договоримся о встрече прямо сейчас..</h2>
+        <h3 class="main-inline-69">И наш специалист:</h3>
+        <p class="main-inline-70">приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и ответит на вопросы, сделает детальный расчет сметы</p>
+        <p class="main-inline-71">Заполните эту форму и нажмите кнопку «Свяжитесь со мной», и мы свяжемся с Вами в ближайшее время.</p>
       </div>
-      <form onSubmit="{{ noSubmit }}" style="min-width:0;background:#fff;padding:clamp(22px,2.1cqw,30px);display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(40px,4.4cqw,72px)">
-        <label style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">ФИО</span>
-          <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+      <form onSubmit="{{ noSubmit }}" class="main-inline-72">
+        <label class="main-inline-73">
+          <span class="main-inline-74">Имя</span>
+          <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" style-focus="border-color:#00AD9F" class="main-inline-75">
         </label>
-        <label style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Телефон</span>
-          <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+        <label class="main-inline-76">
+          <span class="main-inline-77">Телефон</span>
+          <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() -]{10,}" placeholder="+7 (000) 000-00-00" style-focus="border-color:#00AD9F" class="main-inline-78">
         </label>
-        <div style="display:flex;gap:9px;align-items:flex-start">
-          <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
-          <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+        <div class="main-inline-79">
+          <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-80">
+          <span class="main-inline-81">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-82">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-83">Политикой конфиденциальности</a></span>
         </div>
-        <button type="submit" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;border-radius:0;padding:16px 24px;font-size:12px;font-weight:700;letter-spacing:.04em;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)">Свяжитесь со мной</button>
+        <button type="submit" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.2)" class="main-inline-84">Свяжитесь со мной</button>
       </form>
-      <div style="min-width:0;display:flex;align-items:flex-end;justify-content:center;align-self:stretch">
-        <img src="assets/specialist.png" alt="Специалист Эспады" style="width:100%;max-width:330px;height:auto;display:block" />
+      <div class="main-inline-85">
+        <img src="assets/specialist.png" alt="Специалист Эспады" class="main-inline-86">
       </div>
     </div>
   </section>
 
-  <section data-screen-label="Контакты" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(22px,2.4cqw,36px)">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#00AD9F">Контакты</h2>
-        <div style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="color:#00AD9F">ул. Дегунинская, д.1, корп.2</a></div>
-        <div style="display:flex;flex-direction:column;gap:14px">
-          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Как добраться:</h3>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Яндекс.Карты</a>
-            <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">2.ГИС</a>
+  <section data-screen-label="Контакты" class="main-inline-87">
+    <div class="main-inline-88">
+      <div class="main-inline-89">
+        <h2 class="main-inline-90">Будем рады вам<br />в нашем офисе!</h2>
+        <div class="main-inline-91">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" class="main-inline-92">ул. Дегунинская, д.1, корп.2</a></div>
+        <div class="main-inline-93">
+          <h3 class="main-inline-94">Как добраться:</h3>
+          <div class="main-inline-95">
+            <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style-hover="background:#026B63" class="main-inline-96">Яндекс.Карты</a>
+            <a href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style-hover="background:#026B63" class="main-inline-97">2.ГИС</a>
           </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#313131">Для связи:</h3>
-          <a href="tel:+79938914064" style="font-size:clamp(22px,2.1cqw,30px);font-weight:600;color:#00AD9F;text-decoration:underline;text-underline-offset:4px">+7 (993) 891-40-64</a>
-          <a href="mailto:sk-espada@rambler.ru" style="font-size:clamp(13px,1.05cqw,15px);color:#5c5c5c;text-decoration:none" style-hover="color:#00AD9F">sk-espada@rambler.ru</a>
+        <div class="main-inline-98">
+          <h3 class="main-inline-99">Для связи:</h3>
+          <a href="tel:+79938914064" class="main-inline-100">+7 (993) 891-40-64</a>
         </div>
       </div>
-      <div style="min-width:0">
-        <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="display:block">
-          <img src="assets/map.jpg" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" style="width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;background:#f0f0f0" />
+      <div class="main-inline-102">
+        <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" class="main-inline-103">
+          <img src="assets/map-light.png" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" class="main-inline-104">
         </a>
       </div>
     </div>
@@ -469,39 +627,139 @@ input,textarea,select{font-family:inherit}
   <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
 
   <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);z-index:80;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
-      <div style="width:100%;max-width:560px;background:#fff;padding:clamp(24px,2.4cqw,36px);position:relative;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
-        <button type="button" onClick="{{ closePopup }}" aria-label="Закрыть" style="position:absolute;right:14px;top:14px;width:32px;height:32px;border:0;background:transparent;padding:0;font-size:22px;line-height:1;color:#929292">×</button>
-        <h2 style="margin:0;font-size:clamp(18px,1.7cqw,24px);line-height:1.18;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000;max-width:88%">Получите индивидуальный расчет сметы</h2>
-        <div style="font-size:13px;line-height:1.55;color:#5c5c5c">Оставьте свои контакты и вы получите:</div>
-        <div style="display:flex;flex-direction:column;gap:6px">
+    <div class="main-modal-backdrop" onClick="{{ closePopup }}"></div><div class="main-modal main-request-modal" role="dialog" aria-modal="true" aria-label="Расчёт сметы" style="{{ modalCss }}">
+      <div class="main-inline-105">
+        <button type="button" onClick="{{ closePopup }}" aria-label="Закрыть" class="main-inline-106">×</button>
+        <h2 class="main-inline-107">Получите индивидуальный расчет сметы</h2>
+        <div class="main-inline-108">Оставьте свои контакты и вы получите:</div>
+        <div class="main-inline-109">
           <sc-for list="{{ popupPerks }}" as="p" hint-placeholder-count="4">
-            <span style="font-size:13px;line-height:1.5;color:#313131">{{ p }}</span>
+            <span class="main-inline-110">{{ p }}</span>
           </sc-for>
         </div>
-        <form onSubmit="{{ noSubmit }}" style="display:flex;flex-direction:column;gap:14px;margin-top:4px">
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">ФИО</span>
-            <input type="text" placeholder="Петров Петр Петрович" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+        <form onSubmit="{{ noSubmit }}" class="main-inline-111">
+          <label class="main-inline-112">
+            <span class="main-inline-113">Имя</span>
+            <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" style-focus="border-color:#00AD9F" class="main-inline-114">
           </label>
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:11.5px;font-weight:600;color:#5c5c5c">Ваш телефон</span>
-            <input type="tel" placeholder="+7 (000) 000-00-00" style="height:46px;border:1px solid #d9d9d9;border-radius:0;padding:0 13px;font-size:14px;color:#313131;outline:none" style-focus="border-color:#00AD9F" />
+          <label class="main-inline-115">
+            <span class="main-inline-116">Ваш телефон</span>
+            <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() -]{10,}" placeholder="+7 (000) 000-00-00" style-focus="border-color:#00AD9F" class="main-inline-117">
           </label>
-          <div style="display:flex;gap:9px;align-items:flex-start">
-            <span style="width:17px;height:17px;border:1px solid #bfbfbf;flex:0 0 17px;display:block;margin-top:2px"></span>
-            <span style="font-size:11px;line-height:1.45;color:#5c5c5c">Я даю <a href="/soglasie-na-obrabotku/" style="color:#00AD9F;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#00AD9F;text-decoration:underline">Политикой конфиденциальности</a></span>
+          <div class="main-inline-118">
+            <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-119">
+            <span class="main-inline-120">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-121">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-122">Политикой конфиденциальности</a></span>
           </div>
-          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:0;padding:16px 22px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63">Бесплатный расчёт сметы</button>
+          <button type="submit" style-hover="background:#026B63" class="main-inline-123">Бесплатный расчёт сметы</button>
         </form>
       </div>
     </div>
   </sc-if>
 
+  <sc-if value="{{ requestSent }}" hint-placeholder-val="{{ false }}"><div class="main-modal-backdrop" onClick="{{ closeSuccess }}"></div><div class="main-modal" role="dialog" aria-modal="true" aria-label="Заявка заполнена" style="{{ modalCss }}"><button type="button" class="main-modal-close" onClick="{{ closeSuccess }}" aria-label="Закрыть сообщение">×</button><div class="main-story-title"><h2>Спасибо!</h2><p>Заявка заполнена. В демонстрации данные не отправляются.</p><button type="button" class="main-btn" onClick="{{ closeSuccess }}">Понятно</button></div></div></sc-if>
+  <sc-if value="{{ quizPopup }}" hint-placeholder-val="{{ false }}"><div class="main-modal-backdrop" onClick="{{ closeQuiz }}"></div><div class="main-modal main-quiz-modal" role="dialog" aria-modal="true" aria-label="Расчёт стоимости ремонта" style="{{ modalCss }}"><button type="button" class="main-modal-close" onClick="{{ closeQuiz }}" aria-label="Закрыть квиз">×</button><dc-import name="Квиз" kind="Ремонт" startStep="{{ quizStart }}" tone="light" hint-size="900px,640px"></dc-import></div></sc-if>
+  <sc-if value="{{ storyPopup }}" hint-placeholder-val="{{ false }}"><div class="main-modal-backdrop" onClick="{{ closeStory }}"></div><div class="main-modal main-story-modal" role="dialog" aria-modal="true" aria-label="Как проходил ремонт в ЖК Shagal" style="{{ modalCss }}"><button type="button" class="main-modal-close" onClick="{{ closeStory }}" aria-label="Закрыть историю ремонта">×</button><div class="main-story-title"><h2>История ремонта в ЖК Shagal</h2><p>2-комнатная квартира · 82 м² · дизайнерский ремонт · 7 месяцев</p></div>  <section data-screen-label="О чём переживал хозяин" class="main-inline-124">
+    <div class="main-inline-125">
+      <h2 class="main-inline-126">О чём <span class="main-inline-127">больше всего переживал</span><br />хозяин квартиры:</h2>
+      <div class="main-story-arrows"><button type="button" onClick="{{ worriesPrev }}" aria-label="Предыдущие карточки">‹</button><button type="button" onClick="{{ worriesNext }}" aria-label="Следующие карточки">›</button></div><div class="main-story-carousel" tabindex="0" aria-label="Переживания хозяина — прокрутите карточки">
+        <sc-for list="{{ worries }}" as="w" hint-placeholder-count="5">
+          <div class="main-worry-card main-inline-128">
+            <img src="{{ w.img }}" alt="{{ w.title }}" class="main-inline-129">
+            <h3 class="main-inline-130">{{ w.title }}</h3>
+            <div class="main-inline-131">
+              <sc-for list="{{ w.paras }}" as="p" hint-placeholder-count="2">
+                <p class="main-inline-132">{{ p }}</p>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Ключевые моменты" class="main-inline-133">
+    <div class="main-inline-134">
+      <h2 class="main-inline-135">Ключевые моменты в выборе компании</h2>
+      <div class="main-inline-136">Что позволило принять решение в нашу пользу:</div>
+      <div class="main-inline-137">
+        <sc-for list="{{ moments }}" as="m" hint-placeholder-count="3">
+          <div class="main-inline-138">
+            <img src="{{ m.img }}" alt="{{ m.title }}" class="main-inline-139">
+            <h3 class="main-inline-140">{{ m.title }}</h3>
+            <p class="main-inline-141">{{ m.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Общение с инженером" class="main-inline-142">
+    <div class="main-inline-143">
+      <div class="main-inline-144">
+        <h2 class="main-inline-145">Общение с нашим инженером</h2>
+        <div class="main-inline-146">
+          <h3 class="main-inline-147">Впечатления клиента о встрече</h3>
+          <div class="main-inline-148">
+            <div class="main-inline-149">Иван</div>
+            <div class="main-inline-150">Инженер-сметчик Эспады</div>
+          </div>
+        </div>
+        <p class="main-inline-151">«Встреча с инженером состоялась в формата технической консультации. Мы обсудили что нам важно, какие ожидания по бюджету и работе.</p>
+        <p class="main-inline-152">После Иван проанализировал проект, указал на ошибки и предложил более рациональные решения. Такой подход убедил меня, что ремонт будет выполнен не только красиво, но и технически правильно.»</p>
+      </div>
+      <div class="main-inline-153">
+        <img src="assets/engineer.png" alt="Иван, инженер-сметчик Эспады" class="main-inline-154">
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Где избежали лишних трат" class="main-inline-155">
+    <div class="main-inline-156">
+      <div class="main-inline-157">
+        <h2 class="main-inline-158">Где удалось избежать<br /><span class="main-inline-159">лишних трат?</span></h2>
+        <p class="main-inline-160">Мы провели анализ дизайн-проекта, и наш инженер обнаружил в нем ошибки, которые привели бы к тому, что пришлось бы:</p>
+      </div>
+      <div class="main-inline-161">
+        <sc-for list="{{ avoided }}" as="a" hint-placeholder-count="4">
+          <div class="main-inline-162">
+            <img src="assets/icon-x.svg" alt="" class="main-inline-163">
+            <span class="main-inline-164">{{ a }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Что получил клиент" class="main-inline-165">
+    <div class="main-inline-166">
+      <div class="main-inline-167">
+        <h2 class="main-inline-168">Что получил клиент?</h2>
+        <div class="main-inline-169">Результат.</div>
+      </div>
+      <div class="main-inline-170">
+        <h3 class="main-inline-171">Конец ремонта:</h3>
+        <div class="main-inline-172">
+          <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
+            <div class="main-inline-173">
+              <span class="main-inline-174">✓</span>
+              <span class="main-inline-175">{{ r }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div class="main-inline-176">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
+        <img src="{{ g.img }}" alt="Готовый ремонт, фото {{ g.n }}" style="{{ g.css }}" />
+      </sc-for>
+    </div>
+  </section></div></sc-if>
+
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+const MAIN_BEFORE = ["assets/main-before-01.png", "assets/main-before-02.png", "assets/main-before-03.png", "assets/main-before-04.jpg", "assets/main-before-05.jpg", "assets/main-before-06.png", "assets/main-before-07.jpg", "assets/main-before-08.jpg"];
+const MAIN_VIDEOS = [{"title": "Ремонт двухкомнатной квартиры в Москве", "place": "ЖК Level Селигерская", "area": "45", "img": "assets/main-video-1.png", "url": "https://vkvideo.ru/video-236556490_456239128"}, {"title": "Дизайнерский ремонт двухкомнатной квартиры в Москве", "place": "ЖК River Park", "area": "65", "img": "assets/main-video-2.png", "url": "https://vkvideo.ru/video-236556490_456239134"}, {"title": "Ремонт двухкомнатной квартиры в МО", "place": "ЖК Равновесие", "area": "42", "img": "assets/main-video-3.png", "url": "https://vkvideo.ru/video-236556490_456239124"}];
+const MAIN_RESIDENTIAL = [{"title": "ЖК Level Селигерская", "img": "assets/main-zhk-1.png"}, {"title": "ЖК MYPRIORITY Дубровка", "img": "assets/main-zhk-2.png"}, {"title": "ЖК Шагал", "img": "assets/main-zhk-3.png"}, {"title": "ЖК Проспект 39", "img": "assets/main-zhk-4.png"}];
+const MAIN_RULES = [{"title": "Фиксированная смета", "text": "Подробная смета с разбивкой по помещениям, закрепляющая стоимость работ."}, {"title": "Поэтапная оплата", "text": "Вы платите, когда услуги оказаны. Контроль расходов на каждом этапе сотрудничества."}, {"title": "Доступные цены", "text": "Индивидуальная смета, а не усреднённая стоимость с переплатой по рыночным ценам."}, {"title": "Контроль качества и сроков", "text": "Совместная работа прораба, инженера, дизайнера, менеджера и директора. Мы всегда с вами и всегда рядом."}];
+
 const DIRECTIONS = [
   { title: 'Приемка', img: 'assets/dir-4.jpg', href: '/priyomka-kvartir-v-novostrojke/',
     text: 'Проверяем квартиры от застройщика в соответствие с действующими строительными нормами.' },
@@ -577,7 +835,7 @@ const TARIFFS = {
       'Монтаж механизмов электроточек', 'Замена окон/дверей', 'Замена проводки' ] },
     { title: 'Черновой ремонт', price: '9 890', img: 'assets/tariff-n2.jpg', items: [
       'Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола',
-      'Гидроизоляция мокрых зон', 'Комплексная разводка труд водоснабжения', 'Комплексная разводка труб канализации',
+      'Гидроизоляция мокрых зон', 'Комплексная разводка труб водоснабжения', 'Комплексная разводка труб канализации',
       'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники' ] },
     { title: 'Ремонт под ключ', price: '13 050', img: 'assets/tariff-n3.jpg', items: [
       'Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола',
@@ -585,7 +843,7 @@ const TARIFFS = {
       'Установка электроточек', 'Установка сантехники', 'Укладка ламината', 'Укладка плитки', 'Поклейка обоев' ] },
     { title: 'Дизайнерский ремонт', price: '15 290', img: 'assets/tariff-n4.jpg', items: [
       'Грунтовка пола, стен и потолка', 'Штукатурка стен по маякам', 'Шпаклёвка стен', 'Устройство стяжки пола',
-      'Гидроизоляция мокрых зон', 'Комплексная разводка труд водоснабжения', 'Комплексная разводка труб канализации',
+      'Гидроизоляция мокрых зон', 'Комплексная разводка труб водоснабжения', 'Комплексная разводка труб канализации',
       'Комплексная разводка электросетей', 'Установка электроточек', 'Установка сантехники', 'Укладка ламината',
       'Укладка плитки', 'Поклейка обоев/покраска/штукатурка' ] },
   ],
@@ -619,7 +877,7 @@ const PORTFOLIO = [
 
 const MASTERS = [
   { title: 'Опытные мастера', img: 'assets/master-1.jpg',
-    text: 'Мы строго подходим к подбору мастеров, к работе на объектах допускаются матера при наличии необходимых для их работы профессиональных навыков и компетенций.' },
+    text: 'Мы строго подходим к подбору мастеров, к работе на объектах допускаются мастера при наличии необходимых для их работы профессиональных навыков и компетенций.' },
   { title: 'Индивидуальные дизайнерские решения', img: 'assets/master-2.jpg',
     text: 'Наши дизайнеры создают проекты с упором на ваши цели и ожидания, вкус и бюджет.' },
   { title: 'Внимание к деталям', img: 'assets/master-4.jpg',
@@ -658,14 +916,7 @@ const FAQ = [
       'Если у Вас возникли вопросы, Вы можете связаться с руководителем отдела технического контроля, он с радостью ответит и проконсультирует Вас.' ] },
 ];
 
-const REVIEWS = [
-  { name: 'Татьяна', avatar: 'assets/av-tatyana.svg', source: 'Яндекс.Карты', offset: 0,
-    text: 'Хочу выразить огромную благодарность Кириллу и всей его команде. Я проживаю в Республике Коми. Дочери купили небольшую студию в г. Москве. Не пришлось ни о чём позаботиться, кроме Доверенности. Одним днём и без моего присутствия получили ключи и рассчитали стоимость ремонта. Через два месяца прилетела уже в полностью отремонтированную и обставленную мебелью квартиру. Никаких забот и хлопот. Каждый шаг по ремонту присылали по фото и видео. Цены вполне лояльные. Так держать!' },
-  { name: 'Давид Самарский', avatar: 'assets/rev-1.jpg', source: '2ГИС', offset: -24,
-    text: 'Ремонт прошел без лишних хлопот для меня. Общение было через группу в мессенджере, оплата — онлайн по выставляемым счетам. Мне было удобно, потому что особо из-за работы нет времени контролировать каждый шаг. Смета составлялась и согласовывалась заранее, каких-то существенных выходов за границы не было. Понравилось, что ребята не просто формально делают то, что заложено в проекте, а предлагают изменения, которые существенно улучшают результат. Отдельное спасибо хочу сказать инженеру Антону, все грамотно рассчитал, рассказал и был очень внимателен по ходу общения. Хочу еще сказать про прораба, спасибо ему за его ответственность и внимательность к каждому этапу работ. Компания небольшая, всегда на связи, готовы ответить на вопросы и предложить наилучшие решения. Ремонтом доволен!' },
-  { name: 'Василиса Ф.', avatar: 'assets/rev-2.jpg', source: 'Отзовик', offset: 0,
-    text: 'изначально боялись, что будет большая стоимость. Немного превысили наш планируемый бюджет. Но ни чуть не пожалели, качество ремонта подтверждает стоимость. Наше участие было минимальным, поэтому действительно «ремонт без головной боли») Все понравилось' },
-];
+
 
 const POPUP_PERKS = [
   '— предварительный расчет бюджета',
@@ -675,15 +926,28 @@ const POPUP_PERKS = [
 ];
 
 class Component extends DCLogic {
-  state = { tab: 'novostroyka', faq: 0, pshift: 0, popup: false };
+  state = { tab: 'novostroyka', faq: 0, pshift: 0, popup: false, quizPopup: false, storyPopup: false, requestSent: false, reviewTab: 0, expandedReviews: {}, worryShift: 0, modalTop: 24, modalHeight: 720 };
+
+  modalPosition(event) {
+    const target = event && event.currentTarget;
+    const rect = target ? target.getBoundingClientRect() : { top: 24 };
+    let scale = 1;
+    let viewport = window.innerHeight;
+    if (window.frameElement) {
+      const frame = window.frameElement;
+      scale = frame.getBoundingClientRect().width / frame.offsetWidth || 1;
+      viewport = window.parent.innerHeight / scale;
+    }
+    return { modalTop: Math.max(0, window.scrollY), modalHeight: Math.min(900, viewport) };
+  }
 
   renderVals() {
     const mobile = !!this.props.mobile;
-    const { tab, faq, pshift, popup } = this.state;
+    const { tab, faq, pshift, popup, quizPopup, storyPopup, requestSent, reviewTab, expandedReviews, worryShift } = this.state;
     const per = 5;
     const start = ((pshift % 3) + 3) % 3;
 
-    const tabBtn = (active) => 'border:1px solid #00AD9F;border-radius:0;padding:14px 24px;font-size:clamp(11px,.95cqw,13px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;background:'
+    const tabBtn = (active) => 'border:1px solid #00AD9F;border-radius:5px;padding:14px 22px;font-size:17px;font-weight:600;letter-spacing:0;text-transform:uppercase;transition:all .2s;background:'
       + (active ? '#00AD9F' : '#fff') + ';color:' + (active ? '#fff' : '#00AD9F');
 
     return {
@@ -695,14 +959,23 @@ class Component extends DCLogic {
       moments: MOMENTS,
       avoided: AVOIDED,
       results: RESULTS,
-      portfolio: PORTFOLIO,
+      portfolio: PORTFOLIO.map((p, i) => Object.assign({}, p, { before: MAIN_BEFORE[i] })),
+      videos: MAIN_VIDEOS, residential: MAIN_RESIDENTIAL, rules: MAIN_RULES,
       masters: MASTERS,
       designPerks: DESIGN_PERKS,
       popupPerks: POPUP_PERKS,
-      popup,
-      openPopup: () => this.setState({ popup: true }),
+      popup, quizPopup, storyPopup, requestSent, quizStart: 0,
+      closeSuccess: () => this.setState({ requestSent: false }),
+      worriesPrev: (e) => e.currentTarget.closest('section').querySelector('.main-story-carousel').scrollBy({ left: -322, behavior: 'smooth' }),
+      worriesNext: (e) => e.currentTarget.closest('section').querySelector('.main-story-carousel').scrollBy({ left: 322, behavior: 'smooth' }),
+      modalCss: '--main-local-top:' + this.state.modalTop + 'px;--main-local-height:' + this.state.modalHeight + 'px',
+      openQuiz: (e) => this.setState(Object.assign({ quizPopup: true }, this.modalPosition(e))),
+      closeQuiz: () => this.setState({ quizPopup: false }),
+      openStory: (e) => this.setState(Object.assign({ storyPopup: true }, this.modalPosition(e))),
+      closeStory: () => this.setState({ storyPopup: false }),
+      openPopup: (e) => this.setState(Object.assign({ popup: true }, this.modalPosition(e))),
       closePopup: () => this.setState({ popup: false }),
-      noSubmit: (e) => { e.preventDefault(); this.setState({ popup: false }); },
+      noSubmit: (e) => { e.preventDefault(); this.setState(Object.assign({ popup: false, requestSent: true }, this.modalPosition(e))); },
       partnersPrev: () => this.setState({ pshift: pshift - 1 }),
       partnersNext: () => this.setState({ pshift: pshift + 1 }),
       partners: PARTNERS.slice(start * per, start * per + per).map(f => 'assets/' + f),
@@ -716,7 +989,7 @@ class Component extends DCLogic {
       gallery: GALLERY.map((f, i) => ({
         n: i + 1,
         img: 'assets/' + f,
-        css: 'flex:0 0 auto;width:clamp(120px,11cqw,152px);height:clamp(180px,17cqw,232px);object-fit:cover;border-radius:10px;display:block;background:#f0f0f0;margin-top:'
+        css: 'flex:0 0 auto;width:clamp(120px,11cqw,152px);height:clamp(180px,17cqw,232px);object-fit:cover;border-radius:5px;display:block;background:#f0f0f0;margin-top:'
           + (i % 2 === 0 ? '0' : 'clamp(10px,1.4cqw,22px)'),
       })),
       tabs: [
@@ -733,18 +1006,17 @@ class Component extends DCLogic {
         hasList: !!f.list,
         list: f.list || [],
       })),
-      reviews: REVIEWS.map(r => ({
-        name: r.name,
-        avatar: r.avatar,
-        source: 'Источник: ' + r.source,
-        text: r.text,
-        css: 'background:#f8f8f8;border-radius:10px;padding:clamp(18px,1.8cqw,26px);display:flex;flex-direction:column;gap:14px;min-width:0;margin-top:'
-          + (mobile ? '0' : r.offset + 'px'),
-      })),
     };
   }
 }
 
+</script>
+<script>
+document.addEventListener('keydown', function (event) {
+  if (event.key !== 'Escape') return;
+  var buttons = document.querySelectorAll('.main-modal button[aria-label^="Закрыть"]');
+  if (buttons.length) buttons[buttons.length - 1].click();
+});
 </script>
 </body>
 </html>
