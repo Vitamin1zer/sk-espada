@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -39,7 +39,7 @@ input,textarea,select{font-family:inherit}
       </div>
       <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
         <sc-for list="{{ k.states }}" as="s" hint-placeholder-count="4">
-          <figure style="margin:0;display:flex;flex-direction:column;gap:8px">
+          <figure style="{{ k.figureCss }}">
             <figcaption style="display:flex;align-items:baseline;gap:8px">
               <span style="{{ s.dotCss }}"></span>
               <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5c5c5c">{{ s.label }}</span>
@@ -57,7 +57,7 @@ input,textarea,select{font-family:inherit}
     <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid #d5d5d3;padding-bottom:10px">
       <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#313131">Попап в контексте</span>
     </div>
-    <div style="width:900px;height:620px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
+    <div style="width:min(100%,900px);min-height:620px;background:#fff;box-shadow:0 2px 24px rgba(0,0,0,.10);position:relative;overflow:hidden">
       <div style="padding:40px 60px;display:flex;flex-direction:column;gap:14px;opacity:.5">
         <div style="height:26px;width:46%;background:#dcdcdc"></div>
         <div style="height:12px;width:74%;background:#e6e6e6"></div>
@@ -65,7 +65,7 @@ input,textarea,select{font-family:inherit}
         <div style="height:180px;width:100%;background:#ececec;margin-top:10px"></div>
       </div>
       <div style="position:absolute;inset:0;background:rgba(20,20,20,.6);display:flex;align-items:flex-start;justify-content:center;padding:44px 16px">
-        <div style="width:520px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
+        <div style="width:min(100%,520px);box-shadow:0 30px 70px rgba(0,0,0,.35)">
           <dc-import name="Форма" kind="Попап" state="Пустая" hint-size="520px,520px"></dc-import>
         </div>
       </div>
@@ -121,7 +121,8 @@ class Component extends DCLogic {
     return {
       kinds: KINDS.map(k => ({
         id: k.id, kind: k.kind, title: k.title, note: k.note,
-        frameCss: 'width:' + k.width + 'px;box-shadow:0 2px 20px rgba(0,0,0,.10)',
+        figureCss: 'margin:0;display:flex;flex-direction:column;gap:8px;width:' + k.width + 'px;max-width:100%;flex:0 0 auto',
+        frameCss: 'width:100%;box-shadow:0 2px 20px rgba(0,0,0,.10)',
         states: STATES.map(s => ({
           label: s,
           dotCss: 'width:7px;height:7px;flex:0 0 7px;display:block;background:' + DOT[s],

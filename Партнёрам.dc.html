@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -27,16 +27,11 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:#fff}
-a{color:#00AD9F;text-decoration:none}
-a:not([data-button-link]):hover{color:#026B63}
-button{font-family:inherit;cursor:pointer}
-input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
 </style>
 </helmet>
 
-<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip">
 
   <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
 
@@ -49,7 +44,7 @@ input,textarea,select{font-family:inherit}
   </div>
 
   <section data-screen-label="Обложка" style="background:#f8f8f8;padding:clamp(40px,4.4cqw,72px) 0 clamp(44px,5cqw,80px)">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,3cqw,48px);align-items:center">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,3cqw,48px);align-items:center">
       <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(16px,1.6cqw,24px)">
         <h1 style="margin:0;font-size:clamp(30px,4.4cqw,64px);line-height:1.02;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#000">Партнерам</h1>
         <div style="display:flex;flex-direction:column;gap:10px;max-width:540px">
@@ -57,7 +52,7 @@ input,textarea,select{font-family:inherit}
           <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">Работаем с ремонтом квартир и дизайном интерьеров в Москве и МО.</p>
           <p style="margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#5c5c5c">Надёжное партнёрство для долгосрочного заработка.</p>
         </div>
-        <div style="align-self:flex-start;background:#00AD9F;color:#fff;border-radius:5px;padding:14px 24px;font-size:clamp(14px,1.25cqw,18px);font-weight:700;letter-spacing:.02em">Стань партнером Эспады!</div>
+        <button type="button" data-open-form="partner" style="align-self:flex-start;border:0;background:#00AD9F;color:#fff;border-radius:5px;padding:14px 24px;min-height:48px;font-size:16px;line-height:1.3;font-weight:600;letter-spacing:.02em" style-hover="background:#026B63;color:#fff">Стань партнером Эспады!</button>
       </div>
       <div style="min-width:0;display:flex;justify-content:flex-end">
         <div style="width:100%;max-width:440px;box-shadow:0 4px 22px rgba(0,0,0,.07);border-radius:5px;overflow:hidden"><dc-import name="Форма" kind="Партнёрство" hint-size="440px,560px"></dc-import></div>
@@ -66,7 +61,7 @@ input,textarea,select{font-family:inherit}
   </section>
 
   <section data-screen-label="О компании" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2cqw,28px);align-items:start">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2cqw,28px);align-items:start">
       <sc-for list="{{ cards }}" as="c" hint-placeholder-count="3">
         <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
           <img src="{{ c.img }}" alt="{{ c.title }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:5px;display:block;background:#f0f0f0" />
@@ -74,7 +69,7 @@ input,textarea,select{font-family:inherit}
             <div style="font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#00AD9F">{{ c.kicker }}</div>
           </sc-if>
           <h2 style="margin:0;font-size:clamp(15px,1.35cqw,19px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131;line-height:1.25">{{ c.title }}</h2>
-          <a data-button-link="true" href="{{ c.href }}" style="align-self:flex-start;background:transparent;color:#00AD9F;border:1px solid #00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Подробнее</a>
+          <a data-button-link="true" href="{{ c.href }}" style="align-self:flex-start;background:transparent;color:#00AD9F;border:1px solid #00AD9F;padding:13px 22px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;min-height:48px;line-height:1.3" style-hover="background:#00AD9F;color:#fff">Подробнее</a>
         </div>
       </sc-for>
     </div>
@@ -101,7 +96,7 @@ input,textarea,select{font-family:inherit}
   <section data-screen-label="Как всё устроено" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)">
       <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">Как всё устроено</h2>
-      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2.2cqw,36px)">
+      <div style="margin-top:clamp(26px,2.8cqw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(18px,2.2cqw,36px)">
         <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
           <div style="min-width:0;position:relative;overflow:hidden;padding-top:18px" style-hover="--ln:-104%;--up:-7px">
             <div style="position:absolute;left:0;right:0;top:0;height:2px;background:#00AD9F;transform:translateX(var(--ln,0));transition:transform .4s cubic-bezier(.4,0,.2,1)"></div>
@@ -116,28 +111,23 @@ input,textarea,select{font-family:inherit}
     </div>
   </section>
 
-  <section data-screen-label="Контакты" style="background:#fff;padding:clamp(44px,5.6cqw,92px) 0">
-    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:clamp(22px,2.4cqw,36px)">
-        <h2 style="margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.1;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#00AD9F">Будем рады вам<br /><span style="color:#313131">в нашем офисе!</span></h2>
-        <div style="font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#313131">По адресу: г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="color:#00AD9F">ул. Дегунинская, д.1, корп.2</a></div>
-        <div style="display:flex;flex-direction:column;gap:14px">
-          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131">Как добраться:</h3>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a data-button-link="true" href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">Яндекс.Карты</a>
-            <a data-button-link="true" href="https://go.2gis.com/JknLA" target="_blank" rel="noopener" style="background:#00AD9F;color:#fff;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s" style-hover="background:#026B63;color:#fff">2.ГИС</a>
-          </div>
+  <section data-screen-label="Контакты" style="background:#f8f8f8;padding:clamp(44px,5.6cqw,92px) 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,44px);align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:32px">
+        <h2 style="margin:0;font-size:clamp(26px,2.4cqw,34px);line-height:1.15;font-weight:600;text-transform:uppercase;color:#00AD9F">Контакты</h2>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <h3 style="margin:0;font-size:18px;line-height:1.3;font-weight:600;text-transform:uppercase;color:#313131">Отдел развития:</h3>
+          <a href="tel:+79806914064" style="font-size:clamp(24px,2.1cqw,30px);font-weight:600;line-height:1.3;color:#00AD9F;text-decoration:underline;text-underline-offset:4px">+7 (980) 691-40-64</a>
+          <a href="mailto:sk-espada@rambler.ru" style="font-size:16px;line-height:1.5;color:#5c5c5c;text-decoration:none">sk-espada@rambler.ru</a>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px">
-          <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#313131">Отдел развития</h3>
-          <a href="tel:+79806914064" style="font-size:clamp(22px,2.1cqw,30px);font-weight:600;color:#00AD9F;text-decoration:underline;text-underline-offset:4px">+7 (980) 691-40-64</a>
+          <h3 style="margin:0;font-size:18px;line-height:1.3;font-weight:600;text-transform:uppercase;color:#313131">Адрес офиса:</h3>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:#313131">г. Москва,<br /><a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="color:#00AD9F;text-decoration:none">ул. Дегунинская, д.1, корп.2</a></p>
         </div>
       </div>
-      <div style="min-width:0">
-        <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="display:block">
-          <img src="assets/map-light.png" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" style="width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;background:#f0f0f0" />
-        </a>
-      </div>
+      <a href="https://yandex.ru/maps/-/CLgmeD3e" target="_blank" rel="noopener" style="display:block;min-width:0">
+        <img src="assets/map-light.png" alt="Схема проезда: Москва, ул. Дегунинская, д. 1, корп. 2" style="width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;border-radius:5px;background:#f0f0f0" />
+      </a>
     </div>
   </section>
 
@@ -185,7 +175,6 @@ class Component extends DCLogic {
       cards: CARDS,
       benefits: BENEFITS,
       steps: STEPS.map((s, i) => ({ n: '0' + (i + 1), title: s.title, text: s.text })),
-      noSubmit: (e) => { e.preventDefault(); },
     };
   }
 }

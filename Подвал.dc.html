@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -60,9 +60,11 @@ button{font-family:inherit;cursor:pointer}
 
       <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
         <div style="font-size:12px;line-height:1.5;color:#bfbfbf">Нажмите, чтобы наш менеджер связался с вами:</div>
-        <form onSubmit="{{ callback }}" style="display:flex;flex-direction:column;gap:10px">
-          <input type="tel" name="phone" required="required" pattern="[+0-9 ()-]{10,20}" placeholder="+7 (000) 000-00-00" style="height:44px;border:1px solid rgba(255,255,255,.25);border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
-          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:15px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;transition:background .2s,box-shadow .2s;align-self:flex-start" style-hover="background:#026B63;box-shadow:0 6px 18px rgba(0,0,0,.3);color:#fff">{{ callbackLabel }}</button>
+        <form data-lead-type="callback" noValidate="true" onSubmit="{{ callback }}" style="display:flex;flex-direction:column;gap:10px">
+          <input type="tel" name="phone" aria-label="Телефон для обратного звонка" autocomplete="tel" value="{{ callbackPhone }}" onChange="{{ changePhone }}" placeholder="+7 (000) 000-00-00" style="height:48px;min-width:0;width:100%;border:1px solid rgba(255,255,255,.25);border-radius:5px;padding:0 13px;font-size:16px;color:#313131;background:#fff;outline:none" style-focus="border-color:#00AD9F" />
+          <sc-if value="{{ callbackError }}"><span role="alert" style="font-size:13px;color:#ffc6bd;line-height:1.4">Введите номер полностью — 10 цифр после +7</span></sc-if>
+          <button type="submit" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:15px 20px;min-height:48px;font-size:16px;font-weight:600;line-height:1.3;transition:background .2s;align-self:flex-start" style-hover="background:#026B63;color:#fff">Заказать звонок</button>
+          <sc-if value="{{ callbackSent }}"><span role="status" style="font-size:13px;color:#fff;line-height:1.4">Заявка заполнена. В демонстрации данные не отправляются.</span></sc-if>
           <span style="font-size:11px;line-height:1.45;color:#8f8f8f">Нажимая кнопку, вы даёте <a href="/soglasie-na-obrabotku/" style="color:#fff;text-decoration:underline">согласие на обработку персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#fff;text-decoration:underline">Политикой конфиденциальности</a></span>
         </form>
       </div>
@@ -127,14 +129,17 @@ const SOCIALS = [
 ];
 
 class Component extends DCLogic {
-  state = { sent: false };
+  state = { sent: false, phone: '', attempted: false };
   renderVals() {
     const m = !!this.props.mobile;
     return {
       socials: SOCIALS,
       columns: COLUMNS,
-      callbackLabel: this.state.sent ? 'Звонок заказан' : 'Заказать звонок',
-      callback: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      callbackPhone: this.state.phone,
+      callbackSent: this.state.sent,
+      callbackError: this.state.attempted && !/^7\d{10}$|^8\d{10}$/.test(this.state.phone.replace(/\D/g,'')),
+      changePhone: e => this.setState({ phone: e.target.value, sent: false }),
+      callback: e => { e.preventDefault(); this.setState({ attempted: true, sent: /^[78]\d{10}$/.test(this.state.phone.replace(/\D/g,'')) }); },
       innerCss: 'max-width:1240px;margin:0 auto;padding:' + (m ? '36px 16px 28px' : '56px 20px 26px'),
       gridCss: m
         ? 'display:flex;flex-direction:column;gap:34px'

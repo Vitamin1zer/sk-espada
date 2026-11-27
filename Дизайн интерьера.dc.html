@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -26,69 +26,77 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{background:#fff}
-a{color:#00AD9F;text-decoration:none}
-a:not([data-button-link]):hover{color:#026B63}
-button{font-family:inherit;cursor:pointer}
-input,textarea,select{font-family:inherit}
-::selection{background:#00AD9F;color:#fff}
-
-.design-container{width:min(1200px,100%);margin-inline:auto;padding-inline:20px}
-.design-section{padding:clamp(44px,5.5vw,88px) 0}
-.design-heading{margin:0;font-size:clamp(27px,3vw,35px);font-weight:600;line-height:1.15;text-transform:uppercase;color:#313131}
-.design-showroom .design-heading{font-size:clamp(25px,2.6vw,32px);grid-column:1/-1}
-.design-showroom .design-split{align-items:start;row-gap:36px}
-[data-screen-label="Реализация проекта"] .design-heading{font-size:clamp(26px,2.5vw,30px)}
-.design-heading span{color:#00AD9F}
-.design-copy{margin:0;font-size:clamp(16px,1.4vw,20px);line-height:1.55;color:#5c5c5c}
-.design-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);align-items:center}
-.design-image{display:block;width:100%;height:auto;border-radius:5px}
-.design-points{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
-.design-point{padding-left:24px;position:relative;font-size:20px;line-height:1.45;color:#313131}
-.design-point:before{content:'✓';position:absolute;left:0;top:0;color:#00AD9F}
-.design-point p{margin:10px 0 0;color:#5c5c5c;font-size:18px;line-height:1.5}
-.design-actions{display:flex;align-items:center;gap:clamp(28px,5vw,74px);flex-wrap:wrap;margin-top:32px}
-.design-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:0;border-radius:5px;padding:15px 23px;background:#00AD9F;color:#fff;font-size:14px;font-weight:600;line-height:1.25;text-decoration:none;cursor:pointer;transition:background .2s}
-.design-button:hover{background:#026B63;color:#fff}
-.design-button--white{background:#fff;color:#00AD9F}
-.design-button--white:hover{background:#026B63;color:#fff}
-.design-text-link{border:0;background:none;color:#5c5c5c;text-decoration:underline;text-underline-offset:4px;padding:12px 0;font-size:15px;cursor:pointer}
-.design-showroom figure{margin:0}
-.design-showroom figcaption{font-size:13px;line-height:1.45;color:#929292;margin-top:12px}
-.design-tariffs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start;margin-top:38px}
-.design-tariff{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
-.design-tariff__card{width:100%;background:#00AD9F;color:#fff;border-radius:5px;overflow:hidden}
-.design-tariff__title{padding:21px 18px;text-align:center;font-size:21px;font-weight:600;line-height:1.25}
-.design-tariff__price{padding:17px 18px;background:#026B63;text-align:center}
-.design-tariff__price em{font-size:28px;font-weight:400;line-height:1.2}
-.design-tariff__price small{display:block;margin-top:6px;font-size:13px}
-.design-tariff__items{display:flex;flex-direction:column;gap:12px;padding:28px 24px;font-size:17px;line-height:1.5}
-.design-tariff>.design-button{background:#026B63;font-size:15px;min-height:48px;padding:14px 18px;max-width:100%}
-.design-tariff>.design-button:hover{background:#014f49}
-.design-space{display:grid;grid-template-columns:1fr 1fr 1.8fr;gap:24px;align-items:center;margin-top:36px}
-.design-space img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px}
-.design-space h3{margin:0 0 20px;font-weight:600;font-size:20px;line-height:1.3;text-transform:uppercase;color:#313131}
-.design-partners-title{text-align:center;margin:0;font-size:clamp(22px,2.2vw,30px);line-height:1.2;font-weight:600;text-transform:uppercase}
-.design-partners-row{display:flex;gap:24px;align-items:center;margin:38px auto 0;max-width:900px}
-.design-partners-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;align-items:center;flex:1;min-width:0}
-.design-partners-logos img{width:100%;max-width:140px;height:55px;object-fit:contain;filter:grayscale(1);justify-self:center}
-.design-carousel-button{width:36px;height:36px;flex:0 0 36px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:24px;line-height:1}
-.design-carousel-button:hover{background:#026B63}
-.complete-benefits{display:grid;gap:16px;max-width:900px;margin:38px auto 0}
-.complete-benefit{border:1px solid #00AD9F;border-radius:5px;padding:22px 24px}
-.complete-benefit h3{font-size:19px;line-height:1.3;font-weight:600;margin:0 0 10px;text-transform:uppercase}
-.complete-benefit p{font-size:17px;line-height:1.55;color:#5c5c5c;margin:0}
-.design-hero-quiz{width:100%;max-width:480px;min-width:0;background:#fff;border-radius:5px;padding:clamp(18px,2vw,28px);box-shadow:0 10px 40px #0002}
-.design-hero-quiz>dc-import{display:block;width:100%}
-@media(max-width:1000px){.design-tariffs{grid-template-columns:repeat(2,minmax(0,1fr))}.design-space{grid-template-columns:1fr 1fr}.design-space>div{grid-column:1/-1}}
-@media(max-width:640px){.design-container{padding-inline:16px}.design-split{grid-template-columns:minmax(0,1fr)}.design-points{grid-template-columns:minmax(0,1fr)}.design-tariffs{grid-template-columns:minmax(0,1fr);gap:32px}.design-tariff__items{font-size:16px}.design-partners-row{gap:10px}.design-partners-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.design-partners-logos img{height:44px}.design-actions{gap:24px}.design-button{font-size:13px}.design-space{gap:14px}.design-space>div{margin-top:14px}}
+.espada-design-page ::selection{background:#00AD9F;color:#fff}
+.espada-design-page .design-container{width:min(1200px,100%);margin-inline:auto;padding-inline:20px}
+.espada-design-page .design-section{padding:clamp(44px,5.5vw,88px) 0}
+.espada-design-page .design-heading{margin:0;font-size:clamp(27px,3vw,35px);font-weight:600;line-height:1.15;text-transform:uppercase;color:#313131}
+.espada-design-page .design-showroom .design-heading{font-size:clamp(25px,2.6vw,32px);grid-column:1/-1}
+.espada-design-page .design-showroom .design-split{align-items:start;row-gap:36px}
+.espada-design-page [data-screen-label="Реализация проекта"] .design-heading{font-size:clamp(26px,2.5vw,30px)}
+.espada-design-page .design-heading span{color:#00AD9F}
+.espada-design-page .design-copy{margin:0;font-size:clamp(16px,1.4vw,20px);line-height:1.55;color:#5c5c5c}
+.espada-design-page .design-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);align-items:center}
+.espada-design-page .design-image{display:block;width:100%;height:auto;border-radius:5px}
+.espada-design-page .design-points{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.espada-design-page .design-point{padding-left:24px;position:relative;font-size:20px;line-height:1.45;color:#313131}
+.espada-design-page .design-point:before{content:'✓';position:absolute;left:0;top:0;color:#00AD9F}
+.espada-design-page .design-point p{margin:10px 0 0;color:#5c5c5c;font-size:18px;line-height:1.5}
+.espada-design-page .design-actions{display:flex;align-items:center;gap:clamp(28px,5vw,74px);flex-wrap:wrap;margin-top:32px}
+.espada-design-page .design-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:0;border-radius:5px;padding:15px 23px;background:#00AD9F;color:#fff;font-size:14px;font-weight:600;line-height:1.25;text-decoration:none;cursor:pointer;transition:background .2s}
+.espada-design-page .design-button:hover{background:#026B63;color:#fff}
+.espada-design-page .design-button--white{background:#fff;color:#00AD9F}
+.espada-design-page .design-button--white:hover{background:#026B63;color:#fff}
+.espada-design-page .design-capture-form{min-width:0;padding:clamp(22px,2.2cqw,32px);background:#00AD9F;border-radius:5px}
+.espada-design-page .design-text-link{border:0;background:none;color:#5c5c5c;text-decoration:underline;text-underline-offset:4px;padding:12px 0;font-size:15px;cursor:pointer}
+.espada-design-page .design-showroom figure{margin:0}
+.espada-design-page .design-showroom figcaption{font-size:13px;line-height:1.45;color:#929292;margin-top:12px}
+.espada-design-page .design-tariffs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start;margin-top:38px}
+.espada-design-page .design-tariff{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.espada-design-page .design-tariff__card{width:100%;background:#00AD9F;color:#fff;border-radius:5px;overflow:hidden}
+.espada-design-page .design-tariff__title{padding:21px 18px;text-align:center;font-size:21px;font-weight:600;line-height:1.25}
+.espada-design-page .design-tariff__price{padding:17px 18px;background:#026B63;text-align:center}
+.espada-design-page .design-tariff__price em{font-size:28px;font-weight:400;line-height:1.2}
+.espada-design-page .design-tariff__price small{display:block;margin-top:6px;font-size:13px}
+.espada-design-page .design-tariff__items{display:flex;flex-direction:column;gap:12px;padding:28px 24px;font-size:17px;line-height:1.5}
+.espada-design-page .design-tariff>.design-button{background:#026B63;font-size:15px;min-height:48px;padding:14px 18px;max-width:100%}
+.espada-design-page .design-tariff>.design-button:hover{background:#014f49}
+.espada-design-page .design-space{display:grid;grid-template-columns:1fr 1fr 1.8fr;gap:24px;align-items:center;margin-top:36px}
+.espada-design-page .design-space img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px}
+.espada-design-page .design-space h3{margin:0 0 20px;font-weight:600;font-size:20px;line-height:1.3;text-transform:uppercase;color:#313131}
+.espada-design-page .design-partners-title{text-align:center;margin:0;font-size:clamp(22px,2.2vw,30px);line-height:1.2;font-weight:600;text-transform:uppercase}
+.espada-design-page .design-partners-row{display:flex;gap:24px;align-items:center;margin:38px auto 0;max-width:900px}
+.espada-design-page .design-partners-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px;align-items:center;flex:1;min-width:0}
+.espada-design-page .design-partners-logos img{width:100%;max-width:140px;height:55px;object-fit:contain;filter:grayscale(1);justify-self:center}
+.espada-design-page .design-carousel-button{width:36px;height:36px;flex:0 0 36px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:24px;line-height:1}
+.espada-design-page .design-carousel-button:hover{background:#026B63}
+.espada-design-page .complete-benefits{display:grid;gap:16px;max-width:900px;margin:38px auto 0}
+.espada-design-page .complete-benefit{border:1px solid #00AD9F;border-radius:5px;padding:22px 24px}
+.espada-design-page .complete-benefit h3{font-size:19px;line-height:1.3;font-weight:600;margin:0 0 10px;text-transform:uppercase}
+.espada-design-page .complete-benefit p{font-size:17px;line-height:1.55;color:#5c5c5c;margin:0}
+.espada-design-page .design-hero-quiz{width:100%;max-width:480px;min-width:0;background:#fff;border-radius:5px;padding:clamp(18px,2vw,28px);box-shadow:0 10px 40px #0002}
+.espada-design-page .design-hero-quiz>dc-import{display:block;width:100%}
+@media(max-width:1000px){
+.espada-design-page .design-tariffs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.espada-design-page .design-space{grid-template-columns:1fr 1fr}
+.espada-design-page .design-space>div{grid-column:1/-1}}
+@media(max-width:640px){
+.espada-design-page .design-container{padding-inline:16px}
+.espada-design-page .design-split{grid-template-columns:minmax(0,1fr)}
+.espada-design-page .design-points{grid-template-columns:minmax(0,1fr)}
+.espada-design-page .design-tariffs{grid-template-columns:minmax(0,1fr);gap:32px}
+.espada-design-page .design-tariff__items{font-size:16px}
+.espada-design-page .design-partners-row{gap:10px}
+.espada-design-page .design-partners-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.espada-design-page .design-partners-logos img{height:44px}
+.espada-design-page .design-actions{gap:24px}
+.espada-design-page .design-button{font-size:13px}
+.espada-design-page .design-space{gap:14px}
+.espada-design-page .design-space>div{margin-top:14px}}
 
 </style>
 </helmet>
 
-<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+<div class="espada-design-page" style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip">
 
   <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
 
@@ -114,8 +122,8 @@ input,textarea,select{font-family:inherit}
         </div>
         <div style="font-size:11px;color:#d9d9d9;letter-spacing:.02em">Цена «от» указана за квадратный метр по полу</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
-          <button type="button" data-open-form="design" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff">Бесплатный выезд дизайнера</button>
-          <button type="button" data-open-quiz="style" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#313131;border-color:#fff">Узнать какой стиль вам подойдет</button>
+          <button type="button" data-open-form="design" style="background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 18px;font-size:11.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;transition:background .2s,box-shadow .2s" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff">Бесплатный выезд дизайнера</button>
+          <button type="button" data-open-quiz="style" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:17px 18px;font-size:11.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;transition:all .2s" style-hover="background:#fff;color:#313131;border-color:#fff">Узнать какой стиль вам подойдет</button>
         </div>
       </div>
       <div style="min-width:0;display:flex;justify-content:flex-end">
@@ -245,22 +253,7 @@ input,textarea,select{font-family:inherit}
           </div>
           <button type="button" data-open-form="design" class="design-button design-button--white" style="align-self:center">Узнать больше о дизайне</button>
         </div>
-        <form onSubmit="{{ noSubmit }}" style="background:#00AD9F;border-radius:5px;padding:clamp(22px,2.2cqw,32px);display:flex;flex-direction:column;gap:14px">
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:12px;font-weight:600;color:#fff">Имя</span>
-            <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" style="height:46px;border:0;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" />
-          </label>
-          <label style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:12px;font-weight:600;color:#fff">Телефон</span>
-            <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() \-]{10,}" title="Введите номер телефона полностью" placeholder="+7 (000) 000-00-00" style="height:46px;border:0;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;background:#fff;outline:none" />
-          </label>
-          <div style="display:flex;gap:9px;align-items:flex-start">
-            <input type="checkbox" name="consent" required="true" aria-label="Согласие на обработку персональных данных" style="width:17px;height:17px;flex:0 0 17px;margin:2px 0 0;accent-color:#00AD9F">
-            <span style="font-size:11px;line-height:1.45;color:#fff">Я даю <a href="/soglasie-na-obrabotku/" style="color:#fff;text-decoration:underline">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="color:#fff;text-decoration:underline">Политикой конфиденциальности</a></span>
-          </div>
-          <button type="submit" style="align-self:center;background:#fff;color:#00AD9F;border:0;border-radius:5px;padding:15px 26px;font-size:12.5px;font-weight:700;transition:color .2s" style-hover="color:#026B63">Заказать дизайн-проект</button>
-        <sc-if value="{{ submissionMessage }}"><p role="status" style="margin:0;padding:14px;background:#f8f8f8;border-radius:5px;color:#026B63;font-size:15px;line-height:1.45">{{ submissionMessage }}</p></sc-if>
-        </form>
+        <div class="design-capture-form"><dc-import name="Форма" kind="design" theme="brand" compact="{{ yes }}" cta="Заказать дизайн-проект" hint-size="100%,340px"></dc-import></div>
       </div>
       <div style="min-width:0">
         <img src="assets/designers.jpg" alt="Дизайнер Эспады" style="width:100%;height:100%;min-height:clamp(300px,32cqw,460px);object-fit:cover;border-radius:5px;display:block;background:#f0f0f0" />
@@ -353,7 +346,7 @@ const PARTNER_NAMES = { 'logo-09.png': 'AM·PM', 'logo-10.png': 'Мосплит�
 
 
 class Component extends DCLogic {
-  state = { slide: 0, pshift: 0, submissionMessage: '' };
+  state = { slide: 0, pshift: 0 };
 
   renderVals() {
     const mobile = !!this.props.mobile;
@@ -363,12 +356,11 @@ class Component extends DCLogic {
     const groups = Math.ceil(PARTNERS.length / per);
     const start = ((pshift % groups) + groups) % groups;
     return {
+      yes: true,
       headerVariant: mobile ? 'mobile' : 'default',
       isMobile: mobile,
       tariffs: TARIFFS,
       perks: PERKS,
-      submissionMessage: this.state.submissionMessage,
-      noSubmit: (e) => { e.preventDefault(); this.setState({ submissionMessage: 'Спасибо! Это демонстрационная форма — данные не отправляются.' }); },
       slide: 'assets/' + SLIDES[idx],
       slidePrev: () => this.setState({ slide: slide - 1 }),
       slideNext: () => this.setState({ slide: slide + 1 }),

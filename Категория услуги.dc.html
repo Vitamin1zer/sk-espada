@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -27,11 +27,6 @@
 @font-face{font-family:TildaSans;src:url("assets/fonts/TildaSans-Black.woff2") format("woff2");font-weight:900;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:#fff}
-a{color:#00AD9F;text-decoration:none}
-a:not([data-button-link]):hover{color:#026B63}
-button{font-family:inherit;cursor:pointer}
-input,textarea,select{font-family:inherit}
 ::selection{background:#00AD9F;color:#fff}
 .category-rates__header,.category-rates__row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr) 130px;gap:clamp(10px,1.4cqw,22px);align-items:center}
 .category-rates__row>span{min-width:0}
@@ -47,7 +42,7 @@ input,textarea,select{font-family:inherit}
 </style>
 </helmet>
 
-<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden">
+<div style="container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip">
 
   <dc-import name="Шапка" variant="{{ headerVariant }}" hint-size="100%,122px"></dc-import>
 
@@ -80,10 +75,10 @@ input,textarea,select{font-family:inherit}
         <sc-if value="{{ p.price }}" hint-placeholder-val="{{ true }}">
           <div style="font-size:11px;color:#d9d9d9;letter-spacing:.02em">Цена «от» указана за квадратный метр по полу</div>
         </sc-if>
-        <button type="button" onClick="{{ openPopup }}" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 26px;font-size:clamp(11px,.85cqw,12px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;margin-top:4px" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff">{{ p.cta }}</button>
+        <button type="button" onClick="{{ openPopup }}" style="align-self:flex-start;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:17px 26px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,box-shadow .2s;margin-top:4px;min-height:48px;line-height:1.3" style-hover="background:#026B63;box-shadow:0 8px 22px rgba(0,0,0,.35);color:#fff">{{ p.cta }}</button>
       </div>
       <div style="min-width:0;display:flex;justify-content:flex-end">
-        <div id="quiz" style="width:100%;max-width:500px;border-radius:5px;overflow:hidden;background:#fff">
+        <div id="quiz" style="scroll-margin-top:160px;width:100%;max-width:500px;border-radius:5px;overflow:hidden;background:#fff">
           <sc-if value="{{ isAcceptance }}" hint-placeholder-val="{{ false }}">
             <dc-import name="Форма" kind="Приёмка" state="Пустая" hint-size="100%,620px"></dc-import>
           </sc-if>
@@ -148,7 +143,7 @@ input,textarea,select{font-family:inherit}
             <span class="category-rates__title" style="font-size:16px;font-weight:600;color:#313131;line-height:1.3">{{ r.title }}</span>
             <span style="font-size:16px;font-weight:400;color:#026B63;font-variant-numeric:tabular-nums"><span class="category-rates__label">Цена</span>{{ r.price }}</span>
             <span style="font-size:16px;color:#5c5c5c"><span class="category-rates__label">Срок</span>{{ r.term }}</span>
-            <button class="category-rates__cta" type="button" onClick="{{ openPopup }}" style="background:transparent;color:#00AD9F;border:1px solid #00AD9F;border-radius:5px;padding:11px 18px;font-size:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;transition:all .2s" style-hover="background:#00AD9F;color:#fff">Рассчитать</button>
+            <button class="category-rates__cta" type="button" onClick="{{ openPopup }}" style="background:transparent;color:#00AD9F;border:1px solid #00AD9F;border-radius:5px;padding:11px 18px;font-size:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;transition:all .2s;min-height:48px;line-height:1.3" style-hover="background:#00AD9F;color:#fff">Рассчитать</button>
           </div>
         </sc-for>
       </div>
@@ -183,7 +178,7 @@ input,textarea,select{font-family:inherit}
           <div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff)"></div>
         </sc-if>
       </div>
-      <button type="button" onClick="{{ toggleSeo }}" style="align-self:flex-start;background:transparent;border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .2s" style-hover="background:#00AD9F;color:#fff">{{ seoLabel }}</button>
+      <button type="button" onClick="{{ toggleSeo }}" style="align-self:flex-start;background:transparent;border:1px solid #00AD9F;color:#00AD9F;padding:13px 22px;font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;min-height:48px;line-height:1.3" style-hover="background:#00AD9F;color:#fff">{{ seoLabel }}</button>
     </div>
   </section>
 
@@ -215,43 +210,23 @@ input,textarea,select{font-family:inherit}
       <h2 style="margin:0;font-size:clamp(20px,2.2cqw,30px);line-height:1.14;font-weight:600;letter-spacing:-.01em;text-transform:uppercase;color:#000">{{ p.siblingsTitle }}</h2>
       <div style="margin-top:clamp(20px,2.2cqw,32px);display:flex;flex-wrap:wrap;gap:10px">
         <sc-for list="{{ p.siblings }}" as="s" hint-placeholder-count="8">
-          <a data-button-link="true" href="{{ s.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:13px;line-height:1.2;color:#313131;text-decoration:none;transition:all .15s" style-hover="border-color:#00AD9F;color:#00AD9F">{{ s.t }}</a>
+          <a data-button-link="true" href="{{ s.href }}" style="border:1px solid #e2e2e2;padding:12px 18px;font-size:16px;line-height:1.2;color:#313131;text-decoration:none;transition:all .15s;min-height:48px" style-hover="border-color:#00AD9F;color:#00AD9F">{{ s.t }}</a>
         </sc-for>
       </div>
       <a href="{{ p.parentHref }}" style="margin-top:22px;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F" style-hover="color:#026B63">Все услуги раздела «{{ p.parent }}» →</a>
     </div>
   </section>
 
-  <section data-screen-label="CTA перед подвалом" style="background:#00AD9F">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:start">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(40px,4.4cqw,72px)">
-        <h2 style="margin:0;font-size:clamp(28px,3cqw,42px);line-height:1.14;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;color:#fff">Договоримся о встрече</h2>
-        <h3 style="margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#fff">И наш специалист:</h3>
-        <p style="margin:0;font-size:clamp(16px,1.4cqw,20px);line-height:1.6;color:#fff;max-width:440px;text-wrap:pretty">приедет в любую точку города в день обращения или в удобное для вас время, выполнит замер и ответит на вопросы, сделает детальный расчет сметы</p>
-      </div>
-      <div style="min-width:0;display:flex;align-items:center;justify-content:center;padding:clamp(20px,3cqw,40px) 0">
-        <dc-import name="Форма" key="{{ inlineFormKind }}" kind="{{ inlineFormKind }}" state="Пустая" hint-size="100%,620px"></dc-import>
-      </div>
-      <div style="min-width:0;display:flex;align-items:flex-end;justify-content:center;align-self:stretch">
-        <img src="assets/specialist.png" alt="Специалист Эспады" style="width:100%;max-width:330px;height:auto;display:block" />
-      </div>
-    </div>
-  </section>
+  <dc-import name="Встреча" kind="{{ meetingKind }}"></dc-import>
 
   <dc-import name="Подвал" mobile="{{ isMobile }}" hint-size="100%,470px"></dc-import>
 
-  <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;top:var(--demo-visible-top,0px);height:var(--demo-visible-height,100dvh);left:0;right:0;background:rgba(20,20,20,.6);z-index:80;overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:clamp(20px,4cqw,60px) 16px">
-      <div style="width:100%;max-width:560px;box-shadow:0 30px 70px rgba(0,0,0,.35)">
-        <dc-import name="Форма" key="{{ formKind }}" kind="{{ formKind }}" state="Пустая" title="{{ p.popupTitle }}" cta="{{ p.cta }}" perks="{{ p.popupPerks }}" hint-size="100%,520px"></dc-import>
-      </div>
-    </div>
-  </sc-if>
+
 
 </div>
 
 </x-dc></template>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт в новостройке&quot;,&quot;Дизайн кухни&quot;,&quot;Приёмка без отделки&quot;],&quot;default&quot;:&quot;Ремонт в новостройке&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ремонт в новостройке&quot;,&quot;Дизайн кухни&quot;,&quot;Приёмка без отделки&quot;],&quot;default&quot;:&quot;Ремонт в новостройке&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Страница&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Артборд&quot;},&quot;serviceTitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;},&quot;servicePath&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контекст услуги&quot;}}">
 const L = (t, href) => ({ t, href });
 
 const REMONT_SIBLINGS = [
@@ -412,14 +387,37 @@ const PAGES = {
   },
 };
 
+function serviceContext(source, key, props) {
+  const title = typeof props.serviceTitle === 'string' ? props.serviceTitle.trim() : '';
+  const path = typeof props.servicePath === 'string' ? props.servicePath : '';
+  if (!title) return source;
+  const design = key === 'design' || key === 'kuhnya';
+  const acceptance = key === 'priemka';
+  const description = design
+    ? 'В проекты наших дизайнеров заложены потребности каждого члена семьи, особенности пространства, последние тренды дизайна и проверенные временем решения.'
+    : acceptance
+      ? 'Проверяем состояние квартиры, фиксируем обнаруженные дефекты и готовим перечень замечаний для застройщика.'
+      : 'Состав работ, сроки и стоимость уточняются по вашему объекту. Оставьте заявку, чтобы обсудить задачу со специалистом.';
+  const contextual = { ...source, h1: title, crumb: title, servicePath: path,
+    leadTitle: title, lead: description, seoTitle: title, seo: [description], price: '',
+    facts: source.facts.map(f => /₽/.test(f.v) ? { v: 'Расчёт', t: 'по вашему объекту' } : f),
+  };
+  return { ...contextual,
+    includesTitle: 'Состав работ', worksTitle: 'Примеры наших работ',
+    includes: source.includes.map(g => ({ ...g, items: g.items.map(t => t.replace(/стен кухни/g, 'стен')) })),
+    works: source.works.map(w => ({ ...w, title: design ? 'Дизайн интерьера' : acceptance ? 'Приёмка квартиры' : 'Ремонт квартиры' })),
+    faq: design ? source.faq.filter(f => !/кухн/i.test(f.q)) : source.faq,
+  };
+}
+
 class Component extends DCLogic {
-  state = { faq: 0, popup: false, seoOpen: false };
+  state = { faq: 0, seoOpen: false };
 
   renderVals() {
     const key = { 'Ремонт в новостройке': 'novostroyka', 'Дизайн кухни': 'kuhnya', 'Приёмка без отделки': 'priemka' }[this.props.page] || 'novostroyka';
-    const p = PAGES[key];
+    const p = serviceContext(PAGES[key], key, this.props);
     const mobile = !!this.props.mobile;
-    const { faq, popup, seoOpen } = this.state;
+    const { faq, seoOpen } = this.state;
     return {
       p, isMobile: mobile, headerVariant: mobile ? 'mobile' : 'default',
       heroImageCss: 'position:absolute;inset:0;width:100%;height:100%;background-size:cover;background-position:center;background-image:url("' + p.hero + '")',
@@ -427,11 +425,8 @@ class Component extends DCLogic {
       isAcceptance: key === 'priemka',
       hasQuiz: key !== 'priemka',
       quizKind: key === 'design' || key === 'kuhnya' ? 'Дизайн-проект' : 'Ремонт',
-      formKind: key === 'priemka' ? 'Приёмка' : (key === 'design' || key === 'kuhnya' ? 'Дизайн' : 'Попап'),
-      inlineFormKind: key === 'priemka' ? 'Приёмка' : (key === 'design' || key === 'kuhnya' ? 'Дизайн' : 'Встроенная'),
-      popup,
-      openPopup: () => this.setState({ popup: true }),
-      closePopup: () => this.setState({ popup: false }),
+      meetingKind: key === 'priemka' ? 'acceptance' : (key === 'design' || key === 'kuhnya' ? 'design' : 'repair'),
+      openPopup: () => window.__espadaOpenPopup({ kind: key === 'priemka' ? 'Приёмка' : (key === 'design' || key === 'kuhnya' ? 'Дизайн' : 'Попап'), title: p.popupTitle, cta: p.cta, perks: p.popupPerks }),
 
       seoParas: seoOpen ? p.seo : p.seo.slice(0, 1),
       seoFade: !seoOpen,

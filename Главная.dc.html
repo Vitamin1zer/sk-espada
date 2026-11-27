@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -37,7 +37,7 @@ input,textarea,select{font-family:inherit}
 
 
 /* Static element styles precede the page cascade. */
-:where(.main-home).main-inline-1,:where(.main-home) .main-inline-1{container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:hidden}
+:where(.main-home).main-inline-1,:where(.main-home) .main-inline-1{container-type:inline-size;position:relative;font-family:TildaSans,'Helvetica Neue',Helvetica,sans-serif;color:#313131;background:#fff;overflow:clip}
 :where(.main-home).main-inline-2,:where(.main-home) .main-inline-2{position:relative;background:#313131}
 :where(.main-home).main-inline-3,:where(.main-home) .main-inline-3{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 :where(.main-home).main-inline-4,:where(.main-home) .main-inline-4{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.72) 0%,rgba(20,20,20,.5) 55%,rgba(20,20,20,.3) 100%)}
@@ -101,28 +101,6 @@ input,textarea,select{font-family:inherit}
 :where(.main-home).main-inline-62,:where(.main-home) .main-inline-62{width:42px;height:42px;border:0;border-radius:50%;background:#00AD9F;color:#fff;font-size:16px;line-height:1;transition:background .2s}
 :where(.main-home).main-inline-63,:where(.main-home) .main-inline-63{margin-top:clamp(26px,2.8cqw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px,2cqw,32px);align-items:center}
 :where(.main-home).main-inline-64,:where(.main-home) .main-inline-64{width:100%;height:clamp(48px,4.4cqw,62px);object-fit:contain;display:block;filter:grayscale(1);opacity:.72;transition:opacity .2s}
-:where(.main-home).main-inline-65,:where(.main-home) .main-inline-65{background:#00AD9F;position:relative}
-:where(.main-home).main-inline-66,:where(.main-home) .main-inline-66{max-width:1200px;margin:0 auto;padding:clamp(40px,4.4cqw,72px) clamp(16px,1.4cqw,20px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,40px);align-items:start}
-:where(.main-home).main-inline-67,:where(.main-home) .main-inline-67{min-width:0;display:flex;flex-direction:column;gap:18px;padding-bottom:clamp(40px,4.4cqw,72px)}
-:where(.main-home).main-inline-68,:where(.main-home) .main-inline-68{margin:0;font-size:clamp(21px,2.3cqw,32px);line-height:1.14;font-weight:800;letter-spacing:-.005em;text-transform:uppercase;color:#fff}
-:where(.main-home).main-inline-69,:where(.main-home) .main-inline-69{margin:0;font-size:clamp(14px,1.25cqw,18px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#fff}
-:where(.main-home).main-inline-70,:where(.main-home) .main-inline-70{margin:0;font-size:clamp(13px,1.05cqw,15px);line-height:1.6;color:#fff;max-width:440px;text-wrap:pretty}
-:where(.main-home).main-inline-71,:where(.main-home) .main-inline-71{margin:0;font-size:11.5px;line-height:1.55;color:#fff;font-style:italic;opacity:.9;max-width:400px}
-:where(.main-home).main-inline-72,:where(.main-home) .main-inline-72{min-width:0;background:#fff;padding:clamp(22px,2.1cqw,30px);display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(40px,4.4cqw,72px)}
-:where(.main-home).main-inline-73,:where(.main-home) .main-inline-73{display:flex;flex-direction:column;gap:6px}
-:where(.main-home).main-inline-74,:where(.main-home) .main-inline-74{font-size:11.5px;font-weight:600;color:#5c5c5c}
-:where(.main-home).main-inline-75,:where(.main-home) .main-inline-75{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
-:where(.main-home).main-inline-76,:where(.main-home) .main-inline-76{display:flex;flex-direction:column;gap:6px}
-:where(.main-home).main-inline-77,:where(.main-home) .main-inline-77{font-size:11.5px;font-weight:600;color:#5c5c5c}
-:where(.main-home).main-inline-78,:where(.main-home) .main-inline-78{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
-:where(.main-home).main-inline-79,:where(.main-home) .main-inline-79{display:flex;gap:9px;align-items:flex-start}
-:where(.main-home).main-inline-80,:where(.main-home) .main-inline-80{width:17px;height:17px;flex:0 0 17px;margin-top:2px;accent-color:#00ad9f}
-:where(.main-home).main-inline-81,:where(.main-home) .main-inline-81{font-size:11px;line-height:1.45;color:#5c5c5c}
-:where(.main-home).main-inline-82,:where(.main-home) .main-inline-82{color:#00AD9F;text-decoration:underline}
-:where(.main-home).main-inline-83,:where(.main-home) .main-inline-83{color:#00AD9F;text-decoration:underline}
-:where(.main-home).main-inline-84,:where(.main-home) .main-inline-84{align-self:flex-start;background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:16px 24px;font-size:12px;font-weight:700;letter-spacing:.04em;transition:background .2s,box-shadow .2s}
-:where(.main-home).main-inline-85,:where(.main-home) .main-inline-85{min-width:0;display:flex;align-items:flex-end;justify-content:center;align-self:stretch}
-:where(.main-home).main-inline-86,:where(.main-home) .main-inline-86{width:100%;max-width:330px;height:auto;display:block}
 :where(.main-home).main-inline-87,:where(.main-home) .main-inline-87{background:#fff;padding:clamp(44px,5.6cqw,92px) 0}
 :where(.main-home).main-inline-88,:where(.main-home) .main-inline-88{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,2.6cqw,44px);align-items:center}
 :where(.main-home).main-inline-89,:where(.main-home) .main-inline-89{min-width:0;display:flex;flex-direction:column;gap:clamp(22px,2.4cqw,36px)}
@@ -141,25 +119,6 @@ input,textarea,select{font-family:inherit}
 :where(.main-home).main-inline-102,:where(.main-home) .main-inline-102{min-width:0}
 :where(.main-home).main-inline-103,:where(.main-home) .main-inline-103{display:block}
 :where(.main-home).main-inline-104,:where(.main-home) .main-inline-104{width:100%;height:clamp(240px,26cqw,380px);object-fit:cover;display:block;background:#f0f0f0}
-:where(.main-home).main-inline-105,:where(.main-home) .main-inline-105{width:100%;max-width:560px;background:#fff;padding:clamp(24px,2.4cqw,36px);position:relative;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
-:where(.main-home).main-inline-106,:where(.main-home) .main-inline-106{position:absolute;right:14px;top:14px;width:32px;height:32px;border:0;background:transparent;padding:0;font-size:22px;line-height:1;color:#929292}
-:where(.main-home).main-inline-107,:where(.main-home) .main-inline-107{margin:0;font-size:clamp(18px,1.7cqw,24px);line-height:1.18;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#000;max-width:88%}
-:where(.main-home).main-inline-108,:where(.main-home) .main-inline-108{font-size:13px;line-height:1.55;color:#5c5c5c}
-:where(.main-home).main-inline-109,:where(.main-home) .main-inline-109{display:flex;flex-direction:column;gap:6px}
-:where(.main-home).main-inline-110,:where(.main-home) .main-inline-110{font-size:13px;line-height:1.5;color:#313131}
-:where(.main-home).main-inline-111,:where(.main-home) .main-inline-111{display:flex;flex-direction:column;gap:14px;margin-top:4px}
-:where(.main-home).main-inline-112,:where(.main-home) .main-inline-112{display:flex;flex-direction:column;gap:6px}
-:where(.main-home).main-inline-113,:where(.main-home) .main-inline-113{font-size:11.5px;font-weight:600;color:#5c5c5c}
-:where(.main-home).main-inline-114,:where(.main-home) .main-inline-114{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
-:where(.main-home).main-inline-115,:where(.main-home) .main-inline-115{display:flex;flex-direction:column;gap:6px}
-:where(.main-home).main-inline-116,:where(.main-home) .main-inline-116{font-size:11.5px;font-weight:600;color:#5c5c5c}
-:where(.main-home).main-inline-117,:where(.main-home) .main-inline-117{height:46px;border:1px solid #d9d9d9;border-radius:5px;padding:0 13px;font-size:14px;color:#313131;outline:none}
-:where(.main-home).main-inline-118,:where(.main-home) .main-inline-118{display:flex;gap:9px;align-items:flex-start}
-:where(.main-home).main-inline-119,:where(.main-home) .main-inline-119{width:17px;height:17px;flex:0 0 17px;margin-top:2px;accent-color:#00ad9f}
-:where(.main-home).main-inline-120,:where(.main-home) .main-inline-120{font-size:11px;line-height:1.45;color:#5c5c5c}
-:where(.main-home).main-inline-121,:where(.main-home) .main-inline-121{color:#00AD9F;text-decoration:underline}
-:where(.main-home).main-inline-122,:where(.main-home) .main-inline-122{color:#00AD9F;text-decoration:underline}
-:where(.main-home).main-inline-123,:where(.main-home) .main-inline-123{background:#00AD9F;color:#fff;border:0;border-radius:5px;padding:16px 22px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:background .2s}
 :where(.main-home).main-inline-124,:where(.main-home) .main-inline-124{background:#fff;padding:clamp(28px,3cqw,48px) 0 clamp(44px,5cqw,80px)}
 :where(.main-home).main-inline-125,:where(.main-home) .main-inline-125{max-width:1200px;margin:0 auto;padding:0 clamp(16px,1.4cqw,20px)}
 :where(.main-home).main-inline-126,:where(.main-home) .main-inline-126{margin:0;font-size:clamp(23px,2.4cqw,34px);line-height:1.12;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#000}
@@ -212,13 +171,12 @@ input,textarea,select{font-family:inherit}
 :where(.main-home).main-inline-173,:where(.main-home) .main-inline-173{display:flex;gap:11px;align-items:flex-start}
 :where(.main-home).main-inline-174,:where(.main-home) .main-inline-174{font-size:15px;color:#00AD9F;line-height:1.35;font-weight:700}
 :where(.main-home).main-inline-175,:where(.main-home) .main-inline-175{font-size:clamp(13px,1.05cqw,15px);line-height:1.4;color:#313131}
-:where(.main-home).main-inline-176,:where(.main-home) .main-inline-176{margin-top:clamp(30px,3.4cqw,54px);padding:0 clamp(16px,1.4cqw,20px);display:flex;gap:clamp(10px,1.1cqw,16px);overflow-x:auto;max-width:1240px;margin-left:auto;margin-right:auto}
 /* Main page: dimensions follow the Tilda reference and the client's marked-up PDF. */
 .main-home {font-size:18px;line-height:1.45;font-weight:400}
 .main-home h1 {font-weight:800}
-.main-home section h2 {font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:0;text-transform:uppercase;margin:0;text-align:left}
-.main-home section h3 {font-size:clamp(19px,1.6cqw,23px);line-height:1.2;font-weight:600;letter-spacing:0}
-.main-home section p {font-size:18px;line-height:1.45;font-weight:400}
+.main-home > section h2 {font-size:clamp(28px,3cqw,42px);line-height:1.12;font-weight:600;letter-spacing:0;text-transform:uppercase;margin:0;text-align:left}
+.main-home > section h3 {font-size:clamp(19px,1.6cqw,23px);line-height:1.2;font-weight:600;letter-spacing:0}
+.main-home > section p {font-size:18px;line-height:1.45;font-weight:400}
 .main-home em {font-style:normal;color:#00ad9f}
 .main-container {max-width:1200px;margin:0 auto;padding:0 20px}
 .main-section {padding:76px 0}
@@ -316,8 +274,6 @@ input,textarea,select{font-family:inherit}
 .main-home [data-screen-label="Дизайнеры"] h2 {font-size:28px;text-align:left}
 .main-home [data-screen-label="Дизайнеры"] h2 + p {font-weight:400}
 .main-home [data-screen-label="Дизайнеры"] h2 + p + div + a {align-self:center}
-.main-home [data-screen-label="Дизайнеры"] input,.main-home [data-screen-label="Договоримся о встрече"] input {font-size:18px;height:48px;border-radius:5px}
-.main-home [data-screen-label="Дизайнеры"] form > button {font-size:18px}
 .main-home [data-screen-label="Дизайнеры"] h2 + p {font-size:18px}
 .main-home [data-screen-label="Дизайнеры"] h2 + p + div span:last-child {font-size:18px}
 .main-home [data-screen-label="Дизайнеры"] h2 + p + div + a {font-size:17px}
@@ -349,13 +305,6 @@ input,textarea,select{font-family:inherit}
 .main-review-card button {background:none;border:0;padding:5px 0;font-size:16px;color:#00ad9f;text-decoration:underline;text-underline-offset:3px}
 .main-review-avatar{width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:grid;place-items:center;background:#e0efec;color:#026b63;font-size:17px}.main-zoon-icon{display:grid;place-items:center;width:52px;height:52px;margin:0 auto 20px;border-radius:13px;background:#7354cd;color:white;font-size:35px;font-weight:600}.main-review-pending{text-align:center;max-width:1000px;margin:auto;background:#f6f6f6;border-radius:5px;padding:32px}.main-review-pending h3{margin:0}.main-review-pending-line{display:block;background:#e6e6e6;height:11px;margin:14px 0;border-radius:5px;max-width:90%}.main-review-pending-line:last-child{max-width:65%}
 .main-review-source {display:table;margin:20px auto 0;font-size:18px}
-.main-home [data-screen-label="Договоримся о встрече"] > div {grid-template-columns:1.1fr 1.1fr .9fr;gap:34px;align-items:center}
-.main-home [data-screen-label="Договоримся о встрече"] h2 {font-size:30px;max-width:330px}
-.main-home [data-screen-label="Договоримся о встрече"] h3 {font-size:22px}
-.main-home [data-screen-label="Договоримся о встрече"] form {border-radius:5px;margin-bottom:40px}
-.main-home [data-screen-label="Договоримся о встрече"] form button {font-size:18px;letter-spacing:0}
-.main-home [data-screen-label="Договоримся о встрече"] > div > div:last-child {align-self:end}
-.main-home [data-screen-label="Договоримся о встрече"] > div > div:last-child img {width:380px;max-width:125%}
 .main-modal-backdrop {position:absolute;inset:0;z-index:90;background:#151515a8}
 .main-modal {position:absolute;top:calc(var(--demo-visible-top,var(--main-local-top,0px)) + 24px);max-height:calc(var(--demo-visible-height,var(--main-local-height,100dvh)) - 48px);left:50%;transform:translateX(-50%);width:calc(100% - 48px);max-width:1060px;border-radius:5px;background:#fff;z-index:91;overflow:auto;box-shadow:0 24px 80px #0006;overscroll-behavior:contain}
 .main-modal-close {position:sticky;top:12px;left:calc(100% - 56px);margin:12px 12px -52px auto;width:40px;height:40px;z-index:5;border:0;border-radius:50%;background:#313131;color:#fff;font-size:30px;line-height:1;display:grid;place-items:center}
@@ -393,25 +342,15 @@ input,textarea,select{font-family:inherit}
 .main-home .main-story-modal .main-inline-161 {grid-template-columns:repeat(2,minmax(0,1fr))}
 .main-home .main-story-modal .main-inline-164 {font-weight:400}
 .main-home .main-story-modal .main-inline-169 {padding:0;background:transparent;color:#00ad9f;font-size:28px;font-weight:600}
-.main-result-gallery {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:45px;align-items:center;margin:48px auto 0;max-width:1000px}
-.main-result-pair {position:relative;height:300px;perspective:900px}
-.main-result-pair img,.main-result-single img {display:block;position:absolute;top:50%;border-radius:5px;object-fit:cover;box-shadow:0 8px 25px #0002}
-.main-result-pair .main-result-back {left:0;width:48%;height:77%;transform:translateY(-50%) rotateY(15deg);z-index:1}
-.main-result-pair .main-result-front {right:0;width:72%;height:96%;transform:translateY(-50%) rotateY(-9deg);z-index:2}
-.main-result-pair--right .main-result-back {left:auto;right:0;transform:translateY(-50%) rotateY(-15deg)}
-.main-result-pair--right .main-result-front {left:0;right:auto;transform:translateY(-50%) rotateY(9deg)}
-.main-result-single {position:relative;height:320px}
-.main-result-single img {left:10%;width:80%;height:100%;transform:translateY(-50%)}
 @media(max-width:1000px){
  .main-home [data-screen-label="Обложка"] > div:last-child{grid-template-columns:1fr;gap:35px}.main-hero-quiz{max-width:540px}.main-home [data-screen-label="Обложка"] h1{font-size:clamp(36px,7.1vw,70px)}
  .main-tariffs{grid-template-columns:repeat(2,minmax(0,1fr))}.main-portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}
  .main-home [data-screen-label="Четыре направления"] h2+div{grid-template-columns:repeat(2,minmax(0,1fr))}.main-video-card>div:first-child{padding:18px;min-height:205px}
- .main-home [data-screen-label="Договоримся о встрече"]>div{grid-template-columns:repeat(2,minmax(0,1fr))}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child{grid-column:2;margin-top:-30px}
- .main-home [data-screen-label="Договоримся о встрече"] form{margin-bottom:0}.main-residential-grid{gap:25px}.main-case-preview{gap:35px}
+ .main-residential-grid{gap:25px}.main-case-preview{gap:35px}
  .main-home .main-story-modal [data-screen-label="Общение с инженером"]>div{grid-template-columns:1fr}.main-home .main-story-modal [data-screen-label="Общение с инженером"] img{min-width:0}
 }
 @media(max-width:640px){
- .main-section{padding:48px 0}.main-container{padding:0 20px}.main-home section h2{font-size:28px}.main-home section p{font-size:18px}
+ .main-section{padding:48px 0}.main-container{padding:0 20px}.main-home > section h2{font-size:28px}.main-home > section p{font-size:18px}
  .main-home [data-screen-label="Обложка"]>div:last-child{padding-top:50px;padding-bottom:50px}.main-home [data-screen-label="Обложка"] h1{font-size:clamp(31px,7.1vw,46px)}.main-home [data-screen-label="Обложка"] h1+div{font-size:28px}.main-home [data-screen-label="Обложка"] h1+div+div{font-size:19px}.main-hero-quiz{padding:0}.main-home .main-hero-quiz h2{font-size:24px}
  .main-home [data-screen-label="Четыре направления"] h2 span:first-child{font-size:35px}.main-home [data-screen-label="Четыре направления"] h2 span:last-child{font-size:25px}.main-home [data-screen-label="Четыре направления"] h2+div{grid-template-columns:1fr;gap:16px}.main-home [data-screen-label="Четыре направления"] a{min-height:170px;padding:22px}
  .main-video-wrap{padding:30px 16px}.main-video-panel{padding:28px 20px}.main-home .main-video-panel h2{font-size:24px}.main-video-grid{grid-template-columns:1fr}.main-video-card{display:grid;grid-template-columns:1fr 1fr}.main-video-card>div:first-child{min-height:0;padding:18px}.main-video-image img{height:100%;aspect-ratio:.8}.main-home .main-video-card h3{font-size:17px}.main-home .main-video-card p{font-size:15px}
@@ -419,12 +358,41 @@ input,textarea,select{font-family:inherit}
  .main-portfolio{gap:28px 18px}.main-home .main-project h3{font-size:14px}.main-project-pictures span{font-size:12px;bottom:8px;left:8px;padding:5px 7px}
  .main-inspection{padding:40px 0}.main-inspection>div{flex-direction:column;align-items:flex-start;gap:28px}.main-home .main-inspection h2{font-size:28px}
  .main-partner-logos{margin:0 45px;width:calc(100% - 90px);grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.main-partner-controls{bottom:12px}
- .main-result-gallery{grid-template-columns:1fr;gap:28px;max-width:290px}.main-result-pair{height:300px}.main-result-single{height:320px}.main-home .main-story-modal .main-inline-146{flex-wrap:wrap}.main-home .main-story-modal .main-inline-161{grid-template-columns:1fr}.main-inspection-preview{flex-basis:auto}
+ .main-home .main-story-modal .main-inline-146{flex-wrap:wrap}.main-home .main-story-modal .main-inline-161{grid-template-columns:1fr}.main-inspection-preview{flex-basis:auto}
  .main-residential-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}.main-home .main-residential h2{font-size:27px}.main-home .main-residential h3{font-size:17px}
  .main-home .main-reviews h2{font-size:28px}.main-review-card{padding:22px}.main-review-person{gap:10px;flex-wrap:wrap}.main-review-stars{margin:8px 0 0 56px}.main-review-person > div > span:not(.sc-interp){font-size:12px}.main-home .main-review-person h3{font-size:19px}
- .main-home [data-screen-label="Договоримся о встрече"]>div{grid-template-columns:1fr;gap:25px}.main-home [data-screen-label="Договоримся о встрече"]>div>div:first-child{padding-bottom:0}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child{grid-column:auto;margin-top:0}.main-home [data-screen-label="Договоримся о встрече"]>div>div:last-child img{max-width:290px}
  .main-modal{width:calc(100% - 24px)}.main-home .main-story-modal section{padding:28px 22px}.main-story-title{padding:55px 22px 10px}.main-home .main-story-title h2{font-size:28px}.main-home .main-story-modal section h2{font-size:28px}.main-worry-card{flex-basis:270px}
 }
+
+/* Result remains in the visible page flow, immediately before the repair tariffs. */
+.main-result-section {background:#fff;padding:80px 0 20px}
+.main-result-section .main-inline-166 {max-width:1000px;min-height:220px;grid-template-columns:1fr 1fr;gap:80px}
+.main-result-section .main-inline-167 {gap:50px}
+.main-home .main-result-section h2 {font-size:42px;line-height:1.05;max-width:400px}
+.main-result-section .main-inline-169 {padding:0;background:transparent;color:#00ad9f;font-size:36px;line-height:1.1;font-weight:600}
+.main-home .main-result-section h3 {font-size:22px;font-weight:600}
+.main-result-section .main-inline-175 {font-size:16px;line-height:1.4}
+.main-result-section .main-inline-174 {font-size:20px}
+.main-result-carousel {width:100%;height:560px;background:#fff;overflow:hidden;position:relative;perspective:1800px;perspective-origin:50% 50%;cursor:grab;user-select:none;touch-action:pan-y}
+.main-result-carousel.is-dragging {cursor:grabbing}
+.main-result-carousel__scene {position:relative;width:100%;height:100%;transform-style:preserve-3d}
+.main-result-carousel__item {position:absolute;top:50%;left:50%;width:148px;aspect-ratio:9/16;margin-top:calc(148px * 16 / 9 / -2);margin-left:-74px;padding:0;border:0;border-radius:5px;overflow:hidden;will-change:transform;box-shadow:0 8px 32px #0002;cursor:zoom-in;background:#f4f3f1}
+.main-result-carousel__item img {display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.main-result-lightbox {position:fixed;inset:0;z-index:200;background:rgb(12 12 12 / 86%);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px}
+.main-result-lightbox > img {display:block;max-width:min(88vw,520px);max-height:90dvh;width:auto;height:auto;object-fit:contain;border-radius:5px;box-shadow:0 32px 90px #0008}
+.main-result-lightbox__close {position:absolute;right:20px;top:18px;width:44px;height:44px;padding:0;background:rgb(255 255 255 / 12%);color:#fff;border:0;border-radius:5px;font-size:30px;z-index:1}
+.main-inspection {min-height:350px;display:flex;align-items:center}
+.main-inspection > div {width:100%}
+.main-inspection > div > div:first-child {flex:1;min-width:0}
+.main-home .main-inspection h2 {font-size:40px;line-height:1.15}
+.main-inspection h2 em {font-size:48px}
+.main-inspection-preview {flex-basis:320px}
+.main-inspection-fan {height:180px;width:300px}
+.main-inspection-fan img {left:80px;width:140px;height:180px}
+.main-inspection-fan img:first-child {left:20px}
+.main-inspection-fan img:last-child {left:140px}
+@media(max-width:960px){.main-result-carousel{height:520px}.main-result-carousel__item{width:140px;margin-top:calc(140px * 16 / 9 / -2);margin-left:-70px}.main-home .main-inspection h2{font-size:32px}.main-inspection h2 em{font-size:36px}}
+@media(max-width:640px){.main-result-section{padding:55px 0 35px}.main-result-section .main-inline-166{grid-template-columns:1fr;min-height:460px;gap:35px}.main-result-section .main-inline-167{gap:50px}.main-home .main-result-section h2{font-size:34px}.main-result-section .main-inline-169{font-size:46px}.main-home .main-result-section h3{font-size:24px}.main-result-section .main-inline-175{font-size:15px}.main-result-section .main-inline-172{gap:4px}.main-result-carousel{height:400px}.main-result-carousel__item{width:110px;margin-top:calc(110px * 16 / 9 / -2);margin-left:-55px}.main-inspection-preview{flex-basis:auto;align-self:center}.main-home .main-inspection h2{font-size:26px}.main-inspection h2 em{font-size:30px}.main-result-lightbox{padding:14px}.main-result-lightbox>img{max-width:94vw}}
 
 </style>
 </helmet>
@@ -502,6 +470,30 @@ input,textarea,select{font-family:inherit}
     </div>
   </section>
 
+  <section data-screen-label="Что получил клиент" class="main-result-section">
+    <div class="main-inline-166">
+      <div class="main-inline-167">
+        <h2 class="main-inline-168">Что получил<br />клиент?</h2>
+        <div class="main-inline-169">Результат.</div>
+      </div>
+      <div class="main-inline-170">
+        <h3 class="main-inline-171">Конец ремонта:</h3>
+        <div class="main-inline-172">
+          <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
+            <div class="main-inline-173">
+              <span class="main-inline-174">✓</span>
+              <span class="main-inline-175">{{ r }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Карусель результата" class="main-result-carousel" tabindex="0" aria-label="Фотографии ремонта: перетащите или используйте стрелки на клавиатуре">
+    <div class="main-result-carousel__scene"><sc-for list="{{ resultPhotos }}" as="photo" hint-placeholder-count="12"><button type="button" class="main-result-carousel__item" aria-label="Увеличить фотографию ремонта"><img src="{{ photo }}" alt="Интерьер квартиры после ремонта в ЖК Shagal" draggable="false" /></button></sc-for></div>
+  </section>
+
   <section data-screen-label="Тарифы ремонта" class="main-section main-tariff-section">
     <div class="main-container"><div class="main-tariff-heading"><h2>Тарифы ремонта:</h2><div class="main-tabs"><sc-for list="{{ tabs }}" as="t" hint-placeholder-count="2"><button type="button" onClick="{{ t.go }}" style="{{ t.css }}">{{ t.label }}</button></sc-for></div></div>
       <div class="main-tariffs"><sc-for list="{{ tariffs }}" as="t" hint-placeholder-count="4">
@@ -518,7 +510,7 @@ input,textarea,select{font-family:inherit}
       </sc-for></div>
     </div>
   </section>
-  <section data-screen-label="Объекты на любой стадии" class="main-inspection"><div class="main-container"><div><h2>Мы готовы показать объекты<br /><em>на любой стадии ремонта</em></h2><p>Инженер покажет вам объект на интересующей стадии ремонта в удобное время и локации.</p></div><div class="main-inspection-preview"><div class="main-inspection-fan"><img src="assets/main-stage-left.jpg" alt="Инженерные системы на объекте" /><img src="assets/main-stage-center.png" alt="Квартира в процессе ремонта" /><img src="assets/main-stage-right.jpg" alt="Ремонт на промежуточной стадии" /></div><button type="button" class="main-btn" onClick="{{ openPopup }}">Записаться на просмотр</button></div></div></section>
+  <section data-screen-label="Объекты на любой стадии" class="main-inspection"><div class="main-container"><div><h2>Мы готовы показать объекты<br /><em>на любой стадии ремонта</em></h2><p>Инженер покажет вам объект на интересующей стадии ремонта в удобное время и локации.</p></div><div class="main-inspection-preview"><div class="main-inspection-fan"><img src="assets/main-stage-left.jpg" alt="Инженерные системы на объекте" /><img src="assets/main-stage-center.png" alt="Квартира в процессе ремонта" /><img src="assets/main-stage-right.jpg" alt="Ремонт на промежуточной стадии" /></div><button type="button" class="main-btn" data-open-form="viewing">Записаться на просмотр</button></div></div></section>
 
 
 
@@ -558,21 +550,7 @@ input,textarea,select{font-family:inherit}
           </div>
           <a data-button-link="true" href="/dizajn-interera/" style-hover="color:#026B63" class="main-inline-41">Узнать больше о дизайне</a>
         </div>
-        <form onSubmit="{{ noSubmit }}" class="main-inline-42">
-          <label class="main-inline-43">
-            <span class="main-inline-44">Имя</span>
-            <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" class="main-inline-45">
-          </label>
-          <label class="main-inline-46">
-            <span class="main-inline-47">Телефон</span>
-            <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() -]{10,}" placeholder="+7 (000) 000-00-00" class="main-inline-48">
-          </label>
-          <div class="main-inline-49">
-            <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-50">
-            <span class="main-inline-51">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-52">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-53">Политикой конфиденциальности</a></span>
-          </div>
-          <button type="submit" style-hover="color:#026B63" class="main-inline-54">Заказать дизайн-проект</button>
-        </form>
+        <dc-import name="Форма" kind="Дизайн" compact="{{ true }}" theme="brand" cta="Заказать дизайн-проект"></dc-import>
       </div>
       <div class="main-inline-55">
         <img src="assets/designers.jpg" alt="Дизайнер Эспады" class="main-inline-56">
@@ -635,31 +613,7 @@ input,textarea,select{font-family:inherit}
 
   <sc-if value="{{ popup }}" hint-placeholder-val="{{ false }}">
     <div class="main-modal-backdrop" onClick="{{ closePopup }}"></div><div class="main-modal main-request-modal" role="dialog" aria-modal="true" aria-label="Расчёт сметы" style="{{ modalCss }}">
-      <div class="main-inline-105">
-        <button type="button" onClick="{{ closePopup }}" aria-label="Закрыть" class="main-inline-106">×</button>
-        <h2 class="main-inline-107">Получите индивидуальный расчет сметы</h2>
-        <div class="main-inline-108">Оставьте свои контакты и вы получите:</div>
-        <div class="main-inline-109">
-          <sc-for list="{{ popupPerks }}" as="p" hint-placeholder-count="4">
-            <span class="main-inline-110">{{ p }}</span>
-          </sc-for>
-        </div>
-        <form onSubmit="{{ noSubmit }}" class="main-inline-111">
-          <label class="main-inline-112">
-            <span class="main-inline-113">Имя</span>
-            <input type="text" name="name" autocomplete="given-name" required="true" placeholder="Иван" style-focus="border-color:#00AD9F" class="main-inline-114">
-          </label>
-          <label class="main-inline-115">
-            <span class="main-inline-116">Ваш телефон</span>
-            <input type="tel" name="phone" autocomplete="tel" required="true" pattern="[+0-9() -]{10,}" placeholder="+7 (000) 000-00-00" style-focus="border-color:#00AD9F" class="main-inline-117">
-          </label>
-          <div class="main-inline-118">
-            <input type="checkbox" required="true" aria-label="Согласие на обработку персональных данных" class="main-inline-119">
-            <span class="main-inline-120">Я даю <a href="/soglasie-na-obrabotku/" class="main-inline-121">согласие на обработку моих персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" class="main-inline-122">Политикой конфиденциальности</a></span>
-          </div>
-          <button type="submit" style-hover="background:#026B63;color:#fff" class="main-inline-123">Бесплатный расчёт сметы</button>
-        </form>
-      </div>
+      <button type="button" onClick="{{ closePopup }}" aria-label="Закрыть форму" class="main-modal-close">×</button><dc-import name="Форма" kind="Попап" cta="Бесплатный расчёт сметы"></dc-import>
     </div>
   </sc-if>
 
@@ -733,30 +687,9 @@ input,textarea,select{font-family:inherit}
       </div>
     </div>
   </section>
-  <section data-screen-label="Что получил клиент" class="main-inline-165">
-    <div class="main-inline-166">
-      <div class="main-inline-167">
-        <h2 class="main-inline-168">Что получил<br />клиент?</h2>
-        <div class="main-inline-169">Результат.</div>
-      </div>
-      <div class="main-inline-170">
-        <h3 class="main-inline-171">Конец ремонта:</h3>
-        <div class="main-inline-172">
-          <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
-            <div class="main-inline-173">
-              <span class="main-inline-174">✓</span>
-              <span class="main-inline-175">{{ r }}</span>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-    <div class="main-result-gallery" aria-label="Результат ремонта в ЖК Shagal">
-      <div class="main-result-pair"><img class="main-result-back" src="assets/main-result-left-back.jpg" alt="Готовая гостиная в ЖК Shagal" /><img class="main-result-front" src="assets/main-result-left-front.jpg" alt="Готовая кухня со столовой в ЖК Shagal" /></div>
-      <div class="main-result-single"><img src="assets/main-result-center.jpg" alt="Интерьер кухни и гостиной после ремонта" /></div>
-      <div class="main-result-pair main-result-pair--right"><img class="main-result-back" src="assets/main-result-right-back.jpg" alt="Гостиная с диваном после ремонта" /><img class="main-result-front" src="assets/main-result-right-front.jpg" alt="Зона отдыха у окна после ремонта" /></div>
-    </div>
-  </section></div></sc-if>
+</div></sc-if>
+
+  <sc-if value="{{ resultPhoto }}" hint-placeholder-val="{{ false }}"><div class="main-result-lightbox" role="dialog" aria-modal="true" aria-label="Фотография результата ремонта" onClick="{{ closeResultBackdrop }}"><button type="button" class="main-result-lightbox__close" onClick="{{ closeResultPhoto }}" aria-label="Закрыть фотографию">×</button><img src="{{ resultPhoto }}" alt="Увеличенная фотография результата ремонта" /></div></sc-if>
 
 </div>
 
@@ -950,8 +883,52 @@ const POPUP_PERKS = [
   '— понимание этапов реализации ремонта.',
 ];
 
+
+const RESULT_PHOTOS = ["assets/main-carousel-01.jpg", "assets/main-carousel-02.jpg", "assets/main-carousel-03.jpg", "assets/main-carousel-04.jpg", "assets/main-carousel-05.jpg", "assets/main-carousel-06.jpg", "assets/main-carousel-07.jpg", "assets/main-carousel-08.jpg", "assets/main-carousel-09.jpg", "assets/main-carousel-10.jpg", "assets/main-carousel-11.jpg", "assets/main-carousel-12.jpg"];
+function createResultCarousel(wrap, openPhoto) {
+  if (!wrap) return null;
+  const items = Array.from(wrap.querySelectorAll('.main-result-carousel__item'));
+  if (!items.length) return null;
+  let angle = 0, velocity = 0, dragging = false, moved = false, startX = 0, startAngle = 0, previousAngle = 0, raf = 0;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const render = () => {
+    const radius = wrap.clientWidth > 960 ? 500 : wrap.clientWidth > 640 ? 370 : 270;
+    items.forEach((item, i) => {
+      const degrees = 360 / items.length * i + angle;
+      const radians = degrees * Math.PI / 180;
+      const cosine = Math.cos(radians);
+      const scale = .38 + .62 * (cosine + 1) / 2;
+      item.style.transform = 'translateX(' + (Math.sin(radians) * radius).toFixed(2) + 'px) translateZ(' + (cosine * radius).toFixed(2) + 'px) rotateY(' + (-degrees).toFixed(2) + 'deg) scale(' + scale.toFixed(4) + ')';
+      item.style.opacity = cosine < -.2 ? '0' : '1';
+      item.style.zIndex = String(Math.round((cosine + 1) * 50));
+      item.style.pointerEvents = cosine < -.2 ? 'none' : 'auto';
+      item.tabIndex = cosine < -.2 ? -1 : 0;
+    });
+  };
+  const loop = () => {
+    if (!dragging) {
+      if (Math.abs(velocity) > .008) { angle += velocity; velocity *= .935; }
+      else { velocity = 0; if (!reducedMotion) angle += .018; }
+    }
+    angle = (angle % 360 + 360) % 360;
+    render();
+    raf = requestAnimationFrame(loop);
+  };
+  const down = e => { if (e.button && e.button !== 0) return; dragging = true; moved = false; startX = e.clientX; startAngle = angle; previousAngle = angle; velocity = 0; wrap.classList.add('is-dragging'); };
+  const move = e => { if (!dragging) return; const delta = e.clientX - startX; if (Math.abs(delta) > 4) moved = true; angle = startAngle + delta * .22; velocity = angle - previousAngle; previousAngle = angle; };
+  const up = () => { dragging = false; wrap.classList.remove('is-dragging'); };
+  const click = e => { if (moved) { moved = false; return; } const item = e.target.closest('.main-result-carousel__item'); if (item) openPhoto(item.querySelector('img').getAttribute('src')); };
+  const key = e => { if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return; e.preventDefault(); angle += (e.key === 'ArrowLeft' ? 1 : -1) * 360 / items.length; velocity = 0; render(); };
+  wrap.addEventListener('pointerdown', down); window.addEventListener('pointermove', move); window.addEventListener('pointerup', up); window.addEventListener('pointercancel', up); wrap.addEventListener('click', click); wrap.addEventListener('keydown', key);
+  render(); raf = requestAnimationFrame(loop);
+  return { destroy() { cancelAnimationFrame(raf); wrap.removeEventListener('pointerdown', down); window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); window.removeEventListener('pointercancel', up); wrap.removeEventListener('click', click); wrap.removeEventListener('keydown', key); } };
+}
+
 class Component extends DCLogic {
-  state = { tab: 'novostroyka', faq: 0, pshift: 0, popup: false, quizPopup: false, storyPopup: false, requestSent: false, reviewTab: 0, expandedReviews: {}, worryShift: 0, modalTop: 24, modalHeight: 720 };
+  componentDidMount() { this.resultCarousel = createResultCarousel(document.querySelector('.main-result-carousel'), src => this.setState({ resultPhoto: src })); }
+  componentWillUnmount() { if (this.resultCarousel) this.resultCarousel.destroy(); }
+
+  state = { resultPhoto: '', tab: 'novostroyka', faq: 0, pshift: 0, popup: false, quizPopup: false, storyPopup: false, requestSent: false, reviewTab: 0, expandedReviews: {}, worryShift: 0, modalTop: 24, modalHeight: 720 };
 
   modalPosition(event) {
     const target = event && event.currentTarget;
@@ -985,6 +962,10 @@ class Component extends DCLogic {
       moments: MOMENTS,
       avoided: AVOIDED,
       results: RESULTS,
+      resultPhotos: RESULT_PHOTOS,
+      resultPhoto: this.state.resultPhoto,
+      closeResultPhoto: () => this.setState({ resultPhoto: '' }),
+      closeResultBackdrop: e => { if (e.target === e.currentTarget) this.setState({ resultPhoto: '' }); },
       portfolio: PORTFOLIO,
       videos: MAIN_VIDEOS, residential: MAIN_RESIDENTIAL, rules: MAIN_RULES,
       masters: MASTERS.map(m => ({ ...m, pictureClass: m.before ? 'main-master-picture is-split' : 'main-master-picture' })),
@@ -1034,7 +1015,7 @@ class Component extends DCLogic {
 <script>
 document.addEventListener('keydown', function (event) {
   if (event.key !== 'Escape') return;
-  var buttons = document.querySelectorAll('.main-modal button[aria-label^="Закрыть"]');
+  var buttons = document.querySelectorAll('.main-modal button[aria-label^="Закрыть"], .main-result-lightbox__close');
   if (buttons.length) buttons[buttons.length - 1].click();
 });
 </script>

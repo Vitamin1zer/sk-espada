@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta name="espada-revision" content="20261127-review2">
+<meta name="espada-revision" content="20261127-live-layout">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js?v=20261127-review2"></script>
-<link rel="stylesheet" href="assets/demo.css?v=20261127-review2">
-<script src="assets/demo.js?v=20261127-review2" defer></script>
+<script src="./support.js?v=20261127-live-layout"></script>
+<link rel="stylesheet" href="assets/demo.css?v=20261127-live-layout">
+<script src="assets/demo.js?v=20261127-live-layout" defer></script>
 </head>
 <body>
 <template data-dc-source><x-dc>
@@ -108,7 +108,7 @@ input,textarea,select{font-family:inherit}
         </div>
       </sc-if>
 
-      <button type="submit" style="{{ btnCss }}">{{ cta }}</button>
+      <button type="submit" style="{{ btnCss }}" style-hover="background:#026B63;color:#fff">{{ cta }}</button>
 
       <sc-if value="{{ consentNote }}" hint-placeholder-val="{{ false }}">
         <span style="{{ consentCss }}">Нажимая кнопку, вы даёте <a href="/soglasie-na-obrabotku/" style="{{ linkCss }}">согласие на обработку персональных данных</a> в соответствии с <a href="/politika-konfidencialnosti/" style="{{ linkCss }}">Политикой конфиденциальности</a></span>
@@ -183,7 +183,8 @@ const KINDS = {
 KINDS['Дизайн'] = { ...KINDS['Встроенная'], kicker: '', title: 'Обсудить дизайн-проект', subtitle: 'Оставьте контакты, чтобы дизайнер согласовал удобное время консультации.', cta: 'Обсудить дизайн-проект', sentText: 'Это демонстрация формы. Данные не отправлены.' };
 KINDS['Приёмка'] = { ...KINDS['Встроенная'], kicker: '', title: 'Пригласите профессионального приёмщика', subtitle: 'Инженер приедет с инструментом, найдёт дефекты и отдаст акт с замечаниями в день осмотра.', cta: 'Пригласить приёмщика', sentText: 'Это демонстрация формы. Данные не отправлены.' };
 KINDS['Шоурум'] = { ...KINDS['Встроенная'], kicker: '', title: 'Записаться в шоурум', subtitle: 'Оставьте контакты, чтобы согласовать удобное время встречи в шоуруме.', cta: 'Записаться в шоурум', sentText: 'Это демонстрация формы. Данные не отправлены.' };
-const KIND_ALIASES = { repair: 'Встроенная', design: 'Дизайн', acceptance: 'Приёмка', showroom: 'Шоурум', partner: 'Партнёрство' };
+KINDS['Просмотр объектов'] = { ...KINDS['Попап'], title: 'Посмотрите наши объекты', subtitle: 'Оставьте свои контакты и вы получите:', perks: ['— просмотр объектов на интересующей стадии ремонта', '— предварительный расчет бюджета вашего ремонта', '— консультацию инженера', '— рекомендации по оптимизации затрат', '— понимание этапов реализации ремонта.'], cta: 'Посмотреть объекты' };
+const KIND_ALIASES = { repair: 'Встроенная', design: 'Дизайн', acceptance: 'Приёмка', showroom: 'Шоурум', partner: 'Партнёрство', viewing: 'Просмотр объектов' };
 
 const SENT_STEPS = [
   'Инженер посмотрит адрес и площадь, чтобы приехать подготовленным.',
@@ -210,7 +211,8 @@ class Component extends DCLogic {
     const filled = st === 'Заполненная' || st === 'Отправлена' || error;
     const dark = k.dark;
     const meeting = this.props.theme === 'meeting';
-    const values = Object.fromEntries(k.fields.map(f => [f.key, this.state.values[f.key] === undefined ? (filled ? (f.filled || '') : (f.select ? f.options[0] : '')) : this.state.values[f.key]]));
+    const brand = this.props.theme === 'brand';
+    const values = Object.fromEntries(k.fields.map(f => [f.key, this.state.values[f.key] === undefined ? (error && f.key === 'phone' ? (f.broken || '') : (filled ? (f.filled || '') : (f.select ? f.options[0] : ''))) : this.state.values[f.key]]));
     const consent = this.state.consent === null ? filled && !error : this.state.consent;
     const attempted = this.state.attempted || error;
     const phoneDigits = (values.phone || '').replace(/\D/g, '');
@@ -219,20 +221,20 @@ class Component extends DCLogic {
     const consentError = attempted && !dark && !consent;
 
 
-    const txt = dark ? '#fff' : '#313131';
-    const muted = dark ? '#bfbfbf' : '#5c5c5c';
+    const txt = dark || brand ? '#fff' : '#313131';
+    const muted = brand ? '#fff' : (dark ? '#bfbfbf' : '#5c5c5c');
     const formTitle = this.props.title || k.title;
     const accentPhrase = kind === 'Партнёрство' ? 'свяжемся в тот же день' : kind === 'Приёмка' ? 'профессионального приёмщика' : '';
     const accentAt = accentPhrase ? formTitle.indexOf(accentPhrase) : -1;
 
     return {
-      rootClass: meeting ? 'espada-form--meeting' : '',
+      rootClass: 'espada-form' + (meeting ? ' espada-form--meeting' : '') + (brand ? ' espada-form--brand' : ''),
       rootCss: 'container-type:inline-size;position:relative;font-family:TildaSans,\'Helvetica Neue\',Helvetica,sans-serif;'
-        + 'background:' + (dark ? '#313131' : '#fff') + ';padding:' + (dark ? '24px' : '30px')
+        + 'background:' + (brand ? '#00AD9F' : (dark ? '#313131' : '#fff')) + ';padding:' + (brand ? '0' : (dark ? '24px' : (this.props.modal ? '54px 30px 30px' : '30px')))
         + ';border-radius:5px;display:flex;flex-direction:column;gap:16px;color:' + txt,
       closable: false,
       yes: true,
-      leadType: kind === 'Партнёрство' ? 'partner' : (kind === 'Приёмка' ? 'acceptance' : (kind === 'Дизайн' ? 'design' : (kind === 'Шоурум' ? 'showroom' : 'repair'))),
+      leadType: kind === 'Просмотр объектов' ? 'viewing' : (kind === 'Партнёрство' ? 'partner' : (kind === 'Приёмка' ? 'acceptance' : (kind === 'Дизайн' ? 'design' : (kind === 'Шоурум' ? 'showroom' : 'repair')))),
       consentChecked: consent,
       toggleConsent: (e) => this.setState({ consent: e.target.checked }),
       showHead: !this.props.compact,
@@ -259,16 +261,16 @@ class Component extends DCLogic {
         + 'font-size:11px;font-weight:700;color:#fff;background:' + (filled && !error ? '#00AD9F' : 'transparent')
         + ';border:1px solid ' + (error ? '#c0392b' : (filled ? '#00AD9F' : '#bfbfbf')),
       consentCss: 'font-size:12.5px;line-height:1.45;color:' + muted,
-      linkCss: 'color:' + (dark ? '#fff' : '#00AD9F') + ';text-decoration:underline',
+      linkCss: 'color:' + (dark || brand ? '#fff' : '#00AD9F') + ';text-decoration:underline',
       consentError: consentError ? 'Без согласия на обработку данных заявку отправить нельзя' : '',
 
       fields: k.fields.map(f => {
         const isBroken = (phoneError && f.key === 'phone') || (nameError && f.key === 'name');
-        const val = error && f.key === 'phone' && this.state.values.phone === undefined ? (f.broken || '') : values[f.key];
+        const val = values[f.key];
         return {
           key: f.key,
           change: (e) => this.setState({ values: { ...this.state.values, [f.key]: e.target.value } }),
-          label: f.label,
+          label: f.key === 'phone' && (meeting || brand) ? 'Телефон' : f.label,
           labelCss: 'font-size:16px;font-weight:400;color:' + (isBroken ? '#c0392b' : (meeting ? '#00AD9F' : muted)),
           isSelect: !!f.select,
           isText: !f.select,
@@ -283,9 +285,9 @@ class Component extends DCLogic {
       }),
 
       cta: this.props.cta || k.cta,
-      btnCss: 'background:' + (dark ? '#00AD9F' : '#00AD9F') + ';color:#fff;border:0;border-radius:5px;padding:16px 20px;'
-        + 'font-size:16px;font-weight:600;letter-spacing:.02em;text-transform:' + (meeting ? 'none' : 'uppercase') + ';transition:background .2s,box-shadow .2s;'
-        + 'align-self:' + (dark || meeting ? 'flex-start' : 'stretch'),
+      btnCss: 'background:' + (brand ? '#fff' : '#00AD9F') + ';color:' + (brand ? '#026B63' : '#fff') + ';border:0;border-radius:5px;padding:16px 20px;'
+        + 'font-size:16px;font-weight:600;letter-spacing:.02em;text-transform:' + (meeting || brand ? 'none' : 'uppercase') + ';transition:background .2s,box-shadow .2s;'
+        + 'align-self:' + (brand ? 'center' : (dark || meeting ? 'flex-start' : 'stretch')),
       submit: (e) => {
         e.preventDefault();
         const validPhone = phoneDigits.length === 11 && /^[78]/.test(phoneDigits);
@@ -299,13 +301,13 @@ class Component extends DCLogic {
 
       sentTitle: k.sentTitle,
       sentTitleCss: 'font-size:22px;font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:'
-        + (dark ? '#fff' : '#000') + ';line-height:1.2',
+        + (dark || brand ? '#fff' : '#000') + ';line-height:1.2',
       sentText: k.sentText,
       sentTextCss: 'margin:0;font-size:16px;line-height:1.6;color:' + muted + ';max-width:400px',
-      sentBoxCss: 'background:' + (dark ? 'rgba(255,255,255,.07)' : '#f8f8f8') + ';padding:16px;display:flex;flex-direction:column;gap:9px;width:100%',
+      sentBoxCss: 'background:' + (dark || brand ? 'rgba(255,255,255,.07)' : '#f8f8f8') + ';padding:16px;display:flex;flex-direction:column;gap:9px;width:100%',
       sentStepCss: 'font-size:15px;line-height:1.5;color:' + muted,
       sentSteps: k.fields.filter(f => values[f.key]).map((f, i) => ({ n: (i + 1) + '.', t: f.label + ': ' + values[f.key] })),
-      sentLinkCss: 'font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#00AD9F',
+      sentLinkCss: 'font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:' + (brand ? '#fff' : '#00AD9F'),
     };
   }
 }
